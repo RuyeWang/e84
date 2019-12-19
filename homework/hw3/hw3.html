@@ -1,0 +1,246 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>hw3</TITLE>
+<META NAME="description" CONTENT="hw3">
+<META NAME="keywords" CONTENT="hw3">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="hw3.css">
+
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/sw/share/lib/latex2html/icons/next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/sw/share/lib/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/sw/share/lib/latex2html/icons/prev_g.png">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+  HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<DIV ALIGN="CENTER">
+<FONT SIZE="+2"><B>E84 Home Work 3</B></FONT>
+
+</DIV>
+
+<OL>
+
+<OL>
+<LI>In the voltage divider circuit below, <IMG
+ WIDTH="77" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$V_0=20V$">, <!-- MATH
+ $R_1=R_2=500\Omega$
+ -->
+<IMG
+ WIDTH="131" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.png"
+ ALT="$R_1=R_2=500\Omega$">. 
+Use Thevenin's theorem to find the current through and voltage across the 
+load resistor <IMG
+ WIDTH="28" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="$R_L$"> when it is <IMG
+ WIDTH="43" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img4.png"
+ ALT="$100\Omega$">, <IMG
+ WIDTH="43" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.png"
+ ALT="$200\Omega$">, <IMG
+ WIDTH="43" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$300\Omega$">, 
+respectively.
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../voltagedivider.gif"
+ ALT="voltagedivider.gif">
+
+<P>
+</LI>
+<LI>Using Thevenin's theorem to determine the current in the <IMG
+ WIDTH="47" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.png"
+ ALT="$3-\Omega$"> 
+resistor of the following figure.
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../hw2c.gif"
+ ALT="hw2c.gif">
+
+<P>
+</LI>
+<LI>Find voltage across and the current through the 10-<IMG
+ WIDTH="17" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img8.png"
+ ALT="$\Omega$"> resistor.
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../hw2d.gif"
+ ALT="hw2d.gif">
+
+<P>
+</LI>
+<LI><P>
+Find all currents in the diagram in which V=120V, <IMG
+ WIDTH="70" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.png"
+ ALT="$R_1=2\Omega$">, <IMG
+ WIDTH="78" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.png"
+ ALT="$R_2=20\Omega$">. 
+<B>Hint:</B> it is very hard to solve the problem by finding the currents in the
+order of <IMG
+ WIDTH="20" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.png"
+ ALT="$I_1$">, <IMG
+ WIDTH="20" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.png"
+ ALT="$I_3$">, <IMG
+ WIDTH="20" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.png"
+ ALT="$I_5$">, as computing the resistances of the resistor 
+network is tedious. However, it is much more straight forward to find the 
+currents in the order of <IMG
+ WIDTH="20" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.png"
+ ALT="$I_5$">, <IMG
+ WIDTH="20" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.png"
+ ALT="$I_3$">, <IMG
+ WIDTH="20" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.png"
+ ALT="$I_1$">, if you assume <IMG
+ WIDTH="20" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.png"
+ ALT="$I_5$"> is known, e.g.,
+<IMG
+ WIDTH="65" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.png"
+ ALT="$I_5=1A$">. However, the voltage for the voltage source obtained based on this 
+assumption is of course not as given (120V). In this case, the linearity property
+<!-- MATH
+ $F(ax+by)=aF(x)+bF(y)$
+ -->
+<IMG
+ WIDTH="223" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.png"
+ ALT="$F(ax+by)=aF(x)+bF(y)$"> can be applied. In particular, given <IMG
+ WIDTH="74" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.png"
+ ALT="$y=F(x)$">, then 
+<!-- MATH
+ $ay=F(ax)=aF(x)$
+ -->
+<IMG
+ WIDTH="162" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$ay=F(ax)=aF(x)$">. Use this relationship to find the actual values of the 
+currents.
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../hw2b.gif"
+ ALT="hw2b.gif">
+
+<P>
+</LI>
+<LI>In the circuit below, <IMG
+ WIDTH="70" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.png"
+ ALT="$R_1=1\Omega$">, <IMG
+ WIDTH="68" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.png"
+ ALT="$V_2=2V$">, <IMG
+ WIDTH="70" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.png"
+ ALT="$R_3=1\Omega$">, <IMG
+ WIDTH="70" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.png"
+ ALT="$R_4=3\Omega$">
+<IMG
+ WIDTH="65" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.png"
+ ALT="$I_5=5A$">, <IMG
+ WIDTH="68" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img23.png"
+ ALT="$V_6=2V$">, and <IMG
+ WIDTH="70" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img24.png"
+ ALT="$R_6=1\Omega$">. Find
+
+<OL>
+<LI>current through voltage source <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.png"
+ ALT="$V_2$">. 
+</LI>
+<LI>current through resistor <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img26.png"
+ ALT="$R_3$">
+</LI>
+</OL>
+(Hint: consider superposition theorem.)
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../hw3a.gif"
+ ALT="hw3a.gif">
+
+<P>
+</LI>
+</OL>
+</LI>
+</OL>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html3"
+  HREF="node1.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/sw/share/lib/latex2html/icons/next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/sw/share/lib/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/sw/share/lib/latex2html/icons/prev_g.png">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+  HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Ruye Wang
+2005-09-13
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,627 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>The Twin-T notch (band-stop) filter</TITLE>
+<META NAME="description" CONTENT="The Twin-T notch (band-stop) filter">
+<META NAME="keywords" CONTENT="ActiveFilters_sub">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="ActiveFilters_sub.css">
+
+<LINK REL="next" HREF="node3.html">
+<LINK REL="previous" HREF="node1.html">
+<LINK REL="up" HREF="ActiveFilters_sub.html">
+<LINK REL="next" HREF="node3.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html30"
+  HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html28"
+  HREF="ActiveFilters_sub.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html22"
+  HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html31"
+  HREF="node3.html">Wien bridge</A>
+<B> Up:</B> <A NAME="tex2html29"
+  HREF="ActiveFilters_sub.html">ActiveFilters_sub</A>
+<B> Previous:</B> <A NAME="tex2html23"
+  HREF="node1.html">The Sallen-Key filters</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00002000000000000000">
+The Twin-T notch (band-stop) filter</A>
+</H2>
+
+<P>
+<B>The twin-T filter</B>
+
+<P>
+<IMG
+ WIDTH="281" HEIGHT="177" ALIGN="BOTTOM" BORDER="0"
+ SRC="../figures/TwinT.png"
+ ALT="TwinT.png">
+
+<P>
+The twin-T network is composed of two T-networks: 
+
+<UL>
+<LI>The RCR network is formed by two resistors <IMG
+ WIDTH="113" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.png"
+ ALT="$R_1=R_2=R$"> and one
+  capacitor <IMG
+ WIDTH="75" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.png"
+ ALT="$C_3=2C$">. 
+
+<P>
+</LI>
+<LI>The CRC network is formed by two capacitors <IMG
+ WIDTH="111" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.png"
+ ALT="$C_1=C_2=C$"> and one
+  resistor <IMG
+ WIDTH="85" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.png"
+ ALT="$R_3=R/2$">. 
+
+<P>
+</LI>
+</UL>
+
+<P>
+When the output is open-circuit, i.e., <IMG
+ WIDTH="72" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img23.png"
+ ALT="$Z_L=\infty$">, the frequency 
+response function of the twin-T network can be found to be
+(see <A NAME="tex2html1"
+  HREF="../TwinT/TwinT.html">here</A>):
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+H(j\omega)&=&\frac{v_{out}}{v_{in}}
+=\frac{(j\omega)^2+\omega_n^2}{(j\omega)^2+4\omega_nj\omega+\omega_n^2}
+\nonumber\\
+&=&\frac{(j\omega)^2+\omega_n^2}{(j\omega)^2+\omega_nj\omega/Q+\omega_n^2}
+=\frac{\omega_n^2-\omega^2}{\omega_n^2-\omega^2+j\omega\Delta\omega}
+\nonumber
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="57" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img24.png"
+ ALT="$\displaystyle H(j\omega)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="227" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.png"
+ ALT="$\displaystyle \frac{v_{out}}{v_{in}}
+=\frac{(j\omega)^2+\omega_n^2}{(j\omega)^2+4\omega_nj\omega+\omega_n^2}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="349" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img26.png"
+ ALT="$\displaystyle \frac{(j\omega)^2+\omega_n^2}{(j\omega)^2+\omega_nj\omega/Q+\omega_n^2}
+=\frac{\omega_n^2-\omega^2}{\omega_n^2-\omega^2+j\omega\Delta\omega}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+where
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\omega_n=\frac{1}{RC}=\frac{1}{\tau}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="116" HEIGHT="45" BORDER="0"
+ SRC="img27.png"
+ ALT="\begin{displaymath}
+\omega_n=\frac{1}{RC}=\frac{1}{\tau}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<IMG
+ WIDTH="131" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img28.png"
+ ALT="$Q=1/4=0.25$"> is the quality factor, and <!-- MATH
+ $\Delta\omega=\omega_n/Q=4\omega_n$
+ -->
+<IMG
+ WIDTH="157" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img29.png"
+ ALT="$\Delta\omega=\omega_n/Q=4\omega_n$"> 
+is the bandwidth of the filter. This twin-T network is a band-stop filter 
+(notch filter) which attenuates the frequency <!-- MATH
+ $\omega_n=1/\tau$
+ -->
+<IMG
+ WIDTH="79" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img30.png"
+ ALT="$\omega_n=1/\tau$"> to zero:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+|H(j\omega)|=\left\{\begin{array}{ll} 
+H(0)=\omega_n^2/\omega_n^2=1 & \omega=0 \\
+H(j\omega_n)=0 & \omega=\omega_n=1/\tau\\
+H(\infty)=\lim\limits_{\omega\rightarrow\infty}H(j\omega)=\omega^2/\omega^2=1 & \omega\rightarrow \infty
+\end{array}\right.
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="513" HEIGHT="80" BORDER="0"
+ SRC="img31.png"
+ ALT="\begin{displaymath}
+\vert H(j\omega)\vert=\left\{\begin{array}{ll}
+H(0)=\omega_...
+...ega^2/\omega^2=1 &amp; \omega\rightarrow \infty
+\end{array}\right.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+When this notch filter is used in a negative feedback loop of an 
+amplifier, it becomes an oscillator.
+
+<P>
+<IMG
+ WIDTH="537" HEIGHT="401" ALIGN="BOTTOM" BORDER="0"
+ SRC="../figures/TwinTPlots1.png"
+ ALT="TwinTPlots1.png">
+
+<P>
+<B>The active twin-T filter</B>
+
+<P>
+The bandwidth <!-- MATH
+ $\Delta\omega=\omega_n/Q=4\omega_n$
+ -->
+<IMG
+ WIDTH="157" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img29.png"
+ ALT="$\Delta\omega=\omega_n/Q=4\omega_n$"> may be too large for 
+most applications due to the small quality factor <IMG
+ WIDTH="72" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.png"
+ ALT="$Q=1/4$">. To overcome 
+this problem, an active filter containing two op-amp followers (with 
+unity gain <IMG
+ WIDTH="53" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img33.png"
+ ALT="$A=1$">) can be used to introduce a positive feedback loop as 
+shown below:
+
+<P>
+<IMG
+ WIDTH="512" HEIGHT="268" ALIGN="BOTTOM" BORDER="0"
+ SRC="../figures/TwinTActive.png"
+ ALT="TwinTActive.png">
+
+<P>
+Now the common terminal of the twin-T filter is no longer grounded, 
+instead it is connected a potentiometer, a voltage divider composed 
+of <IMG
+ WIDTH="26" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.png"
+ ALT="$R_4$"> and <IMG
+ WIDTH="26" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img35.png"
+ ALT="$R_5$">, to form a feedback loop by which a fraction of the
+output <IMG
+ WIDTH="35" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img36.png"
+ ALT="$V_{out}$"> is fed back:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V_1=\frac{R_5}{R_4+R_5}\;V_{out}=\alpha v_{out}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="215" HEIGHT="49" BORDER="0"
+ SRC="img37.png"
+ ALT="\begin{displaymath}
+V_1=\frac{R_5}{R_4+R_5}\;V_{out}=\alpha v_{out}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where <!-- MATH
+ $\alpha=R_5/(R_4+R_5)$
+ -->
+<IMG
+ WIDTH="154" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img38.png"
+ ALT="$\alpha=R_5/(R_4+R_5)$">, i.e., <!-- MATH
+ $1-\alpha=R_4/(R_4+R_5)$
+ -->
+<IMG
+ WIDTH="187" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img39.png"
+ ALT="$1-\alpha=R_4/(R_4+R_5)$">.
+
+<P>
+It can be shown (see <A NAME="tex2html2"
+  HREF="../TwinT/TwinT.html">here</A>)
+that the frequency response function of this active twin-T filter is
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+H_{active}(j\omega)
+&=&\frac{\omega_n^2-\omega^2}{\omega_n^2+4j\omega\omega_n R_4/(R_4+R_5)-\omega^2}
+\nonumber\\
+&=&\frac{\omega_n^2-\omega^2}{\omega_n^2-\omega^2+\omega_n/Q_{active} j\omega}
+=\frac{\omega_n^2-\omega^2}{\omega_n^2-\omega^2+\Delta\omega_{active} j\omega}
+\nonumber
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="92" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img40.png"
+ ALT="$\displaystyle H_{active}(j\omega)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="259" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img41.png"
+ ALT="$\displaystyle \frac{\omega_n^2-\omega^2}{\omega_n^2+4j\omega\omega_n R_4/(R_4+R_5)-\omega^2}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="399" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img42.png"
+ ALT="$\displaystyle \frac{\omega_n^2-\omega^2}{\omega_n^2-\omega^2+\omega_n/Q_{active...
+...
+=\frac{\omega_n^2-\omega^2}{\omega_n^2-\omega^2+\Delta\omega_{active} j\omega}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+where 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Q_{active}=\frac{R_4+R_5}{4R_4},\;\;\;\;\;\;
+\Delta\omega_{active}=\frac{\omega_n}{Q}_{active}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="335" HEIGHT="50" BORDER="0"
+ SRC="img43.png"
+ ALT="\begin{displaymath}
+Q_{active}=\frac{R_4+R_5}{4R_4},\;\;\;\;\;\;
+\Delta\omega_{active}=\frac{\omega_n}{Q}_{active}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+are respectively the quality factor and the bandwidth of the active 
+filter with feedback. By changing <IMG
+ WIDTH="26" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.png"
+ ALT="$R_4$"> and <IMG
+ WIDTH="26" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img35.png"
+ ALT="$R_5$">, the bandwidth 
+<!-- MATH
+ $\Delta\omega_{active}$
+ -->
+<IMG
+ WIDTH="68" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img44.png"
+ ALT="$\Delta\omega_{active}$"> can be adjusted. In particular, 
+
+<UL>
+<LI>when <IMG
+ WIDTH="61" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img45.png"
+ ALT="$R_5=0$">, <IMG
+ WIDTH="57" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img46.png"
+ ALT="$V_1=0$"> (no feedback), <!-- MATH
+ $Q_{active}=1/4=Q$
+ -->
+<IMG
+ WIDTH="149" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img47.png"
+ ALT="$Q_{active}=1/4=Q$">, 
+  <!-- MATH
+ $\Delta\omega=\omega_n/Q=4\omega_n$
+ -->
+<IMG
+ WIDTH="157" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img29.png"
+ ALT="$\Delta\omega=\omega_n/Q=4\omega_n$">; 
+</LI>
+<LI>when <IMG
+ WIDTH="61" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img48.png"
+ ALT="$R_4=0$">, <IMG
+ WIDTH="79" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img49.png"
+ ALT="$V_1=V_{out}$"> (one hundred percent feedback), 
+  <!-- MATH
+ $Q_{active}=\infty$
+ -->
+<IMG
+ WIDTH="100" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img50.png"
+ ALT="$Q_{active}=\infty$">, <!-- MATH
+ $\Delta\omega_{active}=\omega_n/Q_{active}=0$
+ -->
+<IMG
+ WIDTH="209" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img51.png"
+ ALT="$\Delta\omega_{active}=\omega_n/Q_{active}=0$">.
+</LI>
+</UL>
+
+<P>
+<B>The bridged T filter</B>
+
+<P>
+If in the RCR T-network the vertical capacitor branch is dropped, 
+i.e., <IMG
+ WIDTH="54" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img52.png"
+ ALT="$C=0$">, the twin-T network becomes a bridged T network. Now
+we have <IMG
+ WIDTH="74" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img53.png"
+ ALT="$Z'_3=2R$">, while the CRC T-network is still the same with 
+<!-- MATH
+ $Z''_3=2(1+j\omega RC)/R(j\omega C)^2$
+ -->
+<IMG
+ WIDTH="240" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img54.png"
+ ALT="$Z''_3=2(1+j\omega RC)/R(j\omega C)^2$">, we get:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Z_3=Z'_3||Z''_3=\frac{Z'_3 Z''_3}{Z'_3+Z''_3}
+  =\frac{2R(1+j\omega RC)}{1+j\omega RC+(j\omega RC)^2}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="398" HEIGHT="52" BORDER="0"
+ SRC="img55.png"
+ ALT="\begin{displaymath}
+Z_3=Z'_3\vert\vert Z''_3=\frac{Z'_3 Z''_3}{Z'_3+Z''_3}
+=\frac{2R(1+j\omega RC)}{1+j\omega RC+(j\omega RC)^2}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The frequency response function of this bridged T network (a voltage 
+divider) is:
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+H(j\omega)&=&\frac{Z_2}{Z_2+Z_3}=\frac{R+1/j\omega C}{R+1/j\omega C+2R(1+j\omega RC)/(1+j\omega RC+(j\omega RC)^2)}
+  \nonumber \\
+  &=&\frac{1/C}{1/j\omega C+2R/(1+j\omega RC+(j\omega RC)^2)}
+  =\frac{1}{1+2j\omega RC/(1+j\omega RC+(j\omega RC)^2)}
+  \nonumber \\
+  &=&\frac{1+j\omega RC+(j\omega RC)^2}{1+3j\omega RC+(j\omega RC)^2}
+  =\frac{(j\omega)^2+j\omega /RC+1/(RC)^2}{(j\omega)^2+3j\omega /RC+1/(RC)^2}
+  \nonumber
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="57" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img24.png"
+ ALT="$\displaystyle H(j\omega)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="539" HEIGHT="63" ALIGN="MIDDLE" BORDER="0"
+ SRC="img56.png"
+ ALT="$\displaystyle \frac{Z_2}{Z_2+Z_3}=\frac{R+1/j\omega C}{R+1/j\omega C+2R(1+j\omega RC)/(1+j\omega RC+(j\omega RC)^2)}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="631" HEIGHT="63" ALIGN="MIDDLE" BORDER="0"
+ SRC="img57.png"
+ ALT="$\displaystyle \frac{1/C}{1/j\omega C+2R/(1+j\omega RC+(j\omega RC)^2)}
+=\frac{1}{1+2j\omega RC/(1+j\omega RC+(j\omega RC)^2)}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="453" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img58.png"
+ ALT="$\displaystyle \frac{1+j\omega RC+(j\omega RC)^2}{1+3j\omega RC+(j\omega RC)^2}
+=\frac{(j\omega)^2+j\omega /RC+1/(RC)^2}{(j\omega)^2+3j\omega /RC+1/(RC)^2}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+We let <IMG
+ WIDTH="98" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$\omega_n=1/RC$">, and express both the numerator and the
+denominator in the canonical form as
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+H(j\omega)=\frac{(j\omega)^2+\omega_n j\omega +\omega_n^2}{(j\omega)^2+3\omega_nj\omega +\omega_n^2}
+=\frac{(j\omega)^2+\Delta\omega_n j\omega+\omega_n^2}{(j\omega)^2+\Delta\omega_dj\omega +\omega_n^2}
+=\frac{\omega_n^2-\omega^2+\Delta\omega_n j\omega }{\omega_n^2-\omega^2+\Delta\omega_dj\omega}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="609" HEIGHT="53" BORDER="0"
+ SRC="img60.png"
+ ALT="\begin{displaymath}
+H(j\omega)=\frac{(j\omega)^2+\omega_n j\omega +\omega_n^2}{(...
+...a\omega_n j\omega }{\omega_n^2-\omega^2+\Delta\omega_dj\omega}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\Delta\omega_n=\omega_n,\;\;\;\;\;\;\;\Delta\omega_d=3\omega_n
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="215" HEIGHT="32" BORDER="0"
+ SRC="img61.png"
+ ALT="\begin{displaymath}
+\Delta\omega_n=\omega_n,\;\;\;\;\;\;\;\Delta\omega_d=3\omega_n
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+are the bandwidth of the 2nd-order systems of the numerator and the
+denominator, respectively. 
+
+<UL>
+<LI>If <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img62.png"
+ ALT="$\omega=0$">, <!-- MATH
+ $H(j\omega)=H(0)=1$
+ -->
+<IMG
+ WIDTH="158" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img63.png"
+ ALT="$H(j\omega)=H(0)=1$">
+</LI>
+<LI>If <!-- MATH
+ $\omega\rightarrow \infty$
+ -->
+<IMG
+ WIDTH="66" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img64.png"
+ ALT="$\omega\rightarrow \infty$">, <IMG
+ WIDTH="92" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img65.png"
+ ALT="$H(j\omega)=1$">
+</LI>
+<LI>If <!-- MATH
+ $\omega=\omega_n=1/RC$
+ -->
+<IMG
+ WIDTH="136" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img66.png"
+ ALT="$\omega=\omega_n=1/RC$">, <!-- MATH
+ $H(j\omega_n)=1/3$
+ -->
+<IMG
+ WIDTH="119" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img67.png"
+ ALT="$H(j\omega_n)=1/3$">
+</LI>
+</UL>
+We see that this is a band-stop filter.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html30"
+  HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html28"
+  HREF="ActiveFilters_sub.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html22"
+  HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html31"
+  HREF="node3.html">Wien bridge</A>
+<B> Up:</B> <A NAME="tex2html29"
+  HREF="ActiveFilters_sub.html">ActiveFilters_sub</A>
+<B> Previous:</B> <A NAME="tex2html23"
+  HREF="node1.html">The Sallen-Key filters</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Ruye Wang
+2016-11-20
+</ADDRESS>
+</BODY>
+</HTML>

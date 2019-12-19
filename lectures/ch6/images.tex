@@ -1,0 +1,3620 @@
+\batchmode
+
+\documentclass{article}
+\RequirePackage{ifthen}
+
+
+\usepackage{amssymb}
+\usepackage{graphics}
+\usepackage{html}
+
+
+
+
+\usepackage{xcolor}
+
+\usepackage[]{inputenc}
+
+
+
+\makeatletter
+
+\makeatletter
+\count@=\the\catcode`\_ \catcode`\_=8 
+\newenvironment{tex2html_wrap}{}{}%
+\catcode`\<=12\catcode`\_=\count@
+\newcommand{\providedcommand}[1]{\expandafter\providecommand\csname #1\endcsname}%
+\newcommand{\renewedcommand}[1]{\expandafter\providecommand\csname #1\endcsname{}%
+  \expandafter\renewcommand\csname #1\endcsname}%
+\newcommand{\newedenvironment}[1]{\newenvironment{#1}{}{}\renewenvironment{#1}}%
+\let\newedcommand\renewedcommand
+\let\renewedenvironment\newedenvironment
+\makeatother
+\let\mathon=$
+\let\mathoff=$
+\ifx\AtBeginDocument\undefined \newcommand{\AtBeginDocument}[1]{}\fi
+\newbox\sizebox
+\setlength{\hoffset}{0pt}\setlength{\voffset}{0pt}
+\addtolength{\textheight}{\footskip}\setlength{\footskip}{0pt}
+\addtolength{\textheight}{\topmargin}\setlength{\topmargin}{0pt}
+\addtolength{\textheight}{\headheight}\setlength{\headheight}{0pt}
+\addtolength{\textheight}{\headsep}\setlength{\headsep}{0pt}
+\setlength{\textwidth}{349pt}
+\newwrite\lthtmlwrite
+\makeatletter
+\let\realnormalsize=\normalsize
+\global\topskip=2sp
+\def\preveqno{}\let\real@float=\@float \let\realend@float=\end@float
+\def\@float{\let\@savefreelist\@freelist\real@float}
+\def\liih@math{\ifmmode$\else\bad@math\fi}
+\def\end@float{\realend@float\global\let\@freelist\@savefreelist}
+\let\real@dbflt=\@dbflt \let\end@dblfloat=\end@float
+\let\@largefloatcheck=\relax
+\let\if@boxedmulticols=\iftrue
+\def\@dbflt{\let\@savefreelist\@freelist\real@dbflt}
+\def\adjustnormalsize{\def\normalsize{\mathsurround=0pt \realnormalsize
+ \parindent=0pt\abovedisplayskip=0pt\belowdisplayskip=0pt}%
+ \def\phantompar{\csname par\endcsname}\normalsize}%
+\def\lthtmltypeout#1{{\let\protect\string \immediate\write\lthtmlwrite{#1}}}%
+\usepackage[tightpage,active]{preview}
+\newbox\lthtmlPageBox
+\newdimen\lthtmlCropMarkHeight
+\newdimen\lthtmlCropMarkDepth
+\long\def\lthtmlTightVBox#1#2{%
+    \setbox\lthtmlPageBox\vbox{\hbox{\catcode`\_=8 #2}}%
+    \lthtmlCropMarkHeight=\ht\lthtmlPageBox \advance \lthtmlCropMarkHeight 6pt
+    \lthtmlCropMarkDepth=\dp\lthtmlPageBox
+    \lthtmltypeout{^^J:#1:lthtmlCropMarkHeight:=\the\lthtmlCropMarkHeight}%
+    \lthtmltypeout{^^J:#1:lthtmlCropMarkDepth:=\the\lthtmlCropMarkDepth:1ex:=\the \dimexpr 1ex}%
+    \begin{preview}\copy\lthtmlPageBox\end{preview}}}%
+\long\def\lthtmlTightFBox#1#2{%
+    \adjustnormalsize\setbox\lthtmlPageBox=\vbox\bgroup %
+    \let\ifinner=\iffalse \let\)\liih@math %
+    {\catcode`\_=8 #2}%
+    \@next\next\@currlist{}{\def\next{\voidb@x}}%
+    \expandafter\box\next\egroup %
+    \lthtmlCropMarkHeight=\ht\lthtmlPageBox \advance \lthtmlCropMarkHeight 6pt
+    \lthtmlCropMarkDepth=\dp\lthtmlPageBox
+    \lthtmltypeout{^^J:#1:lthtmlCropMarkHeight:=\the\lthtmlCropMarkHeight}%
+    \lthtmltypeout{^^J:#1:lthtmlCropMarkDepth:=\the\lthtmlCropMarkDepth:1ex:=\the \dimexpr 1ex}%
+    \begin{preview}\copy\lthtmlPageBox\end{preview}}%
+    \long\def\lthtmlinlinemathA#1#2\lthtmlindisplaymathZ{\lthtmlTightVBox{#1}{#2}}
+    \def\lthtmlinlineA#1#2\lthtmlinlineZ{\lthtmlTightVBox{#1}{#2}}
+    \long\def\lthtmldisplayA#1#2\lthtmldisplayZ{\lthtmlTightVBox{#1}{#2}}
+    \long\def\lthtmlinlinemathA#1#2\lthtmlindisplaymathZ{\lthtmlTightVBox{#1}{#2}}
+    \def\lthtmlinlineA#1#2\lthtmlinlineZ{\lthtmlTightVBox{#1}{#2}}
+    \long\def\lthtmldisplayA#1#2\lthtmldisplayZ{\lthtmlTightVBox{#1}{#2}}
+    \long\def\lthtmldisplayB#1#2\lthtmldisplayZ{\\edef\preveqno{(\theequation)}%
+        \lthtmlTightVBox{#1}{\let\@eqnnum\relax#2}}
+    \long\def\lthtmlfigureA#1#2\lthtmlfigureZ{\let\@savefreelist\@freelist
+        \lthtmlTightFBox{#1}{#2}\global\let\@freelist\@savefreelist}
+    \long\def\lthtmlpictureA#1#2\lthtmlpictureZ{\let\@savefreelist\@freelist
+        \lthtmlTightVBox{#1}{#2}\global\let\@freelist\@savefreelist}
+\def\lthtmlcheckvsize{\ifdim\ht\sizebox<\vsize 
+  \ifdim\wd\sizebox<\hsize\expandafter\hfill\fi \expandafter\vfill
+  \else\expandafter\vss\fi}%
+\providecommand{\selectlanguage}[1]{}%
+\makeatletter \tracingstats = 1 
+
+
+\begin{document}
+\pagestyle{empty}\thispagestyle{empty}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength hsize=\the\hsize}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength vsize=\the\vsize}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength hoffset=\the\hoffset}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength voffset=\the\voffset}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength topmargin=\the\topmargin}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength topskip=\the\topskip}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength headheight=\the\headheight}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength headsep=\the\headsep}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength parskip=\the\parskip}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength oddsidemargin=\the\oddsidemargin}\lthtmltypeout{}%
+\makeatletter
+\if@twoside\lthtmltypeout{latex2htmlLength evensidemargin=\the\evensidemargin}%
+\else\lthtmltypeout{latex2htmlLength evensidemargin=\the\oddsidemargin}\fi%
+\lthtmltypeout{}%
+\makeatother
+\setcounter{page}{1}
+\onecolumn
+
+% !!! IMAGES START HERE !!!
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3096}%
+$\displaystyle H(j\omega)=\frac{V_{out}}{V_{in}}=\left\{\begin{array}{ll}
+    -R_2/R_1 & \omega=0\\0 & \omega\rightarrow\infty \end{array}\right.
+  $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1887}%
+$Z_C=1/j\omega C\rightarrow 0$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1889}%
+$\omega\rightarrow\infty$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3100}%
+$\displaystyle H(j\omega)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3101}%
+$\textstyle =$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3102}%
+$\displaystyle -\frac{Z_2}{Z_1}=-\frac{R_2\;||\;(1/j\omega C)}{R_1}
+=-\frac{1}{R_1}\frac{R_2/j\omega C}{R_2+1/j\omega C}
+=-\frac{R_2}{R_1}\frac{1}{j\omega R_2C+1}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3104}%
+$\displaystyle -H(0)\frac{1}{1+j\omega \tau}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1891}%
+$H(0)=R_2/R_1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1893}%
+$\omega=0$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1895}%
+$\omega_c=1/\tau=1/R_2C$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1897}%
+$|H(j\omega_c)|=H(0)/\sqrt{2}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1899}%
+$Z_2(j\omega)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1901}%
+$\tau=10^{-3}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1903}%
+$\omega_c=1/\tau=10^3$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3113}%
+$\displaystyle H(j\omega)=\frac{V_{out}}{V_{in}}=\left\{\begin{array}{ll}
+    0 & \omega\rightarrow 0\\-R_2/R_1 & \omega\rightarrow\infty
+    \end{array}\right.
+  $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1905}%
+$Z_C=1/j\omega C\rightarrow\infty$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3119}%
+$\displaystyle -\frac{Z_2(j\omega)}{Z_1(j\omega)}
+=-\frac{R_2}{R_1+1/j\omega C}
+=-\frac{R_2}{R_1}\;\frac{1}{1+1/j\omega R_1C}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3121}%
+$\displaystyle -H(\infty)\;\frac{1}{1+1/j\omega\tau}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1909}%
+$H(\infty)=R_2/R_1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1913}%
+$\omega_c=1/\tau=1/R_1C$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1915}%
+$|H(j\omega_c)|=H(\infty)/\sqrt{2}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1917}%
+$Z_1(j\omega)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1919}%
+$\tau=10^{-6}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1921}%
+$\omega_c=1/\tau=10^6$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1923}%
+$R_1=R_2$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1925}%
+$H(0)=1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1927}%
+$180^\circ$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1929}%
+$s=j\omega$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3134}%
+$\displaystyle H_{lp}(j\omega)=\frac{\omega_c}{j\omega+\omega_c}
+    =\frac{1}{j\omega\tau+1}, \;\;\;\;\;\;\;
+    H_{hp}(j\omega)=\frac{j\omega}{j\omega+\omega_c}
+    =\frac{\j\omega\tau}{j\omega\tau+1}
+  $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3136}%
+$\displaystyle H(j\omega)=\frac{V_{out}}{V_{in}}=\left\{\begin{array}{ll}
+    0 & \omega=0 \\0 & \omega\rightarrow\infty \end{array}\right.
+  $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3140}%
+$\displaystyle Z_1(\omega)=R_1+(1/j\omega C_1),\;\;\;\;\;\;\;
+    Z_2(\omega)=R_2||(1/j\omega C_2)
+  $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3142}%
+$\displaystyle H_{BP}(j\omega)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3144}%
+$\displaystyle -\frac{Z_2(\omega)}{Z_1(\omega)}
+=-\frac{R_2||(1/j\omega C_2)}{R_1+1/j\omega C_1}
+=-\frac{R_2/j\omega C_2}{(R_1+1/j\omega C_1)(R_2+1/j\omega C_2)}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3146}%
+$\displaystyle -\frac{j\omega R_2C_1}{(j\omega R_1C_1+1)(j\omega C_2R_2+1)}
+=-\frac{j\omega \tau_3}{(1+j\omega \tau_1)(1+j\omega \tau_2)}
+=-\left(j\omega\tau_3\right)\;\left(\frac{1}{1+j\omega\tau_1}\right)
+\;\left(\frac{1}{1+j\omega\tau_2}\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3148}%
+$\displaystyle =-j\omega\tau_3\;
+\left(\frac{1/\tau_1\tau_2}{(j\omega)^2+j\omega(\tau_1+\tau_2)/\tau_1\tau_2+1/\tau_1\tau_2}\right)
+=-j\omega\tau_3\;\frac{\omega_n^2}{\omega^2+j\omega\Delta\omega+\omega_n^2}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1935}%
+$\omega_{c_1}=1/\tau_1=1/R_1C_1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1937}%
+$\omega_{c_2}=1/\tau_2=1/R_2C_2$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1939}%
+$\omega_{c_3}=1/\tau_3=1/R_2C_1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1941}%
+$\Delta\omega=(\tau_1+\tau_2)/\tau_1\tau_2$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1943}%
+$\omega_n=1/\sqrt{\tau_1\tau_2}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1945}%
+$\omega_n=1/\tau_n$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1947}%
+$\tau_n$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1949}%
+$\tau_1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1951}%
+$\tau_2$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3159}%
+$\displaystyle \tau_n=\sqrt{\tau_1\tau_2}=(\tau_1\tau_2)^{1/2},\;\;\;\;\;\;\;
+    \log\tau_n=\frac{1}{2}\left(\log\tau_1+\log\tau_2\right)
+  $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3161}%
+$\displaystyle \log\omega_n=\frac{1}{2}\left(\log\omega_1+\log\omega_2\right)
+  $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1953}%
+$\omega_n$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1955}%
+$\omega_1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1957}%
+$\omega_2$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1959}%
+$\tau_1=10^{-6}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1961}%
+$\tau_2=10^{-8}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1963}%
+$\tau_3=10^{-3}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1965}%
+$Lm$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3170}%
+$\displaystyle -Lm_{BP}(j\omega)=-20\log |H_{BP}(j\omega)|
+  =-20\log \bigg| \frac{Z_2(\omega)}{Z_1(\omega)} \bigg|
+  =20\log \bigg| \frac{Z_1(\omega)}{Z_2(\omega)} \bigg|
+  =Lm_{BS}(j\omega)
+  $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1967}%
+$Z_1(\omega)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1969}%
+$Z_2(\omega)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3174}%
+$\displaystyle H_{BS}(j\omega)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3176}%
+$\displaystyle -\frac{Z_1(\omega)}{Z_2(\omega)}
+=-\frac{R_2+1/j\omega C_2}{R_1||1/j\omega C_1}
+=-\frac{R_2+1/j\omega C_2}{R_1/j\omega C_1/(R_1+1/j\omega C_1)}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3178}%
+$\displaystyle \frac{(1+j\omega C_1R_1)(1+j\omega C_2R_2)}{j\omega R_1C_2}
+=\frac{(1+j\omega\tau_1)(1+j\omega\tau_1)}{j\omega\tau_3}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1971}%
+$V_b\approx V_{out}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3182}%
+$\displaystyle \frac{V_a-V_{in}}{Z_1}+\frac{V_a-V_{out}}{Z_3}+\frac{V_a-V_{out}}{Z_2}
+  =\frac{V_a-V_{in}}{Z_1}+(V_a-V_{out})\left(\frac{1}{Z_3}+\frac{1}{Z_2}\right)=0 
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3184}%
+$\displaystyle \frac{V_{out}-V_a}{Z_2}+\frac{V_{out}}{Z_4}=0,
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1973}%
+$V_a$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3187}%
+$\displaystyle V_a=V_{out}\frac{Z_2+Z_4}{Z_4}
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3189}%
+$\displaystyle V_{out}\;\left(\frac{Z_2+Z_4}{Z_1Z_4}+\frac{Z_2}{Z_3Z_4}+\frac{Z_2}{Z_2Z_4} \right)
+  =\frac{V_{in}}{Z_1}
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1975}%
+$V_{out}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1977}%
+$V_{in}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3193}%
+$\displaystyle H$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3195}%
+$\displaystyle \frac{V_{out}}{V_{in}}=\frac{Z_3Z_4}{Z_1Z_2+Z_1Z_3+Z_2Z_3+Z_3Z_4}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1979}%
+$Z_1=R_1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1981}%
+$Z_2=R_2$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1983}%
+$Z_3=1/j\omega C_1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1985}%
+$Z_4=1/j\omega C_2$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3201}%
+$\displaystyle H(j\omega)=\frac{\omega_n^2}{(j\omega)^2+\Delta\omega\;j\omega+\omega_n^2} 
+  $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3203}%
+$\displaystyle \omega_n=\frac{1}{\sqrt{R_1R_2C_1C_2}},\;\;\;\;\;\;\;
+  \Delta\omega=\frac{1}{(R_1||R_2)C_1}=\frac{1}{R_pC_1},\;\;\;\;
+  R_p=R_1||R_2=\frac{R_1R_2}{R_1+R_2}
+  $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3205}%
+$\displaystyle Q=\frac{\omega_n}{\Delta\omega}=\frac{\sqrt{R_1R_2C_1C_2}}{(R_1+R_2)C_2},
+  \;\;\;\;\;
+  \zeta=\frac{1}{2Q}=\frac{(R_1+R_2)C_2}{2\sqrt{R_1R_2C_1C_2}}
+  $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1989}%
+$\zeta$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1991}%
+$Q=1/2\zeta$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1993}%
+$R_1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1995}%
+$R_2$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1997}%
+$C_1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1999}%
+$C_2$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2001}%
+$R_1=R_2=1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3215}%
+$\displaystyle \omega_n=\frac{1}{\sqrt{C_1C_2}},\;\;\;\;\;\Delta\omega=\frac{1}{C_1}
+  $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2003}%
+$Z_1=1/j\omega C_1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2005}%
+$Z_2=1/j\omega C_2$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2007}%
+$Z_3=R_1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2009}%
+$Z_4=R_2$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3221}%
+$\displaystyle H(j\omega)=\frac{(j\omega)^2}{(j\omega)^2+\Delta\omega\;j\omega+\omega_n^2}
+  $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3223}%
+$\displaystyle \omega_n=\frac{1}{\sqrt{R_1R_2C_1C_2}},\;\;\;\;\;\;\;
+  \Delta\omega=\frac{1}{C_sR_2},\;\;\;\;\;
+  C_s=\frac{C_1C_2}{C_1+C_2}
+  $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3225}%
+$\displaystyle Q=\frac{\sqrt{R_1R_2C_1C_2}}{(C_1+C_2)R_1},\;\;\;\;\;\;
+  \zeta=\frac{1}{2Q}=\frac{(C_1+C_2)R_1}{2\sqrt{R_1R_2C_1C_2}}
+  $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3227}%
+$\displaystyle V_2=\frac{R_a}{R_a+R_b}V_{out}=kV_{out},\;\;\;\;\;\;\;\left(k=\frac{R_a}{R_a+R_b}\right)
+  $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2011}%
+$V_2$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3230}%
+$\displaystyle \frac{V_1-V_2}{Z_2}=\frac{V_2}{Z_4},\;\;\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;
+    V_1=V_2\left(1+\frac{Z_2}{Z_4}\right)
+  $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2013}%
+$V_1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3233}%
+$\displaystyle \frac{V_{in}-V_1}{Z_1}+\frac{V_{out}-V_1}{R_f}+\frac{V_2-V_1}{Z_2}
+    =\frac{V_1}{Z_3}
+  $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2017}%
+$V_2(1+Z_2/Z_4)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3237}%
+$\displaystyle \frac{V_{in}}{Z_1}+\frac{V_{out}}{R_f}+\frac{V_2}{Z_2}
+=V_1\left(\frac{1}{Z_1}+\frac{1}{R_f}+\frac{1}{Z_2}+\frac{1}{Z_3}\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3239}%
+$\displaystyle V_2\left(1+\frac{Z_2}{Z_4}\right)\left(\frac{1}{Z_1}
++\frac{1}{R_f}+\frac{1}{Z_2}+\frac{1}{Z_3}\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2021}%
+$kV_{out}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3243}%
+$\displaystyle \frac{V_{in}}{Z_1}+\frac{V_{out}}{R_f}
+  =kV_{out}\left[\left(1+\frac{Z_2}{Z_4}\right)\left(\frac{1}{Z_1}+\frac{1}{R_f}
+    +\frac{1}{Z_2}+\frac{1}{Z_3}\right)-\frac{1}{Z_2}\right]
+  $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3245}%
+$\displaystyle \frac{V_{in}}{Z_1}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3247}%
+$\displaystyle kV_{out}\left[\left(1+\frac{Z_2}{Z_4}\right)
+\left(\frac{1}{Z_1}
++\frac{1}{R_f}+\frac{1}{Z_2}+\frac{1}{Z_3}\right)-\frac{1}{Z_2}\right]-\frac{V_{out}}{R_f}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3249}%
+$\displaystyle V_{out}\left\{k\left[\left(1+\frac{Z_2}{Z_4}\right)\left(\frac{1}{Z_1}
++\frac{1}{R_f}+\frac{1}{Z_2}+\frac{1}{Z_3}\right)-\frac{1}{Z_2}\right]-\frac{1}{R_f}\right\}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3251}%
+$\displaystyle H=\frac{V_{out}}{V_{in}}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3253}%
+$\displaystyle \frac{1}{Z_1\left\{k\left[\left(1+\frac{Z_2}{Z_4}\right)\left(\frac{1}{Z_1}+\frac{1}{R_f}+\frac{1}{Z_2}+\frac{1}{Z_3}\right)-\frac{1}{Z_2}\right]-\frac{1}{R_f}\right\}}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3255}%
+$\displaystyle \frac{1/k}{Z_1\left[\left(1+\frac{Z_2}{Z_4}\right)\left(\frac{1}{Z_1}+\frac{1}{R_f}+\frac{1}{Z_2}+\frac{1}{Z_3}\right)-\frac{1}{Z_2}\right]-\frac{Z_1}{kR_f}}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3257}%
+$\displaystyle \frac{1/k}{1+\frac{Z_1}{R_f}+\frac{Z_1}{Z_3}+\frac{Z_2}{Z_4}+\frac{Z_1Z_2}{Z_4R_f}+\frac{Z_1}{Z_4}+\frac{Z_1Z_2}{Z_3Z_4}-\frac{Z_1}{kR_f}}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3259}%
+$\displaystyle Z_1=R_1,\;\;\;\;\;Z_4=R_2,\;\;\;\;Z_2=\frac{1}{j\omega C_2},
+  \;\;\;\;Z_3=\frac{1}{j\omega C_1}
+  $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3263}%
+$\displaystyle \frac{\left(1+\frac{R_b}{R_a}\right)\frac{1}{R_1C_1}j\omega}{(j\omega)^2+\left(\frac{1}{R_2C_1}+\frac{1}{R_2C_2}+\frac{1}{R_1C_1}-\frac{R_b}{R_aR_fC_1}\right)j\omega+\frac{R_1+R_f}{R_fR_1R_2C_1C_2}}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3265}%
+$\displaystyle \frac{Aj\omega}{(j\omega)^2+\Delta\omega j\omega+\omega_n^2},
+\;\;\;\;\;\;\;\;\;
+A=(1+R_b/R_a)/R_1C_1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3267}%
+$\displaystyle \omega_n=\sqrt{\frac{R_1+R_f}{R_fR_1R_2C_1C_2}}
+  $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3269}%
+$\displaystyle \Delta\omega=\frac{1}{R_2C_1}+\frac{1}{R_2C_2}+\frac{1}{R_1C_1}-\frac{R_b}{R_aR_fC_1}
+  $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2023}%
+$1+R_b/R_a$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2025}%
+$R_1=R_2=R$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2027}%
+$C_3=2C$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2029}%
+$C_1=C_2=C$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2031}%
+$R_3=R/2$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2033}%
+$Z_L=\infty$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2035}%
+$\omega\approx 0$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3282}%
+$\displaystyle \frac{v_{out}}{v_{in}}
+=\frac{(j\omega)^2+\omega_n^2}{(j\omega)^2+4\omega_nj\omega+\omega_n^2}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3284}%
+$\displaystyle \frac{(j\omega)^2+\omega_n^2}{(j\omega)^2+j\omega\omega_n/Q+\omega_n^2}
+=\frac{\omega^2-\omega_n^2}{\omega^2-j\omega\Delta\omega-\omega_n^2}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3286}%
+$\displaystyle \omega_n=\frac{1}{RC}=\frac{1}{\tau}
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2039}%
+$Q=1/4=0.25$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2041}%
+$\Delta\omega=\omega_n/Q=4\omega_n$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2043}%
+$\omega_n=1/\tau$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3291}%
+$\displaystyle |H(j\omega)|=\left\{\begin{array}{ll} 
+H(0)=\omega_n^2/\omega_n^2=1 & \omega=0 \\
+H(j\omega_n)=0 & \omega=\omega_n=1/\tau\\
+H(\infty)=\lim\limits_{\omega\rightarrow\infty}H(j\omega)=\omega^2/\omega^2=1 & \omega\rightarrow \infty
+\end{array}\right.
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2047}%
+$Q=1/4$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2049}%
+$A=1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2051}%
+$R_4$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2053}%
+$R_5$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3299}%
+$\displaystyle V_1=\frac{R_5}{R_4+R_5}\;V_{out}=\alpha v_{out}
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2057}%
+$\alpha=R_5/(R_4+R_5)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2059}%
+$1-\alpha=R_4/(R_4+R_5)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2061}%
+$V_{in}-V_1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2063}%
+$V_{out}-V_1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2065}%
+$H(j\omega)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3306}%
+$\displaystyle V_{out}-V_1=H(j\omega)(V_{in}-V_1)
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2067}%
+$V_1=V_{out}\;R_5/(R_4+R_5)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3309}%
+$\displaystyle H(j\omega)V_{in}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3311}%
+$\displaystyle V_{out}+(H(j\omega)-1) V_1
+=V_{out}+(H(j\omega)-1)\frac{R_5}{R_4+R_5}V_{out}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3313}%
+$\displaystyle \left(1+(H(j\omega)-1)\;\frac{R_5}{R_4+R_5}\right)\,V_{out}
+=\frac{R_4+H(j\omega)R_5}{R_4+R_5}\;V_{out}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3315}%
+$\displaystyle H_{active}(j\omega)=\frac{V_{out}}{V_{in}}
+=\frac{H(j\omega)(R_4+R_5)}{R_4+H(j\omega)R_5}
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2069}%
+$H(j\omega)=((j\omega)^2+\omega_n^2)/((j\omega)^2+4\omega_n j\omega
++\omega_n^2)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3318}%
+$\displaystyle H_{active}(j\omega)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3320}%
+$\displaystyle \frac{(\omega_n^2-\omega^2)(R_4+R_5)}
+{R_4(\omega_n^2-\omega^2+4\omega_n j\omega)+(\omega_n^2-\omega^2)R_5}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3322}%
+$\displaystyle \frac{(\omega_n^2-\omega^2)(R_4+R_5)}
+{4\omega_nR_4 j\omega+(\omega_n^2-\omega^2)(R_4+R_5)}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3324}%
+$\displaystyle \frac{\omega_n^2-\omega^2}{j\omega 4\omega_n R_4/(R_4+R_5)+\omega_n^2-\omega^2}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3326}%
+$\displaystyle \frac{\omega_n^2-\omega^2}{\omega_n^2-\omega^2+\omega_n/Q_{active} j\omega}
+=\frac{\omega^2-\omega_n^2}{\omega^2-\Delta\omega_{active} j\omega-\omega^2_n}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3328}%
+$\displaystyle Q_{active}=\frac{R_4+R_5}{4R_4},\;\;\;\;\;\;
+\Delta\omega_{active}=\frac{\omega_n}{Q}_{active}
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3332}%
+$\displaystyle \frac{\omega_n^2-\omega^2}{\omega_n^2+4j\omega\omega_n R_4/(R_4+R_5)-\omega^2}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3334}%
+$\displaystyle \frac{\omega_n^2-\omega^2}{\omega_n^2-\omega^2+\omega_n/Q_{active} j\omega}
+=\frac{\omega_n^2-\omega^2}{\omega_n^2-\omega^2+\Delta\omega_{active} j\omega}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2075}%
+$\Delta\omega_{active}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2077}%
+$R_5=0$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2079}%
+$V_1=0$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2081}%
+$Q_{active}=1/4=Q$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2085}%
+$R_4=0$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2087}%
+$V_1=V_{out}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2089}%
+$Q_{active}=\infty$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2091}%
+$\Delta\omega_{active}=\omega_n/Q_{active}=0$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2093}%
+$C=0$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2095}%
+$Z'_3=2R$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2097}%
+$Z''_3=2(1+j\omega RC)/R(j\omega C)^2$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3352}%
+$\displaystyle Z_3=Z'_3||Z''_3=\frac{Z'_3 Z''_3}{Z'_3+Z''_3}
+  =\frac{2R(1+j\omega RC)}{1+j\omega RC+(j\omega RC)^2}
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3356}%
+$\displaystyle \frac{Z_2}{Z_2+Z_3}=\frac{R+1/j\omega C}{R+1/j\omega C+2R(1+j\omega RC)/(1+j\omega RC+(j\omega RC)^2)}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3358}%
+$\displaystyle \frac{1/C}{1/j\omega C+2R/(1+j\omega RC+(j\omega RC)^2)}
+=\frac{1}{1+2j\omega RC/(1+j\omega RC+(j\omega RC)^2)}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3360}%
+$\displaystyle \frac{1+j\omega RC+(j\omega RC)^2}{1+3j\omega RC+(j\omega RC)^2}
+=\frac{(j\omega)^2+j\omega /RC+1/(RC)^2}{(j\omega)^2+3j\omega /RC+1/(RC)^2}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2099}%
+$\omega_n=1/RC$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3363}%
+$\displaystyle H(j\omega)=\frac{(j\omega)^2+\omega_n j\omega +\omega_n^2}{(j\omega)^2+3\omega_nj\omega +\omega_n^2}
+=\frac{(j\omega)^2+\Delta\omega_n j\omega+\omega_n^2}{(j\omega)^2+\Delta\omega_dj\omega +\omega_n^2}
+=\frac{\omega_n^2-\omega^2+\Delta\omega_n j\omega }{\omega_n^2-\omega^2+\Delta\omega_dj\omega}
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3365}%
+$\displaystyle \Delta\omega_n=\omega_n,\;\;\;\;\;\;\;\Delta\omega_d=3\omega_n
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2103}%
+$H(j\omega)=H(0)=1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2107}%
+$H(j\omega)=1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2109}%
+$\omega=\omega_n=1/RC$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2111}%
+$H(j\omega_n)=1/3$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3374}%
+$\displaystyle \frac{R_3}{R_4}=\frac{R_2+1/j\omega C_2}{R_1||1/j\omega C_1}
+=\frac{(j\omega R_1C_1+1)(j\omega R_2C_2+1)}{j\omega R_1C_2}
+=\frac{1-\omega^2R_1R_2C_1C_2+j\omega(R_1C_1+R_2C_2)}{j\omega R_1C_2}
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3376}%
+$\displaystyle 1-\omega^2R_1R_2C_1C_2=0,\;\;\;\;\;\mbox{i.e.,}\;\;\;\;\;
+\omega=\frac{1}{\sqrt{R_1R_2C_1C_2}}
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3378}%
+$\displaystyle \frac{R_3}{R_4}=\frac{R_1C_1+R_2C_2}{R_1C_2}=\frac{C_1}{C_2}+\frac{R_2}{R_1}
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3382}%
+$\displaystyle \omega=\frac{1}{\sqrt{R_1R_2C_1C_2}}
+=\frac{1}{\sqrt{R^2C^2}}=\frac{1}{RC}
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3384}%
+$\displaystyle \frac{R_3}{R_4}=\frac{C_1}{C_2}+\frac{R_2}{R_1}=1+1=2,
+\;\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;R_4=2R_3
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3386}%
+$\displaystyle \frac{V_{in}}{R_4}+\frac{V_{out}}{R_3}+\frac{V_1}{R_2}=0\;\;\;\;\;\;\;\;(1)
+  $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3388}%
+$\displaystyle V_2=\frac{R+1/j\omega C}{R+1/j\omega C+R/j\omega C/(R+1/j\omega C)}V_1
+  =\frac{(j\omega\tau+1)^2}{(j\omega\tau+1)^2+j\omega\tau}V_1,
+  $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2117}%
+$\tau=RC$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3391}%
+$\displaystyle V_1=\left(1+\frac{j\omega\tau}{(j\omega\tau+1)^2}\right)V_2,\;\;\;\;\;\;(2)
+  $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3393}%
+$\displaystyle \frac{V_1-V_2}{R_1}+\frac{V_{out}-V_2}{2R_1}=0,
+      \;\;\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;\; V_{out}=3V_2-2V_1,\;\;\;\;\;\;(3)
+  $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3395}%
+$\displaystyle V_{out}=3V_2-2V_1=3V_2-2\left(1+\frac{j\omega\tau}{(j\omega\tau+1)^2}\right)V_2
+=V_2-\frac{j\omega 2\tau}{(j\omega\tau+1)^2}\;V_2
+=\frac{(j\omega\tau)^2+1}{(j\omega\tau+1)^2}\;V_2
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3397}%
+$\displaystyle V_2=\frac{(j\omega\tau+1)^2}{(j\omega\tau)^2+1}V_{out}
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3399}%
+$\displaystyle V_1=\left(1+\frac{j\omega\tau}{(j\omega\tau+1)^2}\right)V_2
+=\left(1+\frac{j\omega\tau}{(j\omega\tau+1)^2}\right)\frac{(j\omega\tau+1)^2}{(j\omega\tau)^2+1}V_{out}
+=\frac{(j\omega\tau)^2+3j\omega\tau+1}{(j\omega\tau)^2+1}\;V_{out}
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3401}%
+$\displaystyle \frac{V_{in}}{R_4}+\frac{V_{out}}{R_3}
++\frac{(j\omega\tau)^2+3j\omega\tau+1}{(j\omega\tau)^2+1}\;\frac{V_{out}}{R_2}=0
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3403}%
+$\displaystyle \frac{V_{in}}{R_4}=-\left(\frac{1}{R_3}
++\frac{(j\omega\tau)^2+3j\omega\tau+1}{(j\omega\tau)^2+1}\;\frac{1}{R_2}\right)V_{out}
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3405}%
+$\displaystyle \frac{R_2}{R_4}=-\left(\frac{R_2}{R_3}
++\frac{(j\omega\tau)^2+3j\omega\tau+1}{(j\omega\tau)^2+1}\right)
+\frac{V_{out}}{V_{in}}
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3407}%
+$\displaystyle H(j\omega)=\frac{V_{out}}{V_{in}}
+=-\frac{R_2R_3}{R_4(R_2+R_3)}\;\frac{(j\omega\tau)^2+1}{(j\omega\tau)^2+3j\omega\tau R_3/(R_2+R_3)+1}
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3409}%
+$\displaystyle H(j\omega)=A\;\frac{(j\omega)^2+\omega_n^2}{(j\omega)^2+\Delta\omega/Q\;j\omega+\omega_n^2}
+=\left\{\begin{array}{ll}A&\omega=0\\0&\omega=\omega_n=1/\tau
+\\A&\omega\rightarrow\infty\end{array}\right.
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2119}%
+$A=-R_2R_3/R_4(R_2+R_3)=(R_2//R_3)/R_4$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2123}%
+$Q=(R_2+R_3)/3R_3$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2125}%
+$\omega_c=1/\tau$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2127}%
+$n$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3417}%
+$\displaystyle H(j\omega)=\frac{1}{j\omega\tau+1}
+  =\frac{1}{j\omega/\omega_c+1}=\frac{\omega_c}{j\omega+\omega_c}
+  $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3420}%
+$\displaystyle H(j\omega)=\left(\frac{\omega_c}{\omega_c+j\omega} \right)^n
+  $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2131}%
+$\omega_{cn}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3423}%
+$\displaystyle \left|\frac{\omega_c}{\omega_c+j\omega}\right|^n
+  =\left|\frac{\omega_c}{\sqrt{\omega_c^2+\omega^2}}\right|^n
+  =\frac{1}{\sqrt{2}}=2^{-1/2}
+  $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3425}%
+$\displaystyle \omega=\omega_{cn}=\omega_c\sqrt{2^{1/n}-1}
+  $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2133}%
+$\omega_{c4}=2\pi 1000=6.2832\times 10^3$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3428}%
+$\displaystyle \omega_c=\frac{\omega_{c4}}{\sqrt{2^{1/4}-1}}
+  =\frac{6.2832\times 10^3}{0.435}=1.445\times 10^4
+  $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2135}%
+$\tau=RC=1/\omega_c=6.92\times 10^{-5}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2137}%
+$C=0.1\;\mu F=10^{-7}\;F$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3432}%
+$\displaystyle R=\frac{\omega_c}{C}=\frac{6.92\times 10^{-5}}{10^{-7}}
+  =6.92\times 10^2=692\;\Omega
+  $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2139}%
+$\omega_c$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3435}%
+$\displaystyle \left| H_{lp}(j\omega)\right|=\frac{1}{\sqrt{1+(\omega/\omega_c)^{2n}}}
+  =\left\{\begin{array}{ll}1 & \omega=0\\1/\sqrt{2}&\omega=\omega_c\\
+  0 & \omega=\infty\end{array}\right.
+  $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2143}%
+$|H_{lp}(j\omega_c)|
+  =1/\sqrt{2}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2147}%
+$n=0$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2149}%
+$n=1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2151}%
+$n=\infty$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2155}%
+$|H_{lp}(j\omega)|=1/\sqrt{2}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3446}%
+$\displaystyle |H_{lp}(j\omega)|=\frac{1}{\sqrt{1+(\omega/\omega_c)^2}}
+    =\frac{\omega_c}{\sqrt{\omega^2+\omega_c^2}}
+    =\left|\frac{\omega_c}{j\omega+\omega_c}\right|
+    $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3449}%
+$\displaystyle |H_{lp}(j\omega)|=\frac{1}{\sqrt{1+(\omega/\omega_c)^\infty}}  
+    =\left\{\begin{array}{ll}1&\omega<\omega_c\\0&\omega>\omega_c\end{array}
+    \right.
+    $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3452}%
+$\displaystyle \left| H_{hp}(j\omega)\right|=\frac{1}{\sqrt{1+(\omega_c/\omega)^{2n}}}
+  =\frac{(\omega/\omega_c)^n}{\sqrt{1+(\omega/\omega_c)^{2n}}}
+  =\left\{\begin{array}{ll}0 & \omega=1\\1/\sqrt{2}&\omega=\omega_c\\
+  1 & \omega=\infty\end{array}\right.
+  $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2165}%
+$\omega=\omega/\omega_c$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2167}%
+$\omega_c=1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3457}%
+$\displaystyle |H(j\omega)|^2=H(j\omega)H(-j\omega)
+  =\frac{1}{1+(\omega/\omega_c)^{2n}}
+  =\frac{1}{1+\omega^{2n}}=\frac{1}{1+(\omega^2)^n}
+  $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2171}%
+$|H(j\omega)|$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2173}%
+$H(s)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2179}%
+$s^2=(j\omega)^2=-\omega^2$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3465}%
+$\displaystyle |H(j\omega)|^2=H(j\omega)\,H(-j\omega)
+  =\frac{1}{1+(\omega^2)^n}=\frac{1}{1+(-s^2)^n}
+  =\frac{1}{1+(-1)^ns^{2n}}=|H(s)|^2=H(s) H(-s)
+  $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2183}%
+$H(-s)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3471}%
+$\displaystyle 1+(-1)^ns^{2n}=0,\;\;\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;
+  \left\{\begin{array}{ll}
+  1+s^{2n}=0 & \mbox{$n$\  is even}\\
+  1-s^{2n}=0 & \mbox{$n$\  is odd}\end{array}\right.
+  $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2193}%
+$2n$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3475}%
+$\displaystyle \left\{\begin{array}{ll}
+  s=(-1)^{1/2n}=(e^{j(2k+1)\pi})^{1/2n}=e^{j(2k+1)\pi/2n} & \mbox{$n$\  is even}\\
+  s=1^{1/2n}=(e^{j2k\pi})^{1/2n}=e^{jk\pi/n} & \mbox{$n$\  is odd}
+  \end{array}\right.\;\;\;\;\;\;(k=0,\cdots,2n-1)
+  $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3478}%
+$\displaystyle s_k=e^{j(2k+1)\pi/2n},\;\;\;\;\;(k=0,\cdots,2n-1)
+    $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2209}%
+$s_k=e^{j(2 k+1)\pi/2n}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2211}%
+$k=0,\cdots,n-1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2213}%
+$s_{2n-1-k}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3486}%
+$\displaystyle s_{2n-1-k}=e^{j(2(2n-1-k)+1)\pi/2n}=e^{j\pi(4n-2k-1)/2n}
+      =e^{j2\pi} \;e^{-j(2k+1)\pi/2n} =e^{-j(2 k+1)\pi/2n}=s_k^*
+    $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3490}%
+$\displaystyle \frac{(2k+1)\pi}{2n}>\frac{\pi}{2},\;\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;\;
+      k>\frac{n-1}{2}
+    $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3494}%
+$\displaystyle H(s)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3496}%
+$\displaystyle \frac{1}{\prod_{k=\left\lceil (n-1)/2 \right\rceil}^{n-1} (s-s_k)(s-s_{2n-1-k})}
+=\frac{1}{\prod_{k=\left\lceil (n-1)/2 \right\rceil}^{n-1}(s-s_k)(s-s_k^*)}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3498}%
+$\displaystyle \frac{1}{\prod_{k=\left\lceil (n-1)/2 \right\rceil}^{n-1}(s^2-(s_k+s_k^*)s+s_ks_k^*)}
+=\frac{1}{\prod_{k=\left\lceil (n-1)/2 \right\rceil}^{n-1}(s^2-2\cos((2 k+1)\pi/2n)+1)}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2223}%
+$\left\lceil x\right\rceil$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2225}%
+$x$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3502}%
+$\displaystyle s_k+s_k^*=e^{j(2 k+1)\pi/2n}+e^{-j(2 k+1)\pi/2n} =2\cos((2 k+1)\pi/2n),
+      \;\;\;\;\;\;      s_k s_k^*=1
+    $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3505}%
+$\displaystyle s_k=e^{j2k\pi/2n}=e^{jk\pi/n},\;\;\;\;\;(k=0,\cdots,2n-1)
+    $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2231}%
+$s_0=e^{j0}=1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2233}%
+$s_n=e^{j\pi}=-1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2235}%
+$n-1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2237}%
+$s_k=e^{jk\pi/n}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2239}%
+$k=1,\cdots,n-1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2241}%
+$s_{2n-k}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3514}%
+$\displaystyle s_{2n-k}=e^{j(2n-k)\pi/n}=e^{-jk\pi/n}=s_k^*
+    $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2243}%
+$s_k$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3518}%
+$\displaystyle \frac{k\pi}{n}>\frac{\pi}{2},\;\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;\;k>\frac{n}{2}
+    $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3524}%
+$\displaystyle \frac{1}{(s-s_n)\prod_{i=\left\lceil n/2 \right\rceil}^{n-1}(s-s_k)(s-s_{2n-k})}
+=\frac{1}{(s+1)\prod_{i=\left\lceil n/2 \right\rceil}^{n-1}(s-s_k)(s-s_k^*)}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3526}%
+$\displaystyle \frac{1}{(s+1)\prod_{i=\left\lceil n/2 \right\rceil}^{n-1}(s^2-(s_k+s_k^*)s+s_k s_k^*)}
+=\frac{1}{(s+1)\prod_{i=\left\lceil n/2 \right\rceil}^{n-1}(s^2-2\cos(k\pi/n)+1)}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2253}%
+$n=2,\cdots,6$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2255}%
+$n=2$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2257}%
+$1+s^4=0$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2259}%
+$s^4=-1=e^{j(2k+1)\pi}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2261}%
+$s_k=e^{j(2k+1)\pi)/4}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2263}%
+$k=0,\cdots,3$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3535}%
+$\displaystyle s_0=e^{j\pi/4}=\frac{1+j}{\sqrt{2}},\;\;\;\;
+    s_1=e^{j3\pi/4}=\frac{-1+j}{\sqrt{2}},\;\;\;\;
+    s_2=e^{j5\pi/4}=\frac{-1-j}{\sqrt{2}},\;\;\;\;
+    s_3=e^{j7\pi/4}=\frac{1-j}{\sqrt{2}}
+    $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2265}%
+$s_1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2267}%
+$s_2=s_1^*$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3542}%
+$\displaystyle \frac{1}{(s-s_1)(s-s_2)}=\frac{1}{(s-(-1+j)/\sqrt{2})(s-(-1-j)/\sqrt{2})}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3544}%
+$\displaystyle \frac{1}{s^2+\sqrt{2}s+1}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2271}%
+$-2\cos(3\pi/2)=\sqrt{2}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2273}%
+$n=3$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2275}%
+$1-s^6=0$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2277}%
+$s^6=1=e^{j2k\pi}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2279}%
+$s_k=e^{j k2\pi/6}=e^{j k\pi/3}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2281}%
+$k=0,\cdots,5$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3552}%
+$\displaystyle s_0=e^{j0}=1,\;\;\;\;
+    s_1=e^{j\pi/3}=\frac{1+j\sqrt{3}}{2},\;\;\;\;s_2=e^{j2\pi/3}=\frac{-1+j\sqrt{3}}{2}
+    $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3554}%
+$\displaystyle s_3=e^{j3\pi/3}=e^{j\pi}=-1,\;\;\;\;
+    s_4=e^{j4\pi/3}=\frac{-1-j\sqrt{3}}{2},\;\;\;\;s_5=e^{j5\pi/3}=\frac{1-j\sqrt{3}}{2}
+    $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2283}%
+$s_2$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2285}%
+$s_3=-1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2287}%
+$s_4=s_2^*$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3562}%
+$\displaystyle \frac{1}{(s-s_2)(s-s_3)(s-s_4)}
+=\frac{1}{(s+1)(s-(-1+j\sqrt{3})/2)(s-(-1-j\sqrt{3})/2)}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3564}%
+$\displaystyle \frac{1}{(s+1)(s^2+s+1)}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2291}%
+$-2\cos(2\pi/3)=1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2293}%
+$n=4$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2295}%
+$1+s^8=0$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2297}%
+$s^8=-1=e^{j(2k+1)\pi}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2299}%
+$s_k=e^{j(2k+1)pi/8}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2301}%
+$k=0,\cdots,7$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2303}%
+$-2\cos((2k+1)\pi/2n)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2305}%
+$k=2$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2307}%
+$k=3$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2309}%
+$-2\cos(5\pi/8)=0.7654$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2311}%
+$-2\cos(7\pi/8)=1.8478$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3577}%
+$\displaystyle H(s)=\frac{1}{(s^2+0.765 s+1)(s^2+1.848 s+1)}
+    $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2313}%
+$n=5$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2315}%
+$1-s^{10}=0$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2317}%
+$s^{10}=1=e^{j2k\pi}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3582}%
+$\displaystyle s_k=e^{j(2k\pi)/10}=e^{j(k\pi)/5},\;\;\;\;\;\;(k=0,\cdots,9)
+    $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2319}%
+$-2\cos(k\pi/n)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2325}%
+$-2\cos(2\pi/5)=0.618$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2327}%
+$-2\cos(3\pi/5)=1.618$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3589}%
+$\displaystyle H(s)=\frac{1}{(s+1)(s^2+0.618 s+1)(s^2+1.618 s+1)}
+    $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2329}%
+$n=6$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2331}%
+$1+s^{12}=0$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2333}%
+$s^{12}=-1=e^{j(2k+1)\pi}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3594}%
+$\displaystyle s_k=e^{j(2k+1)\pi)/12},\;\;\;\;\;\;(k=0,\cdots,11)
+    $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2339}%
+$k=4$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2341}%
+$k=5$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2343}%
+$-2\cos(7\pi/12)=0.5176$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2345}%
+$-2\cos(9\pi/12)=1.4142$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2347}%
+$-2\cos(9\pi/12)=1.319$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3603}%
+$\displaystyle H(s)=\frac{1}{(s^2+0.5176 s+1)(s^2+1.4142 s+1)(s^2+1.9319 s+1)}
+    $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2349}%
+$1/(s^2+a\,s+1)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2353}%
+$1/(s+1)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3609}%
+$\displaystyle H(s)=\frac{1/\tau}{s+1/\tau}=\frac{\omega_c}{s+\omega_c}=\frac{1}{s+1}
+  $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2357}%
+$\omega_c=1/\tau=1/RC$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2359}%
+$R=1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2361}%
+$C=1/\omega_c=1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3614}%
+$\displaystyle H(s)=\frac{1/R_1C_1R_2C_2}{s^2+s(R_1+R_2)/R_1R_2C_1+1/R_1C_1R_2C_2}
+  =\frac{1}{s^2+\Delta\omega s+\omega_n^2}=\frac{1}{s^2+a s+1}
+  $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2363}%
+$\omega_n^2=1/R_1R_2C_1C_2$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3618}%
+$\displaystyle 2/C_1=a,\;\;\;\;\;1/C_1C_2=\omega_n^2=1
+  $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3620}%
+$\displaystyle C_1=2/a,\;\;\;\;\; C_2=1/C_1=a/2
+  $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3622}%
+$\displaystyle H(s)=\frac{s}{s+\omega_c}=\frac{s}{s+1},\;\;\;\;\;\;\;
+  H(s)=\frac{s^2}{s^2+\Delta\omega s+\omega_c^2}=\frac{s^2}{s^2+a s+1}
+  $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3624}%
+$\displaystyle H(s)=\left\{\begin{array}{cc}s^n/(1+s^{2n}) & \mbox{$n$\  is even}\\
+  s^n/(1-s^{2n}) & \mbox{$n$\  is odd}\end{array}\right.
+  $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2371}%
+$\omega_n=1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2373}%
+$\omega_n\ne 1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2375}%
+$C$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2377}%
+$C'=C/\omega_c$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2381}%
+$1/RC'=\omega_c/C'=\omega_c$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2383}%
+$C_1'=C_1/\omega_n$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2385}%
+$C_2'=C_2/\omega_n$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2387}%
+$1/C_1'C_2'=\omega_n^2/C_1C_2=\omega_n^2$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3636}%
+$\displaystyle \left\{ \begin{array}{l}
+	Y_3(s)=Y_2(s)/s \Longrightarrow Y_2(s)=Y_3(s)s	\\
+	Y_2(s)=Y_1(s)/s \Longrightarrow Y_1(s)=Y_2(s)s=Y_3(s)s^2	\\
+	Y_1(s)=Y_0(s)/s \Longrightarrow Y_0(s)=Y_1(s)s=Y_3(s)s^3	
+\end{array} \right.
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3638}%
+$\displaystyle Y_0(s)=X(s)-(k_1Y_1(s)+k_2Y_2(s)+k_3Y_3(s))	$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3640}%
+$\displaystyle X(s)=Y_0(s)+k_1Y_1(s)+k_2Y_2(s)+k_3Y_3(s)=(s^3+k_1s^2+k_2s+k_3) Y_3(s)	$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3642}%
+$\displaystyle H(s)=\frac{Y_3(s)}{X(s)}=\frac{1}{s^3+k_1s^2+k_2s+k_3}
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3644}%
+$\displaystyle \left\{ \begin{array}{ll}
+	Y_2(s)=-c_2Y_1(s)/s  \Longrightarrow  Y_1(s)=-sY_2(s)/c_2 \\
+	Y_1(s)=-c_1Y_0(s)/s  \Longrightarrow Y_0(s)=-sY_1(s)/c_1=s^2Y_2(s)/c_1c_2 \\
+	Y_0(s)=k_0 X(s)+k_1Y_1(s)+k_2Y_2(s) 
+	\end{array} \right.
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3646}%
+$\displaystyle \frac{s^2}{c_1c_2} Y_2(s)=k_0X(s)+k_1(-\frac{s}{c_2})Y_2(s)+k_2Y_2(s) $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3648}%
+$\displaystyle H(s)=\frac{Y_2(s)}{X(s)}=\frac{k_o}{\frac{s^2}{c_1c_2}+\frac{s}{c_2}s-k_2}
+	=\frac{k_oc_1c_2}{s^2+k_1c_1s-c_1c_2k_2}
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2389}%
+$c_1=c_2=c$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3651}%
+$\displaystyle H(s)=k_0\frac{c^2}{s^2+c k_1s-k_2c^2}
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3653}%
+$\displaystyle H(s)=\frac{\omega_n^2}{s^2+2\zeta \omega_n s+\omega_n^2}
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2391}%
+$c=\omega_n$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2393}%
+$k_1=2\zeta$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2395}%
+$k_2<0$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2397}%
+$k_0$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2399}%
+$w=u+jv=|w|\angle w=|w|e^{j\angle w}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2401}%
+$z=x+jy=|z|\angle z=|z|e^{j\angle z}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3663}%
+$\displaystyle \left\{ \begin{array}{l}
+      |w|=\sqrt{u^2+v^2},\;\;\;\;\angle w=\tan^{-1}\left( v/v \right) \\
+      |z|=\sqrt{x^2+y^2},\;\;\;\;\angle z=\tan^{-1}\left( y/x \right) \end{array} \right. $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3665}%
+$\displaystyle w z=(u+jv)(x+jy)=|w|e^{j\angle w}\;|z|e^{j\angle z} $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3667}%
+$\displaystyle \left| wz \right| =|w||z|,\;\;\;\;\;
+    e^{j\angle w} e^{j\angle z}=e^{j(\angle w+\angle z)},
+    \;\;\;\mbox{or}\;\;\;\;
+    \angle \left( wz \right) =\angle w+\angle z $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3669}%
+$\displaystyle \frac{w}{z}=\frac{u+jv}{x+jy}=\frac{|w|e^{j\angle w}}{|z|e^{j\angle z}} $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3671}%
+$\displaystyle \left| \frac{w}{z} \right| =\frac{|w|}{|z|},\;\;\;\;\;
+    \frac{e^{j\angle w}}{e^{j\angle z}}=e^{j(\angle w-\angle z)},\;\;\;\mbox{or}\;\;\;
+    \angle \left( \frac{w}{z} \right)=\angle w-\angle z  $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3673}%
+$\displaystyle \log \;(ab)=\log a+\log b $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3675}%
+$\displaystyle \log \;(a/b)=\log a-\log b $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3677}%
+$\displaystyle \log \;(a^n)=n\;\log a $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3679}%
+$\displaystyle \log \;(a^{-n})=-n\;\log a $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2403}%
+$R$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2405}%
+$v$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2407}%
+$i$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2409}%
+$ R=v/i$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2411}%
+$Z$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3687}%
+$\displaystyle Z=\frac{V}{I}=\frac{v_m e^{j\phi}}{i_m e^{j\psi}}=\frac{v_m}{i_m} e^{j(\phi-\psi)} 
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2415}%
+$V$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2417}%
+$I$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2425}%
+$L$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2429}%
+$I e^{j\omega t}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3698}%
+$\displaystyle V e^{j\omega t}=L\frac{d}{dt} [I e^{j\omega t}]=j\omega L I e^{j\omega t}
+  \;\;\;\;\mbox{i.e.}\;\;\;\;\;\;Z_L=\frac{V}{I}=\frac{j\omega LI}{I}=j\omega L $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2435}%
+$V e^{j\omega t}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3703}%
+$\displaystyle I e^{j\omega t}=C\frac{d}{dt} [V e^{j\omega t}]=j\omega C V e^{j\omega t}
+  \;\;\;\;\mbox{i.e.}\;\;\;\;\;\;Z_C=\frac{V}{I}=\frac{V}{j\omega CV}=\frac{1}{j\omega C} $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3706}%
+$\displaystyle Z_R=\frac{V}{I}=\frac{v_me^{j\phi}}{i_me^{j\phi}}=\frac{v_m}{i_m}=R $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2439}%
+$P_{in}=100\; mW$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2441}%
+$P_{out}=10\;W$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2443}%
+$P_{out}/P_{in}=100$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3712}%
+$\displaystyle L_B=\log_{10} \frac{P_{out}}{P_{in}}=\log_{10} \frac{10}{0.1} =\log_{10} 100 =2\; bel(B)
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3714}%
+$\displaystyle L_B=\log_{10}\frac{P_{out}}{P_{in}}=\log_{10} 100 =2\;B=20\;dB,
+\;\;\;\;\mbox{or}\;\;\;\;\;
+L_{dB}=10 \log_{10}\frac{P_{out}}{P_{in}}=20\;dB $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3716}%
+$\displaystyle L_B=\log_{10}\frac{P_{out}}{P_{in}}=\log_{10} 1000 =3\;B=30\;dB,
+\;\;\;\;\mbox{or}\;\;\;\;
+L_{dB}=10 \log_{10}\frac{P_{out}}{P_{in}}=30\;dB 
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2445}%
+$P_{in}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2447}%
+$L_{dB}=30\;dB$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3720}%
+$\displaystyle \frac{P_{out}}{P_{in}}=10^{L_{dB}/10}=10^{30/10}=10^3,
+\;\;\;\;\mbox{i.e.}\;\;\;\;P_{out} =10^3\;P_{in}=1,000\;P_{in} 
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2449}%
+$W/m^2$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2451}%
+$10^{-12}\; W/m^2$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2453}%
+$10^{14}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2455}%
+$10^2\; W/m^2$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2457}%
+$P=V^2/R=I^2 R$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2459}%
+$E=mv^2/2$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2461}%
+$E=kx^2/2$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3731}%
+$\displaystyle L_{dB}=10 \log_{10} \frac{V^2_{out}}{V^2_{in}}
+=20 \log_{10} \frac{V_{out}}{V_{in}}\;dB $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3733}%
+$\displaystyle 20 \log_{10} \frac{V_{out}}{V_{in}}=20 \log_{10} \frac{1,000}{10}=40\; dB $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3735}%
+$\displaystyle 20 \log_{10} \frac{V_{out}}{V_{in}}=20 \log_{10} \frac{10,000}{10}=60\; dB $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2469}%
+$L_{dB}=60\;dB$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3739}%
+$\displaystyle \frac{V_{out}}{V_{in}}=10^{L_{dB}/20}=10^{60/20}=10^3,
+\;\;\;\;\mbox{i.e.,}\;\;\;\;\; V_{out}=10^3 V_{in}=1,000 V_{in} $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2473}%
+$\zeta<0.2$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2477}%
+$\omega=\omega_p\approx \omega_n$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2483}%
+$\omega_1<\omega_n < \omega_2$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3748}%
+$\displaystyle |H(j\omega_1)|^2=|H(j\omega_2)|^2=\frac{1}{2} |H(j\omega_p)|^2\;\;\;\mbox{i.e.,}\;\;\;\;
+   | H(j\omega_{1,2}) |=0.707\; | H(j\omega_p) | $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3750}%
+$\displaystyle 20 \log_{10} \left( \frac{ |H(j\omega_{1,2})|}{| H(j\omega_p) |} \right)
+=20 \log_{10} 0.707=-3.01\;dB \approx -3\;dB $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2485}%
+$\omega=2\pi f$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3754}%
+$\displaystyle H(j\omega)=|H(j\omega)|e^{j\angle H(j\omega)}=|H(j\omega)| \angle H(j\omega) $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2489}%
+$\angle H(j\omega)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2493}%
+$-\infty$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2495}%
+$10^{-\infty}=0$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3763}%
+$\displaystyle Lm\; H(j\omega)=20 \;log_{10} |H(j\omega)|\;dB $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2503}%
+$\omega$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2505}%
+$10 \omega$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3769}%
+$\displaystyle \left\{ \begin{array}{ll}
+      Lm(H_1H_2)=Lm\;H_1+Lm\;H_2,&\;\;\;\;\angle (H_1H_2)=\angle H_1+\angle H_2\\
+      Lm(H_1/H_2)=Lm\;H_1-Lm\;H_2,&\;\;\;\;\angle (H_1/H_2)=\angle H_1-\angle H_2\\
+      Lm \;H^n=n\;Lm \;H,&\;\;\;\;\angle H^n=n\;\angle H \\
+      Lm (1/H)=-Lm\;H,&\;\;\;\;\angle (1/H)=-\angle H \end{array} \right. $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2509}%
+$k$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2511}%
+$(j\omega)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2513}%
+$e^{\pm j\omega \tau}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2515}%
+$(1+j\omega\tau)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2517}%
+$(j\omega)^2+2\zeta\omega_n\omega j+\omega_n^2
+    =(\omega_n^2-\omega^2)+j\,2\zeta\omega_n$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3777}%
+$\displaystyle H(j\omega)=\frac{N(j\omega)}{1+j\omega \tau} $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3779}%
+$\displaystyle H(j\omega)=\frac{N(j\omega)}{(j\omega)^2+2\zeta\omega_n j\omega +\omega_n^2}
+=\frac{N(j\omega)}{(\omega_n^2-\omega^2)+j\;(2\zeta\omega_n \omega) }$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3783}%
+$\displaystyle \left\{ \begin{array}{l}
+    \mbox{If $k>0, \;\;\;\;k=|k|e^{j0}, \;\;Lm\;k=20 \;\log_{10}|k|,\;\;\angle k=0$} \\
+    \mbox{If $k<0, \;\;\;\;k=-|k|=|k|e^{j\pi}, \;\;Lm\;k=20\;\log_{10}|k|,\;\;\angle k=\pi$} 
+    \end{array} \right. $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3786}%
+$\displaystyle Lm \;e^{ j\omega \tau}=20\;\log_{10} |e^{ j\omega \tau}|=20\;\log_{10} 1=0,\;\;\;\;
+  \angle e^{ j\omega \tau} =\pm \omega \tau $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2529}%
+$j\omega=\omega\; e^{j\pi/2}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3789}%
+$\displaystyle Lm\; (j\omega)=20\; log_{10} \omega\;dB,\;\;\;\;\;\angle(j\omega)=\frac{\pi}{2} $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2531}%
+$\omega=1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2533}%
+$Lm \;(1) =20\; \log_{10} 1=0\;dB$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3794}%
+$\displaystyle Lm\; (j10\omega)=20\; \log_{10} 10\omega=20 \;\log_{10} 10+20\;\log_{10}\omega 
+    =20+Lm(j\omega) $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2537}%
+$j\omega$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2543}%
+$(j\omega)^{\pm m}=\omega^{\pm m} e^{\pm j m\pi/2}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3800}%
+$\displaystyle Lm(j\omega)^{\pm m}=\pm m\;Lm(j\omega),\;\;\;\;\;\angle(j\omega)^{\pm m}=\pm m\pi/2$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2545}%
+$\pm 20m/dec$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2547}%
+$m=2$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3804}%
+$\displaystyle Lm\; (j\omega)^2=40\log_{10}\omega,\;\;\;\;\;\angle\;(j\omega)^2=\pi $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2549}%
+$j\omega\tau$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2553}%
+$\omega\tau=1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2555}%
+$\omega=1/\tau$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2557}%
+$1/j\omega=(j\omega)^{-1}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3811}%
+$\displaystyle Lm \;(j\omega)^{-1}=-Lm\;(j\omega)=-20\;log_{10} \omega\;dB,
+  \;\;\;\;\angle\; (j\omega)^{-1}=-\angle(j\omega)=-\frac{\pi}{2} $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2559}%
+$1/j\omega$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2563}%
+$1+j\omega\tau$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3816}%
+$\displaystyle 1+j\omega \tau=\sqrt{1+(\omega \tau)^2}\;e^{j\tan^{-1}(\omega \tau)}
+  =\sqrt{1+(\omega \tau)^2}\;\angle \tan^{-1}(\omega \tau) $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3818}%
+$\displaystyle Lm(1+j\omega \tau)=20\;\log_{10}\sqrt{1+(\omega \tau)^2}
+  =20\;\log_{10}(1+(\omega \tau)^2)^{1/2}=10\;\log_{10}(1+(\omega \tau)^2) $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3820}%
+$\displaystyle \angle(1+j\omega \tau)=\tan^{-1}(\omega\tau) $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3824}%
+$\displaystyle Lm(1+j)=20\;\log_{10} \sqrt{1^2+1^2}=20\;\log_{10} 0.707\approx 3.01\;dB,\;\;\;\;\;
+    \angle(1+j)=\frac{\pi}{4} $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2569}%
+$\omega\tau \ll 1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2571}%
+$\omega\tau\le 10$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3828}%
+$\displaystyle Lm(1+j\omega \tau)\approx10\;\log_{10}(1)=0,\;\;\;\;\;
+    \angle(1+j\omega \tau)\approx \angle(1)=0 $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2573}%
+$\omega\tau \gg 1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2575}%
+$\omega\tau\ge 10$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3832}%
+$\displaystyle Lm(1+j\omega \tau)\approx 20\;\log_{10}(\omega \tau),\;\;\;\;
+    \angle(1+j\omega \tau)\approx \angle(j\omega \tau)=\frac{\pi}{2} $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2577}%
+$Lm(1+j\omega\tau)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2579}%
+$\omega\tau<1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2581}%
+$\omega\tau>1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2583}%
+$\angle(1+j\omega\tau)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2585}%
+$\omega\tau<0.1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2587}%
+$\pi/2$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2589}%
+$\omega\tau>10$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2591}%
+$45^\circ/dec$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2593}%
+$1/(1+j\omega\tau)=(1+j\omega\tau)^{-1}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3843}%
+$\displaystyle Lm\;(1+j\omega\tau)^{-1}=-Lm(1+j\omega\tau)
+  =-10\;\log_{10}(1+(\omega \tau)^2) $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3845}%
+$\displaystyle \angle\;(1+j\omega \tau)^{-1}=-\angle(1+j\omega \tau)
+  =-\tan^{-1}(\omega\tau) $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2595}%
+$1/(1+j\omega\tau)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2599}%
+$\omega_1=100$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2601}%
+$\omega_2=1000$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3851}%
+$\displaystyle H(j\omega)=\frac{1}{(j\omega)^2+2\zeta\omega_n j\omega+\omega_n^2}
+  =\frac{1}{(\omega^2_n-\omega^2)+2\zeta\omega_n j\omega}
+  =\frac{\frac{1}{\omega_n^2}}{1-(\frac{\omega}{\omega_n})^2+j\,2\zeta\frac{\omega}{\omega_n}} $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2605}%
+$\Delta=b^2-4ac=(2\zeta\omega_n)^2-4\omega_n^2=4\omega^2_n(\zeta^2-1)\ge 0$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2607}%
+$\zeta\ge 1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3856}%
+$\displaystyle p_{1,2}=(-\zeta\pm\sqrt{\zeta^2-1})\omega_n < 0 $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3859}%
+$\displaystyle H(j\omega)=\frac{1}{(j\omega-p_1)(j\omega-p_2)} 
+  =\frac{1/p_1p_2}{(j\omega/p_1-1)(j\omega/p_2-1)} 
+  =\frac{\tau_1}{1+j\omega\tau_1}\;\frac{\tau_2}{1+j\omega\tau_2}
+  =H_1(j\omega)H_2(j\omega) $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2611}%
+$\tau_1=-1/p_1>0$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2613}%
+$\tau_2=-1/p_2>0$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3863}%
+$\displaystyle Lm\;(H_1 H_2)=Lm\; H_1+Lm\; H_2,\;\;\;\;\angle (H_1 H_2)=\angle H_1+\angle H_2 $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2615}%
+$\omega_{c1}=1/\tau_1=p_1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2617}%
+$\omega_{c1}=1/\tau_2=p_2$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2619}%
+$0<\zeta<1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2621}%
+$20\log_{10} \omega_n^{-}2=-40\log_{10} \omega_n$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3869}%
+$\displaystyle |H(j\omega)|=[(1-(\frac{\omega}{\omega_n})^2)^2+(2\zeta\frac{\omega}{\omega_n})^2]^{-1/2}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3871}%
+$\displaystyle Lm\;H(j\omega)=20\log_{10} |H(j\omega)|
+=-10\;\log_{10}[\; (1-(\frac{\omega}{\omega_n})^2)^2+(2\zeta\frac{\omega}{\omega_n})^2\;]$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3873}%
+$\displaystyle \angle H(j\omega)=-\tan^{-1}\frac{2\zeta\omega/\omega_n}{1-(\omega/\omega_n)^2} $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2623}%
+$\omega/\omega_n=1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2625}%
+$H(j\omega)=1/j2\zeta=-j/2\zeta$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3877}%
+$\displaystyle Lm\;H(j\omega)=-20\;\log_{10} 2\zeta,\;\;\;\;\;\angle H(j\omega)=-\frac{\pi}{2} $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2627}%
+$\omega/\omega_n\ll 1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2629}%
+$\omega \ll \omega_n$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3881}%
+$\displaystyle Lm\;H(j\omega) \approx -10\;\log_{10} (1)=0,\;\;\;\;\;\angle H(j\omega)=0^\circ $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2631}%
+$\omega/\omega_n\gg 1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3885}%
+$\displaystyle Lm\;H(j\omega)\approx-10\;\log_{10}[\; (\frac{\omega}{\omega_n})^4 ]
+    =-40 \;\log_{10} \frac{\omega}{\omega_n}    $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3887}%
+$\displaystyle \angle H(j\omega) \approx -\tan^{-1} (-2\zeta \omega_n/\omega)
+    \approx -\tan^{-1} (-0)=-\pi=-180^\circ $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3889}%
+$\displaystyle |H(j\omega)|
+  =\frac{1}{\sqrt{(1-\frac{\omega^2}{\omega_n^2})^2+4\zeta^2 \frac{\omega^2}{\omega_n^2}}}
+  =\frac{1}{\sqrt{(1-u)^2+4\zeta^2 u}} $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2635}%
+$u=(\omega/\omega_n)^2$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2637}%
+$u=1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2639}%
+$\omega=\omega_n$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3894}%
+$\displaystyle | H(j\omega_n) |=\frac{1}{2\zeta}=Q $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2645}%
+$\omega_p$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2647}%
+$u$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3900}%
+$\displaystyle \frac{d}{du}[u^2+(4\zeta^2-2)u+1]=2u+4\zeta^2-2=0 $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3902}%
+$\displaystyle u=\frac{\omega^2}{\omega_n^2}=1-2\zeta^2,\;\;\;\mbox{i.e.,}
+  \;\;\;\;\omega=\omega_n\sqrt{1-2\zeta^2} < \omega_n $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2649}%
+$\omega_p=\omega_n\sqrt{1-2\zeta^2}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3905}%
+$\displaystyle | H(j\omega_p) |=\frac{1}{2\zeta\sqrt{1-\zeta^2}} > \frac{1}{2\zeta}=| H(j\omega_n) | $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2651}%
+$\zeta^2>1/2$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2653}%
+$\zeta>0.707$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2655}%
+$V_C$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3911}%
+$\displaystyle H_C(j\omega)=\frac{V_C}{V_{in}}=\frac{Z_C}{Z_R+Z_C}
+    =\frac{1/j\omega C}{R+1/j\omega C} 
+    =\frac{1}{j\omega RC+1}=\frac{1}{j\omega \tau+1} $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2659}%
+$V_R$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3915}%
+$\displaystyle H_R(j\omega)=\frac{V_R}{V_{in}}=\frac{Z_R}{Z_R+Z_C}
+    =\frac{R}{R+1/j\omega C}=\frac{j\omega RC}{j\omega RC+1} 
+    =\frac{j\omega \tau}{j\omega \tau+1} $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2661}%
+$H_R(j\omega)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3918}%
+$\displaystyle H_R(j\omega)= \frac{1}{j\omega \tau+1} j\omega \tau  $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2663}%
+$H_C(j\omega)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3921}%
+$\displaystyle Lm\;H_R(j\omega)
+=20\log_{10} \left| \frac{1}{j\omega \tau+1}\right|+20\log_{10} \left| j\omega \tau \right| 
+=Lm\; H_C(j\omega) +20\log_{10} (\omega\tau) $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2667}%
+$\omega=\omega_c=1/\tau$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3925}%
+$\displaystyle \angle H_R(j\omega)=\angle \left(\frac{1}{j\omega \tau+1}\right)+\angle j\omega \tau  
+=\angle H_C(j\omega)+\frac{\pi}{2} $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2669}%
+$\tau=0.01$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2671}%
+$\omega_C=100$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2675}%
+$\omega=\omega_c$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2679}%
+$|H_R(j\omega)|=|H_C(j\omega)|=1/\sqrt{2}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3936}%
+$\displaystyle H_C(j\omega)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3938}%
+$\displaystyle \frac{V_C}{V_{in}}=\frac{Z_C}{Z_L+Z_R+Z_C}
+=\frac{1/j\omega C}{j\omega L+R+1/j\omega C}
+=\frac{1}{(j\omega)^2 LC+j\omega RC+1}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3940}%
+$\displaystyle \frac{1/LC}{(j\omega)^2 +j\omega R/L+1/LC}
+=\frac{\omega_n^2}{(j\omega)^2 +2\zeta\omega_n j\omega+\omega^2_n}
+=\frac{1}{(1-\frac{\omega^2}{\omega_n^2})+j2\zeta\frac{\omega}{\omega_n}}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3942}%
+$\displaystyle \omega_n=\frac{1}{\sqrt{LC}},\;\;\;\;\zeta=\frac{R}{2}\sqrt{\frac{C}{L}} $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3944}%
+$\displaystyle |H_C(j\omega)|
+  =\frac{1}{\sqrt{(1-\frac{\omega^2}{\omega_n^2})^2+4\zeta^2 \frac{\omega^2}{\omega_n^2}}}
+  =\frac{1}{\sqrt{(1-u)^2+4\zeta^2 u}} $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2689}%
+$u=\omega/\omega_n=1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3952}%
+$\displaystyle H_R(j\omega)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3954}%
+$\displaystyle \frac{V_R}{V_{in}}=\frac{Z_R}{Z_L+Z_R+Z_C}
+=\frac{R}{j\omega L+R+1/j\omega C}
+=\frac{j\omega RC}{(j\omega)^2 LC+j\omega RC+1}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3956}%
+$\displaystyle \frac{j\omega R/L}{(j\omega)^2 +j\omega R/L+1/LC}
+=\frac{2\zeta\omega_nj\omega}{(j\omega)^2 +2\zeta\omega_n j\omega+\omega^2_n}
+=H_C(j\omega) \;2\zeta \omega_n\;j \omega$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3958}%
+$\displaystyle Lm\;H_R(j\omega)=Lm\; H_C(j\omega)+Lm\;(2\zeta\omega_n\;j\omega),\;\;\;\;
+  \angle H_R(j\omega)=\angle H_C(j\omega)+\angle(2\zeta\omega_n\;j\omega) $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2697}%
+$20\log_{10} 2\zeta\omega_n^2$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2699}%
+$90^\circ$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2703}%
+$R+j(\omega L-1/\omega C)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2705}%
+$j\omega L=1/j\omega C$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2707}%
+$\omega=\omega_n=1/\sqrt{LC}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2709}%
+$|H_R(j\omega)|$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2711}%
+$V_L$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3969}%
+$\displaystyle H_L(j\omega)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3971}%
+$\displaystyle \frac{V_L}{V_{in}}=\frac{Z_L}{Z_L+Z_R+Z_C}
+=\frac{j\omega L}{j\omega L+R+1/j\omega C}
+=\frac{(j\omega)^2 LC}{(j\omega)^2 LC+j\omega RC+1}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3973}%
+$\displaystyle \frac{(j\omega)^2}{(j\omega)^2 +j\omega R/L+1/LC}
+=\frac{(j\omega)^2}{(j\omega)^2 +2\zeta\omega_n j\omega+\omega^2_n}
+=H_C(j\omega) \;(j\omega_n)^2$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3975}%
+$\displaystyle Lm\;H_L(j\omega)=Lm\; H_C(j\omega)+Lm\;(j\omega)^2,\;\;\;\;
+  \angle H_L(j\omega)=\angle H_C(j\omega)+\angle (j\omega)^2 $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2715}%
+$20\log_{10} \omega_n^2$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2721}%
+$\omega_n=100$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2723}%
+$\zeta=0.05$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2727}%
+$20\log_{10} (2\zeta\omega_n^2)=20\log_{10} 1000=60$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2729}%
+$20\log_{10}(\omega_n^2)=20\log_{10} 10,000=80$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay3986}%
+$\displaystyle H(j\omega)=-\frac{Z_2(j\omega)}{Z_1(j\omega)}
+=-\frac{R_2||1/j\omega C_2}{R_1+1/j\omega C_1}
+=-\frac{R_2/(1+j\omega R_2C_2)}{(1+j\omega R_1C_1)/j\omega C_1}
+=-\frac{j\omega \tau_3}{(1+j\omega \tau_1)(1+j\omega \tau_2)} $%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2731}%
+$\tau_1=R_1C_1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2733}%
+$\tau_2=R_2C_2$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2735}%
+$\tau_3=R_2C_1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+
+\end{document}

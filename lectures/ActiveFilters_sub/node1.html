@@ -1,0 +1,262 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>The Sallen-Key filters</TITLE>
+<META NAME="description" CONTENT="The Sallen-Key filters">
+<META NAME="keywords" CONTENT="ActiveFilters_sub">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="ActiveFilters_sub.css">
+
+<LINK REL="next" HREF="node2.html">
+<LINK REL="previous" HREF="ActiveFilters_sub.html">
+<LINK REL="up" HREF="ActiveFilters_sub.html">
+<LINK REL="next" HREF="node2.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html20"
+  HREF="node2.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html18"
+  HREF="ActiveFilters_sub.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html12"
+  HREF="ActiveFilters_sub.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html21"
+  HREF="node2.html">The Twin-T notch (band-stop)</A>
+<B> Up:</B> <A NAME="tex2html19"
+  HREF="ActiveFilters_sub.html">ActiveFilters_sub</A>
+<B> Previous:</B> <A NAME="tex2html13"
+  HREF="ActiveFilters_sub.html">ActiveFilters_sub</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00001000000000000000">
+The Sallen-Key filters</A>
+</H2>
+
+<P>
+
+<UL>
+<LI><B>Second order low-pass filter</B>
+
+<P>
+If we let <IMG
+ WIDTH="72" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$Z_1=R_1$">, <IMG
+ WIDTH="72" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.png"
+ ALT="$Z_2=R_2$">, <!-- MATH
+ $Z_3=1/j\omega C_1$
+ -->
+<IMG
+ WIDTH="111" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="$Z_3=1/j\omega C_1$">, <!-- MATH
+ $Z_4=1/j\omega C_2$
+ -->
+<IMG
+ WIDTH="111" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$Z_4=1/j\omega C_2$">, 
+  the FRF becomes:
+
+<P>
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+H&=&\frac{1/(j\omega)^2C_1C_2}
+    {R_1R_2+(R_1+R_2)/j\omega C_1+1/(j\omega)^2C_1C_2}
+    \nonumber \\
+    &=&\frac{1/R_1R_2C_1C_2}{(j\omega)^2+j\omega(R_1+R_2)/R_1R_2C_1+1/R_1R_2C_1C_2}
+    \nonumber \\
+    &=&\frac{1/R_1R_2C_1C_2}{(j\omega)^2+j\omega/R_pC_1+1/R_1R_2C_1C_2}
+    \nonumber \\
+    &=&\frac{\omega_n^2}{(j\omega)^2+2\zeta\omega_n\;j\omega+\omega_n^2} 
+    =\frac{\omega_n^2}{(j\omega)^2+\omega_n/Q \;j\omega+\omega_n^2}
+    =\frac{\omega_n^2}{(j\omega)^2+\Delta\omega\;j\omega+\omega_n^2} 
+    \nonumber
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="21" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$\displaystyle H$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="334" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.png"
+ ALT="$\displaystyle \frac{1/(j\omega)^2C_1C_2}
+{R_1R_2+(R_1+R_2)/j\omega C_1+1/(j\omega)^2C_1C_2}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="378" HEIGHT="63" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.png"
+ ALT="$\displaystyle \frac{1/R_1R_2C_1C_2}{(j\omega)^2+j\omega(R_1+R_2)/R_1R_2C_1+1/R_1R_2C_1C_2}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="275" HEIGHT="63" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.png"
+ ALT="$\displaystyle \frac{1/R_1R_2C_1C_2}{(j\omega)^2+j\omega/R_pC_1+1/R_1R_2C_1C_2}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="584" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.png"
+ ALT="$\displaystyle \frac{\omega_n^2}{(j\omega)^2+2\zeta\omega_n\;j\omega+\omega_n^2}...
+...a+\omega_n^2}
+=\frac{\omega_n^2}{(j\omega)^2+\Delta\omega\;j\omega+\omega_n^2}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+</LI>
+<LI><B>Second order high-pass filter</B>
+
+<P>
+If we let <!-- MATH
+ $Z_1=1/j\omega C_1$
+ -->
+<IMG
+ WIDTH="111" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.png"
+ ALT="$Z_1=1/j\omega C_1$">, <!-- MATH
+ $Z_2=1/j\omega C_2$
+ -->
+<IMG
+ WIDTH="111" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.png"
+ ALT="$Z_2=1/j\omega C_2$">, <IMG
+ WIDTH="72" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.png"
+ ALT="$Z_3=R_1$">, <IMG
+ WIDTH="72" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.png"
+ ALT="$Z_4=R_2$">, 
+  the FRF becomes:
+  <BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+H&=&\frac{R_1R_2}
+    {1/(j\omega)^2C_1C_2+R_1(1/j\omega C_1+1/j\omega C_2)+R_1R_2}
+    \nonumber \\
+    &=&\frac{(j\omega)^2}{1/R_1R_2C_1C_2+j\omega\;(C_1+C_2)/C_1C_2R_2+(j\omega)^2}
+    \nonumber \\
+    &=&\frac{(j\omega)^2}{(j\omega)^2+j\omega\;/C_sR_2+1/R_1R_2C_1C_2}
+    \nonumber \\
+    &=&\frac{(j\omega)^2}{(j\omega)^2+2\zeta\omega_n\;j\omega+\omega_n^2} 
+    =\frac{(j\omega)^2}{(j\omega)^2+\omega_n/Q \;j\omega+\omega_n^2} 
+    =\frac{(j\omega_n)^2}{(j\omega)^2+\Delta\omega\;j\omega+\omega_n^2}
+    \nonumber
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="21" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$\displaystyle H$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="383" HEIGHT="62" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.png"
+ ALT="$\displaystyle \frac{R_1R_2}
+{1/(j\omega)^2C_1C_2+R_1(1/j\omega C_1+1/j\omega C_2)+R_1R_2}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="381" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.png"
+ ALT="$\displaystyle \frac{(j\omega)^2}{1/R_1R_2C_1C_2+j\omega\;(C_1+C_2)/C_1C_2R_2+(j\omega)^2}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="280" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$\displaystyle \frac{(j\omega)^2}{(j\omega)^2+j\omega\;/C_sR_2+1/R_1R_2C_1C_2}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="584" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.png"
+ ALT="$\displaystyle \frac{(j\omega)^2}{(j\omega)^2+2\zeta\omega_n\;j\omega+\omega_n^2...
+...mega_n^2}
+=\frac{(j\omega_n)^2}{(j\omega)^2+\Delta\omega\;j\omega+\omega_n^2}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+</LI>
+</UL>
+
+<P>
+<BR><HR>
+<ADDRESS>
+Ruye Wang
+2016-11-20
+</ADDRESS>
+</BODY>
+</HTML>

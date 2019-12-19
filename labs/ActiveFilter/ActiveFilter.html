@@ -1,0 +1,207 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>ActiveFilter</TITLE>
+<META NAME="description" CONTENT="ActiveFilter">
+<META NAME="keywords" CONTENT="ActiveFilter">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="ActiveFilter.css">
+
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html4"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev_g.png">   
+<BR>
+<B> Next:</B> <A NAME="tex2html5"
+  HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+<FONT SIZE="+2"><B>E84 Lab: Active Filters</B></FONT>
+
+<P>
+
+<UL>
+<LI>Derive the transfer function of the active twin-T filter
+  discussed <A NAME="tex2html1"
+  HREF="http://fourier.eng.hmc.edu/e84/lectures/ActiveFilters/node4.html">here</A>.
+
+<P>
+Here <IMG
+ WIDTH="26" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$R_4$"> and <IMG
+ WIDTH="26" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.png"
+ ALT="$R_5$"> are the top and bottom parts of a potentiameter
+  which controls the amount of feedback from the output to the 
+  twin-T filter:
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V_{feedback}=\frac{R_5}{R_4+R_5}V_{out}=\alpha V_{out},\;\;\;\;\;\;  \alpha=R_5/(R_4+R_5)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="447" HEIGHT="49" BORDER="0"
+ SRC="img3.png"
+ ALT="\begin{displaymath}
+V_{feedback}=\frac{R_5}{R_4+R_5}V_{out}=\alpha V_{out},\;\;\;\;\;\; \alpha=R_5/(R_4+R_5)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The middle point between <IMG
+ WIDTH="26" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$R_4$"> and <IMG
+ WIDTH="26" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.png"
+ ALT="$R_5$"> is the wiper position of 
+  the potentiameter that can move from top (<IMG
+ WIDTH="61" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$R_4=0$">, <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.png"
+ ALT="$\alpha=1$">) to 
+  bottem (<IMG
+ WIDTH="98" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.png"
+ ALT="$R_5=\alpha=0$">).
+
+<P>
+Express the frequency response function (FRF) of the circuit in the 
+  canonical 2nd order form and determine <IMG
+ WIDTH="25" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.png"
+ ALT="$\omega_n$"> and <IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.png"
+ ALT="$Q$"> in terms 
+  of R, C, and <IMG
+ WIDTH="16" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$\alpha$">. 
+
+<P>
+</LI>
+<LI>Select component values for your twin-T filter circuit so that 
+  the 60 Hz powerline noise is attenuated by 20 dB or more, while 
+  frequencies below 50 and above 70 Hz should be attenuated by less 
+  than 3 dB. The width of the twin-T notch filter is configurable using 
+  the potentiometer. Use <IMG
+ WIDTH="100" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.png"
+ ALT="$C=270\,pF$">. Make a Bode plot and show your 
+  design meets these specifications.
+
+<P>
+</LI>
+<LI>Derive the transfer function of Sallen-Key low-pass filter
+  discussed <A NAME="tex2html2"
+  HREF="http://fourier.eng.hmc.edu/e84/lectures/ActiveFilters/node3.html">here</A>.
+
+<P>
+</LI>
+<LI>Select component values for the Sallen-Key filter so that it 
+  can be used as an antialias low-pass filter that have a passband 
+  of 0-140 Hz and a stopband of 1 KHz and above to allow for 2 KHz 
+  sampling. The attenuation should be less than 3 dB in the passband 
+  but &gt;30 dB in the stopband. Make a Bode plot to show your design 
+  meets these specifications.
+
+<P>
+</LI>
+<LI>Construct the filter circuit that combines the twin-T filter 
+  and the Sallen-Key filter you designed above. Test and verify the
+  circuit to show that its FRF satisfies the specifications.
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../TwinTLab.png"
+ ALT="TwinTLab.png">
+
+<P>
+</LI>
+<LI>Test your EKG circuit with and without the filter, and show that 
+  the filter eliminates 60 Hz (which may or may not be detectable, 
+  depending on the specific location in the lab).
+
+<P>
+</LI>
+</UL>
+
+<P>
+What to turn in:
+
+<OL>
+<LI>Hand analysis of your design of both filters in terms of the 
+    component value selection. The Bode plots of their FRFs.
+</LI>
+<LI>Multisim Bode plots showing that your filter circuit agrees 
+    with the hand analysis and meets the specifications.
+</LI>
+<LI>Measurement results of the circuit showing that its FRF
+    matches the simulation and the specifications. Pay special 
+    attention to frequencies of interest such as the shape of the 
+    notch and the transition between pass and stop band.
+</LI>
+<LI>Test results of the filter circuit with the EKG signals.
+</LI>
+</OL>
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html6"
+  HREF="node1.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html4"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev_g.png">   
+<BR>
+<B> Next:</B> <A NAME="tex2html5"
+  HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Ruye Wang
+2016-04-24
+</ADDRESS>
+</BODY>
+</HTML>

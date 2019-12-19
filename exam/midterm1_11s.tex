@@ -1,0 +1,129 @@
+\documentstyle[11pt]{article}
+\usepackage{html}
+\begin{document}
+
+\begin{center}
+{\Large \bf E84 Midterm 1 ---- 2011 Spring}
+
+{\large \bf Professors Tanenbaum and Wang}
+
+{\large \bf Student Name:}
+
+\end{center}
+
+
+
+\begin{itemize} 
+\item Open-book, open-notes, calculator OK, no laptop.
+\item Four problems, 25\% each.
+\item Put your final answers in the space provided, show concisely your derivation/steps
+  in space available or on separate papers.
+\item Put your name on every page of your test submitted.
+\end{itemize} 
+
+
+\begin{itemize} 
+
+\item {\bf Problem 1:}
+  Find the voltage $V_i$, current $I_i$, and consumed power $P_i$ associated with 
+  each of the four resistors $R_i$ ($i=1,2,3,4$) in the circuit below, where 
+  $R_1=100\Omega$, $R_2=5\Omega$, $R_3=200\Omega$, $R_4=50\Omega$, and the 
+  voltage and current sources are respectively $V=50V$ and $I=0.2A$. Also find
+  the power $P_V$ provided by the voltage source and the power $P_I$ provided 
+  by the current source.
+
+  \htmladdimg{../11sMidterm1Fig0.gif}
+
+  Show your steps concisely and put your final answers in the two tables provided
+  below. Use an arrow to indicate the direction of current. For example, if the
+  current flows through a resistor $R$ from left to right, then use a right arrow
+  $\rightarrow$ to indicate its direction.
+
+  \begin{tabular}{r|c|c|c|c}\hline
+    $R_i$     & voltage $V_i$ & current $I_i$ & power $P_i$ & current direction \\ \hline
+    $R_1=100$ &       &      &                    \\
+    $R_2=  5$ &       &      &                    \\
+    $R_3=200$ &       &      &                    \\
+    $R_4= 50$ &       &      &                    \\ \hline
+  \end{tabular}
+
+  \begin{tabular}{c|l}\hline
+    Energy source  & Power delivered \\ \hline
+    Voltage source & $P_V=$    \\
+    Current source & $P_I=$    \\ \hline
+  \end{tabular}
+
+  
+  {\bf Solution:} 
+  $V_b=50V$, 
+  \[ \begin{array}{ll}
+    \mbox{middle node $V_a$:} & V_a/5+(V_a-V_c)/200+(V_a-50)/100=0 \\
+    \mbox{bottom node $V_c$:} & (V_c-V_a)/200+(V_c-50)/50=0.2 \end{array} 
+  \]
+  Solving this we get: 
+  \[ V_a=3.46,\;\;\;\;\;V_c=48.69,\;\;\;\;V_b=50 \]
+
+  \begin{tabular}{r|r|r|r|c}\hline
+    $R_i$ & voltage $V_i$ & current $I_i$ & power $P_i$ & current direction \\ \hline
+    $R_1=100$ & 46.54 & 0.465 &  21.64W & $\leftarrow$   \\
+    $R_2=  5$ &  3.46 & 0.690 &   2.39W & $\leftarrow$   \\
+    $R_3=200$ & 45.23 & 0.226 &  10.22W & $\uparrow$     \\
+    $R_4= 50$ &  1.31 & 0.026 &  0.034W & $\downarrow$   \\ \hline
+  \end{tabular}
+
+  \begin{tabular}{c|c}\hline
+    Energy source  & Power delivered \\ \hline
+    Voltage source & $P_V=24.55W$    \\
+    Current source & $P_I= 9.74W$    \\ \hline
+  \end{tabular}
+
+{\bf \large Student Name:}
+
+\item {\bf Problem 2:}
+  \begin{itemize}
+  \item (a) For the resistive load $Z_L=R_L$ in the figure below to get maximum 
+    power from the voltage source with an internal resistance $R_0$, a matching
+    circuit composed of two inductors $L_1=L_2$ with impedance $jX$ and one 
+    capacitor $C$ with impedance $-jX$ can be used. Find the impedance $X$
+    in terms of $R_0$ and $R_L$. Show your derivation.
+
+    \htmladdimg{../11sMidterm1Fig1.gif}
+
+    {\bf Answer:}
+  
+      {\bf Solution:} $X=\sqrt{R_0 R_L}$. 
+
+  \item (b) If the load $Z_L=R_L-jX_L$ becomes capacitive (e.g., a resistor $R_L$
+    in series with a capacitor $C_L$), how would you modify the matching circuit
+    for the load to consume maximum real power? (Your answer needs no more than
+    one sentence.)
+
+    {\bf Answer:}
+      {\bf Solution:} Change $L_2$ so that its impedance is $j(X+X_L)$ 
+
+  \item (c) In part (b) if the frequency of the voltage source is 
+    $f=159,154$ Hz, $R_0=100\;\Omega$, $R_L=4\;\Omega$ and $C_L=0.05 \mu F$,
+    find the values for $L_1$, $L_2$ and $C$ of the matching circuit.
+
+    \begin{tabular}{l|l|l}\hline
+      Inductance $L_1$ & Inductance $L_2$ & Capacitance $C$ \\ \hline
+      $L_1=$            & $L_2=$          & $C=$          \\ \hline
+    \end{tabular}
+
+    {\bf Solution:} $X_L=1/2\pi f C_L=20\;\Omega$, 
+    $X_1=\sqrt{100\times 4}=20\;\Omega$, $X_2=X_1+X_L=20+20=40\;\Omega$, 
+    $L_1=\frac{20}{2\pi f}=2\times 10^{-5}\;H$, $L_2=4\times 10^{-5}\;H$, 
+    $C=\frac{1}{2\pi f\;20}=0.05\times 10^{-6}=0.05\;\mu F$.
+
+    \begin{tabular}{l|l|l}\hline
+      Inductance $L_1$ & Inductance $L_2$ & Capacitance $C$ \\ \hline
+      $L_1=2\times 10^{-5}$ & $L_2=4\times 10^{-5}$ & $C=0.05\;\mu F$          \\ \hline
+    \end{tabular}
+  \end{itemize}
+
+
+\end{itemize}
+
+
+
+\end{document}

@@ -1,0 +1,2199 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Circuit Theorems</TITLE>
+<META NAME="description" CONTENT="Circuit Theorems">
+<META NAME="keywords" CONTENT="ch2">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="ch2.css">
+
+<LINK REL="next" HREF="node4.html">
+<LINK REL="previous" HREF="node2.html">
+<LINK REL="next" HREF="node4.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node4.html">Two-Port Networks</A>
+<B> Up:</B> <A
+ HREF="node1.html">Chapter 2: Circuit Principles</A>
+<B> Previous:</B> <A
+ HREF="node2.html">Solving Circuits with Kirchoff</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION00012000000000000000">
+Circuit Theorems</A>
+</H2>
+
+<P>
+
+<UL>
+<LI><B>Superposition Theorem:</B>
+
+<P>
+A generic system with input (stimulus, cause) <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img92.svg"
+ ALT="$x$"></SPAN> and output (response,
+effect) <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.57ex; " SRC="img93.svg"
+ ALT="$y$"></SPAN> can be described mathematically as a function <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img94.svg"
+ ALT="$y=F(x)$"></SPAN>. 
+The function is <EM>linear</EM> if it satisfies the following:
+
+<UL>
+<LI><B>Homogeneity</B>
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+F(ax)=aF(x)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img95.svg"
+ ALT="$\displaystyle F(ax)=aF(x)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">19</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI><B>Superposition</B>
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+F(x_1+x_2)=F(x_1)+F(x_2)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img96.svg"
+ ALT="$\displaystyle F(x_1+x_2)=F(x_1)+F(x_2)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">20</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+</UL>
+Combining these two aspects, we have
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+F(ax_1+bx_2)=aF(x_1)+bF(x_2)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img97.svg"
+ ALT="$\displaystyle F(ax_1+bx_2)=aF(x_1)+bF(x_2)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">21</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The interpretation is that when the response is directly proportional to 
+the cause in a system <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img98.svg"
+ ALT="$F$"></SPAN>, we can consider several causes (e.g., <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img99.svg"
+ ALT="$x_1$"></SPAN> 
+and <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img100.svg"
+ ALT="$x_2$"></SPAN>) individually and then combine the individual responses (<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img101.svg"
+ ALT="$F(x_1)$"></SPAN> 
+and <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img102.svg"
+ ALT="$F(x_2)$"></SPAN>). An electrical system of linear components (with linear 
+voltage-current relation) is a linear system (if only voltage and current 
+are of interest). When the circuit is linear, the following applies:
+
+<P>
+<B>Superposition Principle:</B>
+
+<P>
+<B>When there exist multiple energy sources in the circuit, any voltage 
+  and current in the circuit can be found as the algebraic sum of the 
+  corresponding values obtained by assuming only one source at a time,
+  with all other sources turned off:</B>
+
+<UL>
+<LI><B>A voltage source is turned off if treated as short-circuit so 
+  that the voltage across it is guaranteed to be zero.</B>
+</LI>
+<LI><B>A current source is turned off if treated as open-circuit so 
+  that the current through it is guaranteed to be zero.</B>
+</LI>
+</UL>
+
+<P>
+As superposition principle only applies to linear functions, it cannot be
+applied to nonlinear functions such as power (e.g., <SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img103.svg"
+ ALT="$V^2/R$"></SPAN> or <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.12ex; " SRC="img104.svg"
+ ALT="$I^2R$"></SPAN>). 
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/superposition0.gif"
+ ALT="superposition0.gif">
+
+<P>
+
+<UL>
+<LI><B>Superposition of voltage sources:</B>
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_{12}=\frac{aV_1+bV_2}{R}=a\frac{V_1}{R}+b\frac{V_2}{R}=aI_1+bI_2
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.11ex; vertical-align: -1.71ex; " SRC="img105.svg"
+ ALT="$\displaystyle I_{12}=\frac{aV_1+bV_2}{R}=a\frac{V_1}{R}+b\frac{V_2}{R}=aI_1+bI_2$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">22</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+where <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img106.svg"
+ ALT="$I_1=V_1/R$"></SPAN> (<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img76.svg"
+ ALT="$V_2$"></SPAN> short-circuit) and <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img107.svg"
+ ALT="$I_2=V_2/R$"></SPAN> (<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img75.svg"
+ ALT="$V_1$"></SPAN> short-circuit).
+
+<P>
+</LI>
+<LI><B>Superposition of current sources:</B>
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V=R(aI_1+bI_2)=aI_1R+bI_2R=aV_1+bV_2
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img108.svg"
+ ALT="$\displaystyle V=R(aI_1+bI_2)=aI_1R+bI_2R=aV_1+bV_2$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">23</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+where <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img109.svg"
+ ALT="$V_1=I_1R$"></SPAN> (<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img5.svg"
+ ALT="$I_2$"></SPAN> open circuit) and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img110.svg"
+ ALT="$V_2=I_2R$"></SPAN> (<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img4.svg"
+ ALT="$I_1$"></SPAN> open circuit).
+</LI>
+</UL>
+
+<P>
+However, note that superposition principle does not apply to any variable
+nonlinearly related to the energy sources, such as power:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+P_{12}=\frac{(V_1+V_2)^2}{R}\ne\frac{V_1^2}{R}+\frac{V_2^2}{R}=P_1+P_2,
+  \;\;\;\;\;\;\;
+  P_{12}=R(I_1+I_2)^2 \ne RI_1^2+RI_2^2=P_1+P_2
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -1.71ex; " SRC="img111.svg"
+ ALT="$\displaystyle P_{12}=\frac{(V_1+V_2)^2}{R}\ne\frac{V_1^2}{R}+\frac{V_2^2}{R}=P_1+P_2,
+\;\;\;\;\;\;\;
+P_{12}=R(I_1+I_2)^2 \ne RI_1^2+RI_2^2=P_1+P_2$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">24</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+<B>Example 1:</B> The previous example can also be solved by superposition 
+theorem. 
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/kirchhoffexample1.gif"
+ ALT="kirchhoffexample1.gif">
+
+<P>
+First, we turn the voltage source of 20V off (short-circuit with 0V), and get
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I'_1=\frac{32}{2+8 || 4}=\frac{48}{7},\;\;\;I'_2=-I'_1\frac{8}{8+4}=-\frac{32}{7},
+  \;\;\;I'_3=I'_1\frac{4}{8+4}=\frac{16}{7}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img112.svg"
+ ALT="$\displaystyle I'_1=\frac{32}{2+8 \vert\vert 4}=\frac{48}{7},\;\;\;I'_2=-I'_1\frac{8}{8+4}=-\frac{32}{7},
+\;\;\;I'_3=I'_1\frac{4}{8+4}=\frac{16}{7}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">25</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Second, we turn the voltage source of 32V off and get
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I''_2=\frac{20}{4+8 || 2}=\frac{25}{7},\;\;\;I''_1=-I''_2\frac{8}{2+8}=-\frac{20}{7},
+  \;\;\;I''_3=I''_2\frac{2}{8+2}=\frac{5}{7}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img113.svg"
+ ALT="$\displaystyle I''_2=\frac{20}{4+8 \vert\vert 2}=\frac{25}{7},\;\;\;I''_1=-I''_2\frac{8}{2+8}=-\frac{20}{7},
+\;\;\;I''_3=I''_2\frac{2}{8+2}=\frac{5}{7}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">26</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The overall currents can then be found as the algebraic sums of the
+corresponding values obtained with one voltage source turned on at a time:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_1=I'_1+I''_1=\frac{48}{7}-\frac{20}{7}=4,\;\;\;\;
+  I_2=I''_2+I'_2=\frac{25}{7}-\frac{32}{7}=-1,\;\;\;\;
+  I_3=I'_3+I''_3=\frac{16}{7}+\frac{5}{7}=3
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.88ex; vertical-align: -1.71ex; " SRC="img114.svg"
+ ALT="$\displaystyle I_1=I'_1+I''_1=\frac{48}{7}-\frac{20}{7}=4,\;\;\;\;
+I_2=I''_2+I'_2=\frac{25}{7}-\frac{32}{7}=-1,\;\;\;\;
+I_3=I'_3+I''_3=\frac{16}{7}+\frac{5}{7}=3$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">27</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+<B>Thevenin's theorem and Norton's theorem</B>
+
+<P>
+In principle, all currents and voltages of an arbitrary network of linear 
+components and voltage/current sources can be found by either the loop 
+current method or the node voltage method, as we have seen previously.
+
+<P>
+However, if only the current <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img59.svg"
+ ALT="$I$"></SPAN> and voltage <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img50.svg"
+ ALT="$V$"></SPAN> associated with one 
+particular component such as a resistor <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img115.svg"
+ ALT="$R$"></SPAN> are of interest, it is 
+unnecessary to find voltages and currents elsewhere in the circuit. 
+Instead, we can &ldquo;pull&rdquo; the component out and treat it as the load 
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img116.svg"
+ ALT="$R_L$"></SPAN> of the rest of the circuit, which can be modeled as either a 
+Thevenin voltage source <A ID="tex2html3"
+  HREF="https://en.wikipedia.org/wiki/Leon_Charles_Thevenin">(Leon Charles Thevenin)</A>, a non-ideal 
+voltage source <!-- MATH
+ $(V_T, R_T)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img117.svg"
+ ALT="$(V_T, R_T)$"></SPAN>, or a Norton current source
+<A ID="tex2html4"
+  HREF="https://en.wikipedia.org/wiki/Edward_Lawry_Norton">(Edward Lawry Norton)</A>
+a non-ideal 
+current source <!-- MATH
+ $(I_N, R_N)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img118.svg"
+ ALT="$(I_N, R_N)$"></SPAN>. We can then find the <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img50.svg"
+ ALT="$V$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img59.svg"
+ ALT="$I$"></SPAN> 
+associated with the resistor <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img115.svg"
+ ALT="$R$"></SPAN>.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/theveninnortonfigure.gif"
+ ALT="theveninnortonfigure.gif">
+
+<P>
+</LI>
+<LI><B>Thevenin's Theorem:</B>
+
+<P>
+<B>Any one-port (two-terminal) network of resistance elements and energy 
+    sources is equivalent to (can be modeled by) an ideal voltage source 
+    <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img119.svg"
+ ALT="$V_T$"></SPAN> in series with a resistor <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img120.svg"
+ ALT="$R_T$"></SPAN>, where</B>
+  
+<UL>
+<LI><B><!-- MATH
+ $V_T=V_{oc}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img121.svg"
+ ALT="$V_T=V_{oc}$"></SPAN> is the open-circuit voltage of the network</B>,
+</LI>
+<LI><B><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img120.svg"
+ ALT="$R_T$"></SPAN> is the equivalent resistance when all energy sources are 
+    turned off (short-circuit for voltage sources, open-circuit for current 
+    sources)</B>.
+  
+</LI>
+</UL>
+
+<P>
+<B>Proof:</B> 
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/ProveThevenin.png"
+ ALT="ProveThevenin.png">
+
+<P>
+
+<UL>
+<LI>Assume the voltage and current associated with the load <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img116.svg"
+ ALT="$R_L$"></SPAN> at
+    the output port of the network are <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img50.svg"
+ ALT="$V$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img59.svg"
+ ALT="$I$"></SPAN>, respectively. 
+
+<P>
+</LI>
+<LI>Replace the load <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img116.svg"
+ ALT="$R_L$"></SPAN> in circuit (a) by an ideal current source 
+    <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img122.svg"
+ ALT="$I=V/R_L$"></SPAN> while keeping voltage <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img50.svg"
+ ALT="$V$"></SPAN> the same (b), all voltages and 
+    currents in the network to be modeled are not affected. 
+
+<P>
+</LI>
+<LI>Find voltage <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img50.svg"
+ ALT="$V$"></SPAN> in terms of the internal energy sources inside
+    the network and the external current source by superposition principle:
+
+<P>
+
+<UL>
+<LI>Turn the external current source off (open-circuit), the terminal
+      voltage is the open-circuit voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img123.svg"
+ ALT="$V'=V_{oc}$"></SPAN> due only to the energy
+      sources internal to the network (c).
+</LI>
+<LI>Turn all internal sources off (short-circuit for voltage sources,
+      open-circuit for current sources), the terminal voltage is <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img124.svg"
+ ALT="$V''=-R_0I$"></SPAN>,
+      where <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img125.svg"
+ ALT="$R_0$"></SPAN> is the equivalent resistance of the network with all energy 
+      sources off, due only to the external current source (d).
+</LI>
+<LI>By the superposition principle, we get the load voltage 
+      <!-- MATH
+ $V=V'+V''=V_{oc}-R_0I$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img126.svg"
+ ALT="$V=V'+V''=V_{oc}-R_0I$"></SPAN>. 
+</LI>
+<LI>The voltage <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img50.svg"
+ ALT="$V$"></SPAN> and current <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img59.svg"
+ ALT="$I$"></SPAN> in the circuit in (e) are also 
+      related by the same equation <!-- MATH
+ $V=V_T-R_TI$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img127.svg"
+ ALT="$V=V_T-R_TI$"></SPAN>, i.e., this circuit
+      is equivalent to the original circuit in (a), and can therefore be 
+      used as a model of the circuit.
+    
+</LI>
+</UL>
+
+<P>
+</LI>
+</UL>
+
+<P>
+We see that as far as the port voltage <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img50.svg"
+ ALT="$V$"></SPAN> and current <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img59.svg"
+ ALT="$I$"></SPAN> associated 
+  with the load are concerned, the one-port network is equivalent to an 
+  ideal voltage source <!-- MATH
+ $V_T=V_{oc}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img121.svg"
+ ALT="$V_T=V_{oc}$"></SPAN>, the open-circuit voltage across the 
+  port, in series with an internal resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img128.svg"
+ ALT="$R_T=R_0$"></SPAN>, which can be 
+  obtained as the ratio of the open-circuit voltage and the short-circuit 
+  current.
+
+<P>
+</LI>
+<LI><B>Norton's Theorem:</B>
+
+<P>
+<B>Any one-port (two-terminal) network of resistance elements and energy 
+  sources is equivalent to (can be modeled by) an ideal current source 
+  <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img129.svg"
+ ALT="$I_N$"></SPAN> in parallel with a resistor <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img130.svg"
+ ALT="$R_N$"></SPAN>, where</B>
+  
+<UL>
+<LI><B><!-- MATH
+ $I_N=I_{sc}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img131.svg"
+ ALT="$I_N=I_{sc}$"></SPAN> is the short-circuit current of the network</B>
+</LI>
+<LI><B><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img132.svg"
+ ALT="$R_N=R_T$"></SPAN> is the same resistance as in Thevenin's theorem</B>.
+  
+</LI>
+</UL>
+
+<P>
+<B>Proof:</B> The proof of this theorem is in parallel with the proof of 
+  Thevenin's theorem. 
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/ProveNorton.png"
+ ALT="ProveNorton.png">
+
+<P>
+
+<UL>
+<LI>Assume the voltage and current associated with the load <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img116.svg"
+ ALT="$R_L$"></SPAN> at
+    the output port of the network are <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img50.svg"
+ ALT="$V$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img59.svg"
+ ALT="$I$"></SPAN>, respectively. 
+
+<P>
+</LI>
+<LI>Replace the load <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img116.svg"
+ ALT="$R_L$"></SPAN> in circuit (a) by an ideal voltage source 
+    <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img133.svg"
+ ALT="$V=IR_L$"></SPAN> while keeping current <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img59.svg"
+ ALT="$I$"></SPAN> the same (b), all voltages and currents 
+    in the network to be modeled are not affected. 
+
+<P>
+</LI>
+<LI>Find current <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img59.svg"
+ ALT="$I$"></SPAN> in terms of the internal energy sources inside
+    the network and the external voltage source by superposition principle:
+
+<P>
+
+<UL>
+<LI>Turn the external voltage source off (short-circuit), the terminal
+      current is the short-circuit current <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img134.svg"
+ ALT="$I'=I_{sc}$"></SPAN> due only to the energy
+      sources internal to the network (c).
+</LI>
+<LI>Turn all internal sources off (short-circuit for voltage sources, 
+      open-circuit for current sources), the terminal current is <!-- MATH
+ $I''=-V/R_0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img135.svg"
+ ALT="$I''=-V/R_0$"></SPAN>,
+      where <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img125.svg"
+ ALT="$R_0$"></SPAN> is the equivalent resistance of the network with all energy
+      sources off, due only to the external voltage source (d).
+</LI>
+<LI>By the superposition principle, we get the load current  
+      <!-- MATH
+ $I=I'+I''=I_{sc}-V/R_0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img136.svg"
+ ALT="$I=I'+I''=I_{sc}-V/R_0$"></SPAN>. 
+</LI>
+<LI>The current <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img59.svg"
+ ALT="$I$"></SPAN> and voltage <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img50.svg"
+ ALT="$V$"></SPAN> in the circuit in (e) are also 
+      related by the same equation <!-- MATH
+ $I=I_N-V/R_N$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img137.svg"
+ ALT="$I=I_N-V/R_N$"></SPAN>, i.e., this circuit
+      is equivalent to the original circuit in (a), and can therefore be 
+      used as a model of the circuit.
+    
+</LI>
+</UL>
+
+<P>
+</LI>
+</UL>
+
+<P>
+We see that as far as the port voltage <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img50.svg"
+ ALT="$V$"></SPAN> and current <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img59.svg"
+ ALT="$I$"></SPAN> associated 
+  with the load are concerned, the one-port network is equivalent to an 
+  ideal current source <!-- MATH
+ $I_N=I_{sc}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img131.svg"
+ ALT="$I_N=I_{sc}$"></SPAN>, the short-circuit current through the 
+  port, in parallel with an internal resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img138.svg"
+ ALT="$R_N=R_0$"></SPAN>, which can be 
+  obtained as the ratio of the open-circuit voltage and the short-circuit 
+  current.
+
+<P>
+Moreover, we note that Thevenin's theorem and Norton's theorem are 
+  equivalent, as one can always be converted into the other. The internal 
+  resistances in both theorems are the same <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img139.svg"
+ ALT="$R_T=R_N$"></SPAN>, and the voltage 
+  source <!-- MATH
+ $V_T=V_{oc}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img121.svg"
+ ALT="$V_T=V_{oc}$"></SPAN> in series with <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img120.svg"
+ ALT="$R_T$"></SPAN> in Thevenin's theorem can be 
+  converted to a current source <!-- MATH
+ $V_{oc}/R_T=V_T/R_T=I_{sc}=I_N$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img140.svg"
+ ALT="$V_{oc}/R_T=V_T/R_T=I_{sc}=I_N$"></SPAN> in parallel 
+  with <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img132.svg"
+ ALT="$R_N=R_T$"></SPAN> in Norton's theorem. In either case, we can find the 
+  internal resistance by
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+R_T=R_N=\frac{V_{oc}}{I_{sc}}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img141.svg"
+ ALT="$\displaystyle R_T=R_N=\frac{V_{oc}}{I_{sc}}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">28</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+<LI><B>Millman's Theorem:</B>
+
+<P>
+The voltage across a set of <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img142.svg"
+ ALT="$N$"></SPAN> parallel branches of voltage source 
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img51.svg"
+ ALT="$V_i$"></SPAN> in series with <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img52.svg"
+ ALT="$R_i$"></SPAN> (<!-- MATH
+ $i=1,\cdots,n$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img143.svg"
+ ALT="$i=1,\cdots,n$"></SPAN>) is
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V=\frac{\sum_{i=1}^n \frac{V_i}{R_i}}{\sum_{i=1}^n\frac{1}{R_i}}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.97ex; vertical-align: -2.86ex; " SRC="img144.svg"
+ ALT="$\displaystyle V=\frac{\sum_{i=1}^n \frac{V_i}{R_i}}{\sum_{i=1}^n\frac{1}{R_i}}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">29</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+<B>Proof:</B> (Homework)
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/MillmanThm.png"
+ ALT="MillmanThm.png">
+
+<P>
+This theorem can be augmented to include branches containing <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.78ex; " SRC="img145.svg"
+ ALT="$R_j$"></SPAN> but no
+voltage source (<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.78ex; " SRC="img146.svg"
+ ALT="$V_j=0$"></SPAN>), and branches containing a current source <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.78ex; " SRC="img53.svg"
+ ALT="$I_j$"></SPAN>. If 
+a resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.78ex; " SRC="img145.svg"
+ ALT="$R_j$"></SPAN> is in series with <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.78ex; " SRC="img53.svg"
+ ALT="$I_j$"></SPAN>, it can be neglected (as it does
+not affect the current). If a resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.78ex; " SRC="img145.svg"
+ ALT="$R_j$"></SPAN> is in parallel with <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.78ex; " SRC="img53.svg"
+ ALT="$I_j$"></SPAN>, 
+they can be converted into a voltage source <!-- MATH
+ $V_j=I_jR_j$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.78ex; " SRC="img147.svg"
+ ALT="$V_j=I_jR_j$"></SPAN> in series with <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.78ex; " SRC="img145.svg"
+ ALT="$R_j$"></SPAN>. 
+
+<P>
+</LI>
+<LI><B><SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img148.svg"
+ ALT="$\Delta$"></SPAN>-Y Transformation</B>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/DeltaY.gif"
+ ALT="DeltaY.gif">
+
+<P>
+The <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img148.svg"
+ ALT="$\Delta$"></SPAN> configuration can be converted to <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img149.svg"
+ ALT="$Y$"></SPAN> and vice versa. We
+relate the <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img148.svg"
+ ALT="$\Delta$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img149.svg"
+ ALT="$Y$"></SPAN> by realizing that the resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.77ex; " SRC="img150.svg"
+ ALT="$R'_{ab}$"></SPAN>
+between terminals a and b of <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img149.svg"
+ ALT="$Y$"></SPAN> should be equal to that between the
+same two terminals of <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img148.svg"
+ ALT="$\Delta$"></SPAN>:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left\{ \begin{array}{rr}
+    R'_{ab}=R_a+R_b=R_{ab}||(R_{ac}+R_{bc}) \\
+    R'_{ac}=R_a+R_c=R_{ac}||(R_{ab}+R_{bc}) \\
+    R'_{bc}=R_b+R_c=R_{bc}||(R_{ab}+R_{ac}) \end{array} \right.
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 8.59ex; vertical-align: -3.72ex; " SRC="img151.svg"
+ ALT="$\displaystyle \left\{ \begin{array}{rr}
+R'_{ab}=R_a+R_b=R_{ab}\vert\vert(R_{ac}...
+...R_{bc}) \\
+R'_{bc}=R_b+R_c=R_{bc}\vert\vert(R_{ab}+R_{ac}) \end{array} \right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">30</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<UL>
+<LI><B>Convert <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img148.svg"
+ ALT="$\Delta$"></SPAN> to <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img149.svg"
+ ALT="$Y$"></SPAN></B>: 
+
+<P>
+Given <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img152.svg"
+ ALT="$R_{ab}$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img153.svg"
+ ALT="$R_{ac}$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img154.svg"
+ ALT="$R_{bc}$"></SPAN> of a <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img148.svg"
+ ALT="$\Delta$"></SPAN>, the three equations 
+    above can be solved for <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img155.svg"
+ ALT="$R_a$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img156.svg"
+ ALT="$R_b$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img157.svg"
+ ALT="$R_c$"></SPAN> of the corresponding <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img149.svg"
+ ALT="$Y$"></SPAN>. 
+    For example, subtracting the 3rd equation from the sum of the first two, 
+    we get expression for <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img155.svg"
+ ALT="$R_a$"></SPAN>. The solutions are:
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left\{ \begin{array}{rr}
+        R_a=R_{ab}R_{ac}/(R_{ab}+R_{ac}+R_{bc}) \\
+        R_b=R_{ab}R_{bc}/(R_{ab}+R_{ac}+R_{bc}) \\
+        R_c=R_{ac}R_{bc}/(R_{ab}+R_{ac}+R_{bc}) \\
+      \end{array} \right.
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 8.59ex; vertical-align: -3.72ex; " SRC="img158.svg"
+ ALT="$\displaystyle \left\{ \begin{array}{rr}
+R_a=R_{ab}R_{ac}/(R_{ab}+R_{ac}+R_{bc})...
+...ac}+R_{bc}) \\
+R_c=R_{ac}R_{bc}/(R_{ab}+R_{ac}+R_{bc}) \\
+\end{array} \right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">31</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+<LI><B>Convert <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img149.svg"
+ ALT="$Y$"></SPAN> to <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img148.svg"
+ ALT="$\Delta$"></SPAN></B>: 
+
+<P>
+Reversely, given <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img155.svg"
+ ALT="$R_a$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img156.svg"
+ ALT="$R_b$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img157.svg"
+ ALT="$R_c$"></SPAN> of a <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img149.svg"
+ ALT="$Y$"></SPAN>, the same three 
+    equations above can also be solved for <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img152.svg"
+ ALT="$R_{ab}$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img153.svg"
+ ALT="$R_{ac}$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img154.svg"
+ ALT="$R_{bc}$"></SPAN> 
+    of the corresponding <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img148.svg"
+ ALT="$\Delta$"></SPAN> to get:
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left\{ \begin{array}{rr}
+        R_{ab}=R_a+R_b+R_aR_b/R_c	\\
+        R_{ac}=R_a+R_c+R_aR_c/R_b	\\
+        R_{bc}=R_b+R_c+R_bR_c/R_a	\end{array} \right.
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 8.59ex; vertical-align: -3.72ex; " SRC="img159.svg"
+ ALT="$\displaystyle \left\{ \begin{array}{rr}
+R_{ab}=R_a+R_b+R_aR_b/R_c \\
+R_{ac}=R_a+R_c+R_aR_c/R_b \\
+R_{bc}=R_b+R_c+R_bR_c/R_a \end{array} \right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">32</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+</UL>
+
+<P>
+The top circuit (a bridged T-network) in the following figure can
+be converted into either of the two equivalent circuits below.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/DeltaY1.gif"
+ ALT="DeltaY1.gif">
+
+<P>
+
+<UL>
+<LI>The <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img148.svg"
+ ALT="$\Delta$"></SPAN> formed by <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img160.svg"
+ ALT="$Z_1$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img160.svg"
+ ALT="$Z_1$"></SPAN>, and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img161.svg"
+ ALT="$Z_3$"></SPAN> can be converted 
+  to a Y, which can then be combined with <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img162.svg"
+ ALT="$Z_4$"></SPAN> to get a Y (bottom left):
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left\{ \begin{array}{l}
+      Y_1=Z_1Z_3/(Z_1+Z_2+Z_3) \\
+      Y_2=Z_2Z_3/(Z_1+Z_2+Z_3) \\
+      Y_3=Z_1Z_2/(Z_1+Z_2+Z_3)+Z_4 \\
+    \end{array} \right.
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 8.59ex; vertical-align: -3.72ex; " SRC="img163.svg"
+ ALT="$\displaystyle \left\{ \begin{array}{l}
+Y_1=Z_1Z_3/(Z_1+Z_2+Z_3) \\
+Y_2=Z_2Z_3/(Z_1+Z_2+Z_3) \\
+Y_3=Z_1Z_2/(Z_1+Z_2+Z_3)+Z_4 \\
+\end{array} \right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">33</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>The Y formed by <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img160.svg"
+ ALT="$Z_1$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img164.svg"
+ ALT="$Z_2$"></SPAN>, and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img162.svg"
+ ALT="$Z_4$"></SPAN> can be converted to a 
+  <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img148.svg"
+ ALT="$\Delta$"></SPAN>, which can then be combined with <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img161.svg"
+ ALT="$Z_3$"></SPAN> to get a <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img148.svg"
+ ALT="$\Delta$"></SPAN> 
+  (bottom right):
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left\{ \begin{array}{l}
+      X_1=Z_1+Z_4+Z_1Z_4/Z_2 \\
+      X_2=Z_2+Z_4+Z_2Z_4/Z_1 \\
+      X_3=(Z_1+Z_2+Z_1Z_2/Z_4) || Z_3 \\
+    \end{array} \right.
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 8.59ex; vertical-align: -3.72ex; " SRC="img165.svg"
+ ALT="$\displaystyle \left\{ \begin{array}{l}
+X_1=Z_1+Z_4+Z_1Z_4/Z_2 \\
+X_2=Z_2+Z_4+Z_2Z_4/Z_1 \\
+X_3=(Z_1+Z_2+Z_1Z_2/Z_4) \vert\vert Z_3 \\
+\end{array} \right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">34</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+</UL>
+The resulting <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img148.svg"
+ ALT="$\Delta$"></SPAN> and Y circuits are equivalent as it can be
+shown that they can also be converted to each other with the same 
+system variables.
+</LI>
+</UL>
+
+<P>
+<B>Example 1:</B> Model the circuit in part (a) by Thevenin's theorem (b)
+and Norton's theorem (c).
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/TheveninNorton1.png"
+ ALT="TheveninNorton1.png">
+
+<P>
+Find equivalent internal resistance when both energy sources
+are turned off: <!-- MATH
+ $R_T=R_N=R_1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img166.svg"
+ ALT="$R_T=R_N=R_1$"></SPAN>.
+
+<P>
+
+<UL>
+<LI>Thevenin's equivalent circuit (b):
+
+<P>
+Find open-circuit voltage: <!-- MATH
+ $V_T=V_{oc}=V_{ab}=V_0+I_0R_1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img167.svg"
+ ALT="$V_T=V_{oc}=V_{ab}=V_0+I_0R_1$"></SPAN>
+</LI>
+<LI>Norton's equivalent circuit (c):
+
+<P>
+Find short-circuit current (superposition):
+  <!-- MATH
+ $I_N=I_{sc}=I_{ab}=V_0/R_1+I_0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img168.svg"
+ ALT="$I_N=I_{sc}=I_{ab}=V_0/R_1+I_0$"></SPAN>
+</LI>
+</UL>
+Note that the Thevenin's voltage source and the Norton's current 
+source can be converted into each other:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_N=V_T/R_T=V_0/R_1+I_0,\;\;\;\;\;\;\;\;\;
+    V_T=I_N R_N=V_0+I_0R_1
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img169.svg"
+ ALT="$\displaystyle I_N=V_T/R_T=V_0/R_1+I_0,\;\;\;\;\;\;\;\;\;
+V_T=I_N R_N=V_0+I_0R_1$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">35</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Also note that the resistors <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img125.svg"
+ ALT="$R_0$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img84.svg"
+ ALT="$R_2$"></SPAN> do not appear in either of
+the two equivalent circuits, because a voltage source provides a constant
+voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img170.svg"
+ ALT="$V_0$"></SPAN> independent of any resistance in parallel, and a current 
+source drives a constant current <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img171.svg"
+ ALT="$I_0$"></SPAN>, independent of any resistance 
+in series. 
+
+<P>
+<B>Example 2:</B> Find voltage <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img50.svg"
+ ALT="$V$"></SPAN> across and current <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img59.svg"
+ ALT="$I$"></SPAN> through <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img84.svg"
+ ALT="$R_2$"></SPAN>.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/superposition1.gif"
+ ALT="superposition1.gif">
+
+<P>
+Any one of the following methods can be used to solve the circuit:
+
+<UL>
+<LI><B>Loop-current method:</B>
+
+<P>
+Apply KVL around the outer loop with loop current <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img59.svg"
+ ALT="$I$"></SPAN> to get
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I R_2+(I_0+I) R_1-V_0=0
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img172.svg"
+ ALT="$\displaystyle I R_2+(I_0+I) R_1-V_0=0$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">36</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Solving this we get
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I=\frac{V_0-I_0 R_1}{R_1+R_2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img173.svg"
+ ALT="$\displaystyle I=\frac{V_0-I_0 R_1}{R_1+R_2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">37</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+<LI><B>Node-voltage method:</B>
+
+<P>
+Assume the currents <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img4.svg"
+ ALT="$I_1$"></SPAN> (left branch), <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img171.svg"
+ ALT="$I_0$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img174.svg"
+ ALT="$I_2=I$"></SPAN> (right branch)
+  all leave the top node, where the voltage is <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img50.svg"
+ ALT="$V$"></SPAN> (with respect to the 
+  bottom treated as ground). By KCL, we have
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_0+I_1+I_2=I_0+\frac{V-V_0}{R_1}+\frac{V}{R_2}=0,\;\;\;\;\mbox{i.e.,}\;\;\;\;
+    I_0R_1R_2+R_2(V-V_0)+R_1V=0
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img175.svg"
+ ALT="$\displaystyle I_0+I_1+I_2=I_0+\frac{V-V_0}{R_1}+\frac{V}{R_2}=0,\;\;\;\;$">i.e.,<IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img176.svg"
+ ALT="$\displaystyle \;\;\;\;
+I_0R_1R_2+R_2(V-V_0)+R_1V=0$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">38</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Solving for <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img50.svg"
+ ALT="$V$"></SPAN>, we get:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V=\frac{R_2V_0-I_0R_1R_2}{R_1+R_2}
+    =V_0\frac{R_2}{R_1+R_2}-I_0\frac{R_1R_2}{R_1+R_2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img177.svg"
+ ALT="$\displaystyle V=\frac{R_2V_0-I_0R_1R_2}{R_1+R_2}
+=V_0\frac{R_2}{R_1+R_2}-I_0\frac{R_1R_2}{R_1+R_2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">39</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+and
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I=I_2=\frac{V}{R_2}=\frac{V_0}{R_1+R_2}-I_0\frac{R_1}{R_1+R_2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img178.svg"
+ ALT="$\displaystyle I=I_2=\frac{V}{R_2}=\frac{V_0}{R_1+R_2}-I_0\frac{R_1}{R_1+R_2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">40</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+<LI><B>Superposition principle:</B>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/superposition.gif"
+ ALT="superposition.gif">
+
+<P>
+
+<UL>
+<LI>Find <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.12ex; " SRC="img179.svg"
+ ALT="$V'$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.12ex; " SRC="img180.svg"
+ ALT="$I'$"></SPAN> with the current source off (open-circuit with 
+    zero current):
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I'=\frac{V_0}{R_1+R_2},\;\;\;\;V'=I'R_2=V_0\frac{R_2}{R_1+R_2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img181.svg"
+ ALT="$\displaystyle I'=\frac{V_0}{R_1+R_2},\;\;\;\;V'=I'R_2=V_0\frac{R_2}{R_1+R_2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">41</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>Find <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.12ex; " SRC="img182.svg"
+ ALT="$V''$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.12ex; " SRC="img183.svg"
+ ALT="$I''$"></SPAN> with the voltage source off (short-circuit with 
+    zero voltage):
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I''=-I_0\frac{R_1}{R_1+R_2},\;\;\;\;V''=I''R_2=-I_0\frac{R_1R_2}{R_1+R_2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img184.svg"
+ ALT="$\displaystyle I''=-I_0\frac{R_1}{R_1+R_2},\;\;\;\;V''=I''R_2=-I_0\frac{R_1R_2}{R_1+R_2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">42</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Both <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.12ex; " SRC="img183.svg"
+ ALT="$I''$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.12ex; " SRC="img182.svg"
+ ALT="$V''$"></SPAN> have a negative sign as their direction and polarity
+    are opposite to those of the assumed current and voltage.  
+</LI>
+<LI>Find the sum of the two partial results we get
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I=I'+I''=\frac{V_0}{R_1+R_2}-I_0\;\frac{R_1}{R_1+R_2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img185.svg"
+ ALT="$\displaystyle I=I'+I''=\frac{V_0}{R_1+R_2}-I_0\;\frac{R_1}{R_1+R_2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">43</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V=V'+V''=V_0\;\frac{R_2}{R_1+R_2}-I_0\;\frac{R_1R_2}{R_1+R_2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img186.svg"
+ ALT="$\displaystyle V=V'+V''=V_0\;\frac{R_2}{R_1+R_2}-I_0\;\frac{R_1R_2}{R_1+R_2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">44</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+</UL>
+</LI>
+<LI><B>Energy source conversion:</B>
+
+<P>
+
+<UL>
+<LI>Convert <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img170.svg"
+ ALT="$V_0$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img83.svg"
+ ALT="$R_1$"></SPAN> in the left branch as a non-ideal 
+    voltage source into a current source <!-- MATH
+ $I_1=V_0/R_1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img187.svg"
+ ALT="$I_1=V_0/R_1$"></SPAN> (upward);
+</LI>
+<LI>Combine the two parallel current sources in parallel with 
+    two resistors <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img83.svg"
+ ALT="$R_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img84.svg"
+ ALT="$R_2$"></SPAN>;
+</LI>
+<LI>find <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img59.svg"
+ ALT="$I$"></SPAN> (current devider):
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I=\left(\frac{V_0}{R_1}-I_0\right)\frac{R_1}{R_1+R_2}
+      =\frac{V_0}{R_1+R_2}-I_0\frac{R_1}{R_1+R_2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img188.svg"
+ ALT="$\displaystyle I=\left(\frac{V_0}{R_1}-I_0\right)\frac{R_1}{R_1+R_2}
+=\frac{V_0}{R_1+R_2}-I_0\frac{R_1}{R_1+R_2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">45</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>Find <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img50.svg"
+ ALT="$V$"></SPAN>:
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V=R_2I=V_0\frac{R_2}{R_1+R_2}-I_0\frac{R_1R_2}{R_1+R_2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img189.svg"
+ ALT="$\displaystyle V=R_2I=V_0\frac{R_2}{R_1+R_2}-I_0\frac{R_1R_2}{R_1+R_2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">46</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+</UL>
+
+<P>
+</LI>
+<LI><B>Thevenin's and Nordon's methods:</B>
+  
+<UL>
+<LI>Thevenin's model: <!-- MATH
+ $R_T=R_1,\;\;V_T=V_0-I_0R_1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img190.svg"
+ ALT="$R_T=R_1,\;\;V_T=V_0-I_0R_1$"></SPAN>,
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I=\frac{V_T}{R_T+R_2}=\frac{V_0-I_0R_1}{R_1+R_2}
+      =\frac{V_0}{R_1+R_2}-I_0\frac{R_1}{R_1+R_2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img191.svg"
+ ALT="$\displaystyle I=\frac{V_T}{R_T+R_2}=\frac{V_0-I_0R_1}{R_1+R_2}
+=\frac{V_0}{R_1+R_2}-I_0\frac{R_1}{R_1+R_2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">47</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>Norton's model: <!-- MATH
+ $R_N=R_1,\;\;I_N=V_0/R_1-I_0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img192.svg"
+ ALT="$R_N=R_1,\;\;I_N=V_0/R_1-I_0$"></SPAN>.
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I=\left(\frac{V_T}{R_1}-I_0\right)\frac{R_T}{R_T+R_2}
+      =\frac{V_0}{R_1+R_2}-I_0\frac{R_1}{R_1+R_2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img193.svg"
+ ALT="$\displaystyle I=\left(\frac{V_T}{R_1}-I_0\right)\frac{R_T}{R_T+R_2}
+=\frac{V_0}{R_1+R_2}-I_0\frac{R_1}{R_1+R_2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">48</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+</UL>
+  Then we get the voltage:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V=R_2 I=V_0\frac{R_2}{R_1+R_2}-I_0\frac{R_1R_2}{R_1+R_2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img189.svg"
+ ALT="$\displaystyle V=R_2I=V_0\frac{R_2}{R_1+R_2}-I_0\frac{R_1R_2}{R_1+R_2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">49</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+</UL>
+
+<P>
+<B>Example 3: </B> In the circuit below, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img194.svg"
+ ALT="$V_0=18V$"></SPAN>, <!-- MATH
+ $R_1=R_2=3\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img195.svg"
+ ALT="$R_1=R_2=3\Omega$"></SPAN>, 
+<!-- MATH
+ $R_3=6\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img67.svg"
+ ALT="$R_3=6\Omega$"></SPAN>, <!-- MATH
+ $R_4=1.5\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img196.svg"
+ ALT="$R_4=1.5\Omega$"></SPAN>. Find the value of current <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img59.svg"
+ ALT="$I$"></SPAN> when 
+<!-- MATH
+ $R_5=2\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img197.svg"
+ ALT="$R_5=2\Omega$"></SPAN>. Then re-solve the problem when <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img198.svg"
+ ALT="$R_5$"></SPAN> takes different
+values of <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img199.svg"
+ ALT="$1\Omega$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img200.svg"
+ ALT="$3\Omega$"></SPAN>. Moreover, find the value of <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img198.svg"
+ ALT="$R_5$"></SPAN> 
+so that <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img63.svg"
+ ALT="$I=0.5 A$"></SPAN> as desired.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/BridgeExample.png"
+ ALT="BridgeExample.png">
+
+<P>
+
+<UL>
+<LI><B>Loop-current (KVL) method:</B> 
+
+<P>
+Consider three independent loops with clockwise loop currents:
+
+<UL>
+<LI><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img171.svg"
+ ALT="$I_0$"></SPAN> in the left loop (<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img170.svg"
+ ALT="$V_0$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img84.svg"
+ ALT="$R_2$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img201.svg"
+ ALT="$R_4$"></SPAN>) 
+</LI>
+<LI><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img4.svg"
+ ALT="$I_1$"></SPAN> in the top loop (<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img84.svg"
+ ALT="$R_2$"></SPAN>,<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img83.svg"
+ ALT="$R_1$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img198.svg"
+ ALT="$R_5$"></SPAN>) 
+</LI>
+<LI><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img5.svg"
+ ALT="$I_2$"></SPAN> in the bottom loop (<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img85.svg"
+ ALT="$R_3$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img201.svg"
+ ALT="$R_4$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img198.svg"
+ ALT="$R_5$"></SPAN>)
+</LI>
+</UL>
+Applying KVL to the three loops we get three simultaneous equations:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left\{\begin{array}{l}
+  R_2(I_0-I_1)+R_4(I_0-I_2)=3(I_0-I_1)+1.5(I_0-I_2)=18\\
+  R_1I_1+R_5(I_1-I_3)+R_2(I_1-I_0)=3I_1+2(I_1-I_3)+3(I_1-I_0)=0\\
+  R_3I_2+R_4(I_2-I_0)+R_5(I_2-I_1)=6I_2+1.5(I_2-I_0)+2(I_2-I_1)
+  =0\end{array}\right.
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 8.59ex; vertical-align: -3.72ex; " SRC="img202.svg"
+ ALT="$\displaystyle \left\{\begin{array}{l}
+R_2(I_0-I_1)+R_4(I_0-I_2)=3(I_0-I_1)+1.5(...
+...I_2+R_4(I_2-I_0)+R_5(I_2-I_1)=6I_2+1.5(I_2-I_0)+2(I_2-I_1)
+=0\end{array}\right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">50</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Rearranging and solving the equations we get
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left\{\begin{array}{l}
+  3I_0-2I_1-I_2=12\\-3I_0+8I_1-2I_2=0\\3I_0+4I_1-19I_2=0\end{array}\right.
+  \Longrightarrow
+  \left\{\begin{array}{l}
+  I_0=32/5\\I_1=14/5\\I_2=8/5
+  \end{array}\right.
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 8.59ex; vertical-align: -3.72ex; " SRC="img203.svg"
+ ALT="$\displaystyle \left\{\begin{array}{l}
+3I_0-2I_1-I_2=12\\ -3I_0+8I_1-2I_2=0\\ 3I...
+...tarrow
+\left\{\begin{array}{l}
+I_0=32/5\\ I_1=14/5\\ I_2=8/5
+\end{array}\right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">51</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The node voltages can be found to be
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_a=R_3I_2=6\times \frac{8}{5}=\frac{48}{5},\;\;\;\;\;\;
+  V_b=R_4(I_0-I_2)=1.5\times \frac{24}{5}=\frac{36}{5},\;\;\;\;\;\;
+  V_{ab}=V_a-V_b=\frac{12}{5}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.88ex; vertical-align: -1.71ex; " SRC="img204.svg"
+ ALT="$\displaystyle V_a=R_3I_2=6\times \frac{8}{5}=\frac{48}{5},\;\;\;\;\;\;
+V_b=R_4(...
+...2)=1.5\times \frac{24}{5}=\frac{36}{5},\;\;\;\;\;\;
+V_{ab}=V_a-V_b=\frac{12}{5}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">52</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The current through <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img198.svg"
+ ALT="$R_5$"></SPAN> is
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_1-I_2=\frac{14}{5}-\frac{8}{5}=\frac{6}{5}=1.2\;A,
+  \;\;\;\;\;\;\;\mbox{or}\;\;\;\;\;\;
+  I=\frac{V_a-V_b}{R_5}=\frac{12/5\;V}{2\;\Omega}=1.2\;A
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.88ex; vertical-align: -1.71ex; " SRC="img205.svg"
+ ALT="$\displaystyle I_1-I_2=\frac{14}{5}-\frac{8}{5}=\frac{6}{5}=1.2\;A,
+\;\;\;\;\;\;\;$">or<IMG STYLE="height: 5.57ex; vertical-align: -2.06ex; " SRC="img206.svg"
+ ALT="$\displaystyle \;\;\;\;\;\;
+I=\frac{V_a-V_b}{R_5}=\frac{12/5\;V}{2\;\Omega}=1.2\;A$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">53</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+We have to repeat the above for other values of <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img198.svg"
+ ALT="$R_5$"></SPAN> to find
+the current through it.
+
+<P>
+</LI>
+<LI><B>Node-Voltage (KCL) method:</B> 
+
+<P>
+Assume the bottom node is ground with 0 volt, then the voltage at 
+the top node is known to be <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img207.svg"
+ ALT="$V_0=18\,V$"></SPAN>. Now we apply KCL to nodes
+a and b to get two equations:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\frac{V_a-V_0}{R_1}+\frac{V_a-V_b}{R_5}+\frac{V_a}{R_3}
+  =\frac{V_a-18}{3}+\frac{V_a-V_b}{2}+\frac{V_a}{6}=0
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img208.svg"
+ ALT="$\displaystyle \frac{V_a-V_0}{R_1}+\frac{V_a-V_b}{R_5}+\frac{V_a}{R_3}
+=\frac{V_a-18}{3}+\frac{V_a-V_b}{2}+\frac{V_a}{6}=0$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">54</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\frac{V_b-V_0}{R_2}+\frac{V_b-V_a}{R_5}+\frac{V_b}{R_4}
+  =\frac{V_b-18}{3}+\frac{V_b-V_a}{2}+\frac{V_b}{1.5}=0
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img209.svg"
+ ALT="$\displaystyle \frac{V_b-V_0}{R_2}+\frac{V_b-V_a}{R_5}+\frac{V_b}{R_4}
+=\frac{V_b-18}{3}+\frac{V_b-V_a}{2}+\frac{V_b}{1.5}=0$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">55</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left\{ \begin{array}{ll}-V_a+3V_b=12\\2V_a-V_b=12\end{array}\right.
+    \;\;\;\;\;\;\Longrightarrow\;\;\;\;\;\;
+    \left\{ \begin{array}{ll}V_a=48/5\\V_b=36/5\end{array}\right.
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img210.svg"
+ ALT="$\displaystyle \left\{ \begin{array}{ll}-V_a+3V_b=12\\ 2V_a-V_b=12\end{array}\ri...
+...rrow\;\;\;\;\;\;
+\left\{ \begin{array}{ll}V_a=48/5\\ V_b=36/5\end{array}\right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">56</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The current through <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img198.svg"
+ ALT="$R_5$"></SPAN> is
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I=\frac{V_a-V_b}{R_5}=\frac{(48/5-36/5)\,V}{2\,\Omega}
+  =\frac{12/5\;V}{2\;\Omega}=\frac{6}{5}=1.2\;A
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.06ex; " SRC="img211.svg"
+ ALT="$\displaystyle I=\frac{V_a-V_b}{R_5}=\frac{(48/5-36/5)\,V}{2\,\Omega}
+=\frac{12/5\;V}{2\;\Omega}=\frac{6}{5}=1.2\;A$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">57</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+We have to repeat the above for other values of <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img198.svg"
+ ALT="$R_5$"></SPAN> to find
+the current through it.
+
+<P>
+To find <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img198.svg"
+ ALT="$R_5$"></SPAN> for the current through it to be <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img212.svg"
+ ALT="$I=0.5$"></SPAN>, we 
+replace the current <!-- MATH
+ $I=(V_a-V_b)/2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img213.svg"
+ ALT="$I=(V_a-V_b)/2$"></SPAN> through <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img198.svg"
+ ALT="$R_5$"></SPAN> in the two 
+equations above by the desired <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img212.svg"
+ ALT="$I=0.5$"></SPAN>:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\frac{V_a-18}{3}+0.5+\frac{V_a}{6}=0,\;\;\;\;\;\;
+  \frac{V_b-18}{3}-0.5+\frac{V_b}{1.5}=0
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.11ex; vertical-align: -1.71ex; " SRC="img214.svg"
+ ALT="$\displaystyle \frac{V_a-18}{3}+0.5+\frac{V_a}{6}=0,\;\;\;\;\;\;
+\frac{V_b-18}{3}-0.5+\frac{V_b}{1.5}=0$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">58</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Solving each of the two equations we get <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img215.svg"
+ ALT="$V_a=11\,V$"></SPAN>, <!-- MATH
+ $V_b=6.5\,V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img216.svg"
+ ALT="$V_b=6.5\,V$"></SPAN>,
+and 
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+R_5=\frac{V_a-V_b}{I}=\frac{11-6.5}{0.5}=9\;\Omega
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.11ex; vertical-align: -1.71ex; " SRC="img217.svg"
+ ALT="$\displaystyle R_5=\frac{V_a-V_b}{I}=\frac{11-6.5}{0.5}=9\;\Omega$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">59</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+<LI><B>Method 3, <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.31ex; " SRC="img218.svg"
+ ALT="$\Delta-Y$"></SPAN> conversion</B>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/BridgeExampleDY.png"
+ ALT="BridgeExampleDY.png">
+
+<P>
+To find <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img59.svg"
+ ALT="$I$"></SPAN> through <!-- MATH
+ $R_5=2\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img197.svg"
+ ALT="$R_5=2\Omega$"></SPAN>, we first convert the <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img148.svg"
+ ALT="$\Delta$"></SPAN> 
+composed of <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img83.svg"
+ ALT="$R_1$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img84.svg"
+ ALT="$R_2$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img198.svg"
+ ALT="$R_5$"></SPAN> into a <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img149.svg"
+ ALT="$Y$"></SPAN> composed of <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img155.svg"
+ ALT="$R_a$"></SPAN>, 
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img156.svg"
+ ALT="$R_b$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img157.svg"
+ ALT="$R_c$"></SPAN>:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+R_c=\frac{R_1R_2}{R_1+R_2+R_5}=\frac{9}{8},\;\;\;\;
+  R_a=\frac{R_1R_5}{R_1+R_2+R_5}=\frac{3}{4},\;\;\;\;
+  R_b=\frac{R_2R_5}{R_1+R_2+R_5}=\frac{3}{4}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img219.svg"
+ ALT="$\displaystyle R_c=\frac{R_1R_2}{R_1+R_2+R_5}=\frac{9}{8},\;\;\;\;
+R_a=\frac{R_1R_5}{R_1+R_2+R_5}=\frac{3}{4},\;\;\;\;
+R_b=\frac{R_2R_5}{R_1+R_2+R_5}=\frac{3}{4}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">60</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Find overall load resistance of <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img207.svg"
+ ALT="$V_0=18\,V$"></SPAN>:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+R_0=R_c+(R_a+R_3) \;||\; (R_b+R_4)=\frac{45}{16}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.88ex; vertical-align: -1.71ex; " SRC="img220.svg"
+ ALT="$\displaystyle R_0=R_c+(R_a+R_3) \;\vert\vert\; (R_b+R_4)=\frac{45}{16}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">61</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Find overall current:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_0=\frac{V_0}{R_0}=\frac{18}{45/16}=\frac{32}{5}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img221.svg"
+ ALT="$\displaystyle I_0=\frac{V_0}{R_0}=\frac{18}{45/16}=\frac{32}{5}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">62</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Find currents through <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img85.svg"
+ ALT="$R_3$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img201.svg"
+ ALT="$R_4$"></SPAN> (current divider):
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_a=I_0\;\frac{R_b+R_4}{(R_a+R_3)+(R_b+R_4)}=\frac{8}{5}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img222.svg"
+ ALT="$\displaystyle I_a=I_0\;\frac{R_b+R_4}{(R_a+R_3)+(R_b+R_4)}=\frac{8}{5}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">63</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_b=I_0\;\frac{R_a+R_3}{(R_a+R_3)+(R_b+R_4)}=\frac{24}{5}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img223.svg"
+ ALT="$\displaystyle I_b=I_0\;\frac{R_a+R_3}{(R_a+R_3)+(R_b+R_4)}=\frac{24}{5}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">64</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Find voltage at points <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img38.svg"
+ ALT="$a$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img36.svg"
+ ALT="$b$"></SPAN> (assuming the bottom node
+is ground):
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_a=I_a \times R_3=\frac{8 }{5} \times 6=\frac{48}{5},\;\;\;\;\;
+  V_b=I_b \times R_4=\frac{24}{5} \times 1.5=\frac{36}{5}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.88ex; vertical-align: -1.71ex; " SRC="img224.svg"
+ ALT="$\displaystyle V_a=I_a \times R_3=\frac{8 }{5} \times 6=\frac{48}{5},\;\;\;\;\;
+V_b=I_b \times R_4=\frac{24}{5} \times 1.5=\frac{36}{5}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">65</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Find current <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img59.svg"
+ ALT="$I$"></SPAN> through <!-- MATH
+ $R_5=2\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img197.svg"
+ ALT="$R_5=2\Omega$"></SPAN>:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I=\frac{V_a-V_b}{R_5}=\frac{12}{5}\times \frac{1}{2}=1.2A
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img225.svg"
+ ALT="$\displaystyle I=\frac{V_a-V_b}{R_5}=\frac{12}{5}\times \frac{1}{2}=1.2A$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">66</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+For any of the methods above, the problem needs to be resolved
+for <!-- MATH
+ $R_5=1\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img226.svg"
+ ALT="$R_5=1\Omega$"></SPAN> and <!-- MATH
+ $R_5=3\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img227.svg"
+ ALT="$R_5=3\Omega$"></SPAN>, and it is hard to find a 
+value of <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img198.svg"
+ ALT="$R_5$"></SPAN> given the require current <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img212.svg"
+ ALT="$I=0.5$"></SPAN>.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/BridgeExampleTh.png"
+ ALT="BridgeExampleTh.png">
+
+<P>
+</LI>
+<LI><B>Method 4, Thevenin's theorem</B>
+
+<P>
+Solve the problem using Thevenin's theorem by the following steps:
+
+<UL>
+<LI>Remove the branch in question from the circuit and treat the rest as
+  a one-port network.
+</LI>
+<LI>Model the one-port network by Thevenin's theorem, as an open circuit 
+  voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img119.svg"
+ ALT="$V_T$"></SPAN> in series with an internal resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img120.svg"
+ ALT="$R_T$"></SPAN>.
+</LI>
+<LI>Put the branch in equation back as the load of the Thevenin equivalent
+  network and find the desired current and voltage.
+</LI>
+</UL>
+
+<P>
+Specifically, we remove <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img198.svg"
+ ALT="$R_5$"></SPAN> as the load of a network composed of all other
+resistors <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img83.svg"
+ ALT="$R_1$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img84.svg"
+ ALT="$R_2$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img85.svg"
+ ALT="$R_3$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img201.svg"
+ ALT="$R_4$"></SPAN> and the voltage source <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img194.svg"
+ ALT="$V_0=18V$"></SPAN>, then
+apply Thevenin's theorem to find the open-circuit voltage between the two
+terminals a and b:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_T=V_{oc}=V_0\frac{R_3}{R_1+R_3}-V_0\frac{R_4}{R_2+R_4}
+  =18 \left(\frac{6}{9}-\frac{1.5}{4.5}\right)=6V
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img228.svg"
+ ALT="$\displaystyle V_T=V_{oc}=V_0\frac{R_3}{R_1+R_3}-V_0\frac{R_4}{R_2+R_4}
+=18 \left(\frac{6}{9}-\frac{1.5}{4.5}\right)=6V$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">67</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+and the internal resistance between a and b (with voltage source <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img170.svg"
+ ALT="$V_0$"></SPAN> 
+short-circuit):
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+R_T=R_1\,||\,R_3+R_2\,||\,R_4
+  =\frac{3\times 6}{3+6}+\frac{3\times 1.5}{3+1.5}=3\Omega
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.11ex; vertical-align: -1.90ex; " SRC="img229.svg"
+ ALT="$\displaystyle R_T=R_1\,\vert\vert\,R_3+R_2\,\vert\vert\,R_4
+=\frac{3\times 6}{3+6}+\frac{3\times 1.5}{3+1.5}=3\Omega$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">68</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Now the currents through <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img198.svg"
+ ALT="$R_5$"></SPAN> of different values can be found by
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I=\frac{V_T}{R_T+R_5}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img230.svg"
+ ALT="$\displaystyle I=\frac{V_T}{R_T+R_5}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">69</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+
+<UL>
+<LI><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img231.svg"
+ ALT="$R_5=1$"></SPAN>, <!-- MATH
+ $I=6/(3+1)=1.5A$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img232.svg"
+ ALT="$I=6/(3+1)=1.5A$"></SPAN>
+</LI>
+<LI><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img233.svg"
+ ALT="$R_5=2$"></SPAN>, <!-- MATH
+ $I=6/(3+2)=1.2A$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img234.svg"
+ ALT="$I=6/(3+2)=1.2A$"></SPAN>
+</LI>
+<LI><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img235.svg"
+ ALT="$R_5=3$"></SPAN>, <!-- MATH
+ $I=6/(3+3)=1.0A$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img236.svg"
+ ALT="$I=6/(3+3)=1.0A$"></SPAN>
+</LI>
+</UL>
+and when <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img212.svg"
+ ALT="$I=0.5$"></SPAN>, <!-- MATH
+ $R_5=V_T/I-R_T=6/0.5-3=9$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img237.svg"
+ ALT="$R_5=V_T/I-R_T=6/0.5-3=9$"></SPAN>
+</LI>
+</UL>
+
+<P>
+<B>Example 4: </B> The circuit below, often used in some control system, 
+is composed of two voltages, two potentiometers, and a load resistor.
+Assume:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_1=72V,\;\;\;\;V_2=80V,\;\;\;\;R_1=R_3=1.5\Omega,\;\;\;\;R_2=3\Omega,
+  \;\;\;\;R_4=2.5\Omega
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img238.svg"
+ ALT="$\displaystyle V_1=72V,\;\;\;\;V_2=80V,\;\;\;\;R_1=R_3=1.5\Omega,\;\;\;\;R_2=3\Omega,
+\;\;\;\;R_4=2.5\Omega$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">70</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Find the current <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img239.svg"
+ ALT="$I_L$"></SPAN> through the load resistor <!-- MATH
+ $R_L=1.5\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img240.svg"
+ ALT="$R_L=1.5\Omega$"></SPAN>. 
+
+<P>
+We denote the current through <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img52.svg"
+ ALT="$R_i$"></SPAN> by <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img241.svg"
+ ALT="$I_i$"></SPAN>, and the voltage at the left 
+and right ends of <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img116.svg"
+ ALT="$R_L$"></SPAN> by <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img242.svg"
+ ALT="$V_a$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img243.svg"
+ ALT="$V_b$"></SPAN>, respectively, with respect to 
+the bottom wire treated as the ground.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/potentiometers.gif"
+ ALT="potentiometers.gif">
+
+<P>
+<B>Superposition theorem</B>
+
+<P>
+Find <SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.76ex; " SRC="img244.svg"
+ ALT="$I'_L$"></SPAN> caused by voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img245.svg"
+ ALT="$V_1=72$"></SPAN>, and then <SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.76ex; " SRC="img246.svg"
+ ALT="$I''_L$"></SPAN> caused by voltage
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img247.svg"
+ ALT="$V_2=80$"></SPAN>, then get <!-- MATH
+ $I_L=I'_L+I''_L$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.76ex; " SRC="img248.svg"
+ ALT="$I_L=I'_L+I''_L$"></SPAN>.
+
+<P>
+
+<UL>
+<LI>Short-circuit <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img76.svg"
+ ALT="$V_2$"></SPAN>. Assume <SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.76ex; " SRC="img249.svg"
+ ALT="$I'_L=8$"></SPAN>, so that currents through
+	<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img250.svg"
+ ALT="$R_3=1.5$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img251.svg"
+ ALT="$R_4=2.5$"></SPAN> are <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img252.svg"
+ ALT="$I_3=5$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img253.svg"
+ ALT="$I_4=3$"></SPAN>, respectively
+	(current divider), and <!-- MATH
+ $V_b=I_3R_3=I_4R_4=5\times 1.5=3\times 2.5=7.5$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img254.svg"
+ ALT="$V_b=I_3R_3=I_4R_4=5\times 1.5=3\times 2.5=7.5$"></SPAN>.
+</LI>
+<LI><!-- MATH
+ $V_a=R_L I'_L+V_b=1.5\times 8+7.5=19.5$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.76ex; " SRC="img255.svg"
+ ALT="$V_a=R_L I'_L+V_b=1.5\times 8+7.5=19.5$"></SPAN>, current through <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img256.svg"
+ ALT="$R_2=3$"></SPAN>
+	is <!-- MATH
+ $I_2=V_a/R_2=19.5/3=6.5$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img257.svg"
+ ALT="$I_2=V_a/R_2=19.5/3=6.5$"></SPAN>, current through <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img83.svg"
+ ALT="$R_1$"></SPAN> is 
+	<!-- MATH
+ $I_1=I_2+I'_L=6.5+8=14.5$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.76ex; " SRC="img258.svg"
+ ALT="$I_1=I_2+I'_L=6.5+8=14.5$"></SPAN>.
+</LI>
+<LI><!-- MATH
+ $V'_1=R_1\times I_1+V_a=1.5\times 14.5+19.5=41.25$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.69ex; " SRC="img259.svg"
+ ALT="$V'_1=R_1\times I_1+V_a=1.5\times 14.5+19.5=41.25$"></SPAN>. But <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img245.svg"
+ ALT="$V_1=72$"></SPAN>,
+	we get scaling factor <!-- MATH
+ $V_1/V'_1=72/41.25=96/55$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img260.svg"
+ ALT="$V_1/V'_1=72/41.25=96/55$"></SPAN>, and 
+	<!-- MATH
+ $I'_L=8 \times 96/55$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.76ex; " SRC="img261.svg"
+ ALT="$I'_L=8 \times 96/55$"></SPAN>.
+
+<P>
+</LI>
+<LI>Short-circuit <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img75.svg"
+ ALT="$V_1$"></SPAN>. Assume <SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.76ex; " SRC="img262.svg"
+ ALT="$I''_L=3$"></SPAN>, so that currents through
+	<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img263.svg"
+ ALT="$R_1=1.5$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img256.svg"
+ ALT="$R_2=3$"></SPAN> are, respectively, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img264.svg"
+ ALT="$I_1=2$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img265.svg"
+ ALT="$I_2=1$"></SPAN>
+	(current divider), and <!-- MATH
+ $V_a=R_1I_1=R_2I_2=1.5\times 2+3\times 1=3$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img266.svg"
+ ALT="$V_a=R_1I_1=R_2I_2=1.5\times 2+3\times 1=3$"></SPAN>.
+</LI>
+<LI><!-- MATH
+ $V_b=R_L I''_L+V_a=1.5\times 3+3=7.5$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.76ex; " SRC="img267.svg"
+ ALT="$V_b=R_L I''_L+V_a=1.5\times 3+3=7.5$"></SPAN>, current through <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img250.svg"
+ ALT="$R_3=1.5$"></SPAN>
+	is <!-- MATH
+ $I_3=V_b/R_3=7.5/1.5=5$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img268.svg"
+ ALT="$I_3=V_b/R_3=7.5/1.5=5$"></SPAN>, current through <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img201.svg"
+ ALT="$R_4$"></SPAN> is 
+	<!-- MATH
+ $I_4=I_3+I''_L=5+3=8$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.76ex; " SRC="img269.svg"
+ ALT="$I_4=I_3+I''_L=5+3=8$"></SPAN>.
+</LI>
+<LI><!-- MATH
+ $V'_2=R_4\times I_4+V_b=2.5\times 8+7.5=27.5$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.69ex; " SRC="img270.svg"
+ ALT="$V'_2=R_4\times I_4+V_b=2.5\times 8+7.5=27.5$"></SPAN>. But <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img247.svg"
+ ALT="$V_2=80$"></SPAN>,
+	we get scaling factor <!-- MATH
+ $V_2/V'_2=80/27.5=32/11$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img271.svg"
+ ALT="$V_2/V'_2=80/27.5=32/11$"></SPAN>, and 
+	<!-- MATH
+ $I''_L=3\times 32/11=96/11$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.76ex; " SRC="img272.svg"
+ ALT="$I''_L=3\times 32/11=96/11$"></SPAN>.
+
+<P>
+</LI>
+<LI>Finally, we get the load current:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_L=I'_L-I''_L=\frac{96\times 8}{55}-\frac{96}{11}=\frac{288}{55}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.88ex; vertical-align: -1.71ex; " SRC="img273.svg"
+ ALT="$\displaystyle I_L=I'_L-I''_L=\frac{96\times 8}{55}-\frac{96}{11}=\frac{288}{55}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">71</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+</UL>
+
+<P>
+<B>Thevenin's theorem</B>
+
+<P>
+Remove <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img115.svg"
+ ALT="$R$"></SPAN>, find open-circuit voltage <!-- MATH
+ $V_{ab}=V_a-V_b$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img274.svg"
+ ALT="$V_{ab}=V_a-V_b$"></SPAN> and equivalent
+resistance <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img115.svg"
+ ALT="$R$"></SPAN>, then find <!-- MATH
+ $I_L=V_{ab}/(R+R_L)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img275.svg"
+ ALT="$I_L=V_{ab}/(R+R_L)$"></SPAN>.
+
+<P>
+
+<UL>
+<LI><!-- MATH
+ $V_a=V_1\times R_2/(R_1+R_2)=72\times 3/(1.5+3)=48$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img276.svg"
+ ALT="$V_a=V_1\times R_2/(R_1+R_2)=72\times 3/(1.5+3)=48$"></SPAN>
+
+<P>
+<!-- MATH
+ $V_b=V_2\times R_3/(R_3+R_4)=80\times 1.5/(1.5+2.5)=30$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img277.svg"
+ ALT="$V_b=V_2\times R_3/(R_3+R_4)=80\times 1.5/(1.5+2.5)=30$"></SPAN>
+
+<P>
+<!-- MATH
+ $V_T=V_{ab}=V_a-V_b=48-30=18$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img278.svg"
+ ALT="$V_T=V_{ab}=V_a-V_b=48-30=18$"></SPAN>
+</LI>
+<LI><!-- MATH
+ $R_T=R_1 || R_2 + R_3 || R_4=3||1.5+2.5||1.5=7.75/4$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img279.svg"
+ ALT="$R_T=R_1 \vert\vert R_2 + R_3 \vert\vert R_4=3\vert\vert 1.5+2.5\vert\vert 1.5=7.75/4$"></SPAN>
+</LI>
+<LI><P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_L=\frac{V_T}{R_T+R_L}=\frac{18}{7.75/4+1.5}=\frac{288}{55}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img280.svg"
+ ALT="$\displaystyle I_L=\frac{V_T}{R_T+R_L}=\frac{18}{7.75/4+1.5}=\frac{288}{55}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">72</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+</UL>
+
+<P>
+<B>Example 5:</B> In the circuit below, <!-- MATH
+ $R_1=6\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img281.svg"
+ ALT="$R_1=6\Omega$"></SPAN>, <!-- MATH
+ $R_2=2\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img282.svg"
+ ALT="$R_2=2\Omega$"></SPAN>,
+<!-- MATH
+ $R_3=3\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img283.svg"
+ ALT="$R_3=3\Omega$"></SPAN>, <!-- MATH
+ $R_4=5\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img284.svg"
+ ALT="$R_4=5\Omega$"></SPAN>, <!-- MATH
+ $R_5=2\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img197.svg"
+ ALT="$R_5=2\Omega$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img285.svg"
+ ALT="$V=5V$"></SPAN>. Given the current 
+(downward) through <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img115.svg"
+ ALT="$R$"></SPAN> is <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img63.svg"
+ ALT="$I=0.5 A$"></SPAN>, find the resistance of <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img115.svg"
+ ALT="$R$"></SPAN>.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/ch2Fig5.png"
+ ALT="ch2Fig5.png">
+
+<P>
+<B>Note voltage method:</B>
+
+<P>
+Let the voltages at the middle node be <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img242.svg"
+ ALT="$V_a$"></SPAN> and at the top-right node 
+be <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img243.svg"
+ ALT="$V_b$"></SPAN>. Then based on node-voltage method, we get
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\frac{V_a-5}{2}+\frac{V_a}{2}+\frac{V_a-V_b}{3}=0,\;\;\;\;\;
+  \frac{V_b-V_a}{3}+\frac{V_b-5}{6}+0.5=0
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.11ex; vertical-align: -1.71ex; " SRC="img286.svg"
+ ALT="$\displaystyle \frac{V_a-5}{2}+\frac{V_a}{2}+\frac{V_a-V_b}{3}=0,\;\;\;\;\;
+\frac{V_b-V_a}{3}+\frac{V_b-5}{6}+0.5=0$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">73</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Solving these equations we get <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img287.svg"
+ ALT="$V_a=2.45$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img288.svg"
+ ALT="$V_b=2.3V$"></SPAN>, and
+<!-- MATH
+ $R=V_b/I=2.3/0.5=4.6\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img289.svg"
+ ALT="$R=V_b/I=2.3/0.5=4.6\Omega$"></SPAN>.
+
+<P>
+<B>Thevenin's theorem:</B> (Homework)
+
+<P>
+<A ID="tex2html5"
+  HREF="../ch2_sub5">Solution</A>
+<P>
+<B>Example 6:</B>  (Homework)
+
+<P>
+In the circuit below, <!-- MATH
+ $R_1=6\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img281.svg"
+ ALT="$R_1=6\Omega$"></SPAN>, <!-- MATH
+ $R_2=R_3=15\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img290.svg"
+ ALT="$R_2=R_3=15\Omega$"></SPAN>, <!-- MATH
+ $R_4=10\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img291.svg"
+ ALT="$R_4=10\Omega$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img292.svg"
+ ALT="$V_1=6V$"></SPAN>,
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img293.svg"
+ ALT="$V_2=9V$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img294.svg"
+ ALT="$I_1=2A$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img295.svg"
+ ALT="$I_2=1A$"></SPAN>. Find the Thevenin model of this circuit in terms
+of <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img119.svg"
+ ALT="$V_T$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img120.svg"
+ ALT="$R_T$"></SPAN>. 
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/ch2Fig6.png"
+ ALT="ch2Fig6.png">
+
+<P>
+<A ID="tex2html6"
+  HREF="../ch2_sub5">Solution</A>
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node4.html">Two-Port Networks</A>
+<B> Up:</B> <A
+ HREF="node1.html">Chapter 2: Circuit Principles</A>
+<B> Previous:</B> <A
+ HREF="node2.html">Solving Circuits with Kirchoff</A></DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

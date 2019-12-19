@@ -1,0 +1,59 @@
+
+\documentstyle[12pt]{article}
+\usepackage{html}
+\begin{document}
+
+
+\section*{Filter design and testing}
+
+Read 
+\htmladdnormallink{this page}{http://fourier.eng.hmc.edu/e84/lectures/ch3/node17.html}
+to make sure you are prepared before carrying out the lab.
+
+\begin{enumerate}
+
+\item Design an RLC series band-pass (BP) filter with the available components R, L 
+  and C in the lab so that the passing band is centered around 7.5 kHz and bandwidth
+  is about 1.3 kHz. Derive its frequency response function (FRF) $H(\omega)$, and use
+  Matlab to generate a linear plot of its magnitude as a function of frequency (from 
+  0 to 20 kHz), also make a Bode plot (from 0 to 100 kHz) using your own code. Feed 
+  a sinusoidal signal $x(t)=\cos(2\pi ft)$ as the input to the filter and find the 
+  gain at a set of discrete frequencies including the resonant frequency (e.g., $f=1, 
+  2, 5, 7.5, 10, 2\; kHz$). Compare your results with your analysis and simulation.
+
+  {\bf Solution:} Use $C=0.1\,\mu F$, $L=4.7\,mH$ with internal resistance 
+  $R_L=27\,\Omega$, and $R=10\,\Omega$, $\omega_n=1/\sqrt{LC}=4.6\times 10^4$,
+  $Q=\omega_nL/(R+R_L)=5.86$, $\zeta=1/2Q=0.0853$, 
+  $\Delta\,\omega=\omega_n/Q=7.87\times 10^3$, $f_n=\omega_n/2\pi=7.34\times 10^3$,
+  $\Delta f=\Delta\omega/2\pi=7.34\;kHz$.
+
+  \htmladdimg{../RLCfilterFig1.png}
+
+
+\item Treat the same circuit as a low-pass (LP) filter (voltage across C as the output).
+  Adjust $R$ properly so that $\zeta\ge 1/\sqrt{2}$, and the FRF does not peak. 
+  Generate a linear and Bode plots of the magnitude of its FRF, same as what you did 
+  before for the BP filter. Then feed a square wave signal as the input to the filter 
+  and observe and describe the waveform of the output.
+
+  {\bf Solution:} Use $R=280\,\Omega$, $\zeta=(R_L+R)\sqrt{C/L}/2=0.708$
+
+  \htmladdimg{../RLCfilterFig2.png}
+
+
+
+\item Repeat the previous part when the same circuit is treated as a high-pass (HP) 
+  filter (voltage across L as the output).
+
+\item Build the band-pass and band-stop filters discussed in class 
+  (example at the bottom of \htmladdnormallink{this page}{http://fourier.eng.hmc.edu/e84/lectures/ch3/node17.html}),
+  using the same R, L and C in previous last two parts. Geernate the linear and Bode plots 
+  as before. Feed a sinusoidal signal as the input to the filter and find the gain at a
+  set of discrete frequencies (including the resonant frequency). Compare your results 
+  with your analysis and simulation.
+
+  \htmladdimg{../RLCfilterFig3.png}
+
+\end{enumerate}
+\end{document}
+  

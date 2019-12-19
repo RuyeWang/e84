@@ -1,0 +1,372 @@
+\documentstyle[12pt]{article}
+\usepackage{html}
+% \usepackage{graphics}  
+\begin{document}
+
+\section*{E84 Lab 1: Multimeter}
+
+%{\bf Design on paper due 2/27 Monday in class}
+
+%{\bf Final project due by 3/5 Monday in lab}
+
+\begin{itemize}
+
+  \item Study the schematic diagram of a multimeter shown in the figure
+    below carefully to understand how the multimeter measures both DC and
+    AC voltages, DC currents, and resistances at each of the positions of 
+    the rotary switch. 
+
+  \item R24 is a potentiometer, a resistor of $10\;K\Omega$ but with an 
+    additional terminal which is a piece of metal that can slide along the
+    resistor, so that the resistance between the 3rd terminal and any of 
+    the other two is variable between 0 and 10 $K\Omega$. See
+    \htmladdnormallink{here}{http://en.wikipedia.org/wiki/Potentiometer}
+    for more detailed explanation. This potentiometer is needed to calibrate
+    the Ohmmeter. Specifically, before taking the measurement of a resistance,
+    the potentiometer needs to be adjusted so that the needle points to 
+    zero on the resistance scale when the two leads of the multimeter touch
+    each other for zero resistance.
+    
+  \item Understand how the rotary switch works. It is represented by the 
+    24 circles on top of the diagram and the two layers of rectangular shapes
+    above. At each of the positions, the corresponding circle is connected to
+    both of the rectangles, while all remaining circles are not connected to
+    anything. If you still have difficulty understanding this, it should be
+    most helpful if you take a look at the physical parts and the printed 
+    circuit board (PCB) in the kit.
+
+  \item Do all parts specified below. Turn in your answer on paper with all 
+    the resistance values before the first deadline. 
+
+  \item Assemble the multimeter in the lab, verify every single position 
+    to see if the meter works as expected.
+    
+\end{itemize}
+
+\htmladdimg{../M1250Schematic1a.png}
+
+
+
+\begin{enumerate}
+\item {\bf Meterhead assembly:}
+
+  \begin{itemize}
+
+  \item 
+    When a voltage of $0.1\;V$ or a current of $50\;\mu A$ is applied to 
+    the position marked ``$0.1V/50\mu A$'', the meter shows a full scale display.
+    Find the total resistance of the internal circuitry in the multimeter at this
+    position. This information is necessary for understanding the DC voltage and
+    current measurement.
+
+%    {\bf Solution:} $R_M=0.1\;V/40\;\mu A=2\;k\Omega$
+
+  \item 
+    Find the needed voltage and current for a full scale display of the meter
+    head assembly (the meter head in series with $R8=680\;\Omega$, in parallel 
+    with both $R26=31\;k\Omega$ and $R24+R25=10k+18k=28\;k\Omega$, excluding
+    $R7=240\;\Omega$). 
+
+    Also find the over all resistance $R_M$ of the meter head assembly. This 
+    information is necessary for understanding the AC voltage and resistance 
+    measurement.
+
+    \begin{comment}
+    {\bf Solution:} 
+
+    The meter-head assembly excluding $R7=240$ is $2000-240=1760\;\Omega=1.76\;k\Omega$.
+
+    As a current $I_M=0.05\;mA$ is needed for a full scale display, the 
+    corresponding voltage across the meter-head assembly is 
+    $V_M=I_M R_M=1.76\times 0.05=0.088\;V$. 
+    \end{comment}
+
+  \item 
+    Find the resistance $R_m$ of the meter-head in series with R8 (excluding R31 
+    and R24 + R25).
+
+    \begin{comment}
+    {\bf Solution:}
+    \[
+    \frac{1}{28}+\frac{1}{31}+\frac{1}{R_m}=\frac{1}{1.76},
+    \;\;\;\;\;\;   R_m=2\;k\Omega
+    \]
+    \end{comment}
+  \end{itemize}
+
+\item {\bf DC Voltage measurement}
+  
+  Find the values of R1 through R6 for the 6 scales of DC voltage measurement
+  so that these resistors will indeed allow a full display with $I_m=50\;\mu A$ 
+  at the marked DC voltage for each of the 6 position. Note that $R13=3\;k\Omega$ 
+  is in series with $R7=240\;\Omega$ and the meter-head assembly with total 
+  resistance $R13+R7+R_M=5\;k\Omega$. 
+  
+  \begin{comment}
+  
+  {\bf Solution:}
+
+  As shown in Figure 4, the circuit for each scale of the DC voltage measurement 
+  is a voltage divider with an internal resistance for the meter-head:
+  \begin{itemize}
+  \item 0.5V
+    \[
+    0.5\;\frac{5}{R6+5}=0.25,\;\;\;\;\;\;\;R6=5\;k\Omega
+    \]
+  \item 2.5V
+    \[
+    2.5\;\frac{5}{R5+R6+5}=0.25,\;\;\;\;\;\;\;R5=40\;k\Omega
+    \]
+  \item 10V
+    \[
+    10\;\frac{5}{R4+R5+R6+5}=0.25,\;\;\;\;\;\;\;R4=150\;k\Omega
+    \]
+  \item 50V
+    \[
+    50\;\frac{5}{R3+R4+R5+R6+5}=0.25,\;\;\;\;\;\;\;R3=800\;k\Omega
+    \]
+  \item 250V
+    \[
+    250\;\frac{5}{R2+R3+R4+R5+R6+5}=0.25,\;\;\;\;\;\;\;R2=4\;M\Omega
+    \]
+  \item 1000V
+    \[
+    1000\;\frac{5}{R1+R2+R3+R4+R5+R6+5}=0.25,\;\;\;\;\;\;\;R1=15\;M\Omega
+    \]
+  \end{itemize}
+  \end{comment}
+
+
+\item {\bf AC Voltage measurement}
+
+  Based on the given values of R14 through R17 for AC voltage measurement
+  (Figure 5 of the manual of the kit) find the total resistance $R_{DM}$
+  of the meter-head assembly in series with the diode D1. Further, find 
+  the resistance $R_D$ and voltage drop $V_D$ of the diode D1 when the 
+  meter-head has a full scale display. 
+
+  Find the values of R14 through R17 so that they will indeed allow the 
+  meter-head to have a full scale display (with an average DC current of 
+  $I_m=50\;\mu A$ going through the meter-head), when the AC voltages of
+  10V, 50V, 250V and 1000V (RMS values) are applied to the corresponding 
+  scale positions.
+
+  \begin{comment}
+  {\bf Solution:}
+
+  Pick any two of the four scales, e.g., 10V and 50V, and get
+  \[
+  10\;\frac{R_{AV}}{R17+R_{AV}}=50\;\frac{R_{AV}}{R17+R16+R_{AV}}
+  \]
+  i.e.,
+  \[
+  10\;\frac{R_{AV}}{83.3+R_{AV}}=50\;\frac{R_{AV}}{443.3+R_{AV}}
+  \]
+  Solving for $R_{AV}$ we get $R_{AV}=6.7\;k\Omega$. Alternatively, we can 
+  pick another pair of 250V and 1000V, and get
+  \[
+  250\;\frac{R_{AV}}{R17+R16+R15+R_{AV}}=1000\;\frac{R_{AV}}{R17+R16+R15+R14+R_{AV}},
+  \]
+  i.e.,
+  \[
+  250\;\frac{R_{AV}}{2243.3+R_{AV}}=1000\;\frac{R_{AV}}{8993.3+R_{AV}}
+  \]
+  Solving for $R_{AV}$ we again get $R_{AV}=6.7\;k\Omega$. 
+  
+  As we know $R_M=1.76\;k\Omega$, the resistance of D1 must be 
+  $R_D=6.7-1.76=4.94\;k\Omega$. Correspondingly, at the full display with
+  $I_m=50\;\mu A$, the voltages across D1 is
+  $V_D=I_m R_D=0.05\times 4.94=0.247\;V$. As $V_m=0.088\;V$, the total
+  voltage across the meter-head and D1 is $V_D+V_m=0.335\;V$.
+
+  Any AC voltage to be measured needs to be rectified (half-wave) and then
+  converted to the average DC value. When the AC voltage is $1\;V$, its
+  peak value is $V_p=\sqrt{2}=1.4142\;V$, the average DC value after
+  half-wave rectification is 
+  \[
+  V_{AV}=\sqrt{2}\times \frac{2}{\pi}\times\frac{1}{2}
+  =\frac{\sqrt{2}}{\pi}\approx\frac{1.4142}{3.1416}=0.4502\;V
+  \]
+  We can show that in each of the four AC voltage scales, the meter-head
+  has a full scale display:
+  \begin{itemize}
+  \item 10V
+    \[
+    I_m=\frac{10\times 0.4502}{6.7+83.3}=\frac{4.5}{90}=0.05\;mA
+    \]
+  \item 50V
+    \[
+    I_m=\frac{50\times 0.4502}{6.7+83.3+360}=\frac{22.51}{450}=0.05\;mA
+    \]
+  \item 250V
+    \[
+    I_m=\frac{250\times 0.4502}{6.7+83.3+360+1800}=\frac{112.55}{2250}=0.05\;mA
+    \]
+  \item 1000V
+    \[
+    I_m=\frac{1000\times 0.4502}{6.7+83.3+360+1800+6750}=\frac{450}{9000}=0.05\;mA
+    \]
+  \end{itemize}
+  \end{comment}
+
+\item {\bf DC current measurement}
+
+  The circuit shown in Figure 6 of the manual of the kit has some major
+  mistake! Correct it.
+
+  Find the values of R12 and R11 so that the meter-head will have a full
+  scale display (with an current of $I_m=50\;\mu A$), when the DC currents 
+  of 2.5 mA and 25 mA are applied to the corresponding scale positions.  
+
+  Use the given values of R9=0.97 $\Omega$ and R10=0.04 $\Omega$, find current
+  $I_m$ through the meter-head when the applied DC current is 10 A. For this
+  current to be exactly $0.05\;\mu A$, what value should R10 take?
+  
+  \begin{comment}
+  {\bf Solution:}
+
+  The circuit for each scale of the DC current measurement is a current divider
+  with an internal resistance for the meter-head:
+
+  \begin{itemize}
+  \item 2.5 mA
+    \[
+    I_m=2.5\;\frac{R12}{R12+5000}=0.05,\;\;\;\;\;\;\;R12=102
+    \]
+  \item 25 mA
+    \[
+    I_m=25\;\frac{R11}{R11+5000}=0.05,\;\;\;\;\;\;\;R11=10
+    \]
+  \item 250 mA
+    \[
+    I_m=250\;\frac{R9+R10}{R9+R10+5000}=0.05,\;\;\;\;\;\;\;\;\;R9+R10=1
+    \]
+  \end{itemize}
+%  \[
+%  I_m=10000\;\frac{0.04}{5000+0.97}=0.08\;mA
+%  \]
+  \[
+  I_m=10000\;\frac{R10}{5000+0.97+R10}=0.05\;mA,\;\;\;\;\;
+  R10=0.025\;\Omega
+  \]
+  \end{comment}
+
+\item {\bf Resistance measurement}
+
+  \begin{itemize}
+  \item Before taking the measurement of a given external resistance $R$, 
+    the multimeter needs to be calibrated by adjusting R24 (assume the bottom 
+    part is x and the top part is 10-x), so that the meter-head shows a full 
+    scale display, when $R=0$ (with the two leads short circuited). Determine 
+    the value of this x. 
+
+  \item Find the value of R19 for the scale of the $\times 1\;k\Omega$
+    resistance measurement, so that when an external resistance $R=20\;k\Omega$
+    being measured, the display of the meter is exactly halfway (in the middle),
+    i.e., the current through the meter is $25\;\mu A$.
+
+  \end{itemize}
+
+  \begin{comment}
+  {\bf Solution:}
+  
+  \begin{itemize}
+  \item Calibration:
+
+    The resistance of the meter-head $R_m$ in parallel with R26 is:
+    \[
+    R_m||R26=2||31=1.88\;k\Omega
+    \]
+    When $R=0$, the total load of the 3V battery is 
+    \[
+    R_t=44+(18+x)||(10-x+1.88)=44+\frac{(18+x)(11.88-x)}{(18+x)+(11.88-x)}
+    =\frac{1528.5-6.12\;x-x^2}{29.88}
+    \]
+    The total current through the 3V battery is:
+    \[
+    I_t=\frac{3V}{R_t}=\frac{3\times 29.88}{1528.5-6.12\;x-x^2}
+    \]
+    The current through the meter in parallel with R26 needs to be 0.05 $\mu A$:
+    \[
+    I_m=I_t\;\frac{18+x}{29.88}
+    =\frac{3\times 29.88}{1528.5-6.12\;x-x^2}\;\frac{18+x}{29.88}
+    =\frac{3(18+x)}{1528.5-6.12\;x-x^2}=0.05
+    \]
+    Solving for a positive value of $x$ we get $x=6.2\;k\Omega$. Now we have
+    $18+x=24.2$, $10-x=3.8$. 
+
+    The total resistance is
+    \[
+    R_t=\frac{1528.5-6.12\;x-x^2}{29.88}=48.6\;k\Omega
+    \]
+    and the total current is
+    \[
+    I_t=\frac{3}{R_t}=\frac{3}{48.6}=0.0617
+    \]
+
+    \htmladdimg{../multimeter2a.png}
+
+  \item $\times 1\;k\Omega$ scale, $R=20\;k\Omega$
+  
+    The total current through the battery is
+    \[
+    \frac{3}{R+R19||R_t}
+    \]
+    The current through $R23=44\;k\Omega$ (current divider) need to be $I_t/2$    
+    \[
+    \frac{3}{R+R19||R_t}\;\frac{R19}{R19+R_t}=\frac{I_t}{2}
+    \]
+    Substituting $R=20\;k\Omega$, $R_t=48.6\;k\Omega$ and $I_t=0.0617\;mA$, 
+    and solving for $R19$ we get $R19=33.96\approx 34\;k\Omega$.    
+  \end{comment}
+
+\end{enumerate}
+
+\end{document}
+
+
+
+
+{\bf How to find the polarity of a diode? (not necessarily trivial!)}
+
+When the voltage at the anode (labeled by a triangle) of a diode is higher
+than that of the cathode, the diode has a very low resistance (close to a short
+circuit, called forward biased). If the polarity is reversed, the resistance 
+of the diode becomes very high (close to an open circuit, called reverse biased).
+The polarity of the diode can therefore be found by checking its resistance 
+using a multimeter.
+
+However, we need to know which lead of the multimeter (when used as an ohmmeter) 
+is positive and which is negative. In most analog multimeters, such as the one 
+you are building, the positive lead (marked by +) is connected to the negative 
+end of the internal battery, while the other lead (marked by -, or COM for common)
+is connected to positive end of the battery. So if the measured resistance of the 
+diode is low, the end connected to the COM lead of the multimeter is the anode
+(triangle).
+
+However, the polarities of digital multimeters may be the opposite, i.e., the 
+lead marked by + may be connected to the positive end of the internal battery.
+In this case, the polarity of the diode can be determined in the opposite way
+compared to the method above using an analog multimeter. 
+
+Moreover, some digital multimeters have a particular position for diode measurement. 
+
+Read \htmladdnormallink{this page}{http://www.allaboutcircuits.com/vol_3/chpt_3/2.html}
+for more detailed discussions.
+
+{\bf How to solder?} 
+
+If you have never done soldering before, you should find 
+\htmladdnormallink{this}{http://fourier.eng.hmc.edu/e84/labs/N0SS_SolderNotesV6.pdf}
+and \htmladdnormallink{this}{http://fourier.eng.hmc.edu/e84/labs/soldering_rev3.pdf}
+useful.
+
+
+  
+\end{document}
+
+
+	
+
+	
+

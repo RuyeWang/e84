@@ -1,0 +1,575 @@
+\documentstyle[11pt]{article}
+\usepackage{html}
+\begin{document}
+\begin{center}
+{\Large \bf E84 Midterm Exam 2}
+\end{center}
+
+\begin{itemize}
+\item Take home, open everything except discussion.
+\item Mark your start and end times. Don't spend more than 3 hours.
+\item Indicate the total time you spent to complete the test.
+\item Due Monday (4/14) in class.
+\item Mark your name and question number clearly on top of each page.
+	Indicate the total number of pages submitted.
+\item Keep one digit after decimal point for all final answers. 
+\item When solving a problem, list all the steps. In each step, describe 
+	what you are doing in English, then show the calculation and the 
+	result of the step. A final answer, even if correct, without 
+	evidence of the steps leading to the answer will not receive credit.
+\end{itemize}
+
+\begin{enumerate}
+
+\item {\bf Problem 1. (33 points)} 
+
+In the circuit below, the voltage source is $v(t)=200\sqrt{2}\cos (314 t)\;V$,
+and $R_1=R_2=R_3=R$, $I_1=I_2=I_3=I$ (rms value), and the total real power
+consumption is $P=1500 W$. Find $R$, $I$, $L$ and $C$.
+
+\htmladdimg{../midterm2g.gif}
+
+{\bf Solution:}
+
+Represent voltage source $v(t)$ by phasor $\dot{V}=200\angle 0$, and the voltage 
+across the parallel branches (RC and RL) by $\dot{V}_1$, also represent the currents
+by $\dot{I}_1$, $\dot{I}_2=\dot{I}_{RL}$, $\dot{I}_3=\dot{I}_{RC}$. 
+
+Since $\dot{I}_1=\dot{I}_2+\dot{I}_3$, and $I_1=I_2=I_3$, we know they form an 
+equilateral triangle, i.e., 
+\[ \left\{ \begin{array}{ll}
+    \dot{I}_2=\dot{I}_{RL}=I \angle -60^\circ & \mbox{($\dot{I}_2$ thru $L$ lagging $\dot{V}_1$)}\\
+    \dot{I}_3=\dot{I}_{RC}=I \angle  60^\circ & \mbox{($\dot{I}_3$ thru $C$ leading $\dot{V}_1$)}\\
+    \dot{I}_1=\dot{I}_R=I \angle 0^\circ & \mbox{($\dot{I}_1$ thru $R_1$ in phase wth $\dot{V}=200\angle 0^\circ $)}
+    \end{array} \right. \]
+Alternatively, since $I_2=I_3$, we have $Z_{RC}=Z_{RL}$, but also as
+$R_2=R_3$, we have $\omega L=1/\omega C$, i.e., the circuit is at resonance with 
+$\omega=1/\sqrt{LC}$, therefore $\dot{I_1}$ is in phase with $\dot{V}$. 
+
+Since $\dot{I}_1$ is in phase with $\dot{V}=200\angle 0^\circ$, we have
+\[ I_1=\frac{P}{V \cos 0}=\frac{1500}{200}=7.5A =I_2=I_3 \]
+Also as only the three resistors $R_1=R_2=R_3$ consume real power, they each consume 
+$P/3=500W$ and 
+\[ R_1=R_2=R_3=500/7.5^2=8.89\Omega \]
+Then we also get
+\[ V_1=V-RI=200-8.89\times 7.5=133.33 V \]
+and
+\[ Z_{RC}=\sqrt{R^2+(\omega L)^2}=Z_{RL}=\sqrt{R^2+(1/\omega C)^2}=\frac{133.33}{7.5}=17.78 \]
+Solving these (with $\omega=314$) we get
+\[ L=0.049H, \;\;\;\;\;C=206.8\mu F \]
+
+\item {\bf Problem 2. (33 points)} 
+
+In the circuit below, $R_1=150\Omega$, $R_2=50\Omega$, $L=0.2H$, $C=5\mu F$.
+The input voltage is $v_s(t)=70\sin(\omega t+36.9^\circ)=70\sin(1000 t+36.9^\circ)$.
+The system is in steady state before the switch is closed at $t=0$. Find voltage 
+$v_C(t)$ across $C$ and current $i_L(t)$ through $L$ for $t>0$.
+
+\htmladdimg{../midterm2f.gif}
+
+{\bf Solution:} 
+The phasor form of the input voltage is:
+\[ \dot{V}_s=70/\sqrt{2}\angle 36.9^\circ =49.49\angle 36.9^\circ \]
+Find $i_L(t)$:
+\[ \dot{I}_L=\frac{\dot{V_s}}{R_1+R_2+j(\omega L-1/\omega C)}
+=\frac{49.49\angle 36.9^\circ}{150+50+j(200-200)}=0.247\angle 36.9^\circ \]
+\[ i_L(t)=0.35\;\sin(\omega t+36.9^\circ)\;\;\;\;\;(t<0) \]
+\[ i_L(0_-)=0.35\;\sin(36.9^\circ)=0.21\;A \]
+\[ \dot{V}_C=Z_C \dot{I}=\dot{I}/j\omega C =49.49\angle -53.1^\circ \]
+\[ v_C(0_-)=70\;sin(-53.1^\circ)=-55.98\;V \]
+
+For $t>0$, the switch is closed, $\tau_C=R_2C=2.5\times 10^{-4}$, 
+$1/\tau_1=4000$, $\tau_L=L/R_1=1.33\times 10^{-3}$, $1/\tau_L=750$.
+As the steady state of $v_C(t)$ is zero, we can find $v_C(t)$ to be
+\[ v_C(t)=-55.98\;e^{-4000  t} \]
+Find steady state of $i_L(t)$:
+\[ \dot{I}_L=\frac{\dot{V}_s}{R_1+j\omega L}=\frac{49.49\angle 36.9}{150+j200}
+=0.2\angle -16.23 \]
+the steady state of $i_L(t)$ is
+\[ i_L(t)=0.2\sqrt{2}\sin(\omega t-16.23^\circ)=0.283\sin(\omega t-16.23^\circ) \]
+Evaluating $i_L(t)$ at $t=0$ we get:
+\[ i_L(0)=0.283\sin(-16.23^\circ)=-0.08 \]
+The complete $i_L(t)$ is
+\[ i_L(t)=0.283\sin(\omega t-16.23^\circ)+[0.21-(-0.08)]e^{-t/\tau_L}
+=0.283\sin(\omega t-16.23^\circ)+0.29\;e^{-750\;t} \]
+
+%\item {\bf Problem 3. (34 points)} 
+%
+%In the circuit shown below, the voltage source $v(t)=100\;\sqrt{2}\;sin\;314t\;$ volts,
+%and the effective values of the three currents $i$, $i_L$ and $i_C$ are the same. The
+%total real energy comsumed by the circuit is 866 W. Find the values of $R$, $L$ and $C$.
+%(Hint: represent all currents $i(t)$, $i_C(t)$, $i_L(t)$ and voltage $v(t)$ as phasors 
+%$\dot{I}$, $\dot{I}_C$, $\dot{I}_L$, $\dot{V}$, and draw them as vectors to figure out
+%how they are related.)
+
+
+%\htmladdimg{../midterm2h.gif}
+
+%{\bf Solution:}
+%Let $\dot{V}=100\angle 0$ be the phasor representation of $v(t)$ so that 
+%\[ v(t)=Im[\sqrt{2} \dot{V} e^{j\omega t}] =Im[\sqrt{2} \dot{V} e^{j314t}] \]
+%where $\omega=2\pi f=314$, i.e., $f=50$ Hz. We have
+%\[ \dot{I}_C=j\omega C \dot{V}=100\omega C \angle 90^\circ,
+%\;\;\;\;\;\dot{I}_L=\frac{\dot{V}}{R+j\omega L}=\frac{100}{\sqrt{R^2+\omega^2 L^2}}\angle -\phi \]
+%where $\phi=tan^{-1}(\omega L/R)$. Due to KCL, we hav
+%\[ \dot{I}=\dot{I}_C+\dot{I}_L \]
+%but also as given
+%\[ |\dot{I}|=|\dot{I}_C|=|\dot{I}_L|=I \]
+%we conclude that these three currents are equal in magnitude and $60^\circ$ apart in 
+%phase angle, as shown below:
+%\htmladdimg{../midterm2h1.gif}
+
+%where $\dot{I}_C$ is $90^\circ$ ahead of $\dot{V}$, $\dot{I}$ is $\theta=30^\circ$
+%ahead of $\dot{V}$, which in turn is $\phi=30^\circ$ ahead of $\dot{I}_L$. Therefore,
+%\[ \dot{I}=I\angle \theta=I\angle 30^\circ,\;\;\;\;\;\dot{I}_L=I\angle \phi=I\angle -30^\circ,
+%\;\;\;\;\;\dot{I}_C=I\angle 90^\circ  \]
+%As the real power is 
+%\[ P=866=V I \cos\phi =100 I \cos (-30^\circ)=86.6 I \]
+%we get
+%\[ I=10 A \]
+%therefore we also get
+%\[ P=866=RI^2=R 100,\;\;\;\;\;R=8.66 \Omega \]
+%and
+%\[ \dot{I}=10\angle 30^\circ,\;\;\;\;\dot{I}_L=10\angle -30^\circ,\;\;\;\dot{I}_C=10\angle 90^\circ  \]
+%But from above
+%\[ \dot{I}_C=100\omega C \angle 90^\circ=10\angle 90^\circ \]
+%we get:
+%\[ \omega C=0.1,\;\;\;\;C=0.1/314=3.18\times 10^{-4} \; F\]
+%Since we also have:
+%\[ \dot{I}_L=\frac{100}{\sqrt{R^2+\omega^2 L^2}}\angle -\phi=10\angle -30^\circ \]
+%solving this we get
+%\[ \omega L=5,\;\;\;\;\;\;L=5/\omega=5/314=0.0159\;H \]
+
+
+\item {\bf Problem 3. (34 points)} 
+
+\begin{itemize}
+\item (a) Find the frequency response function of the circuit shown in 
+the figure, i.e., find the ratio of the voltage $V_R$ across load resistor
+$R$ and the input sinusoidal voltage $V$. 
+
+\item (b) Similar to a simple RCL series resonant circuit, this circuit
+can be used as a band-pass filter to pass signals around its resonant 
+frequency. Find this resonant frequency $\omega_{max}$ at which 
+$V_R(\omega)$ is maximized in terms of the component values $R$, $C$, 
+$L_1$ and $L_2$. 
+
+\item (c) Different from the simple RCL series resonant circuit, this 
+circuit also has a stop band, i.e., around a certain freqnecy 
+$\omega_{min}$ the output voltage $V_R$ is zero. Find this frequency 
+$V_R$ also in terms of the circuit components. 
+
+\item (d) Given $C=10\;\mu F$ and the two inductors are identical, 
+determine the values of $R$ and $L_1=L_2$, so that $\omega_{max}=5000
+\;rad/sec$. What is the corresponding stop frequency $\omega_{min}$?
+
+\end{itemize}
+
+\htmladdimg{../midterm2e.gif}
+
+  {\bf Solution:}
+  \begin{itemize}
+  \item Find total impedance of the circuit:
+  \begin{eqnarray}
+   Z&=&R+j\omega L_2+\frac{j\omega L_1/j\omega C}{j\omega L_1+1/j\omega C}
+  	=R+j\omega L_2+\frac{j\omega L_1}{1-\omega^2 CL_1}
+  	\nonumber \\
+  &=&R+\frac{j\omega(L_2(1-\omega^2CL_1)+L_1)}{1-\omega^2 CL_1}
+  =R+j\omega \frac{L_1+L_2-\omega^2CL_1L_2}{1-\omega^2CL_1}
+  	\nonumber 
+  \end{eqnarray}
+  \item At the resonant frequency $\omega_0=\omega_{max}$, the imaginary 
+  part of the impedance is zero (minimum), i.e.,
+  \[	L_1+L_2=\omega^2CL_1L_2,\;\;\;\;\mbox{i.e.}\;\;\;\;
+  	\omega_0=\frac{1}{\sqrt{CL}},\;\;\;\mbox{where}\;\;\;
+  	L=\frac{L_1L_2}{L_1+L_2}
+  \]
+  \item At the stop frequency $\omega_{min}$, the imaginary part of the 
+  impedance is infinity (maximum), i.e.,
+  \[	1-\omega^2CL_1=0, \;\;\;\mbox{i.e.}\;\;\;\;
+  	\omega_{min}=\frac{1}{\sqrt{CL_1}}	\]
+  
+  \item As $L_1=L_2$, $L=L_1/2$ and we have
+  \[ \omega_0=\frac{1}{\sqrt{CL_1/2}}=5000,\;\;\;\;\mbox{i.e.}\;\;\;\;
+  	L_1=0.008\;H=8\;mH	\]
+  \[ \omega_{min}=\frac{1}{\sqrt{CL_1}}=3536\;rad/sec	\]
+  This is true for any load of $R$.
+  
+  \end{itemize} 
+
+\end{enumerate}
+\end{document}
+
+\item {\bf Problem 3. (33 points)} In the circuit shown below, $V_1=2V$,
+$V_2=10V$, $R_1=R_2=2\;M\Omega$, $C=1\mu F$. Switch $S_1$ closes at $t=0$, 
+switch $S_2$ closes at $t=1$ second. Assume initially the voltage across
+the capacitor is $v_c(0)=4V$. Find voltage $v_c(t)$ for the following 
+two time periods:
+\begin{itemize}
+\item $0\le t < 1 s$
+\item $t \ge 1\;s$ 
+\end{itemize}
+Sketch the plots of these two voltages for $t \ge 0$.
+
+{\bf Hints:} For second period, assume $t'=t-1$, and use the solution of
+the first period at $t=1$ as the initial value. In the final expression, 
+replace $t'$ by $t-1$.
+
+\htmladdimg{../midterm2d.gif}
+
+%   {\bf Solution:}
+%   \begin{itemize}
+%   \item During the period $0\le t<1 s$, the initial value is 
+%  	$v_c(0)=4$, the steady state value is $v_c(\infty)=2V$, the time 
+%  	constant is $\tau_1=R_1C=2\times 10^6\times 10^{-6}=2\;sec.$, and 
+%  	the overall voltage is:
+%  \[ v_c(t)=v_c(\infty)+[v_c(0)-v_c(\infty)] e^{-t/\tau_1}
+%  	=2+(4-2) e^{-t/2}=2(1+e^{-0.5t})	\]
+%   In particular, when $t=1$, we have
+%   \[ v_c(1)=2(1+e^{-0.5})=3.213V	\]
+%   
+%   \item During the period $t \ge 1\;s$, we have $v_c(1)=3.213V$, 
+%   	$v_c(\infty)=2+2\times (10-2)/(2+2)=6V$,
+%   	$\tau_2=(R_1||R_2)C=10^6 \times 10^{-6}=1\; sec.$
+%  
+%   \[	v_c(t')=v_c(\infty)+[v_c(1)-v_c(\infty)]e^{-t'/\tau_2}
+%   	=6+(3.213-6)e^{-t'/\tau_2}=6-2.787e^{-(t-1)} \]
+%  
+% \end{itemize}
+
+\end{enumerate}
+
+\end{document}
+
+\item {\bf Problem 3. (33 points)} 
+
+In the circuit shown in the figure, $V_0=6V$, $I_0=2A$, $R_1=6\Omega$, 
+$R_2=3\Omega$, and $L=0.5H$. Assume the circuit has reached steady state.
+Find the voltage $v(t)$ across $R_1$ and current $i(t)$ through $L$ as 
+time functions after the switch is closed at $t=0$.
+
+
+{\bf Solution:} 
+$i(0)=V_0/R_1=6/6=1A$, $i(\infty)=V_0/R_1+I_0=1+2=3A$. 
+
+Find time constant: $R=R_1R_2/(R_1+R_2)=3\times 6/(3+6)=2\Omega$,
+$\tau=L/R=0.5/2=0.25S$. 
+
+The current $i(t)$ is therefore:
+\[ i(t)=i(\infty)+[i(0)-i(\infty)]e^{-t/\tau}=3+(1-3)e^{-t/0.25}
+	=3-2e^{-4t} \;A \]
+\[ v(t)=V_0-V_L(t)=V_0-L\frac{d}{dt}i(t)=6-0.5 \frac{d}{dt}(3-2e^{-4t})
+	6-4e^{-4t} \]
+
+
+\item {\bf Problem 3. (33 points)} 
+The circuit in the figure shows a voltage source $V_0$ and $R_0$ and an
+amplification circuit modeled by as a two-port network. Assume the two-port 
+is represented by a Z-model ($Z_{11}, Z_{12}, Z_{21}, Z_{22}$). Find the 
+expression for the load impedance $Z_L$ in terms of $R_0$ as well as the
+four Z-parameters, for it to get maximum power from the voltage source.
+(Hint: use Thevenin's theorem.)
+
+{\bf Solution:} 
+\begin{itemize}
+\item First set up all equations:
+\[ \left\{ \begin{array}{l} V_1=Z_{11}I_1+Z_{12}I_2 \\
+	V_2=Z_{21}I_1+Z_{22}I_2 \end{array} \right.	\]
+\[ \left\{ \begin{array}{l} V_1=V_0-R_0I_1 \\
+	V_2=-R_L I_2 \end{array} \right.	\]
+\item Use Thevenin's theorem
+
+\begin{itemize}
+\item Find $Z_{Th}$: assume $V_0=0$, equate equations 1 and 3 to get:
+\[ V_1=Z_{11}I_1+Z_{12}I_2, \;\;\;\;\mbox{i.e.,}\;\;\;\;\;
+I_1=-\frac{Z_{12}}{Z_{11}+R_0} I_2 \]
+Substitute this $I_1$ in equation 2 to get:
+\[ V_2=(-\frac{Z_{12}Z_{21}}{Z_{11}+R_0}+Z_{22}) I_2,\;\;\;\;\;
+\mbox{i.e.,}\;\;\;\;\;
+Z_{Th}=\frac{V_2}{I_2}=-\frac{Z_{12}Z_{21}}{Z_{11}+R_0}+Z_{22}	\]
+\item Find $V_{Th}$:, assume $I_2=0$, we have
+\[ \left\{\begin{array}{l} V_1=Z_{11}I_1 \\V_2=Z_{21}I_1\end{array}\right. \]
+Substitute $V_1=V_0-R_0I_1$ into $V_1=Z_{11}I_1$ to get
+\[	V_{Th}=V_2=V_0\frac{Z_{21}}{Z_{11}+R_0}	\]
+\end{itemize}
+
+For $R_L$ to get maximum power, we need to have
+\[ R_L=Z_{Th}=Z_{22}-\frac{Z_{12}Z_{21}}{Z_{11}+R_0}	\]
+and the current is
+\[ I_l=\frac{V_{Th}}{Z_{Th}+R_L}=\frac{V_{Th}}{Z_{Th}}
+	=\frac{2V_0Z_{21}}{2(Z_{22}Z_{11}-Z_{12}Z_{21}+Z_{22}R_0)} \]
+
+
+\end{itemize}
+
+
+\end{enumerate}
+
+\end{document}
+
+An electric motor, modeled as an inductor and a resistor in series, has 
+a power factor of 0.85. The nameplate current is 10 Amps at 115 Volts 
+(60 Hz). 
+\begin{itemize}
+\item Find the apparent power, active power, and reactive power. 
+\item Find the inductance and resistance of the motor.
+\item Find the capacitance of a parallel shunt capacitor that can improve
+	the power factor to 1.
+\item Find the capacitance if the power factor can be 0.9.
+\end{itemize}
+
+% {\bf Solution:} 
+% The apprarent power is $S=115V \times 10A = 1150 W$, the real power is
+% $P=S\cos \phi=S*0.85=977.5 W$, the reactive power is 
+% $P=S\sin \phi=S*0.527=605.8 W$. The impedance of the motor is
+% \[	Z=\frac{V}{I}=\frac{115}{10}=11.5\Omega \]
+% The inductance L and resistance R satisfy the following equations:
+% \[ \left\{ \begin{array}{l} (\omega L)^2+R^2=Z^2=11.5^2 \\
+% 	tan^{-1} \frac{\omega L}{R}=cos^{-1} 0.85 \end{array} \right. \]
+% Given $\omega=2\pi f=377\;rad/sec$, the quations can be solve for R and
+% L to get
+% \[	R=9.8\Omega,\;\;\;\;L=16\;mH,\;\;\;\;\omega L=6\Omega	\]
+% With the parallel capacitor C, the overall impedance is
+% \[	Z=(R+j\omega L)\; || \;(1/j\omega C)
+% 	=\frac{(R+j\omega L)/j\omega C}{(R+j\omega L)+1/j\omega C}
+% 	=\frac{R+j\omega L}{j\omega CR-\omega^2 LC+1}	\]
+% For $\angle Z=0$, we need to have
+% \[ \tan^{-1}\frac{\omega L}{R}=\tan^{-1}\frac{\omega RC}{1-\omega^2 LC},
+% 	\;\;\;\mbox{i.e.}\;\;\;	
+% 	\frac{\omega L}{R}=\frac{\omega RC}{1-\omega^2 LC}	\]
+% which can be solved for $C$ to get
+% \[	C=\frac{L}{R^2+\omega^2 L^2}=120\;\mu F	\]
+% For the power factor to be 0.9, or $\cos^{-1} 0.9=\phi=25.8$, we need
+% \[ \tan^{-1}\frac{\omega L}{R}-\tan^{-1}\frac{\omega RC}{1-\omega^2 LC}
+% 	=25.8,	\;\;\;\mbox{i.e.}\;\;\;	
+% \tan^{-1}\frac{\omega RC}{1-\omega^2 LC}=\tan^{-1}\frac{\omega L}{R}-25.8=
+% 	5.8 \]
+% which can be solved to get $C=25.5\;\mu F$.
+
+\documentstyle[11pt]{article}
+\usepackage{html}
+\begin{document}
+\begin{center}
+{\Large \bf E84 Midterm Exam 2}
+\end{center}
+
+\begin{itemize}
+\item Take home, open everything except discussion.
+\item Mark your start and end times. % Don't spend more than 3 hours.
+\item Due Monday in class.
+\item Mark your name and question number clearly on top of each page.
+	Indicate the total number of pages submitted.
+\item When solving a problem, list all the steps. In each step, describe 
+	what you are doing in English, then show the calculation and the 
+	result of the step. A final answer, even if correct, without 
+	evidence of the steps leading to the answer will not receive credit.
+\end{itemize}
+
+\begin{enumerate}
+
+\item {\bf Problem 1. (33 points)} 
+
+An electric motor, modeled as an inductor and a resistor in series, has 
+a power factor of 0.85. The nameplate current is 10 Amps at 115 Volts 
+(60 Hz). 
+\begin{itemize}
+\item Find the apparent power, active power, and reactive power. 
+\item Find the inductance and resistance of the motor.
+\item Find the capacitance of a parallel shunt capacitor that can improve
+	the power factor to 1.
+\item Find the capacitance if the power factor can be 0.9.
+\end{itemize}
+
+{\bf Solution:} 
+The apprarent power is $S=115V \times 10A = 1150 W$, the real power is
+$P=S\cos \phi=S*0.85=977.5 W$, the reactive power is 
+$P=S\sin \phi=S*0.527=605.8 W$. The impedance of the motor is
+\[	Z=\frac{V}{I}=\frac{115}{10}=11.5\Omega \]
+The inductance L and resistance R satisfy the following equations:
+\[ \left\{ \begin{array}{l} (\omega L)^2+R^2=Z^2=11.5^2 \\
+	tan^{-1} \frac{\omega L}{R}=cos^{-1} 0.85 \end{array} \right. \]
+Given $\omega=2\pi f=377\;rad/sec$, the quations can be solve for R and
+L to get
+\[	R=9.8\Omega,\;\;\;\;L=16\;mH,\;\;\;\;\omega L=6\Omega	\]
+With the parallel capacitor C, the overall impedance is
+\[	Z=(R+j\omega L)\; || \;(1/j\omega C)
+	=\frac{(R+j\omega L)/j\omega C}{(R+j\omega L)+1/j\omega C}
+	=\frac{R+j\omega L}{j\omega CR-\omega^2 LC+1}	\]
+For $\angle Z=0$, we need to have
+\[ \tan^{-1}\frac{\omega L}{R}=\tan^{-1}\frac{\omega RC}{1-\omega^2 LC},
+	\;\;\;\mbox{i.e.}\;\;\;	
+	\frac{\omega L}{R}=\frac{\omega RC}{1-\omega^2 LC}	\]
+which can be solved for $C$ to get
+\[	C=\frac{L}{R^2+\omega^2 L^2}=120\;\mu F	\]
+For the power factor to be 0.9, or $\cos^{-1} 0.9=\phi=25.8$, we need
+\[ \tan^{-1}\frac{\omega L}{R}-\tan^{-1}\frac{\omega RC}{1-\omega^2 LC}
+	=25.8,	\;\;\;\mbox{i.e.}\;\;\;	
+\tan^{-1}\frac{\omega RC}{1-\omega^2 LC}=\tan^{-1}\frac{\omega L}{R}-25.8=
+	5.8 \]
+which can be solved to get $C=25.5\;\mu F$.
+
+
+\item {\bf Problem 2. (33 points)} Study the frequency behavior of the
+circuit shown in the figure by finding the ratio of the voltage $V_R$
+across load resistor $R$ and the input voltage $V$ (frequency response
+function) of the circuit. 
+\begin{itemize}
+\item Similar to a simple RCL series resonant circuit, this circuit
+can be used as a band-pass filter to pass signals around its resonant 
+frequency. Find this resonant frequency $\omega_{max}$ at which 
+$V_R(\omega)$ is maximized in terms of the component values $R$, $C$, 
+$L_1$ and $L_2$. 
+
+\item Different from the simple RCL series resonant circuit, this 
+circuit also has a stop band, i.e., around a certain freqnecy 
+$\omega_{min}$ the output voltage $V_R$ is zero. Find this frequency 
+$V_R$ also in terms of the circuit components. 
+
+\item Given $C=10\;\mu F$ and the two inductors are identical, determine
+the values of $R$ and $L_1=L_2$, so that $\omega_{max}=5000\;rad/sec$.
+
+\end{itemize}
+
+\htmladdimg{../midterm2e.gif}
+
+{\bf Solution:}
+\begin{itemize}
+\item Find total impedance of the circuit:
+\begin{eqnarray}
+ Z&=&R+j\omega L_2+\frac{j\omega L_1/j\omega C}{j\omega L_1+1/j\omega C}
+	=R+j\omega L_2+\frac{j\omega L_1}{1-\omega^2 CL_1}
+	\nonumber \\
+&=&R+\frac{j\omega(L_2(1-\omega^2CL_1)+L_1)}{1-\omega^2 CL_1}
+=R+j\omega \frac{L_1+L_2-\omega^2CL_1L_2}{1-\omega^2CL_1}
+	\nonumber 
+\end{eqnarray}
+\item At the resonant frequency $\omega_0=\omega_{max}$, the imaginary 
+part of the impedance is zero (minimum), i.e.,
+\[	L_1+L_2=\omega^2CL_1L_2,\;\;\;\;\mbox{i.e.}\;\;\;\;
+	\omega_0=\frac{1}{\sqrt{CL}},\;\;\;\mbox{where}\;\;\;
+	L=\frac{L_1L_2}{L_1+L_2}
+\]
+\item At the stop frequency $\omega_{min}$, the imaginary part of the 
+impedance is infinity (maximum), i.e.,
+\[	1-\omega^2CL_1=0, \;\;\;\mbox{i.e.}\;\;\;\;
+	\omega_{min}=\frac{1}{\sqrt{CL_1}}	\]
+
+\item As $L_1=L_2$, $L=L_1/2$, and
+\[ \omega_0=\frac{1}{\sqrt{CL_1/2}}=5000,\;\;\;\;\mbox{i.e.}\;\;\;\;
+	L_1=0.008\;H=8\;mH	\]
+\[ \omega_{min}=\frac{1}{\sqrt{CL_1}}=3536\;rad/sec	\]
+This is true for any load of $R$.
+
+\end{itemize} 
+
+
+\item {\bf Problem 3. (33 points)} In the circuit shown below, $V_1=2V$,
+$V_2=10V$, $R_1=R_2=2\;M\Omega$, $C=1\mu F$. Switch $S_1$ closes at $t=0$, 
+switch $S_2$ closes at $t=1$ second. Assume initially the voltage across
+the capacitor is $v_c(0)=4V$. Find voltage $v_c(t)$ for the following 
+two time periods:
+\begin{itemize}
+\item $0\le t < 1 s$
+\item $t \ge 1\;s$ 
+\end{itemize}
+Sketch the plots of these two currents for $t \ge 0$.
+
+{\bf Hints:} For second period, assume $t'=t-1$, and use $i(1)$ as 
+the initial value. In the final expression, replace $t'$ by $t-1$.
+
+\htmladdimg{../midterm2d.gif}
+
+ {\bf Solution:}
+ \begin{itemize}
+ \item During the period $0\le t<1 s$, the initial value is 
+	$v_c(0)=4$, the steady state value is $v_c(\infty)=2V$, the time 
+	constant is $\tau_1=R_1C=2\times 10^6\times 10^{-6}=2\;sec.$, and 
+	the overall voltage is:
+\[ v_c(t)=v_c(\infty)+[v_c(0)-v_c(\infty)] e^{-t/\tau_1}
+	=2+(4-2) e^{-t/2}=2(1+e^{-0.5t})	\]
+ In particular, when $t=1$, we have
+ \[ v_c(1)=2(1+e^{-0.5})=3.213V	\]
+ 
+ \item During the period $t \ge 1\;s$, we have $v_c(1)=3.213V$, 
+ 	$v_c(\infty)=2+2\times (10-2)/(2+2)=6V$,
+ 	$\tau_2=(R_1||R_2)C=10^6 \times 10^{-6}=1\; sec.$
+
+ \[	v_c(t')=v_c(\infty)+[v_c(1)-v_c(\infty)]e^{-t'/\tau_2}
+ 	=6+(3.213-6)e^{-t'/\tau_2}=6-2.787e^{-(t-1)} \]
+
+ 
+ \end{itemize}
+
+
+
+
+\end{enumerate}
+
+\end{document}
+
+\item {\bf Problem 3. (33 points)} 
+
+In the circuit shown in the figure, $V_0=6V$, $I_0=2A$, $R_1=6\Omega$, 
+$R_2=3\Omega$, and $L=0.5H$. Assume the circuit has reached steady state.
+Find the voltage $v(t)$ across $R_1$ and current $i(t)$ through $L$ as 
+time functions after the switch is closed at $t=0$.
+
+
+{\bf Solution:} 
+$i(0)=V_0/R_1=6/6=1A$, $i(\infty)=V_0/R_1+I_0=1+2=3A$. 
+
+Find time constant: $R=R_1R_2/(R_1+R_2)=3\times 6/(3+6)=2\Omega$,
+$\tau=L/R=0.5/2=0.25S$. 
+
+The current $i(t)$ is therefore:
+\[ i(t)=i(\infty)+[i(0)-i(\infty)]e^{-t/\tau}=3+(1-3)e^{-t/0.25}
+	=3-2e^{-4t} \;A \]
+\[ v(t)=V_0-V_L(t)=V_0-L\frac{d}{dt}i(t)=6-0.5 \frac{d}{dt}(3-2e^{-4t})
+	6-4e^{-4t} \]
+
+
+\item {\bf Problem 3. (33 points)} 
+The circuit in the figure shows a voltage source $V_0$ and $R_0$ and an
+amplification circuit modeled by as a two-port network. Assume the two-port 
+is represented by a Z-model ($Z_{11}, Z_{12}, Z_{21}, Z_{22}$). Find the 
+expression for the load impedance $Z_L$ in terms of $R_0$ as well as the
+four Z-parameters, for it to get maximum power from the voltage source.
+(Hint: use Thevenin's theorem.)
+
+{\bf Solution:} 
+\begin{itemize}
+\item First set up all equations:
+\[ \left\{ \begin{array}{l} V_1=Z_{11}I_1+Z_{12}I_2 \\
+	V_2=Z_{21}I_1+Z_{22}I_2 \end{array} \right.	\]
+\[ \left\{ \begin{array}{l} V_1=V_0-R_0I_1 \\
+	V_2=-R_L I_2 \end{array} \right.	\]
+\item Use Thevenin's theorem
+
+\begin{itemize}
+\item Find $Z_{Th}$: assume $V_0=0$, equate equations 1 and 3 to get:
+\[ V_1=Z_{11}I_1+Z_{12}I_2, \;\;\;\;\mbox{i.e.,}\;\;\;\;\;
+I_1=-\frac{Z_{12}}{Z_{11}+R_0} I_2 \]
+Substitute this $I_1$ in equation 2 to get:
+\[ V_2=(-\frac{Z_{12}Z_{21}}{Z_{11}+R_0}+Z_{22}) I_2,\;\;\;\;\;
+\mbox{i.e.,}\;\;\;\;\;
+Z_{Th}=\frac{V_2}{I_2}=-\frac{Z_{12}Z_{21}}{Z_{11}+R_0}+Z_{22}	\]
+\item Find $V_{Th}$:, assume $I_2=0$, we have
+\[ \left\{\begin{array}{l} V_1=Z_{11}I_1 \\V_2=Z_{21}I_1\end{array}\right. \]
+Substitute $V_1=V_0-R_0I_1$ into $V_1=Z_{11}I_1$ to get
+\[	V_{Th}=V_2=V_0\frac{Z_{21}}{Z_{11}+R_0}	\]
+\end{itemize}
+
+For $R_L$ to get maximum power, we need to have
+\[ R_L=Z_{Th}=Z_{22}-\frac{Z_{12}Z_{21}}{Z_{11}+R_0}	\]
+and the current is
+\[ I_l=\frac{V_{Th}}{Z_{Th}+R_L}=\frac{V_{Th}}{Z_{Th}}
+	=\frac{2V_0Z_{21}}{2(Z_{22}Z_{11}-Z_{12}Z_{21}+Z_{22}R_0)} \]
+
+
+\end{itemize}
+
+
+\end{enumerate}
+
+\end{document}
+

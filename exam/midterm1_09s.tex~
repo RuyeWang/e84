@@ -1,0 +1,87 @@
+\documentstyle[11pt]{article}
+\usepackage{html}
+\begin{document}
+\begin{center}
+{\large \bf E84 Midterm Exam 1} 
+
+\vskip .4in
+{\bf   Your Name _____________ }
+\end{center}
+
+
+
+
+{\bf Instructions}
+\begin{itemize}
+\item In class, open notes, feel free to use a calculator, but not any software package 
+  such as Multisim. 
+\item Mark your name and question number clearly on top of each page.
+  Indicate the total number of pages submitted.
+\item When solving a problem, list all the steps. In each step, indicate
+  concisely what you are doing in English, then show the calculation 
+  and the result of for the step. {\bf Box the final answer}.
+\item  A final answer, even if correct, without evidence of the steps
+  leading to it will receive ZERO credit.
+\end{itemize}
+
+\begin{enumerate}
+
+%\item {\bf Problem 1. (40 pts)}
+
+%  Find the equivalent resistance $R_{ab}$ between points a and b. (The diagonal
+%  wires are not connected to each other.)
+
+%  \htmladdimg{../midterm1_09sb.gif}
+
+%{\bf Solution}
+%  $R_{ab}=40\Omega$
+
+\item {\bf Problem 1. (40 points)}
+
+  Find voltage $V$ and current $I$ as labeled in the following figure:
+
+  \htmladdimg{../midterm1_09sc.gif}
+
+  where $R_1=5\Omega$, $R_2=1\Omega$, $R_3=6\Omega$, $R_4=6\Omega$.
+
+%  {\bf Solution:}
+% Consider superposition methods:
+%  \begin{itemize}
+%    \item Turn voltage source off:
+%      \[ I'=9\times\frac{5}{5+(1+6||6)}\frac{1}{2}=2.5A \]
+%      \[ V'=6I'=15 V \]
+%    \item Turn current source off:
+%      \[ I''=\frac{24}{6+(6||6)}\frac{1}{2}=4/3\;A \]
+%      \[ V''=6I''=8V \]
+%  \end{itemize}
+%  The total voltage and current are therefore $V=V''+V''=15+8=23V$,
+%  $I=I'+I''=23/6A$.
+
+\item {\bf Problem 2. (60 pts)}
+
+  Find all six currents labeled as $I_1$ through $I_6$ in the figure, where
+  $R1=4\Omega$, $R2=4\Omega$, $R3=2\Omega$, and $R4=2\Omega$.
+
+  \htmladdimg{../midterm1_09sa.gif}
+
+%  {\bf Solution:}
+%  $I_2=20A$.
+%  KVL around outer loop:
+%  \[ 110+100-4I_1-90=0,\;\;\;\;\Rightarrow I_1=30A \]
+%  \[ I_3=I_1-I_2=10A \]
+%  Also  we have
+%  \[ R_3I_4+R_4I_5=2(I_4+I_5)=110 V,\;\;\;\;\Rightarrow I_4+I_5=55 \]
+%  and
+%  \[ I_5-I_4=20 \]
+%  Solving these we get $I_5=37.5A$ and $I_4=17.5A$.
+%  Finally $I_6=I_5+I_3=37.5+10=47.5$.
+
+
+\end{itemize}
+
+\end{document}
+
+
+
+
+

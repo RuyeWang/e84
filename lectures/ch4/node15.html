@@ -1,0 +1,337 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>CMOS Digital Logic Circuits</TITLE>
+<META NAME="description" CONTENT="CMOS Digital Logic Circuits">
+<META NAME="keywords" CONTENT="ch4">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="ch4.css">
+
+<LINK REL="next" HREF="node16.html">
+<LINK REL="previous" HREF="node14.html">
+<LINK REL="next" HREF="node16.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node16.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="ch4.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node14.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node16.html">About this document ...</A>
+<B> Up:</B> <A
+ HREF="ch4.html">ch4</A>
+<B> Previous:</B> <A
+ HREF="node14.html">MOSFET Amplifier</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A ID="SECTION000150000000000000000">
+CMOS Digital Logic Circuits</A>
+</H1>
+
+<P>
+The <A ID="tex2html28"
+  HREF="https://en.wikipedia.org/wiki/Logic_family">Logic family</A>
+is composed of different types of digital logic circuits:
+
+<P>
+
+<UL>
+<LI><A ID="tex2html29"
+  HREF="https://en.wikipedia.org/wiki/Resistor-transistor_logic"><B>RTL</B></A>
+</LI>
+<LI><A ID="tex2html30"
+  HREF="https://en.wikipedia.org/wiki/Diode-transistor_logic"><B>DTL</B></A>
+</LI>
+<LI><A ID="tex2html31"
+  HREF="https://en.wikipedia.org/wiki/Transistor-transistor_logic"><B>TTL</B></A>
+</LI>
+<LI><A ID="tex2html32"
+  HREF="https://en.wikipedia.org/wiki/CMOS"><B>CMOS</B></A>
+</LI>
+</UL>
+
+<P>
+Both the p-channel MOSFET (pMOS) and n-channel MOSFET (nMOS) can be
+treated as a switch between its drain <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img50.svg"
+ ALT="$D$"></SPAN> and source <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img722.svg"
+ ALT="$S$"></SPAN> controlled by
+the voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.78ex; " SRC="img723.svg"
+ ALT="$V_{gs}$"></SPAN> between gate <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img724.svg"
+ ALT="$G$"></SPAN> and source <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img722.svg"
+ ALT="$S$"></SPAN>. When <!-- MATH
+ $V_{gs}>V_{Tn}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.78ex; " SRC="img725.svg"
+ ALT="$V_{gs}&gt;V_{Tn}$"></SPAN> 
+(e.g.,  <!-- MATH
+ $V_{Tn}=1\;V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img726.svg"
+ ALT="$V_{Tn}=1\;V$"></SPAN>) for nMOS and <!-- MATH
+ $V_{gs}\le V_{Tp}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.78ex; " SRC="img727.svg"
+ ALT="$V_{gs}\le V_{Tp}$"></SPAN> (e.g.,  <!-- MATH
+ $V_{Tp}=-1\;V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.78ex; " SRC="img728.svg"
+ ALT="$V_{Tp}=-1\;V$"></SPAN>)
+for pMOS, the circuit is a short-circuit because of the low resistance between 
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img50.svg"
+ ALT="$D$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img722.svg"
+ ALT="$S$"></SPAN>; otherwise, the circuit is an open-circuit due to the large 
+resistance between <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img50.svg"
+ ALT="$D$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img722.svg"
+ ALT="$S$"></SPAN>. A circuit composed of both types of MOSFET 
+transistors is called a <EM>complementary MOS</EM> or <EM>CMOS</EM> circuit, which
+is widely used in digital systems.
+
+<P>
+
+<UL>
+<LI>Logic AND can be implemented by a series combination of two MOS
+  transistors, which conducts electricity if both are turned on and
+  conducting.
+
+<P>
+</LI>
+<LI>Logic OR can be implemented by a parallel combination of two MOS
+  transistors, which conduct electricity if either of them is turned on
+  and conducting.
+</LI>
+</UL>
+
+<P>
+Due to such logic properties of the series and parallel connections of the
+MOS transistors, various logic circuits can be constructed to realize any
+arbitrary logic function <!-- MATH
+ $f(a,b,\cdots,x)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img729.svg"
+ ALT="$f(a,b,\cdots,x)$"></SPAN> by two complementary networks
+of MOS transistors:
+
+<UL>
+<LI>The pull-up network composed of pMOS transistors connected to the
+  positive voltage source <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img730.svg"
+ ALT="$V_s$"></SPAN> so that the circuit will conduct.
+
+<P>
+</LI>
+<LI>The pull-down network composed of nMOS transistors connected to
+  ground, so that the circuit will conduct. 
+</LI>
+</UL>
+
+<P>
+These two pull-up and pull-down networks will turn on and off alternatively,
+depending on the input variables of the logic function, so that the output
+voltage is high for logic 1 if <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img731.svg"
+ ALT="$f=TRUE$"></SPAN>, but low for logic 0 if <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img732.svg"
+ ALT="$f=FALSE$"></SPAN>. 
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/CMOSlogic.gif"
+ ALT="CMOSlogic.gif">
+
+<P>
+The specific circuits of the pull-up and pull-down networks are based on
+De Morgan's Law which states: the negation (complement) <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.57ex; " SRC="img733.svg"
+ ALT="$f'$"></SPAN> of a logic
+function <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img734.svg"
+ ALT="$f$"></SPAN> can be found by negating the logical operations (turn AND to
+R and OR to AND) as well as the variables in a function. For example,
+given a logic function <!-- MATH
+ $f(a,b,c)=(a'+b')c$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img735.svg"
+ ALT="$f(a,b,c)=(a'+b')c$"></SPAN>, we can find its negation by
+De Morgan's law:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+f'(a,b,c)=[(a'+b')c]'=(a'+b')'+c'=ab+c'
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img736.svg"
+ ALT="$\displaystyle f'(a,b,c)=[(a'+b')c]'=(a'+b')'+c'=ab+c'$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">179</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+Here are the CMOS implementations of some simple logic functions:
+
+<UL>
+<LI><B>Negation</B>
+
+<P>
+The NOT gate is implemented by a pull-up circuit composed of only a pMOS 
+  transistor and its complementary pull-down circuit composed of only a nMOS
+  transistor:
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/CMOSnot.gif"
+ ALT="CMOSnot.gif">
+
+<P>
+</LI>
+<LI><B>Logic NAND</B> <!-- MATH
+ $f(V_1,V_2)=(V_1 V_2)'=V_1'+V_2'$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img737.svg"
+ ALT="$f(V_1,V_2)=(V_1 V_2)'=V_1'+V_2'$"></SPAN>:
+
+<P>
+The pull-down function is <!-- MATH
+ $f'=V_1\;V_2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.57ex; " SRC="img738.svg"
+ ALT="$f'=V_1\;V_2$"></SPAN>, the pull-up function is 
+  <!-- MATH
+ $(V_1\;V_2)'=V'_1+V'_2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img739.svg"
+ ALT="$(V_1\;V_2)'=V'_1+V'_2$"></SPAN>,
+  The output function <!-- MATH
+ $V_{out}=f(V_1,V_2)=V'_1+V'_2=(V_1 V_2)'$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img740.svg"
+ ALT="$V_{out}=f(V_1,V_2)=V'_1+V'_2=(V_1 V_2)'$"></SPAN> is the 
+  same as the pull-up function, a negation of AND, or NAND.
+
+<P>
+</LI>
+<LI><B>Logic NOR</B> <!-- MATH
+ $f(V_1+V_2)=(V_1+V_2)'=V_1'\,V_2'$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img741.svg"
+ ALT="$f(V_1+V_2)=(V_1+V_2)'=V_1'\,V_2'$"></SPAN>:
+
+<P>
+The pull-down function is <!-- MATH
+ $f'=V_1+V_2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.57ex; " SRC="img742.svg"
+ ALT="$f'=V_1+V_2$"></SPAN>, the  pull-up function is
+  <!-- MATH
+ $(V_1+V_2)'=V'_1\;V'_2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img743.svg"
+ ALT="$(V_1+V_2)'=V'_1\;V'_2$"></SPAN>,
+  The output is the same as the pull-up function <!-- MATH
+ $V_{out}=(V_1+V_2)'$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img744.svg"
+ ALT="$V_{out}=(V_1+V_2)'$"></SPAN>,
+  negation of OR, or NOR.
+
+<P>
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\begin{tabular}{cc||c|c|c|c} \\\hline
+      &       &  AND & OR & NAND         &   NOR        \\\hline
+      $V_1$\  	& $V_2$\  & $V_1\,V_2$\  & $V_1+V_2$\  &  $(V_1\; V_2)'$\  & $(V_1+V_2)'$\  \\\hline \hline
+      0 	& 0 	& 0 & 0 & 1		 & 1            \\
+      0 	& 1 	& 0 & 1 & 1		 & 0            \\
+      1 	& 0 	& 0 & 1 & 1		 & 0            \\
+      1 	& 1 	& 1 & 1 & 0		 & 0            \\\hline
+    \end{tabular}
+  
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 20.67ex; vertical-align: -9.71ex; " SRC="img745.svg"
+ ALT="$\displaystyle \begin{tabular}{cc\vert\vert c\vert c\vert c\vert c} \\ \hline
+&amp; ...
+...&amp; 0 \\
+1 &amp; 0 &amp; 0 &amp; 1 &amp; 1 &amp; 0 \\
+1 &amp; 1 &amp; 1 &amp; 1 &amp; 0 &amp; 0 \\ \hline
+\end{tabular}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">180</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/CMOSnandnor.gif"
+ ALT="CMOSnandnor.gif">
+
+<P>
+</LI>
+</UL>
+
+<P>
+More complicated logic functions can be similarly implemented using CMOS
+circuits.
+
+<P>
+The MOS circuit below implements the logic function <!-- MATH
+ $f(a,b,c)=(a'+b')c$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img735.svg"
+ ALT="$f(a,b,c)=(a'+b')c$"></SPAN>
+shown above, where the pull-up network implementing <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img734.svg"
+ ALT="$f$"></SPAN> while the pull-down
+network implementing <!-- MATH
+ $f'(a,b,c)=ab+c'$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img746.svg"
+ ALT="$f'(a,b,c)=ab+c'$"></SPAN>:
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/CMOSlogicexample.gif"
+ ALT="CMOSlogicexample.gif">
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node16.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="ch4.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node14.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node16.html">About this document ...</A>
+<B> Up:</B> <A
+ HREF="ch4.html">ch4</A>
+<B> Previous:</B> <A
+ HREF="node14.html">MOSFET Amplifier</A></DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

@@ -1,0 +1,637 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>The Twin-T notch (band-stop) filter</TITLE>
+<META NAME="description" CONTENT="The Twin-T notch (band-stop) filter">
+<META NAME="keywords" CONTENT="ActiveFilters">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="ActiveFilters.css">
+
+<LINK REL="next" HREF="node5.html">
+<LINK REL="previous" HREF="node3.html">
+<LINK REL="next" HREF="node5.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node5.html">Wien bridge</A>
+<B> Up:</B> <A
+ HREF="node1.html">Chapter 6: Active Filter</A>
+<B> Previous:</B> <A
+ HREF="node3.html">The Sallen-Key filters</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION00013000000000000000">
+The Twin-T notch (band-stop) filter</A>
+</H2>
+
+<P>
+<B>The twin-T filter</B>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/TwinT.png"
+ ALT="TwinT.png">
+
+<P>
+The twin-T network is composed of two T-networks: 
+
+<UL>
+<LI>The RCR network is formed by two resistors <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img99.svg"
+ ALT="$R_1=R_2=R$"></SPAN> and one
+  capacitor <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img100.svg"
+ ALT="$C_3=2C$"></SPAN>. 
+
+<P>
+</LI>
+<LI>The CRC network is formed by two capacitors <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img101.svg"
+ ALT="$C_1=C_2=C$"></SPAN> and one
+  resistor <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img102.svg"
+ ALT="$R_3=R/2$"></SPAN>. 
+
+<P>
+</LI>
+</UL>
+
+<P>
+When the output is open-circuit, i.e., <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img103.svg"
+ ALT="$Z_L=\infty$"></SPAN>, the frequency 
+response function of the twin-T network can be found to be
+(see <A ID="tex2html4"
+  HREF="../TwinT/TwinT.html">here</A>):
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+H(j\omega)&=&\frac{v_{out}}{v_{in}}
+  =\frac{(j\omega)^2+\omega_n^2}{(j\omega)^2+4\omega_nj\omega+\omega_n^2}
+  \nonumber\\
+  &=&\frac{(j\omega)^2+\omega_n^2}{(j\omega)^2+\omega_nj\omega/Q+\omega_n^2}
+  =\frac{\omega^2-\omega_n^2}{\omega^2-j\omega\Delta\omega-\omega_n^2}
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1.svg"
+ ALT="$\displaystyle H(j\omega)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img2.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 6.04ex; vertical-align: -2.29ex; " SRC="img104.svg"
+ ALT="$\displaystyle \frac{v_{out}}{v_{in}}
+=\frac{(j\omega)^2+\omega_n^2}{(j\omega)^2+4\omega_nj\omega+\omega_n^2}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img2.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 6.04ex; vertical-align: -2.29ex; " SRC="img105.svg"
+ ALT="$\displaystyle \frac{(j\omega)^2+\omega_n^2}{(j\omega)^2+\omega_nj\omega/Q+\omega_n^2}
+=\frac{\omega^2-\omega_n^2}{\omega^2-j\omega\Delta\omega-\omega_n^2}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">31</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+where
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+\omega_n=\frac{1}{RC}=\frac{1}{\tau}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 4.88ex; vertical-align: -1.71ex; " SRC="img106.svg"
+ ALT="$\displaystyle \omega_n=\frac{1}{RC}=\frac{1}{\tau}
+$"> 
+
+(<SPAN CLASS="arabic">32</SPAN>)
+</DIV>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img107.svg"
+ ALT="$Q=1/4=0.25$"></SPAN> is the quality factor, and <!-- MATH
+ $\Delta\omega=\omega_n/Q=4\omega_n$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img108.svg"
+ ALT="$\Delta\omega=\omega_n/Q=4\omega_n$"></SPAN> 
+is the bandwidth of the filter. This twin-T network is a band-stop filter 
+(notch filter) which attenuates the frequency <!-- MATH
+ $\omega_n=1/\tau$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img109.svg"
+ ALT="$\omega_n=1/\tau$"></SPAN> to zero:
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+|H(j\omega)|=\left\{\begin{array}{ll}
+H(0)=\omega_n^2/\omega_n^2=1 & \omega=0 \\
+H(j\omega_n)=0 & \omega=\omega_n=1/\tau\\
+H(\infty)=\lim\limits_{\omega\rightarrow\infty}H(j\omega)=\omega^2/\omega^2=1 & \omega\rightarrow \infty
+\end{array}\right.
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 9.52ex; vertical-align: -4.11ex; " SRC="img110.svg"
+ ALT="$\displaystyle \vert H(j\omega)\vert=\left\{\begin{array}{ll}
+H(0)=\omega_n^2/\...
+...y}H(j\omega)=\omega^2/\omega^2=1 &amp; \omega\rightarrow \infty
+\end{array}\right.
+$"> 
+
+(<SPAN CLASS="arabic">33</SPAN>)
+</DIV>
+
+<P>
+When this notch filter is used in a negative feedback loop of an 
+amplifier, it becomes an oscillator.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/TwinTPlots1.png"
+ ALT="TwinTPlots1.png">
+
+<P>
+<B>The active twin-T filter</B>
+
+<P>
+The bandwidth <!-- MATH
+ $\Delta\omega=\omega_n/Q=4\omega_n$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img108.svg"
+ ALT="$\Delta\omega=\omega_n/Q=4\omega_n$"></SPAN> may not be narrow
+enough for most applications due to the small quality factor <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img111.svg"
+ ALT="$Q=1/4$"></SPAN>. 
+To overcome this problem, an active filter containing two op-amp 
+followers (with unity gain <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img112.svg"
+ ALT="$A=1$"></SPAN>) can be used to introduce a positive
+feedback loop as shown below:
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/TwinTActive.png"
+ ALT="TwinTActive.png">
+
+<P>
+Now the common terminal of the twin-T filter is no longer grounded, 
+instead it is connected a potentiometer, a voltage divider composed 
+of <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img113.svg"
+ ALT="$R_4$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img114.svg"
+ ALT="$R_5$"></SPAN>, to form a feedback loop by which a fraction of the
+output <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img45.svg"
+ ALT="$V_{out}$"></SPAN> is fed back:
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+V_1=\frac{R_5}{R_4+R_5}\;V_{out}=\alpha v_{out}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img115.svg"
+ ALT="$\displaystyle V_1=\frac{R_5}{R_4+R_5}\;V_{out}=\alpha v_{out}
+$"> 
+
+(<SPAN CLASS="arabic">34</SPAN>)
+</DIV>
+where <!-- MATH
+ $\alpha=R_5/(R_4+R_5)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img116.svg"
+ ALT="$\alpha=R_5/(R_4+R_5)$"></SPAN>, i.e., <!-- MATH
+ $1-\alpha=R_4/(R_4+R_5)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img117.svg"
+ ALT="$1-\alpha=R_4/(R_4+R_5)$"></SPAN>.
+
+<P>
+The input and output of the twin-T network are respectively <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img118.svg"
+ ALT="$V_{in}-V_1$"></SPAN> and
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img119.svg"
+ ALT="$V_{out}-V_1$"></SPAN>, and they are now related by the frequency response function 
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img120.svg"
+ ALT="$H(j\omega)$"></SPAN> of the twin-T network:
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+V_{out}-V_1=H(j\omega)(V_{in}-V_1)
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img121.svg"
+ ALT="$\displaystyle V_{out}-V_1=H(j\omega)(V_{in}-V_1)
+$"> 
+
+(<SPAN CLASS="arabic">35</SPAN>)
+</DIV>
+Rearranging and substituting <!-- MATH
+ $V_1=V_{out}\;R_5/(R_4+R_5)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img122.svg"
+ ALT="$V_1=V_{out}\;R_5/(R_4+R_5)$"></SPAN>, we get
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+H(j\omega)V_{in}&=&V_{out}+(H(j\omega)-1) V_1
+  =V_{out}+(H(j\omega)-1)\frac{R_5}{R_4+R_5}V_{out}
+  \nonumber \\
+  &=&\left(1+(H(j\omega)-1)\;\frac{R_5}{R_4+R_5}\right)\,V_{out}
+  =\frac{R_4+H(j\omega)R_5}{R_4+R_5}\;V_{out}
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img123.svg"
+ ALT="$\displaystyle H(j\omega)V_{in}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img2.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img124.svg"
+ ALT="$\displaystyle V_{out}+(H(j\omega)-1) V_1
+=V_{out}+(H(j\omega)-1)\frac{R_5}{R_4+R_5}V_{out}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img2.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img125.svg"
+ ALT="$\displaystyle \left(1+(H(j\omega)-1)\;\frac{R_5}{R_4+R_5}\right)\,V_{out}
+=\frac{R_4+H(j\omega)R_5}{R_4+R_5}\;V_{out}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">36</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Now the frequency response function of this active filter with feedback 
+can be found to be
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+H_{active}(j\omega)=\frac{V_{out}}{V_{in}}
+=\frac{H(j\omega)(R_4+R_5)}{R_4+H(j\omega)R_5}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img126.svg"
+ ALT="$\displaystyle H_{active}(j\omega)=\frac{V_{out}}{V_{in}}
+=\frac{H(j\omega)(R_4+R_5)}{R_4+H(j\omega)R_5}
+$"> 
+
+(<SPAN CLASS="arabic">37</SPAN>)
+</DIV>
+Substituting <!-- MATH
+ $H(j\omega)=((j\omega)^2+\omega_n^2)/((j\omega)^2+4\omega_n j\omega
++\omega_n^2)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img127.svg"
+ ALT="$H(j\omega)=((j\omega)^2+\omega_n^2)/((j\omega)^2+4\omega_n j\omega
++\omega_n^2)$"></SPAN> we get
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+H_{active}(j\omega)&=&\frac{(\omega_n^2-\omega^2)(R_4+R_5)}
+  {R_4(\omega_n^2-\omega^2+4\omega_n j\omega)+(\omega_n^2-\omega^2)R_5}
+  \nonumber \\
+  &=&\frac{(\omega_n^2-\omega^2)(R_4+R_5)}
+  {4\omega_nR_4 j\omega+(\omega_n^2-\omega^2)(R_4+R_5)}
+  \nonumber \\
+  &=&\frac{\omega_n^2-\omega^2}{j\omega 4\omega_n R_4/(R_4+R_5)+\omega_n^2-\omega^2}
+  \nonumber \\
+  &=&\frac{\omega_n^2-\omega^2}{\omega_n^2-\omega^2+\omega_n/Q_{active} j\omega}
+  =\frac{\omega^2-\omega_n^2}{\omega^2-\Delta\omega_{active} j\omega-\omega^2_n}
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img128.svg"
+ ALT="$\displaystyle H_{active}(j\omega)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img2.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 6.04ex; vertical-align: -2.29ex; " SRC="img129.svg"
+ ALT="$\displaystyle \frac{(\omega_n^2-\omega^2)(R_4+R_5)}
+{R_4(\omega_n^2-\omega^2+4\omega_n j\omega)+(\omega_n^2-\omega^2)R_5}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img2.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 6.04ex; vertical-align: -2.29ex; " SRC="img130.svg"
+ ALT="$\displaystyle \frac{(\omega_n^2-\omega^2)(R_4+R_5)}
+{4\omega_nR_4 j\omega+(\omega_n^2-\omega^2)(R_4+R_5)}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img2.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 6.04ex; vertical-align: -2.29ex; " SRC="img131.svg"
+ ALT="$\displaystyle \frac{\omega_n^2-\omega^2}{j\omega 4\omega_n R_4/(R_4+R_5)+\omega_n^2-\omega^2}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img2.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 6.04ex; vertical-align: -2.29ex; " SRC="img132.svg"
+ ALT="$\displaystyle \frac{\omega_n^2-\omega^2}{\omega_n^2-\omega^2+\omega_n/Q_{active...
+...
+=\frac{\omega^2-\omega_n^2}{\omega^2-\Delta\omega_{active} j\omega-\omega^2_n}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">38</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+where 
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+Q_{active}=\frac{R_4+R_5}{4R_4},\;\;\;\;\;\;
+\Delta\omega_{active}=\frac{\omega_n}{Q}_{active}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.57ex; vertical-align: -2.28ex; " SRC="img133.svg"
+ ALT="$\displaystyle Q_{active}=\frac{R_4+R_5}{4R_4},\;\;\;\;\;\;
+\Delta\omega_{active}=\frac{\omega_n}{Q}_{active}
+$"> 
+
+(<SPAN CLASS="arabic">39</SPAN>)
+</DIV>
+are respectively the quality factor and the bandwidth of the active 
+filter with feedback. 
+
+<P>
+It can be shown (see <A ID="tex2html5"
+  HREF="../TwinT/TwinT.html">here</A>)
+that the frequency response function of this active twin-T filter is
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+H_{active}(j\omega)
+&=&\frac{\omega_n^2-\omega^2}{\omega_n^2+4j\omega\omega_n R_4/(R_4+R_5)-\omega^2}
+\nonumber\\
+&=&\frac{\omega_n^2-\omega^2}{\omega_n^2-\omega^2+\omega_n/Q_{active} j\omega}
+=\frac{\omega_n^2-\omega^2}{\omega_n^2-\omega^2+\Delta\omega_{active} j\omega}
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img128.svg"
+ ALT="$\displaystyle H_{active}(j\omega)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img2.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 6.04ex; vertical-align: -2.29ex; " SRC="img134.svg"
+ ALT="$\displaystyle \frac{\omega_n^2-\omega^2}{\omega_n^2+4j\omega\omega_n R_4/(R_4+R_5)-\omega^2}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img2.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 6.04ex; vertical-align: -2.29ex; " SRC="img135.svg"
+ ALT="$\displaystyle \frac{\omega_n^2-\omega^2}{\omega_n^2-\omega^2+\omega_n/Q_{active...
+...
+=\frac{\omega_n^2-\omega^2}{\omega_n^2-\omega^2+\Delta\omega_{active} j\omega}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">40</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+where 
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+Q_{active}=\frac{R_4+R_5}{4R_4},\;\;\;\;\;\;
+\Delta\omega_{active}=\frac{\omega_n}{Q}_{active}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.57ex; vertical-align: -2.28ex; " SRC="img133.svg"
+ ALT="$\displaystyle Q_{active}=\frac{R_4+R_5}{4R_4},\;\;\;\;\;\;
+\Delta\omega_{active}=\frac{\omega_n}{Q}_{active}
+$"> 
+
+(<SPAN CLASS="arabic">41</SPAN>)
+</DIV>
+are respectively the quality factor and the bandwidth of the active 
+filter with feedback. By changing <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img113.svg"
+ ALT="$R_4$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img114.svg"
+ ALT="$R_5$"></SPAN>, the bandwidth 
+<!-- MATH
+ $\Delta\omega_{active}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img136.svg"
+ ALT="$\Delta\omega_{active}$"></SPAN> can be adjusted. In particular, 
+
+<UL>
+<LI>when <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img137.svg"
+ ALT="$R_5=0$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img138.svg"
+ ALT="$V_1=0$"></SPAN> (no feedback), <!-- MATH
+ $Q_{active}=1/4=Q$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img139.svg"
+ ALT="$Q_{active}=1/4=Q$"></SPAN>, 
+  <!-- MATH
+ $\Delta\omega=\omega_n/Q=4\omega_n$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img108.svg"
+ ALT="$\Delta\omega=\omega_n/Q=4\omega_n$"></SPAN>; 
+</LI>
+<LI>when <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img140.svg"
+ ALT="$R_4=0$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img141.svg"
+ ALT="$V_1=V_{out}$"></SPAN> (one hundred percent feedback), 
+  <!-- MATH
+ $Q_{active}=\infty$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img142.svg"
+ ALT="$Q_{active}=\infty$"></SPAN>, <!-- MATH
+ $\Delta\omega_{active}=\omega_n/Q_{active}=0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img143.svg"
+ ALT="$\Delta\omega_{active}=\omega_n/Q_{active}=0$"></SPAN>.
+</LI>
+</UL>
+
+<P>
+<B>The bridged T filter</B>
+
+<P>
+If in the RCR T-network the vertical capacitor branch is dropped, 
+i.e., <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img144.svg"
+ ALT="$C=0$"></SPAN>, the twin-T network becomes a bridged T network. Now
+we have <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.69ex; " SRC="img145.svg"
+ ALT="$Z'_3=2R$"></SPAN>, while the CRC T-network is still the same with 
+<!-- MATH
+ $Z''_3=2(1+j\omega RC)/R(j\omega C)^2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img146.svg"
+ ALT="$Z''_3=2(1+j\omega RC)/R(j\omega C)^2$"></SPAN>, we get:
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+Z_3=Z'_3||Z''_3=\frac{Z'_3 Z''_3}{Z'_3+Z''_3}
+  =\frac{2R(1+j\omega RC)}{1+j\omega RC+(j\omega RC)^2}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.81ex; vertical-align: -2.33ex; " SRC="img147.svg"
+ ALT="$\displaystyle Z_3=Z'_3\vert\vert Z''_3=\frac{Z'_3 Z''_3}{Z'_3+Z''_3}
+=\frac{2R(1+j\omega RC)}{1+j\omega RC+(j\omega RC)^2}
+$"> 
+
+(<SPAN CLASS="arabic">42</SPAN>)
+</DIV>
+The frequency response function of this bridged T network (a voltage 
+divider) is:
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+H(j\omega)&=&\frac{Z_2}{Z_2+Z_3}=\frac{R+1/j\omega C}{R+1/j\omega C+2R(1+j\omega RC)/(1+j\omega RC+(j\omega RC)^2)}
+  \nonumber \\
+  &=&\frac{1/C}{1/j\omega C+2R/(1+j\omega RC+(j\omega RC)^2)}
+  =\frac{1}{1+2j\omega RC/(1+j\omega RC+(j\omega RC)^2)}
+  \nonumber \\
+  &=&\frac{1+j\omega RC+(j\omega RC)^2}{1+3j\omega RC+(j\omega RC)^2}
+  =\frac{(j\omega)^2+j\omega /RC+1/(RC)^2}{(j\omega)^2+3j\omega /RC+1/(RC)^2}
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1.svg"
+ ALT="$\displaystyle H(j\omega)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img2.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img148.svg"
+ ALT="$\displaystyle \frac{Z_2}{Z_2+Z_3}=\frac{R+1/j\omega C}{R+1/j\omega C+2R(1+j\omega RC)/(1+j\omega RC+(j\omega RC)^2)}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img2.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img149.svg"
+ ALT="$\displaystyle \frac{1/C}{1/j\omega C+2R/(1+j\omega RC+(j\omega RC)^2)}
+=\frac{1}{1+2j\omega RC/(1+j\omega RC+(j\omega RC)^2)}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img2.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 6.04ex; vertical-align: -2.29ex; " SRC="img150.svg"
+ ALT="$\displaystyle \frac{1+j\omega RC+(j\omega RC)^2}{1+3j\omega RC+(j\omega RC)^2}
+=\frac{(j\omega)^2+j\omega /RC+1/(RC)^2}{(j\omega)^2+3j\omega /RC+1/(RC)^2}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">43</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+We let <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img151.svg"
+ ALT="$\omega_n=1/RC$"></SPAN>, and express both the numerator and the
+denominator in the canonical form as
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+H(j\omega)=\frac{(j\omega)^2+\omega_n j\omega +\omega_n^2}{(j\omega)^2+3\omega_nj\omega +\omega_n^2}
+=\frac{(j\omega)^2+\Delta\omega_n j\omega+\omega_n^2}{(j\omega)^2+\Delta\omega_dj\omega +\omega_n^2}
+=\frac{\omega_n^2-\omega^2+\Delta\omega_n j\omega }{\omega_n^2-\omega^2+\Delta\omega_dj\omega}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 6.04ex; vertical-align: -2.29ex; " SRC="img152.svg"
+ ALT="$\displaystyle H(j\omega)=\frac{(j\omega)^2+\omega_n j\omega +\omega_n^2}{(j\ome...
+...2-\omega^2+\Delta\omega_n j\omega }{\omega_n^2-\omega^2+\Delta\omega_dj\omega}
+$"> 
+
+(<SPAN CLASS="arabic">44</SPAN>)
+</DIV>
+where 
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+\Delta\omega_n=\omega_n,\;\;\;\;\;\;\;\Delta\omega_d=3\omega_n
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img153.svg"
+ ALT="$\displaystyle \Delta\omega_n=\omega_n,\;\;\;\;\;\;\;\Delta\omega_d=3\omega_n
+$"> 
+
+(<SPAN CLASS="arabic">45</SPAN>)
+</DIV>
+are the bandwidth of the 2nd-order systems of the numerator and the
+denominator, respectively. 
+
+<UL>
+<LI>If <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img6.svg"
+ ALT="$\omega=0$"></SPAN>, <!-- MATH
+ $H(j\omega)=H(0)=1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img154.svg"
+ ALT="$H(j\omega)=H(0)=1$"></SPAN>
+</LI>
+<LI>If <!-- MATH
+ $\omega\rightarrow \infty$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img15.svg"
+ ALT="$\omega\rightarrow\infty$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img155.svg"
+ ALT="$H(j\omega)=1$"></SPAN>
+</LI>
+<LI>If <!-- MATH
+ $\omega=\omega_n=1/RC$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img156.svg"
+ ALT="$\omega=\omega_n=1/RC$"></SPAN>, <!-- MATH
+ $H(j\omega_n)=1/3$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img157.svg"
+ ALT="$H(j\omega_n)=1/3$"></SPAN>
+</LI>
+</UL>
+We see that this is a band-stop filter.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node5.html">Wien bridge</A>
+<B> Up:</B> <A
+ HREF="node1.html">Chapter 6: Active Filter</A>
+<B> Previous:</B> <A
+ HREF="node3.html">The Sallen-Key filters</A></DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

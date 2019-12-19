@@ -1,0 +1,150 @@
+\documentstyle[11pt]{article}
+\usepackage{html}
+\begin{document}
+\begin{center}
+{\Large \bf  Midterm Exam 3 ---- E84, Spring, 2005}
+\end{center}
+
+\begin{itemize}
+\item Take home, open everything except discussion.
+\item Mark your start and end times. % Don't spend more than 3 hours.
+\item Due Monday in class.
+\item Mark your name and question number clearly on top of each page.
+	Indicate the total number of pages submitted.
+\item When solving a problem, list all the steps. In each step, describe 
+	what you are doing in English, then show the calculation and the 
+	result of the step. A final answer, even if correct, without 
+	evidence of the steps leading to the answer will not receive credit.
+\end{itemize}
+
+\begin{enumerate}
+
+\item {\bf Problem 1. (20 points)} 
+
+Find the output voltage $V_{out}$ in both (a) and (b) as a logic function of 
+the three input voltages $V_1$, $V_2$ and $V_3$, each of which could be either 
+0V or 5V, as listed in the following tables. Assume the voltage drop across 
+a conducting diode is $0.7V$.
+
+\htmladdimg{../midterm3i.gif}
+
+If we assume positive logic, i.e., high voltage is logical 1 (True) and low 
+voltage is logical 0 (False), then circuit (a) is a NOR (not OR) gate, and 
+circuit (b) is a NAND (not AND) gate:
+\[
+\begin{tabular}{ccc|c}\\ \hline 
+V1 & V2 & V3 & $V_{out}$ \\ \hline \hline
+0V & 0V & 0V &     0     \\ \hline
+0V & 0V & 5V &    4.3    \\ \hline
+0V & 5V & 0V &    4.3    \\ \hline
+0V & 5V & 5V &    4.3    \\ \hline
+5V & 0V & 0V &    4.3    \\ \hline
+5V & 0V & 5V &    4.3    \\ \hline
+5V & 5V & 0V &    4.3    \\ \hline
+5V & 5V & 5V &    4.3    \\ \hline
+\end{tabular}
+\]
+\[
+\begin{tabular}{ccc|c}\\ \hline
+V1 & V2 & V3 & $V_{out}$ \\ \hline \hline
+0V & 0V & 0V &     0.7   \\ \hline
+0V & 0V & 5V &     0.7   \\ \hline
+0V & 5V & 0V &     0.7   \\ \hline
+0V & 5V & 5V &     0.7   \\ \hline
+5V & 0V & 0V &     0.7   \\ \hline
+5V & 0V & 5V &     0.7   \\ \hline
+5V & 5V & 0V &     0.7   \\ \hline
+5V & 5V & 5V &     5     \\ \hline
+\end{tabular}
+\]
+
+\item {\bf Problem 2. (40 points)} 
+
+The circuit below shows an NPN transistor circuit where $R_1=68k\Omega$,
+$R_2=12k\Omega$, $R_c=10k\Omega$, $R_e=400\Omega$, $R_E=2k\Omega$, 
+$\beta=100$, and $V_{CC}=20V$. As always, we assume $V_{be}=0.7V$ when
+the transistor is conducting.
+
+\htmladdimg{../midterm3f.gif}
+
+\begin{enumerate}
+\item Find the DC operating point in terms of $I_B$, $I_C$, and $I_E$, 
+  together with $V_E$, $V_{CE}$ and $V_C$ (voltages at the three transistor 
+  terminals with respect to ground). 
+\item Find the AC small signal equivalent circuit, assuming $r_{be}=1k\Omega$
+  and the frequency of the AC signal is high enough so that all capacitors 
+  can be treated as AC short circuit. Find the AC voltage gain defined as the 
+  ratio between $v_{out}$ and $v_{in}$. For simplicity, assume the voltage
+  source $v_{in}$ has no internal resistance and no load $R_L=\infty$.
+\item Find the input resistance defined as the ratio of the input voltage
+  $v_{in}$ and the input current $i_b$ and the output resistance. Based on
+  the expression of the input resistance, explain why $R_e$ is needed (not
+  by-passed by the emitter capacitor).
+\end{enumerate}
+
+{\bf Solution:}
+\begin{enumerate}
+\item Use Thevenin's theorem to find 
+
+  $V_{BB}=V_{CC}\frac{R_2}{R_1+R_2}=20\times \frac{12}{68+12}=3V$
+
+  $R_B=\frac{R_1\times R_2}{R_1+R_2}=\frac{68\times 12}{68+12}=10.2\;k\Omega$
+\item Find $I_B$ and $I_C$:
+
+  $I_B=\frac{V_B-V_{be}}{R_B+(\beta+1)(R_E+R_e)}
+  =\frac{3-0.7}{10.2+(100+1)(2+0.4)}=9.1\mu A$
+
+  $I_C=\beta I_B=100\times 9.1\mu A=0.91 mA$, $I_E=I_C+I_B=0.92 mA$
+
+\item Find $V_B$, $V_C$, $V_{ce}$:
+  $V_E=(I_E)(R_e+R_E)=0.92 \times 2.4=2.2V $
+
+  $V_C=V_{CC}-I_CR_C=20-0.91\times 10=10.9V$, $V_{ce}=V_C-V_E=10.9-2.2=8.7V$
+
+\item The AC small signal equivalent circuit is shown below:
+
+  \htmladdimg{../midterm3h.gif}
+\item Find AC gain:
+  
+  $ v_{in}=i_b r_{be}+(\beta+1) i_b R_e=i_b[r_{be}+(\beta+1)R_e]$, 
+
+  \[ v_{out}=-\beta i_b R_c=-\frac{\beta R_c v_{in}}{r_{be}+(\beta+1)R_e} \]
+  \[ G=\frac{v_{out}}{v_{in}}=-\frac{100\times 10}{1+101\times0.4}=-24.15 \]
+
+\item The input resistance is $r_{be}+(\beta+1)R_e$, in parallel with $R_1$ and
+  $R_2$, much larger than $r_{be}$ without $R_e$. The output resistance is $R_C$.
+\end{enumerate}
+
+
+\item {\bf Problem 3. (40 points)} 
+
+The circuit shown below is a simple Darlington transistor amplifier which is
+composed of two transistors $T_1$ and $T_2$ with their collectors connected 
+and the emitter of $T_1$ connected to the base of $T_2$. Assume $V_{CC}=20V$ 
+and both transistors have $\beta=50$. 
+\begin{enumerate}
+\item Give the expressions of $I_{C1}$, $I_{E1}=I_{B2}$, $I_{C2}$, $I_{E2}$
+  all in terms of $\beta$ and $I_{B1}$.
+\item Given $R_C=1 k\Omega$, find $R_B$ so that $V_C=V_{CC}/2=10V$. For 
+  simplicity, assume for both transistors $v_{be}=0.7V$.
+
+\end{enumerate}
+
+\htmladdimg{../midterm3g.gif}
+
+{\bf Solution:}
+
+\begin{enumerate}
+\item $I_{C1}=\beta I_{B1}$, $I_{E1}=I_{B2}=(\beta+1) I_{B1}$, 
+$I_{C2}=\beta I_{B2}=\beta (\beta+1) I_{B1}$, 
+$I_{E2}=(\beta+1) I_{B2}=(\beta+1)^2 I_{B1}=(\beta^2+2\beta+1)I_{B1}$, 
+
+\item In order for $V_C=V_{CC}-R_C (I_{C1}+I_{C2})=10V$, we need to have
+$I_{C1}+I_{C2}=\beta I_{B1}+\beta (\beta+1) I_{B1}=2600 I_{B1}=10 mA$, i.e.,
+$I_{B1}=10 mA/2600=3.8 \mu A$. 
+
+$R_B=(V_{CC}-2V_{be})/I_{B1}=18.6/3.8=4.89 M\Omega$
+\end{enumerate}
+
+\end{document}
+

@@ -1,0 +1,410 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Solving RLC Circuits by Laplace Transform</TITLE>
+<META NAME="description" CONTENT="Solving RLC Circuits by Laplace Transform">
+<META NAME="keywords" CONTENT="ch3">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="ch3.css">
+
+<LINK REL="next" HREF="node16.html">
+<LINK REL="previous" HREF="node10.html">
+<LINK REL="next" HREF="node16.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node16.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node14.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node16.html">Frequency Response Functions and</A>
+<B> Up:</B> <A
+ HREF="node1.html">Chapter 3: AC Circuit</A>
+<B> Previous:</B> <A
+ HREF="node14.html">Responses to Impulse Train</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION00016000000000000000">
+Solving RLC Circuits by Laplace Transform</A>
+</H2>
+
+<P>
+In general, the relationship of the currents and voltages 
+in an AC circuit are described by linear constant coefficient
+ordinary differential equations (LCCODEs). But if only the 
+steady state behavior of circuit is of interested, the circuit
+can be described by linear algebraic equations in the s-domain 
+by Laplace transform method. 
+
+<P>
+<B>Example:</B> A low-pass filter composed of two inductors <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img105.svg"
+ ALT="$L$"></SPAN>
+and a capacitor <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img104.svg"
+ ALT="$C$"></SPAN> is inserted between the power supply and the
+appliance modeled by resistor <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img112.svg"
+ ALT="$R$"></SPAN> to filter out possible spikes
+(due to surges in the power line or lightning). Such spikes can 
+be modeled as a square impulse of certain height, e.g., <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.12ex; " SRC="img776.svg"
+ ALT="$100=10^2$"></SPAN>
+Volt and certain duration, e.g., <!-- MATH
+ $10 \;\mu s=10^{-5}\;sec$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.57ex; " SRC="img777.svg"
+ ALT="$10 \;\mu s=10^{-5}\;sec$"></SPAN>, which 
+can be mathematically represented by a delta function as the input
+<!-- MATH
+ $v_s(t)=10^{-3}\delta(t)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img778.svg"
+ ALT="$v_s(t)=10^{-3}\delta(t)$"></SPAN>, and we want to find out the output voltage
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img222.svg"
+ ALT="$v_R(t)$"></SPAN> across the load resistor <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img112.svg"
+ ALT="$R$"></SPAN> as the response to the impulse
+input. 
+
+<P>
+<IMG STYLE="" SRC="../figures/LCLfilterCircuit.png"
+ ALT="LCLfilterCircuit.png">
+
+<P>
+<B>Time domain:</B> We use node-voltage method applied
+to the middle node <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img231.svg"
+ ALT="$v_C$"></SPAN> and the output node <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img230.svg"
+ ALT="$v_R$"></SPAN>:
+
+<P>
+KCL to node <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img194.svg"
+ ALT="$v_C(t)$"></SPAN>: <!-- MATH
+ $i_{L1}+i_C+i_{L2}=0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img779.svg"
+ ALT="$i_{L1}+i_C+i_{L2}=0$"></SPAN>, where
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+i_{L1}=\frac{1}{L_1}\int_{-\infty}^t (v_C-v_S)d\tau,\;\;\;
+  i_{L2}=\frac{1}{L_2}\int_{-\infty}^t (v_C-v_R)d\tau,\;\;\;
+  i_C=C\frac{dv_C}{dt}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.27ex; vertical-align: -2.43ex; " SRC="img780.svg"
+ ALT="$\displaystyle i_{L1}=\frac{1}{L_1}\int_{-\infty}^t (v_C-v_S)d\tau,\;\;\;
+i_{L2}=\frac{1}{L_2}\int_{-\infty}^t (v_C-v_R)d\tau,\;\;\;
+i_C=C\frac{dv_C}{dt}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">280</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\frac{d}{dt}(i_{L1}+i_{L2}+i_{L2})
+  =\frac{v_C-v_S}{L_1}+\frac{v_C-v_R}{L_2}+\frac{d}{dt}i_C=0
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img781.svg"
+ ALT="$\displaystyle \frac{d}{dt}(i_{L1}+i_{L2}+i_{L2})
+=\frac{v_C-v_S}{L_1}+\frac{v_C-v_R}{L_2}+\frac{d}{dt}i_C=0$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">281</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+KCL to node <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img222.svg"
+ ALT="$v_R(t)$"></SPAN>: <!-- MATH
+ $i_{L2}+i_R=0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img782.svg"
+ ALT="$i_{L2}+i_R=0$"></SPAN>, where
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+i_{L2}=\frac{1}{L_2}\int_{-\infty}^t (v_R-v_C)d\tau,\;\;\;
+  i_R=\frac{v_R}{R}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.27ex; vertical-align: -2.43ex; " SRC="img783.svg"
+ ALT="$\displaystyle i_{L2}=\frac{1}{L_2}\int_{-\infty}^t (v_R-v_C)d\tau,\;\;\;
+i_R=\frac{v_R}{R}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">282</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\frac{d}{dt}(i_{L2}+i_{L2})=\frac{v_R-v_C}{L_2}+\frac{\dot{v}_R}{R}=0
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img784.svg"
+ ALT="$\displaystyle \frac{d}{dt}(i_{L2}+i_{L2})=\frac{v_R-v_C}{L_2}+\frac{\dot{v}_R}{R}=0$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">283</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+These differential equations can be combined to for a first
+order differential equation system:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\frac{d}{dt}\left[\begin{array}{c}v_R\\v_C\\i_C\end{array}\right]
+  =\left[\begin{array}{ccc}-R/L_2&R/L_2&0\\0 & 0 & 1/C\\1/L_2&-(1/L_1+1/L_2)&0
+    \end{array}\right]
+  \left[\begin{array}{c}v_R\\v_C\\i_C\end{array}\right]
+  +\left[\begin{array}{c}0\\0\\v_s/L_1\end{array}\right]
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 8.59ex; vertical-align: -3.72ex; " SRC="img785.svg"
+ ALT="$\displaystyle \frac{d}{dt}\left[\begin{array}{c}v_R\\ v_C\\ i_C\end{array}\righ...
+... i_C\end{array}\right]
++\left[\begin{array}{c}0\\ 0\\ v_s/L_1\end{array}\right]$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">284</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+This first order ODE system can be written in generic form:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\dot{\bf y}={\bf Ay}+{\bf x}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img786.svg"
+ ALT="$\displaystyle \dot{\bf y}={\bf Ay}+{\bf x}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">285</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+with a general solution:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+{\bf y}=e^{{\bf A}t}{\bf y}_0+\int_0^t e^{{\bf A}(t-\tau)} {\bf x}(\tau)\;d\tau
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.23ex; " SRC="img787.svg"
+ ALT="$\displaystyle {\bf y}=e^{{\bf A}t}{\bf y}_0+\int_0^t e^{{\bf A}(t-\tau)} {\bf x}(\tau)\;d\tau$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">286</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Given the zero initial condition <!-- MATH
+ ${\bf y}(0)={\bf0}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img788.svg"
+ ALT="${\bf y}(0)={\bf0}$"></SPAN> and an
+input <!-- MATH
+ ${\bf x}(t)=[0,\;0,\;10^{-3}\delta(t)/L_1]^T$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img789.svg"
+ ALT="${\bf x}(t)=[0,\;0,\;10^{-3}\delta(t)/L_1]^T$"></SPAN>, we can get 
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_R=[1\;0\;0]{\bf y}=e^{{\bf A}t}
+  \left[\begin{array}{c}0\\0\\10^{-3}/L_1\end{array}\right]
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 8.59ex; vertical-align: -3.72ex; " SRC="img790.svg"
+ ALT="$\displaystyle v_R=[1\;0\;0]{\bf y}=e^{{\bf A}t}
+\left[\begin{array}{c}0\\ 0\\ 10^{-3}/L_1\end{array}\right]$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">287</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+where 
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+e^{{\bf A}t}={\bf V}e^{{\bf\Lambda}t}{\bf V}^{-1}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.12ex; " SRC="img791.svg"
+ ALT="$\displaystyle e^{{\bf A}t}={\bf V}e^{{\bf\Lambda}t}{\bf V}^{-1}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">288</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+with <!-- MATH
+ ${\bf\Lambda}=diag(\lambda_1,\;\lambda_2,\;\lambda_3)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img792.svg"
+ ALT="${\bf\Lambda}=diag(\lambda_1,\;\lambda_2,\;\lambda_3)$"></SPAN> and
+<!-- MATH
+ ${\bf V}=[{\bf v}_1,\;{\bf v}_2,\;{\bf v}_3]$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img793.svg"
+ ALT="${\bf V}=[{\bf v}_1,\;{\bf v}_2,\;{\bf v}_3]$"></SPAN> being the eigenvalue 
+and eigenvector matrices of <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img587.svg"
+ ALT="${\bf A}$"></SPAN> satisfying 
+<!-- MATH
+ ${\bf Av}_i=\lambda_i{\bf v}_i,\;\;(i=1,2,3)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img794.svg"
+ ALT="${\bf Av}_i=\lambda_i{\bf v}_i,\;\;(i=1,2,3)$"></SPAN>, i.e., 
+<!-- MATH
+ ${\bf A}={\bf V\Lambda V}^{-1}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.12ex; " SRC="img795.svg"
+ ALT="${\bf A}={\bf V\Lambda V}^{-1}$"></SPAN>.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/LCLfilter.png"
+ ALT="LCLfilter.png">
+
+<P>
+<B>s-domain:</B>
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left\{
+  \begin{array}{l}
+    \frac{V_C-V_s}{sL}+\frac{V_C}{1/sC}+\frac{V_C-V_R}{sL}=0\\
+    \frac{V_R-V_C}{sL}+\frac{V_R}{R}=0
+  \end{array}\right.
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE=""
+ SRC="img796.svg"
+ ALT="\begin{displaymath}\left\{
+\begin{array}{l}
+\frac{V_C-V_s}{sL}+\frac{V_C}{1/sC}+...
+...{sL}=0\\
+\frac{V_R-V_C}{sL}+\frac{V_R}{R}=0
+\end{array}\right.\end{displaymath}"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">289</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Solving the second equation for <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img797.svg"
+ ALT="$V_R$"></SPAN>, we get
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_R=V_C\frac{R}{R+sL}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -1.90ex; " SRC="img798.svg"
+ ALT="$\displaystyle V_R=V_C\frac{R}{R+sL}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">290</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Substituting into the first equation, we get
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+[(R+sL)(1+LC s^2)+sL]V_C(s)=(R+sL)V_s(s)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img799.svg"
+ ALT="$\displaystyle [(R+sL)(1+LC s^2)+sL]V_C(s)=(R+sL)V_s(s)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">291</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Solving for <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img527.svg"
+ ALT="$V_C$"></SPAN> we get
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_C(s)=\frac{R+sL}{(R+sL)(1+LCs^2)+sL}V_s
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img800.svg"
+ ALT="$\displaystyle V_C(s)=\frac{R+sL}{(R+sL)(1+LCs^2)+sL}V_s$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">292</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+and
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_R(s)=V_C(s)\frac{R}{R+sL}=\frac{R}{(R+sL)(1+LCs^2)+sL}V_s
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img801.svg"
+ ALT="$\displaystyle V_R(s)=V_C(s)\frac{R}{R+sL}=\frac{R}{(R+sL)(1+LCs^2)+sL}V_s$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">293</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The voltage <!-- MATH
+ $v_R(t)={\cal L}^{-1}[\;V_R(s)\;]$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img802.svg"
+ ALT="$v_R(t)={\cal L}^{-1}[\;V_R(s)\;]$"></SPAN> can be found
+by inverse Laplace transform.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node16.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node14.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node16.html">Frequency Response Functions and</A>
+<B> Up:</B> <A
+ HREF="node1.html">Chapter 3: AC Circuit</A>
+<B> Previous:</B> <A
+ HREF="node14.html">Responses to Impulse Train</A></DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

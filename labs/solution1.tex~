@@ -1,0 +1,144 @@
+
+{\bf Solution:}
+
+The complete schematic diagram of the multimeter:
+
+\htmladdimg{../multimeter.gif}
+    
+The following is the calculation of all 13 resistors in the diagram.
+Assume the negative input is ground (common input).
+
+\begin{itemize}
+\item {\bf The meter head assembly:}
+
+  The resistance in meter branch is $1.8+0.19=1.99\; K\Omega$. The voltage across 
+  this branch when $I_0=0.047\; mA$ (full scale) is 
+  $V_0=1.99\times 0.047=0.0935\approx 0.09\;V$. 
+  The current through the 32 K resistor is $0.0935/32=0.0029$ mA. The combined current 
+  through these parallel branches is $0.047+0.0029=0.0499\approx 0.05\; mA=50\;\mu A$,
+  and the resistance of these parallel branches is $32||1.99=1.8735$ K. 
+
+  With another parallel branch composed of $10+18=28\;K\Omega$ added, the resistance
+  of the meter head assembly becomes $32||28||1.99=1.756\;K\Omega$.  For the meter
+  head to get the full scale current $0.043\;mA$, the total current to these three
+  parallel branches needs to be
+  \[ \frac{V_0}{32}+\frac{V_0}{1.99}+\frac{V_0}{28}=0.05326 \approx 0.05\;mA \]
+
+\item {\bf DC current measurements:}
+  \begin{itemize}
+  \item 250 mA scale:
+      
+    At this scale, the total resistance through the meter head branch is
+    \[ 3,000+240+1,756=4,996\approx 5,000\;\Omega \]
+    There is a 1 $\Omega$ resistor in parallel with the current being measured.
+    According to the current division, the current through the meter head is:
+    \[ 250 \frac{1}{4,996+1}=250 \frac{1}{5000}=0.05\;mA \]
+    corresponding to the full-scale current through the meter head.
+      
+  \item Other scales:
+
+    Assume the resistor needed for measuring current $I$ at the scale is $R$, for
+    the meter to be at full scale, we need to have:
+    \[ I \frac{R}{}=I \frac{R}{4,996+R}=0.05\;mA \]
+    Solving this we get:
+    \[ R=\frac{5,000\times 0.05}{I+0.05}=\frac{250}{I+0.05} \]
+    When $I=250,\;25,\;2.5\,mA$, we get respectively,
+    $R=1,\;10,\;98\;\Omega$.
+
+  \end{itemize}
+
+\item {\bf DC voltage measurements:}
+
+  \begin{itemize}
+  \item 0.5V scale:
+
+    At this scale, the total resistance in series with the voltage being measured 
+    is $4.9+3+0.24=8.14\;K\Omega$. This forms a voltage divider with the meter head
+    assembly, and the voltage across it is:
+    \[ 0.5V \frac{1.756}{8.14+1.756} =0.5V \frac{1.756}{9.896}=0.089\approx 0.09\;V \]
+    corresponding to the full-scale current through the meter head.
+
+  \item Other scales:
+
+    Assume the resistor needed for measuring voltage $V$ at the scale is $R$, for 
+    the meter to be at full scale, we need to have:
+    \[ V\frac{1.756}{9.896+R}=V_0=0.09\;V \]
+    Solving this we get:
+    \[ R=\frac{1.756V-9.896\times 0.09}{0.09}  \]
+    When $V=2.5,\;10,\;50,\;250,\;1000$, we get respectively:
+    $R=38.9,\;185.2,\;965.7,\;4,868,\;19,501$ in $K\Omega$, which can be converted
+    to the resistances needed for the configuration in the schematic:
+    $39,\;185-39=146,\;966-185=781,\;4,868-966=3,902,\;14,633$
+
+  \end{itemize}
+
+\item {\bf AC voltage measurements:}
+
+  \begin{itemize}
+
+  \item 10V scale:
+    At this scale, the total resistance in series with the voltage being measured 
+    is $83\;K\Omega$. This forms a voltage divider with the meter head assembly, 
+    and the voltage across it is:
+    \[ 10 \frac{1.756}{83+1.756}=10V \frac{1.756}{84.756}\approx 0.21V \]
+    which correspond to full scale display.
+
+  \item Other scales:
+
+    Assume the resistor needed for measuring voltage $V$ at the scale is $R$, for 
+    the meter to be at full scale, we need to have:
+    \[ 50 \frac{1.756}{R+1.756}=0.207V \]
+    Solving this we get:
+    \[ R=\frac{1.756V-0.35}{0.207} \]
+    When $V=10,\;50,\;250,\;50,\;1000$, we get respectively:
+    $R=83,\;423,\;2,119,\;8,481$ in $K\Omega$, which can be converted to the 
+    resistances needed for the configuration in the schematic:
+    $83,\;423-83=340,\;2,119-423=1,696,\;8,481-2,119=6362\;K\Omega$.
+
+\item To calibrate the meter, we connect the two leads for zero resistance 
+  and the current through the meter head assembly should be $0.05$ mA for 
+  the pointer to indicate 0 $\Ohm$.
+  The voltage across the meter head assembly is
+  \[ V'_0=I_0\times R_0=0.05\times 1.8735=0.0937\;V \]
+  Assume the lower resistance of the potentiometer is $x$ K, then the upper 
+  one is $10-x$ K. 
+  The voltage of the middle lead of the potentiometer (with respect to ground) is:
+  \[ V_p=0.05\times (1.8735+10-x)=0.05\times (11.8735-x)  \]
+  The current through $R_2=44$ K should be:
+  \[ 0.05+\frac{V_p}{18+x}=\frac{3-V_p}{R_2}=\frac{3-V_p}{44} \]
+  i.e.
+  \[ (x+62)V_p=(x+62)(0.05\times (11.8735-x))=0.8(x+18) \]
+  i.e.
+  \[ x^2+66.1265\,x-448.157=0 \]
+  Solving this we get $x=6.1966\approx 6.2\;K\Omega$.
+  The resistance along the meter head branch is $R_0=11.8735-x=11.8735-6.1966=5.6769$ K,
+  the resistance of the parallel branch is $R_1=18+x=24.1966$ K, and the resistance
+  of their parallel combination is $5.6769||24.1966=4.6\; K\Omega$.
+  
+  
+
+\item When the resistance being measured is 20 $\Omega$ (x1, x10, x1k) and the 
+  switch is at the corresponding position for resistance measurement, the current 
+  through the meter head assembly should be 0.025 mA so that pointer is in the middle. 
+  The voltage at the middle lead of the potentiometer is:
+  \[ V_p=5.6769\times 0.025=0.1419\;V \]
+  The current through 18 K resistor is
+  \[ I_2=V_p/24.1966=0.0059\;mA \]
+  The combined current is $.0.025+0.0059=0.0309\approx 0.031$ mA.
+
+  The resistance of two parallel branches (meter and $18 K$ resistor) is:
+  \[ R_0 || R_1=5.6769||24.1966=4.598\;K \]
+  The series combination with $R_2=44\;K$ is $R_2+R_0 || R_1\approx 48.6\;K$.
+  Consider the resistor $R$ needed to measure resistance $r$ (in positions x1, 
+  x10 and x1k), then this equation needs to be satisfied:
+
+  \[ \frac{3}{48.6||R+r}\frac{R}{48.6+R}=\frac{3R}{48.6R+r(48.6+R)}=0.031 \]
+  Solving for $R$, we get
+  \[ R=\frac{0.031\times 48.6R}{3-0.031\times (48.6+R)} \]
+  Use $r=0.02,\; 0.2,\; 20$, all in $K\Omega$, we can obtain, respectively,
+  $R=20\Omega,\; 200\Omega,\; 34\,K\Omega$. These values are very close to the
+  actual resistances used $R=17.8\Omega,\;195\Omega,\;31\;K\Omega$.
+  
+
+\end{itemize}
+

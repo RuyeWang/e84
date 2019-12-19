@@ -1,0 +1,474 @@
+\documentstyle[11pt]{article}
+\usepackage{html}
+\begin{document}
+\begin{center}
+{\Large \bf E84 Home Work 7}
+\end{center}
+\begin{enumerate}
+
+\item In the circuit below, $R_1=20\Omega$, $R_2=10\Omega$, $C=318\mu F$,
+and the sinusoidal voltage source is $v_0(t)=14.1 \cos(314 t-45^{\circ})$.
+Find the complete voltage response $v(t)=v_C(t)$ across $C$ and $R_2$ after
+the switch closes at $t=0$.
+
+\htmladdimg{../completeresponse.gif}
+
+%{\bf Solution:} 
+%\begin{itemize}
+%\item First find phasor representation of the voltage source:
+%$\dot{V}_0=10\angle{-45^{\circ}}$ and the impedance of the capacitor:
+%$Z_C=1/j\omega C=-j/(314\times 318\times 10^{-6})=-j10$. 
+
+%\item Find $v_\infty(t)$:
+%  \[ \dot{V}=\dot{V}_0 \frac{R_2|| Z_C}{R_1+R_2||Z_C}
+%  =10\angle{-45^\circ}\frac{(-j10 || 10)}{20+(-j10 || 10)}
+%  =2.77\angle{-79^\circ} \]
+%  \[ v(t)=2.77\sqrt{2} \cos(314 t-79^\circ)=3.92 \cos(314 t-79^\circ) \]
+%\item Find $v(0)=v_C(0)=v_C(0+)=0$
+%
+%\item Find $\tau=R_{eq}C=(R_1||R_2) C=20 || 10 \times 318\times 
+%  10^{-6}=2.12\times 10^{-3}$
+%\end{itemize}
+%Now we get:
+%\begin{eqnarray}
+% v(t)&=&v_\infty(t)+[v(0)-v_\infty(0)]e^{-t/\tau}
+%  =2.77\sqrt{2} \cos(314 t-79^\circ)+[0-2.77\sqrt{2}cos(-79^\circ)] e^{-10^3 t/2.12}
+%  \nonumber \\ 
+%  &=& 3.92 \cos(314 t-79^\circ)-0.75 e^{-10^3 t/2.12}
+%  \nonumber
+%\end{eqnarray}
+
+
+\item A series circuit composed of a capacitor and an inductor is to be 
+resonant at 800 kHz with voltage input. Specify the value of $C$ for the 
+capacitor required for the given inductor with $L=40\mu H$ and an internal 
+resistance $R_L=4.02\Omega$, and predict the bandwidth. Assume the capacitor 
+is ideal, i.e., it introduces no resistance.
+
+
+%{\bf Solution:}
+% As $\omega_0=1/\sqrt{LC}=2\pi 8\times 10^5$, and $L=4\times 10^{-5}H$, we
+% can find $C$ to be
+% \[
+% C=\frac{1}{\omega_0^2 L}=\frac{1}{(2\pi 8\times 10^5)^2\times 4\times 10^{-5}}
+% =0.99\;nF	\]
+% Next find the quality factor:
+% \[
+% Q=\frac{\omega_0L}{R}=\frac{2\pi 8\times 10^5\times 4\times 10^{-5}}{4.02}=50
+% \]
+% then the bandwidth is
+% \[	f_2-f_2=\frac{f_0}{Q}=\frac{800\times 10^3}{50}=16\;kHz	\]
+
+\item In reality, all inductors have a non-zero resistance, therefore a 
+parallel resonance circuit should be modeled as shown in the figure:
+
+\htmladdimg{../../lectures/figures/parallelRCL.gif}
+
+Find the expression of the resonant frequency of this circuit. If it is 
+given that $R=5\Omega$, $C=100\;\mu F=100\times 10^{-6}F$ and $L=5\; 
+mH=5\times 10^{-3}H$, what is the resonant frequency of this circuit? 
+Does the current drawn from the voltage source reach maximum or minimum 
+at this frequency?
+
+Hint: Unlike pure series and parallel RCL circuits, for this mixed RCL
+circuit, both the real and imaginary parts of its admittance is a function 
+of $\omega$. To simplify the problem, we still assume the resonant 
+frequency $\omega_0$ is achieved when the imaginary part of the admittance
+is zero, similar to our discussion of parallel and series RCL circuits in 
+class.
+
+
+% {\bf Solution:} The admittance is:
+% \[	Y=\frac{1}{R+j\omega L}+j\omega C
+% 	=\frac{R-j\omega L+j\omega C(R^2+\omega^2L^2)}{R^2+\omega^2L^2}
+% \]
+% When the imaginary part of $Y$ is zoro, the circuit is at resonance and 
+% the resonant frequency $\omega_0$ can be found by solving $Im[Y]=0$:
+% \[	\omega_0 L=\omega_0 C(R^2+\omega_0^2L^2)	\]
+% Solving this for $\omega_0$, we get:
+% \[	\omega_0=\sqrt{\frac{1}{LC}-(\frac{R}{L})^2}
+% 	=\sqrt{\frac{1}{5\times 10^{-3}\times 100\times 10^{-6}}
+% 	-(\frac{5}{5\times 10^{-3}})^2}=1000\;Hz
+% 	\]
+% As the admittance reaches minimum at $\omega=\omega_0$, the current drawn
+% from the voltage source $\cdot{I}=Y\cdot{V}$ reaches minimum, i.e., it 
+% behaves as a band stop filter.
+% 
+% Also note that for $\omega_0$ to be real, we must have
+% \[	\frac{1}{LC} > (\frac{R}{L})^2, \;\;\;\;\;\;\mbox{i,e,}
+% 	\;\;\;\;\;\;R<\sqrt{\frac{L}{C}}	\]
+% When $R \ll \sqrt{L/C}$, the resonant frequency is
+% \[
+% \omega_0=\sqrt{\frac{1}{LC}-(\frac{R}{L})^2}\approx \frac{1}{\sqrt{LC}}	
+% \]
+
+%\item Find the output voltage $v_{out}(t)$ when $\omega=0$ and 
+%$\omega\rightarrow \infty$ when the input $v_{in}(t)=10\;cos(\omega t)$, 
+%assuming $R_1=100\Omega$, $R_2=100\Omega$, $C=10\mu F$ and $L=10\;mH$.
+%
+%\htmladdimg{../hw6a.gif}
+%
+% {\bf Solution}
+% 
+% When $\omega=0$, the inductor is short circuit, and the capacitor is
+% open circuit, $v_{out}(t)=v_{in}(t)$.
+% When $\omega=0$, the inductor is open circuit, and the capacitor is
+% short circuit, $v_{out}(t)=v_{in}(t)/2=5\;cos(\omega_0 t)$.
+
+
+\item Design a parallel circuit to be resonant at 800 kHz with a bandwidth
+of 32 kHz. The inductor has $L=40 \mu H$ and $R_L=4.02 \Omega$. Find the
+capacitance $C$ needed for the desired resonant frequency. In order to
+satisfy the desired bandwidth, you may also need to include a resistor 
+in the circuit. (Hint, note that if the quality factor of the circuit
+$Q=\omega_0 L/R > 20$, all relations for resonant circuit with ideal
+inductor still hold.)
+
+
+% {\bf Solution:} Based on the desired resonant frequency and bandwidth, 
+% the quality factor needs to be
+% \[ Q=\frac{f_0}{\Triangle f}=\frac{800\times 10^3}{32 \times 10^3}=25 \]
+% Since $Q>20$, the resonant frequency is approximately
+% \[ \omega_0=\frac{1}{\sqrt{LC}},\;\;\;\;\mbox{i.e.,}\;\;\;\;
+% C=\frac{1}{\omega_0^2 L}=\frac{1}{(2\pi 8\times 10^5)^2\times 4\times 10^{-5}}
+% =0.99 nF \]
+% However, the quality factor of the parallel circuit is
+% \[ Q=\frac{\omega_0 L}{R}=\frac{2\pi 8 \times 10^5 \times 4\times 10^{-5}}
+% 	{4.02}=50 \]
+% twice the desired $Q=25$, we have to double the resistance $R=4.02$ to 
+% $R=8.04$ to reduce $Q$ by half.
+
+\item The function of a loudspeaker crossover network is to channel 
+frequencies higher than a given crossover frequency $f_c$ into the
+high-frequency speaker (``tweeter'') and frequencies below $f_c$ into
+the low-frequency speaker (``woofer''). One such circuit is shown below.
+Assume the resistances of the tweeter is $R_1=8\Omega$ and that of the 
+woofer is $R_2=8\Omega$, the voltage amplifier can be modeled as an
+ideal voltage source, and the crossover frequency is $f_c=2000\; Hz$.
+Design the network in terms of $L$ and $C$ so that $f_c$ is the corner
+frequency or half-power point of each of the two speaker circuits. Give 
+the expression of the power $P_1(f)$ and $P_2(f)$ of the speakers as a 
+function of frequency $f$ and crossover frequency $f_c$, and sketch them.
+Assume the RMS of the input voltage is 1V.
+
+\htmladdimg{../hw6b.gif}
+
+% {\bf Solution}
+% 
+% The RMS voltage across the tweeter is
+% \[	V_1=|\frac{R}{1/j2\pi f C+R}|
+% 	=\frac{2\pi f CR}{\sqrt{1+(2\pi f CR)^2}}	\]
+% If $f=f_c=2000$ is at half-power point ($V_1=V_{in}/\sqrt{2}$), the real and
+% imaginary parts of the denominator should be equal and we get 
+% \[	\frac{1}{j2\pi f C}=R;\;\;\;\mbox{i.e.}\;\;\;\;
+% 	C=\frac{1}{2\pi f_c R}=9.95 \;\mu F	\]
+% The RMS voltage across the woofer is
+% \[	V_2=|\frac{R}{j2\pi f L+R}|
+% 	=\frac{R}{\sqrt{R^2+(2\pi f L)^2}}	\]
+% If $f=f_c=2000$ is at half-power point ($V_2=V_{in}/\sqrt{2}$), the real and
+% imaginary parts of the denominator should be equal and we get 
+% we get 
+% \[	j2\pi f L=R;\;\;\;\mbox{i.e.}\;\;\;\;
+% 	L=\frac{R}{2\pi f_c}=0.637 \;mH	\]
+% The power plots:
+% \[	P_1(f)=\frac{V_1^2(f)}{R}=\frac{1}{8}(\frac{1}{1+(f_c/f)^2}) \]
+% \[	P_2(f)=\frac{V_1^2(f)}{R}=\frac{1}{8}(\frac{1}{1+(f/f_c)^2}) \]
+
+
+\end{enumerate}
+\end{document}
+
+
+
+\item Parallel resonant circuuit is widely used in radio and TV receivers
+to select a desired station from many stations available. The circuit and
+its model are shown in the figure. Assume $L=0.3mH$, $R=16\Omega$, and $C$
+is variable capacitor, which can be adjusted to match the resonant 
+frequency of the circuit to the frequency of the desired station. Assume 
+the frequency of the desired station is $640\;kHz$, find the value of $C$.
+If the induced voltage in the circuit is $e=2 \mu V$ (rms), find the 
+current (rms) in the parallel resonant circuit, and the output voltage 
+(rms) across the capacitor.
+
+
+{\bf Hint:} First check if $Q=\omega L/R$ is larger than 20. If so, the
+resonant frequency can still be found approximately as
+$\omega_0=1/\sqrt{LC}$ and $jX_L-jX_C=0$.
+
+\htmladdimg{../hw7e.gif}
+
+% {\bf Solution:} At the desired resonant frequency $f=640\;kHz$, the 
+% reactance of the inductor is
+% \[ X_L=\omega L=2\pi f L=2\times 3.14\times 640\times 10^3\times 0.3
+% 	\times 10^{-3}=1206\Omega \]
+% and the quality factor $Q$ of this circuit is 
+% \[	Q=\frac{\omega L}{R}=\frac{2\times 3.14\times 640\times 
+% 	10^3\times 0.3\times 10^{-3}}{16}=75 \gg 20	\]
+% The resonant frequency can be expressed approximately as
+% \[	f_0=\frac{1}{2\pi\sqrt{LC}}=640\;kHz	\]
+% Solving this we get
+% \[	C=\frac{1}{(2\pi f_0)^2L}=206\times 10^{-12}F=206\;pF	\]
+% The current in circuit is
+% \[	I_{rms}=e/R=2\times 10^{-6}/16=0.125\times 10^{-6} \]
+% The output voltage across $C$ is
+% \[ V_C\approx V_L=I_{rms} X_L=0.125\times 10^{-6}\times 1206=151\;\muV \]
+
+\item When a circuit composed of an inductor and a resistor in series
+is connected to a DC voltage source of 36V, the current through the 
+circuit can be measured to be 6A; when it is connected to an AC voltage 
+$v(t)=110 \sqrt{2}\;\cos(2\pi 60\;t)$, the current through the circuit 
+is 11A (RMS value). Find the resistance $R$ and the inductance $L$
+of the load, and the power factor of the circuit as the load of the AC
+voltage. 
+
+% {\bf Solution:} The resistance can be found to be $36V/6A=6\Omega$.
+% When $\omega=2\pi 60=377\;Rad/sec$, the impedance of the RL series load is 
+% \[ Z=R+j\omega L=|Z|\angle Z=\sqrt{R^2+( \omega L)^2}\;\tan^{-1} (\omega L/R) \]
+% and the current is
+% \[ I_{rms}=\frac{V_{rms}}{|Z|}=\frac{110}{\sqrt{36+(377 L)^2}}=11 \]
+% Solving this for $L$, we get $L=0.0212\;H=21.2\;mH$. The power factor is
+% $\cos (\tan^{-1} (\omega L/R))=\cos (\tan^{-1} 4/3)=0.6$.
+
+\item The load of a voltage soruce of $v(t)=110\sqrt{2} \;\cos(2\pi 60\;t)$
+is shown in the figure, where $R_1=100\Omega$, $R_2=50\Omega$, $C=6.63\mu F$, 
+$L=0.53 H$. Is the load capacitive ($\phi=\tan^{-1}(X/R)<0$) or inductive 
+($\phi>0$)? Find the power factor, the apparent power, the real power and 
+the reactive power. 
+
+\htmladdimg{../hw6d.gif}
+
+%  {\bf Solution:}
+% \[ Z_C=-\frac{j}{\omega C}=-\frac{j}{2\pi 60\times 6.63\times 10^{-6}}
+%  	=-j400\Omega\]
+%  \[Z_L=j\omega L=j 2\pi 60\times 0.53=j200\Omega,\;\;\;\; Z_{RL}=100+j200\]
+%  
+%  \[ Z_{CRL}=\frac{Z_C Z_{RL}}{Z_C+Z_{RL}}=\frac{(100+j200)(-j400)}{100+j200-j400}
+%  	=\frac{800-j400}{1-j2}	\]
+%  \[
+%  Z_{total}=Z_{CRL}+R_2=\frac{800-j400}{1-j2}+50=370+j240=441\angle 33^\circ
+%  \]
+%  The load is inductive as $\phi>0$.
+%  \[ \dot{I}=\frac{\dot{V}}{Z_{total}}=\frac{110}{441\angle 33^\circ}
+%  	=0.25\angle -33^\circ	\]
+%  power factor is $\lambda=cos (-33^\circ)=0.839$, 
+%  the apparent power is $S=110\times 0.25=27.5 W$, 
+%  the real power is $P=S \cos 33^\circ=27.5\times 0.84=23 W$
+%  the reactive power is $Q=S \sin 33^\circ=27.5\times 0.54=15 W$
+
+\item To improve the power factor of the circuit above to 0.9, a shunt 
+capacitor is added. What should the capacitance $C$ be? What should $C$ be 
+if the power factor is required to be 1?
+
+\htmladdimg{../hw6c.gif}
+
+%  {\bf Solution:}
+ 
+%  Adding a shunt capacitor with impedance $1/j\omega C=-jX$ ($X=1/\omega C$), 
+%  the overall load impedance is
+%  \[	Z_{all}=-jX || Z_{total}=\frac{-jX(370+j240)}{-jX+(370+j240)}
+%  	=\frac{240X-j370X}{370-j(X-240)}=|Z|\angle Z=|Z|\angle \phi	\]
+%  For the power factor to be 0.9, this impedance need to have a phase angle 
+%  $\phi=\cos^{-1} 0.9=25.84^\circ$, and we need to have:
+%  \[	\tan^{-1}[\frac{-370X}{240X}]-\tan^{-1}[\frac{-(X-240)}{370}]=
+%  	-57^\circ+\tan^{-1}[\frac{X-240}{370}]=25.84^\circ \]
+%  \[	\tan^{-1}[\frac{X-240}{370}]=82.84^\circ, \;\;\;
+%  \frac{X-240}{370}=\tan \;82.84^\circ=7.96, \;\;\; X=3185.4 \]
+%  \[ \frac{1}{\omega C}=X=3185.4,\;\;\;\;C=\frac{1}{2\pi 60\times 3185.4}
+%  =0.83 \mu F \]
+%  For the power factor to be 1, we need to have
+%  \[	\tan^{-1}[\frac{-370X}{240X}]-\tan^{-1}[\frac{-(X-240)}{370}]=
+%  	-57^\circ+\tan^{-1}[\frac{X-240}{370}]=0^\circ \]
+%  i.e., 
+%  \[	\tan^{-1}[\frac{X-240}{370}]=57^\circ, \;\;\;
+%  \frac{X-240}{370}=\tan \;57^\circ=1.54, \;\;\; X=810 \]
+%  \[ \frac{1}{\omega C}=X=810,\;\;\;\;C=\frac{1}{2\pi 60\times 810}
+%  =3.27 \mu F \]
+
+\end{enumerate}
+
+\end{document}
+
+
+
+\item The load of a voltage soruce of $v(t)=110\sqrt{2} \;cos(2\pi 60\;t)$
+is shown in the figure, where $R_1=100\Omega$, $R_2=50\Omega$, $C=6.63\mu F$, 
+$L=0.53 H$. Is the load capacitive ($\phi<0$) or inductive ($\phi>0$)?
+Find the power factor, the apparent power, the real power and the
+reactive power. To improve the power factor to 0.9, a shunt capacitor is added.
+What should the capacitance $C$ be? What should $C$ be if the power factor is 
+required to be 1?
+
+\htmladdimg{../hw6c.gif}
+
+ {\bf Solution:}
+ 
+ \[ Z_C=-\frac{j}{\omega C}=-\frac{j}{2\pi 60\times 6.63\times 10^{-6}}
+ 	=-j400\Omega\]
+ \[Z_L=j\omega L=j 2\pi 60\times 0.53=j200\Omega,\;\;\;\; Z_{RL}=100+j200\]
+ 
+ \[ Z_{CRL}=\frac{Z_C Z_{RL}}{Z_C+Z_{RL}}=\frac{(100+j200)(-j400)}{100+j200-j400}
+ 	=\frac{800-j400}{1-j2}	\]
+ \[
+ Z_{total}=Z_{CRL}+R_2=\frac{800-j400}{1-j2}+50=370+j240=441\angle 33^\circ
+ \]
+ The load is inductive as $\phi>0$.
+ \[ \dot{I}=\frac{\dot{V}}{Z_{total}}=\frac{110}{441\angle 33^\circ}
+ 	=0.25\angle -33^\circ	\]
+ power factor is $\lambda=cos (-33^\circ)=0.839$, 
+ the apparent power is $S=110\times 0.25=27.5 W$, 
+ the real power is $P=S \cos 33^\circ=27.5\times 0.84=23 W$
+ the reactive power is $Q=S \sin 33^\circ=27.5\times 0.54=15 W$
+ Adding a shunt capacitor with impedance $1/j\omega C=-jX$ ($X=1/\omega C$), 
+ the overall load impedance is
+ \[	Z_{all}=-jX || Z_{total}=\frac{-jX(370+j240)}{-jX+(370+j240)}
+ 	=\frac{240X-j370X}{370-j(X-240)}=|Z|\angle Z=|Z|\angle \phi	\]
+ For the power factor to be 0.9, this impedance need to have a phase angle 
+ $\phi=\cos^{-1} 0.9=25.84^\circ$, and we need to have:
+ \[	\tan^{-1}[\frac{-370X}{240X}]-\tan^{-1}[\frac{-(X-240)}{370}]=
+ 	-57^\circ+\tan^{-1}[\frac{X-240}{370}]=25.84^\circ \]
+ \[	\tan^{-1}[\frac{X-240}{370}]=82.84^\circ, \;\;\;
+ \frac{X-240}{370}=\tan \;82.84^\circ=7.96, \;\;\; X=3185.4 \]
+ \[ \frac{1}{\omega C}=X=3185.4,\;\;\;\;C=\frac{1}{2\pi 60\times 3185.4}
+ =0.83 \mu F \]
+ For the power factor to be 1, we need to have
+ \[	\tan^{-1}[\frac{-370X}{240X}]-\tan^{-1}[\frac{-(X-240)}{370}]=
+ 	-57^\circ+\tan^{-1}[\frac{X-240}{370}]=0^\circ \]
+ i.e., 
+ \[	\tan^{-1}[\frac{X-240}{370}]=57^\circ, \;\;\;
+ \frac{X-240}{370}=\tan \;57^\circ=1.54, \;\;\; X=810 \]
+ \[ \frac{1}{\omega C}=X=810,\;\;\;\;C=\frac{1}{2\pi 60\times 810}
+ =3.27 \mu F \]
+
+\end{enumerate}
+
+\end{document}
+
+
+\item Find the Z-model and Y-model of the circuit shown in the figures, by
+assuming one of the two known variables (currents or voltages) is zero at
+a time. Then verify your results by checking whether ${\bf Z}^{-1}={\bf Y}$.
+
+\htmladdimg{../networkCL.gif}
+
+ {\bf Solution:}
+
+ For the Z-model, 
+ \begin{itemize}
+ item Assume $I_2=0$ (open-circuit), then
+ 	$Z_{11}=V_1/I_1=1/j\omega C$, $Z_{21}=V_2/I_1=1/j\omega C$
+ \item Assume $I_1=0$ (open-circuit), then
+ 	$Z_{12}=V_1/I_2=1/j\omega C$, $Z_{22}=V_2/I_2=j\omega L+1/j\omega C$
+ \end{itemize}
+ For the Y-model, 
+ \begin{itemize}
+ \item Assume $V_2=0$ (short-circuit), then
+ 	$Y_{11}=I_1/V_1=j\omega C+1/j\omega C$, $Y_{21}=I_2/V_1=1/j\omega L$
+ \item Assume $V_1=0$ (short-circuit), then
+ 	$Y_{12}=I_1/V_2=1/j\omega L$, $Y_{22}=I_2/V_2=1/j\omega L$
+ \end{itemize}
+ {\bf verify:}
+ \[ {\bf Z}^{-1}=\left[ \begin{array}{rr} 1/j\omega C & 1/j\omega C \\
+ 	1/j\omega C & j\omega L+1/j\omega C \end{array} \right]^{-1}
+ 	=\frac{C}{L}\left[ \begin{array}{rr} j\omega L+1/j\omega C & -1/j\omega C \\
+ 	-1/j\omega C & 1/j\omega C \end{array} \right]
+ 	=\left[ \begin{array}{rr} j\omega C+1/j\omega L & -1/j\omega L \\
+ 	-1/j\omega L & 1/j\omega L \end{array} \right]
+ \]
+
+\item Represent the two-port system shown in the figure as a T-model with
+$Z_1$, $Z_2$ and $Z_3$, and then a $\Pi$-model with $Y_1$, $Y_2$ and 
+$Y_3$. Also confirm the system is reciprocal. All resistors are 1 $\Omega$.
+
+\htmladdimg{../hw7b.gif}
+
+ {\bf Solution:}
+ \begin{itemize}
+ \item Convert the $Y$ containing three $1\Omega$ resistors in the circuit 
+ into a delta with three $1/3\Omega$ resistors.
+ \item Get the T-model of the system with $Z_1=Z_2=1/3$, $Z_3=4/3$.
+ \item Convert the T-model into a Z-network with
+ \[ Z_{11}=Z_1+Z_3=5/3,\;\;\;\;Z_{22}=Z_2+Z_3=5/3,
+ 	\;\;\;\;Z_{12}=Z_{21}=Z_3=4/3 \]
+ \item Find ${\bf Y}$:
+ \[ {\bf Y}={\bf Z}^{-1}=\frac{1}{3}\left[ \begin{array}{rr}
+ 	5 & 4 \\ 4 & 5 \end{array} \right]^{-1}
+ 	=\frac{1}{3}\left[ \begin{array}{rr} 5 & -4 \\ -4 & 5 \end{array} \right]
+ \]
+ 	with $Y_{11}=Y_{22}=5/3$, $Y_{12}=Y_{21}=-4/3$.
+ \item Convert the Y-model to a $\Pi$-network:
+ \[ Y_1=Y_{11}+Y_{12}=1/3,\;\;\;\;Y_2=Y_{22}+Y_{21}=1/3,\;\;\;\;Y_3=-Y_{12}=4/3 \]
+ \item The $\Pi$-model can be also expressed In terms of impedances:
+ \[ Z_1=3,\;\;\;\;Z_2=3,\;\;\;\;Z_3=4/3 \]
+ \end{itemize}
+ As both ${\bf Z}$ and ${\bf Y}$ are symmetric, the system is reciprocal.
+
+\item The figure below shows a voltage source $V$ and its load containing
+two resistors $R_C=3\Omega$, $R_L=2\Omega$ and an ideal transformer with 
+turn ratio $n=2$. Find the equivalent load resistance $R=V/I$.
+(Hint: find current $I_1$ and $I_4$ in terms of $R_C$, $R_L$, the turn 
+ratio $n$, as well as $V$, then find $I=I_1+I_4$ and $R=V/I$.)
+
+\htmladdimg{../hw7a.gif}
+
+ {\bf Solution:}
+ 
+ \begin{itemize}
+ \item Find $V_2=V/2$
+ \item Find $I_4=(V-V_2)/3=V/6$
+ \item Find $I_3=V_2/2=V_1/4$
+ \item Find $I_2=I_4-I_3=V(1/6-1/4)=-V/12$
+ \item Find $I_1=-I_2/2=V/24$
+ \item Find $I=I_1+I_4=V(1/24+1/6)=5V/24)$
+ \item Find $R=V/I=24/5=4.8\Omega$
+ \end{itemize}
+
+\item The parameters of the Y-model of the two-port network are
+$Y_{11}=-4$, $Y_{12}=3$, $Y_{21}=3$, and $Y_{22}=-2$. The voltage source
+is $V_0=5V$, $Z_0=1\Omega$, $Z_L=j1\Omega$. Find variables $I_1$, $I_2$, $V_1$, $V_2$.
+
+\htmladdimg{../hw7c.gif}
+
+ {\bf Solution:} 
+ \begin{itemize}
+ \item Convert Y-model to Z-model:
+   \[ {\bf Z}={\bf Y}^{-1}=\left[ \begin{array}{rr}-4 & 3 \\ 3 & -2\end{array} \right]^{-1}
+   =\left[ \begin{array}{rr}2 & 3 \\ 3 & 4\end{array} \right] \]
+   \[ \left\{ \begin{array}{l} V_1=2I_1+3I_2 \\ V_2=3I_1+4I_2 \end{array} \right. \]
+ \item Setup additional equations:
+   \[ \left\{ \begin{array}{l} V_1=V_0-R_0I_1 \\ V_2=-Z_L I_2 \end{array} \right. \]
+ \item Find $I_1$ and $I_2$:
+   \[ \left\{ \begin{array}{l} 2I_1+3I_2=V_0-R_0I_1\\ 3I_1+4I_2=-Z_LI_2\end{array}\right. 
+     \;\;\;\;\;\mbox{i.e.}\;\;\;\;\;
+   \left\{ \begin{array}{l} (2+R_0)I_1+3I_2=V_0\\ 3I_1+(4+Z_L)I_2=0\end{array}\right. \]
+     These equations can be solved to get
+     \[ I_1=\frac{5(4+j)}{3(1+j)},\;\;\;\;\;\;I_2=-\frac{5}{1+j}\]
+ \item Find $V_1$, $V_2$:
+   \[ V_2=-I_2Z+L=\frac{j5}{1+j},\;\;\;\;\;\; V_1=-\frac{5(1-j2)}{3(1+j)} \]
+ \end{itemize}
+
+\item Repeat the previous problem but this time use Thevenin's theorem to find
+$V_2$ across load $R_L$.
+
+ {\bf Solution:} 
+   \[ \left\{ \begin{array}{l} V_1=2I_1+3I_2 \\ V_2=3I_1+4I_2 \end{array} \right. \]
+   \[ \left\{ \begin{array}{l} V_1=V_0-R_0I_1 \\ V_2=-Z_L I_2 \end{array} \right. \]
+ First, find $Z_{Th}$ when the voltage souce is short circuit:
+ \begin{itemize}
+   \item Equating $V_1=V_0-R_0I_1=-I_1$ to $V_1=2I_1+3I_2$, we get
+     $ 2I_1+3I_2=-I_1$, i.e., $I_1=-I_2$.
+   \item Substituting $I_1=-I_2$ into $V_2=3I_1+4I_2$, we get $ V_2=I_2$, i.e.,
+     $Z_{Th}=V_2/I_2=1$.
+ \end{itemize}
+ Second, find $V_{Th}$ when the load is open circuit, i.e., $I_2=0$:
+ \begin{itemize}
+   \item Since $I_2=0$, the Z-model equations become $V_1=2I_1$, $V_2=3I_1$.
+   \item We also get $I_1=(V_0-V_1)/R_0=5-V_1=5-2I_1$, which can be solved to 
+     get $I_1=5/3$.
+   \item Then $V_{Th}=V_2=3I_1=5$.
+ \end{itemize}
+ Finally, we can find voltage across $R_L$ as
+ \[V_2=V_{Th}\;\frac{Z_L}{Z_{Th}+Z_L}=\frac{j5}{1+j} \]
+
+\end{enumerate}
+
+\end{document}

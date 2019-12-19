@@ -1,0 +1,83 @@
+<HTML>
+<HEAD>
+   <TITLE>E84 Administrative info</TITLE>
+</HEAD>
+<BODY>
+
+<P><CENTER><B>E84 Administrative Information
+</B></CENTER></P>
+
+<ul>
+<li> <b>Instructor:</b><br> 
+Ruye Wang, Parsons 2372, Ext 73527, 
+<a href=mailto:Ruye_Wang@hmc.edu>Ruye_Wang@hmc.edu</a><br><br>
+
+<li> <b>Course Description</b><br>
+Introduction to the fundamental priciples underlying
+electrical and electronic components and devices, and their applications 
+in various circuits and systems. Topics include electrical and magetic 
+properties of electrical components; analysis of both DC and AC passive 
+linear circuits; semiconductor devices; analysis of active nonlinear 
+circuits, including elementary transistor amplifiers and operational 
+amplifiers; and simple electronic circuit design.
+<!--
+ electromagnetic devices such as transformers.
+-->
+<p><li><b>Course Web:</b><br>
+ <a href="http://fourier.eng.hmc.edu/e84/"><b>http://fourier.eng.hmc.edu/e84/</b></a><br>
+<p><li> <a href="lectures/">
+<b>Online Lecture Notes/Handouts</b></a><br>
+(Not intended as a textbook)<br>
+
+<p><li> <b>Text book and references: </b> 
+<ul>
+<p><li> Text book (not required but highly recommended): 
+<br>
+Electrical Engineering: An Introduction (2nd ed), by Schwarz and Oldham 
+(Berkeley), Oxford University Press.
+
+<p><li> References: 
+<ul>
+<li> Principles and Applications of Electrical Engineering (5th ed.), 
+  by Rizzoni (Ohio), McGraw Hill
+<li>Foundations of Analog and Digital Electronic Circuits,
+  by Agarwal and Lang (MIT), Morgan Kaufmann
+<li><a href="http://en.wikipedia.org/wiki/The_Art_of_Electronics">
+    Art of Electronics (a very thorough reference)</a>
+</ul>
+<!--
+<li> Electrical Engineering for All Engineers, by Roadstrum and Wolaver (MIT),
+John Wiley.
+<li> Lecture Notes by Tanenbau from previous semesters,  
+can be purchased from Engineering Department ($15)
+-->
+</ul>
+
+<!--
+<p><li> <b>Reference book:</b><br> "Circuits, Devices and Systems (5th Ed)", 
+by Ralph J. Smith and Richard C. Dorf (John Willey & Sons. Inc)
+-->
+
+<p><li> <a href="calendar_spring/calendar_spring.html"><b>Syllabus</b></a>
+
+<!--
+<p><li> <b>Classroom/Time:</b><br>  B126,  Monday, Wednesday, 9:00 - 9:50 am
+-->
+<p><li> <b>Office hours:</b><br> Tuesday afternoon 1:50 -- 2:50, 4:10 -- 5:00
+
+<p><li> <b>Homework assignments:</b><br> Wednesday due in class, a week after 
+    assigned (with possible exceptions)
+
+<p><li> <b>Grading:</b><br> 
+<ul>
+<li> Homework assignments: 15%
+<li> Labs: 15%
+<li> Midterm Exam 1: 23%
+<li> Midterm Exam 2: 23%
+<li> Final Exam: 24%
+</ul>
+</ul>
+
+<P>&nbsp;</P>
+</BODY>
+</HTML>

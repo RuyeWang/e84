@@ -1,0 +1,666 @@
+\batchmode
+\documentstyle[12pt]{article}
+
+\let\providecommand\newcommand
+\RequirePackage{ifthen}
+
+
+\usepackage{amssymb}
+\usepackage{html,makeidx}
+
+
+
+
+
+
+\usepackage[]{inputenc}
+
+
+
+\makeatletter
+
+\makeatletter
+\count@=\the\catcode`\_ \catcode`\_=8 
+\newenvironment{tex2html_wrap}{}{}%
+\catcode`\<=12\catcode`\_=\count@
+\newcommand{\providedcommand}[1]{\expandafter\providecommand\csname #1\endcsname}%
+\newcommand{\renewedcommand}[1]{\expandafter\providecommand\csname #1\endcsname{}%
+  \expandafter\renewcommand\csname #1\endcsname}%
+\newcommand{\newedenvironment}[1]{\newenvironment{#1}{}{}\renewenvironment{#1}}%
+\let\newedcommand\renewedcommand
+\let\renewedenvironment\newedenvironment
+\makeatother
+\let\mathon=$
+\let\mathoff=$
+\ifx\AtBeginDocument\undefined \newcommand{\AtBeginDocument}[1]{}\fi
+\newbox\sizebox
+\setlength{\hoffset}{0pt}\setlength{\voffset}{0pt}
+\addtolength{\textheight}{\footskip}\setlength{\footskip}{0pt}
+\addtolength{\textheight}{\topmargin}\setlength{\topmargin}{0pt}
+\addtolength{\textheight}{\headheight}\setlength{\headheight}{0pt}
+\addtolength{\textheight}{\headsep}\setlength{\headsep}{0pt}
+\setlength{\textwidth}{349pt}
+\newwrite\lthtmlwrite
+\makeatletter
+\let\realnormalsize=\normalsize
+\global\topskip=2sp
+\def\preveqno{}\let\real@float=\@float \let\realend@float=\end@float
+\def\@float{\let\@savefreelist\@freelist\real@float}
+\def\liih@math{\ifmmode$\else\bad@math\fi}
+\def\end@float{\realend@float\global\let\@freelist\@savefreelist}
+\let\real@dbflt=\@dbflt \let\end@dblfloat=\end@float
+\let\@largefloatcheck=\relax
+\let\if@boxedmulticols=\iftrue
+\def\@dbflt{\let\@savefreelist\@freelist\real@dbflt}
+\def\adjustnormalsize{\def\normalsize{\mathsurround=0pt \realnormalsize
+ \parindent=0pt\abovedisplayskip=0pt\belowdisplayskip=0pt}%
+ \def\phantompar{\csname par\endcsname}\normalsize}%
+\def\lthtmltypeout#1{{\let\protect\string \immediate\write\lthtmlwrite{#1}}}%
+\newcommand\lthtmlhboxmathA{\adjustnormalsize\setbox\sizebox=\hbox\bgroup\kern.05em }%
+\newcommand\lthtmlhboxmathB{\adjustnormalsize\setbox\sizebox=\hbox to\hsize\bgroup\hfill }%
+\newcommand\lthtmlvboxmathA{\adjustnormalsize\setbox\sizebox=\vbox\bgroup %
+ \let\ifinner=\iffalse \let\)\liih@math }%
+\newcommand\lthtmlboxmathZ{\@next\next\@currlist{}{\def\next{\voidb@x}}%
+ \expandafter\box\next\egroup}%
+\newcommand\lthtmlmathtype[1]{\gdef\lthtmlmathenv{#1}}%
+\newcommand\lthtmllogmath{\dimen0\ht\sizebox \advance\dimen0\dp\sizebox
+  \ifdim\dimen0>.95\vsize
+   \lthtmltypeout{%
+*** image for \lthtmlmathenv\space is too tall at \the\dimen0, reducing to .95 vsize ***}%
+   \ht\sizebox.95\vsize \dp\sizebox\z@ \fi
+  \lthtmltypeout{l2hSize %
+:\lthtmlmathenv:\the\ht\sizebox::\the\dp\sizebox::\the\wd\sizebox.\preveqno}}%
+\newcommand\lthtmlfigureA[1]{\let\@savefreelist\@freelist
+       \lthtmlmathtype{#1}\lthtmlvboxmathA}%
+\newcommand\lthtmlpictureA{\bgroup\catcode`\_=8 \lthtmlpictureB}%
+\newcommand\lthtmlpictureB[1]{\lthtmlmathtype{#1}\egroup
+       \let\@savefreelist\@freelist \lthtmlhboxmathB}%
+\newcommand\lthtmlpictureZ[1]{\hfill\lthtmlfigureZ}%
+\newcommand\lthtmlfigureZ{\lthtmlboxmathZ\lthtmllogmath\copy\sizebox
+       \global\let\@freelist\@savefreelist}%
+\newcommand\lthtmldisplayA{\bgroup\catcode`\_=8 \lthtmldisplayAi}%
+\newcommand\lthtmldisplayAi[1]{\lthtmlmathtype{#1}\egroup\lthtmlvboxmathA}%
+\newcommand\lthtmldisplayB[1]{\edef\preveqno{(\theequation)}%
+  \lthtmldisplayA{#1}\let\@eqnnum\relax}%
+\newcommand\lthtmldisplayZ{\lthtmlboxmathZ\lthtmllogmath\lthtmlsetmath}%
+\newcommand\lthtmlinlinemathA{\bgroup\catcode`\_=8 \lthtmlinlinemathB}
+\newcommand\lthtmlinlinemathB[1]{\lthtmlmathtype{#1}\egroup\lthtmlhboxmathA
+  \vrule height1.5ex width0pt }%
+\newcommand\lthtmlinlineA{\bgroup\catcode`\_=8 \lthtmlinlineB}%
+\newcommand\lthtmlinlineB[1]{\lthtmlmathtype{#1}\egroup\lthtmlhboxmathA}%
+\newcommand\lthtmlinlineZ{\egroup\expandafter\ifdim\dp\sizebox>0pt %
+  \expandafter\centerinlinemath\fi\lthtmllogmath\lthtmlsetinline}
+\newcommand\lthtmlinlinemathZ{\egroup\expandafter\ifdim\dp\sizebox>0pt %
+  \expandafter\centerinlinemath\fi\lthtmllogmath\lthtmlsetmath}
+\newcommand\lthtmlindisplaymathZ{\egroup %
+  \centerinlinemath\lthtmllogmath\lthtmlsetmath}
+\def\lthtmlsetinline{\hbox{\vrule width.1em \vtop{\vbox{%
+  \kern.1em\copy\sizebox}\ifdim\dp\sizebox>0pt\kern.1em\else\kern.3pt\fi
+  \ifdim\hsize>\wd\sizebox \hrule depth1pt\fi}}}
+\def\lthtmlsetmath{\hbox{\vrule width.1em\kern-.05em\vtop{\vbox{%
+  \kern.1em\kern0.8 pt\hbox{\hglue.17em\copy\sizebox\hglue0.8 pt}}\kern.3pt%
+  \ifdim\dp\sizebox>0pt\kern.1em\fi \kern0.8 pt%
+  \ifdim\hsize>\wd\sizebox \hrule depth1pt\fi}}}
+\def\centerinlinemath{%
+  \dimen1=\ifdim\ht\sizebox<\dp\sizebox \dp\sizebox\else\ht\sizebox\fi
+  \advance\dimen1by.5pt \vrule width0pt height\dimen1 depth\dimen1 
+ \dp\sizebox=\dimen1\ht\sizebox=\dimen1\relax}
+
+\def\lthtmlcheckvsize{\ifdim\ht\sizebox<\vsize 
+  \ifdim\wd\sizebox<\hsize\expandafter\hfill\fi \expandafter\vfill
+  \else\expandafter\vss\fi}%
+\providecommand{\selectlanguage}[1]{}%
+\makeatletter \tracingstats = 1 
+
+
+\begin{document}
+\pagestyle{empty}\thispagestyle{empty}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength hsize=\the\hsize}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength vsize=\the\vsize}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength hoffset=\the\hoffset}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength voffset=\the\voffset}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength topmargin=\the\topmargin}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength topskip=\the\topskip}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength headheight=\the\headheight}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength headsep=\the\headsep}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength parskip=\the\parskip}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength oddsidemargin=\the\oddsidemargin}\lthtmltypeout{}%
+\makeatletter
+\if@twoside\lthtmltypeout{latex2htmlLength evensidemargin=\the\evensidemargin}%
+\else\lthtmltypeout{latex2htmlLength evensidemargin=\the\oddsidemargin}\fi%
+\lthtmltypeout{}%
+\makeatother
+\setcounter{page}{1}
+\onecolumn
+
+% !!! IMAGES START HERE !!!
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath7}%
+\begin{displaymath}
+  \begin{array}{ll}
+    \mbox{minimize}  &  f_0({\bf x})\\
+    \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\\
+    \mbox{subject to:} & f_j({\bf x})\le 0,\;\;\;\;(j=1,\cdots,n)
+  \end{array}
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline446}%
+$n$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline448}%
+${\bf f}({\bf x})\le{\bf0}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline450}%
+${\bf f}=[f_1,\cdots,f_n]^T$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath398}%
+\begin{displaymath}
+L({\bf x},{\bf\lambda})=f_0({\bf x})-\sum_{j=1}^n\lambda_jf_j({\bf x})
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline452}%
+${\bf x}^*$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline454}%
+${\bf\lambda}^*$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1167}%
+$\displaystyle \bigtriangledown f_0({\bf x}^*)+\sum_{j=1}^n\lambda_j\bigtriangledown f_j({\bf x}^*)=0$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1168}%
+$\displaystyle f_j({\bf x}^*)\le 0,\;\;\;\;\lambda^*_j\ge 0,\;\;\;\;
+  \lambda^*_j f_j({\bf x}^*)=0,\;\;\;\;(j=1,\cdots,n)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath399}%
+\begin{displaymath}
+I_-(u)=\left\{\begin{array}{ll}0 & u\le 0\\\infty& u>0\end{array}
+\right.
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath38}%
+\begin{displaymath}
+  \mbox{minimize} \;\;\;\;\; f_0({\bf x})+\sum_{j=1}^nI_-(f_j({\bf x}))
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline458}%
+$f_j({\bf x})\le 0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline460}%
+$I_-(u)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline462}%
+$t$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath400}%
+\begin{displaymath}
+-\frac{1}{t}\ln(-u)\stackrel{t\rightarrow \infty}{\Longrightarrow}I_-(u)
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath401}%
+\begin{displaymath}
+f_0({\bf x})-\frac{1}{t}\sum_{j=1}^n \ln(-f_j({\bf x}))
+=f_0({\bf x})+\frac{1}{t}\phi({\bf x})
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline464}%
+$\phi({\bf x})$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath402}%
+\begin{displaymath}
+\phi({\bf x})=-\sum_{j=1}^n \ln(-f_j({\bf x}))
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath403}%
+\begin{displaymath}
+\bigtriangledown \left[ f_0({\bf x})-\frac{1}{t}\sum_{j=1}^n \ln(-f_j({\bf x})) \right]
+=\bigtriangledown f_0({\bf x})-\frac{1}{t}\sum_{j=1}^n \frac{1}{f_j({\bf x})}
+\bigtriangledown f_j({\bf x})={\bf0}
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline468}%
+$\lambda_j$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline472}%
+$f_j({\bf x})$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath404}%
+\begin{displaymath}
+\lambda_j=-\frac{1}{t f_j({\bf x})},\;\;\;\;(j=1,\cdots,n)
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath405}%
+\begin{displaymath}
+{\bf 1}+t\,{\bf F}({\bf x}){\bf\lambda}={\bf0}
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline474}%
+${\bf\lambda}=[\lambda_1,\cdots,\lambda_N]^T$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline476}%
+${\bf F}({\bf x})=diag(f_1({\bf x},\cdots,f_n({\bf x}))$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath406}%
+\begin{displaymath}
+\bigtriangledown f_0({\bf x})+\sum_{j=1}^n \lambda_j\bigtriangledown f_j({\bf x})
+={\bf g}_{f_0}({\bf x})+{\bf J}_{\bf f}^T({\bf x}){\bf\lambda}={\bf0}
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline478}%
+${\bf J}_{\bf f}({\bf x})$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline480}%
+${\bf f}({\bf x})$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath407}%
+\begin{displaymath}
+{\bf J}_{\bf f}({\bf x})=  \left[\begin{array}{ccc}
+      \partial f_1/\partial x_1&\cdots&\partial f_1/\partial x_N\\
+      \vdots & \ddots & \vdots\\
+      \partial f_M/\partial x_1&\cdots&\partial f_M/\partial x_N\end{array}\right]
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath408}%
+\begin{displaymath}
+L_d({\bf x},{\bf\lambda})=f_0({\bf x})+\sum_{j=1}^n\lambda_jf_j({\bf x})
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline482}%
+${\bf x}^*,\;{\bf\lambda}^*$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline484}%
+$L_d({\bf x},{\bf\lambda})$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline486}%
+${\bf x}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline488}%
+${\bf\lambda}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath409}%
+\begin{displaymath}
+\left\{\begin{array}{l}
+{\bf g}_{f_0}({\bf x})+{\bf J}_{\bf f}^T({\bf x}){\bf\lambda}={\bf0}\\
+{\bf 1}/t+{\bf F}({\bf x}){\bf\lambda}={\bf0}\end{array}\right.
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline490}%
+$\delta{\bf x}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline492}%
+$\delta{\bf\lambda}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath410}%
+\begin{displaymath}
+\left[\begin{array}{cc}{\bf H}_{f_0}({\bf x}) & {\bf J}_{\bf f}^T({\bf x})\\
+    {\bf J}_{\bf f}({\bf x}) & {\bf F}({\bf x})\end{array}\right]
+\left[\begin{array}{c}\delta{\bf x}\\\delta{\bf\lambda}\end{array}\right]
+=-\left[\begin{array}{c}{\bf g}_{f_0}({\bf x})+{\bf J}_{\bf f}^T({\bf x}){\bf\lambda}&
+{\bf 1}/t+{\bf F}({\bf x}){\bf\lambda}\end{array}\right]
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline498}%
+${\bf x}+\delta{\bf x}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline500}%
+${\bf\lambda}+\delta{\bf\lambda}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline506}%
+${\bf x}^*(t)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline508}%
+${\bf\lambda}^*(t)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath411}%
+\begin{displaymath}
+L_d({\bf x}^*,{\bf\lambda}^*)=f_0({\bf x}^*)+\sum_{j=1}^n\lambda_jf_j({\bf x}^*)
+=f_0({\bf x}^*)-\sum_{j=1}^n\frac{f_j({\bf x}^*)}{t\,f_j({\bf x}^*)}
+=f_0({\bf x}^*)-\frac{n}{t}<f_0({\bf x}^*)
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline516}%
+$f_0({\bf x}^*)-L_d({\bf x}^*,{\bf\lambda}^*)=p^*-d^*=n/t$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline518}%
+$t\rightarrow\infty$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1219}%
+$\displaystyle f_j({\bf x}^*)\le 0,\;\;\;\;\lambda^*_j\ge 0,\;\;\;\;
+  -\lambda_j f_j({\bf x}^*)=1/t,\;\;\;\;(j=1,\cdots,n)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline526}%
+${\bf x}_0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline528}%
+$t=t_0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline540}%
+$f_0({\bf x})$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath218}%
+\begin{displaymath}
+  \begin{array}{ll}
+    \mbox{minimize}  &  {\bf c}^T{\bf x}\\
+    \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\\
+    \mbox{subject to:} & {\bf Ax}-{\bf b}={\bf0},\;\;\;\;{\bf x}\ge{\bf0}
+  \end{array}
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath412}%
+\begin{displaymath}
+L({\bf x},{\bf\lambda})={\bf c}^T{\bf x}-{\bf\lambda}^T({\bf Ax}-{\bf b})
+-{\bf\mu}^T{\bf x}
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath413}%
+\begin{displaymath}
+\bigtriangledown_{\bf x} L({\bf x},{\bf\lambda})
+={\bf c}-{\bf A}^T{\bf\lambda}-{\bf\mu}={\bf0}
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath414}%
+\begin{displaymath}
+\left\{\begin{array}{ll}
+{\bf A}^T{\bf\lambda}+{\bf\mu}-{\bf c}={\bf0}&
+\;\;\;\;\;\;\;\mbox{(stationarity)}\\
+{\bf Ax}-{\bf b}={\bf0},\;\;\;\;{\bf x}\ge{\bf0}&
+\;\;\;\;\;\;\mbox{(primal feasibility)}\\
+{\bf\mu}\ge{\bf0}&\;\;\;\;\;\;\mbox{(dual feasibility)}\\
+x_j\mu_j=0\;\;\;\;(j=1,\cdots,n)\;\;\;\;\mbox{or}\;\;\;\;\;
+{\bf X}{\bf M}{\bf 1}={\bf0}&\;\;\;\;\;\;\mbox{(complementarity)}
+\end{array}\right.
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath415}%
+\begin{displaymath}
+{\bf 1}=[1,\cdots,1]^T,\;\;\;\;\;{\bf X}=diag(x_1,\cdots,x_n),
+\;\;\;\;\;\;{\bf M}=diag(\mu_1,\cdots,\mu_n)
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline542}%
+${\bf x}\ge{\bf0}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath416}%
+\begin{displaymath}
+L({\bf x},{\bf\lambda})={\bf c}^T{\bf x}-\frac{1}{t}\sum_{j=1}^n\ln x_j
+-{\bf\lambda}^T({\bf Ax}-{\bf b})
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath417}%
+\begin{displaymath}
+\bigtriangledown_{\bf x} L({\bf x},{\bf\lambda})
+={\bf c}-\frac{1}{t}\sum_{j=1}^n\frac{1}{x_j}-{\bf A}^T{\bf\lambda}
+={\bf c}-{\bf X}^{-1}{\bf 1}/t-{\bf A}^T{\bf\lambda}={\bf0}
+={\bf c}-{\bf\mu}-{\bf A}^T{\bf\lambda}={\bf0}
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath418}%
+\begin{displaymath}
+{\bf\mu}={\bf X}^{-1}{\bf 1}/t,\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;
+{\bf X}{\bf\mu}={\bf X}{\bf M}{\bf 1}={\bf 1}/t
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath419}%
+\begin{displaymath}
+\left\{\begin{array}{ll}
+{\bf A}^T{\bf\lambda}+{\bf\mu}-{\bf c}={\bf0} & \mbox{(stationarity)}\\
+{\bf Ax}-{\bf b}={\bf0} &\mbox{(primal feasibility)}\\
+{\bf XM1}-{\bf 1}/t={\bf0} & \mbox{(dual feasibility)}
+\end{array}\right.
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline548}%
+$t>0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline550}%
+${\bf\mu}\ge{\bf0}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline556}%
+${\bf\mu}^*$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline560}%
+${\bf f}({\bf x}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline562}%
+${\bf\lambda},{\bf\mu})$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline564}%
+${\bf J}_{\bf f}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline566}%
+$\delta{\bf x}_0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline570}%
+$\delta{\bf\mu}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath420}%
+\begin{displaymath}
+{\bf J}_{\bf f} =-{\bf f}
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath421}%
+\begin{displaymath}
+{\bf f}({\bf x},{\bf\lambda},{\bf\mu})=\left[\begin{array}{l}
+{\bf A}^T{\bf\lambda}+{\bf\mu}-{\bf c}\\{\bf Ax}-{\bf b}\\
+{\bf XM1}-{\bf 1}/t\end{array}\right],
+\;\;\;\;\;\;\;
+{\bf J}_{\bf f}=\left[\begin{array}{ccc}
+{\bf0} & {\bf A}^T & {\bf I}\\{\bf A} & {\bf0} & {\bf0}\\
+{\bf M} & {\bf0} & {\bf X}\end{array}\right]
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline572}%
+${\bf x}_0,\;{\bf\lambda}_0,\;
+{\bf\mu}_0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+
+\end{document}

@@ -1,0 +1,272 @@
+\documentstyle[12pt]{article}
+\usepackage{html}
+% \usepackage{graphics}  
+\begin{document}
+
+\subsection*{Twin-T filter}
+
+The twin-T network is composed of two T-networks: 
+\begin{itemize}
+\item The CRC network is formed by two capacitors $C$ and one
+  resistor $R/2$. This T (or Y) network can be converted to a
+  $\pi$ (or $\Delta$) network:
+  \[
+  Z'_1=Z'_2=\frac{R}{2}+\frac{1}{sC}+\frac{R/2sC}{1/sC}=R+\frac{1}{sC}
+  \]
+  \[
+  Z'_3=\frac{1}{sC}+\frac{1}{sC}+\frac{1/s^2C^2}{R/2}
+  =\frac{2}{sC}+\frac{2}{Rs^2C^2}=\frac{2(1+sRC)}{Rs^2C^2}
+  \]
+\item The RCR network is formed by two resistors $R$ and one
+  capacitor $2C$. This T (or Y) network can be converted to a
+  $\pi$ (or $\Delta$) network:
+  \[
+  Z''_1=Z''_2=R+\frac{1}{2sC}+\frac{R/2sC}{R}=R+\frac{1}{sC}
+  \]
+  \[
+  Z''_3=R+R+\frac{R^2}{1/2sC}=2R+2R^2sC=2R(1+sRC)
+  \]
+\end{itemize}
+The two parallel $\pi$-networks can be combined to become one
+$\pi$-network with three branches $Z_1=Z'_1||Z''_1$, $Z_2=Z'_2||Z''_2$, 
+and $Z_3=Z'_3||Z''_3$:
+\[
+Z_1=Z'_1||Z''_1=Z_2=Z'_2||Z''_2=\frac{1}{2}\left(R+\frac{1}{sC}\right)
+\]
+\[
+  Z_3=Z'_3||Z''_3=\frac{Z'_3 Z''_3}{Z'_3+Z''_3}
+  =\frac{4(1+sRC)^2/s^2C^2}{2R(1+sRC)(1/Rs^2C^2+1)}
+  =\frac{2R(1+sRC)}{1+(sRC)^2}
+\]
+
+The transfer function of this $\pi$-network (a voltage divider) is:
+\begin{eqnarray}
+H(s)&=&\frac{Z_2}{Z_2+Z_3}=\frac{R+1/sC}{R+1/sC+4R(1+sRC)/(1+(sRC)^2)}
+\nonumber \\
+&=&\frac{(1+sRC)/sC}{(1+sRC)/sC+4R(1+sRC)/(1+(sRC)^2)}
+\nonumber \\
+&=&\frac{1/sC}{1/sC+4R/(1+(sRC)^2)}
+=\frac{1}{1+4sRC/(1+(sRC)^2)}
+\nonumber \\
+&=&\frac{1+(sRC)^2}{1+(sRC)^2+4sRC}
+=\frac{s^2+(1/RC)^2}{s^2+4s/RC+(1/RC)^2}
+\nonumber
+\end{eqnarray}
+We define
+\[
+\omega_0=\frac{1}{RC},\;\;\;\;\;\mbox{i.e.,}\;\;\;\;\;
+f_0=\frac{1}{2\pi RC}
+\]
+and express the second order denominator in the canonical form as
+\[
+H(s)=\frac{V_{out}(s)}{V_{in}(s)}=\frac{s^2+\omega_0^2}{s^2+4\omega_0s+\omega_0^2}
+=\frac{s^2+\omega_0^2}{s^2+\omega_0s/Q+\omega_0^2}
+=\frac{s^2+\omega_0^2}{s^2+\Delta\omega\;s+\omega_0^2}
+\]
+where $Q=1/4=0.25$ is the quality factor, and 
+$\Delta\omega=\omega_0/Q=4\omega_0$ is the bandwidth of the filter.
+We let $s=j\omega$ and get the frequency response function:
+\[
+H(j\omega)=\frac{\omega_0^2-\omega^2}{-\omega^2+j\omega_0\omega/Q+\omega_0^2}
+\]
+
+\begin{itemize}
+\item When $\omega=0$, 
+  \[
+  H(j\omega)\big|_{\omega=0}=H(0)=\frac{\omega_0}{\omega_0}=1
+  \]
+\item When $\omega\rightarrow \infty$, 
+  \[
+  H(j\omega)\big|_{\omega\rightarrow\infty}=\lim\limits_{\omega\rightarrow\infty}
+  \left( \frac{\omega_0^2-\omega^2}{-\omega^2+j\omega_0\omega/Q+\omega_0^2} \right)
+  =\lim\limits_{\omega\rightarrow\infty}\left(\frac{\omega^2}{\omega^2}\right)=1
+  \]
+\item When $\omega=\omega_0=1/RC$, $H(j\omega_0)=0$
+\end{itemize}
+When $\omega=\omega_0=1/RC$, $H(j\omega)=0$, the output is zero, i.e.,
+this twin-T network is a band-stop filter (notch filter) which attenuates
+frequncy $\omega_0=1/RC$ to zero.
+
+The bandwidth $\Delta\omega=\omega_0/Q=4\omega_0$ is likely to be too large 
+for certain applications due to the small quality factor $Q=1/4$. To overcome 
+this problem, an active filter circuit containing two opamp followers (with
+unity gain $A=1$ can be used to intruce a positive feedback loop as shown below:
+
+
+
+Now the common terminal of the twin-T filter is no longer grounded, instead
+it is connected a potentiameter, to the voltage dividor composed of $R_4$ and
+$R_5$, to form a feedback loop by which a fraction of the output $V_{out}$ is 
+fed back:
+\[
+V_1=\frac{R_5}{R_4+R_5}\;V_{out}
+\]
+The input and output of the twin-T network are now related by
+\[
+V_{out}-V_1=H(V_{in}-V_1)
+\]
+Substituting $V_1=V_{out}\;R_5/(R_4+R_5)$ and rearranging, we get
+\begin{eqnarray}
+  HV_{in}&=&V_{out}+(H-1) V_1=V_{out}+(H-1)\frac{R_5}{R_4+R_5}V_{out}
+  \nonumber \\
+  &=&V_{out}\;\left(1+(H-1)\;\frac{R_5}{R_4+R_5}\right)
+  \nonumber
+\end{eqnarray}
+The transfer function of this active filter with feedback can be found to be
+\[
+H'(s)=\frac{V_{out}}{V_{in}}=\frac{H}{1+(H-1)R_5/(R_4+R_5)}
+=\frac{H(R_4+R_5)}{(R_4+R_5)+(H-1)R_5}
+\]
+Substituting $H(s)=(s^2+\omega_0^2)/(s^2+4\omega_0 s+\omega_0^2)$ and
+$H(s)-1=-4\omega_0s/(s^2+4\omega_0 s+\omega_0^2)$, we
+get
+\begin{eqnarray}
+  H'(s)&=&\frac{(S^2+\omega_0^2)(R_4+R_5)}{(R_4+R_5)(s^2+4\omega_0 s+\omega_0^2)- 4\omega_0 s R_5}
+  \nonumber \\
+  &=&\frac{S^2+\omega_0^2}{(s^2+4\omega_0s+\omega_0^2)-4\omega_0 s\;R_5/(R_4+R_5)}
+  \nonumber \\
+  &=&\frac{S^2+\omega_0^2}{s^2+\omega_0 4(1-R_5/(R_4+R_5)) s+\omega_0^2}
+  \nonumber \\
+  &=&\frac{S^2+\omega_0^2}{s^2+\omega_0 4R_4/(R_4+R_5) s+\omega_0^2}
+  \nonumber \\
+  &=&\frac{S^2+\omega_0^2}{s^2+\omega_0/Q' s+\omega_0^2}
+  =\frac{S^2+\omega_0^2}{s^2+\Delta\omega' s+\omega_0^2}
+  \nonumber
+\end{eqnarray}
+where $Q'$ and $\Delta\omega'$ are respectively the quality factor and the bandwidth of the 
+active filter with feedback:
+\[
+Q'=\frac{R_4+R_5}{4R_4},\;\;\;\;\;\;\Delta\omega'=\frac{\omega_0}{Q'}
+\]
+Now by varying $R_4$ and $R_5$, the quality factor $Q'$ and bandwidth $\Delta\omega'$ can 
+be adjusted. In particular, 
+\begin{itemize}
+\item when $R_5=0$, $V_1=0$ (no feedback), $Q'=1/4=Q$, $\Delta\omega=\omega_0/Q=4\omega_0$; 
+\item when $R_4=0$, $V_1=V_{out}$ (one hundred percent feedback), $Q'=\infty$, $\Delta\omega=\omega_0/Q'=0$.
+\end{itemize}
+
+
+If in the CRC T-network the vertical capacitor branch is dropped, i.e.,
+$C=0$, while the RCR T-network is still the same, we get a bridged T 
+network. Now $Z''_3=2R$, and we have
+\[
+  Z_3=Z'_3||Z''_3=\frac{Z'_3 Z''_3}{Z'_3+Z''_3}
+  =\frac{2R(1+sRC)}{1+sRC+(sRC)^2}
+\]
+The transfer function of this bridged T network (a voltage divider) is:
+\begin{eqnarray}
+H(s)&=&\frac{Z_2}{Z_2+Z_3}=\frac{R+1/sC}{R+1/sC+2R(1+sRC)/(1+sRC+(sRC)^2)}
+\nonumber \\
+&=&\frac{1/sC}{1/sC+2R/(1+sRC+(sRC)^2)}
+=\frac{1}{1+2sRC/(1+sRC+(sRC)^2)}
+\nonumber \\
+&=&\frac{1+sRC+(sRC)^2}{1+3sRC+(sRC)^2}
+=\frac{s^2+s/RC+1/(RC)^2}{s^2+3s/RC+1/(RC)^2}
+\nonumber
+\end{eqnarray}
+We let $\omega_0=1/RC$, and express the second order denominator in the
+canonical form as
+\[
+H(s)=\frac{s^2+\omega_0 s+\omega_0^2}{s^2+3\omega_0s+\omega_0^2}
+=\frac{s^2+\Delta\omega_n s+\omega_0^2}{s^2+\Delta\omega_ds+\omega_0^2}
+=\frac{s^2+\Delta\omega_n s+\omega_0^2}{s^2+\Delta\omega_ds+\omega_0^2}
+\]
+where 
+\[
+\Delta\omega_n=\omega_0,\;\;\;\;\;\;\;\Delta\omega_d=3\omega_0
+\]
+are the bandwidth of the 2nd-order systems of the numerator and the
+denominator, respectively.
+We let $s=j\omega$ and get the frequency response function:
+\[
+H(j\omega)=\frac{-\omega^2+\Delta\omega_n j\omega+\omega_0^2}{-\omega^2+\Delta\omega_dj\omega+\omega_0^2}
+\]
+\begin{itemize}
+\item When $\omega=0$, $H(j\omega)=H(0)=1$
+\item When $\omega\rightarrow \infty$, $H(j\omega)=1$
+\item When $\omega=\omega_0=1/RC$, $H(j\omega_0)=1/3$
+\end{itemize}
+We see that this is a band-stop filter.
+
+
+\subsection*{Wien bridge}
+
+
+The Wien bridge is a particular type of the Wheatstone bridge of which
+two of the four arms are composed of a capacitor as well as a resistor
+in parallel and series:
+
+
+For this bridge to balance, the ratios of the left and right branches
+should be the same:
+\[
+\frac{R_3}{R_4}=\frac{R_2+1/j\omega C_2}{R_1||1/j\omega C_1}
+=\frac{j\omega R_1C_1+1}{R_1}\;
+\frac{j\omega R_2C_2+1}{j\omega C_2}
+=\frac{1-\omega^2R_1R_2C_1C_2+j\omega(R_1C_1+R_2C_2)}{j\omega R_1C_2}
+\]
+For the ratio on the right-hand side to be the same as that on the
+left-hand side, it needs to be real, i.e.,
+\[
+1-\omega^2R_1R_2C_1C_2=0,\;\;\;\;\;\mbox{i.e.,}\;\;\;\;\;
+\omega=\frac{1}{\sqrt{R_1R_2C_1C_2}}
+\]
+and the equation above becomes
+\[
+\frac{R_3}{R_4}=\frac{R_1C_1+R_2C_2}{R_1C_2}=\frac{C_1}{C_2}+\frac{R_2}{R_1}
+\]
+In particular, if $R_1=R_2=R$ and $C_1=C_2=C$, we have:
+\[
+\omega=\frac{1}{\sqrt{R_1R_2C_1C_2}}=\frac{1}{RC}
+\]
+and
+\[
+\frac{R_3}{R_4}=\frac{C_1}{C_2}+\frac{R_2}{R_1}=1+1=2,
+\;\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;R_4=2R_3
+\]
+
+\subsection{Wien bridge oscillator}
+
+
+An osillator is typically formed by an amplifier with gain $A(s)$ and
+a feedback branch of gain $B(s)$. The open-loop gain is 
+\[
+\frac{V_o}{V_i}=A(j\omega)\;B(j\omega)
+\]
+If the input $V_i=\cos(\omega_0 t)$ is a sinusoid, and 
+\[
+|A(j\omega_0)\;B(j\omega_0)|=1
+\;\;\;\;\;\;\mbox{and}\;\;\;\;\;\;
+\angle A(j\omega_0)B(j\omega_0)=0
+\]
+then the output $V_o=A(j\omega_0)B(j\omega_0)V_i=\cos(\omega_0 t)$. In 
+other words, the closed loop is an oscillator.
+
+
+The op-amp circuit shown in the figure has both positive and negative
+feedback branches. If the voltage to non-inverting input $V_+$ is 
+considered as the input, the circuit is a non-inverting amplifier 
+with gain:
+\[
+A=\frac{V_o}{V_+}=1+\frac{R_f}{R_3}=K
+\]
+On the other hand, the positive feedback gain is
+\[
+B(j\omega)=\frac{V_+}{V'_o}=\frac{Z_1}{Z_1+Z_2}
+=\frac{R_1||1/j\omega C_1}{R_1||1/j\omega C_1+R_2+1/j\omega C_2}
+\]
+
+
+
+\subsection{Wien osillator}
+
+
+
+\end{document}
+
+
+http://users.ece.gatech.edu/mleach/ece3050/notes/osc/wienbr.pdf
+
+http://www.ece.msstate.edu/~winton/classes/ece3144/labs/Exp10.pdf
+
+http://www.drp.fmph.uniba.sk/ESM/twin.pdf

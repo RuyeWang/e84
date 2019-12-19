@@ -1,0 +1,118 @@
+\documentstyle[11pt]{article}
+\usepackage{html}
+\begin{document}
+\begin{center}
+{\Large \bf  Midterm Exam 3 ---- E84, Fall, 2004}
+\end{center}
+
+\begin{itemize}
+\item Take home, open everything except discussion.
+\item Mark your start and end times. % Don't spend more than 3 hours.
+\item Due Monday in class.
+\item Mark your name and question number clearly on top of each page.
+	Indicate the total number of pages submitted.
+\item When solving a problem, list all the steps. In each step, describe 
+	what you are doing in English, then show the calculation and the 
+	result of the step. A final answer, even if correct, without 
+	evidence of the steps leading to the answer will not receive credit.
+\end{itemize}
+
+\begin{enumerate}
+
+\item {\bf Problem 1. (20 points)} 
+
+Find the output voltage $V$ for each of the two circuits shown in the 
+figure below, using the line at the bottom as the reference (ground).
+
+\htmladdimg{../midterm3d.gif}
+
+{\bf Solution:} (a) 4.3V (b) 0.7V
+
+\item {\bf Problem 2. (40 points)} 
+
+The circuit below shows a simple means for obtaining improved bias
+stability of the DC operating point of the transistor. As always,
+assume $V_{BE}=0.7V$ when answering the following questions.
+
+\htmladdimg{../midterm3e.gif}
+
+\begin{itemize}
+\item Explain qualitatively what happens if $I_C$ tends to rise as a
+result of an increase in $\beta$.
+\item Derive an expression for $I_C$ in terms of $R_B$ and $R_C$ and
+$\beta$.
+\item Find an approximation of the expression of $I_C$ if $\beta$ is 
+large enough. To make $I_C$ independent of $\beta$, how $R_C$ and
+$R_B$ should be related?
+\item Find $R_C$ and $R_B$ so that the DC operating point is $V_{CE}=5V$ 
+and $I_C=2mA$, when $\beta=100$ and $V_{CC}=10V$.
+\item Find $V_{CE}$ and $I_C$ for $\beta=50$, $\beta=100$, and $\beta=200$
+	based on the resistances found above.
+\end{itemize}
+
+{\bf Solution:} 
+
+\begin{itemize}
+\item $\beta \uparrow \Longrightarrow V_C \downarrow \Longrightarrow 
+	I_B \downarrow \Longrightarrow I_C \uparrow $
+\item
+\[ I_B=\frac{V_{CC}-0.7}{(\beta+1)R_C+R_B},\;\;\;\;\;
+   I_C=\beta I_B=\frac{\beta(V_{CC}-0.7)}{(\beta+1)R_C+R_B}  \]
+\item If $(\beta+1)R_C \gg R_B$, then $I_C \approx (V_{CC}-0.7)/R_C$, 
+independent of $\beta$.
+\item $I_C=2mA$, $V_C=5V$, $R_C=(V_{CC}-V_C)/I_C=5V/2mA=2.5K\Omega$,
+$I_B=I_C/\beta=0.02mA$, $R_B=(5-0.7)/0.02=4.3/0.02=215K\Omega$.
+\item 
+When $\beta=50$:
+\[	I_B=\frac{V_{CC}-0.7}{(\beta+1)R_C+R_B}=\frac{9.3}{51\times 2.5K+215}
+	=0.027mA \]
+\[ 	I_C=\beta I_B=1.36mA,\;\;\;V_C=V_{CC}-(\beta+1)I_B=6.6V \]
+When $\beta=100$:
+\[	I_B=\frac{V_{CC}-0.7}{(\beta+1)R_C+R_B}=\frac{9.3}{101\times 2.5K+215}
+	=0.02mA \]
+\[ 	I_C=\beta I_B=2 mA,\;\;\;V_C=V_{CC}-(\beta+1)I_B=5V \]
+When $\beta=200$:
+\[	I_B=\frac{V_{CC}-0.7}{(\beta+1)R_C+R_B}=\frac{9.3}{201\times 2.5K+215}
+	=0.013mA \]
+\[ 	I_C=\beta I_B=2.6mA,\;\;\;V_C=V_{CC}-(\beta+1)I_B=3.5V \]
+\end{itemize}
+
+\item {\bf Problem 3. (40 points)} 
+
+\htmladdimg{../midterm3a.gif}
+
+The circuit shown below is a silicon transistor amplifier which takes one
+input and generates two outputs. Assume $V_{CC}=20V$, $R_1=20K\Omega$,
+$R_2=10K\Omega$, $R_C=R_E=500\Omega$, $\beta=100$. 
+
+\begin{enumerate}
+\item Find $V_B$, $I_B$, $V_E$ and $V_C$, and the DC operating point in 
+terms of $I_C$ and $V_{CE}$. 
+\item In the figure provided, draw the load line, indicate the DC operating 
+point, and find the corresponding $I_C$ and $V_{CE}$.
+\item If the input voltage is such that it produces an AC component of the 
+base current:
+\[	i_b(t)=0.1 cos(\omega t) \; mA	\]
+give the expression of the AC component of the two output voltages $v_1(t)$ 
+at the emitter and $v_2(t)$ at the collector, and sketch their waveforms in 
+the SAME plot provided below, where $v_{in}(t)=cos(\omega t)$ is also ploted.
+(No need to be to the scale vertically, but do pay attention to the time
+scale.)
+\end{enumerate}
+
+\htmladdimg{../midterm3b.gif}
+\htmladdimg{../midterm3c.gif}
+
+{\bf Solution:} 
+Apply Thevenin thm to base circuit to get $R_B=R_1 || R_2=6.7K$, $V_BB=6.7V$.
+\[ I_B=\frac{V_{BB}-V_{BE}}{R_B+(\beta+1)R_E}=\frac{6V}{6.7K+101\times 0.5K}
+	=0.105 mA \]
+\[ I_C=I_E=10.5 mA \]
+\[ V_E=0.5\times 10.5=5.25V,\;\;\;\; V_C=20-0.5\times 10.6=14.75V,\;\;\;\;
+	V_{CE}=V_C-V_E=14.75-5.25=9.5V \]
+\[ v_1(t)=-5 cos(\omega t) V,\;\;\;\;v_1(t)=5 cos(\omega t) V	\]
+
+\end{enumerate}
+
+\end{document}
+

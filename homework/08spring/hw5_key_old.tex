@@ -1,0 +1,234 @@
+\documentstyle[11pt]{article}
+\usepackage{html}
+\begin{document}
+\begin{center}
+{\Large \bf E84 Home Work 5 (Key)}
+\end{center}
+See online lecture notes.
+
+\end{document}
+
+
+\begin{enumerate}
+
+\item The figure below shows a two-dimensional network of infinite number 
+of 1$\Omega$ resistors forming a grid extending to infinity in all four 
+directions. Find the resistance between any two neighboring nodes, e.g., 
+nodes a and b.
+
+\htmladdimg{../resistornetwork.gif}
+
+{\bf Hint:} Add two 1A current sources to the two nodes, as shown in the 
+figure, and use superposition theorem to find the current $i_{ab}$ from 
+a to b, and thereby the voltage drop between a and b. Note that as the
+network is infinite, the four branches of each node are totally symmetric
+and therefore the currents through them are identical. The resistance 
+between these nodes can be found by Ohm's law.
+
+{\bf Solution:}
+We use superposition principle to consider one 1A current source at a time.
+As the four branches at each node are totally identical, each branch will
+have a current of 1/4 A, according to KCL. When both current sources are
+considered, the current from a to b will be 1/2 A. But as the resistance
+is 1$\Omega$, the voltage drop is 1/2 V. To find the equivalent resistance
+between nodes a and b without anything else, realize that the current going
+from a to b through the equivalent resistance is 1 A due to the current 
+sources, and the voltage drop between a and b is 1/2 V, indicating the 
+resistance between a and b is 1/2 $\Omega$.
+
+\item Convert the one-port circuit below to an equivalent Thevenin voltage
+source, find $V_T$ and $R_T$. Find the voltage $V$ and current $I$ associated
+with a load resistor with resistance $R_L=1\Omega, 2\Omega, 3\Omega$.
+
+\htmladdimg{../theveninsource.gif}
+
+{\bf Solution:}
+
+First find open-circuit voltage $V_T$:
+\[ V_T=4V+2A \times 2\Omega = 8V \]
+Second find equivalent resistance when voltage source is short circuit
+and current source is open circuit
+\[ R_T=2+3=5\Omega \]
+The voltage and current associated with $R_L=1\Omega, 2\Omega, 3\Omega$ are, 
+respectively, 
+$I=8V/(5+1)\Omega=4/3A, V=IR_L=4/3V$, 
+$I=8V/(5+2)\Omega=8/7A, V=IR_L=16/7V$, 
+$I=8V/(5+3)\Omega=1A, V=IR_L=3V$.
+
+\item Convert the one-port circuit below to an equivalent Norton current
+source, find $I_N$ and $R_N$. Find the voltage $V$ and current $I$ associated
+with a load resistor with resistance $R_L=1\Omega, 2\Omega, 3\Omega$.
+
+\htmladdimg{../nortonsource.gif}
+
+{\bf Solution:}
+
+First find short-circuit current $I_N$ by superposition theorem:
+\[ I_N=\frac{10V}{10\Omega}-\frac{12V}{10//15 \Omega}=-1A \]
+Second find equivalent resistance when both voltage sources are shorted:
+\[ R_N=10//15=6\Omega \]
+The voltage and current associated with $R_L=1\Omega, 2\Omega, 3\Omega$ are, 
+respectively, 
+$V=-1A\times(6//1)=-6/7V, I=-1A 6/(6+1)=-6/7A$,
+$V=-1A\times(6//2)=-12/8=-3/2V, I=-1A 6/(6+2)=-3/4A$,
+$V=-1A\times(6//3)=-2V, I=-1A 6/(6+3)=-2/3A$.
+
+\item In the circuit below, each of the six branches has a $1\Omega$
+resistor and a voltage source of unknow voltage and polarity. The current
+from points a to b is known to be $I_{ab}=1A$. If the resistor between 
+points a and b is changed from $1\Omega$ to $3\Omega$, what is the current
+$I_{ab}$?
+
+\htmladdimg{../trianglenetwork.gif}
+
+{\bf Solution:}
+
+Treat the resistor between points a and b as the load, and use Thevenin's 
+theorem. To find the equivalent resistance, we short all voltage sources
+and the remaining resistors form a balanced bridge (no current through the
+resistor on the lower left branch) and the resistance between points a and
+b is $(1+1)//(1+1)=1\Omega$. Alternatively, we can convert one of the two
+triangles to Y of three $ 1/3 \Omega$, and find the total resistance to be 
+$1/3+(1+1/3)//(1+1/3)=1/3+2/3=1$. As the current through resistor between a
+and b is $1A$, which implies the open-circuit voltage is $V_T=1A (1+1)
+\Omega=2V$. When the resistance between a and b is $3\Omega$, the current 
+becomes $I=2V/(1+3)\Omega=0.5A$.
+
+\item Find the currents ($I_1$ through $I_5$) flowing through each of the 
+five resistors ($R_1$ through $R_5$ in the circuit below (same as shown in
+class), where $V_0=18V$, $R_1=R_2=3\Omega$, $R_3=5\Omega$, $R_4=1.5\Omega$
+and $R_5=2\Omega$. (Hint: convert delta formed by by $R_1$, $R_2$ and $R_5$
+to a Y composed of $R_a$, $R_b$ and $R_c$, where $c$ is the positive 
+terminal of voltage source, find $V_a$ and $V_b$ and then all the currents.)
+
+\htmladdimg{../bridgeproblem.gif}
+
+{\bf Solution:}
+\begin{itemize}
+\item (1) Convert the delta formed by $R_1$, $R_2$ and $R_5$ to a Y: 
+	$R_a=R_b=3/4$, $R_c=9/8$
+\item (2) Find overall load resistance of voltage source:
+	$R_{total}=R_c+(R_a+R_3)||(R_b+R_4)=9/8+(23/4)||(9/4)=351/128$
+\item (3) Find current through voltage source: 
+	$I_{total}=V_0/R_{total}=18/(351/128)=256/39$
+\item (4) Find currents through two branches by current dividor:
+	$I_a=I_3=(256/39)(9/4)/(9/4+23/4)=24/13$, 
+	$I_b=I_4=(256/39)(23/4)/(9/4+23/4)=184/39$
+\item (5) Find voltages $V_a$ and $V_b$ with respect to negative terminal of
+  voltage source treated as ground: $V_a=R_3 I_a=120/13$, $V_b=R_4 I_b=92/13$
+\item (6) Find currents through $R_1$, $R_2$ and $R_5$:
+	$I_1=(18-120/13)/3=38/13$, $I_2=(18-92/13)/3=142/39$, 
+	$I_5=(V_a-V_b)/R_5=14/13$
+\item (7) Verify: $I_1+I_2=I_{total}=256/39$, $I_1-I_5=I_3=24/13$,
+	$I_2+I_5=I_4=184/39$.
+\end{itemize}
+
+\end{enumerate}
+\end{document}
+
+\item The resistance $R$ of a circuit is a real value which can be measured
+by a multimeter. However, the impedance $Z$ is complex which cannot be 
+measured directly. Instead, one can use an oscilloscope to find sinusoidal 
+voltage $v(t)$ across and current $i(t)$ through the circuit, and the obtain
+the impedance as the ratio between the complex representations of the voltage
+and current. Suppose we find:
+\[ v(t)=12 cos(1000t-30^\circ),\;\;\;\; i(t)=6\;cos(1000t+15^\circ) \]
+Find the impedance (both resistance and reactance) and the admittance (both
+conductance and susceptance) of the circuit.
+
+{\bf Solution:}
+
+Represent voltage and current in complex forms:
+
+$v(t)=Re[12e^{j(1000 t-30^\circ)}],\;\;\;\;i(t)=Re[6e^{j(1000 t+15^\circ)}]$
+
+ $Z=2e^{-j45^\circ}=2\angle{-45^\circ}=\sqrt{2}-j\sqrt{2}$
+
+ $R=\sqrt{2},\;\;\;\;X=-\sqrt{2}$.
+
+ $Y=1/Z=G+jB=G+jB$, $G=R/(R^2+X^2)=\sqrt{2}/4$, 
+	$B=-X/\sqrt{R^2+X^2}=\sqrt{2}/4$
+
+\item A voltage $v(t)=120\sqrt{2} cos(1000t+90^\circ) V$ (volt) is applied to 
+a resistor $R=15\Omega$, a capacitor $C=83.3\mu F$ and an inductor $L=30\; mH$ 
+connected in parallel. Find the over all steady state current $i=i_R+i_C+i_L$ 
+by phasor method.
+
+{\bf Solution:}
+
+Express input voltage as a phasor $\dot{V}=120\angle{90^\circ}$.  
+Then $\dot{I}_R=\dot{V}/R=120\angle{90^\circ}/15=0+j8 A$
+ $\dot{I}_C=\dot{V}/Z_C=j\omega C\dot{V}=(0.00833\angle 90^\circ)(120\angle{90^\circ})
+ 	=10\angle 180^\circ=-10+j0 A$
+
+$\dot{I}_L=\dot{V}/Z_L=\dot{V}/j\omega L=(120\angle 90^\circ)/(30\angle{90^\circ})=4+j0 A$.
+
+By KCL, we have $\dot{I}=\dot{I}_R+\dot{I}_C+\dot{I}_L=(0-10+4)+j(8+0+0)
+  	=-6+j8=10\angle{127^\circ} A$
+
+  $i(t)=10\sqrt{2}\;cos(1000t+127^\circ) A$
+
+\item A voltage $v(t)=12\sqrt{2} \cos 5000 t$ (volt V) is applied to a circuit
+composed of two branches in parallel. One branch has a capacitor $C=10\mu F$,
+while the other has a resistor $R=20\Omega$ and an inductor $L=3 mH$ in series.
+Using phasor method, find the impedances $Z_C$ and $Z_{RL}$ of the two branches,
+and then the overall combined impedance $Z_{all}$ of the circuit. Then find
+the steady state current $i(t)$ through the circuit.
+
+{\bf Solution:}
+
+$Z_R=R=20+j0=20\angle 0^\circ \Omega$, $Z_L=j\omega L=j5000\times 0.003
+=15\angle 90^\circ \Omega$, $Z_C=1/j\omega C=-j/5000 \times 10^{-5}=-j20
+=20\angle -90^\circ \Omega$
+
+$Z_{RL}=Z_R+Z_L=20+j15=25\angle 37^\circ \Omega$
+
+$Z_{all}=Z_C//Z_{RL}=Z_C Z_{RL}/(Z_C+Z_{RL})=25\angle 37^\circ \; 
+20\angle -90^\circ/(20+j15-j20)=500\angle -53^\circ/20.6\angle -14^\circ
+=24.3\angle -39^\circ=18.9-j15.3 \Omega $
+
+$\dot{I}=\dot{V}{Z}=12\angle 0^\circ/24.3\angle -39^\circ=0.49\angle 39^\circ A$
+
+  $i(t)=0.49\sqrt{2} cos(5000t+39^\circ) A$
+
+\item Solve the problem above again but this time use the admittances 
+$Y_C=1/Z_C$, $Y_{RL}=1/Z_{RL}$, $Y_{all}=1/Z_{all}$ (instead of the
+impedances $Z_C$, $Z_{RL}$, $Z_{all}$). Recall that Ohm's law becomes
+$\dot{I}=\dot{V}/Z=\dot{V}Y$. (Make sure all impedances you found in 
+previous problem are correct before you find the admittances as their 
+reciprocals.)
+
+{\bf Solution:}
+
+$Y_C=1/Z_C=1/20\angle{0^\circ}=0.05\angle{90^\circ}=0+j0.05\;S$
+
+$Y_{RL}=1/Z_{RL}=1/25\angle{37^\circ}=0.04\angle{-37^\circ}=0.032-j0.024\;S$
+
+$Y_{all}=Y_C+Y_{RL}=0+j0.05 + 0.032-j0.024=0.032+j0.026=0.04\angle{39^\circ}$
+
+$I_C=Y_C V=0.05\angle{90^\circ} \times 12\angle{0^\circ}=0.6\angle{90^\circ}A$
+
+$I_{RL}=Y_{RL} V=0.04\angle{-37^\circ} \times 12\angle{0^\circ}=0.48\angle{-37^\circ}A$
+
+$I=I_C+I_{RL}=0+j0.6+0.384-j0.288=0.384+j0.312=0.49\angle{39^\circ}$
+
+Alternatively,
+$I=Y_{all}V=0.041\angle{39^\circ} \times 12\angle{0^\circ}=0.49\angle{39^\circ}$
+
+\item Find the output voltage $v_{out}(t)$ across the right most branch
+containing $R_2$ and $C$, when $\omega=0$ and $\omega\rightarrow \infty$ 
+and the input $v_{in}(t)=V=10\;cos(\omega t)$, assuming $R_1=100\Omega$, 
+$R_2=100\Omega$, $C=10\mu F$ and $L=10\;mH$.
+
+\htmladdimg{../hw6a.gif}
+
+ {\bf Solution}
+ 
+ When $\omega=0$, the inductor is short circuit, and the capacitor is
+ open circuit, $v_{out}(t)=v_{in}(t)$.
+ When $\omega=0$, the inductor is open circuit, and the capacitor is
+ short circuit, $v_{out}(t)=v_{in}(t)/2=5\;cos(\omega_0 t)$.
+
+\end{enumerate}
+\end{document}
+

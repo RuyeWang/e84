@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Howland Current Source</TITLE>
+<META NAME="description" CONTENT="Howland Current Source">
+<META NAME="keywords" CONTENT="opamp_sub">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="opamp_sub.css">
+
+<LINK REL="next" HREF="node3.html">
+<LINK REL="previous" HREF="node1.html">
+<LINK REL="next" HREF="node3.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="opamp_sub.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node3.html">Exp and Log Amplifiers</A>
+<B> Up:</B> <A
+ HREF="opamp_sub.html">opamp_sub</A>
+<B> Previous:</B> <A
+ HREF="node1.html">Algebraic Summer</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A ID="SECTION00020000000000000000">
+Howland Current Source</A>
+</H1>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/HowlandCurrentSource.png"
+ ALT="HowlandCurrentSource.png">
+
+<P>
+We assume <!-- MATH
+ $R_2/R_1=R_4/R_3$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img10.svg"
+ ALT="$R_2/R_1=R_4/R_3$"></SPAN>, and get
+  <P><!-- MATH
+ \begin{displaymath}
+\frac{V^- -V}{R_1}+\frac{V_0-V}{R_2}=0,\;\;\;\;\;\;
+  \frac{V^+-V}{R_3}+\frac{V_0-V}{R_4}=\frac{V}{R_L};
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="mathdisplay">
+<IMG STYLE="height: 5.81ex; vertical-align: -2.06ex; " SRC="img11.svg"
+ ALT="$\displaystyle \frac{V^--V}{R_1}+\frac{V_0-V}{R_2}=0,\;\;\;\;\;\;
+\frac{V^+-V}{R_3}+\frac{V_0-V}{R_4}=\frac{V}{R_L};
+$">
+</DIV><P></P>
+Solving the first equation for <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img12.svg"
+ ALT="$V_0-V$"></SPAN>:
+  <P><!-- MATH
+ \begin{displaymath}
+V_0-V=(V-V^-)\frac{R_2}{R_1}=(V-V^-)\frac{R_4}{R_3}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="mathdisplay">
+<IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img13.svg"
+ ALT="$\displaystyle V_0-V=(V-V^-)\frac{R_2}{R_1}=(V-V^-)\frac{R_4}{R_3}
+$">
+</DIV><P></P>
+and substituting into the second equation, we get:
+  <P><!-- MATH
+ \begin{displaymath}
+\frac{V^+-V}{R_3}+\frac{V-V^-}{R_3}
+  =\frac{V^+-V^-}{R_3}=\frac{V}{R_L}=I_L
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="mathdisplay">
+<IMG STYLE="height: 5.81ex; vertical-align: -2.06ex; " SRC="img14.svg"
+ ALT="$\displaystyle \frac{V^+-V}{R_3}+\frac{V-V^-}{R_3}
+=\frac{V^+-V^-}{R_3}=\frac{V}{R_L}=I_L
+$">
+</DIV><P></P>
+We see that the current through the load resistor <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img15.svg"
+ ALT="$R_L$"></SPAN>
+  is constant, independent of <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img15.svg"
+ ALT="$R_L$"></SPAN>, i.e., the circuit is
+  a current source.
+
+<P>
+<BR><HR>
+
+</BODY>
+</HTML>

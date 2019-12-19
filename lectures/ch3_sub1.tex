@@ -1,0 +1,53 @@
+
+\documentstyle[12pt]{article}
+\usepackage{html}
+
+\begin{document}
+
+\begin{itemize}
+
+\item {\bf Example:}
+
+
+Design a band-pass filter using no more than three passive components. The 
+filter should have a passing band around the frequency at about f=5 kHz
+with 0 dB gain and a bandwidth about $\Delta f=5$ kHz. Derive the frequency 
+response function and sketch a Bode plot. Generate both linear plot (from 0 
+to 10 kHz) and Bode plots (from 0 to 100 kHz) for the magnitude of the filter 
+as a function of frequency (by Multisim or Matlab). Feed a sinusoidal signal 
+x(t)=cos(2\pi ft) as the input to the filter and find the gain for f=1, 2, 5, 10,  
+and 20 kHz. Compare your results with analysis and simulations. 
+
+
+\htmladdimg{../figures/RLCFilters0.png}
+
+Consider using an RLC series circuit for the filters. When the voltage
+across $R$ is used as the output, the circuit is a band-pass filter.
+
+For $f_n=5\;kHz$ or $\omega_n=10^4 \pi =31416$, we need to have
+\[
+LC=1/\omega_n^2=10^{-9}
+\]
+For $\Delta f=5\;kHz$ or $\Delta\omega_n=31416$, we need to have
+\[
+\frac{R}{L}=\Delta\omega_n=31416
+\]
+If we choose $C=10^{-6}$, we get $L=10^{-3}\;H$, and $R=31416\;L=31.416\;\Omega$.
+However, in reality, a 1 mH inductor has about $15.7\;\Omega$ resistance,
+we have $R=31.416-15.6=15.7\,\Omega$. At the resonant frequency, $Z_L+Z_C=0$,
+the voltage across the resistor $R=15.8\,\Omega$ is about half of the input
+voltage.
+
+When the voltage across $L$ is used as the output, the circuit is a high-pass filter.
+When the voltage across $C$ is used as the output, the circuit is a low-pass filter.
+The linear and Bode plots of the three filters are shown below:
+
+\htmladdimg{../figures/RLCFilters.png}
+
+Linear plots on the left, Bode plots on the right; From the top: BP, LP, and HP
+filters
+
+\end{itemize}
+
+\end{document}
+

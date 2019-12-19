@@ -1,0 +1,172 @@
+\documentstyle[11pt]{article}
+\usepackage{html}
+
+\begin{document}
+\begin{center}
+{\Large \bf  E84 Midterm Exam 1 --- Fall 2018}
+\end{center}
+
+\section*{\bf Instructions}
+
+\begin{itemize}
+\item Write your name on top of each page. Indicate the total number
+  of pages submitted.
+\item Spend no more than four hours to complete the test.
+\item To get maximum partial credits, list the main steps in the 
+  process of getting to the final answer. In each step, describe 
+  concisely what you are doing, then show the calculation and box 
+  the result. Also box the final answer.
+\item A final answer, even if correct, will receive no credit
+  without evidence of the steps leading to it.
+\item Do not click the next part until you are ready to take the exam.
+\end{itemize}
+
+\section*{\bf Do not click until you are ready to take the exam}
+
+{\bf The Problems}
+\begin{enumerate}
+
+\item {\bf Problem 1 (50 points)}
+
+  All resistors in the following circuit are of $1\,\Omega$
+  and all current sources are of $1\,A$. Find the following
+  currents and voltages in the circuit:
+  \begin{itemize}
+  \item $I_0$ through $R_0$ (rightward)
+  \item $I_1$ through $R_1$ (rightward)
+  \item $I_2$ through $R_2$ (downward)
+  \item $I_3$ through $R_3$ (upward)
+  \item $I_4$ through $R_4$ (leftward)
+  \item $V_0$ between top-right corner (+) and bottom-left corner (-)    
+  \item $V_1$ between top-left corner (+) and bottom-right corner (-)    
+  \end{itemize}
+
+  \htmladdimg{../../lectures/figures/midterm1_18f0.png}
+
+  {\bf Solution:}  Convert all three non-ideal current sources
+  into non-ideal voltage sources of $1\;V$ in series with $1\,\Omega$
+  resistors, find the total current through this loop 
+  $I=(1+1-1)/(1+1+1+1)=1/4\,A$.Alternatively, by loop-current 
+  method arround loop through $R_1,\;R_3,\;R_4,\;R_2$, we have
+  $I+(I+1)+(I-1)+(I-1)=0$, i.e., $I=1/4$. We can further get
+  \begin{itemize}
+  \item $I_0=1\;A$
+  \item $I_1=1/4\;A$
+  \item $I_2=3/4\;A$
+  \item $I_3=-5/4\;A$
+  \item $I_4=-3/4\;A$
+  \item $V_0=1/2$
+  \item $V_1=5/4+1/4+1=5/2$
+  \end{itemize}
+  
+
+\item {\bf Problem 1. (50 points)} 
+
+  In the circuit below, $V=1\,V$, $I=3\,A$, $R_1=1\,\Omega$,
+  $R_2=2\,\Omega$, $R_3=3\,\Omega$, $R_4=8\,\Omega$. 
+
+  \htmladdimg{../../lectures/figures/midterm1_18f1.png}
+
+  \begin{itemize}
+  \item Find the Thevenin's model of the circuit to the left of 
+    $R_L$, in terms of $R_T$ and $V_T$.
+  \item Find the Norton's model of the circuit to the left of 
+    $R_L$, in terms of $R_N$ and $I_N$.
+  \end{itemize}
+
+  Do these two parts independently.
+
+%  \begin{comment}
+  {\bf Solution:} 
+  First find the equivalent resistance used in both models:
+  \[
+  R_T=R_N=2+1||(8+3)＝2+\frac{11}{12}=\frac{35}{12}
+  \]
+  \begin{itemize}
+  \item Thevenin's model: 
+
+    Use superposition to find $V_T=V_{oc}$:
+    Due to voltage source alone
+    \[
+    V_T'=1V\frac{3+8}{3+8+1}=\frac{11}{12}
+    \]
+    Due to current source alone, current through $R_1$ and $R_3$ is
+    $3A\times 8/(8+3+1) =2A$, current through $R_4$ is
+    $3A\times (1+3)/(8+3+1) =1A$, voltega drop across $R_2$ is
+    $-3\times 2=-6V$, voltage drop across $R_1$ is $-2V$, therefore
+    $V''_T=-8V$, and
+    \[
+    V_T=V'_T+V''_T=\frac{11}{12}-8=-\frac{85}{12}
+    \]
+  \item Nordon's model:
+
+    Use superposition to find $I_T=I_{sc}$:
+    Due to voltage source slone
+    \[
+    I'_N=\frac{V}{1+2||(3+8)}\times\frac{8+3}{2+8+3}=\frac{11}{35}
+    \]
+    Due to current source slone:
+    Convert the triangle formed by the three resistors on top
+    (of $1\Omega$, $3\Omega$, and $8 \Omega$) to a Y with
+    $R_a=2/3$ (top-left), $R_b=1/4$ (top-right), $R_c=2$ (bottom),
+    then find current through short circuit on the right by current
+    divider as
+    \[
+    I''_N=-3A\frac{2+2/3}{2+2/3+1/4}=-\frac{96}{35}
+    \]
+    The total current is
+    \[
+    I_N=I'_N-I''_N=\frac{11}{35}-\frac{96}{35}=-\frac{17}{7}
+    \]
+  \end{itemize}
+
+  Nordon's model can be converted to Thevenin's model:
+  \[
+  I_N\times R_N=-\frac{17}{7}\times\frac{35}{12}=-\frac{85}{12}
+  \]
+
+\end{enumerate}
+\end{document}
+
+
+  In the circuit below, $R_5=1\,\Omega$, all other resistors are
+  $2\,\Omega$. $V_1=4\,V$, $V_2=8\,V$, $I_1=2\,A$, $I_2=8\,A$.
+
+  (a) Find the voltage $V$ across, current $I$ through, and poswer
+  $P$ consumed by $R_7=2\,\Omega$.
+  
+
+  (b) If you can change the resistance of $R_7$ for it to consume
+  maximum power, what value should it be? What is this power?
+
+
+
+  {\bf Solution:} 
+  (0) User Thevenin's theorem. Disconnect $R_7$ as the load.
+
+  (1) Convert $I_1=2$ and $R_1=2$ into a voltage source with $V'_1=4\,V$
+  in series with $V_1=4\,V$, we get a voltage of $8\,V$ voltage in series 
+  with $R_1=2$. 
+  
+  (2) Convert $V_2=8$ and $R_4=2$ into a current source $I'_2=4\,A$, in 
+  parallel with $R_4||R_6=2||2=1,\Omega$. Then turn it back to a voltage 
+  source $V'_2=4\,V$ in series with $1,\Omega$. 
+
+  (3) Convert $I_2=8$ and $R_5=1$ into a voltage source of $8\,V$ in series
+  with $R_5=1\,\Omega$.
+
+  (4) Combine the two voltage sources in (2) and (3) to get a voltage of 
+  $4\,V$ in series with a resistor $R_5+R_4||R_6=2\,\Omega$.
+
+  (5) Combine $8\,V$ and $2\,\Omega$ in (1) with $4\,V$ and $1\,\Omega$ 
+  in (4) to get a voltage of $4\,V$ and $1\,\Omega$ to get a voltage of 
+  $4\,V$ in series with a resistance of $4\,\Omega$. Find current $I=1\,A$
+  in the loop.
+
+  (6) $R_T=1\,\Omega$, $V_T=4+1=6\,V$. The current through $R_7=2\,\Omega$
+  is $V_T/(R_T+R_7)=6/3=2\,A$, the voltage across it is $4\,V$, the power
+  consumption is $8\,W$
+
+  (7) For $R_7$ as the load to get maximum power, it needs to be 
+  $R_7=R_T=1\,\Omega$. The voltage across it is $3\,V$, the current 
+  through is $3\,A$, the power consumption is $9\,W$.

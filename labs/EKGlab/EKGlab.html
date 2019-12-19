@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>EKGlab</TITLE>
+<META NAME="description" CONTENT="EKGlab">
+<META NAME="keywords" CONTENT="EKGlab">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="EKGlab.css">
+
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev_g.png">   
+<BR>
+<B> Next:</B> <A
+ HREF="node1.html">About this document ...</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<P>
+<SPAN CLASS="XLARGE"><B>E84 Lab: EKG</B></SPAN>
+
+<P>
+An electrocardiograph (ECG or EKG) plots the electrical 
+activity of the heart over time. The following oscilloscope
+trace shows a typical EKG waveform. The spikes are called the
+QRS complex and correspond to muscle contraction during heart
+beats, with a typical interval of 0.5-1 second depending on 
+subject's heart rate. The signal is very small, on the order 
+of a few milli-volts, and the source impedance is high.
+
+<P>
+Build a two-input EKG signal amplifier based on an instrumentation
+amplifier discussed in
+<A ID="tex2html1"
+  HREF="../..//lectures/opamp/node3.html">here</A>:
+
+<P>
+<IMG STYLE=""
+ SRC="../../lectures/figures/InstrumentationAmplifier.png"
+ ALT="InstrumentationAmplifier.png">
+
+<P>
+Be aware that there may exist some small but non-zero DC offset 
+voltage between the two signal electrodes. You may need to 
+carefully adjust the overall gain of your instrumentation 
+amplifier (by properly selecting the values of the resistors 
+all in kilo-ohm range), so that it is large enough to amplify 
+the desired AC EKG signal for it to be clearly observable, but
+not too large so that the DC component of the output is not 
+pushed to either the top or bottom rail, in which case the AC 
+signal is no longer observable.
+
+<P>
+Also, your circuit may pick up some 50 Hz interference in the 
+environment, which is to be filtered out in a future lab.
+
+<P>
+Two adhesive electrodes (available in the lab) go on your upper 
+chest, above and to the left and right of your heart. A third 
+reference electrode goes on your lower abdomen and connects to 
+ground of your circuit. You may find it easiest to connect to
+them with alligator clips and long wires. The signal of interest
+is the difference between the two electrodes. Your circuit should
+amplify the signal so that it is readable on the oscilloscope.
+
+<P>
+Submit a brief written report containing the following items:
+
+<UL>
+<LI>The circuit with all resistance values
+</LI>
+<LI>The calculated gain and the actual gain
+</LI>
+<LI>A print-out of the amplified EKG signal as the output of 
+  the amplifier
+</LI>
+<LI>A description of the EKG signal in terms of its amplitude, 
+  DC offset, and frequency. 
+</LI>
+</UL>
+
+<P>
+This is a sample EKG signal obtained by an instrumentation 
+amplifier:
+
+<P>
+<IMG STYLE=""
+ SRC="../EKGplot.png"
+ ALT="EKGplot.png">
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A ID="CHILD_LINKS"></A>
+
+<UL CLASS="ChildLinks">
+<LI><A ID="tex2html3"
+  HREF="node1.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev_g.png">   
+<BR>
+<B> Next:</B> <A
+ HREF="node1.html">About this document ...</A></DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

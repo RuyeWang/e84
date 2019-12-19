@@ -1,0 +1,120 @@
+%\documentstyle[12pt]{article}
+\documentclass{article}
+\usepackage{amssymb}
+\usepackage{graphics}
+\usepackage{html}
+%\usepackage{comment}
+\begin{document}
+
+  \htmladdimg{../figures/noninverteramplifier.gif}
+
+  Find the three parameters of this non-inverting amplifier: open-circuit 
+  voltage gain $G_{oc}$, input resistance $R_{in}$ and output resistance $R_{out}$.
+
+  \begin{itemize}
+    \item {\bf Voltage gain:} 
+      \begin{itemize}
+      \item First, we assume $r_{out}=0$, and apply an ideal voltage source $v_s$ 
+        ($R_s=0$) to the positive input so that $v^+=v_s$, and denote the voltage 
+      across $r_{in}$ by $v_0=v^+-v^-$, i.e., $v^-=v_s-v_0$. Applying KCL to 
+      the node of $v^-$, we get
+      \begin{equation} 
+      \frac{-v_0}{r_{in}}+\frac{v_s-v_0}{R_1}+\frac{v_s-v_0-Av_0}{R_f}=0 
+      \end{equation}
+      Solving this for $v_0$, we get:
+      \begin{equation} 
+      v_0=v_s \frac{r_{in}(R_f+R_1)}{R_1R_f+r_{in}R_f+r_{in}R_1(A+1)} 
+      \end{equation}
+      The open-circuit voltage gain is:
+      \begin{equation} 
+      G_{oc}=\frac{v_{out}}{v_{in}}\approx \frac{Av_0}{v_s}
+      =\frac{Ar_{in}(R_f+R_1)}{R_1R_f+r_{in}R_f+r_{in}R_1(A+1)} 
+      \end{equation}
+      As $A\gg 1$ and $r_{in}$ is usually very large, we have
+      \begin{equation} G_{oc}\approx \frac{R_1+R_f}{R_1} \end{equation}
+
+      \item Second, assume $r_{in}\rightarrow \infty$ but $r_{out}\ne 0$,
+	we have
+      \begin{eqnarray} 
+        v_{out}&=&A(v^+-v^-)\frac{R_f+R_1}{r_{out}+R_f+R_1} 
+        =A(v^+-v^-)\frac{R_f+R_1}{r_{out}+R_f+R_1} 
+        \nonumber\\
+        &=&A\left(v_s-v_{out}\frac{R_1}{R_1+R_f}\right) \frac{R_f+R_1}{r_{out}+R_f+R_1} 
+        \nonumber
+      \end{eqnarray}
+      Solving for $v_{out}$ we get
+      \begin{equation}
+      v_{out} =v_s \frac{A(R_f+R_1)}{r_{out}+R_f+(A+1)R_1} 
+      \end{equation}
+      and 
+      \begin{equation}
+      G_{oc}=\frac{v_{out}}{v_s}=\frac{A(R_1+R_f)}{r_{out}+R_f+(A+1)R_1}
+      \approx \frac{A(R_1+R_f)}{AR_1}=\frac{R_1+R_f}{R_1} 
+      \end{equation}
+      The approximation is due to $A\gg 1$ and $r_{out}\ll R_f+R_1$, i.e., 
+      $(R_f+R_1)(r_{out}+R_f+R_1)\approx 1$. 
+
+      \item If we could assume both $r_{in}\rightarrow \infty$ and $r_{out}=0$, 
+      we can apply KCL to the $v^-$ node to get
+      \begin{equation} \frac{v^-}{R_1}+\frac{v^--v_{out}}{R_f}=0, \;\;\;\;\;
+      \mbox{or}\;\;\;\;\; v_{out}=\frac{R_1+R_f}{R_1} v^- \end{equation}
+      But as $v^-\approx v^+=v_s$, we get the same result for $G_{oc}$.
+      \end{itemize}
+
+      In particular, when $R_f=0$, $G_{oc}=1$ and the circut becomes the voltage
+      follower.
+
+    \item {\bf Input resistance:} We let $v^+=v_s$ (with $R_s=0$) and assume
+      the input current is $i_{in}$, then we have $v^+-v^-=r_{in}i_{in}$, i.e.,
+      $v^-=v^+-r_{in}i_{in}=v_s-r_{in}i_{in}$. Applying KCL to the node of $v^-$ 
+      we get:
+      \begin{equation} 
+      i_{in}-\frac{v_s-r_{in}i_{in}}{R_1}-\frac{v_s-r_{in}i_{in}-A r_{in}i_{in}}{R_f+r_{out}}=0 
+      \end{equation}
+      Solving this we get
+      \begin{equation}
+      i_{in}=\frac{v_s(R_f+r_{out}+R_1)}{(R_f+r_{out})(R_1+r_{in})+(A+1)r_{in} R_1}
+      \end{equation}
+      and 
+      \begin{eqnarray}
+        R_{in}&=&\frac{v_s}{i_{in}}
+        =\frac{[(A+1)R_1+R_f+r_{out}]r_{in}+(R_f+r_{out})R_1}{R_1+R_f+r_{out}}
+        \nonumber\\
+        &=&\frac{(A+1)R_1+R_f+r_{out}}{R_1+R_f+r_{out}}r_{in}+R_1||(R_f+r_{out}) 
+        \nonumber
+      \end{eqnarray}
+      The same result can be obtained if we use loop current method.
+      As $A\gg 1$ and $r_{out} \approx 0$, we get
+      \begin{equation} 
+      R_{in}  \approx \frac{(A+1)R_1+R_f}{R_1+R_f}r_{in}+R_1||R_f
+      \approx A r_{in}\frac{R_1}{R_1+R_f}+R_1||R_f \approx A r_{in}\;\frac{R_1}{R_1+R_f}
+      \end{equation}
+      Moreover, when $R_f=0$, $R_{in}\approx A r_{in}$ as in the voltage follower case.
+
+    \item {\bf Output resistance:} 
+      To simplify the analysis we still assume $r_{in}=\infty$. First, as shown above, 
+      the open-circuit output voltage is 
+      \begin{equation} 
+      v_{oc}=\frac{A(R_f+R_1)}{r_{out}+R_f+(A+1)R_1}v_s 
+      \end{equation}
+      Second, we find the short-circuit current, i.e., output port is shorted with
+      $v_{out}=0$, we have $v^-=v_{out}R_1/(R_1+R_f)=0$, and $v^+-v^-=v_s$,
+      \begin{equation} 
+      i_{sc}=\frac{A(v^+-v^-)}{r_{out}}=\frac{Av_s}{r_{out}} 
+      \end{equation}
+      Now the output resistance can be obtained as:
+      \begin{eqnarray}
+        R_{out}&=&\frac{v_{oc}}{i_{sc}}=\frac{A(R_f+R_1)v_s}{r_{out}+R_f+(A+1)R_1} 
+        \frac{r_{out}}{Av_s}
+        \nonumber\\
+        &=&\frac{(R_1+R_f)r_{out}}{r_{out}+R_f+(A+1)R_1}
+        \approx \frac{r_{out}}{A}\;\frac{R_1+R_f}{R_1} 
+        \nonumber
+      \end{eqnarray}
+      The approximation is due to $A\gg 1$. In particular, when $R_f=0$, 
+      $R_{out}=r_{out}/A$, as in the voltage follower case.
+
+  \end{itemize}
+
+\end{document}
+

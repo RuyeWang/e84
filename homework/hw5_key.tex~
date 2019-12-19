@@ -1,0 +1,111 @@
+\documentstyle[11pt]{article}
+\usepackage{html}
+\begin{document}
+\begin{center}
+{\Large \bf E84 Home Work 5}
+\end{center}
+\begin{enumerate}
+
+\item Find the output voltage $v_{out}(t)$ across the right most branch
+containing $R_2$ and $C$, when $\omega=0$ and $\omega\rightarrow \infty$ 
+and the input $v_{in}(t)=V=10\;cos(\omega t)$, assuming $R_1=100\Omega$, 
+$R_2=100\Omega$, $C=10\mu F$ and $L=10\;mH$.
+
+\htmladdimg{../hw6a.gif}
+
+ {\bf Solution}
+ 
+ When $\omega=0$, the inductor is short circuit, and the capacitor is
+ open circuit, $v_{out}(t)=v_{in}(t)$.
+ When $\omega=0$, the inductor is open circuit, and the capacitor is
+ short circuit, $v_{out}(t)=v_{in}(t)/2=5\;cos(\omega_0 t)$.
+
+\item In the circuit below, $V_s=6V$, $R_1=6\Omega$, $R_2=3\Omega$,
+$L=0.5H$, $I_s=2A$. Assume before the switch is closed at $t=0$, the
+system is already stablized. Find current $i_L(t)$ through $L$ and 
+voltage $v_{R_1}$ across $R_1$.
+
+\htmladdimg{../hw5a.gif}
+
+{\bf Solution:}
+
+ $i(0)=V_s/R_1=6/6=1A$, $i(\infty)=V_s/R_1+I_s=1+2=3A$
+
+ Find equivalent resistance (when both energy sources are turned off):
+ $R=R_1 || R_2=3\times 6/(3+6)=2$, $\tau=L/R=0.5/2=0.25\;sec.$
+
+ Final solution:
+ $i_L(t)=3+(1-3)e^{-t/0.25}=3-2 e^{-4t} \; (A)$
+
+ Find $v_{R_1}$: apply KVL to the loop of $V_s$, $R_1$ and $L$, get
+ \[ L\frac{di_L}{dt}+v_{R_1}=V_s	\]
+ \[ v_{R_1}=V_s-L di_L/dt=6-0.5 \frac{d(3-2 e^{-4t})}{dt}=6-4e^{-4t}	\]
+
+\item In the circuit below, $V_s=12V$, $R_1=5\Omega$, $R_2=20\Omega$,
+$R_3=6\Omega$, $C_1=10\mu F$, $C_2=30\mu F$. Assume before the switch 
+is closed at $t=0$, the system is already stablized. Find voltages
+$v_1(t)$ and $v_2(t)$ across capacitors $C_1$ and $C_2$, respectively.
+(Hint, $C_1$ and $C_2$ are two capacitors in series with an equivalent
+capacitance is $C=C_1 C_2/(C_1+C_2)$. $C_1$ and $C_2$ have share the same
+time constant $\tau=RC$.)
+
+\htmladdimg{../hw5b.gif}
+
+{\bf Solution:}
+
+ \[ v_1(0)=v_2(0)=0	\]
+ \[ v_1(\infty)+v_2(\infty)=V_s \frac{R_2}{R_1+R_2}
+ 	=12 \frac{20}{5+20}=9.6V	\]
+ As voltage $V$ across a capacitor is inversely proportional to $C$, and 
+ $C1$ and $C2$ store the same charge $Q=v_1C_1=v_2C_2$, we have
+ \[	\frac{v_1(\infty)}{v_2(\infty)}=\frac{C_2}{C_1}=3	\]
+ i.e., $v_1(\infty)=3v_2(\infty)$, and we get $v_1(\infty)=7.2V$,
+ $v_2(\infty)=2.4V$.
+ Find equivalent resistance: 
+ \[ R=R_3+\frac{R_1 R_2}{R_1+R_2}=6+\frac{5\times 20}{5+20}=10\Omega \]
+ Find equivalent capacitance: $C_1 C_2/(C_1+C_2)=30\times 10/(30+10)=7.5$. 
+ Find time constant: $\tau=RC=10\times 7.5\times 10^{-6}=7.5\times 10^{-5}$.
+ Find $v_1(t)$ and $v_2(t)$:
+ $v_1(t)=7.2(1-e^{-t/(7.5\times 10^{-5})})$
+ $v_2(t)=2.4(1-e^{-t/(7.5\times 10^{-5})})$
+
+\item An RCL parallel circuit containing $R=20\Omega$, $L=400 \mu H$,
+$C=1 \mu F$ is driven by a current source $I=50 \mu A$ with variable 
+frequency. Find resonant frequency, the quality factor, and the voltage
+across and the currents through each of the three components at resonance.
+
+{\bf Solution:}
+
+ \[ \omega_0=\frac{1}{\sqrt{LC}}=\frac{1}{\sqrt{10^{-6}\times 400 \times 10^{-6}}}
+ 	=\frac{1}{20 \times 10^{-6}}=5 \times 10^4	\]
+ \[ Q=\frac{1}{G}\sqrt{\frac{C}{L}}=R\sqrt{\frac{C}{L}}
+ =20\sqrt{\frac{10^{-6}}{400\times 10^{-6}}}=1	\]
+ $v=i\times R=50 \mu A \times 20 \Omega=1 mV$, $i_R=50 \mu A$,
+ $i_L=i_C=Q i_R=50 \mu A$.
+ 
+ 
+\item An RCL series circuit is driven by a voltage source $V=10V$ of
+frequency $\omega=10^4 \;rad/sec.$. The variable capacitor $C$ is
+adjusted so the the maximual current of $100\;mA$ is achieved. The
+voltage across this capacitor is $600V$. Find the values for $R$, $L$,
+$C$ and the quality factor $Q$.
+
+{\bf Solution:}
+
+ At resonance, $v_L=-v_C=-600V$. $R=V/I=10V/0.1A=100\Omega$, $v_R=V=10V$.
+ $Q=600/10=60$.  
+ \[ \frac{1}{R}\sqrt{\frac{L}{C}}=Q=60	\]
+ \[ \frac{1}{\sqrt{LC}}=\omega_0=10000 \]
+ Solve for $L$ and $C$: $L=0.6H$, $C=10^{-7}/6 F$
+
+\end{enumerate}
+\end{document}
+
+\item In the parallel resonant circuit shown in the figure, $L=0.25\;mH$,
+$R=25\Omega$, $C=85\;pF$. Find resonant frequency, and the impedance at r
+esonance.
+
+\htmladdimg{../hw5c.gif}
+
+\[	Y=\frac{1}{R+j\omega L}+j\omega C=	\]
+

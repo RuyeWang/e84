@@ -1,0 +1,946 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Active Components and Circuits</TITLE>
+<META NAME="description" CONTENT="Active Components and Circuits">
+<META NAME="keywords" CONTENT="ch2">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="ch2.css">
+
+<LINK REL="previous" HREF="node4.html">
+<LINK REL="next" HREF="node6.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node6.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node4.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node6.html">About this document ...</A>
+<B> Up:</B> <A
+ HREF="node1.html">Chapter 2: Circuit Principles</A>
+<B> Previous:</B> <A
+ HREF="node4.html">Two-Port Networks</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION00014000000000000000">
+Active Components and Circuits</A>
+</H2>
+
+<P>
+All circuits we have discussed so far are only composed of passive components 
+(resistors, capacitors and inductors) driven by current and/or voltage 
+sources. Later we will consider circuits containing active components such
+as bipolar junction transistors (BJT), field-effect transistors (FET), 
+<A ID="tex2html7"
+  HREF="../opamp/index.html">operational amplifiers (op-amps)</A>
+containing many transistors, and voltage amplifiers. These active components
+can be considered as controlled voltage or current sources as functions 
+(typically linear) of the input voltage or current. 
+
+<P>
+
+<UL>
+<LI>We first consider modeling the overall function and performance of 
+  an active component (instead of its internal structure and implementation
+  which may be very complicated) by the following three parameters:
+  
+<UL>
+<LI><B>Input impedance (resistance) <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img400.svg"
+ ALT="$r_{in}$"></SPAN>:</B> It is desirable to have
+    a large <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img400.svg"
+ ALT="$r_{in}$"></SPAN> so that little input current is drawn from the source, 
+    i.e., the source is minimally affected by the amplifier as a load. 
+    Ideally <!-- MATH
+ $r_{in}=\infty$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img401.svg"
+ ALT="$r_{in}=\infty$"></SPAN>. 
+</LI>
+<LI><B>Output impedance (resistance) <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img402.svg"
+ ALT="$r_{out}$"></SPAN>:</B> It is desirable to 
+    have a small <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img402.svg"
+ ALT="$r_{out}$"></SPAN> so that little voltage drop across this resistance 
+    will result when the load of the amplifier draws a current from the 
+    amplifier, i.e., the load will minimally affect the output voltage of 
+    the amplifier.
+</LI>
+<LI><B>Voltage gain <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img403.svg"
+ ALT="$G_v$"></SPAN></B> (or <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img404.svg"
+ ALT="$A$"></SPAN> in op-amp):
+    The open-circuit voltage <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img405.svg"
+ ALT="$v_{out}$"></SPAN> across the output port is related 
+    to the input voltage <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img406.svg"
+ ALT="$v_{in}$"></SPAN> by <!-- MATH
+ $v_{out}=G_v v_{in}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img407.svg"
+ ALT="$v_{out}=G_v v_{in}$"></SPAN>.
+</LI>
+<LI><B>Current gain <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img408.svg"
+ ALT="$G_a$"></SPAN></B> (or <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img409.svg"
+ ALT="$\beta$"></SPAN> in BJT transistor):
+    The short-circuit current <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img410.svg"
+ ALT="$i_{out}$"></SPAN> through the output port is related 
+    to the input current <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img411.svg"
+ ALT="$i_{in}$"></SPAN> by <!-- MATH
+ $i_{out}=G_a i_{in}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img412.svg"
+ ALT="$i_{out}=G_a i_{in}$"></SPAN>.
+  
+</LI>
+</UL>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/2portExamples.png"
+ ALT="2portExamples.png">
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/TransistorOpampModels.png"
+ ALT="TransistorOpampModels.png">
+
+<P>
+<B>Example 1:</B> Consider the circuit below containing an active component,
+  a voltage amplifier, model by the three parameters <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img400.svg"
+ ALT="$r_{in}$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img402.svg"
+ ALT="$r_{out}$"></SPAN> and 
+  <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img403.svg"
+ ALT="$G_v$"></SPAN>, driven by either a current source <!-- MATH
+ $i_s=v_s/R_S$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img413.svg"
+ ALT="$i_s=v_s/R_S$"></SPAN> or a voltage <!-- MATH
+ $v_s=i_sR_S$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img414.svg"
+ ALT="$v_s=i_sR_S$"></SPAN> 
+  with internal resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img415.svg"
+ ALT="$R_S$"></SPAN>:
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/voltageamplifierex1.gif"
+ ALT="voltageamplifierex1.gif">
+  <IMG STYLE=""
+ SRC="../figures/voltageamplifierex2.gif"
+ ALT="voltageamplifierex2.gif">
+
+<P>
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_{in}=i_s (R_S \,||\, r_{in})=i_s \frac{R_S\; r_{in}}{R_S+r_{in}}
+    =v_s \frac{r_{in}}{R_S+r_{in}} 
+  
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img416.svg"
+ ALT="$\displaystyle v_{in}=i_s (R_S \,\vert\vert\, r_{in})=i_s \frac{R_S\; r_{in}}{R_S+r_{in}}
+=v_s \frac{r_{in}}{R_S+r_{in}}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">129</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_{out}=G_v v_{in} \frac{R_L}{R_L+r_{out}}
+    =G_v i_s \frac{R_S \;r_{in}}{R_S+r_{in}} \frac{R_L}{R_L+r_{out}}
+    =G_v v_s \frac{r_{in}}{R_S+r_{in}} \frac{R_L}{R_L+r_{out}} 
+  
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img417.svg"
+ ALT="$\displaystyle v_{out}=G_v v_{in} \frac{R_L}{R_L+r_{out}}
+=G_v i_s \frac{R_S \;r...
+...ac{R_L}{R_L+r_{out}}
+=G_v v_s \frac{r_{in}}{R_S+r_{in}} \frac{R_L}{R_L+r_{out}}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">130</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Given <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img415.svg"
+ ALT="$R_S$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img116.svg"
+ ALT="$R_L$"></SPAN>, we want to maximize <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img405.svg"
+ ALT="$v_{out}$"></SPAN> by
+  maximizing <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img400.svg"
+ ALT="$r_{in}$"></SPAN> and minimizing <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img402.svg"
+ ALT="$r_{out}$"></SPAN>.
+
+<P>
+</LI>
+<LI>We next consider a circuit containing an active circuit such as 
+  a transistor, an op-amp, or a voltage amplifier. This circuit can be 
+  modeled as a two-port network with input port between terminals A 
+  and B and output port between terminals C and D, and described in 
+  terms of the three parameters, the open-circuit voltage gain, the 
+  input resistance and output resistance:
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/TwoPortModel.png"
+ ALT="TwoPortModel.png">
+
+<P>
+
+<UL>
+<LI><B>Input resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img418.svg"
+ ALT="$R_{in}$"></SPAN>:</B> This is the resistance between 
+    the two terminals A and B of the input port, while a load <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img116.svg"
+ ALT="$R_L$"></SPAN> is 
+    connected to the output port between terminals C and D:
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+R_{in}=\frac{\mbox{voltage $v_{in}$\  across the input port}}
+      {\mbox{current $i_{in}$\  through the input port}}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.16ex; " SRC="img419.svg"
+ ALT="$\displaystyle R_{in}=\frac{\mbox{voltage $v_{in}$\ across the input port}}
+{\mbox{current $i_{in}$\ through the input port}}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">131</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+In general <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img418.svg"
+ ALT="$R_{in}$"></SPAN> is affected by the load <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img116.svg"
+ ALT="$R_L$"></SPAN>.
+</LI>
+<LI><B>Output resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img420.svg"
+ ALT="$R_{out}$"></SPAN>:</B> According to Thevenin's theorem, 
+    any one-port network can be treated as an ideal voltage source <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img421.svg"
+ ALT="$v_T$"></SPAN> in 
+    series with a resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img120.svg"
+ ALT="$R_T$"></SPAN>. We apply this theorem to the output port
+    and define the output resistance as the Thevenin resistance 
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+R_{out}=\frac{\mbox{open-circuit voltage}}{\mbox{short-circuit current}}
+      =\frac{v_{oc}=v_T\;\;(R_L=\infty)}{i_{sc}=v_T/R_T\;\;(R_L=0)}=R_T
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img422.svg"
+ ALT="$\displaystyle R_{out}=\frac{\mbox{open-circuit voltage}}{\mbox{short-circuit current}}
+=\frac{v_{oc}=v_T\;\;(R_L=\infty)}{i_{sc}=v_T/R_T\;\;(R_L=0)}=R_T$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">132</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+while a voltage source <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img423.svg"
+ ALT="$v_s$"></SPAN> with an internal resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img415.svg"
+ ALT="$R_S$"></SPAN> is applied 
+    to the input port. In general, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img420.svg"
+ ALT="$R_{out}$"></SPAN> is affected by <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img415.svg"
+ ALT="$R_S$"></SPAN> of the source.
+</LI>
+<LI><B>The open-circuit voltage gain <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img424.svg"
+ ALT="$A_{oc}$"></SPAN>:</B> This is the ratio of the 
+    open-circuit output voltage <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img425.svg"
+ ALT="$v_{oc}$"></SPAN> (<!-- MATH
+ $R_L=\infty$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img426.svg"
+ ALT="$R_L=\infty$"></SPAN>) to an ideal voltage 
+    source <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img423.svg"
+ ALT="$v_s$"></SPAN> 
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+A_{oc}=\frac{\mbox{open-circuit voltage}}{\mbox{ideal voltage source}}
+      =\frac{v_{oc}}{v_{in}}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.16ex; " SRC="img427.svg"
+ ALT="$\displaystyle A_{oc}=\frac{\mbox{open-circuit voltage}}{\mbox{ideal voltage source}}
+=\frac{v_{oc}}{v_{in}}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">133</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+</UL>
+
+<P>
+</LI>
+</UL>
+
+<P>
+<B>Example 2:</B> 
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/voltageamplifierex3.gif"
+ ALT="voltageamplifierex3.gif">
+
+<P>
+Find <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img418.svg"
+ ALT="$R_{in}$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img420.svg"
+ ALT="$R_{out}$"></SPAN>, and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img424.svg"
+ ALT="$A_{oc}$"></SPAN> of this two-port network containing
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img83.svg"
+ ALT="$R_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img84.svg"
+ ALT="$R_2$"></SPAN> as well as the amplifier modeled by <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img400.svg"
+ ALT="$r_{in}$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img402.svg"
+ ALT="$r_{out}$"></SPAN> 
+and the open-circuit voltage gain <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img403.svg"
+ ALT="$G_v$"></SPAN>. 
+
+<P>
+
+<UL>
+<LI><B>Input resistance:</B> By inspection, the input resistance of this
+  2-port network can be found to be <!-- MATH
+ $R_{in}=R_1+r_{in}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img428.svg"
+ ALT="$R_{in}=R_1+r_{in}$"></SPAN>.
+
+<P>
+</LI>
+<LI><B>Output resistance:</B> We assume the internal voltage source 
+  is the Thevenin voltage <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img421.svg"
+ ALT="$v_T$"></SPAN>, and get the open-circuit voltage 
+  <!-- MATH
+ $v_{oc}=v_T R_2/(r_{out}+R_2)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img429.svg"
+ ALT="$v_{oc}=v_T R_2/(r_{out}+R_2)$"></SPAN> and the short-circuit current
+  <!-- MATH
+ $i_{sc}=v_T/r_{out}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img430.svg"
+ ALT="$i_{sc}=v_T/r_{out}$"></SPAN>. The output resistance is
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+R_{out}=\frac{v_{oc}}{i_{sc}}=\frac{r_{out}R_2}{r_{out}+R_2}=r_{out}\,||\,R_2
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img431.svg"
+ ALT="$\displaystyle R_{out}=\frac{v_{oc}}{i_{sc}}=\frac{r_{out}R_2}{r_{out}+R_2}=r_{out}\,\vert\vert\,R_2$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">134</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Alternatively, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img420.svg"
+ ALT="$R_{out}$"></SPAN> can be found as the resistance between the two 
+  terminals C and D of the output port when the voltage source of the amplifier 
+  is turned off (short-circuit), i.e., <!-- MATH
+ $R_{out}=r_{out}\,||\,R_2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img432.svg"
+ ALT="$R_{out}=r_{out}\,\vert\vert\,R_2$"></SPAN>.
+
+<P>
+</LI>
+<LI><B>Open-circuit voltage gain:</B> This is the ratio of the voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img433.svg"
+ ALT="$V_{CD}$"></SPAN>
+  across the output port to the voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img434.svg"
+ ALT="$V_{AB}$"></SPAN> across the input port, when the
+  output port is an open circuit, i.e., <!-- MATH
+ $R_L=\infty$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img426.svg"
+ ALT="$R_L=\infty$"></SPAN>. 
+  <BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+v_{in}&=&V_{AB}\frac{r_{in}}{R_1+r_{in}}
+    \nonumber \\
+    V_{CD}&=&A v_{in} \frac{R_2}{r_{out}+R_2}=A V_{AB}\frac{r_{in}}{R_1+r_{in}} 
+    \frac{R_2}{r_{out}+R_2} 
+    \nonumber \\
+    A_{oc}&=&\frac{V_{CD}}{V_{AB}}=\frac{A R_2 r_{in}}{(R_1+r_{in})(r_{out}+R_2)} 
+    \stackrel{r_{in}\rightarrow\infty\;\;r_{out}=0}{\Longrightarrow}A
+  
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img435.svg"
+ ALT="$\displaystyle v_{in}$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img10.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 4.88ex; vertical-align: -2.06ex; " SRC="img436.svg"
+ ALT="$\displaystyle V_{AB}\frac{r_{in}}{R_1+r_{in}}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img437.svg"
+ ALT="$\displaystyle V_{CD}$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img10.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img438.svg"
+ ALT="$\displaystyle A v_{in} \frac{R_2}{r_{out}+R_2}=A V_{AB}\frac{r_{in}}{R_1+r_{in}}
+\frac{R_2}{r_{out}+R_2}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img439.svg"
+ ALT="$\displaystyle A_{oc}$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img10.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img440.svg"
+ ALT="$\displaystyle \frac{V_{CD}}{V_{AB}}=\frac{A R_2 r_{in}}{(R_1+r_{in})(r_{out}+R_2)}
+\stackrel{r_{in}\rightarrow\infty\;\;r_{out}=0}{\Longrightarrow}A$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">135</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+</LI>
+</UL>
+This 2-port network modeled as a voltage amplifier with <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img418.svg"
+ ALT="$R_{in}$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img420.svg"
+ ALT="$R_{out}$"></SPAN>
+and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img424.svg"
+ ALT="$A_{oc}$"></SPAN> can be used in more complicated circuits.
+
+<P>
+<B>Example 3:</B> 
+
+<P>
+A 2-port network with a voltage aplifier modeled by <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img400.svg"
+ ALT="$r_{in}$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img402.svg"
+ ALT="$r_{out}$"></SPAN> and
+voltage gain <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img404.svg"
+ ALT="$A$"></SPAN> on the left can be modeled by the circuit on the right. 
+Find the parameters <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img418.svg"
+ ALT="$R_{in}$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img420.svg"
+ ALT="$R_{out}$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img424.svg"
+ ALT="$A_{oc}$"></SPAN> of the two-port network 
+with the voltage amplifier embedded.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/voltageamplifierex4.gif"
+ ALT="voltageamplifierex4.gif">
+
+<P>
+
+<UL>
+<LI><B>Open-circuit voltage gain:</B> As the output port is open circuit, 
+  the output current is zero and so is the voltage drop across <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img402.svg"
+ ALT="$r_{out}$"></SPAN>.
+  Applying an ideal voltage source <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img423.svg"
+ ALT="$v_s$"></SPAN> to the input, we get the voltage 
+  <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img406.svg"
+ ALT="$v_{in}$"></SPAN> across <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img400.svg"
+ ALT="$r_{in}$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img441.svg"
+ ALT="$v_1$"></SPAN> across <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img83.svg"
+ ALT="$R_1$"></SPAN>, respectively:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_{in}=v_s \frac{r_{in}}{R_1+r_{in}},\;\;\;\;\;
+    v_1=v_s \frac{R_1}{R_1+r_{in}}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img442.svg"
+ ALT="$\displaystyle v_{in}=v_s \frac{r_{in}}{R_1+r_{in}},\;\;\;\;\;
+v_1=v_s \frac{R_1}{R_1+r_{in}}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">136</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The open-circuit voltage across output port is therefore:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_{oc}=v_1+A v_{in}=v_s \frac{R_1}{R_1+r_{in}}+Av_s\frac{r_{in}}{R_1+r_{in}}
+    =v_s \frac{R_1+A r_{in}}{R_1+r_{in}}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img443.svg"
+ ALT="$\displaystyle v_{oc}=v_1+A v_{in}=v_s \frac{R_1}{R_1+r_{in}}+Av_s\frac{r_{in}}{R_1+r_{in}}
+=v_s \frac{R_1+A r_{in}}{R_1+r_{in}}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">137</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The open-circuit voltage gain can be found as the ratio of the open-circuit
+  output voltage to the input voltage:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+A_{oc}=\frac{v_{oc}}{v_s}=\frac{R_1+A r_{in}}{R_1+r_{in}}<A
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img444.svg"
+ ALT="$\displaystyle A_{oc}=\frac{v_{oc}}{v_s}=\frac{R_1+A r_{in}}{R_1+r_{in}}&lt;A$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">138</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+if <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img445.svg"
+ ALT="$R_1=0$"></SPAN>, the circuit is reduced to the original voltage amplifier and we
+  have <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img446.svg"
+ ALT="$A_{oc}=A$"></SPAN>.
+
+<P>
+</LI>
+<LI><B>Output resistance:</B> 
+
+<P>
+We first find the short-circuit current <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img447.svg"
+ ALT="$i_{sc}$"></SPAN> 
+  at the output port. Assume a voltage source <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img423.svg"
+ ALT="$v_s$"></SPAN> with internal resistance 
+  <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img415.svg"
+ ALT="$R_S$"></SPAN> is applied to the input port while the output port is short-circuited.
+  Applying KVL to the two loops of the circuit, we get:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_s=(R_S+R_1+r_{in})i_{in}-R_1 i_{sc}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img448.svg"
+ ALT="$\displaystyle v_s=(R_S+R_1+r_{in})i_{in}-R_1 i_{sc}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">139</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+A v_{in}=A r_{in} i_{in}=(r_{out}+R_1) i_{sc}-R_1 i_{in}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img449.svg"
+ ALT="$\displaystyle A v_{in}=A r_{in} i_{in}=(r_{out}+R_1) i_{sc}-R_1 i_{in}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">140</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Solving these two equations for the two unknowns <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img411.svg"
+ ALT="$i_{in}$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img447.svg"
+ ALT="$i_{sc}$"></SPAN>, we get
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+i_{sc}=v_s \frac{Ar_{in}+R_1}{(1-A)R_1 r_{in} +r_{out}(R_S+r_{in}+R_1)+R_SR_1}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img450.svg"
+ ALT="$\displaystyle i_{sc}=v_s \frac{Ar_{in}+R_1}{(1-A)R_1 r_{in} +r_{out}(R_S+r_{in}+R_1)+R_SR_1}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">141</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The open-circuit output voltage <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img425.svg"
+ ALT="$v_{oc}$"></SPAN> is 
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_{oc}=Ar_{in}i_{in}+R_1i_{in}=(Ar_{in}+R_1)\frac{v_s}{R_S+r_{in}+R_1}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.88ex; vertical-align: -2.06ex; " SRC="img451.svg"
+ ALT="$\displaystyle v_{oc}=Ar_{in}i_{in}+R_1i_{in}=(Ar_{in}+R_1)\frac{v_s}{R_S+r_{in}+R_1}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">142</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Now the output resistance can be found to be:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+R_{out}=\frac{v_{oc}}{i_{sc}}
+    =\frac{(1-A)r_{in}R_1+r_{out}(R_S+r_{in}+R_1)+R_SR_1}{R_S+r_{in}+R_1}
+    =r_{out}+\frac{(1-A) r_{in}R_1 +R_SR_1}{R_1+r_{in}+R_S}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.06ex; " SRC="img452.svg"
+ ALT="$\displaystyle R_{out}=\frac{v_{oc}}{i_{sc}}
+=\frac{(1-A)r_{in}R_1+r_{out}(R_S+r...
+...R_SR_1}{R_S+r_{in}+R_1}
+=r_{out}+\frac{(1-A) r_{in}R_1 +R_SR_1}{R_1+r_{in}+R_S}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">143</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Note that <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img420.svg"
+ ALT="$R_{out}$"></SPAN> is affected by internal resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img415.svg"
+ ALT="$R_S$"></SPAN> of the source.
+  When <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img453.svg"
+ ALT="$R_S=0$"></SPAN>, 
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+R_{out}\stackrel{R_S=0}{\Longrightarrow} r_{out}-(A-1) r_{in}\,||\,R_1 < r_{out}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.72ex; vertical-align: -0.70ex; " SRC="img454.svg"
+ ALT="$\displaystyle R_{out}\stackrel{R_S=0}{\Longrightarrow} r_{out}-(A-1) r_{in}\,\vert\vert\,R_1 &lt; r_{out}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">144</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+i.e., the output resistance is much reduced. Moreover, when <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img445.svg"
+ ALT="$R_1=0$"></SPAN>, 
+  <!-- MATH
+ $R_{out}=r_{out}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img455.svg"
+ ALT="$R_{out}=r_{out}$"></SPAN>.
+
+<P>
+</LI>
+<LI><B>Input resistance:</B> This can be found by applying an ideal voltage
+  source <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img423.svg"
+ ALT="$v_s$"></SPAN> to the input port, while the output port is connected to a 
+  load <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img116.svg"
+ ALT="$R_L$"></SPAN>. The input resistance is <!-- MATH
+ $R_{in}=v_s/i_{in}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img456.svg"
+ ALT="$R_{in}=v_s/i_{in}$"></SPAN> where <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img411.svg"
+ ALT="$i_{in}$"></SPAN> is
+  the input current. Applying the KVL to the two loops of this circuit, we
+  get
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_s=(r_{in}+R_1) i_{in}-R_1 i_{out}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img457.svg"
+ ALT="$\displaystyle v_s=(r_{in}+R_1) i_{in}-R_1 i_{out}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">145</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+A v_{in}=Ar_{in}i_{in}=(r_{out}+R_L+R_1)i_{out}-R_1i_{in}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img458.svg"
+ ALT="$\displaystyle A v_{in}=Ar_{in}i_{in}=(r_{out}+R_L+R_1)i_{out}-R_1i_{in}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">146</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Solving these two equations for the two unknowns <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img411.svg"
+ ALT="$i_{in}$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img410.svg"
+ ALT="$i_{out}$"></SPAN>,
+  we get
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+i_{in}=v_s \frac{R_1+R_L+r_{out}}{(R_L+r_{out})(R_1+r_{in})+(1-A)R_1r_{in}}
+    \stackrel{R_L\rightarrow \infty}{\Longrightarrow} \frac{v_s}{r_{in}+R_1}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img459.svg"
+ ALT="$\displaystyle i_{in}=v_s \frac{R_1+R_L+r_{out}}{(R_L+r_{out})(R_1+r_{in})+(1-A)...
+..._{in}}
+\stackrel{R_L\rightarrow \infty}{\Longrightarrow} \frac{v_s}{r_{in}+R_1}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">147</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Now the input resistance can be found to be
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+R_{in}=\frac{v_s}{i_{in}}=\frac{(R_L+r_{out})(R_1+r_{in})+(1-A)R_1r_{in}}{R_1+R_L+r_{out}}
+    \stackrel{R_L\rightarrow \infty}{\Longrightarrow} R_1+r_{in}>r_{in}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.06ex; " SRC="img460.svg"
+ ALT="$\displaystyle R_{in}=\frac{v_s}{i_{in}}=\frac{(R_L+r_{out})(R_1+r_{in})+(1-A)R_...
+..._L+r_{out}}
+\stackrel{R_L\rightarrow \infty}{\Longrightarrow} R_1+r_{in}&gt;r_{in}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">148</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Note that <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img418.svg"
+ ALT="$R_{in}$"></SPAN> is affected by the load <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img116.svg"
+ ALT="$R_L$"></SPAN>. When <!-- MATH
+ $R_L=\infty$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img426.svg"
+ ALT="$R_L=\infty$"></SPAN>,
+  <!-- MATH
+ $R_{in}=R_1+r_{in}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img428.svg"
+ ALT="$R_{in}=R_1+r_{in}$"></SPAN>, i.e., the input resistance is much increased. 
+  Moreover, if <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img445.svg"
+ ALT="$R_1=0$"></SPAN>, the circuit is reduced to the original voltage 
+  amplifier with <!-- MATH
+ $R_{in}=r_{in}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img461.svg"
+ ALT="$R_{in}=r_{in}$"></SPAN>.
+</LI>
+</UL>
+In summary, the resistor <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img83.svg"
+ ALT="$R_1$"></SPAN> shared by both the input and output loops
+serves as a negative feedback:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_s\uparrow \rightarrow i_{in}, v_{out}\uparrow \rightarrow v_1\uparrow
+  \rightarrow i_{in}, v_{out}\downarrow 
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img462.svg"
+ ALT="$\displaystyle v_s\uparrow \rightarrow i_{in}, v_{out}\uparrow \rightarrow v_1\uparrow
+\rightarrow i_{in}, v_{out}\downarrow$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">149</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+As the result, the voltage gain <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img424.svg"
+ ALT="$A_{oc}$"></SPAN> is reduced but both the input and
+output resistances are improved, i.e., <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img418.svg"
+ ALT="$R_{in}$"></SPAN> is increased and the <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img420.svg"
+ ALT="$R_{out}$"></SPAN>
+is reduced.
+
+<P>
+<B>Example 4:</B> (Homework)
+
+<P>
+The transistor emitter follower and the op-amp buffer shown below 
+are very important circuits which find wide applications in 
+practice. These two circuits can be similarly modeled based on the 
+individual models of the transistor and the an op-amp (the inner
+dashed boxes), also shown in the figure. Note that the two models 
+are equivalent (the outter dashed boxes), as the non-ideal current 
+and voltage in the models can be converted to each other.
+
+<P>
+<IMG STYLE="" SRC="../figures/BufferModels.png"
+ ALT="BufferModels.png">
+
+<P>
+The parameter <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img409.svg"
+ ALT="$\beta$"></SPAN> of the transistor model is its current gain,
+and the parameter <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img404.svg"
+ ALT="$A$"></SPAN> of the op-amp model is its voltage gain, both
+of them are much greater than 1. And for the op-amp, we also have
+<!-- MATH
+ $r_{in}>>r_{out}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.46ex; " SRC="img463.svg"
+ ALT="$r_{in}&gt;&gt;r_{out}$"></SPAN>.
+
+<P>
+We can now find the three parameters of the model of the two circuits:
+
+<P>
+
+<UL>
+<LI>The input resistance <!-- MATH
+ $R_{in}=V_s/i_{in}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img464.svg"
+ ALT="$R_{in}=V_s/i_{in}$"></SPAN>, where <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img465.svg"
+ ALT="$V_s$"></SPAN> is the source
+  voltage applied across A and B, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img411.svg"
+ ALT="$i_{in}$"></SPAN> is the current through the 
+  input port, when a load <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img116.svg"
+ ALT="$R_L$"></SPAN> is connected to the output port between
+  C and D.
+</LI>
+<LI>The output resistance <!-- MATH
+ $R_{out}=v_{oc}/i_{sc}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img466.svg"
+ ALT="$R_{out}=v_{oc}/i_{sc}$"></SPAN>, where <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img425.svg"
+ ALT="$v_{oc}$"></SPAN> and
+  <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img447.svg"
+ ALT="$i_{sc}$"></SPAN> are the open-circuit voltage and short-circuit current when
+  an ideal source voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img465.svg"
+ ALT="$V_s$"></SPAN> (with <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img453.svg"
+ ALT="$R_S=0$"></SPAN>) is applied to the input 
+  port.
+</LI>
+<LI>The open-circuit gain <!-- MATH
+ $A_{oc}=V_{oc}/V_{sc}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img467.svg"
+ ALT="$A_{oc}=V_{oc}/V_{sc}$"></SPAN>.
+</LI>
+</UL>
+
+<P>
+<A ID="tex2html8"
+  HREF="../ch2_sub1/index.html">Answer</A>
+<P>
+<B>Example 5:</B> (Homework)
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/voltageamplifierex6.gif"
+ ALT="voltageamplifierex6.gif">
+
+<P>
+Two amplifiers with parameters <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img468.svg"
+ ALT="$A_1$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img469.svg"
+ ALT="$r_{i1}$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img470.svg"
+ ALT="$r_{o1}$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img471.svg"
+ ALT="$A_2$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img472.svg"
+ ALT="$r_{i2}$"></SPAN>, 
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img473.svg"
+ ALT="$r_{o2}$"></SPAN>, respectively, can be connected in cascade as shown in the figure. 
+Given a voltage source <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img423.svg"
+ ALT="$v_s$"></SPAN> in series with an internal resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img415.svg"
+ ALT="$R_S$"></SPAN>,
+find the output voltage. To maximize the output <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img405.svg"
+ ALT="$v_{out}$"></SPAN>, how would you 
+change the values of the six parameters?
+
+<P>
+Find the power gain <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.78ex; " SRC="img474.svg"
+ ALT="$G_p$"></SPAN> of the system.
+
+<P>
+<A ID="tex2html9"
+  HREF="../ch2_sub2/index.html">Answer</A>
+<P>
+<B>Example 6:</B> (Homework)
+
+<P>
+The input and output resistances <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img418.svg"
+ ALT="$R_{in}$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img420.svg"
+ ALT="$R_{out}$"></SPAN>, as well as the voltage 
+gain <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img424.svg"
+ ALT="$A_{oc}$"></SPAN> of a two-port network can be obtained experimentally. First,
+connect an ideal voltage source <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img423.svg"
+ ALT="$v_s$"></SPAN> (a new battery with very low internal
+resistance) in series with a resistor <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img415.svg"
+ ALT="$R_S$"></SPAN>, and then connect load <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img116.svg"
+ ALT="$R_L$"></SPAN> of
+two different resistances to the output port. Now the three parameters can
+be derived from the known values of <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img423.svg"
+ ALT="$v_s$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img415.svg"
+ ALT="$R_S$"></SPAN> and the two measurements of
+the load voltage <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img405.svg"
+ ALT="$v_{out}$"></SPAN>, corresponding to the two resistance values used.
+
+<P>
+Assume <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img475.svg"
+ ALT="$v_s=1.5V$"></SPAN>, <!-- MATH
+ $R_S=5 k\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img476.svg"
+ ALT="$R_S=5 k\Omega$"></SPAN>, and the input voltage is measured to be 
+<!-- MATH
+ $v_{in}=1.25 V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img477.svg"
+ ALT="$v_{in}=1.25 V$"></SPAN>; also, assume the two different load resistors used are 
+<!-- MATH
+ $R_1=150 \Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img478.svg"
+ ALT="$R_1=150 \Omega$"></SPAN> and <!-- MATH
+ $R_2=200 \Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img479.svg"
+ ALT="$R_2=200 \Omega$"></SPAN> respectively, with the two corresponding
+output voltage <!-- MATH
+ $v_1=18.75V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img480.svg"
+ ALT="$v_1=18.75V$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.46ex; " SRC="img481.svg"
+ ALT="$v_2=20$"></SPAN>. Find <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img418.svg"
+ ALT="$R_{in}$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img420.svg"
+ ALT="$R_{out}$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img424.svg"
+ ALT="$A_{oc}$"></SPAN>.
+
+<P>
+<A ID="tex2html10"
+  HREF="../ch2_sub3/index.html">Answer</A>
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node6.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node4.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node6.html">About this document ...</A>
+<B> Up:</B> <A
+ HREF="node1.html">Chapter 2: Circuit Principles</A>
+<B> Previous:</B> <A
+ HREF="node4.html">Two-Port Networks</A></DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

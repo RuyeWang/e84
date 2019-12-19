@@ -1,0 +1,169 @@
+\documentstyle[11pt]{article}
+\usepackage{html}
+\begin{document}
+\begin{center}
+{\Large \bf  E84 Home Work 10}
+\end{center}
+\begin{enumerate}
+
+\item In a control system, the three inputs voltages $v_1$, $v_2$ 
+and $v_3$ represent, respectively, temperature, pressure and velocity
+of the process under control. According to the control strategy, the
+output need to be $v_o=-2v_1-10v_2-0.5v_3$. Design a summer-inverter 
+shown below as the controller.  It is usually desirable for both 
+inputs of the opamp to have the same resistance to ground, i.e.,
+$R_0=R_1||R_2||R_3$. It is given that $R_f=100k\Omega$.
+
+\htmladdimg{../hw10i.gif}
+
+{\bf Solution:}
+
+The output of the circuit is
+\[ v_o=-(\frac{R_f}{R_1}v_1+\frac{R_f}{R_2}v_2+\frac{R_f}{R_3}v_3) \]
+For the controller, we need to have
+\[	\frac{R_f}{R_1}=2,\;\;\;
+	\frac{R_f}{R_2}=10,\;\;\;
+	\frac{R_f}{R_3}=0.5	\]
+i.e., $R_1=100/2=50k\Omega$, $R_2=100/10=10k\Omega$ and
+$R_3=100/0.5=200k\Omega$. Moreover, for $R_0=R_1||R_2||R_3$, we need
+\[ \frac{1}{R_0}=\frac{1}{R_1}+\frac{1}{R_2}+\frac{1}{R_3}
+	=\frac{2+10+0.5}{100},\;\;\;\mbox{i.e.,}
+	R_0=\frac{100}{12.5}=8	\]
+
+\item Represent the output $v_o$ as a fuction of the inputs $v_1$, 
+$v_2$, and $v_3$ in the following circuit. Denote the parallel 
+connection of $R_0$, $R_1$, $R_2$, and $R_3$ by $R+=R_0||R_1||R_2||R_3$.
+
+\htmladdimg{../hw10e.gif}
+
+{\bf Solution:} 
+
+Assume $v-=v+=v$, then we have:
+\[ \frac{v}{R_4}=\frac{v_o-v}{R_f},\;\;\;\;\mbox{i.e.,}\;\;\;
+	v_o=(1+\frac{R_f}{R_4}) v	\]
+and
+\[ \frac{v_1-v}{R_1}+\frac{v_2-v}{R_2}+\frac{v_3-v}{R_3}=\frac{v}{R_0} \]
+i.e.,
+\[ \frac{v_1}{R_1}+\frac{v_2}{R_2}+\frac{v_3}{R_3}
+	=v(\frac{1}{R_0}+\frac{1}{R_1}+\frac{1}{R_2}+\frac{1}{R_3})
+	=\frac{v}{R+}	\]
+Then we have
+\[	v_o=(1+\frac{R_f}{R_4})(\frac{R+}{R_1}v_1+\frac{R+}{R_2}v_2
+	+\frac{R+}{R_3v_3})	\]
+
+\item Find the output $v_o$ of the following circuit as a function 
+of all four inputs $v_1$, $v_2$, $v_3$, and $v_4$. It is known that
+$R_3 || R_4 || R_0=R_1 || R_2 || R_f$.
+
+\htmladdimg{../hw10c.gif}
+
+{\bf Solution:} Assume $v-=v+=v$, then we have
+\[ \frac{v_1-v}{R_1}+\frac{v_2-v}{R_2}=-\frac{v_o-v}{R_f},\;\;\;\;
+\mbox{i.e.,}\;\;\;\;
+	\frac{v_1}{R_1}+\frac{v_2}{R_2}+\frac{v_o}{R_f}
+	=v(\frac{1}{R_1}+\frac{1}{R_2}+\frac{1}{R_f}) \]
+also
+\[ \frac{v_3-v}{R_3}+\frac{v_4-v}{R_4}=\frac{v}{R_o},\;\;\;\;
+\mbox{i.e.,}\;\;\;\;
+	\frac{v_3}{R_3}+\frac{v_4}{R_4}
+	=v(\frac{1}{R_3}+\frac{1}{R_4}+\frac{1}{R_o}) \]
+solve for $v$:
+\[ v=(\frac{v_3}{R_3}+\frac{v_4}{R_4})/(\frac{1}{R_3}+
+	\frac{1}{R_4}+\frac{1}{R_o}) \]
+plug into the other equation:
+\[ \frac{v_1}{R_1}+\frac{v_2}{R_2}+\frac{v_o}{R_f}
+	=(\frac{v_3}{R_3}+\frac{v_4}{R_4})
+	(\frac{1}{R_1}+\frac{1}{R_2}+\frac{1}{R_f})
+	/(\frac{1}{R_3}+\frac{1}{R_4}+\frac{1}{R_o}) 
+	=\frac{v_3}{R_3}+\frac{v_4}{R_4}	 \]
+i.e.,
+\[  v_o=R_f (-\frac{v_1}{R_1}-\frac{v_2}{R_2}+\frac{v_3}{R_3}+
+	\frac{v_4}{R_4})	\]
+
+\item The circuit above can be used to find the algebraic sum of a set 
+of voltages. However, the required relationship among the resistors
+($R_3 || R_4 || R_0=R_1 || R_2 || R_f$) makes the adjustment of the 
+coeficients difficult. In practice, the algebraic sum of several
+input voltages can be found using multi-stage opamp circuits, as 
+shown below. Find the output $v_o$ as a function of all four inputs 
+$v_1$, $v_2$, $v_3$, and $v_4$.
+
+\htmladdimg{../hw10f.gif}
+
+{\bf Solution:}
+
+For the first stage, we have
+\[	v_{o1}=-R_{f1}(\frac{v_1}{R_1}+\frac{v_2}{R_2})	\]
+For the second stage, we have
+\[	v_o=-R_{f2}(\frac{v_3}{R_3}+\frac{v_4}{R_4}+\frac{v_{o1}}{R_5})	
+	=-\frac{R_{f2}}{R_3}v_3-\frac{R_{f2}}{R_4}v_4
+	+\frac{R_{f1}R_{f2}}{R_1R_5}v_1+\frac{R_{f1}R_{f2}}{R_2R_5}v_2	
+\]
+
+\item The input voltage $v_i(t)$ of the circuit below is a square wave 
+as shown. The horizontal scale is time in millisecond and the vertical 
+scale is voltage in volt. Plot the output voltage $v_o(t)$. Assume
+$R=10k\Omega$, $C=0.1\mu F$, and the initial voltage across the 
+capacitor is 0.
+
+\htmladdimg{../hw10g.gif}
+
+{\bf Solution:} 
+
+$\tau=RC=10^4\times 10^{-7}=10^{-3}=0.001$, let $t_1=1\;ms$, $t_2=3\;ms$. 
+First consider the output voltage of during the first three milliseconds.
+During the time period $0 \le t < 1\;ms$, the output voltage is
+\[	v_o(t)=-\frac{1}{\tau}\int_0^t v_i(t) dt+v_C(0)
+	=-\frac{t}{0.001}=-1000 t	\]
+In particular, when $t=t_1=1\;ms=0.1\;s$, $v_o(t)=v_o(t_1)=-1V$. 
+During the time period $1\;ms \le t < 3\;ms$, the output voltage is
+\[	v_o(t)=-\frac{1}{\tau}\int_{t_1}^t v_i(t) dt+v_C(t_1)
+	=\frac{t-t_1}{0.001}+v_o(t_1)=1000(t-t_1)-1	\]
+In particular, when $t=t_2=3\;ms=0.003\;s$, $t-t_1=t_2-t_1=0.002\;s$,
+$v_o(t)=1000\times 0.002-1=1V$.
+The output voltage $v_o(t)$ during the next three milliseconds is the
+negative of that of the prevous three milliseconds.
+
+\htmladdimg{../hw10h.gif}
+
+\end{itemize}
+
+\end{enumerate}
+
+\end{document}
+
+{\bf Solution:}
+\item The circuit below is an voltage amplifier composed of three
+opamps. The first two form the first stage and the third is the 
+second stage. The values of the resistors are as follows: 
+$R_2=R_3=1k\Omega$, $R_1=R_4=R_5=2k\Omega$, $R_6=R_7=100k\Omega$.
+Find 
+\begin{itemize}
+\item voltage gain of the first stage: $A_1=(v_{o1}-v_{o2})/(v_{i1}-v_{i2})$;
+\item voltage gain of the second stage: $A_2=v_o/(v_{o1}-v_{o2})$;
+\item overall voltage gain $A=v_o/(v_{i1}-v_{i2})$;
+\item $A_1$, $A_2$, and $A_3$ when $R_1=\infty$ (open circuit).
+\end{itemize}
+
+(Hint: $i=(v_{i1}-v_{i2})/R_1$)
+
+\htmladdimg{../hw10d.gif}
+
+{\bf Solution:}
+
+\[ v_{o1}=iR_2+v_{i1}=(1+\frac{R_2}{R_1})v_{i1}-\frac{R_2}{R_1}v_{i2} \]
+\[ v_{o2}=iR_3+v_{i2}=(1+\frac{R_3}{R_1})v_{i2}-\frac{R_3}{R_1}v_{i1} \]
+As $R_2=R_3$, 
+\[ v_{o1}-v_{o2}=(1+\frac{2R_2}{R_1})(v_{i1}-v_{i2})	\]
+\[ A_1=\frac{v_{o1}-v_{o2}}{v_{i1}-v_{i2}}=1+\frac{2R_2}{R_1}	\]
+As $R_4=R_5$, $R_6=R_7$, 
+\[ A_2=\frac{v_o}{v_{o1}-v_{o2}}=-\frac{R_6}{R_4} \]
+\[ A_o=A_1 A_2=-\frac{R_6}{R_4}(1+\frac{2R_2}{R_1})	\]
+
+\item Design a summer with inputs of different signs to implement the 
+same control circuit above but with a different control strategy 
+$v_o=0.2 v_1-10 v_2+1.3 v_3$. 
+
+{\bf Solution:}
+
+

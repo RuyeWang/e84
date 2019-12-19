@@ -1,0 +1,75 @@
+\documentstyle[11pt]{article}
+\usepackage{html}
+\begin{document}
+%\begin{center}
+{\Large \bf E84 Midterm Exam 2,}  {\large \bf Student Name (print):} $\hspace{1.5 in}$
+%\end{center}
+
+{\bf Problem 4}
+
+Consider the transistor circuit shown in the figure below with 
+$V_{cc}=20V$, $R_B=129k\Omage$, $R_C=2k\Omega$. Assume $\beta=100$.
+Answer the following questions and box each of your answers.
+(Note, when a transistor is in the saturation region, its $V_{CE}$
+(same as $V_C$) can be assumed to be 0.2 V.)
+
+\htmladdimg{../MidtermTwo11s.gif}
+
+\begin{itemize}
+\item (a) Sketch the output characteristic plot with four specific $I_B$
+  values: 0, 0.05, 0.10, and 0.15 mA. Clearly label the horizontal
+  axis for $V_{CE}$ with increment of 5 V, and the vertical axis for
+  $I_C$ with increment of 2.5 mA. Find the DC operating point of the
+  transistor in terms of $I_B$, $I_C$ and $V_C$. 
+
+  \begin{tabular}{l|l|l} \hline
+    $I_B=\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;$ & $I_C=\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;$ & $V_C=\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;$ \\ \hline
+  \end{tabular}
+
+%  \[ I_B=\;\;\;\;\;\;\;\;\;,I_C=\;\;\;\;\;\;\;\;, V_C=\]  \\
+
+%  {\bf Solution:}  
+%  \[ I_B=(V_{cc}-V_{BE})/R_B=(20-0.7)/129=0.15 mA \]
+%  \[ I_C=\beta I_B=100\times 0.15=15 mA \]
+%  \[ V_C=V_{cc}-R_CI_C=20-2\times 15=-10 mA \]
+%  The transistor is saturated with $V_{CE}=0.2$ V, and $I_C\approx 10\;mA$
+
+\item (b) It is desirable for the DC operating point of the transistor to 
+  be in the middle of the linear range of the output characteristic plot so
+  that $V_C=V_{cc}/2=10$ V. Find the corresponding current $I_C$, and modify 
+  $R_B$ so that the DC operating to be in the middle of the linear range.
+  \begin{tabular}{l|l} \hline
+    $I_C=\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;$ & $R_B=\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;$  \\ \hline
+  \end{tabular}
+%  {\bf Solution:} $I_C=5$ mA.
+%  \[ I_B=(20-0.7)/R_B=I_C/\beta=0.05,\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;
+%  R_B=(20-0.7)/0.05=386 \]
+
+\item (c) If the $V_{cc}$ is reduced from 20 V to 16 V and $R_B=300k\;\Omega$.
+  Find $R_C$ for the DC operating point to be in the middle of the 
+  linear range of the output characteristic plot. 
+  \begin{tabular}{l} \hline
+    $R_C=\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;$   \\ \hline
+  \end{tabular}
+%  \[ R_C=\]
+
+%  {\bf Solution:}
+%  \[ I_B=(16-0.7)/300=0.051\;mA,\;\;\;\;\;\;I_C=100 I_C=5.1\;mA \]
+%  For this current to be at the middle, we need to have:
+%  \[ R_C=V_{cc}/10.2=16/10.2=1.569\;k\Omega \]  
+
+\item (d) If the $V_{cc}$ is reduced from 20 V to 12 V and $R_C=2\;k\Omega$.
+  Modify $R_B$ so that the DC operating point is still in the middle of the 
+  linear range.
+  \begin{tabular}{l} \hline
+    $R_B=\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;$    \hline
+  \end{tabular}
+
+%  {\bf Solution:} When $V_{cc}=0$, $I_C=V_{cc}/R_C=12/2=6$ mA. At the middle
+%  point, $V_{CE}=6$ V and $I_C=3$ mA, and 
+%  \[ I_B=(12-0.7)/R_B=I_C/\beta=0.03,\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;
+%  R_B=(12-0.7)/0.03=377 \]
+
+\end{itemize}
+
+\end{document}

@@ -1,0 +1,19 @@
+\documentstyle[12pt]{article}
+\usepackage{html}
+
+\begin{document}
+
+  {\bf Example 4:} (Homework) Find all node voltages with respect to the top-left
+  corner treated as reference node:
+
+  \htmladdimg{../figures/currentmethod1.gif}
+
+  $V_1=12 V$, $V_2=6 V$, $R_1=3 \Omega$, $R_2=8 \Omega$, $R_3=6 \Omega$, $R_4=4\Omega$.
+
+  \htmladdimg{../figures/currentmethod1.gif}
+
+  {\bf Solution:}
+
+
+\end{document}
+

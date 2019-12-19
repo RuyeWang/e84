@@ -1,0 +1,1216 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Biasing</TITLE>
+<META NAME="description" CONTENT="Biasing">
+<META NAME="keywords" CONTENT="ch4">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="ch4.css">
+
+<LINK REL="next" HREF="node7.html">
+<LINK REL="previous" HREF="node5.html">
+<LINK REL="next" HREF="node7.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node7.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="ch4.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node5.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node7.html">Small-Signal Model and H</A>
+<B> Up:</B> <A
+ HREF="ch4.html">ch4</A>
+<B> Previous:</B> <A
+ HREF="node5.html">AC Signal Amplification</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A ID="SECTION00060000000000000000">
+Biasing</A>
+</H1>
+
+<P>
+As shown before, the DC operating point of a transistor amplification circuit
+needs to be set up properly (in the middle of the linear region) to avoid
+signal distortion. We now consider how the operating point is determined by 
+the biasing circuit, in terms of <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img172.svg"
+ ALT="$R_B$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img173.svg"
+ ALT="$R_C$"></SPAN>, and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img171.svg"
+ ALT="$V_{CC}$"></SPAN>.
+
+<P>
+<B>Fixed Biasing</B> 
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/transistorbiasinga.gif"
+ ALT="transistorbiasinga.gif">
+
+<P>
+By properly setting the voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img171.svg"
+ ALT="$V_{CC}$"></SPAN> (not too low) and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img172.svg"
+ ALT="$R_B$"></SPAN> (not too 
+large), the voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img75.svg"
+ ALT="$V_{BE}$"></SPAN> can be approximated as a constant value of
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img52.svg"
+ ALT="$0.7V$"></SPAN>, as shown in the input characteristic plot: 
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/fixedbias2.gif"
+ ALT="fixedbias2.gif">
+
+<P>
+Then the base current can be estimated to be:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_B=\frac{V_{CC}-V_{BE}}{R_B} %\approx \frac{V_{CC}}{R_B}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img221.svg"
+ ALT="$\displaystyle I_B=\frac{V_{CC}-V_{BE}}{R_B} %\approx \frac{V_{CC}}{R_B}
+$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">29</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The collector current is <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img108.svg"
+ ALT="$\beta$"></SPAN> times <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img79.svg"
+ ALT="$I_B$"></SPAN> if the transistor is in linear
+region:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_C=\beta I_B=\beta \frac{V_{CC}-V_{BE}}{R_B} %\approx \beta \frac{V_{CC}}{R_B}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img222.svg"
+ ALT="$\displaystyle I_C=\beta I_B=\beta \frac{V_{CC}-V_{BE}}{R_B} %\approx \beta \frac{V_{CC}}{R_B}
+$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">30</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The output voltage is 
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_{CE}=V_{CC}-I_C R_C
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img223.svg"
+ ALT="$\displaystyle V_{CE}=V_{CC}-I_C R_C$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">31</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+As both <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img80.svg"
+ ALT="$I_C$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img93.svg"
+ ALT="$V_{CE}$"></SPAN> depend on <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img108.svg"
+ ALT="$\beta$"></SPAN>, which may differ for different
+transistors and change depending on the temperatures the operating point may
+be unstable and inconsistent. 
+
+<P>
+<B>Example 1</B>
+
+<P>
+In the fixed biasing transistor circuit shown above, <!-- MATH
+ $R_B=200\,k\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img224.svg"
+ ALT="$R_B=200\,k\Omega$"></SPAN>, 
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img225.svg"
+ ALT="$\beta=100$"></SPAN>, <!-- MATH
+ $V_{CC}=12\,V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img226.svg"
+ ALT="$V_{CC}=12\,V$"></SPAN>, find <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img173.svg"
+ ALT="$R_C$"></SPAN> so that the DC operating point is 
+in the middle of the linear region of the output characteristic plot, i.e., 
+<!-- MATH
+ $V_{CE}=V_{CC}/2=6\,V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img227.svg"
+ ALT="$V_{CE}=V_{CC}/2=6\,V$"></SPAN>. We assume <!-- MATH
+ $V_{BE}=0.6\;V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img228.svg"
+ ALT="$V_{BE}=0.6\;V$"></SPAN> (may not be valid if 
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img172.svg"
+ ALT="$R_B$"></SPAN> is too large) and get
+
+<P>
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_B=\frac{V_{CC}-V_{BE}}{R_B}=\frac{12-0.6}{200}=0.057\,mA,\;\;\;\;\;
+  I_C=\beta I_B=5.7\,mA
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img229.svg"
+ ALT="$\displaystyle I_B=\frac{V_{CC}-V_{BE}}{R_B}=\frac{12-0.6}{200}=0.057\,mA,\;\;\;\;\;
+I_C=\beta I_B=5.7\,mA$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">32</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+For this DC operating point with <!-- MATH
+ $I_C=5.6\,mA$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img230.svg"
+ ALT="$I_C=5.6\,mA$"></SPAN> to be in the middle of the
+load line, we need to have 
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_{CE}=V_{CC}-I_CR_C=12-5.7 R_C=6\,V,\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;\;
+  R_C=\frac{6\,V}{5.6\,mA}\approx 1.05\,k\Omega
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img231.svg"
+ ALT="$\displaystyle V_{CE}=V_{CC}-I_CR_C=12-5.7 R_C=6\,V,\;\;\;\;\;$">i.e.<IMG STYLE="height: 5.11ex; vertical-align: -1.71ex; " SRC="img232.svg"
+ ALT="$\displaystyle \;\;\;\;\;\;
+R_C=\frac{6\,V}{5.6\,mA}\approx 1.05\,k\Omega$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">33</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Alternatively, we can also require the short-circuit current <!-- MATH
+ $V_{CC}/R_C$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img157.svg"
+ ALT="$V_{CC}/R_C$"></SPAN> 
+to be twice of <!-- MATH
+ $I_C=5.7\,mA$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img233.svg"
+ ALT="$I_C=5.7\,mA$"></SPAN> at the DC operating point:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\frac{V_{CC}}{R_C}=\frac{12\,V}{R_C}=2\times I_C=11.4\;mA,\;\;\;\;\;\mbox{i.e.}
+  \;\;\;\;\;R_C=\frac{12\,V}{11.4\,mA}\approx 1.05\,k\Omega
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img234.svg"
+ ALT="$\displaystyle \frac{V_{CC}}{R_C}=\frac{12\,V}{R_C}=2\times I_C=11.4\;mA,\;\;\;\;\;$">i.e.<IMG STYLE="height: 5.11ex; vertical-align: -1.71ex; " SRC="img235.svg"
+ ALT="$\displaystyle \;\;\;\;\;R_C=\frac{12\,V}{11.4\,mA}\approx 1.05\,k\Omega$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">34</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+so that
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_{CE}=V_{CC}-R_CI_C=12\,V-1.05\,k\Omega\times 5.7\,mA \approx 6\,V
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img236.svg"
+ ALT="$\displaystyle V_{CE}=V_{CC}-R_CI_C=12\,V-1.05\,k\Omega\times 5.7\,mA \approx 6\,V$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">35</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+is indeed in the middle of the load line.
+
+<P>
+<B>Example 2:</B> 
+
+<P>
+In the same circuit above, <!-- MATH
+ $V_{CC}=12V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img132.svg"
+ ALT="$V_{CC}=12V$"></SPAN>, <!-- MATH
+ $R_B=200\,k\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img224.svg"
+ ALT="$R_B=200\,k\Omega$"></SPAN>, 
+<!-- MATH
+ $R_C=1\,k\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img237.svg"
+ ALT="$R_C=1\,k\Omega$"></SPAN>. Find the operating point <!-- MATH
+ $(V_{CE},\;I_C)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img238.svg"
+ ALT="$(V_{CE},\;I_C)$"></SPAN> for 
+<!-- MATH
+ $\beta=50,\;100,\; 200$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img239.svg"
+ ALT="$\beta=50,\;100,\; 200$"></SPAN>.
+
+<P>
+The load line <!-- MATH
+ $V_C=V_{CC}-I_C R_C$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img240.svg"
+ ALT="$V_C=V_{CC}-I_C R_C$"></SPAN> is determined by these two points:
+
+<UL>
+<LI>Open-circuit voltage: <!-- MATH
+ $I_C=0,\; V_C=V_{CC}=12\,V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img241.svg"
+ ALT="$I_C=0,\; V_C=V_{CC}=12\,V$"></SPAN>
+</LI>
+<LI>Short-circuit current: <!-- MATH
+ $V_C=0,\; I_C=V_C/R_C=12\,V/1\,k\Omega=12\,mA$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img242.svg"
+ ALT="$V_C=0,\; I_C=V_C/R_C=12\,V/1\,k\Omega=12\,mA$"></SPAN>
+</LI>
+</UL>
+Same as before, we have
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_B=\frac{V_{CC}-V_{BE}}{R_B}=\frac{12-0.6}{200\times 10^3}=0.057 \;mA
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img243.svg"
+ ALT="$\displaystyle I_B=\frac{V_{CC}-V_{BE}}{R_B}=\frac{12-0.6}{200\times 10^3}=0.057 \;mA$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">36</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+We then find the folllowing for each of the three <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img108.svg"
+ ALT="$\beta$"></SPAN> values:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\begin{array}{c||c|c|c}\hline
+          & \beta=50 & \beta=100 & \beta=200 \\\hline\hline
+I_C=\beta I_B\;(mA) &  2.85    &  5.70     &  11.4 \\\hline
+V_C=V_{CC}-R_CI_C\;(V)  & 9.15     &  6.3      &  0.6 \\\hline
+\end{array}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE=""
+ SRC="img244.svg"
+ ALT="\begin{displaymath}\begin{array}{c\vert\vert c\vert c\vert c}\hline
+&amp; \beta=50 &amp;...
+...V_C=V_{CC}-R_CI_C\;(V) &amp; 9.15 &amp; 6.3 &amp; 0.6 \\ \hline
+\end{array}\end{displaymath}"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">37</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+To minimize distortion, the DC operating point needs to be in the 
+middle of the load line at <!-- MATH
+ $(V_C=12/2=6\,V,\;I_C=12/2=6\,mA)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img245.svg"
+ ALT="$(V_C=12/2=6\,V,\;I_C=12/2=6\,mA)$"></SPAN>. But
+in this case, we see that
+
+<UL>
+<LI><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img202.svg"
+ ALT="$\beta=50$"></SPAN>, too close to cutoff region.
+</LI>
+<LI><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img225.svg"
+ ALT="$\beta=100$"></SPAN>, in the middle of linear region as desired.
+</LI>
+<LI><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img246.svg"
+ ALT="$\beta=200$"></SPAN>, too close to the saturation region.
+</LI>
+</UL>
+
+<P>
+The DC operating point of this fixed biasing circuit is not 
+completely determined by the parameters of the circuit such as 
+the resistors, as it is also directly affected by factors such 
+as <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img108.svg"
+ ALT="$\beta$"></SPAN> value and temperature. This situation can be improved 
+by introducing negative feedback into the circuit.
+
+<P>
+<B>Self-Biasing</B> 
+
+<P>
+To correct the problem above, the self-biasing circuit shown below 
+can be used to decrease the effect of changing <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img108.svg"
+ ALT="$\beta$"></SPAN> by negative 
+feed back due to the introduction of <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img247.svg"
+ ALT="$R_E$"></SPAN>.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/transistorbiasingb.gif"
+ ALT="transistorbiasingb.gif">
+
+<P>
+Qualitatively, an increased <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img80.svg"
+ ALT="$I_C$"></SPAN> (caused by reasons such as 
+increased <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img108.svg"
+ ALT="$\beta$"></SPAN> due to temperature change) will cause the following
+to happen:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_C \uparrow \Longrightarrow   I_e=I_C+I_B \uparrow
+  \Longrightarrow V_E \uparrow \Longrightarrow V_{BE} 
+  \downarrow \Longrightarrow I_B \downarrow \Longrightarrow 
+  I_C=\beta I_B \downarrow	
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img248.svg"
+ ALT="$\displaystyle I_C \uparrow \Longrightarrow I_e=I_C+I_B \uparrow
+\Longrightarrow...
+...wnarrow \Longrightarrow I_B \downarrow \Longrightarrow
+I_C=\beta I_B \downarrow$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">38</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+This is a negative feedback loop that tends to stabilize the operating
+point.
+
+<P>
+Quantitatively, we can further carry out analysis of the circuit:
+
+<UL>
+<LI>If the resistances of <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img249.svg"
+ ALT="$R_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img250.svg"
+ ALT="$R_2$"></SPAN> are small so that the 
+  current <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img251.svg"
+ ALT="$I_2$"></SPAN> through <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img250.svg"
+ ALT="$R_2$"></SPAN> is much larger than the base current 
+  <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img79.svg"
+ ALT="$I_B$"></SPAN> i.e., <!-- MATH
+ $I_2\gg I_B$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img252.svg"
+ ALT="$I_2\gg I_B$"></SPAN>, then the basis voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img253.svg"
+ ALT="$V_B$"></SPAN> can be
+  approximated to be (voltage divider):
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_B = V_{CC} \;\frac{R_2}{R_1+R_2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img254.svg"
+ ALT="$\displaystyle V_B = V_{CC} \;\frac{R_2}{R_1+R_2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">39</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Applying KVL to the base-emitter loop of the circuit, we get
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_B-V_{BE}-I_ER_E=V_B-V_{BE}-(I_C+I_B)R_E=V_B-V_{BE}-(\beta+1)I_BR_E=0
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img255.svg"
+ ALT="$\displaystyle V_B-V_{BE}-I_ER_E=V_B-V_{BE}-(I_C+I_B)R_E=V_B-V_{BE}-(\beta+1)I_BR_E=0$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">40</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Solving for <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img79.svg"
+ ALT="$I_B$"></SPAN>, we get
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_B=\frac{V_B-V_{BE}}{(\beta+1)R_E},\;\;\;\;\;\;\;\;\;\;\;\;\;
+    I_C=\beta I_B=\frac{\beta(V_B-V_{BE})}{(\beta+1)R_E}
+    \approx \frac{V_B-V_{BE}}{R_E} =\frac{V_E}{R_E}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img256.svg"
+ ALT="$\displaystyle I_B=\frac{V_B-V_{BE}}{(\beta+1)R_E},\;\;\;\;\;\;\;\;\;\;\;\;\;
+I_...
+...beta(V_B-V_{BE})}{(\beta+1)R_E}
+\approx \frac{V_B-V_{BE}}{R_E} =\frac{V_E}{R_E}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">41</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Note that <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img80.svg"
+ ALT="$I_C$"></SPAN> is independent of <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img108.svg"
+ ALT="$\beta$"></SPAN>, as it is completely
+  determined by <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img249.svg"
+ ALT="$R_1$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img250.svg"
+ ALT="$R_2$"></SPAN>, and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img247.svg"
+ ALT="$R_E$"></SPAN>, as well as <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img171.svg"
+ ALT="$V_{CC}$"></SPAN>.
+
+<P>
+</LI>
+<LI>If the condition <!-- MATH
+ $I_B \ll I_2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img257.svg"
+ ALT="$I_B \ll I_2$"></SPAN> is not satisfied, the method 
+  above is no longer valid. In this case, we can use Thevenin's theorem 
+  to replace the base circuit by an open circuit voltage <!-- MATH
+ $V_{Th}=V_B$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img258.svg"
+ ALT="$V_{Th}=V_B$"></SPAN> 
+  (already found above), in series with the internal resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img259.svg"
+ ALT="$R_{Th}$"></SPAN>:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+R_{Th}=R_B=R_1||R_2=\frac{R_1R_2}{R_1+R_2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img260.svg"
+ ALT="$\displaystyle R_{Th}=R_B=R_1\vert\vert R_2=\frac{R_1R_2}{R_1+R_2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">42</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/transistorbiasing1.gif"
+ ALT="transistorbiasing1.gif">
+
+<P>
+Applying KVL to the base loop we get 
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_B-I_BR_B-V_{BE}-(I_C+I_B)R_E=V_B-V_{BE}-I_BR_B-(\beta+1)I_BR_E=0
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img261.svg"
+ ALT="$\displaystyle V_B-I_BR_B-V_{BE}-(I_C+I_B)R_E=V_B-V_{BE}-I_BR_B-(\beta+1)I_BR_E=0$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">43</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Solving this equation for <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img79.svg"
+ ALT="$I_B$"></SPAN>, we get:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_B=\frac{V_B-V_{BE}}{(\beta+1) R_E+R_B},\;\;\;\;\;\mbox{and}\;\;\;\;\;\;
+    I_C =\beta I_B=\frac{\beta(V_B-V_{BE})}{(\beta+1) R_E+R_B}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img262.svg"
+ ALT="$\displaystyle I_B=\frac{V_B-V_{BE}}{(\beta+1) R_E+R_B},\;\;\;\;\;$">and<IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img263.svg"
+ ALT="$\displaystyle \;\;\;\;\;\;
+I_C =\beta I_B=\frac{\beta(V_B-V_{BE})}{(\beta+1) R_E+R_B}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">44</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+If <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img247.svg"
+ ALT="$R_E$"></SPAN> is not too small (strong negative feedback effect) and 
+  <!-- MATH
+ $R_B=R_1||R_2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img264.svg"
+ ALT="$R_B=R_1\vert\vert R_2$"></SPAN> is not too large (approximately a voltage divider), 
+  so that <!-- MATH
+ $\beta R_E \gg R_B=R_1||R_2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img265.svg"
+ ALT="$\beta R_E \gg R_B=R_1\vert\vert R_2$"></SPAN> (e.g., <!-- MATH
+ $\beta R_E \ge 10 R_B$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img266.svg"
+ ALT="$\beta R_E \ge 10 R_B$"></SPAN> 
+  even for a small <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img108.svg"
+ ALT="$\beta$"></SPAN>), then <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img80.svg"
+ ALT="$I_C$"></SPAN> can be approximated as
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_C \approx \frac{\beta(V_B-V_{BE})}{(\beta+1)R_E}
+    \approx \frac{V_B-V_{BE}}{R_E} =\frac{V_E}{R_E} 
+  
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img267.svg"
+ ALT="$\displaystyle I_C \approx \frac{\beta(V_B-V_{BE})}{(\beta+1)R_E}
+\approx \frac{V_B-V_{BE}}{R_E} =\frac{V_E}{R_E}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">45</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+which is the same as what we got previously. 
+  In this case, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img80.svg"
+ ALT="$I_C$"></SPAN>, and thereby <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img93.svg"
+ ALT="$V_{CE}$"></SPAN> and the DC operating point, 
+  is determined only by the resistors of the circuit, independent of the 
+  <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img108.svg"
+ ALT="$\beta$"></SPAN>. Comparing this with fixed biasing with <!-- MATH
+ $I_C \approx \beta (V_{CC}-V_{BE})/R_B$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img268.svg"
+ ALT="$I_C \approx \beta (V_{CC}-V_{BE})/R_B$"></SPAN> directly proportional to <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img108.svg"
+ ALT="$\beta$"></SPAN>,
+  the self-biasing circuit has a much more stable operating point.
+
+<P>
+For this approximation above to be valid, we desire to have smaller 
+  <!-- MATH
+ $R_B=R_1||R_2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img264.svg"
+ ALT="$R_B=R_1\vert\vert R_2$"></SPAN> so that <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img253.svg"
+ ALT="$V_B$"></SPAN> is less affected by <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img79.svg"
+ ALT="$I_B$"></SPAN>, and large 
+  <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img247.svg"
+ ALT="$R_E$"></SPAN> for stronger negative feedback. However, as the voltage gain of
+  the circuit will be reduced due to the negative feedback, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img247.svg"
+ ALT="$R_E$"></SPAN> cannot
+  be too large.
+
+<P>
+</LI>
+</UL>
+
+<P>
+<B>Example 3:</B> 
+
+<P>
+In the circuit of self-biasing, <!-- MATH
+ $V_{CC}=12V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img132.svg"
+ ALT="$V_{CC}=12V$"></SPAN>, <!-- MATH
+ $R_1=100\,k\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img269.svg"
+ ALT="$R_1=100\,k\Omega$"></SPAN>, 
+<!-- MATH
+ $R_2=36\,k\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img270.svg"
+ ALT="$R_2=36\,k\Omega$"></SPAN>, <!-- MATH
+ $R_E=1\,k\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img271.svg"
+ ALT="$R_E=1\,k\Omega$"></SPAN>, <!-- MATH
+ $R_C=2\,k\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img272.svg"
+ ALT="$R_C=2\,k\Omega$"></SPAN>, Assume 
+<!-- MATH
+ $V_{BE}=0.7$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img181.svg"
+ ALT="$V_{BE}=0.7$"></SPAN>. The load line is determined by this equation:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_{CE}=V_{CC}-I_CR_C-I_ER_E\approx V_{CC}-I_C(R_C+R_E)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img273.svg"
+ ALT="$\displaystyle V_{CE}=V_{CC}-I_CR_C-I_ER_E\approx V_{CC}-I_C(R_C+R_E)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">46</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+determined by these two points at:
+
+<UL>
+<LI><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img127.svg"
+ ALT="$V_{CE}=0$"></SPAN> and <!-- MATH
+ $I_C=V_{CC}/(R_C+R_E)=12/(2+1)=4\,mA$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img274.svg"
+ ALT="$I_C=V_{CC}/(R_C+R_E)=12/(2+1)=4\,mA$"></SPAN> (short-circuit current)
+</LI>
+<LI><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img275.svg"
+ ALT="$I_C=0\,mA$"></SPAN> and <!-- MATH
+ $V_{CE}=12V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img276.svg"
+ ALT="$V_{CE}=12V$"></SPAN> (open-circuit voltage)
+</LI>
+</UL>
+
+<P>
+To minimize distortion, the desired operating point should be in the 
+middle of the load line at <!-- MATH
+ $V_{CE}=12\,V/2=6V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img277.svg"
+ ALT="$V_{CE}=12\,V/2=6V$"></SPAN> and <!-- MATH
+ $I_C=4\,mA/2=2\,mA$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img278.svg"
+ ALT="$I_C=4\,mA/2=2\,mA$"></SPAN>.
+
+<P>
+
+<UL>
+<LI>Based on the voltage divider approximation, we get the DC
+operating point independent of <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img108.svg"
+ ALT="$\beta$"></SPAN>:
+<BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+R_B &=& R_1||R_2=\frac{R_1R_2}{R_1+R_2}=26.5\,k\Omega
+  \nonumber\\
+  V_B &\approx& V_{CC} \frac{R_2}{R_1+R_2}=3.18\;V
+  \nonumber\\
+  V_E &=& V_B-V_{BE}=3.18-0.7=2.48\;V
+  \nonumber\\
+  I_C &\approx& I_E=\frac{V_E}{R_E}=2.48\;mA
+  \nonumber\\
+  V_C &=& V_{CC}-R_CI_C=12-2\times 2.48 = 7.04\;V
+  \nonumber\\
+  V_{CE}&=&V_C-V_E=7.04-2.48=4.56\;V 
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img279.svg"
+ ALT="$\displaystyle R_B$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img87.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img280.svg"
+ ALT="$\displaystyle R_1\vert\vert R_2=\frac{R_1R_2}{R_1+R_2}=26.5\,k\Omega$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img281.svg"
+ ALT="$\displaystyle V_B$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img282.svg"
+ ALT="$\displaystyle \approx$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img283.svg"
+ ALT="$\displaystyle V_{CC} \frac{R_2}{R_1+R_2}=3.18\;V$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img284.svg"
+ ALT="$\displaystyle V_E$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img87.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img285.svg"
+ ALT="$\displaystyle V_B-V_{BE}=3.18-0.7=2.48\;V$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img86.svg"
+ ALT="$\displaystyle I_C$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img282.svg"
+ ALT="$\displaystyle \approx$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img286.svg"
+ ALT="$\displaystyle I_E=\frac{V_E}{R_E}=2.48\;mA$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img287.svg"
+ ALT="$\displaystyle V_C$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img87.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img288.svg"
+ ALT="$\displaystyle V_{CC}-R_CI_C=12-2\times 2.48 = 7.04\;V$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img148.svg"
+ ALT="$\displaystyle V_{CE}$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img87.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img289.svg"
+ ALT="$\displaystyle V_C-V_E=7.04-2.48=4.56\;V$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">47</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+
+<P>
+</LI>
+<LI>Based on the Thevenin theorem, we get more accurate results:
+<BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+I_B&=&\frac{V_B-V_{BE}}{(\beta+1) R_E+R_B}
+  \nonumber\\
+  I_C&=&\beta I_B
+  \nonumber\\
+  V_E&=&I_E R_E=(I_C+I_B)R_E
+  \nonumber\\
+  V_B&=&V_E+V_{BE}
+  \nonumber\\
+  V_C&=&V_{CC}-I_CR_C
+  \nonumber\\
+  V_{CE}&=&V_C-V_E
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img89.svg"
+ ALT="$\displaystyle I_B$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img87.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img290.svg"
+ ALT="$\displaystyle \frac{V_B-V_{BE}}{(\beta+1) R_E+R_B}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img86.svg"
+ ALT="$\displaystyle I_C$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img87.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img291.svg"
+ ALT="$\displaystyle \beta I_B$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img284.svg"
+ ALT="$\displaystyle V_E$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img87.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img292.svg"
+ ALT="$\displaystyle I_E R_E=(I_C+I_B)R_E$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img281.svg"
+ ALT="$\displaystyle V_B$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img87.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img293.svg"
+ ALT="$\displaystyle V_E+V_{BE}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img287.svg"
+ ALT="$\displaystyle V_C$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img87.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img294.svg"
+ ALT="$\displaystyle V_{CC}-I_CR_C$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img148.svg"
+ ALT="$\displaystyle V_{CE}$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img87.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img295.svg"
+ ALT="$\displaystyle V_C-V_E$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">48</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+ 
+The DC operating points corresponding to the three <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img108.svg"
+ ALT="$\beta$"></SPAN> values 
+can be found to be:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\begin{array}{c||c|c|c}\hline
+    & \beta=50  & \beta=100 & \beta=200 \\\hline\hline
+    I_C\;(mA)  & 1.60 & 1.94     & 2.18      \\\hline
+    V_E\;(V)   & 1.63 & 1.96     & 2.19      \\\hline
+    V_C\;(V)   & 8.80 & 8.11     & 7.65      \\\hline
+    V_B\;(V)   & 2.33 & 2.66     & 2.89      \\\hline
+    V_{CE}\;(V) & 7.17 & 6.15     & 5.46      \\\hline
+  \end{array}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE=""
+ SRC="img296.svg"
+ ALT="\begin{displaymath}\begin{array}{c\vert\vert c\vert c\vert c}\hline
+&amp; \beta=50 &amp;...
+...\ \hline
+V_{CE}\;(V) &amp; 7.17 &amp; 6.15 &amp; 5.46 \\ \hline
+\end{array}\end{displaymath}"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">49</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+</UL>
+
+<P>
+We see that in all three cases, <!-- MATH
+ $I_C\approx 2\;mA$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img297.svg"
+ ALT="$I_C\approx 2\;mA$"></SPAN>, 
+<!-- MATH
+ $V_{CE}\approx 6\,V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img298.svg"
+ ALT="$V_{CE}\approx 6\,V$"></SPAN>, i.e., the DC operating point is always
+close to the middle of the load line.
+
+<P>
+<B>Example 4</B>
+
+<P>
+In a self-biasing transistor circuit, <!-- MATH
+ $R_1=R_2=100\,k\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img299.svg"
+ ALT="$R_1=R_2=100\,k\Omega$"></SPAN>, <!-- MATH
+ $R_E=2\,k\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img300.svg"
+ ALT="$R_E=2\,k\Omega$"></SPAN>, 
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img225.svg"
+ ALT="$\beta=100$"></SPAN>, <!-- MATH
+ $V_{CC}=12V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img132.svg"
+ ALT="$V_{CC}=12V$"></SPAN>, find <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img173.svg"
+ ALT="$R_C$"></SPAN> so that the DC operating point is 
+in the middle of the linear region of the output characteristic plot.
+
+<P>
+We first convert the base circuit into its Thevenin's equivalent voltage 
+source composed of
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+R_{Th}=R_B=R_1||R_2=50\;k\Omega,\;\;\;\;\;\;\;
+  V_{Th}=V_B=V_{CC}\frac{R_2}{R_1+R_2}=6\,V
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img301.svg"
+ ALT="$\displaystyle R_{Th}=R_B=R_1\vert\vert R_2=50\;k\Omega,\;\;\;\;\;\;\;
+V_{Th}=V_B=V_{CC}\frac{R_2}{R_1+R_2}=6\,V$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">50</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Then we get
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_C=\beta I_B=\frac{\beta(V_B-V_{BE})}{(\beta+1)R_E+R_B}
+  =\frac{100\times(6-0.7)}{101\times 2+50}=\frac{530}{250}=2.12
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img302.svg"
+ ALT="$\displaystyle I_C=\beta I_B=\frac{\beta(V_B-V_{BE})}{(\beta+1)R_E+R_B}
+=\frac{100\times(6-0.7)}{101\times 2+50}=\frac{530}{250}=2.12$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">51</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+and
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_{CE}=V_{CC}-(I_C+I_B) R_E-I_CR_C\approx V_{CC}-I_C(R_E+R_C)
+  =12-2.12\times (2+R_C)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img303.svg"
+ ALT="$\displaystyle V_{CE}=V_{CC}-(I_C+I_B) R_E-I_CR_C\approx V_{CC}-I_C(R_E+R_C)
+=12-2.12\times (2+R_C)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">52</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+To set this DC operating point to be in the middle of the load 
+line, we need <!-- MATH
+ $V_{CE}=12\,V/2=6\,V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img304.svg"
+ ALT="$V_{CE}=12\,V/2=6\,V$"></SPAN>, and solving the equation we 
+get <!-- MATH
+ $R_C=0.83\,k\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img305.svg"
+ ALT="$R_C=0.83\,k\Omega$"></SPAN>.
+
+<P>
+<B>Example 5</B> 
+
+<P>
+The circuit below shows yet another way to introduce feedback to 
+stablize the DC operating point. 
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/Example5.gif"
+ ALT="Example5.gif">
+
+<P>
+
+<UL>
+<LI>The resistor <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img172.svg"
+ ALT="$R_B$"></SPAN> connecting the collector to the base forms
+  a feedback from the output <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img306.svg"
+ ALT="$V_C$"></SPAN> to <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img253.svg"
+ ALT="$V_B$"></SPAN> as well as providing 
+  the forward baising needed for the base-emitter PN junction:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_C \uparrow \Longrightarrow V_C=V_{CC}-R_CI_C \downarrow
+    \Longrightarrow I_B\downarrow \Longrightarrow 
+    I_C=\beta I_B \downarrow
+  
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img307.svg"
+ ALT="$\displaystyle I_C \uparrow \Longrightarrow V_C=V_{CC}-R_CI_C \downarrow
+\Longrightarrow I_B\downarrow \Longrightarrow
+I_C=\beta I_B \downarrow$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">53</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+<LI>The DC operating point can be found by applying KVL:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_{CC}=R_C(I_B+I_C)+R_BI_B+V_{BE}=(R_C(\beta+1)+R_B)I_B+0.7
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img308.svg"
+ ALT="$\displaystyle V_{CC}=R_C(I_B+I_C)+R_BI_B+V_{BE}=(R_C(\beta+1)+R_B)I_B+0.7$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">54</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Solving for <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img79.svg"
+ ALT="$I_B$"></SPAN> we get
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_B=\frac{V_{CC}-0.7}{(\beta+1)R_C+R_B},\;\;\;\;\;
+    I_C=\beta I_B=\frac{\beta(V_{CC}-0.7)}{(\beta+1)R_C+R_B}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img309.svg"
+ ALT="$\displaystyle I_B=\frac{V_{CC}-0.7}{(\beta+1)R_C+R_B},\;\;\;\;\;
+I_C=\beta I_B=\frac{\beta(V_{CC}-0.7)}{(\beta+1)R_C+R_B}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">55</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+and
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_C=V_{CC}-(I_C+I_B)R_C=V_{CC}-(\beta+1)I_BR_C
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img310.svg"
+ ALT="$\displaystyle V_C=V_{CC}-(I_C+I_B)R_C=V_{CC}-(\beta+1)I_BR_C$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">56</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Note that if <!-- MATH
+ $R_B \ll (\beta+1)R_C$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img311.svg"
+ ALT="$R_B \ll (\beta+1)R_C $"></SPAN> (strong negative feedback), 
+  then <!-- MATH
+ $I_C \approx (V_{CC}-0.7)/R_C$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img312.svg"
+ ALT="$I_C \approx (V_{CC}-0.7)/R_C$"></SPAN>, independent of <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img108.svg"
+ ALT="$\beta$"></SPAN>. 
+  Although typically <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img172.svg"
+ ALT="$R_B$"></SPAN> is significantly greater than <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img173.svg"
+ ALT="$R_C$"></SPAN>, 
+  the negative feedback still has the tendency to reduce the affect
+  of varying <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img108.svg"
+ ALT="$\beta$"></SPAN> and thereby stablize the DC operating opint.
+
+<P>
+</LI>
+<LI>Given <!-- MATH
+ $V_{CC}=10V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img313.svg"
+ ALT="$V_{CC}=10V$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img225.svg"
+ ALT="$\beta=100$"></SPAN>, and a desired <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img314.svg"
+ ALT="$I_C=2\,mA$"></SPAN>, find
+  <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img173.svg"
+ ALT="$R_C$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img172.svg"
+ ALT="$R_B$"></SPAN> so that the DC operating point is in the middle of the 
+  linear region.
+
+<P>
+We want the DC operating point to be at <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img315.svg"
+ ALT="$I_C=2mA$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img316.svg"
+ ALT="$V_C=5V$"></SPAN>, and
+  get
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+R_C=(V_{CC}-V_C)/I_C=5V/2mA=2.5K\Omega
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img317.svg"
+ ALT="$\displaystyle R_C=(V_{CC}-V_C)/I_C=5V/2mA=2.5K\Omega$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">57</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+and
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_B=I_C/\beta=0.02mA, \;\;\;\;\;R_B=(5-0.7)/0.02=4.3/0.02=215K\Omega
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img318.svg"
+ ALT="$\displaystyle I_B=I_C/\beta=0.02mA, \;\;\;\;\;R_B=(5-0.7)/0.02=4.3/0.02=215K\Omega$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">58</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_C=\beta I_B,\;\;\;\;\;\;\;\;V_C=V_{CC}-I_ER_C=V_{CC}-(\beta+1)I_BR_C
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img319.svg"
+ ALT="$\displaystyle I_C=\beta I_B,\;\;\;\;\;\;\;\;V_C=V_{CC}-I_ER_C=V_{CC}-(\beta+1)I_BR_C$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">59</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+<LI>Following the equations given above, we can find the DC 
+  operating pointt for each of the three <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img108.svg"
+ ALT="$\beta$"></SPAN> values, which
+  are all approximately in the middle of the linear region:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\begin{array}{c||c|c|c}\hline
+    & \beta=50  & \beta=100 & \beta=200  \\\hline\hline
+    I_B\;(mA)  & 0.027 & 0.02     & 0.013 \\\hline
+    I_C\;(mA)   & 1.36 & 2     & 2.6      \\\hline
+    V_C\;(V)   & 6.6 & 5     & 3.5        \\\hline
+  \end{array}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE=""
+ SRC="img320.svg"
+ ALT="\begin{displaymath}\begin{array}{c\vert\vert c\vert c\vert c}\hline
+&amp; \beta=50 &amp;...
+... &amp; 2.6 \\ \hline
+V_C\;(V) &amp; 6.6 &amp; 5 &amp; 3.5 \\ \hline
+\end{array}\end{displaymath}"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">60</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+</UL>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node7.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="ch4.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node5.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node7.html">Small-Signal Model and H</A>
+<B> Up:</B> <A
+ HREF="ch4.html">ch4</A>
+<B> Previous:</B> <A
+ HREF="node5.html">AC Signal Amplification</A></DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

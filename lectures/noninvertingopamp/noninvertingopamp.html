@@ -1,0 +1,481 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>noninvertingopamp</TITLE>
+<META NAME="description" CONTENT="noninvertingopamp">
+<META NAME="keywords" CONTENT="noninvertingopamp">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="noninvertingopamp.css">
+
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev_g.png">   
+<BR>
+<B> Next:</B> <A
+ HREF="node1.html">About this document ...</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/noninverteramplifier.gif"
+ ALT="noninverteramplifier.gif">
+
+<P>
+Find the three parameters of this non-inverting amplifier: open-circuit 
+  voltage gain <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1.svg"
+ ALT="$G_{oc}$"></SPAN>, input resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img2.svg"
+ ALT="$R_{in}$"></SPAN> and output resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img3.svg"
+ ALT="$R_{out}$"></SPAN>.
+
+<P>
+
+<UL>
+<LI><B>Voltage gain:</B> 
+      
+<UL>
+<LI>First, we assume <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.46ex; " SRC="img4.svg"
+ ALT="$r_{out}=0$"></SPAN>, and apply an ideal voltage source <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img5.svg"
+ ALT="$v_s$"></SPAN> 
+        (<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img6.svg"
+ ALT="$R_s=0$"></SPAN>) to the positive input so that <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.46ex; " SRC="img7.svg"
+ ALT="$v^+=v_s$"></SPAN>, and denote the voltage 
+      across <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img8.svg"
+ ALT="$r_{in}$"></SPAN> by <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.46ex; " SRC="img9.svg"
+ ALT="$v_0=v^+-v^-$"></SPAN>, i.e., <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.46ex; " SRC="img10.svg"
+ ALT="$v^-=v_s-v_0$"></SPAN>. Applying KCL to 
+      the node of <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.12ex; " SRC="img11.svg"
+ ALT="$v^-$"></SPAN>, we get
+      
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+\frac{-v_0}{r_{in}}+\frac{v_s-v_0}{R_1}+\frac{v_s-v_0-Av_0}{R_f}=0
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.81ex; vertical-align: -2.37ex; " SRC="img12.svg"
+ ALT="$\displaystyle \frac{-v_0}{r_{in}}+\frac{v_s-v_0}{R_1}+\frac{v_s-v_0-Av_0}{R_f}=0
+$"> 
+
+(<SPAN CLASS="arabic">1</SPAN>)
+</DIV>
+Solving this for <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img13.svg"
+ ALT="$v_0$"></SPAN>, we get:
+      
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+v_0=v_s \frac{r_{in}(R_f+R_1)}{R_1R_f+r_{in}R_f+r_{in}R_1(A+1)}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.81ex; vertical-align: -2.37ex; " SRC="img14.svg"
+ ALT="$\displaystyle v_0=v_s \frac{r_{in}(R_f+R_1)}{R_1R_f+r_{in}R_f+r_{in}R_1(A+1)}
+$"> 
+
+(<SPAN CLASS="arabic">2</SPAN>)
+</DIV>
+The open-circuit voltage gain is:
+      
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+G_{oc}=\frac{v_{out}}{v_{in}}\approx \frac{Av_0}{v_s}
+      =\frac{Ar_{in}(R_f+R_1)}{R_1R_f+r_{in}R_f+r_{in}R_1(A+1)}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.81ex; vertical-align: -2.37ex; " SRC="img15.svg"
+ ALT="$\displaystyle G_{oc}=\frac{v_{out}}{v_{in}}\approx \frac{Av_0}{v_s}
+=\frac{Ar_{in}(R_f+R_1)}{R_1R_f+r_{in}R_f+r_{in}R_1(A+1)}
+$"> 
+
+(<SPAN CLASS="arabic">3</SPAN>)
+</DIV>
+As <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.21ex; " SRC="img16.svg"
+ ALT="$A\gg 1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img8.svg"
+ ALT="$r_{in}$"></SPAN> is usually very large, we have
+      
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+G_{oc}\approx \frac{R_1+R_f}{R_1}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img17.svg"
+ ALT="$\displaystyle G_{oc}\approx \frac{R_1+R_f}{R_1} $"> 
+
+(<SPAN CLASS="arabic">4</SPAN>)
+</DIV>
+
+<P>
+</LI>
+<LI>Second, assume <!-- MATH
+ $r_{in}\rightarrow \infty$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img18.svg"
+ ALT="$r_{in}\rightarrow \infty$"></SPAN> but <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img19.svg"
+ ALT="$r_{out}\ne 0$"></SPAN>,
+	we have
+      <BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+v_{out}&=&A(v^+-v^-)\frac{R_f+R_1}{r_{out}+R_f+R_1}
+        =A(v^+-v^-)\frac{R_f+R_1}{r_{out}+R_f+R_1} 
+        \nonumber\\
+        &=&A\left(v_s-v_{out}\frac{R_1}{R_1+R_f}\right) \frac{R_f+R_1}{r_{out}+R_f+R_1} 
+        \nonumber
+      
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img20.svg"
+ ALT="$\displaystyle v_{out}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img21.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 5.81ex; vertical-align: -2.37ex; " SRC="img22.svg"
+ ALT="$\displaystyle A(v^+-v^-)\frac{R_f+R_1}{r_{out}+R_f+R_1}
+=A(v^+-v^-)\frac{R_f+R_1}{r_{out}+R_f+R_1}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img21.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 6.04ex; vertical-align: -2.37ex; " SRC="img23.svg"
+ ALT="$\displaystyle A\left(v_s-v_{out}\frac{R_1}{R_1+R_f}\right) \frac{R_f+R_1}{r_{out}+R_f+R_1}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Solving for <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img24.svg"
+ ALT="$v_{out}$"></SPAN> we get
+      
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+v_{out} =v_s \frac{A(R_f+R_1)}{r_{out}+R_f+(A+1)R_1}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.81ex; vertical-align: -2.37ex; " SRC="img25.svg"
+ ALT="$\displaystyle v_{out} =v_s \frac{A(R_f+R_1)}{r_{out}+R_f+(A+1)R_1}
+$"> 
+
+(<SPAN CLASS="arabic">5</SPAN>)
+</DIV>
+and 
+      
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+G_{oc}=\frac{v_{out}}{v_s}=\frac{A(R_1+R_f)}{r_{out}+R_f+(A+1)R_1}
+      \approx \frac{A(R_1+R_f)}{AR_1}=\frac{R_1+R_f}{R_1}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.81ex; vertical-align: -2.37ex; " SRC="img26.svg"
+ ALT="$\displaystyle G_{oc}=\frac{v_{out}}{v_s}=\frac{A(R_1+R_f)}{r_{out}+R_f+(A+1)R_1}
+\approx \frac{A(R_1+R_f)}{AR_1}=\frac{R_1+R_f}{R_1}
+$"> 
+
+(<SPAN CLASS="arabic">6</SPAN>)
+</DIV>
+The approximation is due to <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.21ex; " SRC="img16.svg"
+ ALT="$A\gg 1$"></SPAN> and <!-- MATH
+ $r_{out}\ll R_f+R_1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.78ex; " SRC="img27.svg"
+ ALT="$r_{out}\ll R_f+R_1$"></SPAN>, i.e., 
+      <!-- MATH
+ $(R_f+R_1)(r_{out}+R_f+R_1)\approx 1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.78ex; " SRC="img28.svg"
+ ALT="$(R_f+R_1)(r_{out}+R_f+R_1)\approx 1$"></SPAN>. 
+
+<P>
+</LI>
+<LI>If we could assume both <!-- MATH
+ $r_{in}\rightarrow \infty$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img18.svg"
+ ALT="$r_{in}\rightarrow \infty$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.46ex; " SRC="img4.svg"
+ ALT="$r_{out}=0$"></SPAN>, 
+      we can apply KCL to the <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.12ex; " SRC="img11.svg"
+ ALT="$v^-$"></SPAN> node to get
+      
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+\frac{v^-}{R_1}+\frac{v^- -v_{out}}{R_f}=0, \;\;\;\;\;
+      \mbox{or}\;\;\;\;\; v_{out}=\frac{R_1+R_f}{R_1} v^-
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 6.04ex; vertical-align: -2.37ex; " SRC="img29.svg"
+ ALT="$\displaystyle \frac{v^-}{R_1}+\frac{v^--v_{out}}{R_f}=0, \;\;\;\;\;
+\mbox{or}\;\;\;\;\; v_{out}=\frac{R_1+R_f}{R_1} v^- $"> 
+
+(<SPAN CLASS="arabic">7</SPAN>)
+</DIV>
+But as <!-- MATH
+ $v^-\approx v^+=v_s$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.46ex; " SRC="img30.svg"
+ ALT="$v^-\approx v^+=v_s$"></SPAN>, we get the same result for <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1.svg"
+ ALT="$G_{oc}$"></SPAN>.
+      
+</LI>
+</UL>
+
+<P>
+In particular, when <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.78ex; " SRC="img31.svg"
+ ALT="$R_f=0$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img32.svg"
+ ALT="$G_{oc}=1$"></SPAN> and the circut becomes the voltage
+      follower.
+
+<P>
+</LI>
+<LI><B>Input resistance:</B> We let <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.46ex; " SRC="img7.svg"
+ ALT="$v^+=v_s$"></SPAN> (with <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img6.svg"
+ ALT="$R_s=0$"></SPAN>) and assume
+      the input current is <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img33.svg"
+ ALT="$i_{in}$"></SPAN>, then we have <!-- MATH
+ $v^+-v^-=r_{in}i_{in}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.46ex; " SRC="img34.svg"
+ ALT="$v^+-v^-=r_{in}i_{in}$"></SPAN>, i.e.,
+      <!-- MATH
+ $v^-=v^+-r_{in}i_{in}=v_s-r_{in}i_{in}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.46ex; " SRC="img35.svg"
+ ALT="$v^-=v^+-r_{in}i_{in}=v_s-r_{in}i_{in}$"></SPAN>. Applying KCL to the node of <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.12ex; " SRC="img11.svg"
+ ALT="$v^-$"></SPAN> 
+      we get:
+      
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+i_{in}-\frac{v_s-r_{in}i_{in}}{R_1}-\frac{v_s-r_{in}i_{in}-A r_{in}i_{in}}{R_f+r_{out}}=0
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.81ex; vertical-align: -2.37ex; " SRC="img36.svg"
+ ALT="$\displaystyle i_{in}-\frac{v_s-r_{in}i_{in}}{R_1}-\frac{v_s-r_{in}i_{in}-A r_{in}i_{in}}{R_f+r_{out}}=0
+$"> 
+
+(<SPAN CLASS="arabic">8</SPAN>)
+</DIV>
+Solving this we get
+      
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+i_{in}=\frac{v_s(R_f+r_{out}+R_1)}{(R_f+r_{out})(R_1+r_{in})+(A+1)r_{in} R_1}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.81ex; vertical-align: -2.37ex; " SRC="img37.svg"
+ ALT="$\displaystyle i_{in}=\frac{v_s(R_f+r_{out}+R_1)}{(R_f+r_{out})(R_1+r_{in})+(A+1)r_{in} R_1}
+$"> 
+
+(<SPAN CLASS="arabic">9</SPAN>)
+</DIV>
+and 
+      <BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+R_{in}&=&\frac{v_s}{i_{in}}
+        =\frac{[(A+1)R_1+R_f+r_{out}]r_{in}+(R_f+r_{out})R_1}{R_1+R_f+r_{out}}
+        \nonumber\\
+        &=&\frac{(A+1)R_1+R_f+r_{out}}{R_1+R_f+r_{out}}r_{in}+R_1||(R_f+r_{out})
+        \nonumber
+      
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img38.svg"
+ ALT="$\displaystyle R_{in}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img21.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 5.81ex; vertical-align: -2.37ex; " SRC="img39.svg"
+ ALT="$\displaystyle \frac{v_s}{i_{in}}
+=\frac{[(A+1)R_1+R_f+r_{out}]r_{in}+(R_f+r_{out})R_1}{R_1+R_f+r_{out}}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img21.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 5.81ex; vertical-align: -2.37ex; " SRC="img40.svg"
+ ALT="$\displaystyle \frac{(A+1)R_1+R_f+r_{out}}{R_1+R_f+r_{out}}r_{in}+R_1\vert\vert(R_f+r_{out})$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+The same result can be obtained if we use loop current method.
+      As <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.21ex; " SRC="img16.svg"
+ ALT="$A\gg 1$"></SPAN> and <!-- MATH
+ $r_{out} \approx 0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.46ex; " SRC="img41.svg"
+ ALT="$r_{out} \approx 0$"></SPAN>, we get
+      
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+R_{in}  \approx \frac{(A+1)R_1+R_f}{R_1+R_f}r_{in}+R_1||R_f
+      \approx A r_{in}\frac{R_1}{R_1+R_f}+R_1||R_f \approx A r_{in}\;\frac{R_1}{R_1+R_f}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.81ex; vertical-align: -2.37ex; " SRC="img42.svg"
+ ALT="$\displaystyle R_{in} \approx \frac{(A+1)R_1+R_f}{R_1+R_f}r_{in}+R_1\vert\vert R...
+...n}\frac{R_1}{R_1+R_f}+R_1\vert\vert R_f \approx A r_{in}\;\frac{R_1}{R_1+R_f}
+$"> 
+
+(<SPAN CLASS="arabic">10</SPAN>)
+</DIV>
+Moreover, when <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.78ex; " SRC="img31.svg"
+ ALT="$R_f=0$"></SPAN>, <!-- MATH
+ $R_{in}\approx A r_{in}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img43.svg"
+ ALT="$R_{in}\approx A r_{in}$"></SPAN> as in the voltage follower case.
+
+<P>
+</LI>
+<LI><B>Output resistance:</B> 
+      To simplify the analysis we still assume <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img44.svg"
+ ALT="$r_{in}=\infty$"></SPAN>. First, as shown above, 
+      the open-circuit output voltage is 
+      
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+v_{oc}=\frac{A(R_f+R_1)}{r_{out}+R_f+(A+1)R_1}v_s
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.81ex; vertical-align: -2.37ex; " SRC="img45.svg"
+ ALT="$\displaystyle v_{oc}=\frac{A(R_f+R_1)}{r_{out}+R_f+(A+1)R_1}v_s
+$"> 
+
+(<SPAN CLASS="arabic">11</SPAN>)
+</DIV>
+Second, we find the short-circuit current, i.e., output port is shorted with
+      <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.46ex; " SRC="img46.svg"
+ ALT="$v_{out}=0$"></SPAN>, we have <!-- MATH
+ $v^-=v_{out}R_1/(R_1+R_f)=0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.78ex; " SRC="img47.svg"
+ ALT="$v^-=v_{out}R_1/(R_1+R_f)=0$"></SPAN>, and <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.46ex; " SRC="img48.svg"
+ ALT="$v^+-v^-=v_s$"></SPAN>,
+      
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+i_{sc}=\frac{A(v^+-v^-)}{r_{out}}=\frac{Av_s}{r_{out}}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.81ex; vertical-align: -2.06ex; " SRC="img49.svg"
+ ALT="$\displaystyle i_{sc}=\frac{A(v^+-v^-)}{r_{out}}=\frac{Av_s}{r_{out}}
+$"> 
+
+(<SPAN CLASS="arabic">12</SPAN>)
+</DIV>
+Now the output resistance can be obtained as:
+      <BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+R_{out}&=&\frac{v_{oc}}{i_{sc}}=\frac{A(R_f+R_1)v_s}{r_{out}+R_f+(A+1)R_1}
+        \frac{r_{out}}{Av_s}
+        \nonumber\\
+        &=&\frac{(R_1+R_f)r_{out}}{r_{out}+R_f+(A+1)R_1}
+        \approx \frac{r_{out}}{A}\;\frac{R_1+R_f}{R_1} 
+        \nonumber
+      
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img50.svg"
+ ALT="$\displaystyle R_{out}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img21.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 5.81ex; vertical-align: -2.37ex; " SRC="img51.svg"
+ ALT="$\displaystyle \frac{v_{oc}}{i_{sc}}=\frac{A(R_f+R_1)v_s}{r_{out}+R_f+(A+1)R_1}
+\frac{r_{out}}{Av_s}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img21.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 5.81ex; vertical-align: -2.37ex; " SRC="img52.svg"
+ ALT="$\displaystyle \frac{(R_1+R_f)r_{out}}{r_{out}+R_f+(A+1)R_1}
+\approx \frac{r_{out}}{A}\;\frac{R_1+R_f}{R_1}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+The approximation is due to <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.21ex; " SRC="img16.svg"
+ ALT="$A\gg 1$"></SPAN>. In particular, when <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.78ex; " SRC="img31.svg"
+ ALT="$R_f=0$"></SPAN>, 
+      <!-- MATH
+ $R_{out}=r_{out}/A$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img53.svg"
+ ALT="$R_{out}=r_{out}/A$"></SPAN>, as in the voltage follower case.
+
+<P>
+</LI>
+</UL>
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A ID="CHILD_LINKS"></A>
+
+<UL CLASS="ChildLinks">
+<LI><A ID="tex2html2"
+  HREF="node1.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev_g.png">   
+<BR>
+<B> Next:</B> <A
+ HREF="node1.html">About this document ...</A></DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

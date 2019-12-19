@@ -1,0 +1,728 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Interior Point Methods</TITLE>
+<META NAME="description" CONTENT="Interior Point Methods">
+<META NAME="keywords" CONTENT="interior">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="interior.css">
+
+<LINK REL="next" HREF="node2.html">
+<LINK REL="previous" HREF="interior.html">
+<LINK REL="up" HREF="interior.html">
+<LINK REL="next" HREF="node2.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html16"
+  HREF="node2.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html14"
+  HREF="interior.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html8"
+  HREF="interior.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html17"
+  HREF="node2.html">Interior Point Methods for</A>
+<B> Up:</B> <A NAME="tex2html15"
+  HREF="interior.html">interior</A>
+<B> Previous:</B> <A NAME="tex2html9"
+  HREF="interior.html">interior</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00001000000000000000">
+Interior Point Methods</A>
+</H2>
+
+<P>
+We first consider using the <EM>central path</EM> method to solve 
+the following inequality constrained optimization problem:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\begin{array}{ll}
+    \mbox{minimize}  &  f_0({\bf x})\\
+    \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\\
+    \mbox{subject to:} & f_j({\bf x})\le 0,\;\;\;\;(j=1,\cdots,n)
+  \end{array}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="392" HEIGHT="76" BORDER="0"
+ SRC="img1.png"
+ ALT="\begin{displaymath}
+\begin{array}{ll}
+\mbox{minimize} &amp; f_0({\bf x})\\
+\;\;\...
+...ct to:} &amp; f_j({\bf x})\le 0,\;\;\;\;(j=1,\cdots,n)
+\end{array}\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(1)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+The <IMG
+ WIDTH="16" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$n$"> inequalty constraints can be expressed in vector form as
+<!-- MATH
+ ${\bf f}({\bf x})\le{\bf0}$
+ -->
+<IMG
+ WIDTH="75" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="${\bf f}({\bf x})\le{\bf0}$"> where <!-- MATH
+ ${\bf f}=[f_1,\cdots,f_n]^T$
+ -->
+<IMG
+ WIDTH="136" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="${\bf f}=[f_1,\cdots,f_n]^T$">. 
+The Lagrangian of the problem is
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+L({\bf x},{\bf\lambda})=f_0({\bf x})-\sum_{j=1}^n\lambda_jf_j({\bf x})
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="233" HEIGHT="58" BORDER="0"
+ SRC="img5.png"
+ ALT="\begin{displaymath}
+L({\bf x},{\bf\lambda})=f_0({\bf x})-\sum_{j=1}^n\lambda_jf_j({\bf x})
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+and the KKT conditions for <IMG
+ WIDTH="23" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="${\bf x}^*$"> and <!-- MATH
+ ${\bf\lambda}^*$
+ -->
+<IMG
+ WIDTH="23" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.png"
+ ALT="${\bf\lambda}^*$"> to be 
+solution of this problem are:
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+&&\bigtriangledown f_0({\bf x}^*)+\sum_{j=1}^n
+  \lambda_j\bigtriangledown f_j({\bf x}^*)=0
+  \nonumber\\
+  &&f_j({\bf x}^*)\le 0,\;\;\;\;\lambda^*_j\ge 0,\;\;\;\;
+  \lambda^*_j f_j({\bf x}^*)=0,\;\;\;\;(j=1,\cdots,n)
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="249" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.png"
+ ALT="$\displaystyle \bigtriangledown f_0({\bf x}^*)+\sum_{j=1}^n\lambda_j\bigtriangledown f_j({\bf x}^*)=0$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="445" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.png"
+ ALT="$\displaystyle f_j({\bf x}^*)\le 0,\;\;\;\;\lambda^*_j\ge 0,\;\;\;\;
+\lambda^*_j f_j({\bf x}^*)=0,\;\;\;\;(j=1,\cdots,n)$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+We can use the central path method to find the solution <IMG
+ WIDTH="23" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="${\bf x}^*$">. 
+To do so, we first introduce an indicator function:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+I_-(u)=\left\{\begin{array}{ll}0 & u\le 0\\\infty& u>0\end{array}
+\right.
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="171" HEIGHT="55" BORDER="0"
+ SRC="img10.png"
+ ALT="\begin{displaymath}
+I_-(u)=\left\{\begin{array}{ll}0 &amp; u\le 0\ \infty&amp; u&gt;0\end{array}\right.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+and then convert the original optimization problem into another 
+optimization problem with a new objective function but no constraints:
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\mbox{minimize} \;\;\;\;\; f_0({\bf x})+\sum_{j=1}^nI_-(f_j({\bf x}))
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="268" HEIGHT="58" BORDER="0"
+ SRC="img11.png"
+ ALT="\begin{displaymath}
+\mbox{minimize} \;\;\;\;\; f_0({\bf x})+\sum_{j=1}^nI_-(f_j({\bf x}))
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(3)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+Here the indicator function can be considered as a penalty for each
+constraint <!-- MATH
+ $f_j({\bf x})\le 0$
+ -->
+<IMG
+ WIDTH="81" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.png"
+ ALT="$f_j({\bf x})\le 0$"> if it is violated. However, as such a
+penalty function is not smooth and therefore not differentiable, it 
+is approximated by the following function which approaches <IMG
+ WIDTH="49" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.png"
+ ALT="$I_-(u)$">
+when a parameter <IMG
+ WIDTH="11" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img14.png"
+ ALT="$t$"> approaches zero:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+-\frac{1}{t}\ln(-u)\stackrel{t\rightarrow \infty}{\Longrightarrow}I_-(u)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="171" HEIGHT="45" BORDER="0"
+ SRC="img15.png"
+ ALT="\begin{displaymath}
+-\frac{1}{t}\ln(-u)\stackrel{t\rightarrow \infty}{\Longrightarrow}I_-(u)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Now the objective function becomes:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+f_0({\bf x})-\frac{1}{t}\sum_{j=1}^n \ln(-f_j({\bf x}))
+=f_0({\bf x})+\frac{1}{t}\phi({\bf x})
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="335" HEIGHT="58" BORDER="0"
+ SRC="img16.png"
+ ALT="\begin{displaymath}
+f_0({\bf x})-\frac{1}{t}\sum_{j=1}^n \ln(-f_j({\bf x}))
+=f_0({\bf x})+\frac{1}{t}\phi({\bf x})
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where <IMG
+ WIDTH="41" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$\phi({\bf x})$">, called the <EM>logarithmic barrier function</EM>, is
+defined as:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\phi({\bf x})=-\sum_{j=1}^n \ln(-f_j({\bf x}))
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="191" HEIGHT="58" BORDER="0"
+ SRC="img18.png"
+ ALT="\begin{displaymath}
+\phi({\bf x})=-\sum_{j=1}^n \ln(-f_j({\bf x}))
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+which is smooth and differentiable. The solution <IMG
+ WIDTH="23" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="${\bf x}^*$"> that
+minimizes the new objective function should satisfy 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\bigtriangledown \left[ f_0({\bf x})-\frac{1}{t}\sum_{j=1}^n \ln(-f_j({\bf x})) \right]
+=\bigtriangledown f_0({\bf x})-\frac{1}{t}\sum_{j=1}^n \frac{1}{f_j({\bf x})}
+\bigtriangledown f_j({\bf x})={\bf0}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="536" HEIGHT="64" BORDER="0"
+ SRC="img19.png"
+ ALT="\begin{displaymath}
+\bigtriangledown \left[ f_0({\bf x})-\frac{1}{t}\sum_{j=1}^n...
+...^n \frac{1}{f_j({\bf x})}
+\bigtriangledown f_j({\bf x})={\bf0}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+We further define <IMG
+ WIDTH="22" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.png"
+ ALT="$\lambda_j$"> as a function of <IMG
+ WIDTH="11" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img14.png"
+ ALT="$t$"> as well as <IMG
+ WIDTH="47" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.png"
+ ALT="$f_j({\bf x})$">:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\lambda_j=-\frac{1}{t f_j({\bf x})},\;\;\;\;(j=1,\cdots,n)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="249" HEIGHT="50" BORDER="0"
+ SRC="img22.png"
+ ALT="\begin{displaymath}
+\lambda_j=-\frac{1}{t f_j({\bf x})},\;\;\;\;(j=1,\cdots,n)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+or in matrix form
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+{\bf 1}+t\,{\bf F}({\bf x}){\bf\lambda}={\bf0}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="128" HEIGHT="33" BORDER="0"
+ SRC="img23.png"
+ ALT="\begin{displaymath}
+{\bf 1}+t {\bf F}({\bf x}){\bf\lambda}={\bf0}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where <!-- MATH
+ ${\bf\lambda}=[\lambda_1,\cdots,\lambda_N]^T$
+ -->
+<IMG
+ WIDTH="146" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img24.png"
+ ALT="${\bf\lambda}=[\lambda_1,\cdots,\lambda_N]^T$"> and 
+<!-- MATH
+ ${\bf F}({\bf x})=diag(f_1({\bf x},\cdots,f_n({\bf x}))$
+ -->
+<IMG
+ WIDTH="241" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.png"
+ ALT="${\bf F}({\bf x})=diag(f_1({\bf x},\cdots,f_n({\bf x}))$">, then the above 
+becomes
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\bigtriangledown f_0({\bf x})+\sum_{j=1}^n \lambda_j\bigtriangledown f_j({\bf x})
+={\bf g}_{f_0}({\bf x})+{\bf J}_{\bf f}^T({\bf x}){\bf\lambda}={\bf0}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="386" HEIGHT="58" BORDER="0"
+ SRC="img26.png"
+ ALT="\begin{displaymath}
+\bigtriangledown f_0({\bf x})+\sum_{j=1}^n \lambda_j\bigtria...
+...}_{f_0}({\bf x})+{\bf J}_{\bf f}^T({\bf x}){\bf\lambda}={\bf0}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where <!-- MATH
+ ${\bf J}_{\bf f}({\bf x})$
+ -->
+<IMG
+ WIDTH="49" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.png"
+ ALT="${\bf J}_{\bf f}({\bf x})$"> is the Jacobian matrix of the constraint
+function <!-- MATH
+ ${\bf f}({\bf x})$
+ -->
+<IMG
+ WIDTH="39" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img28.png"
+ ALT="${\bf f}({\bf x})$">:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+{\bf J}_{\bf f}({\bf x})=  \left[\begin{array}{ccc}
+      \partial f_1/\partial x_1&\cdots&\partial f_1/\partial x_N\\
+      \vdots & \ddots & \vdots\\
+      \partial f_M/\partial x_1&\cdots&\partial f_M/\partial x_N\end{array}\right]
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="309" HEIGHT="84" BORDER="0"
+ SRC="img29.png"
+ ALT="\begin{displaymath}
+{\bf J}_{\bf f}({\bf x})= \left[\begin{array}{ccc}
+\partial...
+...partial x_1&amp;\cdots&amp;\partial f_M/\partial x_N\end{array}\right]
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The corresponding dual Lagranian is:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+L_d({\bf x},{\bf\lambda})=f_0({\bf x})+\sum_{j=1}^n\lambda_jf_j({\bf x})
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="241" HEIGHT="58" BORDER="0"
+ SRC="img30.png"
+ ALT="\begin{displaymath}
+L_d({\bf x},{\bf\lambda})=f_0({\bf x})+\sum_{j=1}^n\lambda_jf_j({\bf x})
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+and the solution <!-- MATH
+ ${\bf x}^*,\;{\bf\lambda}^*$
+ -->
+<IMG
+ WIDTH="56" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img31.png"
+ ALT="${\bf x}^*,\;{\bf\lambda}^*$"> that minimizes 
+<!-- MATH
+ $L_d({\bf x},{\bf\lambda})$
+ -->
+<IMG
+ WIDTH="70" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.png"
+ ALT="$L_d({\bf x},{\bf\lambda})$"> can be found by solving the above two equations 
+of both varialbes <IMG
+ WIDTH="16" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img33.png"
+ ALT="${\bf x}$"> and <IMG
+ WIDTH="15" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img34.png"
+ ALT="${\bf\lambda}$">:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\left\{\begin{array}{l}
+{\bf g}_{f_0}({\bf x})+{\bf J}_{\bf f}^T({\bf x}){\bf\lambda}={\bf0}\\
+{\bf 1}/t+{\bf F}({\bf x}){\bf\lambda}={\bf0}\end{array}\right.
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="186" HEIGHT="55" BORDER="0"
+ SRC="img35.png"
+ ALT="\begin{displaymath}
+\left\{\begin{array}{l}
+{\bf g}_{f_0}({\bf x})+{\bf J}_{\bf ...
+...\bf 1}/t+{\bf F}({\bf x}){\bf\lambda}={\bf0}\end{array}\right.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+using the <A NAME="tex2html1"
+  HREF="../ch2/node7.html">Newton-Raphson method</A>.
+Specifically, in each step of the iteration, we find the increments 
+<IMG
+ WIDTH="25" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.png"
+ ALT="$\delta{\bf x}$"> and <!-- MATH
+ $\delta{\bf\lambda}$
+ -->
+<IMG
+ WIDTH="24" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img37.png"
+ ALT="$\delta{\bf\lambda}$"> by solving the following linear
+equation system:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\left[\begin{array}{cc}{\bf H}_{f_0}({\bf x}) & {\bf J}_{\bf f}^T({\bf x})\\
+    {\bf J}_{\bf f}({\bf x}) & {\bf F}({\bf x})\end{array}\right]
+\left[\begin{array}{c}\delta{\bf x}\\\delta{\bf\lambda}\end{array}\right]
+=-\left[\begin{array}{c}{\bf g}_{f_0}({\bf x})+{\bf J}_{\bf f}^T({\bf x}){\bf\lambda}&
+{\bf 1}/t+{\bf F}({\bf x}){\bf\lambda}\end{array}\right]
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="413" HEIGHT="55" BORDER="0"
+ SRC="img38.png"
+ ALT="\begin{displaymath}
+\left[\begin{array}{cc}{\bf H}_{f_0}({\bf x}) &amp; {\bf J}_{\bf...
+...bda}&amp;
+{\bf 1}/t+{\bf F}({\bf x}){\bf\lambda}\end{array}\right]
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where the 2 by 2 block matrix on the left is the Jacobian of the function 
+combining the two functions above, with respect to both variables <IMG
+ WIDTH="16" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img33.png"
+ ALT="${\bf x}$"> and 
+<IMG
+ WIDTH="15" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img34.png"
+ ALT="${\bf\lambda}$">. We then update the two variables to get <!-- MATH
+ ${\bf x}+\delta{\bf x}$
+ -->
+<IMG
+ WIDTH="59" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img39.png"
+ ALT="${\bf x}+\delta{\bf x}$">
+and <!-- MATH
+ ${\bf\lambda}+\delta{\bf\lambda}$
+ -->
+<IMG
+ WIDTH="58" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img40.png"
+ ALT="${\bf\lambda}+\delta{\bf\lambda}$"> based on their previous values <IMG
+ WIDTH="16" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img33.png"
+ ALT="${\bf x}$">
+and <IMG
+ WIDTH="15" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img34.png"
+ ALT="${\bf\lambda}$">. The iteration will approach the solutions <IMG
+ WIDTH="45" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img41.png"
+ ALT="${\bf x}^*(t)$">
+and <!-- MATH
+ ${\bf\lambda}^*(t)$
+ -->
+<IMG
+ WIDTH="44" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img42.png"
+ ALT="${\bf\lambda}^*(t)$"> (both are functions of parameter <IMG
+ WIDTH="11" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img14.png"
+ ALT="$t$">) that minimize
+the dual Lagrangian <!-- MATH
+ $L_d({\bf x},{\bf\lambda})$
+ -->
+<IMG
+ WIDTH="70" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.png"
+ ALT="$L_d({\bf x},{\bf\lambda})$"> corresponding to the specific
+<IMG
+ WIDTH="11" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img14.png"
+ ALT="$t$">:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+L_d({\bf x}^*,{\bf\lambda}^*)=f_0({\bf x}^*)+\sum_{j=1}^n\lambda_jf_j({\bf x}^*)
+=f_0({\bf x}^*)-\sum_{j=1}^n\frac{f_j({\bf x}^*)}{t\,f_j({\bf x}^*)}
+=f_0({\bf x}^*)-\frac{n}{t}<f_0({\bf x}^*)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="623" HEIGHT="58" BORDER="0"
+ SRC="img43.png"
+ ALT="\begin{displaymath}
+L_d({\bf x}^*,{\bf\lambda}^*)=f_0({\bf x}^*)+\sum_{j=1}^n\la...
+...{t f_j({\bf x}^*)}
+=f_0({\bf x}^*)-\frac{n}{t}&lt;f_0({\bf x}^*)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The difference <!-- MATH
+ $f_0({\bf x}^*)-L_d({\bf x}^*,{\bf\lambda}^*)=p^*-d^*=n/t$
+ -->
+<IMG
+ WIDTH="294" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img44.png"
+ ALT="$f_0({\bf x}^*)-L_d({\bf x}^*,{\bf\lambda}^*)=p^*-d^*=n/t$">
+is the duality gap which approaches zero when <!-- MATH
+ $t\rightarrow\infty$
+ -->
+<IMG
+ WIDTH="60" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img45.png"
+ ALT="$t\rightarrow\infty$">. Also,
+the solution <IMG
+ WIDTH="23" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="${\bf x}^*$"> and <!-- MATH
+ ${\bf\lambda}^*$
+ -->
+<IMG
+ WIDTH="23" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.png"
+ ALT="${\bf\lambda}^*$"> satisfies the KKT conditions:
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+&&\bigtriangledown f_0({\bf x}^*)
+  +\sum_{j=1}^n\lambda_j\bigtriangledown f_j({\bf x}^*)=0
+  \nonumber\\
+  &&f_j({\bf x}^*)\le 0,\;\;\;\;\lambda^*_j\ge 0,\;\;\;\;
+  -\lambda_j f_j({\bf x}^*)=1/t,\;\;\;\;(j=1,\cdots,n)
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="249" HEIGHT="64" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.png"
+ ALT="$\displaystyle \bigtriangledown f_0({\bf x}^*)+\sum_{j=1}^n\lambda_j\bigtriangledown f_j({\bf x}^*)=0$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="475" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img46.png"
+ ALT="$\displaystyle f_j({\bf x}^*)\le 0,\;\;\;\;\lambda^*_j\ge 0,\;\;\;\;
+-\lambda_j f_j({\bf x}^*)=1/t,\;\;\;\;(j=1,\cdots,n)$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(4)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+which become the same as the KKT conditions for the original problem when 
+<!-- MATH
+ $t\rightarrow\infty$
+ -->
+<IMG
+ WIDTH="60" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img45.png"
+ ALT="$t\rightarrow\infty$">. 
+
+<P>
+The given inequality-constrained optimization problem can now be be solved
+by the central path method. It starts from an initial point <IMG
+ WIDTH="23" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img47.png"
+ ALT="${\bf x}_0$">
+inside the feasible region with an initial <IMG
+ WIDTH="51" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img48.png"
+ ALT="$t=t_0$">, and approaches the 
+solution on the boundary iteratively. In each iteration (outer), the value
+of the parameter <IMG
+ WIDTH="11" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img14.png"
+ ALT="$t$"> is increased from the prevous value, and the best 
+solution <IMG
+ WIDTH="45" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img41.png"
+ ALT="${\bf x}^*(t)$"> corresponding to this <IMG
+ WIDTH="11" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img14.png"
+ ALT="$t$"> is obtained through the 
+iteration (inner) of the Newton-Raphson's method. Eventually, when 
+<!-- MATH
+ $t\rightarrow\infty$
+ -->
+<IMG
+ WIDTH="60" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img45.png"
+ ALT="$t\rightarrow\infty$">, <IMG
+ WIDTH="45" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img41.png"
+ ALT="${\bf x}^*(t)$"> approaches some point on the boundary,
+at which <IMG
+ WIDTH="47" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img49.png"
+ ALT="$f_0({\bf x})$"> is minimized subject to the inequality constraints.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html16"
+  HREF="node2.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html14"
+  HREF="interior.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html8"
+  HREF="interior.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html17"
+  HREF="node2.html">Interior Point Methods for</A>
+<B> Up:</B> <A NAME="tex2html15"
+  HREF="interior.html">interior</A>
+<B> Previous:</B> <A NAME="tex2html9"
+  HREF="interior.html">interior</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Ruye Wang
+2016-10-04
+</ADDRESS>
+</BODY>
+</HTML>

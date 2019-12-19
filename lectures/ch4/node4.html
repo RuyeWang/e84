@@ -1,0 +1,403 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>DC Operating Point</TITLE>
+<META NAME="description" CONTENT="DC Operating Point">
+<META NAME="keywords" CONTENT="ch4">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="ch4.css">
+
+<LINK REL="next" HREF="node5.html">
+<LINK REL="previous" HREF="node3.html">
+<LINK REL="next" HREF="node5.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="ch4.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node5.html">AC Signal Amplification</A>
+<B> Up:</B> <A
+ HREF="ch4.html">ch4</A>
+<B> Previous:</B> <A
+ HREF="node3.html">Bipolar Junction Transistor (BJT)</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A ID="SECTION00040000000000000000">
+DC Operating Point</A>
+</H1>
+
+<P>
+Previously we only considered the relationship between the voltage and 
+current at both the input and output ports of a transistor in either CB
+or CE configuration. Now we need to further find these voltages and currents
+when the transistor is connected to the rest components of a transistor
+circuit. Specifically, we treat the transistor as the load of a voltage 
+source and a resistor, and find voltage and current at both the input and
+output ports.
+
+<P>
+<B>Example:</B> In the CE circuit shown below, <!-- MATH
+ $V_{CC}=12V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img132.svg"
+ ALT="$V_{CC}=12V$"></SPAN>, <!-- MATH
+ $R_B=6 K\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img133.svg"
+ ALT="$R_B=6 K\Omega$"></SPAN>,
+<!-- MATH
+ $R_C=2 K\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img134.svg"
+ ALT="$R_C=2 K\Omega$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img135.svg"
+ ALT="$\beta=60$"></SPAN>. The <EM>load line</EM> can be determined by two 
+points: <!-- MATH
+ $(V_{CE}=0,\;I_C=V_{CC}/R_C=6\;mA)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img136.svg"
+ ALT="$(V_{CE}=0,\;I_C=V_{CC}/R_C=6\;mA)$"></SPAN> and <!-- MATH
+ $(I_C=0,\;V_{CE}=V_{CC}=12\;V)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img137.svg"
+ ALT="$(I_C=0,\;V_{CE}=V_{CC}=12\;V)$"></SPAN>. 
+Find output voltage <!-- MATH
+ $V_{out}=V_{CE}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img138.svg"
+ ALT="$V_{out}=V_{CE}$"></SPAN> when the input voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img139.svg"
+ ALT="$V_1$"></SPAN> takes the 
+following values:
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/CEexample2.png"
+ ALT="CEexample2.png">
+
+<P>
+
+<UL>
+<LI><!-- MATH
+ $V_{BE}=V_{in}=0<0.7V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img140.svg"
+ ALT="$V_{BE}=V_{in}=0&lt;0.7V$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img141.svg"
+ ALT="$I_B=0$"></SPAN> and <!-- MATH
+ $I_C=\beta I_B=0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img142.svg"
+ ALT="$I_C=\beta I_B=0$"></SPAN>, <!-- MATH
+ $V_C=V_{CC}=12\;V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img143.svg"
+ ALT="$V_C=V_{CC}=12\;V$"></SPAN>,
+  the transistor is the <EM>cutoff region</EM>.
+
+<P>
+</LI>
+<LI><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img144.svg"
+ ALT="$V_{in}=1V$"></SPAN>.   We assume <!-- MATH
+ $V_{BE}\approx 0.7\;V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img145.svg"
+ ALT="$V_{BE}\approx 0.7\;V$"></SPAN>, and get 
+  <BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+I_B&=&(V_{in}-V_{BE})/R_B=(1-0.7)/6=0.05\;mA
+    \nonumber\\
+    I_C&=&\beta I_B=60\times 0.05\;mA=3\; mA 
+    \nonumber\\
+    V_{CE}&=&V_{CC}-I_C R_C=12\;V-3\;mA \times 2\;K\Omega=6\;V
+  
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img89.svg"
+ ALT="$\displaystyle I_B$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img87.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img146.svg"
+ ALT="$\displaystyle (V_{in}-V_{BE})/R_B=(1-0.7)/6=0.05\;mA$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img86.svg"
+ ALT="$\displaystyle I_C$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img87.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img147.svg"
+ ALT="$\displaystyle \beta I_B=60\times 0.05\;mA=3\; mA$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img148.svg"
+ ALT="$\displaystyle V_{CE}$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img87.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img149.svg"
+ ALT="$\displaystyle V_{CC}-I_C R_C=12\;V-3\;mA \times 2\;K\Omega=6\;V$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">21</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+
+  The transistor is in the <EM>linear region</EM>.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/CEexample2c.png"
+ ALT="CEexample2c.png">
+
+<P>
+</LI>
+<LI><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img150.svg"
+ ALT="$V_{in}=2V$"></SPAN>. <!-- MATH
+ $I_B=(2-0.7)/6=0.22\;mA$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img151.svg"
+ ALT="$I_B=(2-0.7)/6=0.22\;mA$"></SPAN>, <!-- MATH
+ $I_C=\beta I_B=13\;mA$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img152.svg"
+ ALT="$I_C=\beta I_B=13\;mA$"></SPAN>, and 
+  <!-- MATH
+ $V_{CE}=12\;V-13\;mA\times 2\;K\Omega=-14\;V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img153.svg"
+ ALT="$V_{CE}=12\;V-13\;mA\times 2\;K\Omega=-14\;V$"></SPAN>.
+
+<P>
+This result is unreasonable and incorrect, because <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img79.svg"
+ ALT="$I_B$"></SPAN> is so high 
+  that the transistor is no longer in the linear region as in the previous
+  case, but it is in the <EM>saturation region</EM>, where the linear relationship 
+  <!-- MATH
+ $I_C=\beta I_B$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img115.svg"
+ ALT="$I_C=\beta I_B$"></SPAN> is no longer applicable, and the actual voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img93.svg"
+ ALT="$V_{CE}$"></SPAN> can
+  be approximated to be about <!-- MATH
+ $V_{CE}=0.2V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img154.svg"
+ ALT="$V_{CE}=0.2V$"></SPAN>, and the actual <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img80.svg"
+ ALT="$I_C$"></SPAN> can be found 
+  to be <!-- MATH
+ $(V_{CC}-V_{CE})/R_C=(12-0.2)/2=5.9\;mA$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img155.svg"
+ ALT="$(V_{CC}-V_{CE})/R_C=(12-0.2)/2=5.9\;mA$"></SPAN>.
+
+<P>
+In general, when analyzing a transistor circuit we can first find
+  <!-- MATH
+ $I_C=\beta\,I_B$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img156.svg"
+ ALT="$I_C=\beta\,I_B$"></SPAN>, assuming this linear relationship holds. However,
+  this assumption is invalid if <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img80.svg"
+ ALT="$I_C$"></SPAN> exceeds the maximum current (the 
+  short-circuit current) <!-- MATH
+ $V_{CC}/R_C$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img157.svg"
+ ALT="$V_{CC}/R_C$"></SPAN>, or the corresponding <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img93.svg"
+ ALT="$V_{CE}$"></SPAN> is 
+  too low (<SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.21ex; " SRC="img158.svg"
+ ALT="$&lt;0.2\,V$"></SPAN>).
+
+<P>
+</LI>
+</UL>
+
+<P>
+Summarizing the above, we see that the operation of a transistor can be in 
+one of the three possible regions:
+
+<UL>
+<LI><B>Cutoff region:</B> 
+
+<P>
+When <!-- MATH
+ $V_{BE}<0.7V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img159.svg"
+ ALT="$V_{BE}&lt;0.7V$"></SPAN>, or even negative, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img141.svg"
+ ALT="$I_B=0$"></SPAN>, the output current is
+  <!-- MATH
+ $I_C=I_{CE0} \approx 0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img160.svg"
+ ALT="$I_C=I_{CE0} \approx 0$"></SPAN>, <!-- MATH
+ $V_C=V_{CC}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img161.svg"
+ ALT="$V_C=V_{CC}$"></SPAN>, i.e., the transistor (between 
+  collector and emitter) is cut off (immediate above the horizontal
+  axis of the output plot).
+
+<P>
+</LI>
+<LI><B>Linear region:</B> 
+
+<P>
+When <!-- MATH
+ $V_{BE}\approx 0.7V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img162.svg"
+ ALT="$V_{BE}\approx 0.7V$"></SPAN>, but <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img163.svg"
+ ALT="$I_B&gt;0$"></SPAN> is small enough so that the 
+  transistor is in the linear range where the collector current 
+  <!-- MATH
+ $I_C=\beta I_B < V_{CC}/R_C$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img164.svg"
+ ALT="$I_C=\beta I_B &lt; V_{CC}/R_C$"></SPAN> is proportional to base current <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img79.svg"
+ ALT="$I_B$"></SPAN>, 
+  and <!-- MATH
+ $V_C=V_{CC}-R_CI_C$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img165.svg"
+ ALT="$V_C=V_{CC}-R_CI_C$"></SPAN>. The CE transistor circuit in the linear 
+  region is widely used for amplification.
+
+<P>
+</LI>
+<LI><B>Saturation region:</B> 
+
+<P>
+When <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img75.svg"
+ ALT="$V_{BE}$"></SPAN> is further increased <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img79.svg"
+ ALT="$I_B$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img79.svg"
+ ALT="$I_B$"></SPAN> is also significantly
+  increased (due to the exponential relationship between <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img79.svg"
+ ALT="$I_B$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img75.svg"
+ ALT="$V_{BE}$"></SPAN>), 
+  <!-- MATH
+ $\beta I_B > V_{CC}/R_C$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img166.svg"
+ ALT="$\beta I_B &gt; V_{CC}/R_C$"></SPAN>, the linear relationship <!-- MATH
+ $I_C=\beta I_B$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img115.svg"
+ ALT="$I_C=\beta I_B$"></SPAN> no longer 
+  holds as <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img80.svg"
+ ALT="$I_C$"></SPAN> approaches its maximum <!-- MATH
+ $V_{CC}/R_C$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img157.svg"
+ ALT="$V_{CC}/R_C$"></SPAN>. The transistor is 
+  is saturated and <!-- MATH
+ $V_{CE}\approx 0.2V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img167.svg"
+ ALT="$V_{CE}\approx 0.2V$"></SPAN>, independent of <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img79.svg"
+ ALT="$I_B$"></SPAN> (to the 
+  immediate right of the vertical axis of the output plot).
+
+<P>
+</LI>
+</UL>
+
+<P>
+A typical CE circuit is shown in the figure below, where <!-- MATH
+ $I_E=I_B+I_C$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img168.svg"
+ ALT="$I_E=I_B+I_C$"></SPAN>,
+<!-- MATH
+ $V_{in}=V_{BE}=V_B$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img169.svg"
+ ALT="$V_{in}=V_{BE}=V_B$"></SPAN>, and <!-- MATH
+ $V_{out}=V_{CE}=V_C$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img170.svg"
+ ALT="$V_{out}=V_{CE}=V_C$"></SPAN>.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/transistorbiasingc.gif"
+ ALT="transistorbiasingc.gif">
+
+<P>
+The DC steady-state operating condition of the CE transistor circuit,
+in terms of the currents and voltages <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img79.svg"
+ ALT="$I_B$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img75.svg"
+ ALT="$V_{BE}$"></SPAN> of the input 
+port, and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img80.svg"
+ ALT="$I_C$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img93.svg"
+ ALT="$V_{CE}$"></SPAN> of the output port, is called the 
+<EM>DC operating point</EM> (Q-point), which iss determined by 
+
+<UL>
+<LI>The external circuit including the voltage source <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img171.svg"
+ ALT="$V_{CC}$"></SPAN> 
+  and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img172.svg"
+ ALT="$R_B$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img173.svg"
+ ALT="$R_C$"></SPAN> (as a non-ideal voltage soource represented 
+  by the linear <EM>load line</EM>);
+
+<P>
+</LI>
+<LI>The nonlinear input and output characteristics of the transistor.
+</LI>
+</UL>
+as the intersect of the two curves, as shown in the figures below.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/fixedbias2.gif"
+ ALT="fixedbias2.gif">
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/loadlines.gif"
+ ALT="loadlines.gif">
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="ch4.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node5.html">AC Signal Amplification</A>
+<B> Up:</B> <A
+ HREF="ch4.html">ch4</A>
+<B> Previous:</B> <A
+ HREF="node3.html">Bipolar Junction Transistor (BJT)</A></DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

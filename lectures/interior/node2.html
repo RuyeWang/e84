@@ -1,0 +1,446 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Interior Point Methods for LP</TITLE>
+<META NAME="description" CONTENT="Interior Point Methods for LP">
+<META NAME="keywords" CONTENT="interior">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="interior.css">
+
+<LINK REL="next" HREF="node3.html">
+<LINK REL="previous" HREF="node1.html">
+<LINK REL="up" HREF="interior.html">
+<LINK REL="next" HREF="node3.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html26"
+  HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html24"
+  HREF="interior.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html18"
+  HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html27"
+  HREF="node3.html">About this document ...</A>
+<B> Up:</B> <A NAME="tex2html25"
+  HREF="interior.html">interior</A>
+<B> Previous:</B> <A NAME="tex2html19"
+  HREF="node1.html">Interior Point Methods</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00002000000000000000">
+Interior Point Methods for LP</A>
+</H2>
+
+<P>
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\begin{array}{ll}
+    \mbox{minimize}  &  {\bf c}^T{\bf x}\\
+    \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\\
+    \mbox{subject to:} & {\bf Ax}-{\bf b}={\bf0},\;\;\;\;{\bf x}\ge{\bf0}
+  \end{array}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="350" HEIGHT="76" BORDER="0"
+ SRC="img50.png"
+ ALT="\begin{displaymath}
+\begin{array}{ll}
+\mbox{minimize} &amp; {\bf c}^T{\bf x}\\
+\...
+...&amp; {\bf Ax}-{\bf b}={\bf0},\;\;\;\;{\bf x}\ge{\bf0}
+\end{array}\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(5)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+The Lagrangian is
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+L({\bf x},{\bf\lambda})={\bf c}^T{\bf x}-{\bf\lambda}^T({\bf Ax}-{\bf b})
+-{\bf\mu}^T{\bf x}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="292" HEIGHT="33" BORDER="0"
+ SRC="img51.png"
+ ALT="\begin{displaymath}
+L({\bf x},{\bf\lambda})={\bf c}^T{\bf x}-{\bf\lambda}^T({\bf Ax}-{\bf b})
+-{\bf\mu}^T{\bf x}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+and we can set
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\bigtriangledown_{\bf x} L({\bf x},{\bf\lambda})
+={\bf c}-{\bf A}^T{\bf\lambda}-{\bf\mu}={\bf0}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="248" HEIGHT="33" BORDER="0"
+ SRC="img52.png"
+ ALT="\begin{displaymath}
+\bigtriangledown_{\bf x} L({\bf x},{\bf\lambda})
+={\bf c}-{\bf A}^T{\bf\lambda}-{\bf\mu}={\bf0}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+and get the KKT conditions:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\left\{\begin{array}{ll}
+{\bf A}^T{\bf\lambda}+{\bf\mu}-{\bf c}={\bf0}&
+\;\;\;\;\;\;\;\mbox{(stationarity)}\\
+{\bf Ax}-{\bf b}={\bf0},\;\;\;\;{\bf x}\ge{\bf0}&
+\;\;\;\;\;\;\mbox{(primal feasibility)}\\
+{\bf\mu}\ge{\bf0}&\;\;\;\;\;\;\mbox{(dual feasibility)}\\
+x_j\mu_j=0\;\;\;\;(j=1,\cdots,n)\;\;\;\;\mbox{or}\;\;\;\;\;
+{\bf X}{\bf M}{\bf 1}={\bf0}&\;\;\;\;\;\;\mbox{(complementarity)}
+\end{array}\right.
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="569" HEIGHT="99" BORDER="0"
+ SRC="img53.png"
+ ALT="\begin{displaymath}
+\left\{\begin{array}{ll}
+{\bf A}^T{\bf\lambda}+{\bf\mu}-{\bf...
+...{\bf0}&amp;\;\;\;\;\;\;\mbox{(complementarity)}
+\end{array}\right.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where we have defined
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+{\bf 1}=[1,\cdots,1]^T,\;\;\;\;\;{\bf X}=diag(x_1,\cdots,x_n),
+\;\;\;\;\;\;{\bf M}=diag(\mu_1,\cdots,\mu_n)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="539" HEIGHT="33" BORDER="0"
+ SRC="img54.png"
+ ALT="\begin{displaymath}
+{\bf 1}=[1,\cdots,1]^T,\;\;\;\;\;{\bf X}=diag(x_1,\cdots,x_n),
+\;\;\;\;\;\;{\bf M}=diag(\mu_1,\cdots,\mu_n)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+We now introduce the logarithmic barrier function to replace the
+inequality constraint <!-- MATH
+ ${\bf x}\ge{\bf0}$
+ -->
+<IMG
+ WIDTH="52" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img55.png"
+ ALT="${\bf x}\ge{\bf0}$">, the new Lagrangian is:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+L({\bf x},{\bf\lambda})={\bf c}^T{\bf x}-\frac{1}{t}\sum_{j=1}^n\ln x_j
+-{\bf\lambda}^T({\bf Ax}-{\bf b})
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="337" HEIGHT="58" BORDER="0"
+ SRC="img56.png"
+ ALT="\begin{displaymath}
+L({\bf x},{\bf\lambda})={\bf c}^T{\bf x}-\frac{1}{t}\sum_{j=1}^n\ln x_j
+-{\bf\lambda}^T({\bf Ax}-{\bf b})
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Here the constrant <!-- MATH
+ ${\bf x}\ge{\bf0}$
+ -->
+<IMG
+ WIDTH="52" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img55.png"
+ ALT="${\bf x}\ge{\bf0}$"> is no longer needed due 
+to the logarithmic term. To maximize this Lagrangian, we set
+its gradient to zero and get
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\bigtriangledown_{\bf x} L({\bf x},{\bf\lambda})
+={\bf c}-\frac{1}{t}\sum_{j=1}^n\frac{1}{x_j}-{\bf A}^T{\bf\lambda}
+={\bf c}-{\bf X}^{-1}{\bf 1}/t-{\bf A}^T{\bf\lambda}={\bf0}
+={\bf c}-{\bf\mu}-{\bf A}^T{\bf\lambda}={\bf0}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="597" HEIGHT="58" BORDER="0"
+ SRC="img57.png"
+ ALT="\begin{displaymath}
+\bigtriangledown_{\bf x} L({\bf x},{\bf\lambda})
+={\bf c}-\f...
+...\lambda}={\bf0}
+={\bf c}-{\bf\mu}-{\bf A}^T{\bf\lambda}={\bf0}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where we have defined
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+{\bf\mu}={\bf X}^{-1}{\bf 1}/t,\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;
+{\bf X}{\bf\mu}={\bf X}{\bf M}{\bf 1}={\bf 1}/t
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="334" HEIGHT="33" BORDER="0"
+ SRC="img58.png"
+ ALT="\begin{displaymath}
+{\bf\mu}={\bf X}^{-1}{\bf 1}/t,\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;
+{\bf X}{\bf\mu}={\bf X}{\bf M}{\bf 1}={\bf 1}/t
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Combine these equations together we get
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\left\{\begin{array}{ll}
+{\bf A}^T{\bf\lambda}+{\bf\mu}-{\bf c}={\bf0} & \mbox{(stationarity)}\\
+{\bf Ax}-{\bf b}={\bf0} &\mbox{(primal feasibility)}\\
+{\bf XM1}-{\bf 1}/t={\bf0} & \mbox{(dual feasibility)}
+\end{array}\right.
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="328" HEIGHT="76" BORDER="0"
+ SRC="img59.png"
+ ALT="\begin{displaymath}
+\left\{\begin{array}{ll}
+{\bf A}^T{\bf\lambda}+{\bf\mu}-{\bf...
+...\bf 1}/t={\bf0} &amp; \mbox{(dual feasibility)}
+\end{array}\right.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Also, as <!-- MATH
+ ${\bf x}\ge{\bf0}$
+ -->
+<IMG
+ WIDTH="52" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img55.png"
+ ALT="${\bf x}\ge{\bf0}$"> and <IMG
+ WIDTH="46" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img60.png"
+ ALT="$t&gt;0$">, we have <!-- MATH
+ ${\bf\mu}\ge{\bf0}$
+ -->
+<IMG
+ WIDTH="52" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img61.png"
+ ALT="${\bf\mu}\ge{\bf0}$">.
+We note that these equations are very similar to the KKT conditions
+listed above, except the last condition, which becomes the same if
+<!-- MATH
+ $t\rightarrow\infty$
+ -->
+<IMG
+ WIDTH="60" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img45.png"
+ ALT="$t\rightarrow\infty$">.
+
+<P>
+To find the optimal solution in terms of <!-- MATH
+ ${\bf\lambda}^*$
+ -->
+<IMG
+ WIDTH="23" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.png"
+ ALT="${\bf\lambda}^*$"> and <IMG
+ WIDTH="23" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img62.png"
+ ALT="${\bf\mu}^*$">,
+as well as <IMG
+ WIDTH="23" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="${\bf x}^*$"> that which satisfy the KKT conditions for the
+optimization, we solve the set of nonlinear equations above by 
+Newton-Raphson's method. Specifically, we first combine the three 
+functions into a single function of all three variables 
+<!-- MATH
+ ${\bf f}({\bf x}$
+ -->
+<IMG
+ WIDTH="32" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img63.png"
+ ALT="${\bf f}({\bf x}$">,<!-- MATH
+ ${\bf\lambda},{\bf\mu})$
+ -->
+<IMG
+ WIDTH="42" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img64.png"
+ ALT="${\bf\lambda},{\bf\mu})$">, and find its Jacobian 
+<!-- MATH
+ ${\bf J}_{\bf f}$
+ -->
+<IMG
+ WIDTH="23" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img65.png"
+ ALT="${\bf J}_{\bf f}$">, and then find the Newton direction <!-- MATH
+ $\delta{\bf x}_0$
+ -->
+<IMG
+ WIDTH="32" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img66.png"
+ ALT="$\delta{\bf x}_0$">,
+<!-- MATH
+ $\delta{\bf\lambda}$
+ -->
+<IMG
+ WIDTH="24" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img37.png"
+ ALT="$\delta{\bf\lambda}$"> and <!-- MATH
+ $\delta{\bf\mu}$
+ -->
+<IMG
+ WIDTH="25" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img67.png"
+ ALT="$\delta{\bf\mu}$">, which can be obtained by
+solving the linear system:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+{\bf J}_{\bf f} =-{\bf f}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="66" HEIGHT="31" BORDER="0"
+ SRC="img68.png"
+ ALT="\begin{displaymath}
+{\bf J}_{\bf f} =-{\bf f}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+{\bf f}({\bf x},{\bf\lambda},{\bf\mu})=\left[\begin{array}{l}
+{\bf A}^T{\bf\lambda}+{\bf\mu}-{\bf c}\\{\bf Ax}-{\bf b}\\
+{\bf XM1}-{\bf 1}/t\end{array}\right],
+\;\;\;\;\;\;\;
+{\bf J}_{\bf f}=\left[\begin{array}{ccc}
+{\bf0} & {\bf A}^T & {\bf I}\\{\bf A} & {\bf0} & {\bf0}\\
+{\bf M} & {\bf0} & {\bf X}\end{array}\right]
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="460" HEIGHT="76" BORDER="0"
+ SRC="img69.png"
+ ALT="\begin{displaymath}
+{\bf f}({\bf x},{\bf\lambda},{\bf\mu})=\left[\begin{array}{l...
+...\bf0} &amp; {\bf0}\\
+{\bf M} &amp; {\bf0} &amp; {\bf X}\end{array}\right]
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+an initial guess <!-- MATH
+ ${\bf x}_0,\;{\bf\lambda}_0,\;
+{\bf\mu}_0$
+ -->
+<IMG
+ WIDTH="88" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img70.png"
+ ALT="${\bf x}_0,\;{\bf\lambda}_0,\;
+{\bf\mu}_0$"> 
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html26"
+  HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html24"
+  HREF="interior.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html18"
+  HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html27"
+  HREF="node3.html">About this document ...</A>
+<B> Up:</B> <A NAME="tex2html25"
+  HREF="interior.html">interior</A>
+<B> Previous:</B> <A NAME="tex2html19"
+  HREF="node1.html">Interior Point Methods</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Ruye Wang
+2016-10-04
+</ADDRESS>
+</BODY>
+</HTML>

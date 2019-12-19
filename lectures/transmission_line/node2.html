@@ -1,0 +1,491 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Reflection and termination</TITLE>
+<META NAME="description" CONTENT="Reflection and termination">
+<META NAME="keywords" CONTENT="transmission_line">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="transmission_line.css">
+
+<LINK REL="next" HREF="node3.html">
+<LINK REL="previous" HREF="node1.html">
+<LINK REL="up" HREF="transmission_line.html">
+<LINK REL="next" HREF="node3.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html29"
+  HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html27"
+  HREF="transmission_line.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html21"
+  HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html30"
+  HREF="node3.html">Forward and backward traveling</A>
+<B> Up:</B> <A NAME="tex2html28"
+  HREF="transmission_line.html">transmission_line</A>
+<B> Previous:</B> <A NAME="tex2html22"
+  HREF="node1.html">The wave equations</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00020000000000000000">
+Reflection and termination</A>
+</H1>
+
+<P>
+The transmission line is typically used to connect a voltage source 
+<!-- MATH
+ $V_0={\cal F}[v_0(t)]$
+ -->
+<IMG
+ WIDTH="105" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img87.png"
+ ALT="$V_0={\cal F}[v_0(t)]$"> with output (internal) impedance <IMG
+ WIDTH="24" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img88.png"
+ ALT="$Z_1$"> and a load 
+of input impedance <IMG
+ WIDTH="24" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img89.png"
+ ALT="$Z_2$">, as shown in the figure. 
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../TransmissionLine1.gif"
+ ALT="TransmissionLine1.gif">
+
+<P>
+
+<UL>
+<LI>At the front of the line (<IMG
+ WIDTH="46" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.png"
+ ALT="$x=0$">), we have
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V_1=V_0-I_1Z_1
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="112" HEIGHT="29" BORDER="0"
+ SRC="img90.png"
+ ALT="\begin{displaymath}V_1=V_0-I_1Z_1 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+But since
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V_1=V(x)|_{x=0}=\left[V_be^{j\omega Tx/l}+V_fe^{-j\omega Tx/l}\right]_{x=0}=V_b+V_f
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="423" HEIGHT="37" BORDER="0"
+ SRC="img91.png"
+ ALT="\begin{displaymath}V_1=V(x)\vert _{x=0}=\left[V_be^{j\omega Tx/l}+V_fe^{-j\omega Tx/l}\right]_{x=0}=V_b+V_f \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+I_1=I(x)|_{x=0}=\left[I_be^{j\omega Tx/l}+I_fe^{-\omega Tx/l}\right]_{x=0}=I_b+I_f
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="400" HEIGHT="37" BORDER="0"
+ SRC="img92.png"
+ ALT="\begin{displaymath}I_1=I(x)\vert _{x=0}=\left[I_be^{j\omega Tx/l}+I_fe^{-\omega Tx/l}\right]_{x=0}=I_b+I_f \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+we have
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V_1=V_b+V_f=V_0-I_1Z_1=V_0-[I_b+I_f]Z_1
+  =V_0-[-V_b+V_f]\frac{Z_1}{Z_0}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="500" HEIGHT="45" BORDER="0"
+ SRC="img93.png"
+ ALT="\begin{displaymath}V_1=V_b+V_f=V_0-I_1Z_1=V_0-[I_b+I_f]Z_1
+=V_0-[-V_b+V_f]\frac{Z_1}{Z_0} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Solving for <IMG
+ WIDTH="23" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img33.png"
+ ALT="$V_f$">, we get
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V_f=\frac{Z_0}{Z_0+Z_1}V_0+\frac{Z_1-Z_0}{Z_1+Z_0}V_b
+  =AV_0+\eta_1V_b
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="333" HEIGHT="45" BORDER="0"
+ SRC="img94.png"
+ ALT="\begin{displaymath}V_f=\frac{Z_0}{Z_0+Z_1}V_0+\frac{Z_1-Z_0}{Z_1+Z_0}V_b
+=AV_0+\eta_1V_b \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+A\stackrel{\triangle}{=}\frac{Z_0}{Z_0+Z_1},\;\;\;\;\;\;\;\;\;
+  \eta_1\stackrel{\triangle}{=}\frac{Z_1-Z_0}{Z_1+Z_0}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="253" HEIGHT="45" BORDER="0"
+ SRC="img95.png"
+ ALT="\begin{displaymath}A\stackrel{\triangle}{=}\frac{Z_0}{Z_0+Z_1},\;\;\;\;\;\;\;\;\;
+\eta_1\stackrel{\triangle}{=}\frac{Z_1-Z_0}{Z_1+Z_0} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+are respectively the <EM>voltage attenuation ratio</EM> that describes the 
+  transmission line with <IMG
+ WIDTH="24" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img96.png"
+ ALT="$Z_0$"> and the output impedance <IMG
+ WIDTH="24" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img88.png"
+ ALT="$Z_1$"> of the source 
+  as a voltage divider with input <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img97.png"
+ ALT="$V_0$">, and the <EM>reflection coefficient 
+    at the front end</EM> of the line that represents how much of the backward 
+  voltage <IMG
+ WIDTH="21" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.png"
+ ALT="$V_b$"> wave is reflected at the front end. 
+
+<P>
+In particular, we consider the following two special cases:
+  
+<UL>
+<LI>When the internal impedance of the source matches the characteristic 
+    impedance, i.e., <IMG
+ WIDTH="66" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img98.png"
+ ALT="$Z_1=Z_0$">, then <IMG
+ WIDTH="52" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img99.png"
+ ALT="$\eta_1=0$">, 
+    indicating the backward voltage <IMG
+ WIDTH="21" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.png"
+ ALT="$V_b$"> is no longer reflected at the front 
+    end, and <IMG
+ WIDTH="77" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img100.png"
+ ALT="$V_f=A V_0$">.
+</LI>
+<LI>When the internal impedance of the source is zero, i.e., <IMG
+ WIDTH="56" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img101.png"
+ ALT="$Z_1=0$">,
+    then <IMG
+ WIDTH="66" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img102.png"
+ ALT="$\eta_1=-1$">; indicating the backward voltage <IMG
+ WIDTH="21" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.png"
+ ALT="$V_b$"> is totally reflected,
+    and <IMG
+ WIDTH="115" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img103.png"
+ ALT="$V_f=AV_0-V_b$">.
+  
+</LI>
+</UL>
+
+<P>
+</LI>
+<LI>At the back end of the transmission line (<IMG
+ WIDTH="43" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img61.png"
+ ALT="$x=l$">), we have
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V_2=I_2Z_2
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="73" HEIGHT="29" BORDER="0"
+ SRC="img104.png"
+ ALT="\begin{displaymath}V_2=I_2Z_2 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+But since
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V_2=V(x)|_{x=l}=[V_be^{sx/\mu}+V_fe^{-sx/\mu}]_{x=l}
+  =V_be^{j\omega T}+V_fe^{-j\omega T}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="462" HEIGHT="32" BORDER="0"
+ SRC="img105.png"
+ ALT="\begin{displaymath}V_2=V(x)\vert _{x=l}=[V_be^{sx/\mu}+V_fe^{-sx/\mu}]_{x=l}
+=V_be^{j\omega T}+V_fe^{-j\omega T} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+I_2=I(x)|_{x=l}=[I_be^{sx/\mu}+I_fe^{-sx/\mu}]_{x=l}
+  =I_be^{j\omega T}+I_fe^{-j\omega T}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="445" HEIGHT="32" BORDER="0"
+ SRC="img106.png"
+ ALT="\begin{displaymath}I_2=I(x)\vert _{x=l}=[I_be^{sx/\mu}+I_fe^{-sx/\mu}]_{x=l}
+=I_be^{j\omega T}+I_fe^{-j\omega T} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+we have
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V_2=V_be^{j\omega T}+V_fe^{-j\omega T}=I_2Z_2=[I_be^{j\omega T}+I_fe^{-j\omega T}]Z_2
+  =[-V_be^{j\omega T}+V_fe^{-j\omega T}]\frac{Z_2}{Z_0}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="594" HEIGHT="45" BORDER="0"
+ SRC="img107.png"
+ ALT="\begin{displaymath}V_2=V_be^{j\omega T}+V_fe^{-j\omega T}=I_2Z_2=[I_be^{j\omega ...
+... T}]Z_2
+=[-V_be^{j\omega T}+V_fe^{-j\omega T}]\frac{Z_2}{Z_0} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+i.e.,
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+[Z_0+Z_2]V_be^{j\omega T}=[Z_2-Z_0]V_fe^{-j\omega T}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="274" HEIGHT="32" BORDER="0"
+ SRC="img108.png"
+ ALT="\begin{displaymath}[Z_0+Z_2]V_be^{j\omega T}=[Z_2-Z_0]V_fe^{-j\omega T} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+From this we can define the <EM>reflection coefficient at the back end</EM>
+  of the line as the ratio between the backward voltage and the forward voltage 
+  at the back end of the line:
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\eta_2\stackrel{\triangle}{=}\frac{V_B(l)}{V_F(l)}
+  =\frac{V_be^{j\omega T}}{V_fe^{-j\omega T}}=\frac{Z_2-Z_0}{Z_2+Z_0}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="259" HEIGHT="51" BORDER="0"
+ SRC="img109.png"
+ ALT="\begin{displaymath}\eta_2\stackrel{\triangle}{=}\frac{V_B(l)}{V_F(l)}
+=\frac{V_be^{j\omega T}}{V_fe^{-j\omega T}}=\frac{Z_2-Z_0}{Z_2+Z_0} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+which represents how much of the forward voltage wave is reflected at 
+  the back end. Now we have
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V_B(l)=V_b e^{j\omega T}=\eta_2 V_F(l)=\eta_2 V_f e^{-j\omega T}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="295" HEIGHT="32" BORDER="0"
+ SRC="img110.png"
+ ALT="\begin{displaymath}V_B(l)=V_b e^{j\omega T}=\eta_2 V_F(l)=\eta_2 V_f e^{-j\omega T} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Consider these three special cases:
+  
+<UL>
+<LI>When the load <IMG
+ WIDTH="64" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img111.png"
+ ALT="$Z_2=\infty$"> is an open-circuit, <IMG
+ WIDTH="52" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img112.png"
+ ALT="$\eta_2=1$">,
+    <IMG
+ WIDTH="109" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img113.png"
+ ALT="$V_B(l)=V_F(l)$">; i.e., the forward voltage is totally reflected.
+</LI>
+<LI>When the load <IMG
+ WIDTH="56" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img114.png"
+ ALT="$Z_2=0$"> is a short-circuit, <IMG
+ WIDTH="66" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img115.png"
+ ALT="$\eta_2=-1$">, 
+    <!-- MATH
+ $V_B(l)=-V_F(l)$
+ -->
+<IMG
+ WIDTH="122" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img116.png"
+ ALT="$V_B(l)=-V_F(l)$">; i.e., the forward voltage is totally reflected.
+</LI>
+<LI>When the load impedance matches the characteristic impedance, 
+    <IMG
+ WIDTH="66" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img117.png"
+ ALT="$Z_2=Z_0$">, <IMG
+ WIDTH="52" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img118.png"
+ ALT="$\eta_2=0$">, and <!-- MATH
+ $V_B(l)=\eta_2 V_F(l)=0$
+ -->
+<IMG
+ WIDTH="157" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img119.png"
+ ALT="$V_B(l)=\eta_2 V_F(l)=0$">; i.e., the forward 
+    voltage is not reflected.
+  
+</LI>
+</UL>
+
+<P>
+</LI>
+</UL>
+In the following we will analyze the transmission line in the frequency
+domain, in which all impedances such as <IMG
+ WIDTH="24" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img96.png"
+ ALT="$Z_0$">, <IMG
+ WIDTH="24" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img88.png"
+ ALT="$Z_1$">, <IMG
+ WIDTH="24" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img89.png"
+ ALT="$Z_2$">, the voltage 
+and current <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img19.png"
+ ALT="$V$"> and <IMG
+ WIDTH="13" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img20.png"
+ ALT="$I$"> (in phasor forms), and all coefficients <IMG
+ WIDTH="17" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img120.png"
+ ALT="$A$">, 
+<IMG
+ WIDTH="20" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img121.png"
+ ALT="$\eta_1$">, <IMG
+ WIDTH="20" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img122.png"
+ ALT="$\eta_2$">, are functions of <IMG
+ WIDTH="16" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img44.png"
+ ALT="$\omega$">. We will therefore drop 
+the argument <IMG
+ WIDTH="16" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img44.png"
+ ALT="$\omega$"> and use capitalized letters without argument to 
+represent these variables.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html29"
+  HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html27"
+  HREF="transmission_line.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html21"
+  HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html30"
+  HREF="node3.html">Forward and backward traveling</A>
+<B> Up:</B> <A NAME="tex2html28"
+  HREF="transmission_line.html">transmission_line</A>
+<B> Previous:</B> <A NAME="tex2html22"
+  HREF="node1.html">The wave equations</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Ruye Wang
+2016-05-20
+</ADDRESS>
+</BODY>
+</HTML>

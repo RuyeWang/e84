@@ -1,0 +1,231 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Higher order systems</TITLE>
+<META NAME="description" CONTENT="Higher order systems">
+<META NAME="keywords" CONTENT="ActiveFilters">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="ActiveFilters.css">
+
+<LINK REL="previous" HREF="node6.html">
+<LINK REL="next" HREF="node8.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node8.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node6.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node8.html">Appendix</A>
+<B> Up:</B> <A
+ HREF="node1.html">Chapter 6: Active Filter</A>
+<B> Previous:</B> <A
+ HREF="node6.html">Butterworth filters</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION00016000000000000000">
+Higher order systems</A>
+</H2>
+
+<P>
+Higher than first order systems can be built with multiple integrators, 
+as shown here for a third order system:
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/opam7.gif"
+ ALT="opam7.gif">
+
+<P>
+From the diagram, we can get
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+\left\{ \begin{array}{l}
+	Y_3(s)=Y_2(s)/s \Longrightarrow Y_2(s)=Y_3(s)s	\\
+	Y_2(s)=Y_1(s)/s \Longrightarrow Y_1(s)=Y_2(s)s=Y_3(s)s^2	\\
+	Y_1(s)=Y_0(s)/s \Longrightarrow Y_0(s)=Y_1(s)s=Y_3(s)s^3
+\end{array} \right.
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 8.59ex; vertical-align: -3.72ex; " SRC="img309.svg"
+ ALT="$\displaystyle \left\{ \begin{array}{l}
+Y_3(s)=Y_2(s)/s \Longrightarrow Y_2(s)=...
+... Y_1(s)=Y_0(s)/s \Longrightarrow Y_0(s)=Y_1(s)s=Y_3(s)s^3
+\end{array} \right.
+$"> 
+
+(<SPAN CLASS="arabic">102</SPAN>)
+</DIV>
+But we also have
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+Y_0(s)=X(s)-(k_1Y_1(s)+k_2Y_2(s)+k_3Y_3(s))
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img310.svg"
+ ALT="$\displaystyle Y_0(s)=X(s)-(k_1Y_1(s)+k_2Y_2(s)+k_3Y_3(s)) $"> 
+
+(<SPAN CLASS="arabic">103</SPAN>)
+</DIV>
+i.e., 
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+X(s)=Y_0(s)+k_1Y_1(s)+k_2Y_2(s)+k_3Y_3(s)=(s^3+k_1s^2+k_2s+k_3) Y_3(s)
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img311.svg"
+ ALT="$\displaystyle X(s)=Y_0(s)+k_1Y_1(s)+k_2Y_2(s)+k_3Y_3(s)=(s^3+k_1s^2+k_2s+k_3) Y_3(s) $"> 
+
+(<SPAN CLASS="arabic">104</SPAN>)
+</DIV>
+we get the transfer function
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+H(s)=\frac{Y_3(s)}{X(s)}=\frac{1}{s^3+k_1s^2+k_2s+k_3}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img312.svg"
+ ALT="$\displaystyle H(s)=\frac{Y_3(s)}{X(s)}=\frac{1}{s^3+k_1s^2+k_2s+k_3}
+$"> 
+
+(<SPAN CLASS="arabic">105</SPAN>)
+</DIV>
+
+<P>
+<B>Second order system by 2 integrators</B>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/opam8.gif"
+ ALT="opam8.gif">
+
+<P>
+From the diagram, we can get
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+\left\{ \begin{array}{ll}
+	Y_2(s)=-c_2Y_1(s)/s  \Longrightarrow  Y_1(s)=-sY_2(s)/c_2 \\
+	Y_1(s)=-c_1Y_0(s)/s  \Longrightarrow Y_0(s)=-sY_1(s)/c_1=s^2Y_2(s)/c_1c_2 \\
+	Y_0(s)=k_0 X(s)+k_1Y_1(s)+k_2Y_2(s)
+	\end{array} \right.
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 8.59ex; vertical-align: -3.72ex; " SRC="img313.svg"
+ ALT="$\displaystyle \left\{ \begin{array}{ll}
+Y_2(s)=-c_2Y_1(s)/s \Longrightarrow Y_...
+...^2Y_2(s)/c_1c_2 \\
+Y_0(s)=k_0 X(s)+k_1Y_1(s)+k_2Y_2(s)
+\end{array} \right.
+$"> 
+
+(<SPAN CLASS="arabic">106</SPAN>)
+</DIV>
+substituting the first two equations into the last one, we get
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+\frac{s^2}{c_1c_2} Y_2(s)=k_0X(s)+k_1(-\frac{s}{c_2})Y_2(s)+k_2Y_2(s)
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.81ex; vertical-align: -2.06ex; " SRC="img314.svg"
+ ALT="$\displaystyle \frac{s^2}{c_1c_2} Y_2(s)=k_0X(s)+k_1(-\frac{s}{c_2})Y_2(s)+k_2Y_2(s) $"> 
+
+(<SPAN CLASS="arabic">107</SPAN>)
+</DIV>
+from which we obtain the transfer function as
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+H(s)=\frac{Y_2(s)}{X(s)}=\frac{k_o}{\frac{s^2}{c_1c_2}+\frac{s}{c_2}s-k_2}
+	=\frac{k_oc_1c_2}{s^2+k_1c_1s-c_1c_2k_2}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 6.50ex; vertical-align: -3.02ex; " SRC="img315.svg"
+ ALT="$\displaystyle H(s)=\frac{Y_2(s)}{X(s)}=\frac{k_o}{\frac{s^2}{c_1c_2}+\frac{s}{c_2}s-k_2}
+=\frac{k_oc_1c_2}{s^2+k_1c_1s-c_1c_2k_2}
+$"> 
+
+(<SPAN CLASS="arabic">108</SPAN>)
+</DIV>
+which is a second order system. In particular, if <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img316.svg"
+ ALT="$c_1=c_2=c$"></SPAN>, we have
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+H(s)=k_0\frac{c^2}{s^2+c k_1s-k_2c^2}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.81ex; vertical-align: -2.06ex; " SRC="img317.svg"
+ ALT="$\displaystyle H(s)=k_0\frac{c^2}{s^2+c k_1s-k_2c^2}
+$"> 
+
+(<SPAN CLASS="arabic">109</SPAN>)
+</DIV>
+Comparing this with the canonical 2nd order system transfer function
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+H(s)=\frac{\omega_n^2}{s^2+2\zeta \omega_n s+\omega_n^2}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 6.04ex; vertical-align: -2.28ex; " SRC="img318.svg"
+ ALT="$\displaystyle H(s)=\frac{\omega_n^2}{s^2+2\zeta \omega_n s+\omega_n^2}
+$"> 
+
+(<SPAN CLASS="arabic">110</SPAN>)
+</DIV>
+we see that we can let <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img319.svg"
+ ALT="$c=\omega_n$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img320.svg"
+ ALT="$k_1=2\zeta$"></SPAN>. Moreover, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img321.svg"
+ ALT="$k_2&lt;0$"></SPAN>, 
+i.e., the feedback from the output should be negative. <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img322.svg"
+ ALT="$k_0$"></SPAN> is a constant
+scalar which can take any value.
+
+<P>
+<BR><HR>
+
+</BODY>
+</HTML>

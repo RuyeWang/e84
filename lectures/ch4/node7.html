@@ -1,0 +1,375 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Small-Signal Model and H parameters</TITLE>
+<META NAME="description" CONTENT="Small-Signal Model and H parameters">
+<META NAME="keywords" CONTENT="ch4">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="ch4.css">
+
+<LINK REL="next" HREF="node8.html">
+<LINK REL="previous" HREF="node6.html">
+<LINK REL="next" HREF="node8.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node8.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="ch4.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node6.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node8.html">AC equivalent circuits</A>
+<B> Up:</B> <A
+ HREF="ch4.html">ch4</A>
+<B> Previous:</B> <A
+ HREF="node6.html">Biasing</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A ID="SECTION00070000000000000000">
+Small-Signal Model and H parameters</A>
+</H1>
+
+<P>
+A CE transistor circuit can be modeled by a 
+<EM>two-port network</EM> as shown below:
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/transistorHmodel.gif"
+ ALT="transistorHmodel.gif">
+<IMG STYLE=""
+ SRC="../figures/twoportmodel.gif"
+ ALT="twoportmodel.gif">
+
+<P>
+The two-port network is described by the relationship between
+two pairs of variables (<!-- MATH
+ $v_1=b_{be},\;i_1=i_b,\;v_2=v_{ce},\;i_2=i_c$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img321.svg"
+ ALT="$v_1=b_{be},\;i_1=i_b,\;v_2=v_{ce},\;i_2=i_c$"></SPAN>) 
+associated with the input and output ports. Any two of the four 
+variables can be assumed to be the independent variables, while 
+the other treated as the dependent variables, the functions of 
+the independent variables. In general there are 
+<!-- MATH
+ $C_4^2=4!/[2!(4-2)!]=6$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img322.svg"
+ ALT="$C_4^2=4!/[2!(4-2)!]=6$"></SPAN> ways to choose any two out of the four 
+variables. For example, three of these six choices are:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left\{ \begin{array}{l} v_1=f_1(i_1,i_2) \\v_2=f_2(i_1,i_2)
+\end{array} \right.,
+\;\;\;\;\;\;\;\;
+\left\{ \begin{array}{l} i_1=f_3(v_1,v_2) \\i_2=f_4(v_1,v_2)
+\end{array} \right.,
+\;\;\;\;\;\;\;\;
+\left\{ \begin{array}{l} v_1=f_5(i_1,v_2) \\i_2=f_6(i_1,v_2)
+\end{array} \right.
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img323.svg"
+ ALT="$\displaystyle \left\{ \begin{array}{l} v_1=f_1(i_1,i_2) \\ v_2=f_2(i_1,i_2)
+\en...
+...eft\{ \begin{array}{l} v_1=f_5(i_1,v_2) \\ i_2=f_6(i_1,v_2)
+\end{array} \right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">61</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+We use the third <EM>hybrid</EM> model to describe the CE transistor circuit 
+with <!-- MATH
+ $v_1=v_{be}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img324.svg"
+ ALT="$v_1=v_{be}$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img325.svg"
+ ALT="$i_1=i_b$"></SPAN>, <!-- MATH
+ $v_2=v_{ce}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img326.svg"
+ ALT="$v_2=v_{ce}$"></SPAN>, and <!-- MATH
+ $i_2=i_{ce}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img327.svg"
+ ALT="$i_2=i_{ce}$"></SPAN>:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left\{ \begin{array}{l} v_{be}=v_{be}(i_b,v_{ce}) \\i_c=i_c(i_b,v_{ce})
+\end{array} \right.
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img328.svg"
+ ALT="$\displaystyle \left\{ \begin{array}{l} v_{be}=v_{be}(i_b,v_{ce}) \\ i_c=i_c(i_b,v_{ce})
+\end{array} \right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">62</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Taking the total derivative of the above, we get:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+dv_{be}=\frac{\partial v_{be}}{\partial i_b} d i_b
++\frac{\partial v_{be}}{\partial v_{ce}} d v_{ce}
+=h_i d i_b+h_r d v_{ce}	
+\;\;\;\;\;\;
+di_c=\frac{\partial i_c}{\partial i_b} d i_b
++\frac{\partial i_c}{\partial v_{ce}} d v_{ce} 
+=h_f d i_b+h_o d v_{ce}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img329.svg"
+ ALT="$\displaystyle dv_{be}=\frac{\partial v_{be}}{\partial i_b} d i_b
++\frac{\partia...
+...b} d i_b
++\frac{\partial i_c}{\partial v_{ce}} d v_{ce}
+=h_f d i_b+h_o d v_{ce}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">63</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+where <!-- MATH
+ $h_i, h_f, h_r, h_o$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.78ex; " SRC="img330.svg"
+ ALT="$h_i, h_f, h_r, h_o$"></SPAN> are the hybrid model parameters:
+
+<UL>
+<LI><!-- MATH
+ $h_i=\partial v_{be}/\partial i_b=r_{be}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img331.svg"
+ ALT="$h_i=\partial v_{be}/\partial i_b=r_{be}$"></SPAN>: input AC impedance
+  with <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.46ex; " SRC="img332.svg"
+ ALT="$v_{ce}=0$"></SPAN> (output AC short-circuit). This is the AC 
+  resistance between base and emitter, the reciprocal of the 
+  slope of the current-voltage curve of the input characteristics. 
+
+<P>
+</LI>
+<LI><!-- MATH
+ $h_r=\partial v_{be}/\partial v_{ce}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img333.svg"
+ ALT="$h_r=\partial v_{be}/\partial v_{ce}$"></SPAN>: reverse transfer voltage
+  ratio representing how <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img334.svg"
+ ALT="$v_{ce}$"></SPAN> affects <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img335.svg"
+ ALT="$v_{be}$"></SPAN> with <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img336.svg"
+ ALT="$i_b=0$"></SPAN> (input 
+  AC open-circuit). In general <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img337.svg"
+ ALT="$h_i$"></SPAN> is small and can be ignored.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $h_f=\partial i_c/\partial i_b=\beta$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.78ex; " SRC="img338.svg"
+ ALT="$h_f=\partial i_c/\partial i_b=\beta$"></SPAN>: forward transfer current 
+    ratio or current amplification factor with <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.46ex; " SRC="img332.svg"
+ ALT="$v_{ce}=0$"></SPAN> (output AC
+    short-circuit). Typically, <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.78ex; " SRC="img339.svg"
+ ALT="$h_f=\beta$"></SPAN> is in the range of 100 to 
+    200.
+
+<P>
+</LI>
+<LI><!-- MATH
+ $h_o=\partial i_c/\partial v_{ce}=1/r_{ce}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img340.svg"
+ ALT="$h_o=\partial i_c/\partial v_{ce}=1/r_{ce}$"></SPAN>: output admittance,
+  with <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img336.svg"
+ ALT="$i_b=0$"></SPAN> (input AC open-circuit). This is the slope of the 
+  current-voltage curve in the output characteristics. In general 
+  <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img341.svg"
+ ALT="$h_o$"></SPAN> is small and can be ignored.
+</LI>
+</UL>
+If the variations of the AC components of all these variables 
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img342.svg"
+ ALT="$i_b$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img335.svg"
+ ALT="$v_{be}$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img343.svg"
+ ALT="$i_c$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img334.svg"
+ ALT="$v_{ce}$"></SPAN> are small (<!-- MATH
+ $\Delta x\rightarrow dx$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img344.svg"
+ ALT="$\Delta x\rightarrow dx$"></SPAN>)
+around the DC operating point <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img345.svg"
+ ALT="$Q$"></SPAN> and far away from either the cutoff
+or the saturation region, the non-linear quantities that describe the
+input and output characteristics can be linearized as the following
+<EM>small signal model</EM>:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_{be}=\frac{\partial v_{be}}{\partial i_b}
+i_b+\frac{\partial v_{be}}{\partial v_{ce}} v_{ce}=h_i i_b+h_r v_{ce}
+\approx h_i i_b
+\;\;\;\;\;\;
+i_c=\frac{\partial i_c}{\partial i_b} i_b
++\frac{\partial i_c}{\partial v_{ce}} v_{ce}=h_f i_b+h_o v_{ce}
+\approx h_f i_b
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img346.svg"
+ ALT="$\displaystyle v_{be}=\frac{\partial v_{be}}{\partial i_b}
+i_b+\frac{\partial v_...
+...+\frac{\partial i_c}{\partial v_{ce}} v_{ce}=h_f i_b+h_o v_{ce}
+\approx h_f i_b$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">64</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/hparameters.gif"
+ ALT="hparameters.gif">
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/smallsignalmodelBJT1.gif"
+ ALT="smallsignalmodelBJT1.gif">
+
+<P>
+In general, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img347.svg"
+ ALT="$h_r$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img341.svg"
+ ALT="$h_o$"></SPAN> are small and could be assumed zero to 
+further simplify the model (right of the figure above) containing
+only two components, a resistor <!-- MATH
+ $h_i=r_{be}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img348.svg"
+ ALT="$h_i=r_{be}$"></SPAN> and a current source 
+<!-- MATH
+ $h_f I_B=\beta I_B$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.78ex; " SRC="img349.svg"
+ ALT="$h_f I_B=\beta I_B$"></SPAN>.
+
+<P>
+The base and emitter forms a PN-junction with a resistance <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img350.svg"
+ ALT="$r_{be}$"></SPAN> 
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+h_i=r_{be}\approx \eta\,\frac{V_T}{I_B}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img351.svg"
+ ALT="$\displaystyle h_i=r_{be}\approx \eta\,\frac{V_T}{I_B}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">65</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+as discussed in the 
+<A ID="tex2html11"
+  HREF="node2.html">section of diodes</A>, which is not a
+constant, but a function of current <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img79.svg"
+ ALT="$I_B$"></SPAN> through the PN-junction 
+between base and emitter. Typically, at room temperature <!-- MATH
+ $(V_T=26\,mV)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img352.svg"
+ ALT="$(V_T=26\,mV)$"></SPAN>, 
+if <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img79.svg"
+ ALT="$I_B$"></SPAN> is approximately in the range of <!-- MATH
+ $0.05\sim 0.1 mA$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img353.svg"
+ ALT="$0.05\sim 0.1 mA$"></SPAN>, then 
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img350.svg"
+ ALT="$r_{be}$"></SPAN> is a few hundred ohms. 
+
+<P>
+Based on this small signal model, a transistor can be analyzed as a 
+two-port circuit containing a resistor <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img350.svg"
+ ALT="$r_{be}$"></SPAN> and a current source 
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img354.svg"
+ ALT="$\beta I_B$"></SPAN>.
+
+<P>
+In summary, we see that there are two aspects of a transistor circuit:
+
+<UL>
+<LI>The DC operating point in terms of the DC currents <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img79.svg"
+ ALT="$I_B$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img80.svg"
+ ALT="$I_C$"></SPAN> 
+  and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img81.svg"
+ ALT="$I_E$"></SPAN> and voltages <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img75.svg"
+ ALT="$V_{BE}$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img93.svg"
+ ALT="$V_{CE}$"></SPAN>;
+</LI>
+<LI>The AC small-signal model by which all of nonlinear voltage-current 
+  relationships associated with the transistor are linearized based 
+  on the assumption that the signal is small and the dynamic range 
+  in totally within the linear region of both the input and output
+  characteristic plots. 
+</LI>
+</UL>
+When analyzing the transistor circuit with an AC input signal (riding 
+on top of a DC input), we need to consider both aspects. If the DC 
+operating point is set up properly, i.e., in the middle of the linear
+region of output characteristic plot, and if the signal is small enough 
+so that the dynamic range is inside the linear region, then the linear 
+small-signal model applies and the circuit can be analyzed as a linear 
+system.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node8.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="ch4.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node6.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node8.html">AC equivalent circuits</A>
+<B> Up:</B> <A
+ HREF="ch4.html">ch4</A>
+<B> Previous:</B> <A
+ HREF="node6.html">Biasing</A></DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

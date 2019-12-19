@@ -1,0 +1,1222 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Operational Amplifier</TITLE>
+<META NAME="description" CONTENT="Operational Amplifier">
+<META NAME="keywords" CONTENT="ch5">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="ch5.css">
+
+<LINK REL="next" HREF="node3.html">
+<LINK REL="previous" HREF="node1.html">
+<LINK REL="next" HREF="node3.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node3.html">Analysis of Op-Amp Circuits</A>
+<B> Up:</B> <A
+ HREF="node1.html">Chapter 5: Operational Amplifiers</A>
+<B> Previous:</B> <A
+ HREF="node1.html">Chapter 5: Operational Amplifiers</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION00011000000000000000">
+Operational Amplifier</A>
+</H2>
+
+<P>
+The circuit schematic of the typical 
+<A ID="tex2html1"
+  HREF="http://en.wikipedia.org/wiki/Operational_amplifier#Internal_circuitry_of_741_type_op-amp">741 op-amp</A>
+is shown below:
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/opamp741b.gif"
+ ALT="opamp741b.gif">
+
+<P>
+A component-level diagram of the common 741 op-amp. Dotted lines outline: 
+
+<UL>
+<LI><A ID="tex2html2"
+  HREF="http://en.wikipedia.org/wiki/Current_mirror">Current mirrors/current source (red)</A>
+</LI>
+<LI><A ID="tex2html3"
+  HREF="http://en.wikipedia.org/wiki/Differential_amplifier">Differential amplifier (blue)</A>
+</LI>
+<LI><A ID="tex2html4"
+  HREF="http://en.wikipedia.org/wiki/Electronic_amplifier#Class_A">Class A gain stage (magenta)</A>
+</LI>
+<LI>Voltage level shifter (green); 
+</LI>
+<LI><A ID="tex2html5"
+  HREF="http://en.wikipedia.org/wiki/Electronic_amplifier#Class_B">output stage (cyan)</A>
+</LI>
+</UL>
+
+<P>
+Like all op-amps, the circuit basically consists of three stages:
+
+<UL>
+<LI><B>Differential amplifier</B> with high input impedance that generates
+  a voltage signal, the amplified voltage difference <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.31ex; " SRC="img1.svg"
+ ALT="$v^+-v^-$"></SPAN>.
+</LI>
+<LI><B>Voltage amplifier</B> (class A amplification) with a high voltage gain 
+  to further amplify the voltage.
+</LI>
+<LI><B>Output amplifier</B> (class AB push-pull emitter follower) with low 
+  output impedance and high current driving capability.
+</LI>
+</UL>
+The op-amp requires two voltage supplies <!-- MATH
+ $\pm V_{cc}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img2.svg"
+ ALT="$\pm V_{cc}$"></SPAN> of both polarities 
+(typically <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img3.svg"
+ ALT="$V_{CC}=15$"></SPAN> V). 
+
+<P>
+Although the op-amp circuit may look complicated, the analysis of its
+operation and behaviors can be simplfied based on the following assumptions:
+
+<UL>
+<LI>The huge input resistance <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img4.svg"
+ ALT="$r_{in}$"></SPAN> can be treated as infinity 
+  <!-- MATH
+ $r_{in}\rightarrow \infty$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img5.svg"
+ ALT="$r_{in}\rightarrow \infty$"></SPAN>.
+</LI>
+<LI>The input current drawn by an op-amp is small (<!-- MATH
+ $10^{-9}\sim10^{-12}\;A$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.12ex; " SRC="img6.svg"
+ ALT="$10^{-9}\sim10^{-12}\;A$"></SPAN>), 
+  and could be approximated to be zero <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.12ex; " SRC="img7.svg"
+ ALT="$I^+=I^-=0$"></SPAN>.
+</LI>
+<LI>The small output impedance <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img8.svg"
+ ALT="$r_{out}$"></SPAN> can be treated as zero <!-- MATH
+ $r_{out}\approx 0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.46ex; " SRC="img9.svg"
+ ALT="$r_{out}\approx 0$"></SPAN>,
+  i.e., the output <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img10.svg"
+ ALT="$V_{out}$"></SPAN> is not affected by the load <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img11.svg"
+ ALT="$R_L$"></SPAN> (so long as it is
+  much greater than <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img8.svg"
+ ALT="$r_{out}$"></SPAN>).
+</LI>
+<LI>The bandwidth is large (<!-- MATH
+ $1 \sim 20MHz$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img12.svg"
+ ALT="$1 \sim 20MHz$"></SPAN>), i.e., the property of the op-amp 
+  remain unchanged for all frequencies of interest.
+
+<P>
+</LI>
+</UL>
+
+<P>
+Based on these approximations, an op-amp can be modeled in terms of the
+following three parameters:
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/OpAmp0.gif"
+ ALT="OpAmp0.gif">
+
+<P>
+
+<UL>
+<LI><B>Input impedance <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img8.svg"
+ ALT="$r_{out}$"></SPAN>:</B> very large, typically a few mega-Ohms or
+  higher (<!-- MATH
+ $10^6\sim 10^{12}\,\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.12ex; " SRC="img13.svg"
+ ALT="$10^6\sim 10^{12}\,\Omega$"></SPAN>, e.g., 741 <!-- MATH
+ $6\;M\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img14.svg"
+ ALT="$6\;M\Omega$"></SPAN>), depending on 
+  the frequency and specific components used (e.g., BJT or FET).
+
+<P>
+</LI>
+<LI><B>Output resistance <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img8.svg"
+ ALT="$r_{out}$"></SPAN>:</B>, very small, typically a few tens of
+  ohms, e.g., 75 <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img15.svg"
+ ALT="$\Omega$"></SPAN>.
+
+<P>
+</LI>
+<LI><B>Open-circuit gain <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img16.svg"
+ ALT="$A$"></SPAN>:</B>, based on both the inverting input <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.12ex; " SRC="img17.svg"
+ ALT="$v^-$"></SPAN> 
+  and the non-inverting input <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.12ex; " SRC="img18.svg"
+ ALT="$v^+$"></SPAN>:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_{out}=A_d (v^+ - v^-)+A_c \frac{1}{2}(v^+ + v^-)\approx A_d (v^+ - v^-)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.88ex; vertical-align: -1.71ex; " SRC="img19.svg"
+ ALT="$\displaystyle v_{out}=A_d (v^+ - v^-)+A_c \frac{1}{2}(v^+ + v^-)\approx A_d (v^+ - v^-)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">1</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+where <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img20.svg"
+ ALT="$A_d$"></SPAN> is the differential-mode gain and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img21.svg"
+ ALT="$A_c$"></SPAN> is the common-mode gain.
+  It is desired that <!-- MATH
+ $A_d\rightarrow \infty$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img22.svg"
+ ALT="$A_d\rightarrow \infty$"></SPAN> and <!-- MATH
+ $A_c\rightarrow 0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img23.svg"
+ ALT="$A_c\rightarrow 0$"></SPAN>, i.e., the 
+  output is only proportional to the difference <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.31ex; " SRC="img1.svg"
+ ALT="$v^+-v^-$"></SPAN> between the two inputs. 
+  The common-mode rejection ratio (CMRR) is defined as the ratio between 
+  differential-mode gain and common-mode gain:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+CMRR=20\;\log_{10} \left(\frac{A_d}{A_c}\right)>100\;dB,
+    \;\;\;\;\;\;\;\;(A_d>10^5 A_c)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img24.svg"
+ ALT="$\displaystyle CMRR=20\;\log_{10} \left(\frac{A_d}{A_c}\right)&gt;100\;dB,
+\;\;\;\;\;\;\;\;(A_d&gt;10^5 A_c)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">2</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+</UL>
+
+<P>
+Also, as the output <!-- MATH
+ $v_{out}=A(v^+-v^-)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img25.svg"
+ ALT="$v_{out}=A(v^+-v^-)$"></SPAN> is in the range between <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img26.svg"
+ ALT="$-V_{CC}$"></SPAN> 
+and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img27.svg"
+ ALT="$V_{CC}$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.21ex; " SRC="img28.svg"
+ ALT="$A&gt;10^5$"></SPAN> is large, <!-- MATH
+ $v^+-v^-=v_{out}/A$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img29.svg"
+ ALT="$v^+-v^-=v_{out}/A$"></SPAN> is small (in the 
+micro-volt range), i.e., <!-- MATH
+ $v^-\approx v^+$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.12ex; " SRC="img30.svg"
+ ALT="$v^-\approx v^+$"></SPAN>. If, as in some op-amp circuits, 
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.12ex; " SRC="img31.svg"
+ ALT="$v^+=0$"></SPAN> is grounded, then <!-- MATH
+ $v^-\approx v^+=0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.12ex; " SRC="img32.svg"
+ ALT="$v^-\approx v^+=0$"></SPAN> is very close to zero, i.e., 
+it is almost the same as ground, or 
+<A ID="tex2html6"
+  HREF="http://en.wikipedia.org/wiki/Virtual_ground"><EM>virtual ground</EM></A>.
+The analysis of various op-amp circuits can be much simplified by this virtual
+ground assumption.
+
+<P>
+As <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img16.svg"
+ ALT="$A$"></SPAN> is large, <!-- MATH
+ $V_{out}=A(v^+-v^-)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img33.svg"
+ ALT="$V_{out}=A(v^+-v^-)$"></SPAN> is usually saturated, equal to either 
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img27.svg"
+ ALT="$V_{CC}$"></SPAN> or <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img26.svg"
+ ALT="$-V_{CC}$"></SPAN> (called the &ldquo;rails&rdquo;), depending on whether or not 
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.12ex; " SRC="img18.svg"
+ ALT="$v^+$"></SPAN> is greater than <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.12ex; " SRC="img17.svg"
+ ALT="$v^-$"></SPAN>. For <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img34.svg"
+ ALT="$v_{out}$"></SPAN> to be meaningful, some kind of
+negative feedback is needed. In the following, we consider some typical 
+op-amp circuits to show how to analyze an Op-amp circuit to find its input 
+resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img35.svg"
+ ALT="$R_{in}$"></SPAN>, output resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img36.svg"
+ ALT="$R_{out}$"></SPAN>, and open-circuit voltage 
+gain <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img37.svg"
+ ALT="$G_{oc}$"></SPAN>.
+
+<P>
+
+<UL>
+<LI><B>Voltage follower:</B> The input is connected to the positive 
+  input while the output is directly connected to the negative input 
+  (100% negative feedback), as shown in (A) in the figure below. The 
+  op-amp can be modeled by its input impedance <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img4.svg"
+ ALT="$r_{in}$"></SPAN>, output impedance 
+  <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img8.svg"
+ ALT="$r_{out}$"></SPAN> and voltage gain <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img16.svg"
+ ALT="$A$"></SPAN>, as shown in (B). Then the voltage follower 
+  can be modeled by its input impedance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img35.svg"
+ ALT="$R_{in}$"></SPAN>, output impedance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img36.svg"
+ ALT="$R_{out}$"></SPAN>,
+  and voltage gain <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img37.svg"
+ ALT="$G_{oc}$"></SPAN>, as shown in (C). 
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/FollowerModel.png"
+ ALT="FollowerModel.png">
+
+<P>
+Specifically, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img35.svg"
+ ALT="$R_{in}$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img36.svg"
+ ALT="$R_{out}$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img37.svg"
+ ALT="$G_{oc}$"></SPAN> can be found below. Here 
+  the voltage source in the op-amp is <!-- MATH
+ $A(v^+-v^-)=A \;i_{in} r_{in}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img38.svg"
+ ALT="$A(v^+-v^-)=A \;i_{in} r_{in}$"></SPAN>.
+
+<P>
+
+<UL>
+<LI><B>Input impedance <!-- MATH
+ $R_{in}=v_{in}/i_{in}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img39.svg"
+ ALT="$R_{in}=v_{in}/i_{in}$"></SPAN>:</B> 
+
+<P>
+Applying KVL to the loop we get
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_{in}=i_{in}(r_{in}+r_{out})+A\;(v^+-v^-)
+      =i_{in}(r_{in}+r_{out})+A\;i_{in}r_{in}
+      =i_{in}((A+1)r_{in}+r_{out})
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img40.svg"
+ ALT="$\displaystyle v_{in}=i_{in}(r_{in}+r_{out})+A\;(v^+-v^-)
+=i_{in}(r_{in}+r_{out})+A\;i_{in}r_{in}
+=i_{in}((A+1)r_{in}+r_{out})$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">3</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Dividing both sides by <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img41.svg"
+ ALT="$i_{in}$"></SPAN> we get the input impedance:
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+R_{in}=\frac{v_{in}}{i_{in}}=(A+1)r_{in}+r_{out} \approx Ar_{in}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.88ex; vertical-align: -2.06ex; " SRC="img42.svg"
+ ALT="$\displaystyle R_{in}=\frac{v_{in}}{i_{in}}=(A+1)r_{in}+r_{out} \approx Ar_{in}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">4</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+<LI><B>Open-circuit voltage gain <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img37.svg"
+ ALT="$G_{oc}$"></SPAN>:</B> 
+
+<P>
+The open-circuit output voltage is
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_{out}=v_{oc}=A(v^+-v^-)+i_{in}r_{out}=Ai_{in}r_{in}+i_{in}r_{out}
+      =i_{in}(Ar_{in}+r_{out})
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img43.svg"
+ ALT="$\displaystyle v_{out}=v_{oc}=A(v^+-v^-)+i_{in}r_{out}=Ai_{in}r_{in}+i_{in}r_{out}
+=i_{in}(Ar_{in}+r_{out})$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">5</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The open-circuit gain is
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+G=\frac{v_{out}}{v_{in}}=\frac{Ar_{in}+r_{out}}{(A+1)r_{in}+r_{out}}
+      \approx \frac{Ar_{in}}{(A+1)r_{in}}\approx 1
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img44.svg"
+ ALT="$\displaystyle G=\frac{v_{out}}{v_{in}}=\frac{Ar_{in}+r_{out}}{(A+1)r_{in}+r_{out}}
+\approx \frac{Ar_{in}}{(A+1)r_{in}}\approx 1$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">6</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The approximation is due to the fact that <!-- MATH
+ $(A+1)r_{in}\gg r_{out}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img45.svg"
+ ALT="$(A+1)r_{in}\gg r_{out}$"></SPAN>
+    and <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.21ex; " SRC="img46.svg"
+ ALT="$A\gg 1$"></SPAN>. We therefore have
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_{out}=v_{oc}\approx v_{in}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.46ex; " SRC="img47.svg"
+ ALT="$\displaystyle v_{out}=v_{oc}\approx v_{in}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">7</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+<LI><B>Output impedance <!-- MATH
+ $R_{out}=v_{oc}/i_{sc}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img48.svg"
+ ALT="$R_{out}=v_{oc}/i_{sc}$"></SPAN>:</B> 
+
+<P>
+With a short-circuit load <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img49.svg"
+ ALT="$R_L=0$"></SPAN>, we have <!-- MATH
+ $v^+-v^-=v_{in}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.46ex; " SRC="img50.svg"
+ ALT="$v^+-v^-=v_{in}$"></SPAN>, and the 
+    short-circuit current can be found by superposition:
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+i_{sc}=\frac{v_{in}}{r_{in}}+\frac{A(v^+-v^-)}{r_{out}}
+      =\frac{v_{in}}{r_{in}}+\frac{Av_{in}}{r_{out}}
+      =v_{in}\left(\frac{r_{out}+Ar_{in}}{r_{in}r_{out}}\right)
+      \approx v_{in}\frac{A}{r_{out}}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.32ex; " SRC="img51.svg"
+ ALT="$\displaystyle i_{sc}=\frac{v_{in}}{r_{in}}+\frac{A(v^+-v^-)}{r_{out}}
+=\frac{v_...
+...ft(\frac{r_{out}+Ar_{in}}{r_{in}r_{out}}\right)
+\approx v_{in}\frac{A}{r_{out}}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">8</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+As we also know <!-- MATH
+ $v_{oc}=v_{out}\approx v_{in}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.46ex; " SRC="img52.svg"
+ ALT="$v_{oc}=v_{out}\approx v_{in}$"></SPAN>, we get the output impedance
+    (Thevenin's model):
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+R_{out}=\frac{v_{oc}}{i_{sc}}\approx \frac{v_{in}}{i_{sc}}
+      =\left(\frac{r_{in}r_{out}}{r_{out}+Ar_{in}}\right)
+      \approx \frac{r_{out}}{A}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img53.svg"
+ ALT="$\displaystyle R_{out}=\frac{v_{oc}}{i_{sc}}\approx \frac{v_{in}}{i_{sc}}
+=\left(\frac{r_{in}r_{out}}{r_{out}+Ar_{in}}\right)
+\approx \frac{r_{out}}{A}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">9</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The approximation is due to the fact that <!-- MATH
+ $Ar_{in}\gg r_{out}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img54.svg"
+ ALT="$Ar_{in}\gg r_{out}$"></SPAN>
+</LI>
+</UL>
+
+<P>
+In summary, the voltage follower has a unit voltage gain, 
+  but much increased input resistance <!-- MATH
+ $R_{in}\approx A r_{in}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img55.svg"
+ ALT="$R_{in}\approx A r_{in}$"></SPAN> 
+  (e.g., <!-- MATH
+ $10^{10}\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.12ex; " SRC="img56.svg"
+ ALT="$10^{10}\Omega$"></SPAN>) and much reduced output resistance 
+  <!-- MATH
+ $R_{out}\approx r_{out}/A$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img57.svg"
+ ALT="$R_{out}\approx r_{out}/A$"></SPAN> (e.g., <!-- MATH
+ $10^{-3} \Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.12ex; " SRC="img58.svg"
+ ALT="$10^{-3} \Omega$"></SPAN>).
+  In practice we could simply assume <!-- MATH
+ $R_{in}=\infty$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img59.svg"
+ ALT="$R_{in}=\infty$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img60.svg"
+ ALT="$R_{out}=0$"></SPAN>.
+
+<P>
+<B>Example:</B> 
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/OpAmpBuffer.png"
+ ALT="OpAmpBuffer.png">
+
+<P>
+The figure on the left shows a circuit represented by an ideal voltage
+  source <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img61.svg"
+ ALT="$V_s$"></SPAN> in series with an internal resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img62.svg"
+ ALT="$R_s$"></SPAN> (Thevenin's
+  theorem), with a load <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img11.svg"
+ ALT="$R_L$"></SPAN>. The voltage delivered to the load <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img11.svg"
+ ALT="$R_L$"></SPAN> by
+  this non-ideal source is
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_{out}=v_s\;\frac{R_L}{R_L+R_s} =v_s-\left(\frac{R_s}{R_L+R_s} \right)\,v_s
+    <v_s
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img63.svg"
+ ALT="$\displaystyle v_{out}=v_s\;\frac{R_L}{R_L+R_s} =v_s-\left(\frac{R_s}{R_L+R_s} \right)\,v_s
+&lt;v_s$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">10</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+which is a fraction of the voltage due to the voltage drop 
+  <!-- MATH
+ $v_s R_s/(R_L+R_s)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img64.svg"
+ ALT="$v_s R_s/(R_L+R_s)$"></SPAN> across the internal resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img62.svg"
+ ALT="$R_s$"></SPAN>. For the 
+  output voltage to be as close to the source as possible, the internal 
+  resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img62.svg"
+ ALT="$R_s$"></SPAN> needs to be small compared to the load resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img11.svg"
+ ALT="$R_L$"></SPAN>. 
+
+<P>
+In the middle figure, a voltage follower (as a buffer) is inserted in 
+  between the source and the load. The follower is modeled by its input 
+  and output resistances <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img35.svg"
+ ALT="$R_{in}$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img36.svg"
+ ALT="$R_{out}$"></SPAN>, as well as its voltage
+  gain <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img37.svg"
+ ALT="$G_{oc}$"></SPAN>, as shown in the right figure. The output voltage can be 
+  obtained after two levels of voltage dividers:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_{out}=G_{oc} \left(\frac{R_L}{R_{out}+R_L}\right)\,v_{in} =
+    G_{oc}\left(\frac{R_{in}}{R_s+R_{in}}\right)\left(\frac{R_L}{R_{out}+R_L}\right)\,v_s
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img65.svg"
+ ALT="$\displaystyle v_{out}=G_{oc} \left(\frac{R_L}{R_{out}+R_L}\right)\,v_{in} =
+G_{oc}\left(\frac{R_{in}}{R_s+R_{in}}\right)\left(\frac{R_L}{R_{out}+R_L}\right)\,v_s$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">11</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+For a buffer, we have
+  
+<UL>
+<LI><!-- MATH
+ $G_{oc} \approx 1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img66.svg"
+ ALT="$G_{oc} \approx 1$"></SPAN>
+</LI>
+<LI><!-- MATH
+ $R_{in}\gg R_s \;\;\Longrightarrow \;\;R_{in}/(R_s+R_{in})\approx 1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img67.svg"
+ ALT="$R_{in}\gg R_s \;\;\Longrightarrow \;\;R_{in}/(R_s+R_{in})\approx 1$"></SPAN>
+</LI>
+<LI><!-- MATH
+ $R_{out}\ll R_L\;\;\Longrightarrow \;\;R_L/(R_{out}+R_L) \approx 1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img68.svg"
+ ALT="$R_{out}\ll R_L\;\;\Longrightarrow \;\;R_L/(R_{out}+R_L) \approx 1$"></SPAN>
+</LI>
+</UL>
+  Therefore the output voltage is
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_{out}
+    =G_{oc} \left(\frac{R_{in}}{R_s+R_{in}}\right)\left(\frac{R_L}{R_{out}+R_L}\right)\,v_s
+    \approx v_s
+  
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img69.svg"
+ ALT="$\displaystyle v_{out}
+=G_{oc} \left(\frac{R_{in}}{R_s+R_{in}}\right)\left(\frac{R_L}{R_{out}+R_L}\right)\,v_s
+\approx v_s$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">12</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+<LI><B>Inverting Amplifier</B>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/InvertingAmplifier1b.png"
+ ALT="InvertingAmplifier1b.png">
+
+<P>
+As the analysis of the circuit using full model of the op-amp 
+  is very involved, certain approximation is made to simplify the 
+  analysis.
+  
+<UL>
+<LI><B>Open-circuit voltage gain</B> <!-- MATH
+ $(R_s=0,\;R_L=\infty)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img70.svg"
+ ALT="$(R_s=0,\;R_L=\infty)$"></SPAN>:
+
+<P>
+As <!-- MATH
+ $r_{in}\gg R_1,\,R_f$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.78ex; " SRC="img71.svg"
+ ALT="$r_{in}\gg R_1,\,R_f$"></SPAN> and <!-- MATH
+ $r_{out}\ll R_1,\,R_f$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.78ex; " SRC="img72.svg"
+ ALT="$r_{out}\ll R_1,\,R_f$"></SPAN>, we approximate
+    <!-- MATH
+ $r_{in}\approx \infty$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.46ex; " SRC="img73.svg"
+ ALT="$r_{in}\approx \infty$"></SPAN> and <!-- MATH
+ $r_{out}\approx 0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.46ex; " SRC="img9.svg"
+ ALT="$r_{out}\approx 0$"></SPAN>. Also, we have
+    <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.12ex; " SRC="img31.svg"
+ ALT="$v^+=0$"></SPAN>, <!-- MATH
+ $v^-=v_s-i_{in} R_1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.46ex; " SRC="img74.svg"
+ ALT="$v^-=v_s-i_{in} R_1$"></SPAN> and <!-- MATH
+ $v^+-v^-=-v^-=i_{in} R_1 -v_s$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.46ex; " SRC="img75.svg"
+ ALT="$v^+-v^-=-v^-=i_{in} R_1 -v_s$"></SPAN>.
+    Now we have
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+i_{in}=\frac{v_s-A(v_+-v_-)}{R_1+R_f}=\frac{v_s-A(i_{in} R_1-v_s)}{R_1+R_f}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.37ex; " SRC="img76.svg"
+ ALT="$\displaystyle i_{in}=\frac{v_s-A(v_+-v_-)}{R_1+R_f}=\frac{v_s-A(i_{in} R_1-v_s)}{R_1+R_f}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">13</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Solving for <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img41.svg"
+ ALT="$i_{in}$"></SPAN> we get
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+i_{in}=\frac{(A+1)}{(A+1)R_1+R_f}\;v_s
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.37ex; " SRC="img77.svg"
+ ALT="$\displaystyle i_{in}=\frac{(A+1)}{(A+1)R_1+R_f}\;v_s$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">14</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The output voltage is:
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_{out}=v_s-(R_1+R_f) i_{in}
+      =v_s\left[1-\frac{(A+1)(R_1+R_f)}{(A+1)R_1+R_f}\right]
+      =v_s\frac{-AR_f}{(A+1)R_1+R_f}
+    
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.37ex; " SRC="img78.svg"
+ ALT="$\displaystyle v_{out}=v_s-(R_1+R_f) i_{in}
+=v_s\left[1-\frac{(A+1)(R_1+R_f)}{(A+1)R_1+R_f}\right]
+=v_s\frac{-AR_f}{(A+1)R_1+R_f}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">15</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The open-circuit voltage gain is:
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+G_{oc}=\frac{v_{out}}{v_s}=\frac{-AR_f}{(A+1)R_1+R_f}
+      \approx - \frac{R_f}{R_1}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.37ex; " SRC="img79.svg"
+ ALT="$\displaystyle G_{oc}=\frac{v_{out}}{v_s}=\frac{-AR_f}{(A+1)R_1+R_f}
+\approx - \frac{R_f}{R_1}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">16</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The approximation is due to the fact that <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.21ex; " SRC="img46.svg"
+ ALT="$A\gg 1$"></SPAN>.
+
+<P>
+This result can also be obtained under the virtual ground assumption
+    <!-- MATH
+ $v^-\approx v^+=0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.12ex; " SRC="img32.svg"
+ ALT="$v^-\approx v^+=0$"></SPAN>. Applying KCL at the node of <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.12ex; " SRC="img17.svg"
+ ALT="$v^-$"></SPAN>, we get
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\frac{v_s}{R_1}+\frac{v_{out}}{R_f}=0,\;\;\;\;\;\mbox{i.e.}\;\;\;\;
+      G_{oc}=\frac{v_{out}}{v_s}=-\frac{R_f}{R_1}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.11ex; vertical-align: -2.37ex; " SRC="img80.svg"
+ ALT="$\displaystyle \frac{v_s}{R_1}+\frac{v_{out}}{R_f}=0,\;\;\;\;\;$">i.e.<IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img81.svg"
+ ALT="$\displaystyle \;\;\;\;
+G_{oc}=\frac{v_{out}}{v_s}=-\frac{R_f}{R_1}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">17</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+<LI><B>Input resistance:</B> 
+
+<P>
+We assume <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img82.svg"
+ ALT="$R_s=0$"></SPAN>, and find the input resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img35.svg"
+ ALT="$R_{in}$"></SPAN> as the
+      ratio of <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img83.svg"
+ ALT="$v_s$"></SPAN> and the input current <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img41.svg"
+ ALT="$i_{in}$"></SPAN>. By KCL applied to 
+      the node of <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.12ex; " SRC="img17.svg"
+ ALT="$v^-$"></SPAN>:
+      <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\frac{v^- -v_s}{R_1}+\frac{v^- -(-Av^-)}{R_f}=0
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.37ex; " SRC="img84.svg"
+ ALT="$\displaystyle \frac{v^--v_s}{R_1}+\frac{v^--(-Av^-)}{R_f}=0$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">18</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Solving for <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.12ex; " SRC="img17.svg"
+ ALT="$v^-$"></SPAN>:
+      <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v^-=v_s\frac{R_f}{R_f+(A+1)R_1}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.37ex; " SRC="img85.svg"
+ ALT="$\displaystyle v^-=v_s\frac{R_f}{R_f+(A+1)R_1}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">19</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The input current is
+      <BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+i_{in}&=&\frac{v_s-v^-}{R_1}
+        =\frac{v_s}{R_1}\left[1-\frac{R_f}{R_f+(A+1)R_1}\right]
+	\nonumber \\
+	&=&v_s\frac{1}{R_1}\frac{(A+1)R_1}{R_f+(A+1) R_1}
+        =v_s\;\frac{A+1}{R_f+(A+1) R_1}
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img86.svg"
+ ALT="$\displaystyle i_{in}$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img87.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 6.04ex; vertical-align: -2.37ex; " SRC="img88.svg"
+ ALT="$\displaystyle \frac{v_s-v^-}{R_1}
+=\frac{v_s}{R_1}\left[1-\frac{R_f}{R_f+(A+1)R_1}\right]$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img87.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 5.81ex; vertical-align: -2.37ex; " SRC="img89.svg"
+ ALT="$\displaystyle v_s\frac{1}{R_1}\frac{(A+1)R_1}{R_f+(A+1) R_1}
+=v_s\;\frac{A+1}{R_f+(A+1) R_1}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">20</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+
+      Dividing <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img83.svg"
+ ALT="$v_s$"></SPAN> by <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img41.svg"
+ ALT="$i_{in}$"></SPAN> we get
+      <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+R_{in}=\frac{R_f+(A+1) R_1}{A+1}\approx R_1
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -1.90ex; " SRC="img90.svg"
+ ALT="$\displaystyle R_{in}=\frac{R_f+(A+1) R_1}{A+1}\approx R_1$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">21</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Note that this input resistance is significantly smaller
+      than that of the voltage follower with <!-- MATH
+ $R_{in}\approx A r_{in}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img55.svg"
+ ALT="$R_{in}\approx A r_{in}$"></SPAN>!
+
+<P>
+</LI>
+<LI><B>Output resistance:</B> Here we assume <!-- MATH
+ $r_{in}\rightarrow \infty$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img5.svg"
+ ALT="$r_{in}\rightarrow \infty$"></SPAN>
+      to simplify the analysis. 
+      
+<UL>
+<LI>Find short-circuit output current: Applying KCL to the 
+        output node we get
+        <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+i_{sc}=\frac{-A v^-}{r_{out}}+\frac{v^-}{R_f}
+          =v^-\;\left(\frac{r_{out}-AR_f}{r_{out}R_f} \right)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.37ex; " SRC="img91.svg"
+ ALT="$\displaystyle i_{sc}=\frac{-A v^-}{r_{out}}+\frac{v^-}{R_f}
+=v^-\;\left(\frac{r_{out}-AR_f}{r_{out}R_f} \right)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">22</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+but as <!-- MATH
+ $v^-=v_s \,R_f/(R_s+R_1+R_f)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.78ex; " SRC="img92.svg"
+ ALT="$v^-=v_s \,R_f/(R_s+R_1+R_f)$"></SPAN>, the above becomes
+        <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+i_{sc}=v_s\left(\frac{R_f}{R_s+R_1+R_f}\right)
+          \left(\frac{r_{out}-AR_f}{r_{out}R_f} \right)
+          =v_s\,\frac{r_{out}-AR_f}{(R_s+R_1+R_f)r_{out}}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.37ex; " SRC="img93.svg"
+ ALT="$\displaystyle i_{sc}=v_s\left(\frac{R_f}{R_s+R_1+R_f}\right)
+\left(\frac{r_{out}-AR_f}{r_{out}R_f} \right)
+=v_s\,\frac{r_{out}-AR_f}{(R_s+R_1+R_f)r_{out}}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">23</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>Find open-circuit output voltage: Applying KCL to the node 
+        of <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.12ex; " SRC="img17.svg"
+ ALT="$v^-$"></SPAN> we get
+        <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\frac{v_s-v^-}{R_s+R_1}+\frac{(-Av^-)-v^-}{R_f+r_{out}}=0
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.37ex; " SRC="img94.svg"
+ ALT="$\displaystyle \frac{v_s-v^-}{R_s+R_1}+\frac{(-Av^-)-v^-}{R_f+r_{out}}=0$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">24</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Solving for <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.12ex; " SRC="img17.svg"
+ ALT="$v^-$"></SPAN> we get
+        <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v^-=v_s \left(\frac{R_f+r_{out}}{(A+1)(R_s+R_1)+R_f+r_{out}} \right)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.37ex; " SRC="img95.svg"
+ ALT="$\displaystyle v^-=v_s \left(\frac{R_f+r_{out}}{(A+1)(R_s+R_1)+R_f+r_{out}} \right)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">25</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The open-circuit output voltage can be found to be (voltage divider)
+        <BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+v_{oc}&=&[v^- -(-Av^-)]\frac{r_{out}}{R_f+r_{out}}-Av^-
+          =v^- \left(\frac{r_{out}-AR_f}{R_f+r_{out}}\right)
+          \nonumber\\
+          &=&v_s \;\frac{r_{out}-AR_f}{(A+1)(R_s+R_1)+R_f+r_{out}}
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img96.svg"
+ ALT="$\displaystyle v_{oc}$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img87.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 6.04ex; vertical-align: -2.37ex; " SRC="img97.svg"
+ ALT="$\displaystyle [v^--(-Av^-)]\frac{r_{out}}{R_f+r_{out}}-Av^-
+=v^- \left(\frac{r_{out}-AR_f}{R_f+r_{out}}\right)$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img87.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 5.81ex; vertical-align: -2.37ex; " SRC="img98.svg"
+ ALT="$\displaystyle v_s \;\frac{r_{out}-AR_f}{(A+1)(R_s+R_1)+R_f+r_{out}}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">26</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+
+</LI>
+<LI>Find output resistance:
+        <BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+R_{out}&=&\frac{v_{oc}}{i_{sc}}
+          =\frac{(R_s+R_1+R_f)r_{out}}{(A+1)(R_s+R_1)+R_f+r_{out}}
+          \nonumber\\
+          &\approx& \frac{(R_s+R_1+R_f)r_{out}}{A(R_s+R_1)}
+          \approx \left(\frac{R_1+R_f}{R_1}\right) \frac{r_{out}}{A} 
+        
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img99.svg"
+ ALT="$\displaystyle R_{out}$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img87.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 5.81ex; vertical-align: -2.37ex; " SRC="img100.svg"
+ ALT="$\displaystyle \frac{v_{oc}}{i_{sc}}
+=\frac{(R_s+R_1+R_f)r_{out}}{(A+1)(R_s+R_1)+R_f+r_{out}}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img101.svg"
+ ALT="$\displaystyle \approx$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img102.svg"
+ ALT="$\displaystyle \frac{(R_s+R_1+R_f)r_{out}}{A(R_s+R_1)}
+\approx \left(\frac{R_1+R_f}{R_1}\right) \frac{r_{out}}{A}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">27</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+
+        The approximation is based on <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.21ex; " SRC="img46.svg"
+ ALT="$A\gg 1$"></SPAN> and <!-- MATH
+ $R_s\ll R_1,\,R_f$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.78ex; " SRC="img103.svg"
+ ALT="$R_s\ll R_1,\,R_f$"></SPAN>.
+
+<P>
+</LI>
+</UL>
+</LI>
+</UL>
+
+<P>
+In summary,
+  
+<UL>
+<LI>open-circuit voltage gain:
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+G_{oc}\approx -\frac{R_f}{R_1}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img104.svg"
+ ALT="$\displaystyle G_{oc}\approx -\frac{R_f}{R_1}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">28</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>input resistance:
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+R_{in}\approx R_1
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img105.svg"
+ ALT="$\displaystyle R_{in}\approx R_1$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">29</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>output resistance:
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+R_{out}\approx \left(\frac{R_1+R_f}{R_1}\right)\;\frac{r_{out}}{A}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img106.svg"
+ ALT="$\displaystyle R_{out}\approx \left(\frac{R_1+R_f}{R_1}\right)\;\frac{r_{out}}{A}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">30</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+</UL>
+
+<P>
+</LI>
+<LI><B>Non-Inverting Amplifier</B> (Homework)
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/NonInvertingAmplifer1.png"
+ ALT="NonInvertingAmplifer1.png">
+
+<P>
+The three parameters of this non-inverting amplifier can be found 
+  to be (see 
+  <A ID="tex2html7"
+  HREF="../noninvertingopamp/index.html">here</A>):
+
+<UL>
+<LI>open-circuit voltage gain:
+      <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+G_{oc} \approx \frac{R_1+R_f}{R_1}>1
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img107.svg"
+ ALT="$\displaystyle G_{oc} \approx \frac{R_1+R_f}{R_1}&gt;1$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">31</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>input resistance:
+      <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+R_{in} \approx \left(\frac{R_1}{R_1+R_f}\right)A r_{in}
+        \approx\frac{A}{G_{oc}}r_{in}<A r_{in}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.37ex; " SRC="img108.svg"
+ ALT="$\displaystyle R_{in} \approx \left(\frac{R_1}{R_1+R_f}\right)A r_{in}
+\approx\frac{A}{G_{oc}}r_{in}&lt;A r_{in}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">32</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>output resistance:
+      <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+R_{out}\approx \left(\frac{R_1+R_f}{R_1} \right)\,\frac{r_{out}}{A}
+        \approx\frac{G_{oc}}{A}r_{out}>\frac{r_{out}}{A}
+      
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img109.svg"
+ ALT="$\displaystyle R_{out}\approx \left(\frac{R_1+R_f}{R_1} \right)\,\frac{r_{out}}{A}
+\approx\frac{G_{oc}}{A}r_{out}&gt;\frac{r_{out}}{A}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">33</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+</UL>
+  Comparing these results with those of the voltage follower, we see 
+  that we get a bigger gain <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img110.svg"
+ ALT="$G_{oc}&gt;1$"></SPAN>, but smaller <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img35.svg"
+ ALT="$R_{in}$"></SPAN> and bigger
+  <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img36.svg"
+ ALT="$R_{out}$"></SPAN>. In particular if <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.78ex; " SRC="img111.svg"
+ ALT="$R_f=0$"></SPAN>, this non-inverting amplifier
+  becomes a voltage follower with <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img112.svg"
+ ALT="$G_{oc}=1$"></SPAN>, <!-- MATH
+ $R_{in}=Ar_{in}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img113.svg"
+ ALT="$R_{in}=Ar_{in}$"></SPAN>, and
+  <!-- MATH
+ $R_{out}=r_{out}/A$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img114.svg"
+ ALT="$R_{out}=r_{out}/A$"></SPAN>.
+
+<P>
+</LI>
+</UL>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node3.html">Analysis of Op-Amp Circuits</A>
+<B> Up:</B> <A
+ HREF="node1.html">Chapter 5: Operational Amplifiers</A>
+<B> Previous:</B> <A
+ HREF="node1.html">Chapter 5: Operational Amplifiers</A></DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

@@ -1,0 +1,355 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>ch2_sub1</TITLE>
+<META NAME="description" CONTENT="ch2_sub1">
+<META NAME="keywords" CONTENT="ch2_sub1">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="ch2_sub1.css">
+
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev_g.png">   
+<BR>
+<B> Next:</B> <A NAME="tex2html3"
+  HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../figures/voltageamplifierex5a.gif"
+ ALT="voltageamplifierex5a.gif">
+
+<P>
+
+<UL>
+<LI><B>Voltage gain:</B> Assume an ideal voltage source <IMG
+ WIDTH="21" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$v_s$"> is applied to the 
+      input port AB. Apply KVL to the loop to get:
+      <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_s=i_{in} r_{in} +i_{in} r_{out} +A r_{in} i_{in}
+      =i_{in}[r_{out}+(A+1) r_{in}]
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="421" HEIGHT="33" BORDER="0"
+ SRC="img2.png"
+ ALT="\begin{displaymath}v_s=i_{in} r_{in} +i_{in} r_{out} +A r_{in} i_{in}
+=i_{in}[r_{out}+(A+1) r_{in}] \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+i.e.,
+      <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+i_{in}=\frac{v_s}{r_{out}+(A+1) r_{in}}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="182" HEIGHT="46" BORDER="0"
+ SRC="img3.png"
+ ALT="\begin{displaymath}i_{in}=\frac{v_s}{r_{out}+(A+1) r_{in}} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The voltage across the output port CD is:
+      <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_{out}=A r_{in} i_{in}+r_{out}i_{in}
+      =v_s\frac{A r_{in}+r_{out}}{r_{out}+(A+1) r_{in}}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="360" HEIGHT="51" BORDER="0"
+ SRC="img4.png"
+ ALT="\begin{displaymath}v_{out}=A r_{in} i_{in}+r_{out}i_{in}
+=v_s\frac{A r_{in}+r_{out}}{r_{out}+(A+1) r_{in}} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+i.e.,
+      <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+A_{oc}=\frac{A r_{in}+r_{out}}{r_{out}+(A+1) r_{in}} \approx 1
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="223" HEIGHT="51" BORDER="0"
+ SRC="img5.png"
+ ALT="\begin{displaymath}A_{oc}=\frac{A r_{in}+r_{out}}{r_{out}+(A+1) r_{in}} \approx 1 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+</LI>
+<LI><B>Input resistance:</B> Assume a load <IMG
+ WIDTH="29" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.png"
+ ALT="$R_L$"> is connnected to the output
+      port CD. Apply KVL to the two loops and get:
+      <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_s=(r_{in}+r_{out}+A r_{in})i_{in}-r_{out}i_{out}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="286" HEIGHT="33" BORDER="0"
+ SRC="img7.png"
+ ALT="\begin{displaymath}v_s=(r_{in}+r_{out}+A r_{in})i_{in}-r_{out}i_{out} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+      <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Ar_{in}i_{in}=(r_{out}+R_L)i_{out}-r_{out} i_{in}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="269" HEIGHT="33" BORDER="0"
+ SRC="img8.png"
+ ALT="\begin{displaymath}Ar_{in}i_{in}=(r_{out}+R_L)i_{out}-r_{out} i_{in} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Solving the second equation we get
+      <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+i_{out}=\frac{Ar_{in}+r_{out}}{r_{out}+R_L} i_{in}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="162" HEIGHT="49" BORDER="0"
+ SRC="img9.png"
+ ALT="\begin{displaymath}i_{out}=\frac{Ar_{in}+r_{out}}{r_{out}+R_L} i_{in} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Plugging that into the first equation we get
+      <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_s =i_{in}[(r_{in}+r_{out}+A r_{in})-r_{out}\frac{Ar_{in}+r_{out}}{r_{out}+R_L}]
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="360" HEIGHT="49" BORDER="0"
+ SRC="img10.png"
+ ALT="\begin{displaymath}v_s =i_{in}[(r_{in}+r_{out}+A r_{in})-r_{out}\frac{Ar_{in}+r_{out}}{r_{out}+R_L}] \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+i.e.,
+      <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+R_{in}=\frac{v_s}{i_{in}}=r_{in}(1+\frac{AR_L}{r_{out}+R_L})
+      +R_L||r_{out} \approx A r_{in}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="397" HEIGHT="49" BORDER="0"
+ SRC="img11.png"
+ ALT="\begin{displaymath}R_{in}=\frac{v_s}{i_{in}}=r_{in}(1+\frac{AR_L}{r_{out}+R_L})
++R_L\vert\vert r_{out} \approx A r_{in}\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+</LI>
+<LI><B>Output resistance:</B> Apply a source voltage <IMG
+ WIDTH="21" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$v_s$"> with an internal 
+      resistance <IMG
+ WIDTH="26" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.png"
+ ALT="$R_s$"> to the input port AB, and get
+      <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_s=i_{in} [R_s+r_{in}+r_{out} +A r_{in}]
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="247" HEIGHT="33" BORDER="0"
+ SRC="img13.png"
+ ALT="\begin{displaymath}v_s=i_{in} [R_s+r_{in}+r_{out} +A r_{in}] \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+i.e.,
+      <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+i_{in}=\frac{v_s}{R_s+(A+1)r_{in}+r_{out}}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="226" HEIGHT="46" BORDER="0"
+ SRC="img14.png"
+ ALT="\begin{displaymath}i_{in}=\frac{v_s}{R_s+(A+1)r_{in}+r_{out}} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The open-circuit output voltage is:
+      <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_{oc}=(r_{out}+Ar_{in}) i_{in}=(r_{out}+Ar_{in}) \frac{v_s}{R_s+(A+1)r_{in}+r_{out}}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="478" HEIGHT="46" BORDER="0"
+ SRC="img15.png"
+ ALT="\begin{displaymath}v_{oc}=(r_{out}+Ar_{in}) i_{in}=(r_{out}+Ar_{in}) \frac{v_s}{R_s+(A+1)r_{in}+r_{out}} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Next, we find short-circuit output current. Due to superposition (two voltage 
+      sources <IMG
+ WIDTH="21" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$v_s$"> and <IMG
+ WIDTH="60" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.png"
+ ALT="$Ar_{in}i_{in}$">) we have:
+      <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+i_{sc}=\frac{v_s}{R_s+r_{in}}+Ar_{in}\frac{v_s}{(R_s+r_{in})r_{out}}
+      =v_s\frac{Ar_{in}+r_{out}}{(R_s+r_{in})r_{out}}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="440" HEIGHT="51" BORDER="0"
+ SRC="img17.png"
+ ALT="\begin{displaymath}i_{sc}=\frac{v_s}{R_s+r_{in}}+Ar_{in}\frac{v_s}{(R_s+r_{in})r_{out}}
+=v_s\frac{Ar_{in}+r_{out}}{(R_s+r_{in})r_{out}} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Now we get:
+      <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+R_{out}=\frac{v_{oc}}{i_{sc}}=\frac{(R_s+r_{in})r_{out}}{R_s+(A+1)r_{in}+r_{out}}
+      \approx \frac{r_{out}}{A}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="349" HEIGHT="52" BORDER="0"
+ SRC="img18.png"
+ ALT="\begin{displaymath}R_{out}=\frac{v_{oc}}{i_{sc}}=\frac{(R_s+r_{in})r_{out}}{R_s+(A+1)r_{in}+r_{out}}
+\approx \frac{r_{out}}{A}\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The approximation is due to the assumption that <IMG
+ WIDTH="67" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.png"
+ ALT="$A&#187;1$"> and both <IMG
+ WIDTH="26" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.png"
+ ALT="$R_s$"> and <IMG
+ WIDTH="33" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.png"
+ ALT="$r_{out}$">
+      are very small.
+
+<P>
+</LI>
+</UL>
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html4"
+  HREF="node1.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev_g.png">   
+<BR>
+<B> Next:</B> <A NAME="tex2html3"
+  HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Ruye Wang
+2016-02-16
+</ADDRESS>
+</BODY>
+</HTML>

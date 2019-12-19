@@ -1,0 +1,620 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>hw2_key</TITLE>
+<META NAME="description" CONTENT="hw2_key">
+<META NAME="keywords" CONTENT="hw2_key">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="hw2_key.css">
+
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/share/lib/latex2html/icons/next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/share/lib/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/share/lib/latex2html/icons/prev_g.png">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+  HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<DIV ALIGN="CENTER">
+<FONT SIZE="+2"><B>E84 Home Work 2</B></FONT>
+
+</DIV>
+
+<OL>
+<LI>Find the equivalent resistance between the two terminals before and
+after the switch is closed. (Note, the two diagonal branches are NOT
+connected to each other in the middle.)
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../hw2e.gif"
+ ALT="hw2e.gif">
+
+<P>
+<B>Solution:</B>
+
+<UL>
+<LI>before S is closed, <!-- MATH
+ $R=(3+2)//(6+2)=5//8=40/13 \Omega$
+ -->
+<IMG
+ WIDTH="300" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$R=(3+2)//(6+2)=5//8=40/13 \Omega$">
+</LI>
+<LI>after S is closed, <!-- MATH
+ $R=2//2+3//6=1+2=3 \Omega$
+ -->
+<IMG
+ WIDTH="238" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.png"
+ ALT="$R=2//2+3//6=1+2=3 \Omega$">
+</LI>
+</UL>
+
+<P>
+</LI>
+<LI>Find the current I3 through the load resistor of 6<IMG
+ WIDTH="17" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.png"
+ ALT="$\Omega$"> by the
+following two methods:
+
+<OL>
+<LI>Convert the two voltage sources to equivalent current sources, 
+	simplify the circuit and solve for the current;
+</LI>
+<LI>Use superposition theorem to consider one of the two sources at a
+	time, then add the two partial results to get the final result.
+</LI>
+</OL>
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../hw2g.gif"
+ ALT="hw2g.gif">
+
+<P>
+<B>Solution:</B>
+
+<OL>
+<LI>Conversion from voltage to current source:
+
+<UL>
+<LI>convert first voltage source (left):   <!-- MATH
+ $I1=10V/1\Omega=10A$
+ -->
+<IMG
+ WIDTH="159" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$I1=10V/1\Omega=10A$">, <IMG
+ WIDTH="58" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.png"
+ ALT="$R1=1$">
+</LI>
+<LI>convert second voltage source (right): <!-- MATH
+ $I2=6V/3\Omega=2A$
+ -->
+<IMG
+ WIDTH="141" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.png"
+ ALT="$I2=6V/3\Omega=2A$">, <IMG
+ WIDTH="58" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.png"
+ ALT="$R2=3$">
+</LI>
+<LI>combine two parallel current sources: <IMG
+ WIDTH="156" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.png"
+ ALT="$I0=I1+I2=12A$">
+</LI>
+<LI>combine two parallel resistors: <!-- MATH
+ $R0=(R1\times R2)/(R1+R2)=3/4=0.75$
+ -->
+<IMG
+ WIDTH="320" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.png"
+ ALT="$R0=(R1\times R2)/(R1+R2)=3/4=0.75$">
+</LI>
+<LI>use current divider to find current:
+       <!-- MATH
+ $I=I0 R0/(R+R0)=12\times 0.75/(6+0.75)=4/3=1.33A$
+ -->
+<IMG
+ WIDTH="448" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.png"
+ ALT="$I=I0 R0/(R+R0)=12\times 0.75/(6+0.75)=4/3=1.33A$">
+</LI>
+</UL>
+</LI>
+<LI>Superposition theorem:
+
+<UL>
+<LI>Consider only the voltage source on the left. Parallel resistance
+of <IMG
+ WIDTH="26" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img11.png"
+ ALT="$3\Omega$"> and <IMG
+ WIDTH="26" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.png"
+ ALT="$6\Omega$"> is <!-- MATH
+ $3\times 6/(3+6)=2\Omega$
+ -->
+<IMG
+ WIDTH="149" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.png"
+ ALT="$3\times 6/(3+6)=2\Omega$">. Overall resistance
+is <IMG
+ WIDTH="88" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.png"
+ ALT="$1+2=3\Omega$">, overall current is <IMG
+ WIDTH="52" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.png"
+ ALT="$10/3A$">, and
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+I'_3=\frac{10}{3}\times \frac{3}{3+6}=\frac{10}{9}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="167" HEIGHT="43" BORDER="0"
+ SRC="img16.png"
+ ALT="\begin{displaymath}I'_3=\frac{10}{3}\times \frac{3}{3+6}=\frac{10}{9} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+</LI>
+<LI>Consider only the voltage source on the right.Parallel resistance
+of <IMG
+ WIDTH="26" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img17.png"
+ ALT="$1\Omega$"> and <IMG
+ WIDTH="26" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.png"
+ ALT="$6\Omega$"> is <!-- MATH
+ $1\times 6/(1+6)=6/7\Omega$
+ -->
+<IMG
+ WIDTH="166" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.png"
+ ALT="$1\times 6/(1+6)=6/7\Omega$">. Overall resistance
+is <IMG
+ WIDTH="73" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.png"
+ ALT="$3+6/7\Omega$">, overall current is <!-- MATH
+ $6/(3+6/7)=14/9A$
+ -->
+<IMG
+ WIDTH="163" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.png"
+ ALT="$6/(3+6/7)=14/9A$">, and
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+I''_3=\frac{14}{9}\times \frac{1}{1+6}=\frac{2}{9}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="159" HEIGHT="43" BORDER="0"
+ SRC="img21.png"
+ ALT="\begin{displaymath}I''_3=\frac{14}{9}\times \frac{1}{1+6}=\frac{2}{9} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+</LI>
+<LI>Find the overall current:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+I_3=I'_3+I''_3=\frac{10}{9}+\frac{2}{9}=\frac{12}{9}=\frac{4}{3}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="249" HEIGHT="42" BORDER="0"
+ SRC="img22.png"
+ ALT="\begin{displaymath}I_3=I'_3+I''_3=\frac{10}{9}+\frac{2}{9}=\frac{12}{9}=\frac{4}{3} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+</UL>
+</LI>
+</OL>
+
+<P>
+</LI>
+<LI>Find the three currents labeled as I1, I2 and I3 in the same figure 
+	above by the following method:
+
+<OL>
+<LI>Apply KCL to node a to get a current equation;
+</LI>
+<LI>Apply KVL to the two loops to get two voltage equations;
+</LI>
+<LI>Solve the three equations for the unknown currents I1, I2 and I3.
+</LI>
+</OL>
+
+<P>
+<B>Solution:</B>
+
+<UL>
+<LI><IMG
+ WIDTH="132" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img23.png"
+ ALT="$I1+I2-I3=0$">, <IMG
+ WIDTH="169" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img24.png"
+ ALT="$10V-I1=6V+3I2$">, <IMG
+ WIDTH="125" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.png"
+ ALT="$10V-I1=6I3$">
+</LI>
+<LI>solve to get: <IMG
+ WIDTH="54" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img26.png"
+ ALT="$I1=2$">, <IMG
+ WIDTH="85" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.png"
+ ALT="$I2=-2/3$">, <IMG
+ WIDTH="71" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img28.png"
+ ALT="$I3=4/3$">
+</LI>
+</UL>
+
+<P>
+</LI>
+<LI>Find all currents labeled <!-- MATH
+ $I_k (k=1,2,3,4,5)$
+ -->
+<IMG
+ WIDTH="141" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img29.png"
+ ALT="$I_k (k=1,2,3,4,5)$"> in the circuit below. 
+The resistance of a resistor labeled by 10K, for example, is 10,000
+Ohms (<!-- MATH
+ $10,000 \Omega=10K\Omega$
+ -->
+<IMG
+ WIDTH="138" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img30.png"
+ ALT="$10,000 \Omega=10K\Omega$">).
+
+<P>
+<B>Hint:</B> follow these steps:
+
+<UL>
+<LI>Choose node 0 as the reference point or ``ground'', and let the 
+	voltages at nodes 1 and 2 be <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img31.png"
+ ALT="$V_1$"> and <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.png"
+ ALT="$V_2$"> (with respect to
+	node 0), respectively. 
+</LI>
+<LI>Express all currents in terms of the node voltages <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img31.png"
+ ALT="$V_1$">, <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.png"
+ ALT="$V_2$">
+	and other known quantaties such as the current and voltage sources
+	and the resistors.
+</LI>
+<LI>Apply KCL to node 1 and node 2 to get two current equations, 
+	substitute all current expressions into the two equations.
+</LI>
+<LI>Solve the two equations for <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img31.png"
+ ALT="$V_1$"> and <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.png"
+ ALT="$V_2$">.
+</LI>
+<LI>Find all currents.
+</LI>
+</UL>
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../hw2h.gif"
+ ALT="hw2h.gif">
+
+<P>
+<B>Solution:</B>
+
+<UL>
+<LI>KCL equations: <IMG
+ WIDTH="171" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img33.png"
+ ALT="$I1+I2+I3-I0=0$">, <IMG
+ WIDTH="146" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.png"
+ ALT="$-I3+I4+I5=0$">
+</LI>
+<LI><IMG
+ WIDTH="99" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img35.png"
+ ALT="$I1=V1/R1$">, <IMG
+ WIDTH="99" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img36.png"
+ ALT="$I2=V1/R2$">, <IMG
+ WIDTH="156" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img37.png"
+ ALT="$I3=(V1-V2)/R3$">, <IMG
+ WIDTH="99" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img38.png"
+ ALT="$I4=V2/R4$">, <IMG
+ WIDTH="156" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img39.png"
+ ALT="$I5=(V2+V0)/R5$">
+</LI>
+<LI>substitute I1 through I5 into KCL equations and solve for V1 and V2 
+	to get: <IMG
+ WIDTH="95" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img40.png"
+ ALT="$V1=21.8V$">, <IMG
+ WIDTH="109" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img41.png"
+ ALT="$V2=-21.8V$">
+</LI>
+<LI>obtain all currents: <IMG
+ WIDTH="76" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img42.png"
+ ALT="$I1=1.09$">, <IMG
+ WIDTH="85" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img43.png"
+ ALT="$I2=0.545$">, <IMG
+ WIDTH="76" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img44.png"
+ ALT="$I3=4.36$">, <IMG
+ WIDTH="90" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img45.png"
+ ALT="$I4=-1.09$">, <IMG
+ WIDTH="76" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img46.png"
+ ALT="$I5=5.46$">
+</LI>
+</UL>
+
+<P>
+</LI>
+<LI>Find all currents I1 through I5 in the circuit below. 
+
+<P>
+<B>Hint:</B> use the loop current method: 
+
+<P>
+
+<UL>
+<LI>Assume the currents around the four loops are Ia, Ib, Ic and Id 
+  with Ia=10A and Id=6.5A (due to the two current sources).
+</LI>
+<LI>Apply KVL to the two middle loops to get two equations.
+</LI>
+<LI>solve them for two unknown currents Ib and Ic, get I1 through I5.
+</LI>
+</UL>
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../hw2i.gif"
+ ALT="hw2i.gif">
+
+<P>
+<B>Solution:</B>
+
+<UL>
+<LI>KVL: <!-- MATH
+ $(2+3+4)Ib-2Ia-4Ic=-10$
+ -->
+<IMG
+ WIDTH="252" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img47.png"
+ ALT="$(2+3+4)Ib-2Ia-4Ic=-10$">, <!-- MATH
+ $(4+3+2)Ic-4Ib-2Id=10$
+ -->
+<IMG
+ WIDTH="238" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img48.png"
+ ALT="$(4+3+2)Ic-4Ib-2Id=10$">
+</LI>
+<LI>solve to get <IMG
+ WIDTH="79" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img49.png"
+ ALT="$Ib=2.8A$">, <IMG
+ WIDTH="79" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img50.png"
+ ALT="$Ic=3.8A$">, then find I1 thru I5:
+	<IMG
+ WIDTH="160" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img51.png"
+ ALT="$I1=Ia-Ib=7.2A$">, <IMG
+ WIDTH="158" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img52.png"
+ ALT="$I2=Ib-Ic=-1A$">, <!-- MATH
+ $I3=Ic-Id=-2.7A$
+ -->
+<IMG
+ WIDTH="173" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img53.png"
+ ALT="$I3=Ic-Id=-2.7A$">, <IMG
+ WIDTH="120" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img54.png"
+ ALT="$I4=Ib=2.8A$">,
+	<IMG
+ WIDTH="120" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img55.png"
+ ALT="$I5=Ic=3.8A$">
+</LI>
+</UL>
+
+<P>
+</LI>
+<LI>Find the optimal load resistance <IMG
+ WIDTH="28" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img56.png"
+ ALT="$R_L$"> so that it receives maximal
+power from the current source <IMG
+ WIDTH="73" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img57.png"
+ ALT="$I_0=10A$"> with internal resistance 
+<IMG
+ WIDTH="70" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img58.png"
+ ALT="$R_0=1\Omega$"> and power transmission line resistance <IMG
+ WIDTH="73" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$R_T=9\Omega$">. 
+Find the maximum load power and the power loss along the transmission 
+line.
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../hw2f.gif"
+ ALT="hw2f.gif">
+
+<P>
+To verify your choice of load resistance, show that the power consumption
+of the load will always be lower than this maximum when its resistance is 
+either increased or decreased by ten percent.
+
+<P>
+<B>Solution:</B>
+First convert current source to voltage source with <!-- MATH
+ $V_0=I_0 R_0=10V$
+ -->
+<IMG
+ WIDTH="136" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img60.png"
+ ALT="$V_0=I_0 R_0=10V$">
+and <IMG
+ WIDTH="70" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img58.png"
+ ALT="$R_0=1\Omega$">. To maximize load power consumption, let 
+<!-- MATH
+ $R_L=R_0+R_T=10 \Omega$
+ -->
+<IMG
+ WIDTH="170" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img61.png"
+ ALT="$R_L=R_0+R_T=10 \Omega$">. The current is <!-- MATH
+ $I=10V/20\Omega=0.5A$
+ -->
+<IMG
+ WIDTH="163" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img62.png"
+ ALT="$I=10V/20\Omega=0.5A$">. Load power 
+is <!-- MATH
+ $I^2R_L=10/4=2.5W$
+ -->
+<IMG
+ WIDTH="167" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img63.png"
+ ALT="$I^2R_L=10/4=2.5W$">, power loss on transmission line is <IMG
+ WIDTH="107" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img64.png"
+ ALT="$I^2R_T=9/4A$">
+When <IMG
+ WIDTH="81" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img65.png"
+ ALT="$R_L=11\Omega$">, <!-- MATH
+ $I=10V/21\Omega$
+ -->
+<IMG
+ WIDTH="105" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img66.png"
+ ALT="$I=10V/21\Omega$">, <!-- MATH
+ $W_L=I^2 R_L=2.494$
+ -->
+<IMG
+ WIDTH="157" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img67.png"
+ ALT="$W_L=I^2 R_L=2.494$">
+When <IMG
+ WIDTH="72" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img68.png"
+ ALT="$R_L=9\Omega$">, <!-- MATH
+ $I=10V/19\Omega$
+ -->
+<IMG
+ WIDTH="105" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img69.png"
+ ALT="$I=10V/19\Omega$">, <!-- MATH
+ $W_L=I^2 R_L=2.493$
+ -->
+<IMG
+ WIDTH="157" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img70.png"
+ ALT="$W_L=I^2 R_L=2.493$">
+
+<P>
+</LI>
+</OL>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html3"
+  HREF="node1.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/share/lib/latex2html/icons/next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/share/lib/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/share/lib/latex2html/icons/prev_g.png">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+  HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Ruye Wang
+2005-02-21
+</ADDRESS>
+</BODY>
+</HTML>

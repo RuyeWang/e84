@@ -1,0 +1,1199 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Butterworth filters</TITLE>
+<META NAME="description" CONTENT="Butterworth filters">
+<META NAME="keywords" CONTENT="ActiveFilters">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="ActiveFilters.css">
+
+<LINK REL="next" HREF="node7.html">
+<LINK REL="previous" HREF="node5.html">
+<LINK REL="next" HREF="node7.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node7.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node5.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node7.html">Higher order systems</A>
+<B> Up:</B> <A
+ HREF="node1.html">Chapter 6: Active Filter</A>
+<B> Previous:</B> <A
+ HREF="node5.html">Wien bridge</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION00015000000000000000">
+Butterworth filters</A>
+</H2>
+
+<P>
+The transition between the pass-band and stop-band of a first order 
+  filter with cut-off frequency <!-- MATH
+ $\omega_c=1/\tau$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img178.svg"
+ ALT="$\omega_c=1/\tau$"></SPAN> is characterized by the 
+  the slope of 20 dB per decade of frequency change. To achieve better 
+  selectivity, we can cascade a set of <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img179.svg"
+ ALT="$n$"></SPAN> such first order filters to
+  form an nth order filter with a slope of 20n dB per decade.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/Cascade1stOrder.png"
+ ALT="Cascade1stOrder.png">
+
+<P>
+The FRF of a first-order low-pass filter of unit gain is:  
+  
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+H(j\omega)=\frac{1}{j\omega\tau+1}
+  =\frac{1}{j\omega/\omega_c+1}=\frac{\omega_c}{j\omega+\omega_c}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img180.svg"
+ ALT="$\displaystyle H(j\omega)=\frac{1}{j\omega\tau+1}
+=\frac{1}{j\omega/\omega_c+1}=\frac{\omega_c}{j\omega+\omega_c}
+$"> 
+
+(<SPAN CLASS="arabic">63</SPAN>)
+</DIV>
+The FRF of <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img179.svg"
+ ALT="$n$"></SPAN> such filters in series is (assuming they are well
+  buffered with no loading effect):
+  
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+H(j\omega)=\left(\frac{\omega_c}{\omega_c+j\omega} \right)^n
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 6.04ex; vertical-align: -2.32ex; " SRC="img181.svg"
+ ALT="$\displaystyle H(j\omega)=\left(\frac{\omega_c}{\omega_c+j\omega} \right)^n
+$"> 
+
+(<SPAN CLASS="arabic">64</SPAN>)
+</DIV>
+The cut-off frequency of this nth order filter <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img182.svg"
+ ALT="$\omega_{cn}$"></SPAN> can be
+  found by solving the following equation
+  
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+\left|\frac{\omega_c}{\omega_c+j\omega}\right|^n
+  =\left|\frac{\omega_c}{\sqrt{\omega_c^2+\omega^2}}\right|^n
+  =\frac{1}{\sqrt{2}}=2^{-1/2}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 7.43ex; vertical-align: -3.02ex; " SRC="img183.svg"
+ ALT="$\displaystyle \left\vert\frac{\omega_c}{\omega_c+j\omega}\right\vert^n
+=\left\...
+...ega_c}{\sqrt{\omega_c^2+\omega^2}}\right\vert^n
+=\frac{1}{\sqrt{2}}=2^{-1/2}
+$"> 
+
+(<SPAN CLASS="arabic">65</SPAN>)
+</DIV>
+to get
+  
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+\omega=\omega_{cn}=\omega_c\sqrt{2^{1/n}-1}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 3.25ex; vertical-align: -0.46ex; " SRC="img184.svg"
+ ALT="$\displaystyle \omega=\omega_{cn}=\omega_c\sqrt{2^{1/n}-1}
+$"> 
+
+(<SPAN CLASS="arabic">66</SPAN>)
+</DIV>
+
+<P>
+<B>Example:</B> Design an 4th order LP filter with 
+  <!-- MATH
+ $\omega_{c4}=2\pi 1000=6.2832\times 10^3$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.46ex; " SRC="img185.svg"
+ ALT="$\omega_{c4}=2\pi 1000=6.2832\times 10^3$"></SPAN>. The cut-off frequency of the 
+  first-order LP filter can be found to be
+  
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+\omega_c=\frac{\omega_{c4}}{\sqrt{2^{1/4}-1}}
+  =\frac{6.2832\times 10^3}{0.435}=1.445\times 10^4
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 6.04ex; vertical-align: -2.28ex; " SRC="img186.svg"
+ ALT="$\displaystyle \omega_c=\frac{\omega_{c4}}{\sqrt{2^{1/4}-1}}
+=\frac{6.2832\times 10^3}{0.435}=1.445\times 10^4
+$"> 
+
+(<SPAN CLASS="arabic">67</SPAN>)
+</DIV>
+The time constant of the first-order filter is 
+  <!-- MATH
+ $\tau=RC=1/\omega_c=6.92\times 10^{-5}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img187.svg"
+ ALT="$\tau=RC=1/\omega_c=6.92\times 10^{-5}$"></SPAN>. If <!-- MATH
+ $C=0.1\;\mu F=10^{-7}\;F$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.57ex; " SRC="img188.svg"
+ ALT="$C=0.1\;\mu F=10^{-7}\;F$"></SPAN>, 
+  then
+  
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+R=\frac{\omega_c}{C}=\frac{6.92\times 10^{-5}}{10^{-7}}
+  =6.92\times 10^2=692\;\Omega
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.34ex; vertical-align: -1.71ex; " SRC="img189.svg"
+ ALT="$\displaystyle R=\frac{\omega_c}{C}=\frac{6.92\times 10^{-5}}{10^{-7}}
+=6.92\times 10^2=692\;\Omega
+$"> 
+
+(<SPAN CLASS="arabic">68</SPAN>)
+</DIV>
+
+<P>
+The <EM>Butterworth filters</EM> have the property that the passing
+  band is flat. The magnitude of the FRF of an nth order low-pass 
+  Butterworth filter with cut-off frequency <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img190.svg"
+ ALT="$\omega_c$"></SPAN> is
+  
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+\left| H_{lp}(j\omega)\right|=\frac{1}{\sqrt{1+(\omega/\omega_c)^{2n}}}
+  =\left\{\begin{array}{ll}1 & \omega=0\\1/\sqrt{2}&\omega=\omega_c\\
+  0 & \omega=\infty\end{array}\right.
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 8.83ex; vertical-align: -3.79ex; " SRC="img191.svg"
+ ALT="$\displaystyle \left\vert H_{lp}(j\omega)\right\vert=\frac{1}{\sqrt{1+(\omega/\o...
+...\omega=0\\ 1/\sqrt{2}&amp;\omega=\omega_c\\
+0 &amp; \omega=\infty\end{array}\right.
+$"> 
+
+(<SPAN CLASS="arabic">69</SPAN>)
+</DIV>
+where <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img190.svg"
+ ALT="$\omega_c$"></SPAN> is the cut-off frequency at which <!-- MATH
+ $|H_{lp}(j\omega_c)|
+  =1/\sqrt{2}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.78ex; " SRC="img192.svg"
+ ALT="$\vert H_{lp}(j\omega_c)\vert
+=1/\sqrt{2}$"></SPAN>.
+  The transition between the pass-band and stop-band is controlled by the
+  order <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img179.svg"
+ ALT="$n$"></SPAN>. In general, higher order corresponds to more rapid transition. 
+  Specially, when <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img193.svg"
+ ALT="$n=0$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img194.svg"
+ ALT="$n=1$"></SPAN>, and <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img195.svg"
+ ALT="$n=\infty$"></SPAN>, we have
+  
+<UL>
+<LI><SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img193.svg"
+ ALT="$n=0$"></SPAN>, <!-- MATH
+ $|H_{lp}(j\omega)|=1/\sqrt{2}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.78ex; " SRC="img196.svg"
+ ALT="$\vert H_{lp}(j\omega)\vert=1/\sqrt{2}$"></SPAN> is an all-pass filter.
+</LI>
+<LI><SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img194.svg"
+ ALT="$n=1$"></SPAN>, the Butterworth filter is the regular first-order filter:
+    
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+|H_{lp}(j\omega)|=\frac{1}{\sqrt{1+(\omega/\omega_c)^2}}
+    =\frac{\omega_c}{\sqrt{\omega^2+\omega_c^2}}
+    =\left|\frac{\omega_c}{j\omega+\omega_c}\right|
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 6.27ex; vertical-align: -2.74ex; " SRC="img197.svg"
+ ALT="$\displaystyle \vert H_{lp}(j\omega)\vert=\frac{1}{\sqrt{1+(\omega/\omega_c)^2}}...
+...omega^2+\omega_c^2}}
+=\left\vert\frac{\omega_c}{j\omega+\omega_c}\right\vert
+$"> 
+
+(<SPAN CLASS="arabic">70</SPAN>)
+</DIV>
+</LI>
+<LI><SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img195.svg"
+ ALT="$n=\infty$"></SPAN>, the Butterworth filter becomes an ideal low-pass
+    filter:
+    
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+|H_{lp}(j\omega)|=\frac{1}{\sqrt{1+(\omega/\omega_c)^\infty}}
+    =\left\{\begin{array}{ll}1&\omega<\omega_c\\0&\omega>\omega_c\end{array}
+    \right.
+    
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 6.27ex; vertical-align: -2.74ex; " SRC="img198.svg"
+ ALT="$\displaystyle \vert H_{lp}(j\omega)\vert=\frac{1}{\sqrt{1+(\omega/\omega_c)^\in...
+...ft\{\begin{array}{ll}1&amp;\omega&lt;\omega_c\\ 0&amp;\omega&gt;\omega_c\end{array} \right.
+$"> 
+
+(<SPAN CLASS="arabic">71</SPAN>)
+</DIV>
+</LI>
+</UL>
+
+<P>
+The magnitude of the FRF of an nth order high-pass Butterworth  filter 
+  with cut-off frequency <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img190.svg"
+ ALT="$\omega_c$"></SPAN> is
+  
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+\left| H_{hp}(j\omega)\right|=\frac{1}{\sqrt{1+(\omega_c/\omega)^{2n}}}
+  =\frac{(\omega/\omega_c)^n}{\sqrt{1+(\omega/\omega_c)^{2n}}}
+  =\left\{\begin{array}{ll}0 & \omega=1\\1/\sqrt{2}&\omega=\omega_c\\
+  1 & \omega=\infty\end{array}\right.
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 8.83ex; vertical-align: -3.79ex; " SRC="img199.svg"
+ ALT="$\displaystyle \left\vert H_{hp}(j\omega)\right\vert=\frac{1}{\sqrt{1+(\omega_c/...
+...\omega=1\\ 1/\sqrt{2}&amp;\omega=\omega_c\\
+1 &amp; \omega=\infty\end{array}\right.
+$"> 
+
+(<SPAN CLASS="arabic">72</SPAN>)
+</DIV>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/ButterworthFilters1.png"
+ ALT="ButterworthFilters1.png">
+
+<P>
+Now we consider the implementation of a Butterworth filter. For 
+  simplicity, in the following we assume the frequency is normalized 
+  by the cut-off frequency <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img190.svg"
+ ALT="$\omega_c$"></SPAN>, i.e., <!-- MATH
+ $\omega=\omega/\omega_c$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img200.svg"
+ ALT="$\omega=\omega/\omega_c$"></SPAN>, 
+  or <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.46ex; " SRC="img201.svg"
+ ALT="$\omega_c=1$"></SPAN>. Consider the low-pass case:
+  
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+|H(j\omega)|^2=H(j\omega)H(-j\omega)
+  =\frac{1}{1+(\omega/\omega_c)^{2n}}
+  =\frac{1}{1+\omega^{2n}}=\frac{1}{1+(\omega^2)^n}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img202.svg"
+ ALT="$\displaystyle \vert H(j\omega)\vert^2=H(j\omega)H(-j\omega)
+=\frac{1}{1+(\omega/\omega_c)^{2n}}
+=\frac{1}{1+\omega^{2n}}=\frac{1}{1+(\omega^2)^n}
+$"> 
+
+(<SPAN CLASS="arabic">73</SPAN>)
+</DIV>
+We need to get its FRF <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img120.svg"
+ ALT="$H(j\omega)$"></SPAN> from its magnitude <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img203.svg"
+ ALT="$\vert H(j\omega)\vert$"></SPAN>.
+  To do so, we first consider the transfer function (TF) <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img204.svg"
+ ALT="$H(s)$"></SPAN> in the 
+  s-domain corresponding to the FRF, which is the same as <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img120.svg"
+ ALT="$H(j\omega)$"></SPAN> 
+  when <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img24.svg"
+ ALT="$s=j\omega$"></SPAN>, i.e., <!-- MATH
+ $s^2=(j\omega)^2=-\omega^2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img205.svg"
+ ALT="$s^2=(j\omega)^2=-\omega^2$"></SPAN>. Now the equation 
+  above can be written as
+  
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+|H(j\omega)|^2=H(j\omega)\,H(-j\omega)
+  =\frac{1}{1+(\omega^2)^n}=\frac{1}{1+(-s^2)^n}
+  =\frac{1}{1+(-1)^ns^{2n}}=|H(s)|^2=H(s) H(-s)
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img206.svg"
+ ALT="$\displaystyle \vert H(j\omega)\vert^2=H(j\omega)\,H(-j\omega)
+=\frac{1}{1+(\om...
+...=\frac{1}{1+(-s^2)^n}
+=\frac{1}{1+(-1)^ns^{2n}}=\vert H(s)\vert^2=H(s) H(-s)
+$"> 
+
+(<SPAN CLASS="arabic">74</SPAN>)
+</DIV>
+We further find the roots of the denominator, the poles of both <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img204.svg"
+ ALT="$H(s)$"></SPAN>
+  and <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img207.svg"
+ ALT="$H(-s)$"></SPAN>, and separate them so that those on the left s-plane are 
+  the poles of <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img204.svg"
+ ALT="$H(s)$"></SPAN> (stable and causal), while those on the right 
+  s-plane belong to <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img207.svg"
+ ALT="$H(-s)$"></SPAN> (stable and anti-causal).
+
+<P>
+The roots of the denominator can be found by solving the equation
+  
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+1+(-1)^ns^{2n}=0,\;\;\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;
+  \left\{\begin{array}{ll}
+  1+s^{2n}=0 & \mbox{$n$\  is even}\\
+  1-s^{2n}=0 & \mbox{$n$\  is odd}\end{array}\right.
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img208.svg"
+ ALT="$\displaystyle 1+(-1)^ns^{2n}=0,\;\;\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;
+\left\{\beg...
+...0 &amp; \mbox{$n$\ is even}\\
+1-s^{2n}=0 &amp; \mbox{$n$\ is odd}\end{array}\right.
+$"> 
+
+(<SPAN CLASS="arabic">75</SPAN>)
+</DIV>
+Solving these we get the <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img209.svg"
+ ALT="$2n$"></SPAN> solutions on the unit circle in
+  either of the two different forms depending on whether <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img179.svg"
+ ALT="$n$"></SPAN> is even 
+  or odd:
+  
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+\left\{\begin{array}{ll}
+  s=(-1)^{1/2n}=(e^{j(2k+1)\pi})^{1/2n}=e^{j(2k+1)\pi/2n} & \mbox{$n$\  is even}\\
+  s=1^{1/2n}=(e^{j2k\pi})^{1/2n}=e^{jk\pi/n} & \mbox{$n$\  is odd}
+  \end{array}\right.\;\;\;\;\;\;(k=0,\cdots,2n-1)
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 6.04ex; vertical-align: -2.43ex; " SRC="img210.svg"
+ ALT="$\displaystyle \left\{\begin{array}{ll}
+s=(-1)^{1/2n}=(e^{j(2k+1)\pi})^{1/2n}=e...
+...k\pi/n} &amp; \mbox{$n$\ is odd}
+\end{array}\right.\;\;\;\;\;\;(k=0,\cdots,2n-1)
+$"> 
+
+(<SPAN CLASS="arabic">76</SPAN>)
+</DIV>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/ButterworthInSPlane.png"
+ ALT="ButterworthInSPlane.png">
+
+<P>
+
+<UL>
+<LI>If <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img179.svg"
+ ALT="$n$"></SPAN> is even, 
+    
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+s_k=e^{j(2k+1)\pi/2n},\;\;\;\;\;(k=0,\cdots,2n-1)
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img211.svg"
+ ALT="$\displaystyle s_k=e^{j(2k+1)\pi/2n},\;\;\;\;\;(k=0,\cdots,2n-1)
+$"> 
+
+(<SPAN CLASS="arabic">77</SPAN>)
+</DIV>
+These <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img209.svg"
+ ALT="$2n$"></SPAN> roots form <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img179.svg"
+ ALT="$n$"></SPAN> complex conjugate pairs around the unit 
+    circle of the s-plane. Corresponding to each of the <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img179.svg"
+ ALT="$n$"></SPAN> roots 
+    <!-- MATH
+ $s_k=e^{j(2 k+1)\pi/2n}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.46ex; " SRC="img212.svg"
+ ALT="$s_k=e^{j(2 k+1)\pi/2n}$"></SPAN> (<!-- MATH
+ $k=0,\cdots,n-1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img213.svg"
+ ALT="$k=0,\cdots,n-1$"></SPAN>), there is another root
+    <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.66ex; " SRC="img214.svg"
+ ALT="$s_{2n-1-k}$"></SPAN> that is its complex conjugate:
+    
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+s_{2n-1-k}=e^{j(2(2n-1-k)+1)\pi/2n}=e^{j\pi(4n-2k-1)/2n}
+      =e^{j2\pi} \;e^{-j(2k+1)\pi/2n} =e^{-j(2 k+1)\pi/2n}=s_k^*
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 3.02ex; vertical-align: -0.69ex; " SRC="img215.svg"
+ ALT="$\displaystyle s_{2n-1-k}=e^{j(2(2n-1-k)+1)\pi/2n}=e^{j\pi(4n-2k-1)/2n}
+=e^{j2\pi} \;e^{-j(2k+1)\pi/2n} =e^{-j(2 k+1)\pi/2n}=s_k^*
+$"> 
+
+(<SPAN CLASS="arabic">78</SPAN>)
+</DIV>
+Also, for <!-- MATH
+ $s_k=e^{j(2k+1)\pi/2n}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.46ex; " SRC="img212.svg"
+ ALT="$s_k=e^{j(2 k+1)\pi/2n}$"></SPAN> to be a pole of <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img204.svg"
+ ALT="$H(s)$"></SPAN>, it needs to be on 
+    the left s-plane, i.e.,
+    
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+\frac{(2k+1)\pi}{2n}>\frac{\pi}{2},\;\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;\;
+      k>\frac{n-1}{2}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.34ex; vertical-align: -1.71ex; " SRC="img216.svg"
+ ALT="$\displaystyle \frac{(2k+1)\pi}{2n}&gt;\frac{\pi}{2},\;\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;\;
+k&gt;\frac{n-1}{2}
+$"> 
+
+(<SPAN CLASS="arabic">79</SPAN>)
+</DIV>
+Now <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img204.svg"
+ ALT="$H(s)$"></SPAN> can be found in terms of its <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img179.svg"
+ ALT="$n$"></SPAN> poles on the left s-plane:
+    <BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+H(s)&=&\frac{1}{\prod_{k=\left\lceil (n-1)/2 \right\rceil}^{n-1} (s-s_k)(s-s_{2n-1-k})}
+      =\frac{1}{\prod_{k=\left\lceil (n-1)/2 \right\rceil}^{n-1}(s-s_k)(s-s_k^*)}
+      \nonumber \\
+      &=&\frac{1}{\prod_{k=\left\lceil (n-1)/2 \right\rceil}^{n-1}(s^2-(s_k+s_k^*)s+s_ks_k^*)}
+      =\frac{1}{\prod_{k=\left\lceil (n-1)/2 \right\rceil}^{n-1}(s^2-2\cos((2 k+1)\pi/2n)+1)}
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img217.svg"
+ ALT="$\displaystyle H(s)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img2.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 6.50ex; vertical-align: -3.18ex; " SRC="img218.svg"
+ ALT="$\displaystyle \frac{1}{\prod_{k=\left\lceil (n-1)/2 \right\rceil}^{n-1} (s-s_k)...
+...})}
+=\frac{1}{\prod_{k=\left\lceil (n-1)/2 \right\rceil}^{n-1}(s-s_k)(s-s_k^*)}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img2.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 6.50ex; vertical-align: -3.18ex; " SRC="img219.svg"
+ ALT="$\displaystyle \frac{1}{\prod_{k=\left\lceil (n-1)/2 \right\rceil}^{n-1}(s^2-(s_...
+...}{\prod_{k=\left\lceil (n-1)/2 \right\rceil}^{n-1}(s^2-2\cos((2 k+1)\pi/2n)+1)}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">80</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+where <!-- MATH
+ $\left\lceil x\right\rceil$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img220.svg"
+ ALT="$\left\lceil x\right\rceil$"></SPAN> is the ceiling of <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img221.svg"
+ ALT="$x$"></SPAN>, and we have 
+    used the fact that    
+    
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+s_k+s_k^*=e^{j(2 k+1)\pi/2n}+e^{-j(2 k+1)\pi/2n} =2\cos((2 k+1)\pi/2n),
+      \;\;\;\;\;\;      s_k s_k^*=1
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img222.svg"
+ ALT="$\displaystyle s_k+s_k^*=e^{j(2 k+1)\pi/2n}+e^{-j(2 k+1)\pi/2n} =2\cos((2 k+1)\pi/2n),
+\;\;\;\;\;\; s_k s_k^*=1
+$"> 
+
+(<SPAN CLASS="arabic">81</SPAN>)
+</DIV>
+
+<P>
+</LI>
+<LI>If <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img179.svg"
+ ALT="$n$"></SPAN> is odd, 
+    
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+s_k=e^{j2k\pi/2n}=e^{jk\pi/n},\;\;\;\;\;(k=0,\cdots,2n-1)
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img223.svg"
+ ALT="$\displaystyle s_k=e^{j2k\pi/2n}=e^{jk\pi/n},\;\;\;\;\;(k=0,\cdots,2n-1)
+$"> 
+
+(<SPAN CLASS="arabic">82</SPAN>)
+</DIV>
+These <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img209.svg"
+ ALT="$2n$"></SPAN> roots contain <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.46ex; " SRC="img224.svg"
+ ALT="$s_0=e^{j0}=1$"></SPAN> and <!-- MATH
+ $s_n=e^{j\pi}=-1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.46ex; " SRC="img225.svg"
+ ALT="$s_n=e^{j\pi}=-1$"></SPAN>, as well as
+    <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.31ex; " SRC="img226.svg"
+ ALT="$n-1$"></SPAN> complex conjugate pairs. Corresponding to each root <!-- MATH
+ $s_k=e^{jk\pi/n}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.46ex; " SRC="img227.svg"
+ ALT="$s_k=e^{jk\pi/n}$"></SPAN> 
+    (<!-- MATH
+ $k=1,\cdots,n-1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img228.svg"
+ ALT="$k=1,\cdots,n-1$"></SPAN>), there is another root <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.66ex; " SRC="img229.svg"
+ ALT="$s_{2n-k}$"></SPAN> that is its complex 
+    conjugate:
+    
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+s_{2n-k}=e^{j(2n-k)\pi/n}=e^{-jk\pi/n}=s_k^*
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 3.02ex; vertical-align: -0.69ex; " SRC="img230.svg"
+ ALT="$\displaystyle s_{2n-k}=e^{j(2n-k)\pi/n}=e^{-jk\pi/n}=s_k^*
+$"> 
+
+(<SPAN CLASS="arabic">83</SPAN>)
+</DIV>
+For <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img231.svg"
+ ALT="$s_k$"></SPAN> to be a pole of <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img204.svg"
+ ALT="$H(s)$"></SPAN>, it needs to be on the left s-plane, i.e.,
+    
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+\frac{k\pi}{n}>\frac{\pi}{2},\;\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;\;k>\frac{n}{2}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.11ex; vertical-align: -1.71ex; " SRC="img232.svg"
+ ALT="$\displaystyle \frac{k\pi}{n}&gt;\frac{\pi}{2},\;\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;\;k&gt;\frac{n}{2}
+$"> 
+
+(<SPAN CLASS="arabic">84</SPAN>)
+</DIV>
+Now <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img204.svg"
+ ALT="$H(s)$"></SPAN> can be found in terms of its <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img179.svg"
+ ALT="$n$"></SPAN> poles on the left s-plane:
+    <BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+H(s)&=&\frac{1}{(s-s_n)\prod_{i=\left\lceil n/2 \right\rceil}^{n-1}(s-s_k)(s-s_{2n-k})}
+    =\frac{1}{(s+1)\prod_{i=\left\lceil n/2 \right\rceil}^{n-1}(s-s_k)(s-s_k^*)}
+    \nonumber \\
+    &=&\frac{1}{(s+1)\prod_{i=\left\lceil n/2 \right\rceil}^{n-1}(s^2-(s_k+s_k^*)s+s_k s_k^*)}
+    =\frac{1}{(s+1)\prod_{i=\left\lceil n/2 \right\rceil}^{n-1}(s^2-2\cos(k\pi/n)+1)}
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img217.svg"
+ ALT="$\displaystyle H(s)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img2.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 6.50ex; vertical-align: -3.18ex; " SRC="img233.svg"
+ ALT="$\displaystyle \frac{1}{(s-s_n)\prod_{i=\left\lceil n/2 \right\rceil}^{n-1}(s-s_...
+...)}
+=\frac{1}{(s+1)\prod_{i=\left\lceil n/2 \right\rceil}^{n-1}(s-s_k)(s-s_k^*)}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img2.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 6.50ex; vertical-align: -3.18ex; " SRC="img234.svg"
+ ALT="$\displaystyle \frac{1}{(s+1)\prod_{i=\left\lceil n/2 \right\rceil}^{n-1}(s^2-(s...
+...frac{1}{(s+1)\prod_{i=\left\lceil n/2 \right\rceil}^{n-1}(s^2-2\cos(k\pi/n)+1)}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">85</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+</LI>
+</UL>
+
+<P>
+Specifically, here we find the transfer function <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img204.svg"
+ ALT="$H(s)$"></SPAN> of the nth order
+  Butterworth filter for <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img235.svg"
+ ALT="$n=2,\cdots,6$"></SPAN>:
+  
+<UL>
+<LI><SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img236.svg"
+ ALT="$n=2$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.31ex; " SRC="img237.svg"
+ ALT="$1+s^4=0$"></SPAN>, <!-- MATH
+ $s^4=-1=e^{j(2k+1)\pi}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.31ex; " SRC="img238.svg"
+ ALT="$s^4=-1=e^{j(2k+1)\pi}$"></SPAN>, the four roots are
+    <!-- MATH
+ $s_k=e^{j(2k+1)\pi)/4}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.46ex; " SRC="img239.svg"
+ ALT="$s_k=e^{j(2k+1)\pi)/4}$"></SPAN> (<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img240.svg"
+ ALT="$k=0,\cdots,3$"></SPAN>):
+    
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+s_0=e^{j\pi/4}=\frac{1+j}{\sqrt{2}},\;\;\;\;
+    s_1=e^{j3\pi/4}=\frac{-1+j}{\sqrt{2}},\;\;\;\;
+    s_2=e^{j5\pi/4}=\frac{-1-j}{\sqrt{2}},\;\;\;\;
+    s_3=e^{j7\pi/4}=\frac{1-j}{\sqrt{2}}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.57ex; vertical-align: -2.28ex; " SRC="img241.svg"
+ ALT="$\displaystyle s_0=e^{j\pi/4}=\frac{1+j}{\sqrt{2}},\;\;\;\;
+s_1=e^{j3\pi/4}=\fr...
+...j5\pi/4}=\frac{-1-j}{\sqrt{2}},\;\;\;\;
+s_3=e^{j7\pi/4}=\frac{1-j}{\sqrt{2}}
+$"> 
+
+(<SPAN CLASS="arabic">86</SPAN>)
+</DIV>
+out of which <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img242.svg"
+ ALT="$s_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.69ex; " SRC="img243.svg"
+ ALT="$s_2=s_1^*$"></SPAN> on the left s-plane are the roots of 
+    <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img204.svg"
+ ALT="$H(s)$"></SPAN>:
+    <BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+H(s)&=&\frac{1}{(s-s_1)(s-s_2)}=\frac{1}{(s-(-1+j)/\sqrt{2})(s-(-1-j)/\sqrt{2})}
+    \nonumber \\
+    &=&\frac{1}{s^2+\sqrt{2}s+1}
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img217.svg"
+ ALT="$\displaystyle H(s)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img2.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 5.81ex; vertical-align: -2.55ex; " SRC="img244.svg"
+ ALT="$\displaystyle \frac{1}{(s-s_1)(s-s_2)}=\frac{1}{(s-(-1+j)/\sqrt{2})(s-(-1-j)/\sqrt{2})}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img2.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 5.57ex; vertical-align: -2.28ex; " SRC="img245.svg"
+ ALT="$\displaystyle \frac{1}{s^2+\sqrt{2}s+1}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">87</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Note that the coefficient of the first order term is <!-- MATH
+ $-2\cos(3\pi/2)=\sqrt{2}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img246.svg"
+ ALT="$-2\cos(3\pi/2)=\sqrt{2}$"></SPAN>.
+</LI>
+<LI><SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img247.svg"
+ ALT="$n=3$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.31ex; " SRC="img248.svg"
+ ALT="$1-s^6=0$"></SPAN>, <!-- MATH
+ $s^6=1=e^{j2k\pi}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.12ex; " SRC="img249.svg"
+ ALT="$s^6=1=e^{j2k\pi}$"></SPAN>, the six roots are
+    <!-- MATH
+ $s_k=e^{j k2\pi/6}=e^{j k\pi/3}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.46ex; " SRC="img250.svg"
+ ALT="$s_k=e^{j k2\pi/6}=e^{j k\pi/3}$"></SPAN> (<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img251.svg"
+ ALT="$k=0,\cdots,5$"></SPAN>)
+    
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+s_0=e^{j0}=1,\;\;\;\;
+    s_1=e^{j\pi/3}=\frac{1+j\sqrt{3}}{2},\;\;\;\;s_2=e^{j2\pi/3}=\frac{-1+j\sqrt{3}}{2}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.57ex; vertical-align: -1.71ex; " SRC="img252.svg"
+ ALT="$\displaystyle s_0=e^{j0}=1,\;\;\;\;
+s_1=e^{j\pi/3}=\frac{1+j\sqrt{3}}{2},\;\;\;\;s_2=e^{j2\pi/3}=\frac{-1+j\sqrt{3}}{2}
+$"> 
+
+(<SPAN CLASS="arabic">88</SPAN>)
+</DIV>
+    
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+s_3=e^{j3\pi/3}=e^{j\pi}=-1,\;\;\;\;
+    s_4=e^{j4\pi/3}=\frac{-1-j\sqrt{3}}{2},\;\;\;\;s_5=e^{j5\pi/3}=\frac{1-j\sqrt{3}}{2}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.57ex; vertical-align: -1.71ex; " SRC="img253.svg"
+ ALT="$\displaystyle s_3=e^{j3\pi/3}=e^{j\pi}=-1,\;\;\;\;
+s_4=e^{j4\pi/3}=\frac{-1-j\sqrt{3}}{2},\;\;\;\;s_5=e^{j5\pi/3}=\frac{1-j\sqrt{3}}{2}
+$"> 
+
+(<SPAN CLASS="arabic">89</SPAN>)
+</DIV>
+out of which <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img254.svg"
+ ALT="$s_2$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.46ex; " SRC="img255.svg"
+ ALT="$s_3=-1$"></SPAN>, and <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.69ex; " SRC="img256.svg"
+ ALT="$s_4=s_2^*$"></SPAN> on the left s-plane 
+    are the roots of <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img204.svg"
+ ALT="$H(s)$"></SPAN>:
+    <BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+H(s)&=&\frac{1}{(s-s_2)(s-s_3)(s-s_4)}
+    =\frac{1}{(s+1)(s-(-1+j\sqrt{3})/2)(s-(-1-j\sqrt{3})/2)}
+    \nonumber \\
+    &=&\frac{1}{(s+1)(s^2+s+1)}
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img217.svg"
+ ALT="$\displaystyle H(s)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img2.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 5.81ex; vertical-align: -2.55ex; " SRC="img257.svg"
+ ALT="$\displaystyle \frac{1}{(s-s_2)(s-s_3)(s-s_4)}
+=\frac{1}{(s+1)(s-(-1+j\sqrt{3})/2)(s-(-1-j\sqrt{3})/2)}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img2.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img258.svg"
+ ALT="$\displaystyle \frac{1}{(s+1)(s^2+s+1)}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">90</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Note that the coefficient of the first order term is <!-- MATH
+ $-2\cos(2\pi/3)=1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img259.svg"
+ ALT="$-2\cos(2\pi/3)=1$"></SPAN>.
+</LI>
+<LI><SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img260.svg"
+ ALT="$n=4$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.31ex; " SRC="img261.svg"
+ ALT="$1+s^8=0$"></SPAN>, <!-- MATH
+ $s^8=-1=e^{j(2k+1)\pi}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.31ex; " SRC="img262.svg"
+ ALT="$s^8=-1=e^{j(2k+1)\pi}$"></SPAN>, the eight roots are
+    <!-- MATH
+ $s_k=e^{j(2k+1)pi/8}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.46ex; " SRC="img263.svg"
+ ALT="$s_k=e^{j(2k+1)pi/8}$"></SPAN> (<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img264.svg"
+ ALT="$k=0,\cdots,7$"></SPAN>).
+    Evaluating <!-- MATH
+ $-2\cos((2k+1)\pi/2n)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img265.svg"
+ ALT="$-2\cos((2k+1)\pi/2n)$"></SPAN> for <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img266.svg"
+ ALT="$k=2$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img267.svg"
+ ALT="$k=3$"></SPAN>, we get the
+    coefficients of the two first order terms
+    <!-- MATH
+ $-2\cos(5\pi/8)=0.7654$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img268.svg"
+ ALT="$-2\cos(5\pi/8)=0.7654$"></SPAN> and <!-- MATH
+ $-2\cos(7\pi/8)=1.8478$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img269.svg"
+ ALT="$-2\cos(7\pi/8)=1.8478$"></SPAN>.
+    
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+H(s)=\frac{1}{(s^2+0.765 s+1)(s^2+1.848 s+1)}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img270.svg"
+ ALT="$\displaystyle H(s)=\frac{1}{(s^2+0.765 s+1)(s^2+1.848 s+1)}
+$"> 
+
+(<SPAN CLASS="arabic">91</SPAN>)
+</DIV>
+</LI>
+<LI><SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img271.svg"
+ ALT="$n=5$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.31ex; " SRC="img272.svg"
+ ALT="$1-s^{10}=0$"></SPAN>, <!-- MATH
+ $s^{10}=1=e^{j2k\pi}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.12ex; " SRC="img273.svg"
+ ALT="$s^{10}=1=e^{j2k\pi}$"></SPAN>, the 10 roots are
+    
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+s_k=e^{j(2k\pi)/10}=e^{j(k\pi)/5},\;\;\;\;\;\;(k=0,\cdots,9)
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img274.svg"
+ ALT="$\displaystyle s_k=e^{j(2k\pi)/10}=e^{j(k\pi)/5},\;\;\;\;\;\;(k=0,\cdots,9)
+$"> 
+
+(<SPAN CLASS="arabic">92</SPAN>)
+</DIV>
+Evaluating <!-- MATH
+ $-2\cos(k\pi/n)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img275.svg"
+ ALT="$-2\cos(k\pi/n)$"></SPAN> for <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img266.svg"
+ ALT="$k=2$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img267.svg"
+ ALT="$k=3$"></SPAN>, we get the
+    coefficients of the two first order terms
+    <!-- MATH
+ $-2\cos(2\pi/5)=0.618$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img276.svg"
+ ALT="$-2\cos(2\pi/5)=0.618$"></SPAN> and <!-- MATH
+ $-2\cos(3\pi/5)=1.618$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img277.svg"
+ ALT="$-2\cos(3\pi/5)=1.618$"></SPAN>, and we get
+    
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+H(s)=\frac{1}{(s+1)(s^2+0.618 s+1)(s^2+1.618 s+1)}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img278.svg"
+ ALT="$\displaystyle H(s)=\frac{1}{(s+1)(s^2+0.618 s+1)(s^2+1.618 s+1)}
+$"> 
+
+(<SPAN CLASS="arabic">93</SPAN>)
+</DIV>
+</LI>
+<LI><SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img279.svg"
+ ALT="$n=6$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.31ex; " SRC="img280.svg"
+ ALT="$1+s^{12}=0$"></SPAN>, <!-- MATH
+ $s^{12}=-1=e^{j(2k+1)\pi}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.31ex; " SRC="img281.svg"
+ ALT="$s^{12}=-1=e^{j(2k+1)\pi}$"></SPAN>, the 12 roots are
+    
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+s_k=e^{j(2k+1)\pi)/12},\;\;\;\;\;\;(k=0,\cdots,11)
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img282.svg"
+ ALT="$\displaystyle s_k=e^{j(2k+1)\pi)/12},\;\;\;\;\;\;(k=0,\cdots,11)
+$"> 
+
+(<SPAN CLASS="arabic">94</SPAN>)
+</DIV>
+Evaluating <!-- MATH
+ $-2\cos((2k+1)\pi/2n)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img265.svg"
+ ALT="$-2\cos((2k+1)\pi/2n)$"></SPAN> for <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img267.svg"
+ ALT="$k=3$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img283.svg"
+ ALT="$k=4$"></SPAN>, and <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img284.svg"
+ ALT="$k=5$"></SPAN>,
+    we get the coefficients of the three first order terms
+    <!-- MATH
+ $-2\cos(7\pi/12)=0.5176$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img285.svg"
+ ALT="$-2\cos(7\pi/12)=0.5176$"></SPAN>, <!-- MATH
+ $-2\cos(9\pi/12)=1.4142$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img286.svg"
+ ALT="$-2\cos(9\pi/12)=1.4142$"></SPAN>, and
+    <!-- MATH
+ $-2\cos(9\pi/12)=1.319$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img287.svg"
+ ALT="$-2\cos(9\pi/12)=1.319$"></SPAN>.
+    
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+H(s)=\frac{1}{(s^2+0.5176 s+1)(s^2+1.4142 s+1)(s^2+1.9319 s+1)}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img288.svg"
+ ALT="$\displaystyle H(s)=\frac{1}{(s^2+0.5176 s+1)(s^2+1.4142 s+1)(s^2+1.9319 s+1)}
+$"> 
+
+(<SPAN CLASS="arabic">95</SPAN>)
+</DIV>
+</LI>
+</UL>
+  In summary, we see that a Butterworth filter can be implemented as
+  a cascade of second order systems in the form of <!-- MATH
+ $1/(s^2+a\,s+1)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img289.svg"
+ ALT="$1/(s^2+a\,s+1)$"></SPAN> 
+  if <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img179.svg"
+ ALT="$n$"></SPAN> is even, and an additional first order system in the form of
+  <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img290.svg"
+ ALT="$1/(s+1)$"></SPAN> if <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img179.svg"
+ ALT="$n$"></SPAN> is odd. The block diagrams below are for the 5th 
+  and 6th order Butterworth filters:
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/ButterworthDiagram.png"
+ ALT="ButterworthDiagram.png">
+
+<P>
+The first order filter in the cascade of the Butterworth filter 
+  can be realized by the first order op-amp low-pass circuit shown
+  above with
+  
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+H(s)=\frac{1/\tau}{s+1/\tau}=\frac{\omega_c}{s+\omega_c}=\frac{1}{s+1}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img291.svg"
+ ALT="$\displaystyle H(s)=\frac{1/\tau}{s+1/\tau}=\frac{\omega_c}{s+\omega_c}=\frac{1}{s+1}
+$"> 
+
+(<SPAN CLASS="arabic">96</SPAN>)
+</DIV>
+where <!-- MATH
+ $\omega_c=1/\tau=1/RC$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img292.svg"
+ ALT="$\omega_c=1/\tau=1/RC$"></SPAN>. If we let <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img293.svg"
+ ALT="$R=1$"></SPAN>, we get <!-- MATH
+ $C=1/\omega_c=1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img294.svg"
+ ALT="$C=1/\omega_c=1$"></SPAN>. 
+
+<P>
+The second order systems in the cascade can be implemented as a 
+  Sallen-Key low-pass filter with 
+  
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+H(s)=\frac{1/R_1C_1R_2C_2}{s^2+s(R_1+R_2)/R_1R_2C_1+1/R_1C_1R_2C_2}
+  =\frac{1}{s^2+\Delta\omega s+\omega_n^2}=\frac{1}{s^2+a s+1}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img295.svg"
+ ALT="$\displaystyle H(s)=\frac{1/R_1C_1R_2C_2}{s^2+s(R_1+R_2)/R_1R_2C_1+1/R_1C_1R_2C_2}
+=\frac{1}{s^2+\Delta\omega s+\omega_n^2}=\frac{1}{s^2+a s+1}
+$"> 
+
+(<SPAN CLASS="arabic">97</SPAN>)
+</DIV>
+where <!-- MATH
+ $\omega_n^2=1/R_1R_2C_1C_2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img296.svg"
+ ALT="$\omega_n^2=1/R_1R_2C_1C_2$"></SPAN>. If we let <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img67.svg"
+ ALT="$R_1=R_2=1$"></SPAN> for simplicity, 
+  we get
+  
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+2/C_1=a,\;\;\;\;\;1/C_1C_2=\omega_n^2=1
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img297.svg"
+ ALT="$\displaystyle 2/C_1=a,\;\;\;\;\;1/C_1C_2=\omega_n^2=1
+$"> 
+
+(<SPAN CLASS="arabic">98</SPAN>)
+</DIV>
+Solving these we get
+  
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+C_1=2/a,\;\;\;\;\; C_2=1/C_1=a/2
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img298.svg"
+ ALT="$\displaystyle C_1=2/a,\;\;\;\;\; C_2=1/C_1=a/2
+$"> 
+
+(<SPAN CLASS="arabic">99</SPAN>)
+</DIV>
+
+<P>
+A High-pass Butterworth filter can be similarly implemented with the only
+  difference that all first and second order systems in the cascade are
+  high-pass filters
+  
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+H(s)=\frac{s}{s+\omega_c}=\frac{s}{s+1},\;\;\;\;\;\;\;
+  H(s)=\frac{s^2}{s^2+\Delta\omega s+\omega_c^2}=\frac{s^2}{s^2+a s+1}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 6.04ex; vertical-align: -2.28ex; " SRC="img299.svg"
+ ALT="$\displaystyle H(s)=\frac{s}{s+\omega_c}=\frac{s}{s+1},\;\;\;\;\;\;\;
+H(s)=\frac{s^2}{s^2+\Delta\omega s+\omega_c^2}=\frac{s^2}{s^2+a s+1}
+$"> 
+
+(<SPAN CLASS="arabic">100</SPAN>)
+</DIV>
+so that the transfer function of the cascade is high-pass filter:
+  
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+H(s)=\left\{\begin{array}{cc}s^n/(1+s^{2n}) & \mbox{$n$\  is even}\\
+  s^n/(1-s^{2n}) & \mbox{$n$\  is odd}\end{array}\right.
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img300.svg"
+ ALT="$\displaystyle H(s)=\left\{\begin{array}{cc}s^n/(1+s^{2n}) &amp; \mbox{$n$\ is even}\\
+s^n/(1-s^{2n}) &amp; \mbox{$n$\ is odd}\end{array}\right.
+$"> 
+
+(<SPAN CLASS="arabic">101</SPAN>)
+</DIV>
+
+<P>
+To convert the results obtained above for normalized cut-off frequency 
+  <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.46ex; " SRC="img301.svg"
+ ALT="$\omega_n=1$"></SPAN> to unnormalized cut-off frequency <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img302.svg"
+ ALT="$\omega_n\ne 1$"></SPAN>, all we 
+  need to do is to scale all capacitances <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img303.svg"
+ ALT="$C$"></SPAN> to <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img304.svg"
+ ALT="$C'=C/\omega_c$"></SPAN>. The 
+  capacitor in the first order filter becomes <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img304.svg"
+ ALT="$C'=C/\omega_c$"></SPAN> so that
+  <!-- MATH
+ $1/RC'=\omega_c/C'=\omega_c$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img305.svg"
+ ALT="$1/RC'=\omega_c/C'=\omega_c$"></SPAN>; while the two capacitors in the second order
+  filter become <!-- MATH
+ $C_1'=C_1/\omega_n$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img306.svg"
+ ALT="$C_1'=C_1/\omega_n$"></SPAN> and <!-- MATH
+ $C_2'=C_2/\omega_n$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img307.svg"
+ ALT="$C_2'=C_2/\omega_n$"></SPAN> so that
+  <!-- MATH
+ $1/C_1'C_2'=\omega_n^2/C_1C_2=\omega_n^2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img308.svg"
+ ALT="$1/C_1'C_2'=\omega_n^2/C_1C_2=\omega_n^2$"></SPAN>.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node7.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node5.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node7.html">Higher order systems</A>
+<B> Up:</B> <A
+ HREF="node1.html">Chapter 6: Active Filter</A>
+<B> Previous:</B> <A
+ HREF="node5.html">Wien bridge</A></DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

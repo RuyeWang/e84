@@ -1,0 +1,1972 @@
+\documentstyle[12pt]{article}
+\usepackage{html}
+\textwidth 6.0in
+\topmargin -0.5in
+\oddsidemargin -0in
+\evensidemargin -0.5in
+% \usepackage{graphics}  
+\begin{document}
+
+\section*{Chapter 2: Circuit Principles}
+
+\subsection*{Solving Circuits with Kirchoff Laws}
+
+{\bf Example 1:} Find the three unknown currents ($I_1,I_2,I_3$) and three 
+	unknown voltages ($V_{ab}, V_{bd}, V_{cb}$) in the circuit below:
+
+\htmladdimg{../figures/branchcurrentmethod.gif}
+
+{\bf Note:} The direction of a current and the polarity of a voltage source 
+can be assumed arbitrarily. To determine the actual direction and polarity, 
+the sign of the values also should be considered. For example, a current 
+labeled in left-to-right direction with a negative value is actually flowing 
+right-to-left.
+
+All voltages and currents in the circuit can be found by either of the 
+following two methods, based on either the KVL or KCL.
+
+\begin{itemize}
+\begin{comment}
+\item {\bf The Branch-Current Method:} 
+  \begin{itemize}
+  \item {\bf Step 1:} Label each unknown branch current arbitrarily with a 
+    reference direction. If the calculated value is negative, the actual
+    direction of the current is opposite to the reference direction.
+  \item {\bf Step 2:} Define unknown voltages in terms of the assumed currents
+    to obtain three {\em element equations}:
+    \[ \begin{array}{l}
+	V_{ab}=2I_1,\;\;\mbox{or}\;\;\;V_{ba}=-2I_1 \\
+	V_{bd}=8I_3,\;\;\mbox{or}\;\;\;V_{db}=-8I_3 \\
+	V_{cb}=4I_2,\;\;\mbox{or}\;\;\;V_{bc}=-4I_2 \end{array} \]
+  \item {\bf Step 3:} Apply KCL to node b:
+    \[ \sum I_b=0=+I_1+I_2-I_3\;\;\;\;\;\;\;\;\;\;(1)		\]
+    We could also apply KCL to node d:
+    \[ \sum I_d=0=-I_1-I_2+I_3	\]
+    but this equation is not independent as it adds no information.
+  \item {\bf Step 4:} Apply KVL to loops abda and bcdb:	
+    \[ \begin{array}{r} 
+	\sum V_{abda}=0=V_{ab}+V_{bd}+V_{da}\;\;\;\;\;\;\;\;\;\;(2)	\\
+	\sum V_{bcdb}=0=V_{cb}+V_{bd}+V_{dc}\;\;\;\;\;\;\;\;\;\;(3)	
+    \end{array} \]
+    We could also apply KVL to loop abcda:
+    \[ \sum V_{abcda}=0=V_{ab}+V_{bc}+V_{cd}+V_{da}	\]
+    But this equation is not independent as it can be obtained as the
+    difference between the previous two equations. 
+    The above three independent equations (one for current, two for
+    voltage) are called {\em connection equations}.
+  \item {\bf Step 5:} We now have three simultaneous equations with three 
+    unknown branch currents:
+    \[ \begin{array}{r}
+        \sum I_b=0=+I_1+I_2-I_3\;\;\;\;\;\;\;\;\;\;(1)	\\
+	\sum V_{abda}=0=V_{ab}+V_{bd}+V_{da}=2I_1+8I_3-32\;\;\;\;\;\;\;\;\;\;(2') \\
+	\sum V_{bcdb}=0=V_{cb}+V_{bd}+V_{dc}=4I_2+8I_3-20\;\;\;\;\;\;\;\;\;\;(3')
+	\end{array} \]
+    which can be rewritten as
+    \[ \left\{ \begin{array}{rrrrr}
+	  I_1 & +I_2 & -I_3& = &  0\;\;\;\;\;\;\;\;\;\;(1) \\
+	 2I_1 &    & +8I_3 & = & 32\;\;\;\;\;\;\;\;\;\;(2') \\
+	      &4I_2& +8I_3 & = & 20\;\;\;\;\;\;\;\;\;\;(3') \end{array} \right. \]
+  \item {\bf Step 6: } Solving the equations, we get the three unknown currents:
+    \[ I_1=4,\;\;\;I_2=-1,\;\;\;I_3=3	\]
+    and then we get the three unknown voltages:
+    \[ V_{ab}=8,\;\;\;V_{bd}=24,\;\;\;V_{cb}=-4	\]
+  \end{itemize}
+
+  Note that equations from KCL at node d and KVL to other loops are not
+  independent. In general, if a circuit has n nodes and b branches, then
+  there are $(n-1)$ independent node equations and $l=b-(n-1)$ independent 
+  loop equations. In other words, the sum of the number of independent loops
+  and the number of independent nodes is always the same as the number of 
+  branches, i.e., the number of equations is always equal to the number of 
+  unknowns in the branch current method.
+\end{comment}
+
+\item {\bf The loop-current method based on KVL:}
+  \begin{enumerate} 
+  \item For each of the $l$ independent loops in the circuit, define a 
+    loop current around the loop in clockwise (or counter clockwise)
+    direction. These $l$ loop currents are the unknown variables to
+    be obtained.
+  \item Apply KVL around each of the loops in the same clockwise 
+    direction to obtain $l$ equations. While calculating the voltage 
+    drop across each resistor shared by two loops, both loop currents 
+    (in opposite positions) should be considered.
+  \item Solve the equation system with $l$ equations for the $l$ unknown
+    loop currents.
+  \end{enumerate}
+  
+  \htmladdimg{../figures/loopcurrentmethod.gif}
+
+  Find currents $I_1$ from a to b, $I_2$ from c to b, and $I_3$ from 
+  b to d.
+
+  \begin{itemize}
+
+  \item Assume two loop currents $I_a$ and $I_b$ around loops abda and bcdb 
+    and apply the KVL to them:
+    \begin{eqnarray} 
+      \sum V_{abda}&=&-32+2I_a+8(I_a-I_b)=0\nonumber\\
+      \sum V_{bcdb}&=&8(I_b-I_a)+4I_b+20=0\nonumber
+    \end{eqnarray}
+    We rewrite these as:
+    \[
+    \left\{ \begin{array}{rrrr} 10I_a&-8I_b&=&32 \\ -8I_a &+12I_b&=&-20
+    \end{array} \right. 
+    \begin{comment}
+    \;\;\;\;\;\mbox{i.e.}\;\;\;\;\;
+    \left\{ \begin{array}{rrrr} 5I_a&-4I_b&=&16 \\ -2I_a &+3I_b&=&-5\end{array} \right. 
+    \end{comment}
+    \;\;\;\;\;\;\Longrightarrow \;\;\;\;\;
+    \left\{ \begin{array}{l}
+      I_a=4 \\  I_b=1 \end{array} \right. 
+    \]
+    and then get $I_1=I_a=4$, $I_2=-I_b=-1$, and $I_3=I_a-I_b=3$. Having 
+    found $I_a$ and $I_b$, we can easily find all voltages in the circuit:
+    $V_a=32V$, $V_b=32-2\times 4=24V$, $V_c=20V$.
+    
+  \item We could also apply KVL around the third loop of abcda with a loop
+    current $I_c$ to get
+    three equations:
+    \begin{eqnarray}
+      \sum V_{abda}&=&-32+2(I_a+I_c)+8(I_a-I_b)=0\nonumber \\
+      \sum V_{bcdb}&=&8(I_b-I_a)+4(I_b+I_c)+20=0\nonumber \\
+      \sum V_{abcda}&=&-32+2(I_a+I_c)+4(I_b+I_c)+20=0\nonumber
+    \end{eqnarray}
+    However, it is clear that the third equation is the sum of the
+    first two, i.e., it is not independent.
+
+  \item Alternatively, consider the two loop currents $I_a$ and $I_c$ 
+    around loops abda and bcdb:
+    \begin{eqnarray}
+      \sum V_{abda}&=&-32+2(I_a+I_c)+8I_a=0\nonumber\\
+      \sum V_{abcda}&=&-32+2(I_a+I_c)+4I_c+20=0\nonumber
+    \end{eqnarray}
+    i.e.,
+    \[
+    \left\{ \begin{array}{rrrr} 10I_a&+2I_c&=&32 \\ 2I_a &+6I_c&=&12
+    \end{array} \right. 
+    \begin{comment}
+    \;\;\;\;\;\mbox{i.e.,}\;\;\;\;\;\;
+    \left\{ \begin{array}{rrrr} 5I_a&+I_c&=&16 \\ I_a &+3I_c&=&6\end{array} \right. 
+    \end{comment}
+    \;\;\;\;\;\;\Longrightarrow \;\;\;\;\;
+    \left\{ \begin{array}{l}
+      I_a=3 \\  I_c=1 \end{array} \right. 
+    \]
+    and we get $I_1=I_a+I_c=4$ and $I_2=-I_c=-1$, same as the previous 
+    results.
+
+  \end{itemize}
+
+\item {\bf The node-voltage method based on KCL:}
+
+  \begin{enumerate} 
+  \item Assume there are $n$ nodes in the circuit. Select one of them as
+    the ground, the reference point for all voltages of the circuit.
+    The voltage at each of the remaining $n-1$ nodes is an unknown to be 
+    obtained.
+  \item Apply KCL to each of the $n-1$ nodes to obtain $n-1$ equations. 
+  \item Solve the equation system with $n-1$ equations for the $n-1$
+    unknown node voltages.
+  \end{enumerate}
+
+  \htmladdimg{../figures/nodevoltagemethod.png}
+
+  In the same circuit considered previously, there are only 2 nodes $b$ and
+  $d$ (note $a$ and $c$ are not nodes). We assume node $d$ is the ground,
+  and consider just voltage $V_b=V_{bd}$ at node $v$ as the only unknown in 
+  the problem. Apply KCL to node $b$, we have
+  \[
+  \sum_i I_i=0=I_1+I_2+I_3	
+  \]
+  where
+  \[
+  I_1=\frac{V_a-V_b}{R_{ab}}=\frac{32-V_b}{2},\;\;\;\;
+  I_2=\frac{V_c-V_b}{R_{cb}}=\frac{20-V_b}{4},\;\;\;\;
+  I_3=\frac{V_d-V_b}{R_{bd}}=\frac{0-V_b}{8}  
+  \]
+  Substituting $I_1$, $I_2$, and $I_3$ into the equation, we get 
+  \[
+  I_1+I_2+I_3=\frac{32-V_b}{2}+\frac{20-V_b}{4}+\frac{0-V_b}{8}=0
+  \]
+  Solving this we get $V_b=24$, and all other currents and voltages can 
+  be found subsequently: $I_1=(V_a-V_b)/2=(32-24)/2=4A$, 
+  $I_2=(V_c-V_b)/4=(20-24)/4=-1A$, $I_3=I_1+I_2=3A$.
+
+  We could also apply KCL to node d, but the resulting equation is exactly
+  the same as $\sum_i I_i=0=-I_1-I_2-I_3$ simply because this node d is not 
+  independent.
+
+  As special case of the node-voltage method with only two nodes, we have the
+  following theorem:
+
+
+\item {\bf Millman's theorem} 
+
+  If there are multiple parallel branches between two nodes $a$ and $b$, 
+  such as the circuit below (left), then the voltage $V$ at node $a$ can 
+  be found as shown below if the other node $b$ is treated as the reference 
+  point.
+
+  Assume there are three types of branches:
+  \begin{itemize}
+  \item voltage branches with $V_i$ sources in series with $R_i$. The
+    polarity of each $V_i$ is + on the node a side.
+  \item current branches with $I_j$ (independent of resistors in series).
+    The direction of each $I_j$ is toward node a.
+  \item resistor branches with $R_k$.
+  \end{itemize}
+
+  Applying KCL to node $a$, we have:
+  \[ 
+  \sum_i \frac{V-V_i}{R_i}+\sum_k \frac{V}{R_k}=\sum_j I_j
+  \]
+  Solving for $V$, we get
+  \[ 
+  V=\frac{\sum_i V_i/R_i+\sum_j I_j}{\sum_i 1/R_i+\sum_k 1/R_k}=\frac{\sum I}{\sum G} 
+  \]
+  where the reciprocal of the resistance $G=1/R$ is the conductance.
+
+  \htmladdimg{../figures/millmanthm.gif}
+  \htmladdimg{../figures/millmanthm2.png}
+
+  The dual form of the Millman's theorem can be derived based on the
+  loop circuit on the right. Applying KVL to the loop, we have:
+  \[ 
+  \sum_j (I-I_j)R_j+\sum_k I R_k=\sum_i V_i
+  \]
+  Solving for $I$, we get
+  \[ 
+  I=\frac{\sum_i V_i+\sum_j R_jI_j}{\sum_i R_j+\sum_k R_k}=\frac{\sum V}{\sum R} 
+  \]
+
+\end{itemize}
+
+
+{\bf Example 2:} Solve the following circuit:
+
+\htmladdimg{../figures/branchmethod.gif}
+
+\begin{itemize}
+\begin{comment}
+\item {\bf Branch current method:}
+
+  There are $n=4$ nodes (a,b,c,d) and $b=6$ branches in the circuit, 
+  therefore we can get $n-1=4-1=3$ independent node equations (first
+  three) and $b-(n-1)=6-3=3$ independent loop equations (second three):
+  \[ \begin{array}{l}
+    \mbox{node a:}\;\;\;\;\; I_1+I_2-I_3=0 	\\
+    \mbox{node b:}\;\;\;\;\;-I_1-I_4-I_6=0 	\\
+    \mbox{node d:}\;\;\;\;\;-I_2+I_5+I_6=0 	\\
+    \mbox{loop 1:}\;\;\;\;\;-V_{s1}+I_1R_1+I_3R_3-I_4R_4+V_{s4}=0 \\
+    \mbox{loop 2:}\;\;\;\;\;-I_2R_2+V_{s2}-I_5R_5-I_3R_3=0	 \\
+    \mbox{loop 3:}\;\;\;\;\;-V_{s4}+I_4R_4+I_5R_5-I_6R_6-V_{s6}=0 
+  \end{array} \]
+  Solving these 6 equations we get the 6 branch currents.
+\end{comment}
+
+\item {\bf Loop current method:}
+  Let the three loop currents in the example above be $I_a$, $I_b$ and $I_c$ 
+  for loops 1 (top-left bacb), 2 (top-right adca), and 3 (bottom bcdb),
+  respectively, and applying KVL to the three loops, we get
+  \[ 
+  \begin{array}{l}
+    \mbox{loop bacb:}\;\;\;\;\;-V_{s1}+R_1I_a+R_3(I_a-I_b)+R_4(I_a-I_c)+V_{s4}=0 \\
+    \mbox{loop adca:}\;\;\;\;\;R_2I_b+V_{s2}+R_5(I_b-I_c)+R_3(I_b-I_a)=0 \\
+    \mbox{loop bcdb:}\;\;\;\;\;-V_{s4}+R_4(I_c-I_a)+R_5(I_c-I_b)+R_6I_c-V_{s6}=0 
+  \end{array} 
+  \]
+  We can then solve these 3 loop equations to find the 3 loop currents.
+
+\item {\bf Node voltage method:}
+  If node d is chosen as ground, we can apply KCL to the remaining 3 nodes 
+  at a, b, and c, and get (assuming all currents leave each node):
+  \[ 
+  \begin{array}{l}
+    \mbox{node a:}\;\;\;\;\;(V_a-(V_b+V_{s1}))/R_1+(V_a-V_{s2})/R_2+(V_a-V_c)/R_3=0 \\
+    \mbox{node b:}\;\;\;\;\;(V_b-(V_a-V_{s1}))/R_1+(V_b+V_{s4}-V_c)/R_4+(V_b-V_{s6})/R_6=0 \\
+    \mbox{node c:}\;\;\;\;\;(V_c-(V_b+V_{s4}))/R_4+(V_c-V_a)/R_3+V_c/R_5=0 
+  \end{array} 
+  \]
+  We can then solve these 3 node equations to find the 3 node voltages.
+
+\end{itemize}
+We see that either of the loop-current and node-voltage methods requires 
+to solve a linear system of 3 equations with 3 unknowns. 
+
+{\bf Example 3:} Solve the following circuit with $I=0.5 A$, $V=6 V$, 
+$R_1=3\Omega$, $R_2=8\Omega$, $R_3=6\Omega$, $R_4=4\Omega$. This circuit
+has 3 independent loops and 3 independent nodes.
+
+\htmladdimg{../figures/currentmethod2.png}
+
+\begin{itemize}
+\item {\bf Loop current method:}
+
+  Assume three loop currents $I_1$ (left), $I_2$ (right), $I_3$ (top) all 
+  in clock-wise direction. We take advantage of the fact that the current 
+  source is in loop 1 only, with loop current $I_1=I=0.5A$, and get the 
+  following two (instead of three) loop equations with 2 unknown loop 
+  currents $I_2$ and $I_3$:
+  \[ 
+  \left\{ \begin{array}{l} R_2(I_2-I_1)+R_3(I_2-I_3)-V=0 \\
+    R_1(I_3-I_1)+R_4I_3+R_3(I_3-I_2)=0 \end{array} \right. 
+  \]
+  i.e.,
+  \[
+  \left\{ \begin{array}{l}
+    14 I_2-6 I_3=10 \\   -6 I_2+13 I_3=1.5 \end{array} \right. 
+  \;\;\;\;\;\;\Longrightarrow \;\;\;\;\;
+  \left\{ \begin{array}{l}
+    I_2=0.952 \\  I_3=0.555 \end{array} \right. 
+  \]
+  We can also get the three node voltages with respect to the bottom 
+  node treated as ground: 
+  \begin{itemize}
+    \item Right node: $V_3=-6V$ 
+    \item Middle node: $V_2=R_2(I_1-I_2)=8(0.5-0.952)=-3.616V$ 
+    \item Left node: $V_1=V_3+R_4 I_3=-3.78 V$ 
+  \end{itemize}
+
+  \begin{comment}
+  Alternatively, let $I_1=I$ be the loop current from the current source
+  around $R_4$, $R_3$, $R_2$, $I_2$ be the loop current around $R_2$, $R_1$,
+  $R_4$ and the voltage source, and $I_3$ be the loop current around $R_2$,
+  $R_3$ and the voltage source, then we have the following equations:
+  \[
+  \left\{ \begin{array}{l} (I_2+I_3-I)R_2+I_2R_1+(I_2+I)R_4=V\\
+    (I_2+I_3-I_1)R_2+(I_3-I)R_3=V\end{array}\right.
+  \]
+  i.e.,
+  \[
+  \left\{ \begin{array}{l} 7I_2-6I_3=-5\\
+    8I_2+14I_3=13 \end{array}\right.
+  \;\;\;\;\;\;\Longrightarrow \;\;\;\;\;
+  \left\{ \begin{array}{l}
+    I_2=0.055 \\  I_3=0.897 \end{array} \right.   
+  \]
+  We can also get the three node voltages with respect to the bottom 
+  node treated as ground: 
+  \begin{itemize}
+    \item Right node: $V_3=-6V$ 
+    \item Middle node: $V_2=-R_2(I_2+I_3-I)=-8(0.055+0.897-0.5)=-3.616V$
+    \item Left node: $V_1=V_3-R_4 (I+I_2)=6-4(0.5+0.055)=-3.78V$
+  \end{itemize}  
+  same as before.
+  \end{comment}
+
+\item {\bf Node voltage method:}
+
+  Assume the three node voltages with respect to the bottom node treated
+  as ground to be $V_1$ (left), $V_2$ (middle), $V_3$ (right). We take 
+  advantage of the fact that one side of the voltage source is treated 
+  as ground, and get the note voltage $V_3=-V=-6V$. Then we have only two 
+  (instead of three) node equations with 2 unknown node voltages $V_1$ and 
+  $V_2$: 
+  \[ 
+  \left\{ \begin{array}{l}
+    (V_1-V_3)/R_4+(V_1-V_2)/R_1=I \\
+    (V_2-V_1)/R_1+(V_2-V_3)/R_3+V_2/R_2=0 \end{array} \right. 
+  \]
+  i.e.,
+  \[
+  \left\{ \begin{array}{l}
+    7V_1-4V_2=-12 \\
+    -8V_1+15V_2=-24 \end{array} \right. 
+  \;\;\;\;\;\;\Longrightarrow \;\;\;\;\;
+  \left\{ \begin{array}{l}
+    V_1=-3.78 \\ V_2=-3.616 \end{array} \right. 
+  \]
+  The voltages are the same as before.
+\end{itemize}
+In summary, here we have taken advantage of either the given current 
+source by the following:
+\begin{itemize}
+\item let a given current source be in a loop not shared with any 
+  other loop, so that the loop current is known;
+\item let one of the two ends of a given voltage source be the 
+  ground, so that the voltage at the other end is known.
+\end{itemize}
+By either of these methods, the number of unknown loop currents or 
+node voltages is reduced by one.
+
+{\bf Example 4:} (Homework) Find all node voltages with respect to the 
+top-left corner treated as reference node:
+
+\htmladdimg{../figures/currentmethod1.gif}
+
+$V_1=12 V$, $V_2=6 V$, $R_1=3 \Omega$, $R_2=8 \Omega$, $R_3=6 \Omega$, 
+$R_4=4\Omega$.
+
+\htmladdnormallink{Answer}{../ch2_sub0/index.html}
+
+{\bf Note:} While using node voltage and loop current methods to solve 
+a given circuit, to simplify the analysis, it is preferable to
+\begin{itemize}
+  \item choose independent loops to avoid current source shared by two 
+    or more loops,
+  \item choose ground node so that the voltage source is connected to 
+    ground.
+\end{itemize}
+
+{\bf Example 5:} The two circuits shown below are equivalent, but you 
+may want to choose wisely in terms of which is easier to analyze. Solve 
+this circuit using both node voltage and loop current methods. Assume 
+$R_1=100\Omega$, $R_2=5\Omega$, $R_3=200\Omega$, $R_4=50\Omega$, $V=50V$,
+and $I=0.2A$.
+
+\htmladdimg{../figures/problembase1.gif}  \htmladdimg{../figures/problembase1a.gif}
+
+\htmladdnormallink{Answer}{../ch2_sub4/index.html}
+
+\subsection*{Network Theorems}
+
+\begin{itemize}
+\item {\bf Superposition Theorem:}
+
+A generic system with input (stimulus, cause) $x$ and output (response,
+effect) $y$ can be described mathematically as a function $y=F(x)$. 
+The function is {\em linear} if it satisfies the following:
+\begin{itemize}
+\item {\bf Homogeneity}
+  \[
+  F(ax)=aF(x) 
+  \]
+\item {\bf Superposition}
+  \[ 
+  F(x_1+x_2)=F(x_1)+F(x_2)	
+  \]
+\end{itemize}
+Combining these two aspects, we have
+\[
+F(ax_1+bx_2)=aF(x_1)+bF(x_2)	
+\]
+The interpretation is that when the response is directly proportional to 
+the cause in a system $F$, we can consider several causes (e.g., $x_1$ 
+and $x_2$) individually and then combine the individual responses ($F(x_1)$ 
+and $F(x_2)$). An electrical system of linear components (with linear 
+voltage-current relation) is a linear system (if only voltage and current 
+are of interest). When the circuit is linear, the following applies:
+
+{\bf Superposition Principle:}
+
+{\bf When there exist multiple energy sources in the circuit, any voltage 
+  and current in the circuit can be found as the algebraic sum of the 
+  corresponding values obtained by assuming only one source at a time,
+  with all other sources turned off:}
+\begin{itemize}
+\item {\bf A voltage source is turned off if treated as short-circuit so that 
+  the voltage across it is zero.}
+\item {\bf A current source is turned off if treated as open-circuit so that 
+  the current through it is zero.}
+\end{itemize}
+
+As superposition principle only applies to linear functions, it cannot be
+applied to nonlinear functions such as power (e.g., $V^2/R$ or $I^2R$). 
+
+\htmladdimg{../figures/superposition0.gif}
+
+\begin{itemize}
+\item {\bf Superposition of voltage sources:}
+  \[	I_{12}=\frac{aV_1+bV_2}{R}=a\frac{V_1}{R}+b\frac{V_2}{R}=aI_1+bI_2 \]
+  where $I_1=V_1/R$ ($V_2$ short-circuit) and $I_2=V_2/R$ ($V_1$ short-circuit).
+
+\item {\bf Superposition of current sources:}
+  \[	V=R(aI_1+bI_2)=aI_1R+bI_2R=aV_1+bV_2 \]
+  where $V_1=I_1R$ ($I_2$ open circuit) and $V_2=I_2R$ ($I_1$ open circuit).
+\end{itemize}
+
+However, note that superposition principle does not apply to any variable
+nonlinearly related to the energy sources, such as power:
+\[
+P_{12}=\frac{(V_1+V_2)^2}{R}\ne\frac{V_1^2}{R}+\frac{V_2^2}{R}=P_1+P_2,
+\;\;\;\;\;\;\;
+P_{12}=R(I_1+I_2)^2 \ne RI_1^2+RI_2^2=P_1+P_2	
+\]
+
+{\bf Example 1:} The previous example can also be solved by superposition 
+theorem. 
+
+\htmladdimg{../figures/kirchhoffexample1.gif}
+
+First, we turn the voltage source of 20V off (short-circuit with 0V), and get
+\[ 
+I'_1=\frac{32}{2+8 || 4}=\frac{48}{7},\;\;\;I'_2=-I'_1\frac{8}{8+4}=-\frac{32}{7},
+\;\;\;I'_3=I'_1\frac{4}{8+4}=\frac{16}{7} 
+\]
+Second, we turn the voltage source of 32V off and get
+\[
+I''_2=\frac{20}{4+8 || 2}=\frac{25}{7},\;\;\;I''_1=-I''_2\frac{8}{2+8}=-\frac{20}{7},
+\;\;\;I''_3=I''_2\frac{2}{8+2}=\frac{5}{7} 
+\]
+The overall currents can then be found as the algebraic sums of the
+corresponding values obtained with one voltage source turned on at a time:
+\[ 
+I_1=I'_1+I''_1=\frac{48}{7}-\frac{20}{7}=4,\;\;\;\;
+I_2=I''_2+I'_2=\frac{25}{7}-\frac{32}{7}=-1,\;\;\;\;
+I_3=I'_3+I''_3=\frac{16}{7}+\frac{5}{7}=3 
+\]
+
+{\bf Thevenin's theorem and Norton's theorem}
+
+In principle, all currents and voltages of an arbitrary network of linear 
+components and voltage/current sources can be found by either the loop 
+current method or the node voltage method, as we have seen previously.
+
+However, if only the current $I$ and voltage $V$ associated with one 
+particular component such as a resistor $R$ are of interest, it is 
+unnecessary to find voltages and currents elsewhere in the circuit. 
+Instead, we can ``pull'' the component out and treat it as the load 
+$R_L$ of the rest of the circuit, which can be modeled as either a 
+Thevenin voltage source \htmladdnormallink{(Leon Charles Thevenin)}
+{https://en.wikipedia.org/wiki/Leon_Charles_Thevenin}, a non-ideal 
+voltage source $(V_T, R_T)$, or a Norton current source
+\htmladdnormallink{(Edward Lawry Norton)}
+{https://en.wikipedia.org/wiki/Edward_Lawry_Norton} a non-ideal 
+current source $(I_N, R_N)$. We can then find the $V$ and $I$ 
+associated with the resistor $R$.
+
+\htmladdimg{../figures/theveninnortonfigure.gif}
+
+\item {\bf Thevenin's Theorem:}
+
+    Any one-port (two-terminal) network of resistance elements and energy 
+    sources is equivalent to an ideal voltage source $V_T$ in series with a 
+    resistor $R_T$, where}
+  \begin{itemize}
+  \item $V_T=V_{oc}$ is the open-circuit voltage of the network,
+  \item $R_T$ is the equivalent resistance when all energy sources are 
+    turned off (short-circuit for voltage sources, open-circuit for current 
+    sources).
+  \end{itemize}
+
+  {\bf Proof:} 
+
+  \htmladdimg{../figures/ProveThevenin.png}
+  
+  \begin{itemize}
+    
+  \item Assume the voltage and current associated with the load $R_L$ at
+    the output port of the network are $V$ and $I$, respectively. 
+    
+  \item Replace the load $R_L$ by an ideal current source $I=V/R_L$ while 
+    keeping voltage $V$ the same (b), all voltages and currents in the 
+    network to be modeled are not affected. 
+	
+  \item Find voltage $V$ in terms of the internal energy sources inside
+    the network and the external current source by superposition principle:
+
+    \begin{itemize}
+    \item Turn the external current source off (open-circuit), the terminal
+      voltage is the open-circuit voltage $V'=V_{oc}$ due only to the energy
+      sources internal to the network (c).
+    \item Turn all internal sources off (short-circuit for voltage sources,
+      open-circuit for current sources), the terminal voltage is $V''=-R_0I$,
+      where $R_0$ is the equivalent resistance of the network with all energy 
+      sources off, due only to the external current source (d).
+    \item By the superposition principle, we get the load voltage 
+      $V=V'+V''=V_{oc}-R_0I$. This equation also describes how the load
+      voltage $V$ and current $I$ are related for Thevenin's model 
+      consisting a voltage source $V_T=V_{oc}$ in series with $R_T=R_0$,
+      i.e., the network is equivalent to Thevenin's model.
+    \end{itemize}
+  
+  \end{itemize}
+
+  We see that as far as the port voltage $V$ and current $I$ associated 
+  with the load are concerned, the one-port network is equivalent to an 
+  ideal voltage source $V_T=V_{oc}$, the open-circuit voltage across the 
+  port, in series with an internal resistance $R_T=R_0$, which can be 
+  obtained as the ratio of the open-circuit voltage and the short-circuit 
+  current.
+
+\item {\bf Norton's Theorem:}
+
+  Any one-port (two-terminal) network of resistance elements and energy 
+  sources is equivalent to an ideal current source $I_N$ in parallel with a 
+  resistor $R_N$, where
+  \begin{itemize}
+  \item $I_N=I_{sc}$ is the short-circuit current of the network
+  \item $R_N=R_T$ is the same resistance as in Thevenin's theorem
+  \end{itemize}
+
+  {\bf Proof:} The proof of this theorem is in parallel with the proof of 
+  Thevenin's theorem. 
+
+  \htmladdimg{../figures/ProveNorton.png}
+
+  \begin{itemize}
+  \item Assume the voltage and current associated with the load $R_L$ at
+    the output port of the network are $V$ and $I$, respectively. 
+
+  \item Replace the load $R_L$ by an ideal voltage source $V=IR_L$ while 
+    keeping current $I$ the same (b), all voltages and currents in the 
+    network to be modeled are not affected. 
+	
+  \item Find current $I$ in terms of the internal energy sources inside
+    the network and the external voltage source by superposition principle:
+
+    \begin{itemize}
+    \item Turn the external voltage source off (short-circuit), the terminal
+      current is the short-circuit current $I'=I_{sc}$ due only to the energy
+      sources internal to the network (c).
+    \item Turn all internal sources off (short-circuit for voltage sources, 
+      open-circuit for current sources), the terminal current is $I''=-V/R_0$,
+      where $R_0$ is the equivalent resistance of the network with all energy
+      sources off, due only to the external voltage source (d).
+    \item By the superposition principle, we get the load current  
+      $I=I'+I''=I_{sc}-V/R_0$. As this equation also describes how the 
+      load voltage $V$ and current $I$ are related for the Norton's model 
+      consisting a current source $I_N=I_{sc}$ in parallel with $R_N=R_0$,
+      i.e., the network is equivalent to Norton's model.
+    \end{itemize}
+
+  \end{itemize}
+
+  We see that as far as the port voltage $V$ and current $I$ associated 
+  with the load are concerned, the one-port network is equivalent to an 
+  ideal current source $I_N=I_{sc}$, the short-circuit current through the 
+  port, in parallel with an internal resistance $R_N=R_0$, which can be 
+  obtained as the ratio of the open-circuit voltage and the short-circuit 
+  current.
+
+  Moreover, we note that Thevenin's theorem and Norton's theorem are 
+  equivalent, as one can always be converted into the other. The internal 
+  resistances in both theorems are the same $R_T=R_N$, and the voltage 
+  source $V_T=V_{oc}$ in series with $R_T$ in Thevenin's theorem can be 
+  converted to a current source $V_{oc}/R_T=V_T/R_T=I_{sc}=I_N$ in parallel 
+  with $R_N=R_T$ in Norton's theorem. In either case, we can find the 
+  internal resistance by
+  \[
+  R_T=R_N=\frac{V_{oc}}{I_{sc}}
+  \]
+
+\begin{comment}
+
+{\bf Load Line and Output Resistance}
+
+Due to Thevenin's and Norton's theorems, any one-port network of 
+resistors and energy sources can be converted into a simple voltage or 
+current source with an internal or output resistance $R_0$. Moreover, 
+the relationship between the voltage $V$ across and the current $I$ 
+through the load is a straight line referred to as the {\bf load line}.
+The absolute value of the slope $|\triangle V/\triangle I|=R_0$ of the
+load line is the internal or output resistance of the network, as shown
+in the figure below. On the other hand, the resistance $R_L$, which 
+can be considered as the input resistance of the load, can also be 
+represented on the graph as a straight line with its slope 
+$\triangle V/\triangle I=R_L$. The intersection of these two straight
+lines indicates the actual voltage $V$ and current $I$ with the load 
+$R_L$.
+
+\htmladdimg{../figures/loadline.gif}
+% \htmladdimg{../figures/IVcharacteristic.gif}
+
+The output resistance $R_0$ of a network can also be determined 
+experimentally by varying the load $R_L$. Assume $(V_1, I_1)$ are 
+associated with load $R_1$ and $(V_2, I_2)$ with load $R_2$, then 
+the output resistance of the source network can be found to be:
+
+\[ R_0=-\frac{\triangle V}{\triangle I}=-\frac{V_1-V_2}{I_1-I_2} \]
+
+To show this, we assume the source network is converted to a voltage
+source with $V_0$ and $R_0$, and use two different loads $R_1$ and
+$R_2$ with
+\[ I_1=\frac{V_0}{R_0+R_1},\;\;\;\;V_1=V_0\;\frac{R_1}{R_0+R_1},\;\;\;\;
+   I_2=\frac{V_0}{R_0+R_2},\;\;\;\;V_2=V_0\;\frac{R_2}{R_0+R_2} \]
+and
+\[ 
+\triangle I=I_1-I_2=V_0\;\left(\frac{1}{R_0+R_1}-\frac{1}{R_0+R_2}\right),
+\;\;\;   \triangle V=V_1-V_2=V_0\;\left(\frac{R_1}{R_0+R_1}-\frac{R_2}{R_0+R_2}\right)
+\]
+The output resistance can therefore be found to be $R_0$ as expected:
+\[ -\frac{\triangle V}{\triangle I}=-\frac{V_1-V_2}{I_1-I_2}=R_0 \]
+
+Consider two extreme cases for the two loads $R_1$ and $R_2$:
+\begin{itemize}
+\item when $R_1=0$ (short-circuit), then we get the short-circuit 
+  current: 
+  \[ I_1=I_{sc}=V_0/R_0,\;\;\;\;\;\; V_1=0 \]
+\item when $R_2=\infty$ (open-circuit), then we get the open-circuit
+  voltage: 
+  \[ V_2=V_{oc}=V_0,\;\;\;\;\;\;\;I_2=0 \]
+\end{itemize}
+and we have $\triangle V=V_1-V_2=-V_0$, $\triangle I=V_1-V_2=V_0/R_0$,
+and the output resistance is found to be:
+\[ R_0=-\frac{\triangle V}{\triangle I}=\frac{V_{oc}}{I_{sc}} \]
+
+\end{comment}
+
+\item {\bf Millman's Theorem:}
+
+The voltage across a set of $N$ parallel branches of voltage source 
+$V_i$ in series with $R_i$ ($i=1,\cdots,n$) is
+\[
+V=\frac{\sum_{i=1}^n \frac{V_i}{R_i}}{\sum_{i=1}^n\frac{1}{R_i}}
+\]
+
+{\bf Proof:} (Homework)
+
+\begin{comment}
+Consider applying Norton's theorem to the circuit. The short-circuit current 
+of these parallel branches can be found to be (superposition):
+\[
+I_{sc}=\sum_{i=1}^n\frac{V_i}{R_i}
+\]
+and the total internal resistance is simply the parallel combination of the
+branch resistances:
+\[
+R_0=\left(\sum_{i=1}^n\frac{1}{R_i}\right)^{-1}
+\]
+Therefore the open-circuit voltage across these branches is 
+\[
+V_{oc}=I_{sc} R_0=\left(\sum_{i=1}^n\frac{V_i}{R_i}\right)\left(\sum_{i=1}^n\frac{1}{R_i}\right)^{-1}
+=\frac{\sum_{i=1}^n\frac{V_i}{R_i}}{\sum_{i=1}^n\frac{1}{R_i}}
+\]
+\end{comment}
+
+\htmladdimg{../figures/MillmanThm.png}
+
+This theorem can be augmented to include branches containing $R_j$ but no
+voltage source ($V_j=0$), and branches containing a current source $I_j$. If 
+a resistance $R_j$ is in series with $I_j$, it can be neglected (as it does
+not affect the current). If a resistance $R_j$ is in parallel with $I_j$, 
+they can be converted into a voltage source $V_j=I_jR_j$ in series with $R_j$. 
+
+
+\item {\bf $\Delta$-Y Transformation}
+
+\htmladdimg{../figures/DeltaY.gif}
+
+The $\Delta$ configuration can be converted to $Y$ and vice versa. We
+relate the $\Delta$ and $Y$ by realizing that the resistance $R'_{ab}$
+between terminals a and b of $Y$ should be equal to that between the
+same two terminals of $\Delta$:
+\[ \left\{ \begin{array}{rr}
+	R'_{ab}=R_a+R_b=R_{ab}||(R_{ac}+R_{bc})	\\
+	R'_{ac}=R_a+R_c=R_{ac}||(R_{ab}+R_{bc}) \\
+	R'_{bc}=R_b+R_c=R_{bc}||(R_{ab}+R_{ac}) \end{array} \right. \]
+\begin{itemize}
+  \item {\bf Convert $\Delta$ to $Y$}: 
+
+    Given $R_{ab}$, $R_{ac}$ and $R_{bc}$ of a $\Delta$, the three equations 
+    above can be solved for $R_a$, $R_b$ and $R_c$ of the corresponding $Y$. 
+    For example, subtracting the 3rd equation from the sum of the first two, 
+    we get expression for $R_a$. The solutions are:
+    \[ \left\{ \begin{array}{rr}
+      R_a=R_{ab}R_{ac}/(R_{ab}+R_{ac}+R_{bc}) \\
+      R_b=R_{ab}R_{bc}/(R_{ab}+R_{ac}+R_{bc}) \\
+      R_c=R_{ac}R_{bc}/(R_{ab}+R_{ac}+R_{bc}) \\
+    \end{array} \right. \]
+
+  \item {\bf Convert $Y$ to $\Delta$}: 
+
+    Reversely, given $R_a$, $R_b$ and $R_c$ of a $Y$, the same three 
+    equations above can also be solved for $R_{ab}$, $R_{ac}$ and $R_{bc}$ 
+    of the corresponding $\Delta$ to get:
+    \[ \left\{ \begin{array}{rr}
+      R_{ab}=R_a+R_b+R_aR_b/R_c	\\
+      R_{ac}=R_a+R_c+R_aR_c/R_b	\\
+      R_{bc}=R_b+R_c+R_bR_c/R_a	\end{array} \right. \]
+\end{itemize}
+
+The top circuit (a bridged T-network) in the following figure can
+be converted into either of the two equivalent circuits below.
+
+\htmladdimg{../figures/DeltaY1.gif}
+
+\begin{itemize}
+\item The $\Delta$ formed by $Z_1$, $Z_1$, and $Z_3$ can be converted 
+  to a Y, which can then be combined with $Z_4$ to get a Y (bottom left):
+  \[
+  \left\{ \begin{array}{l}
+  Y_1=Z_1Z_3/(Z_1+Z_2+Z_3) \\
+  Y_2=Z_2Z_3/(Z_1+Z_2+Z_3) \\
+  Y_3=Z_1Z_2/(Z_1+Z_2+Z_3)+Z_4 \\
+  \end{array} \right. 
+  \]
+\item The Y formed by $Z_1$, $Z_2$, and $Z_4$ can be converted to a 
+  $\Delta$, which can then be combined with $Z_3$ to get a $\Delta$ 
+  (bottom right):
+  \[
+  \left\{ \begin{array}{l}
+    X_1=Z_1+Z_4+Z_1Z_4/Z_2 \\
+    X_2=Z_2+Z_4+Z_2Z_4/Z_1 \\
+    X_3=(Z_1+Z_2+Z_1Z_2/Z_4) || Z_3 \\
+  \end{array} \right. 
+  \]
+\end{itemize}
+The resulting $\Delta$ and Y circuits are equivalent as it can be
+shown that they can also be converted to each other with the same 
+system variables.
+
+
+{\bf Example 0:} Model the circuit in part (a) by Thevenin's theorem (b)
+and Norton's theorem (c).
+
+\htmladdimg{../figures/TheveninNorton1.png}
+
+Find equivalent internal resistance when both energy sources
+are turned off: $R_T=R_N=R_1$.
+
+\begin{itemize}
+\item Thevenin's equivalent circuit (b):
+
+  Find open-circuit voltage: $V_T=V_{oc}=V_{ab}=V_0+I_0R_1$
+\item Norton's equivalent circuit (c):
+
+  Find short-circuit current (superposition):
+  $I_N=I_{sc}=I_{ab}=V_0/R_1+I_0$
+\end{itemize}
+Note that the Thevenin's voltage source and the Norton's current 
+source can be converted into each other:
+  \[ 
+  I_N=V_T/R_T=V_0/R_1+I_0,\;\;\;\;\;\;\;\;\;
+  V_T=I_N R_N=V_0+I_0R_1	
+  \]
+Also note that the resistors $R_0$ and $R_2$ do not appear in either of
+the equivalent circuit, because a voltage source provides a constant
+voltage $V_0$ independent of any resistance in parallel, and a current 
+source drives a constant current $I_0$, independent of any resistance 
+in series. 
+
+{\bf Example 1:} Find voltage $V$ across and current $I$ through $R_2$.
+
+\htmladdimg{../figures/superposition1.gif}
+
+Any one of the three methods can be used to solve the circuit:
+\begin{itemize}
+
+\item Node-voltage method:
+
+  Assume the currents $I_1$ (left branch), $I_0$ and $I_2=I$ (right branch)
+  all leave the top node, where the voltage is $V$ (with respect to the 
+  bottom treated as ground). By KCL, we have
+  \[
+  I_0+I_1+I_2=I_0+\frac{V-V_0}{R_1}+\frac{V}{R_2}=0,\;\;\;\;\mbox{i.e.,}\;\;\;\;
+  I_0R_1R_2+R_2(V-V_0)+R_1V=0 
+  \]
+  Solving for $V$, we get:
+  \[
+  V=\frac{R_2V_0-I_0R_1R_2}{R_1+R_2}
+  =V_0\frac{R_2}{R_1+R_2}-I_0\frac{R_1R_2}{R_1+R_2} 
+  \]
+  and
+  \[
+  I=I_2=\frac{V}{R_2}=\frac{V_0}{R_1+R_2}-I_0\frac{R_1}{R_1+R_2} 
+  \]
+
+  \htmladdimg{../figures/superposition.gif}
+
+\item Superposition principle:
+  \begin{itemize}
+  \item Find $V'$ and $I'$ with the current source off (open-circuit with 
+    zero current):
+    \[ 
+    I'=\frac{V_0}{R_1+R_2},\;\;\;\;V'=I'R_2=V_0\frac{R_2}{R_1+R_2} 
+    \]
+  \item Find $V''$ and $I''$ with the voltage source off (short-circuit with 
+    zero voltage):
+    \[
+    I''=-I_0\frac{R_1}{R_1+R_2},\;\;\;\;V''=I''R_2=-I_0\frac{R_1R_2}{R_1+R_2} 
+    \]
+    Both $I''$ and $V''$ have a negative sign as their direction and polarity are
+    opposite to those of the assumed current and voltage.  
+  \item Find the sum of the two partial results we get
+    \[
+    I=I'+I''=\frac{V_0}{R_1+R_2}-I_0\;\frac{R_1}{R_1+R_2}
+    \]
+    \[
+    V=V'+V''=V_0\;\frac{R_2}{R_1+R_2}-I_0\;\frac{R_1R_2}{R_1+R_2}	
+    \]
+  \end{itemize}
+\item Energy source conversion:
+
+  \begin{itemize}
+  \item Treat $V_0$ and $R_1$ in the left branch as a non-ideal voltage
+  source and convert that into a current source $I_1=V_0/R_1$ (upward);
+  \item Combine the two parallel current sources to find $I$ (current
+    devider):
+    \[
+    I=\left(\frac{V_0}{R_1}-I_0\right)\frac{R_1}{R_1+R_2}
+    =\frac{V_0}{R_1+R_2}-I_0\frac{R_1}{R_1+R_2}
+    \]
+  \item Find $V$:
+    \[
+    V=R_2I=V_0\frac{R_2}{R_1+R_2}-I_0\frac{R_1R_2}{R_1+R_2}
+    \]
+  \end{itemize}
+
+\item Thevenin's and Nordon's methods:
+  \begin{itemize}
+  \item Thevenin's model: $R_T=R_1,\;\;V_T=V_0-I_0R_1$,
+    \[
+    I=\frac{V_T}{R_T+R_2}=\frac{V_0-I_0R_1}{R_1+R_2}
+    =\frac{V_0}{R_1+R_2}-I_0\frac{R_1}{R_1+R_2}
+    \]
+  \item Norton's model: $R_N=R_1,\;\;I_N=V_0/R_1-I_0$.
+    \[
+    I=\left(\frac{V_T}{R_1}-I_0\right)\frac{R_T}{R_T+R_2}
+    =\frac{V_0}{R_1+R_2}-I_0\frac{R_1}{R_1+R_2}
+    \]
+  \end{itemize}
+  Then we get the voltage:
+  \[
+  V=R_2 I=V_0\frac{R_2}{R_1+R_2}-I_0\frac{R_1R_2}{R_1+R_2}
+  \]
+
+\end{itemize}
+
+
+{\bf Example 2:} (Homework)
+
+In general, the conversion from $\Delta$ to $Y$ is more useful as $Y$ 
+is easier to analyze than $\Delta$. For example, the circuit in (a) 
+below can be converted to that in (b) to find all the currents in the 
+circuit:
+
+\htmladdimg{../figures/DeltaYEx.gif}
+
+Assume $V_0=225 V$, $R_0=1\Omega$, $R_1=40\Omega$, $R_2=36\Omega$, 
+$R_3=50\Omega$, $R_4=55\Omega$, $R_5=10\Omega$, find the currents 
+$I_0$, $I_1$, $I_2$, $I_3$, $I_4$, and $I_5$. 
+
+{\bf Example 3: } In the circuit below, $V_0=18V$, $R_1=R_2=3\Omega$, 
+$R_3=6\Omega$, $R_4=1.5\Omega$. Find the value of current $I$ when 
+$R_5=2\Omega$. Then re-solve the problem when $R_5$ takes different
+values of $1\Omega$ and $3\Omega$. Moreover, find the value of $R_5$ 
+so that $I=0.5A$ as desired.
+
+\htmladdimg{../figures/BridgeExample.png}
+
+\begin{itemize}
+\item {\bf The KVL method:} 
+
+Consider three independent loops with clockwise loop currents:
+\begin{itemize}
+\item $I_0$ in the left loop ($V_0$, $R_2$, $R_4$) 
+\item $I_1$ in the top loop ($R_2$,$R_1$, $R_5$) 
+\item $I_2$ in the bottom loop ($R_3$, $R_4$, $R_5$)
+\end{itemize}
+Applying KVL to the three loops we get three simultaneous equations:
+\[
+\left\{\begin{array}{l}
+R_2(I_0-I_1)+R_4(I_0-I_2)=3(I_0-I_1)+1.5(I_0-I_2)=18\\
+R_1I_1+R_5(I_1-I_3)+R_2(I_1-I_0)=3I_1+2(I_1-I_3)+3(I_1-I_0)=0\\
+R_3I_2+R_4(I_2-I_0)+R_5(I_2-I_1)=6I_2+1.5(I_2-I_0)+2(I_2-I_1)
+=0\end{array}\right.
+\]
+Rearranging and solving the equations we get
+\[
+\left\{\begin{array}{l}
+3I_0-2I_1-I_2=12\\-3I_0+8I_1-2I_2=0\\3I_0+4I_1-19I_2=0\end{array}\right.
+\Longrightarrow
+\left\{\begin{array}{l}
+I_0=32/5\\I_1=14/5\\I_2=8/5
+\end{array}\right.
+\]
+The node voltages can be found to be
+\[
+V_a=R_3I_2=6\times \frac{8}{5}=\frac{48}{5},\;\;\;\;\;\;
+V_b=R_4(I_0-I_2)=1.5\times \frac{24}{5}=\frac{36}{5},\;\;\;\;\;\;
+V_{ab}=V_a-V_b=\frac{12}{5}
+\]
+The current through $R_5$ is
+\[
+I_1-I_2=\frac{14}{5}-\frac{8}{5}=\frac{6}{5}=1.2\;A,
+\;\;\;\;\;\;\;\mbox{or}\;\;\;\;\;\;
+I=\frac{V_a-V_b}{R_5}=\frac{12/5\;V}{2\;\Omega}=1.2\;A
+\]
+We have to repeat the above for other values of $R_5$ to find
+the current through it.
+
+\item {\bf The KCL method:} 
+
+Assume the bottom node is ground with 0 volt, then the voltage at 
+the top node is known to be $V_0=18\,V$. Now we apply KCL to nodes
+a and b to get two equations:
+\[
+\frac{V_a-V_0}{R_1}+\frac{V_a-V_b}{R_5}+\frac{V_a}{R_3}
+=\frac{V_a-18}{3}+\frac{V_a-V_b}{2}+\frac{V_a}{6}=0
+\]
+\[
+\frac{V_b-V_0}{R_2}+\frac{V_b-V_a}{R_5}+\frac{V_b}{R_4}
+=\frac{V_b-18}{3}+\frac{V_b-V_a}{2}+\frac{V_b}{1.5}=0
+\]
+\[
+\left\{ \begin{array}{ll}-V_a+3V_b=12\\2V_a-V_b=12\end{array}\right.
+\;\;\;\;\;\;\Longrightarrow\;\;\;\;\;\;
+\left\{ \begin{array}{ll}V_a=48/5\\V_b=36/5\end{array}\right.
+\]
+The current through $R_5$ is
+\[
+I=\frac{V_a-V_b}{R_5}=\frac{(48/5-36/5)\,V}{2\,\Omega}
+=\frac{12/5\;V}{2\;\Omega}=\frac{6}{5}=1.2\;A
+\]
+We have to repeat the above for other values of $R_5$ to find
+the current through it.
+
+To find $R_5$ for the current through it to be $I=0.5$, we 
+replace the current $I=(V_a-V_b)/2$ through $R_5$ in the two 
+equations above by the desired $I=0.5$:
+\[
+\frac{V_a-18}{3}+0.5+\frac{V_a}{6}=0,\;\;\;\;\;\;
+\frac{V_b-18}{3}-0.5+\frac{V_b}{1.5}=0
+\]
+Solving each of the two equations we get $V_a=11\,V$, $V_b=6.5\,V$,
+and 
+\[
+R_5=\frac{V_a-V_b}{I}=\frac{11-6.5}{0.5}=9\;\Omega
+\]
+
+\item {\bf Method 3, $\Delta-Y$ conversion}
+
+\htmladdimg{../figures/BridgeExampleDY.png}
+
+To find $I$ through $R_5=2\Omega$, we first convert the $\Delta$ 
+composed of $R_1$, $R_2$ and $R_5$ into a $Y$ composed of $R_a$, 
+$R_b$ and $R_c$:
+\[ 
+R_c=\frac{R_1R_2}{R_1+R_2+R_5}=\frac{9}{8},\;\;\;\;
+R_a=\frac{R_1R_5}{R_1+R_2+R_5}=\frac{3}{4},\;\;\;\;
+R_b=\frac{R_2R_5}{R_1+R_2+R_5}=\frac{3}{4}
+\]
+Find overall load resistance of $V_0=18\,V$:
+\[
+R_0=R_c+(R_a+R_3) \;||\; (R_b+R_4)=\frac{45}{16}	
+\]
+Find overall current:
+\[
+I_0=\frac{V_0}{R_0}=\frac{18}{45/16}=\frac{32}{5}
+\]
+Find currents through $R_3$ and $R_4$ (current divider):
+\[ 
+I_a=I_0\;\frac{R_b+R_4}{(R_a+R_3)+(R_b+R_4)}=\frac{8}{5} 
+\]
+\[ 
+I_b=I_0\;\frac{R_a+R_3}{(R_a+R_3)+(R_b+R_4)}=\frac{24}{5}
+\]
+Find voltage at points $a$ and $b$ (assuming the bottom node
+is ground):
+\[
+V_a=I_a \times R_3=\frac{8 }{5} \times 6=\frac{48}{5},\;\;\;\;\;
+V_b=I_b \times R_4=\frac{24}{5} \times 1.5=\frac{36}{5}	
+\]
+Find current $I$ through $R_5=2\Omega$:
+\[
+I=\frac{V_a-V_b}{R_5}=\frac{12}{5}\times \frac{1}{2}=1.2A
+\]
+
+For any of the methods above, the problem needs to be resolved
+for $R_5=1\Omega$ and $R_5=3\Omega$, and it is hard to find a 
+value of $R_5$ given the require current $I=0.5$.
+
+\htmladdimg{../figures/BridgeExampleTh.png}
+
+\item {\bf Method 4, Thevenin's theorem}
+
+Solve the problem using Thevenin's theorem by the following steps:
+\begin{itemize}
+\item Remove the branch in question from the circuit and treat the rest as
+  a one-port network.
+\item Model the one-port network by Thevenin's theorem, as an open circuit 
+  voltage $V_T$ in series with an internal resistance $R_T$.
+\item Put the branch in equation back as the load of the Thevenin equivalent
+  network and find the desired current and voltage.
+\end{itemize}
+
+Specifically, we remove $R_5$ as the load of a network composed of all other
+resistors $R_1$, $R_2$, $R_3$, $R_4$ and the voltage source $V_0=18V$, then
+apply Thevenin's theorem to find the open-circuit voltage between the two
+terminals a and b:
+\[	
+V_T=V_{oc}=V_0\frac{R_3}{R_1+R_3}-V_0\frac{R_4}{R_2+R_4}
+=18 \left(\frac{6}{9}-\frac{1.5}{4.5}\right)=6V 
+\]
+and the internal resistance between a and b (with voltage source $V_0$ 
+short-circuit):
+\[ 
+R_T=R_1\,||\,R_3+R_2\,||\,R_4
+=\frac{3\times 6}{3+6}+\frac{3\times 1.5}{3+1.5}=3\Omega 
+\]
+Now the currents through $R_5$ of different values can be found by
+\[
+I=\frac{V_T}{R_T+R_5}
+\]
+\begin{itemize}
+\item $R_5=1$, $I=6/(3+1)=1.5A$
+\item $R_5=2$, $I=6/(3+2)=1.2A$
+\item $R_5=3$, $I=6/(3+3)=1.0A$
+\end{itemize}
+and when $I=0.5$, $R_5=V_T/I-R_T=6/0.5-3=9$
+\end{itemize}
+
+{\bf Example 4: } The circuit below, often used in some control system, 
+is composed of two voltages, two potentiometers, and a load resistor.
+Assume:
+\[
+V_1=72V,\;\;\;\;V_2=80V,\;\;\;\;R_1=R_3=1.5\Omega,\;\;\;\;R_2=3\Omega,
+\;\;\;\;R_4=2.5\Omega
+\]
+Find the current $I_L$ through the load resistor $R_L=1.5\Omega$. 
+
+We denote the current through $R_i$ by $I_i$, and the voltage at the left 
+and right ends of $R_L$ by $V_a$ and $V_b$, respectively, with respect to 
+the bottom wire treated as the ground.
+
+\htmladdimg{../figures/potentiometers.gif}
+
+{\bf Superposition theorem}
+
+Find $I'_L$ caused by voltage $V_1=72$, and then $I''_L$ caused by voltage
+$V_2=80$, then get $I_L=I'_L+I''_L$.
+
+\begin{itemize}
+
+\item Short-circuit $V_2$. Assume $I'_L=8$, so that currents through
+	$R_3=1.5$ and $R_4=2.5$ are $I_3=5$ and $I_4=3$, respectively
+	(current divider), and $V_b=I_3R_3=I_4R_4=5\times 1.5=3\times 2.5=7.5$.
+\item $V_a=R_L I'_L+V_b=1.5\times 8+7.5=19.5$, current through $R_2=3$
+	is $I_2=V_a/R_2=19.5/3=6.5$, current through $R_1$ is 
+	$I_1=I_2+I'_L=6.5+8=14.5$.
+\item $V'_1=R_1\times I_1+V_a=1.5\times 14.5+19.5=41.25$. But $V_1=72$,
+	we get scaling factor $V_1/V'_1=72/41.25=96/55$, and 
+	$I'_L=8 \times 96/55$.
+
+\item Short-circuit $V_1$. Assume $I''_L=3$, so that currents through
+	$R_1=1.5$ and $R_2=3$ are, respectively, $I_1=2$ and $I_2=1$
+	(current divider), and $V_a=R_1I_1=R_2I_2=1.5\times 2+3\times 1=3$.
+\item $V_b=R_L I''_L+V_a=1.5\times 3+3=7.5$, current through $R_3=1.5$
+	is $I_3=V_b/R_3=7.5/1.5=5$, current through $R_4$ is 
+	$I_4=I_3+I''_L=5+3=8$.
+\item $V'_2=R_4\times I_4+V_b=2.5\times 8+7.5=27.5$. But $V_2=80$,
+	we get scaling factor $V_2/V'_2=80/27.5=32/11$, and 
+	$I''_L=3\times 32/11=96/11$.
+
+\item Finally, we get the load current:
+\[	I_L=I'_L-I''_L=\frac{96\times 8}{55}-\frac{96}{11}=\frac{288}{55} \]
+
+\end{itemize}
+
+{\bf Thevenin's theorem}
+
+Remove $R$, find open-circuit voltage $V_{ab}=V_a-V_b$ and equivalent
+resistance $R$, then find $I_L=V_{ab}/(R+R_L)$.
+
+\begin{itemize}
+\item 
+  $V_a=V_1\times R_2/(R_1+R_2)=72\times 3/(1.5+3)=48$
+
+  $V_b=V_2\times R_3/(R_3+R_4)=80\times 1.5/(1.5+2.5)=30$
+
+  $V_T=V_{ab}=V_a-V_b=48-30=18$
+\item 
+  $R_T=R_1 || R_2 + R_3 || R_4=3||1.5+2.5||1.5=7.75/4$
+\item 
+  \[ 
+  I_L=\frac{V_T}{R_T+R_L}=\frac{18}{7.75/4+1.5}=\frac{288}{55} 
+  \]
+\end{itemize}
+
+\subsection*{Two-Port Networks}
+
+{\bf Models of two-port networks}
+
+Many complex, such as amplification circuits and filters, can be modeled
+by a two-port network model as shown below. A two-port network is 
+represented by four external variables: voltage $V_1$ and current $I_1$ 
+at the input port, and voltage $V_2$ and current $I_2$ at the output port, 
+so that the two-port network can be treated as a black box modeled by the
+relationships between the four variables $V_1$, $V_2$, $I_1$ and $I_2$.
+There exist six different ways to describe the relationships between these 
+variables, depending on which two of the four variables are given, while 
+the other two can always be derived. 
+
+\begin{comment}
+{\bf Note: } All voltages and currents below are complex variables and
+represented by phasors containing both magnitude and phase angle. However, 
+for convenience the phasor notation $\dot{V}$ and $\dot{I}$ are replaced by 
+$V$ and $I$ respectively.
+\end{comment}
+
+\htmladdimg{../figures/twoportmodel.gif}
+
+If the network is linear, i.e., each variable can be expressed as a linear
+function of some two other variables, then we have the following models:
+
+\begin{itemize}
+\item {\bf Z or impedance model:} Given two currents $I_1$ and $I_2$ 
+  find voltages $V_1$ and $V_2$ by:
+  \[ \left\{ \begin{array}{l} V_1=Z_{11}I_1+Z_{12}I_2 \\
+    V_2=Z_{21}I_1+Z_{22}I_2 \end{array} \right.\;\;\;\;\;
+  \left[ \begin{array}{l} V_1 \\ V_2\end{array} \right]=
+  \left[ \begin{array}{ll} Z_{11} & Z_{12}\\Z_{21} & Z_{22}\end{array}\right]
+  \left[ \begin{array}{l} I_1 \\ I_2\end{array} \right]
+  ={\bf Z}\left[ \begin{array}{l} I_1 \\ I_2\end{array} \right] \]
+  Here all four parameters $Z_{11}$, $Z_{12}$, $Z_{21}$, and $Z_{22}$ represent
+  impedance. In particular, $Z_{21}$ and $Z_{12}$ are {\bf transfer impedances}, 
+  defined as the ratio of a voltage $V_1$ (or $V_2$) in one part of a network to 
+  a current $I_2$ (or $I_1$) in another part $Z_{12}=V_1/I_2$. ${\bf Z}$ is a 2 
+  by 2 matrix containing all four parameters.
+
+\item {\bf Y or admittance model:} Given two voltages $V_1$ and $V_2$,
+  find currents $I_1$ and $I_2$ by:
+  \[ \left\{ \begin{array}{l} I_1=Y_{11}V_1+Y_{12}V_2 \\
+    I_2=Y_{21}V_1+Y_{22}V_2 \end{array} \right.\;\;\;\;\;
+  \left[ \begin{array}{l} I_1 \\ I_2\end{array} \right]=
+  \left[ \begin{array}{ll} Y_{11} & Y_{12}\\Y_{21} & Y_{22}\end{array}\right]
+  \left[ \begin{array}{l} V_1 \\ V_2\end{array} \right]
+  ={\bf Y}\left[ \begin{array}{l} V_1 \\ V_2\end{array} \right]  \]
+  Here all four parameters $Y_{11}$, $Y_{12}$, $Y_{21}$, and $Y_{22}$ represent
+  admittance. In particular, $Y_{21}$ and $Y_{12}$ are {\bf transfer admittances}. 
+  ${\bf Y}$ is the corresponding parameter matrix.
+
+\item {\bf A or transmission model:} Given $V_2$ and $I_2$, find 
+  $V_1$ and $I_1$ by:
+  \[\left\{ \begin{array}{l} 
+    V_1=A_{11}V_2+A_{12}(-I_2) \\
+    I_1=A_{21}V_2+A_{22}(-I_2) \end{array} \right.\;\;\;\;\;
+  \left[ \begin{array}{l} V_1 \\ I_1\end{array} \right]=
+  \left[ \begin{array}{ll} A_{11} & A_{12}\\A_{21} & A_{22}\end{array}\right]
+  \left[ \begin{array}{r} V_2 \\ -I_2\end{array} \right]
+  ={\bf A}\left[ \begin{array}{r} V_2 \\ -I_2\end{array} \right]  \]
+  Here $A_{11}$ and $A_{22}$ are dimensionless coefficients, $A_{12}$ is impedance 
+  and $A_{21}$ is admittance. A negative sign is added to the output current $I_2$ 
+  in the model, so that the direction of the current is out-ward, for easy
+  analysis of a cascade of multiple network models.
+
+\item {\bf H or hybrid model:} Given $V_2$ and $I_1$, find $V_1$ and $I_2$ by:
+  \[\left\{ \begin{array}{l} 
+    V_1=H_{11}I_1+H_{12}V_2 \\
+    I_2=H_{21}I_1+H_{22}V_2 \end{array} \right.\;\;\;\;\;
+  \left[ \begin{array}{l} V_1 \\ I_2\end{array} \right]=
+  \left[ \begin{array}{ll} H_{11} & H_{12}\\H_{21} & H_{22}\end{array}\right]
+  \left[ \begin{array}{l} I_1 \\ V_2\end{array} \right]
+  ={\bf H}\left[ \begin{array}{l} I_1 \\ V_2\end{array} \right]  \]
+  Here $H_{12}$ and $H_{21}$ are dimensionless coefficients, $H_{11}$ is 
+  impedance and $H_{22}$ is admittance. 
+
+\end{itemize}
+
+{\bf Generalization to nonlinear circuits}
+
+The two-port models can also be applied to a nonlinear circuit if the 
+variations of the variables are small ({\em small signal models}) and 
+therefore the nonlinear behavior of the circuit can be piece-wise 
+linearized. Assume $z=f(x,y)$ is a nonlinear function of variables 
+$x$ and $y$. If the variations $\triangle x$ and $\triangle y$ are 
+small, the function can be approximated by a linear model 
+\[
+\triangle z=\triangle f(x,y)=\frac{\partial f}{\partial x}\triangle x +
+\frac{\partial f}{\partial y}\triangle y  
+\]
+with the linear coefficients
+\[
+\frac{\partial f}{\partial x}=\lim_{\triangle x\rightarrow 0}
+\frac{\triangle f}{\triangle x}\bigg|_{\triangle y=0}
+\;\;\;\;\;\;\;\;
+\frac{\partial f}{\partial y}=\lim_{\triangle y\rightarrow 0}
+\frac{\triangle f}{\triangle y}\bigg|_{\triangle x=0}
+\]
+
+{\bf Finding the model parameters}
+
+For each of the four types of models, the four parameters can be found
+from variables $V_1$, $V_2$, $I_1$ and $I_2$ of a network by the following.
+\begin{itemize}
+\item For Z-model:
+  \[
+  Z_{11}=\frac{V_1}{I_1}\bigg|_{I_2=0},\;\;\;\;
+  Z_{12}=\frac{V_1}{I_2}\bigg|_{I_1=0},\;\;\;\;
+  Z_{21}=\frac{V_2}{I_1}\bigg|_{I_2=0},\;\;\;\;
+  Z_{22}=\frac{V_2}{I_2}\bigg|_{I_1=0}
+  \]
+\item For Y-model:
+  \[
+  Y_{11}=\frac{I_1}{V_1}\bigg|_{V_2=0},\;\;\;\;
+  Y_{12}=\frac{I_1}{V_2}\bigg|_{V_1=0},\;\;\;\;
+  Y_{21}=\frac{I_2}{V_1}\bigg|_{V_2=0},\;\;\;\;
+  Y_{22}=\frac{I_2}{V_2}\bigg|_{Y_1=0},\;\;\;\;
+  \]
+\item For A-model:
+  \[
+  A_{11}=\frac{V_1}{V_2}\bigg|_{I_2=0},\;\;\;\;
+  A_{12}=\frac{V_1}{I_2}\bigg|_{V_2=0},\;\;\;\;
+  A_{21}=\frac{I_1}{V_2}\bigg|_{I_2=0},\;\;\;\;
+  A_{22}=\frac{I_1}{I_2}\bigg|_{V_2=0}
+  \]
+\item For H-model:
+  \[
+  H_{11}=\frac{V_1}{I_1}\bigg|_{V_2=0},\;\;\;\;
+  H_{12}=\frac{V_1}{V_2}\bigg|_{I_1=0},\;\;\;\;
+  H_{21}=\frac{I_2}{I_1}\bigg|_{V_2=0},\;\;\;\;
+  H_{22}=\frac{I_2}{V_2}\bigg|_{I_1=0}
+  \]
+\end{itemize}
+
+If we further define
+\[
+  {\bf V}=[V_1, V_2]^T,\;\;\;\;\;\;{\bf I}=[I_1, I_2]^T	
+\]
+then the Z-model and Y-model above can be written in matrix form:
+\[
+  {\bf V}={\bf Z} {\bf I},\;\;\;\;\;\;
+  {\bf I}={\bf Y} {\bf V},\;\;\;\;{\bf Y}={\bf Z}^{-1}		
+\]
+
+{\bf Example: } 
+
+\htmladdimg{../figures/networkLC.gif}
+
+Find the Z-model and Y-model of the circuit shown.
+\[
+\left\{ \begin{array}{l} V_1=Z_{11}I_1+Z_{12}I_2 \\
+  V_2=Z_{21}I_1+Z_{22}I_2 \end{array} \right.
+\]
+\begin{itemize}
+\item First assume $I_2=0$, we get
+
+  \[
+  Z_{11}=V_1/I_1=j\omega L+1/j\omega C,\;\;\;\;\;Z_{21}=V_2/I_1=1/j\omega C 
+  \]
+\item Next assume $I_1=0$, we get
+  \[
+  Z_{22}=V_2/I_2=1/j\omega C,\;\;\;\;\;\;Z_{12}=V_1/I_2=1/j\omega C 
+  \]
+\end{itemize}
+The parameters of the Y-model can be found as the inverse of $Z$:
+\[
+\left[\begin{array}{cc}Y_{11}&Y_{12}\\Y_{21}&Y_{22}\end{array}\right]
+=\left[\begin{array}{cc}Z_{11}&Z_{12}\\Z_{21}&Z_{22}\end{array}\right]^{-1}
+=\left[\begin{array}{cc}j\omega L+1/j\omega C & 1/j\omega C\\
+    1/j\omega C & 1/j\omega \end{array}\right]^{-1}
+=\left[\begin{array}{cc}1/j\omega L & -1/j\omega L\\
+    -1/j\omega L & j\omega C+1/j\omega L\end{array}\right] 
+\]
+	
+{\bf Note:} 
+\[
+\left[ \begin{array}{rr} a & b \\ c & d \end{array} \right]^{-1}
+=\frac{1}{ad-bc}\left[ \begin{array}{rr} d & -b \\ -c & a \end{array} \right]
+\]
+
+{\bf Combinations of two-port models}
+
+\begin{itemize}
+\item Series connection of two 2-port networks: 
+	${\bf Z}={\bf Z}_1+{\bf Z}_2$
+\item Parallel connection of two 2-port networks: 
+	${\bf Y}={\bf Y}_1+{\bf Y}_2$
+\item Cascade connection of two 2-port networks:
+	${\bf A}={\bf A}_1 \cdot {\bf A}_2$
+\end{itemize}
+
+\htmladdimg{../figures/networkmodels1.gif}
+
+{\bf Example:} A The circuit shown below contains a two-port network (e.g., a 
+filter circuit, or an amplification circuit) represented by a Z-model:
+\[ {\bf Z}=\left[\begin{array}{ll} Z_{11} & Z_{12} \\ 
+	Z_{21} & Z_{22} \end{array}\right]
+	=\left[\begin{array}{rr} 4\Omega & j3\Omega \\ 
+	j3\Omega & 2\Omega \end{array}\right]	\]
+The input voltage is $V_0=3\angle 0^\circ$ with an internal impedance 
+$Z_0=5\Omega$ and the load impedance is $R_L=4\Omega$. Find the two voltages 
+$V_1$, $V_2$ and two currents $I_1$, $I_2$.
+
+\htmladdimg{../figures/networkexample1.gif}
+
+{\bf Method 1:} 
+\begin{itemize}
+\item First, according the Z-model, we have
+  \[
+  \left\{ \begin{array}{l} V_1=Z_{11}I_1+Z_{12}I_2= 4I_1+j3I_2 \\
+    V_2=Z_{21}I_1+Z_{22}I_2=j3I_1+ 2I_2 \end{array} \right.	
+  \]
+\item Second, two more equations can be obtained from the circuit:
+  \[
+  \left\{ \begin{array}{l} V_1=V_0-Z_0 I_1=3-5I_1 \\
+    V_2=-Z_L I_2=-4 I_2 \end{array} \right.	
+  \]
+\item Substituting the last two equations for $V_1$ and $V_2$ into the 
+  first two, we get
+  \[
+  \left\{ \begin{array}{l} 9I_1+j3I_2=3 \\ j3I_1+6I_2=0 \end{array} \right. 
+  \]
+\item Solving these we get 
+  \[
+  I_1=\frac{2}{7},\;\;\;\;\;I_2=-\frac{j}{7} 
+  \]
+\item Then we can get the voltages
+  \[
+  V_1=\frac{11}{7},\;\;\;\;\;V_2=\frac{j4}{7} 
+  \]
+\end{itemize}
+
+{\bf Method 2:} We can also use Thevenin's theorem to treat everything 
+before the load impedance as an equivalent voltage source with Thevenin's 
+voltage $V_T$ and resistance $R_T$, and the output voltage $V_2$ and 
+current $I_2$ can be found.
+
+\begin{itemize}
+\item Find $Z_T=V_2/I_2$ with voltage $V_0$ short-circuit:
+  \begin{itemize}
+  \item The Z-model:
+    \[
+    \left\{ \begin{array}{l} V_1=Z_{11}I_1+Z_{12}I_2=4I_1+j3I_2	\\
+      V_2=Z_{21}I_1+Z_{22}I_2=j3I_1+2I_2 \end{array} \right. 
+    \]
+  \item Also due to the short-circuit of voltage source $V_0=0$, we have
+    \[
+    V_1=V_0-I_1 Z_0=0-5I_1	
+    \]
+  \item equating the two expressions for $V_1$, we get
+    \[
+    4I_1+j3I_2=-5I_1,\;\;\;\;\mbox{i.e.}\;\;\;\;I_1=-\frac{j}{3} I_2	
+    \]
+  \item Substituting this $I_1$ into the equation for $V_2$ above, we get
+    \[
+    V_2=j3I_1+2I_2=I_2+2I_2=3I_2 
+    \]
+  \item Find $Z_T=V_2/I_2$:
+    \[
+    Z_T=\frac{V_2}{I_2}=3	
+    \]
+  \end{itemize}
+\item Find open-circuit voltage $V_T$ with $I_2=0$:
+  \begin{itemize}
+  \item Since the load is an open-circuit, $I_2=0$, we have
+    \[ 
+    \left\{ \begin{array}{l} V_1=Z_{11}I_1=4I_1 \\
+      V_2=Z_{21}I_1=j3 I_1 \end{array} \right. 
+    \]
+  \item Find $I_1$:
+    \[
+    I_1=\frac{V_0-V_1}{Z_0}=\frac{3-4I_1}{5}	
+    \]
+    Solving this to get $I_1=1/3$
+  \item Find open-circuit voltage $V_T=V_2$:
+    \[
+    V_2=Z_{21}I_1=j3 \frac{1}{3}=j	
+    \]
+  \end{itemize}
+\item Find load voltage $V_2$:
+  \[
+  V_2=\frac{V_T}{Z_T+Z_L}\;Z_L=\frac{j}{3+4}\;4=\frac{j4}{7} 
+  \]
+\item Find load voltage $I_2$:
+  \[
+  I_2=-\frac{V_2}{Z_L}=-\frac{j4}{7}\;\frac{1}{4}=-\frac{j}{7} 
+  \]
+\end{itemize}
+
+
+{\bf Principle of reciprocity}:
+ 
+\htmladdimg{../figures/reciprocal.gif}
+
+Consider the example circuit on the left above, which can be simplified 
+as the network in the middle. The voltage source is in the branch on the
+left, while the current $\dot{I}_2$ is in the branch on the right, which
+can be found to be (current divider):
+\[ \dot{I}_2=\frac{V}{Z_1+Z_2 Z_3/(Z_2+Z_3)}\;\frac{Z_3}{Z_2+Z_3}
+=V \frac{Z_3}{Z_1Z_2+Z_1Z_3+Z_2Z_3} \]
+We next interchange the positions of the voltage source and the current, 
+so that the voltage source is in the branch on the right and the current 
+to be found is in the branch on the left, as shown on the right of the 
+figure above. The current can be found to be
+\[ \dot{I}_1=\frac{V}{Z_2+Z_1 Z_3/(Z_1+Z_3)}\frac{Z_3}{Z_1+Z_3}
+=V \frac{Z_3}{Z_1Z_2+Z_1Z_3+Z_2Z_3} \]
+The two currents $\dot{I}_1$ and $\dot{I}_2$ are exactly the same! This
+result illustrates the following {\bf reciprocity principle}, which can 
+be proven in general:
+
+{\em 
+In any passive (without energy sources), 
+linear network, if a voltage $V$ applied in branch 1 causes a current $I$ in 
+branch 2, then this voltage $V$ applied in branch 2 will cause the same current
+$I$ in branch 1.}
+
+This reciprocity principle can also be stated as:
+
+{\em In any passive, linear network, the transfer impedance $Z_{12}$ is equal 
+to the reciprocal transfer impedance $Z_{21}$.}
+
+Based on this reciprocity principle, any complex passive linear network can
+be modeled by either a T-network or a $\Pi$-network:
+
+\begin{itemize}
+  \item {\bf T-Network Model:}
+    \htmladdimg{../figures/Tmodel.gif}
+
+    From this T-model, we get
+    \[	\left\{ \begin{array}{l} V_1=(Z_1+Z_3)I_1+Z_3I_2=Z_{11}I_1+Z_{12}I_2 \\
+      V_2=Z_3I_1+(Z_2+Z_3)I_2=Z_{21}I_1+Z_{22}I_2  \end{array} \right. \]
+    Comparing this with the Z-model, we get
+    \[ Z_{11}=Z_1+Z_3,\;\;\;\;\;Z_{22}=Z_2+Z_3,\;\;\;\;\;Z_{12}=Z_{21}=Z_3	\]
+    Solving these equations for $Z_1$, $Z_2$ and $Z_3$, we get
+    \[ Z_1=Z_{11}-Z_{12},\;\;\;\;Z_2=Z_{22}-Z_{21},\;\;\;\;Z_3=Z_{12}=Z_{21} \]
+
+  \item {\bf $\Pi$-Network Model:}
+    \htmladdimg{../figures/Pmodel.gif}
+
+    From this $\Pi$-model, we get:
+    \[ \left\{ \begin{array}{l} 
+      I_1=Y_1V_1+Y_3(V_1-V_2)=(Y_1+Y_3)V_1-Y_3V_2=Y_{11}V_1+Y_{12}V_2 \\
+      I_2=Y_3(V_2-V_1)+Y_2V_2=-Y_3V_1+(Y_2+Y_3)V_2=Y_{21}V_1+Y_{22}V_2 \end{array} \right. \]
+    Comparing this with the Y-model, we get
+    \[ Y_{11}=Y_1+Y_3,\;\;\;\;\;Y_{22}=Y_2+Y_3,\;\;\;\;\;Y_{12}=Y_{21}=-Y_3	\]
+    Solving these equations for $Y_1$, $Y_2$ and $Y_3$, we get
+    \[ Y_1=Y_{11}+Y_{12},\;\;\;\;Y_2=Y_{22}+Y_{21},\;\;\;\;Y_3=-Y_{12}=-Y_{21} \]
+\end{itemize}
+
+{\bf Example 1:} Convert the given T-network to a $\Pi$ network.
+
+\htmladdimg{../figures/TPmodelexample.gif}
+
+{\bf Solution:} Given $Z_1=j5$, $Z_2=-j5$, $Z_3=1$, we get its Z-model:
+\[  Z_{11}=Z_1+Z_3=1+j5,\;\;\;\;Z_{22}=Z_2+Z_3=1-j5,\;\;\;\;Z_{12}=Z_{21}=Z_3=1 \]
+The Z-model can be expressed in matrix form:
+\[	\left[ \begin{array}{l} V_1 \\ V_2\end{array} \right]=
+	\left[ \begin{array}{cc} Z_{11} & Z_{12} \\ Z_{21} & Z_{22} \end{array} \right]
+	\left[ \begin{array}{l} I_1 \\ I_2\end{array} \right]
+=	\left[ \begin{array}{cc} 1+j5 & 1 \\ 1 & 1-j5 \end{array} \right]
+	\left[ \begin{array}{l} I_1 \\ I_2\end{array} \right]
+\]
+This Z-model can be converted into a Y-model:
+\[	\left[ \begin{array}{l} I_1 \\ I_2\end{array} \right]=
+	\left[ \begin{array}{cc} 1+j5 & 1 \\ 1 & 1-j5 \end{array} \right]^{-1}
+	\left[ \begin{array}{l} V_1 \\ V_2\end{array} \right]
+=\frac{1}{25}
+	\left[ \begin{array}{cc} 1-j5 & -1 \\ -1 & 1+j5 \end{array} \right]
+	\left[ \begin{array}{l} V_1 \\ V_2\end{array} \right]
+=	\left[ \begin{array}{cc} Y_{11} & Y_{12} \\ Y_{21} & Y_{22} \end{array} \right]
+	\left[ \begin{array}{l} V_1 \\ V_2\end{array} \right]
+\]
+This Y-model can be converted to a $\Pi$ network:
+\[ Y_1=Y_{11}+Y_{12}=-j/5,\;\;\;\;Z_2=Y_{22}+Y_{21}=j/5,\;\;\;\;
+	Y_3=-Y_{21}=-Y_{12}=1/25 \]
+These admittances can be further converted into impedances:
+\[ Z_1=1/Y_1=5j,\;\;\;\;Z_2=1/Y_2=-j5,\;\;\;\;Z_3=1/Y_3=25	\]
+The same results can be obtained by Y to delta conversion.
+
+
+{\bf Example 2:} Consider the ideal transformer shown in the figure below. 
+Assume $R_0=10\Omega$, $R_L=5\Omega$, and the turn ratio is $n=n_1/n_2=2$. 
+Describe this circuit as a two-port network.
+
+\htmladdimg{../figures/transformerexample2.gif}
+
+\begin{itemize}
+\item Set up basic equations:
+\[	\left\{ \begin{array}{l} 
+	V_1=10\;I_1+2\;V_2 \\ I_2-V_2/5=-2\;I_1 \end{array} \right. \]
+\item Rearrange the equations in the form of a Z-model. The second equation is
+\[	V_2=10\;I_1+5\;I_2	\]
+Substituting into the first equation, we get
+\[	V_1=30\;I_1+10\;I_2	\]
+The Z-model is:
+\[	\left[ \begin{array}{l} V_1 \\ V_2 \end{array} \right]=
+	\left[ \begin{array}{rr} Z_{11} & Z_{12} \\ Z_{21} & Z_{22} \end{array} \right]
+	\left[ \begin{array}{l} I_1 \\ I_2 \end{array} \right]
+=	\left[ \begin{array}{rr} 30 & 10 \\ 10 & 5 \end{array} \right]
+	\left[ \begin{array}{l} I_1 \\ I_2 \end{array} \right]
+\]
+As $Z_{12}=Z_{21}=10$, this is a reciprocal network.
+\end{itemize}
+Alternatively, we can set up the equations in terms of the currents:
+
+\begin{itemize}
+\item
+\[	\left\{ \begin{array}{l} 
+	I_1=(V_1-2\;V_2)/10 \\ I_2=-2\;I_1+V_2/5 \end{array} \right. \]
+\item Rearrange the equations in the form of a Y-model. The first equation is
+\[	I_1=V_1/10-V_2/5	\]
+\item Substituting into the second equation, we get
+\[	I_2=-V_1/5+2V_2/5+V_2/5=-V_1/5+3V_2/5	\]
+The Y-model is:
+\[	\left[ \begin{array}{l} I_1 \\ I_2 \end{array} \right]=
+	\left[ \begin{array}{rr} Y_{11} & Y_{12} \\ Y_{21} & Y_{22} \end{array} \right]
+	\left[ \begin{array}{l} V_1 \\ V_2 \end{array} \right]
+=	\left[ \begin{array}{rr} 1/10 & -1/5 \\ -1/5 & 3/5 \end{array} \right]
+	\left[ \begin{array}{l} V_1 \\ V_2 \end{array} \right] \]
+\end{itemize}
+Finally, we can verify that ${\bf Z}^{-1}={\bf Y}$
+\[ {\bf Z}^{-1}=\left[ \begin{array}{rr} 30 & 10 \\ 10 & 5 \end{array} \right]^{-1}
+	=\frac{1}{50}\left[ \begin{array}{rr} 5 & -10 \\ -10 & 30 \end{array} \right]
+	=\left[ \begin{array}{rr} 1/10 & -1/5 \\ -1/5 & 3/5 \end{array} \right]
+	={\bf Y}	\]
+
+\subsection*{Active Components and Circuits}
+
+All circuits we have discussed so far are only composed of passive components 
+(resistors, capacitors and inductors) driven by current and/or voltage 
+sources. Later we will consider circuits containing active components such
+as bipolar junction transistors (BJT), field-effect transistors (FET), 
+\htmladdnormallink{operational amplifiers (op-amps)}{../opamp/index.html}
+containing many transistors, and voltage amplifiers. These active components
+can be considered as controlled voltage or current sources as functions 
+(typically linear) of the input voltage or current. 
+
+\begin{itemize}
+\item We first consider modeling the overall function and performance of 
+  an active component (instead of its internal structure and implementation
+  which may be very complicated) by the following three parameters:
+  \begin{itemize}
+  \item {\bf Input impedance (resistance) $r_{in}$:} It is desirable to have
+    a large $r_{in}$ so that little input current is drawn from the source, 
+    i.e., the source is minimally affected by the amplifier as a load. 
+    Ideally $r_{in}=\infty$. 
+  \item {\bf Output impedance (resistance) $r_{out}$:} It is desirable to 
+    have a small $r_{out}$ so that little voltage drop across this resistance 
+    will result when the load of the amplifier draws a current from the 
+    amplifier, i.e., the load will minimally affect the output voltage of 
+    the amplifier.
+  \item {\bf Voltage gain $G_v$} (or $A$ in op-amp):
+    The open-circuit voltage $v_{out}$ across the output port is related 
+    to the input voltage $v_{in}$ by $v_{out}=G_v v_{in}$.
+  \item {\bf Current gain $G_a$} (or $\beta$ in BJT transistor):
+    The short-circuit current $i_{out}$ through the output port is related 
+    to the input current $i_{in}$ by $i_{out}=G_a i_{in}$.
+  \end{itemize}
+  
+  \htmladdimg{../figures/2portExamples.png}
+
+  \htmladdimg{../figures/AmplifierModel2.png}
+
+  {\bf Example 1:} Consider the circuit below containing an active component,
+  a voltage amplifier, model by the three parameters $r_{in}$, $r_{out}$ and 
+  $G_v$, dirven by either a current source $i_s=v_s/R_S$ or a voltage $v_s=i_sR_S$ 
+  with internal resistance $R_S$:
+
+  \htmladdimg{../figures/voltageamplifierex1.gif}
+  \htmladdimg{../figures/voltageamplifierex2.gif}
+
+  \[
+  v_{in}=i_s (R_S \,||\, r_{in})=i_s \frac{R_S r_{in}}{R_S+r_{in}} 
+  =v_s \frac{r_{in}}{R_S+r_{in}} 
+  \]
+  \[
+  v_{out}=G_v v_{in} \frac{R_L}{R_L+r_{out}}
+  =G_v i_s \frac{R_S r_{in}}{R_S+r_{in}} \frac{R_L}{R_L+r_{out}} 
+  =G_v v_s \frac{r_{in}}{R_S+r_{in}} \frac{R_L}{R_L+r_{out}} 
+  \]
+  Given $R_S$ and $R_L$, we want to maximize $v_{out}$ by
+  maximizing $r_{in}$ and minimizing $r_{out}$.
+
+  \begin{comment}
+    {\bf Example 2:}
+    \[ v_{in}=v_s \frac{r_{in}}{R_S+r_{in}} \]
+    \[ v_{out}=G_v v_{in} \frac{R_L}{R_L+r_{out}}
+    =G_v v_s \frac{r_{in}}{R_S+r_{in}} \frac{R_L}{R_L+r_{out}} \]
+
+    The alternative definitions of these voltage, current, and power 
+    gains may be used, depending on the specific applications.
+  \end{comment}
+
+\item We next consider a circuit containing an active circuit such as 
+  a transistor, an op-amp, or a voltage amplifier. This circuit can be 
+  modeled as a two-port network with input port between terminals A 
+  and B and output port between terminals C and D, and described in 
+  terms of the three parameters, the open-circuit voltage gain, the 
+  input resistance and output resistance:
+
+  \htmladdimg{../figures/TwoPortModel.png}
+
+  \begin{itemize}
+  \item {\bf Input resistance $R_{in}$:} This is the resistance between 
+    the two terminals A and B of the input port, while a load $R_L$ is 
+    connected to the output port between terminals C and D:
+    \[ 
+    R_{in}=\frac{\mbox{voltage $v_{in}$ across the input port}}
+    {\mbox{current $i_{in}$ through the input port}} 
+    \]
+    In general $R_{in}$ is affected by the load $R_L$.
+  \item {\bf Output resistance $R_{out}$:} According to Thevenin's theorem, 
+    any one-port network can be treated as an ideal voltage source $v_T$ in 
+    series with a resistance $R_T$. We apply this theorem to the output port
+    and define the output resistance as the Thevenin resistance 
+    \[
+    R_{out}=\frac{\mbox{open-circuit voltage}}{\mbox{short-circuit current}}
+    =\frac{v_{oc}=v_T\;\;(R_L=\infty)}{i_{sc}=v_T/R_T\;\;(R_L=0)}=R_T
+    \]
+    while a voltage source $v_s$ with an internal resistance $R_S$ is applied 
+    to the input port. In general, $R_{out}$ is affected by $R_S$ of the source.
+  \item {\bf The open-circuit voltage gain $A_{oc}$:} This is the ratio of the 
+    open-circuit output voltage $v_{oc}$ ($R_L=\infty$) to an ideal voltage 
+    source $v_s$ 
+    \[
+    A_{oc}=\frac{\mbox{open-circuit voltage}}{\mbox{ideal voltage source}}
+    =\frac{v_{oc}}{v_{in}}
+    \]
+  \end{itemize}
+
+  \begin{comment}
+  The performance of such a circuit containing active components can also
+  be described by terms such as ``voltage gain'' $G_V$, ``current gain'' 
+  $G_I$, and ``power gain'' $G_P$, which can be found based on the specific
+  circuits. They are defined as below:
+  \begin{itemize}
+  \item {\bf Voltage gain $G_V$:} defined as the ratio of the output 
+    voltage to the source voltage:
+    \[
+    G_V=\frac{v_{out}}{v_s}
+    =A\frac{r_{in}}{R_S+r_{in}} \frac{R_L}{R_L+r_{out}} 
+    \]
+    For the output of the voltage amplifier to be as high as possible,
+    we would like to have ideally $r_{in}=\infty$ and $r_{out}=0$, so that
+    the output voltage is maximized $v_{out}=A v_s$ and the gain is $G_V=A$.
+
+  \item {\bf Current gain $G_I$:} defined as the ratio of the output 
+    current to the input current:
+    \[
+    G_I=\frac{i_{out}}{i_{in}}=\frac{A v_{in}/(r_{out}+R_L)}{i_{in}}
+    =\frac{A r_{in}i_{in}/(r_{out}+R_L)}{i_{in}}
+    =\frac{A r_{in}}{r_{out}+R_L}
+    \]
+    Ideally, when $r_{in}=\infty$, $r_{out}=0$, we have $G_I=\infty$.
+
+  \item {\bf Power gain $G_P$: } defined as the ratio of the power 
+    delivered to the load to that to the amplifier:
+    \[
+    G_P=\frac{v_{out}^2/R_L}{v_{in}^2/r_{in}}=G_V^2 \frac{r_{in}}{R_L} 
+    \]
+  \end{itemize}
+  \end{comment}
+
+\end{itemize}
+
+{\bf Example 2:} 
+
+\htmladdimg{../figures/voltageamplifierex3.gif}
+
+Find $R_{in}$, $R_{out}$, and $A_{oc}$ of this two-port network containing
+$R_1$ and $R_2$ as well as the amplifier modeled by $r_{in}$, $r_{out}$ 
+and the open-circuit voltage gain $G_v$. 
+
+\begin{itemize}
+\item {\bf Input resistance:} By inspection, the input resistance of this
+  2-port network can be found to be $R_{in}=R_1+r_{in}$.
+
+\item {\bf Output resistance:} We assume the internal voltage source 
+  is the Thevenin voltage $v_T$, and get the open-circuit voltage 
+  $v_{oc}=v_T R_2/(r_{out}+R_2)$ and the short-circuit current
+  $i_{sc}=v_T/r_{out}$. The output resistance is
+  \[ 
+  R_{out}=\frac{v_{oc}}{i_{sc}}=\frac{r_{out}R_2}{r_{out}+R_2}=r_{out}\,||\,R_2 
+  \]
+  Alternatively, $R_{out}$ can be found as the resistance between the two 
+  terminals C and D of the output port when the voltage source of the amplifier 
+  is turned off (short-circuit), i.e., $R_{out}=r_{out}\,||\,R_2$.
+
+\item {\bf Open-circuit voltage gain:} This is the ratio of the voltage $V_{CD}$
+  across the output port to the voltage $V_{AB}$ across the input port, when the
+  output port is an open circuit, i.e., $R_L=\infty$. 
+  \begin{eqnarray}
+    v_{in}&=&V_{AB}\frac{r_{in}}{R_1+r_{in}}  \nonumber \\
+    V_{CD}&=&A v_{in} \frac{R_2}{r_{out}+R_2}=A V_{AB}\frac{r_{in}}{R_1+r_{in}} 
+    \frac{R_2}{r_{out}+R_2} \nonumber \\
+    A_{oc}&=&\frac{V_{CD}}{V_{AB}}=\frac{A R_2 r_{in}}{(R_1+r_{in})(r_{out}+R_2)} 
+    \stackrel{r_{in}\rightarrow\infty\;\;r_{out}=0}{\Longrightarrow}A
+    \nonumber 
+  \end{eqnarray}
+\end{itemize}
+This 2-port network modeled as a voltage amplifier with $R_{in}$, $R_{out}$
+and $A_{oc}$ can be used in more complicated circuits.
+
+{\bf Example 3:} 
+
+A 2-port network with a voltage aplifier modeled by $r_{in}$, $r_{out}$ and
+voltage gain $A$ on the left can be modeled by the circuit on the right. 
+Find the parameters $R_{in}$, $R_{out}$ and $A_{oc}$ of the two-port network 
+with the voltage amplifier embedded.
+
+\htmladdimg{../figures/voltageamplifierex4.gif}
+
+\begin{itemize}
+\item {\bf Open-circuit voltage gain:} As the output port is open circuit, 
+  the output current is zero and so is the voltage drop across $r_{out}$.
+  Applying an ideal voltage source $v_s$ to the input, we get the voltage 
+  $v_{in}$ across $r_{in}$ and $v_1$ across $R_1$, respectively:
+  \[
+  v_{in}=v_s \frac{r_{in}}{R_1+r_{in}},\;\;\;\;\;
+  v_1=v_s \frac{R_1}{R_1+r_{in}} 
+  \]
+  The open-circuit voltage across output port is therefore:
+  \[
+  v_{oc}=v_1+A v_{in}=v_s \frac{R_1}{R_1+r_{in}}+Av_s\frac{r_{in}}{R_1+r_{in}}
+  =v_s \frac{R_1+A r_{in}}{R_1+r_{in}}  
+  \]
+  The open-circuit voltage gain can be found as the ratio of the open-circuit
+  output voltage to the input voltage:
+  \[
+  A_{oc}=\frac{v_{oc}}{v_s}=\frac{R_1+A r_{in}}{R_1+r_{in}}<A  
+  \]
+  if $R_1=0$, the circuit is reduced to the original voltage amplifier and we
+  have $A_{oc}=A$.
+
+\item {\bf Output resistance:} 
+  \begin{comment}
+  We first find the short-circuit current $i_{sc}$ at the output port. 
+  Assume a voltage source $v_s$ with $R_S=0$ is applied to the input 
+  port while the output port is short-circuited. Applying KVL to the 
+  two loops of the circuit, we get:
+  \begin{eqnarray}
+    v_s&=&(R_1+r_{in})i_{in}-R_1 i_{sc} 
+    \nonumber\\
+    A v_{in}&=&A r_{in} i_{in}=(r_{out}+R_1) i_{sc}-R_1 i_{in} 
+    \nonumber
+  \end{eqnarray}
+  Solving these two equations for the two unknowns $i_{in}$ and $i_{sc}$, 
+  we get
+  \[
+  i_{sc}=v_s \frac{Ar_{in}+R_1}{(1-A)R_1 r_{in} +r_{out}(r_{in}+R_1)}
+  \]
+  The open-circuit output voltage $v_{oc}$ is 
+  \[
+  v_{oc}=Ar_{in}i_{in}+R_1i_{in}=(Ar_{in}+R_1)\frac{v_s}{r_{in}+R_1} 
+  \]
+  Now the output resistance can be found to be:
+  \begin{eqnarray}
+  R_{out}&=&\frac{v_{oc}}{i_{sc}}
+  =\frac{(1-A)r_{in}R_1+r_{out}(r_{in}+R_1)}{r_{in}+R_1}
+  \nonumber\\
+  &=&r_{out}-\frac{(A-1) r_{in}R_1}{R_1+r_{in}}
+  \approx r_{out}-A\;r_{in}||R_1<r_{out}
+  \nonumber
+  \end{eqnarray}
+  i.e., the output resistance is much reduced. Moreover, when $R_1=0$, 
+  $R_{out}=r_{out}$.
+  \end{comment}
+
+  We first find the short-circuit current $i_{sc}$ 
+  at the output port. Assume a voltage source $v_s$ with internal resistance 
+  $R_S$ is applied to the input port while the output port is short-circuited.
+  Applying KVL to the two loops of the circuit, we get:
+  \[ v_s=(R_S+R_1+r_{in})i_{in}-R_1 i_{sc} \]
+  \[ A v_{in}=A r_{in} i_{in}=(r_{out}+R_1) i_{sc}-R_1 i_{in} \]
+  Solving these two equations for the two unknowns $i_{in}$ and $i_{sc}$, we get
+  \[ 
+  i_{sc}=v_s \frac{Ar_{in}+R_1}{(1-A)R_1 r_{in} +r_{out}(R_S+r_{in}+R_1)+R_SR_1} 
+  \]
+  The open-circuit output voltage $v_{oc}$ is 
+  \[ v_{oc}=Ar_{in}i_{in}+R_1i_{in}=(Ar_{in}+R_1)\frac{v_s}{R_S+r_{in}+R_1} \]
+  Now the output resistance can be found to be:
+  \[ R_{out}=\frac{v_{oc}}{i_{sc}}
+  =\frac{(1-A)r_{in}R_1+r_{out}(R_S+r_{in}+R_1)+R_SR_1}{R_S+r_{in}+R_1}
+  =r_{out}+\frac{(1-A) r_{in}R_1 +R_SR_1}{R_1+r_{in}+R_S}\]
+  Note that $R_{out}$ is affected by internal resistance $R_S$ of the source.
+  When $R_S=0$, 
+  \[
+  R_{out}\stackrel{R_S=0}{\Longrightarrow} r_{out}-(A-1) r_{in}\,||\,R_1 < r_{out} 
+  \]
+  i.e., the output resistance is much reduced. Moreover, when $R_1=0$, 
+  $R_{out}=r_{out}$.
+
+\item {\bf Input resistance:} This can be found by applying an ideal voltage
+  source $v_s$ to the input port, while the output port is connected to a 
+  load $R_L$. The input resistance is $R_{in}=v_s/i_{in}$ where $i_{in}$ is
+  the input current. Applying the KVL to the two loops of this circuit, we
+  get
+  \[ v_s=(r_{in}+R_1) i_{in}-R_1 i_{out} \]
+  \[ A v_{in}=Ar_{in}i_{in}=(r_{out}+R_L+R_1)i_{out}-R_1i_{in} \]
+  Solving these two equations for the two unknowns $i_{in}$ and $i_{out}$,
+  we get
+  \[ i_{in}=v_s \frac{R_1+R_L+r_{out}}{(R_L+r_{out})(R_1+r_{in})+(1-A)R_1r_{in}}
+  \stackrel{R_L\rightarrow \infty}{\Longrightarrow} \frac{v_s}{r_{in}+R_1} \]
+  Now the input resistance can be found to be
+  \[ R_{in}=\frac{v_s}{i_{in}}=\frac{(R_L+r_{out})(R_1+r_{in})+(1-A)R_1r_{in}}{R_1+R_L+r_{out}}
+  \stackrel{R_L\rightarrow \infty}{\Longrightarrow} R_1+r_{in}>r_{in} \]  
+  Note that $R_{in}$ is affected by the load $R_L$. When $R_L=\infty$,
+  $R_{in}=R_1+r_{in}$, i.e., the input resistance is much increased. 
+  Moreover, if $R_1=0$, the circuit is reduced to the original voltage 
+  amplifier with $R_{in}=r_{in}$.
+\end{itemize}
+In summary, the resistor $R_1$ shared by both the input and output loops
+serves as a negative feedback:
+\[ v_s\uparrow \rightarrow i_{in}, v_{out}\uparrow \rightarrow v_1\uparrow 
+\rightarrow i_{in}, v_{out}\downarrow \]
+As the result, the voltage gain $A_{oc}$ is reduced but both the input and
+output resistances are improved, i.e., $R_{in}$ is increased and the $R_{out}$
+is reduced.
+
+{\bf Example 4:} (Homework)
+
+The transistor emitter follower and the op-amp buffer shown below 
+are very important circuits which find wide applications in 
+practice. These two circuits can be similarly modeled based on the 
+individual models of the transistor and the an op-amp (the inner
+dashed boxes), also shown in the figure. Note that the two models 
+are equivalent (the outter dashed boxes), as the non-ideal current 
+and voltage in the models can be converted to each other.
+
+\htmladdimg{../figures/BufferModels.png}
+%\htmladdimg{../figures/voltageamplifierex5.gif}
+
+The parameter $\beta$ of the transistor model is its current gain,
+and the parameter $A$ of the op-amp model is its voltage gain, both
+of them are much greater than 1. And for the op-amp, we also have
+$r_{in}>>r_{out}$.
+
+We can now find the three parameters of the model of the two circuits:
+
+\begin{itemize}
+\item The input resistance $R_{in}=V_s/i_{in}$, where $V_s$ is the source
+  voltage applied across A and B, $i_{in}$ is the current through the 
+  input port, when a load $R_L$ is connected to the output port between
+  C and D.
+\item The output resistance $R_{out}=v_{oc}/i_{sc}$, where $v_{oc}$ and
+  $i_{sc}$ are the open-circuit voltage and short-circuit current when
+  an ideal source voltage $V_s$ (with $R_S=0$) is applied to the input 
+  port.
+\item The open-circuit gain $A_{oc}=V_{oc}/V_{sc}$.
+\end{itemize}
+
+
+\htmladdnormallink{Answer}{../ch2_sub1/index.html}
+
+{\bf Example 5:} (Homework)
+
+\htmladdimg{../figures/voltageamplifierex6.gif}
+
+Two amplifiers with parameters $A_1$, $r_{i1}$, $r_{o1}$ and $A_2$, $r_{i2}$, 
+$r_{o2}$, respectively, can be connected in cascade as shown in the figure. 
+Given a voltage source $v_s$ in series with an internal resistance $R_S$,
+find the output voltage. To maximize the output $v_{out}$, how would you 
+change the values of the six parameters?
+
+Find the power gain $G_p$ of the system.
+
+\htmladdnormallink{Answer}{../ch2_sub2/index.html}
+
+
+{\bf Example 6:} (Homework)
+
+The input and output resistances $R_{in}$ and $R_{out}$, as well as the voltage 
+gain $A_{oc}$ of a two-port network can be obtained experimentally. First,
+connect an ideal voltage source $v_s$ (a new battery with very low internal
+resistance) in series with a resistor $R_S$, and then connect load $R_L$ of
+two different resistances to the output port. Now the three parameters can
+be derived from the known values of $v_s$, $R_S$ and the two measurements of
+the load voltage $v_{out}$, corresponding to the two resistance values used.
+
+Assume $v_s=1.5V$, $R_S=5 k\Omega$, and the input voltage is measured to be 
+$v_{in}=1.25 V$; also, assume the two different load resistors used are 
+$R_1=150 \Omega$ and $R_2=200 \Omega$ respectively, with the two corresponding
+output voltage $v_1=18.75V$ and $v_2=20$. Find $R_{in}$, $R_{out}$ and $A_{oc}$.
+
+\htmladdnormallink{Answer}{../ch2_sub3/index.html}
+
+\end{document}
+
+
+\subsection*{Two-Ports}
+
+Many circuits can be modeled by the two-port model shown below:
+\htmladdimg{../figures/twoportmodel.gif}
+
+
+	
+
+\subsection*{Examples}
+	
+

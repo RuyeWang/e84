@@ -1,0 +1,493 @@
+\documentstyle[11pt]{article}
+\usepackage{html}
+\begin{document}
+\begin{center}
+{\Large \bf  E84 Home Work 12}
+\end{center}
+\begin{enumerate}
+
+\item Assume in the circuit below (figure B), $\beta=100$, $V_{cc}=20V$, 
+$R_C=R_E=2\;K\Omega$.  Find the voltages $V_E(t)$ and $V_C(t)$ when 
+the base current is $I_B(t)=(50+30 \cos \omega t)\;\mu A$. Sketch the
+waveformes (over time) of the two voltages.
+
+\htmladdimg{../hw9f.gif}
+
+{\bf Solution:}
+ \[ i_c(t)=\beta i_b(t)=(5+3\cos \omega t)\;mA \]
+ \[ v_c(t)=V_{cc}-R_c i_c(t)=20-2000 (5+3\cos \omega t)\times 10^{-3}
+   =10-6\cos \omega t  \]
+ \[ i_e(t)=(\beta+1) i_b(t)\approx i_c(t)=(5+3\cos \omega t)\;mA \]
+ \[ v_e(t)=R_e i_e(t)=2000 (5+3\cos \omega t)\times 10^{-3}
+    =10+6\cos \omega t  \]
+
+\item Find values of $R_C$ and $R_B$ in the circuit with $\beta=100$
+and $V_{CC}=15V$ so that the Q-point is $I_C=25mA$ and $V_{CE}=7.5V$.
+What is the Q point if $\beta=200$?
+
+\htmladdimg{../hw9a.gif}
+
+{\bf Solution:}
+
+ Find $I_B=I_C/\beta=25mA/100=0.25mA$, $R_B=(15-0.7)/0.25=57.2k\Omega$.
+ Also as $V_{CE}=v_{cc}-I_C R_C$, i.e., $R_C=(V_{CC}-V_{CE})/I_C=
+ (15-7.5)/25\times 10^{-3}=300\Omega$. 
+ 
+ $I_B=(V_{CC}-V_{BD})/R_B=0.25mA$, $I_C=\beta I_B=200\times 0.25=50mA$,
+ $V_{CE}=V_{CC}-R_C I_C=15-300\times 50\times 10^{-3}=0$.
+ This result indicate that the transistor is in saturation region and the
+ linear relationship $I_C=\beta I_B$ no longer holds. In this case $V_{CE}$ 
+ can be roughly estimated as being $0.2 V$ and $I_C$ is just a little bit
+ smaller than $V_{CC}/R_C=5 mA$.
+
+\item Design a stable self-biasing transistor circuit as shown below
+so that the DC operating point (Q point) of $I_C=2.5mA$ and $V_{CE}=7.5V$ 
+is in the middle of the load line for maximal dynamic range. Assume 
+the smallest $\beta$ value allowed is $\beta_{min}=50$. To reduce the 
+number of free parameters, we assume $R_C=2K\Omega$. 
+
+Hint: 
+\begin{itemize}
+\item For the DC operating point to be approximately independent of the
+  specific transistor used, we want $(\beta_{min}+1)R_E\approx 
+  \beta_{min} R_E \ge 10 R_B$.
+\item Start the design process from the desired Q-point, determine $R_E$,
+then find desired $V_{BB}$ and finally $R_1$ and $R_2$.
+\end{itemize}
+
+\htmladdimg{../hw9b.gif}
+
+ {\bf Solution:}
+ 
+ \begin{itemize}
+ \item Find $V_{CC}$: for the Q-point to be in the middle of the
+   load line, we set $V_{CC}=2V_{CE}=2\times 7.5=15V$.
+ \item Find $R_C$ and $R_E$: As $V_{CE}=V_{CC}-I_CR_C-I_ER_E\approx
+   V_{CC}-I_C(R_C+R_E)$, we have $R_C+R_E=7.5/2.5\times 10^{-3}=3K\Omega$,
+   i.e., $R_E=5K\Omega-R_C=1K\Omega$.
+ \item Find desired $V_{BB}$: 
+ 	\[ V_{BB}=V_{be}+I_ER_E=0.7+2.5\times 10^{-3}\times 10^3=3.2V \]
+ \item Find $R_B$: To satisfy $10R_B \le \beta_{min}R_E$, we let 
+   $R_B=0.1\times \beta_{min} R_E=0.1\times 50\times 1000=5\;K\Omega$
+ \item Find $R_1$ and $R_2$:
+ \[	R_B=\frac{R_1R_2}{R_1+R_2}=5\;K\Omega \;\;\;\;\;\;\;\;
+       V_{BB}=3.2V=V_{CC}\frac{R_2}{R_1+R_2}=15 \frac{R_2}{R_1+R_2} \]
+ Solve these two equations (first divide the first equation by the second), 
+ we obtain the two unknowns $R_1$ and $R_2$:
+ \[	R_1=\frac{5\;K\Omega}{0.21}=24\;K\Omega \;\;\;\;\;\;\;\;\;
+ 	R_2=6.4\; K\Omega	\]
+ \end{itemize}
+
+\item Verify your design in previous problem by checking the DC operating
+  point of the resulting circuit is approximately the same as the requirement.
+
+{\bf Solution:}
+\begin{itemize}
+\item Use Thevenin's theorem to find:
+  \[ R_B=\frac{R_1 R_2}{R_1+R_2}=\frac{24\times 6.4}{24+6.4}=5.05K\Omega \]
+  \[ V_{BB}=V_{CC}\frac{R_2}{R_1+R_2}=15\frac{6.4}{24+6.4}=3.16V \]
+\item Find $V_E=V_{BB}-V_{BE}=3.16V-0.7V=2.46V$.
+\item Find $I_C \approx I_E=V_E/R_E=2.46 mA$.
+\item Find $V_{CE}=V_{CC}-I_C R_C-I_E R_E\approx 15-2.46(2+1)=7.6V$
+\end{itemize}
+
+
+
+\item In the circuit shown below, the two base resistors $R_B=4.3K\Omega$,
+the collector resistor is $R_C=1K\Omega$. Assume the two transistors
+have the same $\beta=100$ value and they each receive an input ($V_1$ and
+$V_2$) at either $0.2V$ or $5V$. Find the output voltage $V_{out}$ for
+the following combinations of inputs. (Hint: $5V$ input to a transistor
+will drive it to saturation.)
+
+\begin{tabular}{cc|c} \hline
+$V_1$ & $V_2$ & $V_{out}$ \\ \hline
+  $0.2$ & $0.2$ &         \\
+  $5.0$ & $0.2$ &         \\
+  $0.2$ & $5.0$ &         \\
+  $5.0$ & $5.0$ &         \hline
+\end{tabular}
+
+\htmladdimg{../hw9d.gif}
+
+{\bf Solution:} When $V_1=0.2V$, $T_1$ is cut-off. When $V_1=5V$, 
+$I_{b1}=(5-0.7)/4.3=1\;mA$, $T_1$ is saturated with $V_{CE}=0.2V$
+and $I_C=(5-0.2)/1=4.8\;mA$ (instead of $I_C=\beta I_b=100\;mA$).
+The same is true for $T_2$. From the table below we see that the
+circuit implements a NOR (not OR) logic (NOR gate) with high 
+voltage for True and low voltage for False. 
+
+\begin{tabular}{cc|c}\hline
+$V_1$ & $V_2$ & $V_{out}$ \\ \hline
+  $0.2$ & $0.2$ & $5.0V$ \\
+  $5.0$ & $0.2$ & $0.2V$ \\
+  $0.2$ & $5.0$ & $0.2V$ \\
+  $5.0$ & $5.0$ & $0.2V$ \hline
+\end{tabular}
+\end{enumerate}
+
+\end{document}
+
+
+\item In the AC amplifier shown in the figure, $R_S=600\Omega$, $R_1=30K\Omega$, 
+$R_2=20K\Omega$, $R_E=4K\Omega$, $R_C=3K\Omega$, $R_L=5.1K\Omega$, 
+$\beta=100$, $V_{CC}=15V$. Also assume $r_{be}=1000\Omega$. And assume the
+frequency of the AC signals to be amplified is high enough so that the
+coupling capacitors and the emitter by-pass capacitor can be treated as 
+AC short circuits. Find
+\begin{itemize}
+\item The DC operating point in terms of variables $I_B$, $I_C$, $V_C$, $V_E$ 
+  and $V_{CE}$.
+\item The AC equivalent diagram
+\item The AC input and output impedances
+\item The voltage gain of the AC amplifier
+\end{itemize}
+
+\htmladdimg{../hw9c.gif}
+
+ {\bf Solution:} 
+ \begin{itemize}
+ \item Find DC operating point.
+ \[ V_{BB}=V_{CC}\frac{R_2}{R_1+R_2}=15\frac{20}{30+20}=6V	\]
+ \[ R_B=\frac{R_1R_2}{R_1+R_2}=\frac{600}{50}=12K\Omega 	\]
+ \[ I_B=\frac{V_{BB}-V_{be}}{(\beta+1)R_E+R_B}
+ 	=\frac{6-0.7}{101\times 4000+12000}=\frac{5.3}{26\times 10^4}
+ 	=0.025 mA	\]
+ \[ I_C=\beta I_B=100\times 0.025 mA=2.5 mA	\]
+ \[ V_C=V_{CC}-I_C R_C=15-2.5\times 3=7.5V	\]
+ \[ V_E=(\beta+1)I_C R_E=5V	\]
+ \[ V_{CE}=V_C-V_E=2.5V \]
+ \item Find input and output impedances.
+ \[	r_{be}=V_T/I_B=0.026/0.025=1K\Omega	\]
+ \[	r_{in}=R_1||R_2||r_{be} \approx 1K\Omega \]
+ \[	r_{out}=R_C=3K\Omega	\]
+
+ \item Find voltage gain.
+ \[	G=-\beta \frac{(R_1||R_2||r_{be})}{(R_1||R_2||r_{be})+R_s}
+ 	\frac{1}{r_{be}}(R_C||R_L) \approx -117	\]
+ \end{itemize}
+
+\item An emitter follower circuit is shown in the figure. Assume 
+$r_{be}=1K\Omega$, $\beta=100$, $R_B=300K\Omega$, $R_E=4K\Omega$, 
+$R_S=500\Omega$, $R_L=5.1K\Omega$, and $V_{CC}=12$. Find the DC operating 
+point in terms of $I_B$, $I_C$, $I_E$, and $V_E$. Then find the input and 
+output resistances and the voltage gain.
+
+\htmladdimg{../hw9e.gif}
+
+{\bf Solution}
+
+Find base current:
+\[ I_B=\frac{V_{CC}-V_{BE}}{R_B+(\beta+1)R_E}=16.1 \mu A \]
+\[ I_E=(\beta+1) I_B=1.61 mA \]
+\[ V_E=I_E R_E=6.48 V,  V_{CE}=V_{CC}-V_E=5.52 V \]
+\[ G=\frac{(\beta+1)R_E||R_L}{R_S+r_{be}+(\beta+1)R_E||R_L} 
+    =101\times 2.24/(1.5+101\times 2.24)=0.993 \]
+\[ r_{in}=(\beta+1)(R_E||R_L)=101\times 2.24K\Omega =226.4 K\Omega \]
+\[ r_{out}=(R_S+r_{be})/(\beta+1)=1.5K\Omega/101=15 \Omega \]
+
+\end{enumerate}
+\end{document}
+
+\item In the circuit shown below, the two base resistors $R_B=43K\Omega$,
+the collector $R_C=1K\Omega$. Assume each of the two input voltages $V_1$
+and $V_2$ are either 0.2V or 5V. Find the output voltage $V_{out}$ in the
+following combinations of the inputs. (Hint: assume 5V input to a transistor
+will drive it to saturation.)
+
+\begin{tabular}{cc|c}\hline
+$V_1$ & $V_2$ & $V_{out}$ \\ \hline
+ 0.2  &  0.2  &           \\ \hline
+ 5.0  &  0.2  &           \\ \hline
+ 0.2  &  5.0  &           \\ \hline
+ 5.0  &  5.0  &           \\ \hline
+\end{tabular}
+
+%\htmladdimg{../hw9d.gif}
+
+\end{itemize}
+
+
+\item In the AC amplifier shown in the figure, $R_S=1.5K\Omega$, $R_1=10K\Omega$, 
+$R_2=200K\Omega$, $R_C=3.5K\Omega$, $R_L=2K\Omega$, $\beta=100$, $V_{CC}=20V$.
+Also assume $r_{be}=200\Omega$. Find the DC variables $I_B$, $I_C$, $V_C$.
+
+
+
+///////////
+
+
+\documentstyle[11pt]{article}
+\usepackage{html}
+\begin{document}
+\begin{center}
+{\Large \bf  E84 Home Work 10}
+\end{center}
+
+\begin{enumerate}
+
+\item In the circuit shown below, the two base resistors $R_B=4.3K\Omega$,
+the collector $R_C=1K\Omega$. Assume the two transistors have the same 
+$\beta=100$ value and they each receive an input voltage ($V_1$ and $V_2$)
+at either 0.2V or 5V. Find the output voltage $V_{out}$ for the following 
+combinations of the inputs. (Hint: 5V input to a transistor will drive it 
+to saturation.)
+
+\begin{tabular}{cc|c}\hline
+$V_1$ & $V_2$ & $V_{out}$ \\ \hline
+ 0.2  &  0.2  &           \\ \hline
+ 5.0  &  0.2  &           \\ \hline
+ 0.2  &  5.0  &           \\ \hline
+ 5.0  &  5.0  &           \\ \hline
+\end{tabular}
+
+\htmladdimg{../hw9d.gif}
+
+{\bf Solution:} When $V_1=0.2V$, $T_1$ is cut-off. When $V_1=5V$, 
+$I_{b1}=(5-0.7)/4.3=1mA$, $T_1$ is saturated with $V_{CE}=0.2V$ and 
+$I_C=(5-0.2)/1=4.8 mA$ (instead of $I_C=\beta I_B=100 mA$). The same is
+true for $T_2$. From the table below we see that the circuit is a NOR
+(Not OR) gate:
+
+\begin{tabular}{cc|c}\hline
+$V_1$ & $V_2$ & $V_{out}$ \\ \hline
+ 0.2  &  0.2  &    5      \\ \hline
+ 5.0  &  0.2  &    0.2    \\ \hline
+ 0.2  &  5.0  &    0.2    \\ \hline
+ 5.0  &  5.0  &    0.2    \\ \hline
+\end{tabular}
+
+\item A BJT transistor with $\beta=24$ is set up as a common-base 
+configuration as shown in the figure below. 
+\htmladdimg{../../lectures/figures/CB.gif}
+
+\begin{itemize} 
+\item If it is known that $I_{CB0}=10 nA$ and $I_E=2 mA$, find $I_C$ 
+  and $I_B$.
+\item If $V_{CB}=15V$ and $V_{EB}=0.7$, estimate $I_E$, $I_B$ and $I_C$ 
+  based on the plots below. Re-estimate these currents if $V_{EB}$ is 
+  increased to $0.8V$.
+
+  Note: in the figure above, as the assumed polarities of both $I_E$ and 
+  $V_{EB}$ are the opposite to those assumed in plot (b) below, the negative
+  signs for both $I_E$ and $V_{EB}$ in the plot should be dropped.
+
+\end{itemize}
+
+\htmladdimg{../../lectures/figures/transistorCBplots.gif}
+
+{\bf Solution:} $\alpha=\beta/(1+\beta)=24/25=0.96$, 
+$I_C=I_E \alpha + I_{CB0}=2 mA \times 1.92+0.01=1.921 mA$,
+$I_B=I_C/\beta=1.92/24=0.08$, or $I_B=I_E-I_C=2-1.96=0.08 mA$.
+
+If $V_{EB}=0.7 V$ and $V_{CB}=15V$, $I_E=5 mA$ can be estimated from 
+figure (b), and correspondingly, $I_C=4.8 mA$ and $I_B=0.2 mA$. When 
+$V_{EB}=0.8 V$, $I_E=20 mA$, $I_C=19.2 mA$, and $I_B=0.8 mA$.
+
+\item In the figure below, the transistor with $\alpha=0.99$ and
+  $I_{CB0}=10^{-11} A$ is set up as a common-emitter circuit. The
+  base-emitter pn-junction is forward biased with $I_B=20 \mu A$, 
+  $V_{CC}=10V$, and $R_C=2k\Omega$. Find $I_{CE0}$, $I_C$, $I_E$, 
+  $V_{CE}$, and $V_{CB}$. Is the collector-base pn-junction forward
+  or reverse biased? (Assume the voltage across a forward biased 
+  pn-junction is $0.7 V$.)
+  
+\htmladdimg{../CEexample.gif}
+
+{\bf Solution:} 
+\[ \beta=\frac{\alpha}{1-\alpha}=99 \]
+\[ I_{CE0}=(1+\beta) I_{CB0}=(1+99) 10^{-11}=10^{-9} \]
+\[ I_C=\beta I_B+I_{CE0}=99 \times 2 \times 10^{-5} + 10^{-9}=1.98 mA \]
+\[ I_E=I_C+I_B=1.98+0.02=2 mA \]
+\[ V_{CE}=V_{CC}-R_C I_C=10-2 \times 10^3 \times 1.98 \times 10^{-3}
+   \approx 10-4=6 V \]
+Since the base-emitter pn-junction is forward biased with $V_{BE}=0.7V$,
+we have $V_{CB}=V_{CE}-V_{BE}=6-0.7=5.3 V$, the collector-base pn-junction
+is reverse biased.
+
+\item The figure (A) below shows a common-emitter transistor 
+applification circuit (silicon) with$\beta=100$, $V_{cc}=20V$, 
+and $R_C=2\;K\Omega$. 
+\begin{itemize}
+\item The base current is $i_b(t)=(50+30 \cos \omega t)\;\mu A$.
+Find $i_c(t)$ and $v_c(t)$ as functions of time.
+\item Repeat the above for $i_b(t)=(90+30 \cos \omega t)\;\mu A$.
+\item Repeat the above for $i_b(t)=(10+30 \cos \omega t)\;\mu A$.
+\end{itemize}
+For each of the three cases above, sketch the output (collector) 
+characteristics ($i_c$ vs $v_c$) as shown in class show the wave
+forms of $i_b(t)$, $i_c(t)$ and $v_c(t)$, following the example
+in the lecture notes:
+http://fourier.eng.hmc.edu/e84/lectures/ch4/node7.html.
+
+{\bf Note:} As the convention in the schematics of transistor circuits,
+the bottom horizontal line is treated as the ground, and all voltages,
+such as $V_b$, $V_c$ and $V_e$ are measured with respect to the 
+ground as the reference point.
+
+{\bf Hint:} The relationship $I_C=\beta I_B$ is only valid in the
+linear region in the middle range of the load line. However, in 
+the cut-off region (close to the horizontal axis) and the saturation
+region (close to the vertical axis), the above relationship no
+longer holds and the actual output current $I_c$ and $V_{CE}$ can
+only be found graphically in the output characteristic plot.
+
+\htmladdimg{../hw9f.gif}
+
+ {\bf Solution:}
+ \begin{itemize}
+ \item 
+ \[ i_c(t)=\beta i_b(t)=(5+3\cos \omega t)\;mA \]
+ \[ v_c(t)=V_{cc}-R_c i_c(t)=20-2000 (5+3\cos \omega t)\times 10^{-3}
+    =10-6\cos \omega t  \]
+ \item
+ \[ i_c(t)=\beta i_b(t)=(1+3\cos \omega t)\;mA \]
+ \[ v_c(t)=V_{cc}-R_c i_c(t)=20-2000 (9+3\cos \omega t)\times 10^{-3}
+    =2-6\cos \omega t  \]
+ Clipping happens during the negative half-cycle due to saturation.
+ \item
+ \[ i_c(t)=\beta i_b(t)=(10+3\cos \omega t)\;mA \]
+ \[ v_c(t)=V_{cc}-R_c i_c(t)=20-2000 (1+3\cos \omega t)\times 10^{-3}
+    =18-6\cos \omega t  \]
+ Clipping happens during the positive half-cycle due to cut-off.
+ \end{itemize}
+
+\item Now assume an emittor resistor $R_e=2\;K\Omega$ is added between 
+emittor of the transistor and ground in the circuit above (figure (B)
+above).  Find the voltages $v_e(t)$ as well as $v_c(t)$ when the base
+current is $i_b(t)=(50+30 \cos \omega t)\;\mu A$. Sketch the waveformes
+of the two voltages.
+
+ {\bf Solution:}
+ \[ i_c(t)=\beta i_b(t)=(5+3\cos \omega t)\;mA \]
+ \[ v_c(t)=V_{cc}-R_c i_c(t)=20-2000 (5+3\cos \omega t)\times 10^{-3}
+    =10-6\cos \omega t  \]
+ \[ i_e(t)=(\beta+1) i_b(t)\approx i_c(t)=(5+3\cos \omega t)\;mA \]
+ \[ v_e(t)=R_e i_e(t)=2000 (5+3\cos \omega t)\times 10^{-3}
+    =10+6\cos \omega t  \]
+
+\end{enumerate}
+
+\end{document}
+
+
+
+\item Find values of $R_C$ and $R_B$ in the circuit with $\beta=100$
+and $V_{CC}=15V$ so that the Q-point is $I_C=25mA$ and $V_{CE}=7.5V$
+What is the Q point if $\beta=200$?
+
+\htmladdimg{../hw9a.gif}
+
+
+% {\bf Solution:}
+
+% Find $I_B=I_C/\beta=25mA/100=0.25mA$, $R_B=(15=0.7)/0.25=57.2k\Omega$
+% Also as $V_{CC}=I_C R_C+V_{CE}$, i.e., $R_C=(V_{CC}-V_{CE})/I_C=
+% (15-7.5)/25\times 10^{-3}=300\Omega$. 
+% 
+% $I_B=(V_{CC}-V_{BD})/R_B=0.25mA$, $I_C=\beta I_B=200\times 0.25=50mA$,
+% $V_{CE}=V_{CC}-R_C I_C=15-300\times 50\times 10^{-3}=0$.
+
+\item Design a stable self-biasing transistor circuit with a DC operating
+point (Q point) of $I_C=2.5mA$ and $V_{CE}=7.5V$ which should be in the 
+middle of the load line. The $\beta$ of the ransistor ranges from 50 to
+200. 
+
+{\bf Hint} This is a design problem with possibly multiple solutions, 
+i.e., there may be more degrees of freedom than constraining conditions. 
+One of such conditions is $(\beta+1)R_E \gg R_B$ for the DC operating 
+point to be approximately independent of $\beta$ (see online notes). 
+
+\htmladdimg{../hw9b.gif}
+
+% {\bf Solution:}
+% 
+% \begin{itemize}
+% \item Find $V_{CC}$: We want the Q-point to be in the middle of the
+%   load line, so we set $V_{CC}=2V_{CE}=2\times 7.5=15V$.
+% \item Find $R_C$ and $R_E$: As $V_{CE}=V_{CC}-I_CR_C-I_ER_E\approx
+%   V_{CC}-I_C(R_C+R_E)$, we have $R_C+R_E=7.5/2.5\times 10^{-3}=3K\Omega$.
+%   Choose $R_E=1K\Omega$ and $R_C=2K\Omega$.
+% \item Find $R_B$: To satisfy $R_B \ll \beta_{min} R_E$, we
+% 	let $R_B=0.1\times \beta_{min} R_E=0.1\times 50\times 1000=5\;K\Omega$
+% \item Find $V_{BB}$: 
+% 	\[ V_{BB}=V_{be}+I_ER_E=0.7+2.5\times 10^{-3}\times 10^3=3.2V \]
+% \item Find $R_1$ and $R_2$:
+% \[	R_B=\frac{R_1R_2}{R_1+R_2}=5\;K\Omega \;\;\;\;\;\;\;\;
+% 	\frac{V_{BB}}{V_{CC}}=\frac{R_2}{R_1+R_2}=\frac{3.2}{15}=0.21	\]
+% Solve these two equations (first divide the first equation by the second), 
+% we obtain the two unknowns $R_1$ and $R_2$:
+% \[	R_1=\frac{5\;K\Omega}{0.21}=24\;K\Omega \;\;\;\;\;\;\;\;\;
+% 	R_2=6.4\; K\Omega	\]
+% \end{itemize}
+
+\item In the AC amplifier shown in the figure, $R_S=600\Omega$, $R_1=30K\Omega$, 
+$R_2=20K\Omega$, $R_E=4K\Omega$, $R_C=3K\Omega$, $R_L=5.1K\Omega$, 
+$\beta=100$, $V_{CC}=15V$. 
+%Also assume $r_{be}=200\Omega$. 
+Assume the 
+frequency of the AC signals to be amplified is high enough so that the
+coupling capacitors and the emitter by-pass capacitor can be treated as 
+AC short circuits. Find
+\begin{itemize}
+\item The DC operating point in terms of variables $I_B$, $I_C$, $V_C$, $V_E$ 
+  and $V_{CE}$.
+\item The AC equivalent diagram
+\item The AC input and output impedances
+\item The voltage gain of the AC amplifier
+\end{itemize}
+
+\htmladdimg{../hw9c.gif}
+
+% {\bf Solution:} 
+% \begin{itemize}
+% \item Find DC operating point.
+% \[ V_{BB}=V_{CC}\frac{R_2}{R_1+R_2}=15\frac{20}{30+20}=6V	\]
+% \[ R_B=\frac{R_1R_2}{R_1+R_2}=\frac{600}{50}=12K\Omega 	\]
+% \[ I_B=\frac{V_{BB}-V_{be}}{(\beta+1)R_E+R_B}
+% 	=\frac{6-0.7}{101\times 4000+12000}=\frac{5.3}{26\times 10^4}
+% 	=0.025 mA	\]
+% \[ I_C=\beta I_B=100\times 0.025 mA=2.5 mA	\]
+% \[ V_C=V_{CC}-I_C R_C=15-2.5\times 3=7.5V	\]
+% \[ V_E=(\beta+1)I_C R_E=5V	\]
+% \[ V_{CE}=V_C-V_E=2.5V \]
+% \item Find input and output impedances.
+% \[	r_{be}=V_T/I_B=0.026/0.025=1K\Omega	\]
+% \[	r_{in}=R_1||R_2||r_{be} \approx 1K\Omega \]
+% \[	r_{out}=R_C=3K\Omega	\]
+
+% \item Find voltage gain.
+% \[	G=-\beta \frac{(R_1||R_2||r_{be})}{(R_1||R_2||r_{be})+R_s}
+% 	\frac{1}{r_{be}}(R_C||R_L) \approx -117	\]
+% \end{itemize}
+
+\item An emitter follower circuit is shown in the figure. Assume 
+$\beta=50$, $R_B=300K\Omega$, $R_E=4K\Omega$, $R_S=500\Omega$, 
+$R_L=5.1K\Omega$, and $V_{CC}=12$. Find the DC operating point in
+terms of $I_B$, $I_C$, $I_E$, and $V_E$. Then find the input and
+output resistances and the voltage gain.
+
+\htmladdimg{../hw9e.gif}
+
+\item In the circuit shown below, the two base resistors $R_B=43K\Omega$,
+the collector $R_C=1K\Omega$. Assume each of the two input voltages $V_1$
+and $V_2$ are either 0.2V or 5V. Find the output voltage $V_{out}$ in the
+following combinations of the inputs. (Hint: assume 5V input to a transistor
+will drive it to saturation.)
+
+\begin{tabular}{cc|c}\hline
+$V_1$ & $V_2$ & $V_{out}$ \\ \hline
+ 0.2  &  0.2  &           \\ \hline
+ 5.0  &  0.2  &           \\ \hline
+ 0.2  &  5.0  &           \\ \hline
+ 5.0  &  5.0  &           \\ \hline
+\end{tabular}
+
+\htmladdimg{../hw9d.gif}
+
+
+\end{enumerate}
+
+\end{document}
+
+\end{enumerate}

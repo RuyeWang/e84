@@ -1,0 +1,53 @@
+\documentstyle[11pt]{article}
+\usepackage{html}
+\begin{document}
+\begin{center}
+{\Large \bf  Home Work 10 ---- E84, Fall, 2004}
+\end{center}
+\begin{enumerate}
+
+\item Find the gain of the Op-amp circuit shown below. Find the 
+input impedance.
+
+\htmladdimg{../hw10b.gif}
+
+{\bf Solution:}
+
+\[ V_A=V_{in}\frac{R_1}{R_1+R_2},\;\;\;\;
+   V_B=V_{out}\frac{R_3}{R_3+R_4} \]
+but as $V_A\approx V_B$, we get
+\[V_{out}=\frac{R_3+R_4}{R_3} \frac{R_1}{R_1+R_2} V_{in} \]
+
+
+\item The circuit shown below is used as a 3-bit digital to analog 
+(D/A) converter. The inputs $V_0$, $V_1$, $V_2$ are the three bits 
+of a binary number (0V for 0 and 5V for 1), and the output $V_{out}$
+is the corresponding analog value proportional to the binary input.
+Express the output $V_{out}$ as a function of the three inputs.
+
+\htmladdimg{../hw10a.gif}
+
+{\bf Hint:} Apply KCL to points A, B, and C (in that order), and 
+represent $V_{out}$ in terms of $V_2$, $V_1$ and $V_0$ (through 
+$V_B$ and $V_A$).
+
+{\bf Solution:}
+\begin{itemize}
+\item KCL to A: 
+  \[ \frac{V_0-V_A}{2R}=\frac{V_A}{2R}+\frac{V_A-V_B}{R},
+  \;\;\;\;\; V_0=4V_A-2V_B  \]
+\item KCL to B:
+  \[ \frac{V_1-V_B}{2R}+\frac{V_A-V_B}{R}=\frac{V_B}{R},
+  \;\;\;\;\; V_1=5V_B-2V_A  \]
+\item Combine the two equations above to get
+  \[ 8V_B=V_0+2V_1 \]
+\item KCL to C:
+  \[ \frac{V_2}{2R}+\frac{V_B}{R}=-\frac{V_{out}}{8R},
+  \;\;\;\;\; V_{out}=-(4V_2+8V_B)=-(4V_2+2V_1+V_0) \]
+\end{itemize}  
+
+\end{enumerate}
+
+\end{document}
+
+

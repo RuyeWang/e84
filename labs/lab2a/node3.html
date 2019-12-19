@@ -1,0 +1,202 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Transistor Circuit Construction</TITLE>
+<META NAME="description" CONTENT="Transistor Circuit Construction">
+<META NAME="keywords" CONTENT="lab2a">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="lab2a.css">
+
+<LINK REL="previous" HREF="node2.html">
+<LINK REL="up" HREF="node1.html">
+<LINK REL="next" HREF="node4.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html53"
+  HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html51"
+  HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html47"
+  HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html54"
+  HREF="node4.html">Part 2: Understanding Radio</A>
+<B> Up:</B> <A NAME="tex2html52"
+  HREF="node1.html">Part 1: Transistor Circuits</A>
+<B> Previous:</B> <A NAME="tex2html48"
+  HREF="node2.html">Transistor Testing</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00012000000000000000">
+Transistor Circuit Construction</A>
+</H2>
+
+<P>
+Design and build the basic transistor voltage amplifiers shown in the figure
+below to achieve maximum voltage amplification and minimum distortion by 
+setting the DC operating point to be in the middle of the linear range of
+the output characteristic plot. Use <!-- MATH
+ $V_{CC}\le 20\;V$
+ -->
+<IMG
+ WIDTH="102" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.png"
+ ALT="$V_{CC}\le 20\;V$">. 
+
+<P>
+Test the circuit by a sinusoidal signal of 50 mV peak-to-peak amplitude from
+a signal generator (with output resistance <!-- MATH
+ $R_S=50\,\Omega$
+ -->
+<IMG
+ WIDTH="89" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.png"
+ ALT="$R_S=50 \Omega$">) and an oscilloscope
+(with input resistance <!-- MATH
+ $R_{in}=1\,M\Omega$
+ -->
+<IMG
+ WIDTH="104" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$R_{in}=1 M\Omega$">) to monitor the input and output 
+signals both before and after the amplification and to observe the voltage 
+gain and waveform distortion. 
+
+<P>
+Calculate the DC operating point based on your design,
+and compare it with the actual circuit. Display both input and output signals 
+(sinusoidal) on the oscilloscope (use both input channels). 
+
+<P>
+Specifically do the following:
+
+<UL>
+<LI>Determine the values of <IMG
+ WIDTH="26" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.png"
+ ALT="$R_1$">, <IMG
+ WIDTH="26" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.png"
+ ALT="$R_2$">, <IMG
+ WIDTH="30" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.png"
+ ALT="$R_C$">, and <IMG
+ WIDTH="30" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.png"
+ ALT="$R_E$"> so that (a) the 
+  DC operating point is in the middle of the load line for minimum distortion
+  and (b) the voltage gain is maximized. 
+
+<P>
+</LI>
+<LI>Measure the DC operating point (<IMG
+ WIDTH="24" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.png"
+ ALT="$I_{C}$"> and <IMG
+ WIDTH="37" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$V_{CE}$">) experimentally and
+  compare it with the predicted based on your design.
+
+<P>
+</LI>
+<LI>Observe the voltage gain as a function of the by-pass capacitor in 
+  parallel with <IMG
+ WIDTH="30" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.png"
+ ALT="$R_E$">, and the capacitors at both the input and output ports,
+  by trying different <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img22.png"
+ ALT="$C$"> values. 
+
+<P>
+</LI>
+<LI>Observe the voltage gain as a function of the signal frequency.
+  Generate a Bode plot of the magnitude of the voltage gain for the 
+  frequency range of 10 Hz to 1 MHz. Find the maximum voltage gain <IMG
+ WIDTH="46" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img23.png"
+ ALT="$A_{max}$">
+  and the freqnecy <IMG
+ WIDTH="41" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img24.png"
+ ALT="$f_{max}$"> at which this maximum gain is achieved.
+
+<P>
+</LI>
+<LI>Observe the polarity inversion and the signal distortion. Increase
+  the amplitude of the input sinusoid from 50 mV to 1 V and observe the 
+  output in terms of the amount of distortion and clipping at both the 
+  positive and negative peaks of the sinusoid.
+
+<P>
+</LI>
+</UL>
+
+<P>
+<B>What to submit:</B>
+
+<P>
+A text document including pictures of the screenshots to discuss concisely
+each of the items specified above.
+
+<P>
+<IMG
+ WIDTH="358" HEIGHT="262" ALIGN="BOTTOM" BORDER="0"
+ SRC="../../lectures/figures/ACamplification0a.png"
+ ALT="ACamplification0a.png">.
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../../lectures/figures/ACamplification1.gif"
+ ALT="ACamplification1.gif">.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html53"
+  HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html51"
+  HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html47"
+  HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html54"
+  HREF="node4.html">Part 2: Understanding Radio</A>
+<B> Up:</B> <A NAME="tex2html52"
+  HREF="node1.html">Part 1: Transistor Circuits</A>
+<B> Previous:</B> <A NAME="tex2html48"
+  HREF="node2.html">Transistor Testing</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Ruye Wang
+2015-07-26
+</ADDRESS>
+</BODY>
+</HTML>

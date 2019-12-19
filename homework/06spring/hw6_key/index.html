@@ -1,0 +1,537 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002 (1.62)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>hw6_key</TITLE>
+<META NAME="description" CONTENT="hw6_key">
+<META NAME="keywords" CONTENT="hw6_key">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="hw6_key.css">
+
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/sw/lib/latex2html/icons/next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/sw/lib/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/sw/lib/latex2html/icons/prev_g.png">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+  HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<DIV ALIGN="CENTER">
+<FONT SIZE="+2"><B>E84 Home Work 6</B></FONT>
+
+</DIV>
+
+<OL>
+<LI>The resistance <IMG
+ WIDTH="18" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.png"
+ ALT="$R$"> of a circuit is a real value which can be measured
+by a multimeter. However, the impedance <IMG
+ WIDTH="18" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$Z$"> of a component in the circuit is 
+complex which cannot be measured directly. Instead, one can use an oscilloscope 
+to find sinusoidal voltage <IMG
+ WIDTH="33" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="$v(t)$"> across and current <IMG
+ WIDTH="30" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$i(t)$"> through the component,
+and then obtain the impedance as the ratio between the complex representations of 
+the voltage and current. Suppose we find:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v(t)=12 cos(1000t-30^\circ),\;\;\;\; i(t)=6\;cos(1000t+15^\circ)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="407" HEIGHT="31" BORDER="0"
+ SRC="img5.png"
+ ALT="\begin{displaymath}v(t)=12 cos(1000t-30^\circ),\;\;\;\; i(t)=6\;cos(1000t+15^\circ) \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Find the impedance (both resistance and reactance) and the admittance (both
+conductance and susceptance) of the circuit.
+
+<P>
+<B>Solution:</B>
+
+<P>
+Represent voltage and current in complex forms:
+
+<P>
+<!-- MATH
+ $v(t)=Re[12e^{j(1000 t-30^\circ)}],\;\;\;\;i(t)=Re[6e^{j(1000 t+15^\circ)}]$
+ -->
+<IMG
+ WIDTH="398" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.png"
+ ALT="$v(t)=Re[12e^{j(1000 t-30^\circ)}],\;\;\;\;i(t)=Re[6e^{j(1000 t+15^\circ)}]$">
+
+<P>
+<!-- MATH
+ $Z=2e^{-j45^\circ}=2\angle{-45^\circ}=\sqrt{2}-j\sqrt{2}$
+ -->
+<IMG
+ WIDTH="276" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.png"
+ ALT="$Z=2e^{-j45^\circ}=2\angle{-45^\circ}=\sqrt{2}-j\sqrt{2}$">
+
+<P>
+<!-- MATH
+ $R=\sqrt{2},\;\;\;\;X=-\sqrt{2}$
+ -->
+<IMG
+ WIDTH="167" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.png"
+ ALT="$R=\sqrt{2},\;\;\;\;X=-\sqrt{2}$">.
+
+<P>
+<!-- MATH
+ $Y=1/Z=G+jB=G+jB$
+ -->
+<IMG
+ WIDTH="232" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.png"
+ ALT="$Y=1/Z=G+jB=G+jB$">, <!-- MATH
+ $G=R/(R^2+X^2)=\sqrt{2}/4$
+ -->
+<IMG
+ WIDTH="206" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.png"
+ ALT="$G=R/(R^2+X^2)=\sqrt{2}/4$">, 
+	<!-- MATH
+ $B=-X/\sqrt{R^2+X^2}=\sqrt{2}/4$
+ -->
+<IMG
+ WIDTH="222" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.png"
+ ALT="$B=-X/\sqrt{R^2+X^2}=\sqrt{2}/4$">
+
+<P>
+</LI>
+<LI>A voltage <!-- MATH
+ $v(t)=120\sqrt{2} cos(1000t+90^\circ) V$
+ -->
+<IMG
+ WIDTH="245" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.png"
+ ALT="$v(t)=120\sqrt{2} cos(1000t+90^\circ) V$"> (volt) is applied to 
+a resistor <IMG
+ WIDTH="71" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img13.png"
+ ALT="$R=15\Omega$">, a capacitor <IMG
+ WIDTH="96" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.png"
+ ALT="$C=83.3\mu F$"> and an inductor <IMG
+ WIDTH="93" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img15.png"
+ ALT="$L=30\; mH$"> 
+connected in parallel. Find the over all steady state current <IMG
+ WIDTH="127" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.png"
+ ALT="$i=i_R+i_C+i_L$"> 
+by phasor method.
+
+<P>
+<B>Solution:</B>
+
+<P>
+Express input voltage as a phasor <!-- MATH
+ $\dot{V}=120\angle{90^\circ}$
+ -->
+<IMG
+ WIDTH="103" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img17.png"
+ ALT="$\dot{V}=120\angle{90^\circ}$">.  
+Then <!-- MATH
+ $\dot{I}_R=\dot{V}/R=120\angle{90^\circ}/15=0+j8 A$
+ -->
+<IMG
+ WIDTH="277" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.png"
+ ALT="$\dot{I}_R=\dot{V}/R=120\angle{90^\circ}/15=0+j8 A$">
+ <!-- MATH
+ $\dot{I}_C=\dot{V}/Z_C=j\omega C\dot{V}=(0.00833\angle 90^\circ)(120\angle{90^\circ})
+ 	=10\angle 180^\circ=-10+j0 A$
+ -->
+<IMG
+ WIDTH="557" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.png"
+ ALT="$\dot{I}_C=\dot{V}/Z_C=j\omega C\dot{V}=(0.00833\angle 90^\circ)(120\angle{90^\circ})
+=10\angle 180^\circ=-10+j0 A$">
+
+<P>
+<!-- MATH
+ $\dot{I}_L=\dot{V}/Z_L=\dot{V}/j\omega L=(120\angle 90^\circ)/(30\angle{90^\circ})=4+j0 A$
+ -->
+<IMG
+ WIDTH="423" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.png"
+ ALT="$\dot{I}_L=\dot{V}/Z_L=\dot{V}/j\omega L=(120\angle 90^\circ)/(30\angle{90^\circ})=4+j0 A$">.
+
+<P>
+By KCL, we have <!-- MATH
+ $\dot{I}=\dot{I}_R+\dot{I}_C+\dot{I}_L=(0-10+4)+j(8+0+0)
+  	=-6+j8=10\angle{127^\circ} A$
+ -->
+<IMG
+ WIDTH="542" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.png"
+ ALT="$\dot{I}=\dot{I}_R+\dot{I}_C+\dot{I}_L=(0-10+4)+j(8+0+0)
+=-6+j8=10\angle{127^\circ} A$">
+
+<P>
+<!-- MATH
+ $i(t)=10\sqrt{2}\;cos(1000t+127^\circ) A$
+ -->
+<IMG
+ WIDTH="246" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.png"
+ ALT="$i(t)=10\sqrt{2}\;cos(1000t+127^\circ) A$">
+
+<P>
+</LI>
+<LI>A voltage <!-- MATH
+ $v(t)=12\sqrt{2} \cos 5000 t$
+ -->
+<IMG
+ WIDTH="167" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img23.png"
+ ALT="$v(t)=12\sqrt{2} \cos 5000 t$"> (volt V) is applied to a circuit
+composed of two branches in parallel. One branch has a capacitor <IMG
+ WIDTH="83" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img24.png"
+ ALT="$C=10\mu F$">,
+while the other has a resistor <IMG
+ WIDTH="71" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img25.png"
+ ALT="$R=20\Omega$"> and an inductor <IMG
+ WIDTH="79" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img26.png"
+ ALT="$L=3 mH$"> in series.
+Using phasor method, find the impedances <IMG
+ WIDTH="28" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.png"
+ ALT="$Z_C$"> and <IMG
+ WIDTH="37" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img28.png"
+ ALT="$Z_{RL}$"> of the two branches,
+and then the overall combined impedance <IMG
+ WIDTH="33" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img29.png"
+ ALT="$Z_{all}$"> of the circuit. Then find
+the steady state current <IMG
+ WIDTH="30" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$i(t)$"> through the circuit.
+
+<P>
+<B>Solution:</B>
+
+<P>
+<!-- MATH
+ $Z_R=R=20+j0=20\angle 0^\circ \Omega$
+ -->
+<IMG
+ WIDTH="223" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img30.png"
+ ALT="$Z_R=R=20+j0=20\angle 0^\circ \Omega$">, <!-- MATH
+ $Z_L=j\omega L=j5000\times 0.003
+=15\angle 90^\circ \Omega$
+ -->
+<IMG
+ WIDTH="297" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img31.png"
+ ALT="$Z_L=j\omega L=j5000\times 0.003
+=15\angle 90^\circ \Omega$">, <!-- MATH
+ $Z_C=1/j\omega C=-j/5000 \times 10^{-5}=-j20
+=20\angle -90^\circ \Omega$
+ -->
+<IMG
+ WIDTH="419" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.png"
+ ALT="$Z_C=1/j\omega C=-j/5000 \times 10^{-5}=-j20
+=20\angle -90^\circ \Omega$">
+
+<P>
+<!-- MATH
+ $Z_{RL}=Z_R+Z_L=20+j15=25\angle 37^\circ \Omega$
+ -->
+<IMG
+ WIDTH="302" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img33.png"
+ ALT="$Z_{RL}=Z_R+Z_L=20+j15=25\angle 37^\circ \Omega$">
+
+<P>
+<!-- MATH
+ $Z_{all}=Z_C//Z_{RL}=Z_C Z_{RL}/(Z_C+Z_{RL})=25\angle 37^\circ \; 
+20\angle -90^\circ/(20+j15-j20)=500\angle -53^\circ/20.6\angle -14^\circ
+=24.3\angle -39^\circ=18.9-j15.3 \Omega$
+ -->
+<IMG
+ WIDTH="1033" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.png"
+ ALT="$Z_{all}=Z_C//Z_{RL}=Z_C Z_{RL}/(Z_C+Z_{RL})=25\angle 37^\circ \;
+20\angle -90^...
+...0\angle -53^\circ/20.6\angle -14^\circ
+=24.3\angle -39^\circ=18.9-j15.3 \Omega $">
+
+<P>
+<!-- MATH
+ $\dot{I}=\dot{V}/{Z}=12\angle 0^\circ/24.3\angle -39^\circ=0.49\angle 39^\circ A$
+ -->
+<IMG
+ WIDTH="340" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img35.png"
+ ALT="$\dot{I}=\dot{V}/{Z}=12\angle 0^\circ/24.3\angle -39^\circ=0.49\angle 39^\circ A$">
+
+<P>
+<!-- MATH
+ $i(t)=0.49\sqrt{2} cos(5000t+39^\circ) A$
+ -->
+<IMG
+ WIDTH="246" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img36.png"
+ ALT="$i(t)=0.49\sqrt{2} cos(5000t+39^\circ) A$">
+
+<P>
+</LI>
+<LI>Solve the problem above again but this time use the admittances 
+<IMG
+ WIDTH="89" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img37.png"
+ ALT="$Y_C=1/Z_C$">, <!-- MATH
+ $Y_{RL}=1/Z_{RL}$
+ -->
+<IMG
+ WIDTH="107" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img38.png"
+ ALT="$Y_{RL}=1/Z_{RL}$">, <!-- MATH
+ $Y_{all}=1/Z_{all}$
+ -->
+<IMG
+ WIDTH="99" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img39.png"
+ ALT="$Y_{all}=1/Z_{all}$"> (instead of the
+impedances <IMG
+ WIDTH="28" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.png"
+ ALT="$Z_C$">, <IMG
+ WIDTH="37" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img28.png"
+ ALT="$Z_{RL}$">, <IMG
+ WIDTH="33" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img29.png"
+ ALT="$Z_{all}$">). Recall that Ohm's law becomes
+<!-- MATH
+ $\dot{I}=\dot{V}/Z=\dot{V}Y$
+ -->
+<IMG
+ WIDTH="123" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img40.png"
+ ALT="$\dot{I}=\dot{V}/Z=\dot{V}Y$">. (Make sure all impedances you found in 
+previous problem are correct before you find the admittances as their 
+reciprocals.)
+
+<P>
+<B>Solution:</B>
+
+<P>
+<!-- MATH
+ $Y_C=1/Z_C=1/20\angle{0^\circ}=0.05\angle{90^\circ}=0+j0.05\;S$
+ -->
+<IMG
+ WIDTH="372" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img41.png"
+ ALT="$Y_C=1/Z_C=1/20\angle{0^\circ}=0.05\angle{90^\circ}=0+j0.05\;S$">
+
+<P>
+<!-- MATH
+ $Y_{RL}=1/Z_{RL}=1/25\angle{37^\circ}=0.04\angle{-37^\circ}=0.032-j0.024\;S$
+ -->
+<IMG
+ WIDTH="452" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img42.png"
+ ALT="$Y_{RL}=1/Z_{RL}=1/25\angle{37^\circ}=0.04\angle{-37^\circ}=0.032-j0.024\;S$">
+
+<P>
+<!-- MATH
+ $Y_{all}=Y_C+Y_{RL}=0+j0.05 + 0.032-j0.024=0.032+j0.026=0.04\angle{39^\circ}$
+ -->
+<IMG
+ WIDTH="568" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img43.png"
+ ALT="$Y_{all}=Y_C+Y_{RL}=0+j0.05 + 0.032-j0.024=0.032+j0.026=0.04\angle{39^\circ}$">
+
+<P>
+<!-- MATH
+ $I_C=Y_C V=0.05\angle{90^\circ} \times 12\angle{0^\circ}=0.6\angle{90^\circ}A$
+ -->
+<IMG
+ WIDTH="331" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img44.png"
+ ALT="$I_C=Y_C V=0.05\angle{90^\circ} \times 12\angle{0^\circ}=0.6\angle{90^\circ}A$">
+
+<P>
+<!-- MATH
+ $I_{RL}=Y_{RL} V=0.04\angle{-37^\circ} \times 12\angle{0^\circ}=0.48\angle{-37^\circ}A$
+ -->
+<IMG
+ WIDTH="385" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img45.png"
+ ALT="$I_{RL}=Y_{RL} V=0.04\angle{-37^\circ} \times 12\angle{0^\circ}=0.48\angle{-37^\circ}A$">
+
+<P>
+<!-- MATH
+ $I=I_C+I_{RL}=0+j0.6+0.384-j0.288=0.384+j0.312=0.49\angle{39^\circ}$
+ -->
+<IMG
+ WIDTH="540" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img46.png"
+ ALT="$I=I_C+I_{RL}=0+j0.6+0.384-j0.288=0.384+j0.312=0.49\angle{39^\circ}$">
+
+<P>
+Alternatively,
+<!-- MATH
+ $I=Y_{all}V=0.041\angle{39^\circ} \times 12\angle{0^\circ}=0.49\angle{39^\circ}$
+ -->
+<IMG
+ WIDTH="331" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img47.png"
+ ALT="$I=Y_{all}V=0.041\angle{39^\circ} \times 12\angle{0^\circ}=0.49\angle{39^\circ}$">
+
+<P>
+</LI>
+<LI>Find the output voltage <IMG
+ WIDTH="53" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img48.png"
+ ALT="$v_{out}(t)$"> across the right most branch
+containing <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img49.png"
+ ALT="$R_2$"> and <IMG
+ WIDTH="18" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img50.png"
+ ALT="$C$">, when <IMG
+ WIDTH="48" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img51.png"
+ ALT="$\omega=0$"> and <!-- MATH
+ $\omega\rightarrow \infty$
+ -->
+<IMG
+ WIDTH="60" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img52.png"
+ ALT="$\omega\rightarrow \infty$"> 
+and the input <!-- MATH
+ $v_{in}(t)=V=10\;cos(\omega t)$
+ -->
+<IMG
+ WIDTH="185" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img53.png"
+ ALT="$v_{in}(t)=V=10\;cos(\omega t)$">, assuming <IMG
+ WIDTH="87" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img54.png"
+ ALT="$R_1=100\Omega$">, 
+<IMG
+ WIDTH="87" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img55.png"
+ ALT="$R_2=100\Omega$">, <IMG
+ WIDTH="83" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img24.png"
+ ALT="$C=10\mu F$"> and <IMG
+ WIDTH="93" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img56.png"
+ ALT="$L=10\;mH$">.
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../hw6a.gif"
+ ALT="hw6a.gif">
+
+<P>
+<B>Solution</B>
+
+<P>
+When <IMG
+ WIDTH="48" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img51.png"
+ ALT="$\omega=0$">, the inductor is short circuit, and the capacitor is
+ open circuit, <!-- MATH
+ $v_{out}(t)=v_{in}(t)$
+ -->
+<IMG
+ WIDTH="118" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img57.png"
+ ALT="$v_{out}(t)=v_{in}(t)$">.
+ When <IMG
+ WIDTH="48" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img51.png"
+ ALT="$\omega=0$">, the inductor is open circuit, and the capacitor is
+ short circuit, <!-- MATH
+ $v_{out}(t)=v_{in}(t)/2=5\;cos(\omega_0 t)$
+ -->
+<IMG
+ WIDTH="234" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img58.png"
+ ALT="$v_{out}(t)=v_{in}(t)/2=5\;cos(\omega_0 t)$">.
+
+<P>
+</LI>
+</OL>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html3"
+  HREF="node1.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/sw/lib/latex2html/icons/next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/sw/lib/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/sw/lib/latex2html/icons/prev_g.png">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+  HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Ruye Wang
+2006-02-28
+</ADDRESS>
+</BODY>
+</HTML>

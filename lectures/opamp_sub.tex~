@@ -1,0 +1,79 @@
+\documentstyle[12pt]{article}
+\usepackage{html}
+% \usepackage{graphics}  
+\begin{document}
+
+\section*{Algebraic Summer}
+
+  \htmladdimg{../figures/opamp5a.gif}
+
+  Define $V\stackrel{\triangle}{=}V^+ \approx V^- $. Apply KCL to $V^-$ 
+  and $V^+$ we get:
+  \[
+  \frac{V_1-V}{R_1}+\frac{V_2-V}{R_2}+\frac{V_{out}-V}{R_f}=0,\;\;\;\;\;\;
+  \mbox{and}\;\;\;\;\;\;\;\;
+  \frac{V_3-V}{R_3}+\frac{V_4-V}{R_4}=0 
+  \]
+  Solving the 2nd equation for $V$ we get:
+  \[
+  V=\frac{R_4}{R_3+R_4} V_3 + \frac{R_3}{R_3+R_4} V_4	
+  \]
+  and substitute it into the first equation to get
+  \[
+  V_{out}=-\frac{R_f}{R_1}V_1-\frac{R_f}{R_2}V_2
+  +\left(\frac{R_f}{R_1}+\frac{R_f}{R_2}+1\right)
+  \left(\frac{R_4}{R_3+R_4} V_3+\frac{R_3}{R_3+R_4} v_4\right) 
+  \]
+  We see that the output is some algebraic sum of the inputs with both 
+  positive and negative coefficients:
+  \[
+  V_{out}=\sum_i k_iV_i
+  \]
+
+\section*{Howland Current Source}
+
+  \htmladdimg{../figures/HowlandCurrentSource.png}
+
+  We assume $R_2/R_1=R_4/R_3$, and get
+  \[
+  \frac{V^--V}{R_1}+\frac{V_0-V}{R_2}=0,\;\;\;\;\;\;
+  \frac{V^+-V}{R_3}+\frac{V_0-V}{R_4}=\frac{V}{R_L};
+  \]
+  Solving the first equation for $V_0-V$:
+  \[
+  V_0-V=(V-V^-)\frac{R_2}{R_1}=(V-V^-)\frac{R_4}{R_3}
+  \]
+  and substituting into the second equation, we get:
+  \[
+  \frac{V^+-V}{R_3}+\frac{V-V^-}{R_3}
+  =\frac{V^+-V^-}{R_3}=\frac{V}{R_L}=I_L
+  \]
+  We see that the current through the load resistor $R_L$
+  is constant, independent of $R_L$, i.e., the circuit is
+  a current source.
+
+
+\section*{Exp and Log Amplifiers}
+
+  \htmladdimg{../figures/ExpLogAmplifier.png}
+
+  Recall the known relationship between the current through and 
+  voltage across a diode:
+  \[
+  I_D=I_0 \left( e^{V_D/V_T}-1 \right)
+  \]
+  where $I_0$ is the reverse seturation current and $V_T$ is the
+  thermal equivalent voltage. Based on virtual ground and applying 
+  KCL to the inverting input of the op-amp, we get
+  \[
+  \frac{v_{out}}{R}=-I_0(e^{v_{in}/V_T}-1)\approx -I_0\;e^{v_{in}/V_T},
+  \;\;\;\;\;\;\mbox{and}\;\;\;\;\;
+  \frac{v_{in}}{R}=I_0(e^{-v_{out}/V_T}-1)\approx I_0\,e^{-v_{out}/V_T}
+  \]
+  i.e.,
+  \[
+  v_{out}\approx -R I_0 e^{v_{in}/V_T},\;\;\;\;\;\;\mbox{and}\;\;\;\;\;
+  v_{out}\approx -V_T\ln(v_{in}/I_0R)
+  \]
+
+\end{document}

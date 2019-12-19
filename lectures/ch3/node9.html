@@ -1,0 +1,703 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Complete Response II - Sinusoidal Input</TITLE>
+<META NAME="description" CONTENT="Complete Response II - Sinusoidal Input">
+<META NAME="keywords" CONTENT="ch3">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="ch3.css">
+
+<LINK REL="previous" HREF="node8.html">
+<LINK REL="next" HREF="node10.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node10.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node5.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node8.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node10.html">Second Order Systems</A>
+<B> Up:</B> <A
+ HREF="node5.html">First Order Systems</A>
+<B> Previous:</B> <A
+ HREF="node8.html">Complete Response I -</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H3><A ID="SECTION00014400000000000000">
+Complete Response II - Sinusoidal Input</A>
+</H3>
+
+<P>
+If the input voltage to the RC circuit considered previously is sinusoidal 
+<!-- MATH
+ $v(t)=V_s \cos(\omega t+\psi)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img419.svg"
+ ALT="$v(t)=V_s \cos(\omega t+\psi)$"></SPAN>, then the DE becomes
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_R(t)+v_C(t)=\tau\frac{d}{dt} v_c(t)+v_c(t)
+  =\tau\dot{v}_c(t)+v_c(t)=V_s \cos(\omega t+\psi)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.11ex; vertical-align: -1.71ex; " SRC="img420.svg"
+ ALT="$\displaystyle v_R(t)+v_C(t)=\tau\frac{d}{dt} v_c(t)+v_c(t)
+=\tau\dot{v}_c(t)+v_c(t)=V_s \cos(\omega t+\psi)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">141</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The homogeneous solution is the same as before <!-- MATH
+ $v_h(t)=A e^{-t/\tau}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img367.svg"
+ ALT="$v_h(t)=Ae^{-t/\tau}$"></SPAN>.
+To find the particular solution <SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.78ex; " SRC="img421.svg"
+ ALT="$v_p(t)$"></SPAN> as the steady state response 
+to the input <!-- MATH
+ $V_s\cos(\omega t+\psi)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img422.svg"
+ ALT="$V_s\cos(\omega t+\psi)$"></SPAN>, we first assume the input is
+<!-- MATH
+ $V_s e^{j(\omega t+\psi)}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.46ex; " SRC="img423.svg"
+ ALT="$V_s e^{j(\omega t+\psi)}$"></SPAN>, and the particular solution is <!-- MATH
+ $y_p(t)=B e^{j\omega t}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.78ex; " SRC="img424.svg"
+ ALT="$y_p(t)=B e^{j\omega t}$"></SPAN>
+and <!-- MATH
+ $\dot{y}_p(t)=j\omega B e^{j\omega t}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.78ex; " SRC="img425.svg"
+ ALT="$\dot{y}_p(t)=j\omega B e^{j\omega t}$"></SPAN>. The DE can now be written as
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\tau\dot{v}_c(t)+v_c(t)=j\omega\tau Be^{j\omega t}+Be^{j\omega t}
+  =(j\omega\tau +1) B e^{j\omega t} =V_s e^{j\omega t} e^{j\psi}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img426.svg"
+ ALT="$\displaystyle \tau\dot{v}_c(t)+v_c(t)=j\omega\tau Be^{j\omega t}+Be^{j\omega t}
+=(j\omega\tau +1) B e^{j\omega t} =V_s e^{j\omega t} e^{j\psi}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">142</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Solving for <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img117.svg"
+ ALT="$B$"></SPAN> we get
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+B=\frac{V_s e^{j\psi}}{j\omega\tau+1}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.16ex; " SRC="img427.svg"
+ ALT="$\displaystyle B=\frac{V_s e^{j\psi}}{j\omega\tau+1}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">143</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Substituting <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img117.svg"
+ ALT="$B$"></SPAN> back into <SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.78ex; " SRC="img428.svg"
+ ALT="$y_p(t)$"></SPAN> we get
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+y_p(t)=B e^{j\omega t}=\frac{V_s e^{j\psi}}{j\omega\tau+1} e^{j\omega t}
+  =\frac{V_s}{\sqrt{(\omega\tau)^2+1}}e^{j(\omega t+\psi-\phi)}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.50ex; vertical-align: -2.74ex; " SRC="img429.svg"
+ ALT="$\displaystyle y_p(t)=B e^{j\omega t}=\frac{V_s e^{j\psi}}{j\omega\tau+1} e^{j\omega t}
+=\frac{V_s}{\sqrt{(\omega\tau)^2+1}}e^{j(\omega t+\psi-\phi)}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">144</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+where <!-- MATH
+ $\phi=\tan^{-1}\omega\tau$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.57ex; " SRC="img273.svg"
+ ALT="$\phi=\tan^{-1}\omega\tau$"></SPAN>. Taking the real part of the above
+we get the particular solution as the response to the actual input 
+<!-- MATH
+ $V_s\cos(\omega t+\psi)=Re(V_s e^{j(\omega t+\psi)})$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img430.svg"
+ ALT="$V_s\cos(\omega t+\psi)=Re(V_s e^{j(\omega t+\psi)})$"></SPAN>
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+y_p(t)=Re\left[\frac{V_s e^{j(\omega t+\psi-\phi)}}{j\omega\tau+1}\right]
+  =\frac{V_s}{\sqrt{(\omega\tau)^2+1}}\cos((\omega t+\psi-\phi)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.50ex; vertical-align: -2.74ex; " SRC="img431.svg"
+ ALT="$\displaystyle y_p(t)=Re\left[\frac{V_s e^{j(\omega t+\psi-\phi)}}{j\omega\tau+1}\right]
+=\frac{V_s}{\sqrt{(\omega\tau)^2+1}}\cos((\omega t+\psi-\phi)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">145</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Alternatively, we can also use the phasor method. The input can be
+written as
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v(t)=V_s \cos(\omega t)=Re[\dot{V} e^{j\omega t}]
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img432.svg"
+ ALT="$\displaystyle v(t)=V_s \cos(\omega t)=Re[\dot{V} e^{j\omega t}]$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">146</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+where <!-- MATH
+ $\dot{V}=V_s\; e^{j\psi}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.46ex; " SRC="img433.svg"
+ ALT="$\dot{V}=V_s\; e^{j\psi}$"></SPAN> is the phasor form of the input voltage.
+The voltage across <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img104.svg"
+ ALT="$C$"></SPAN> is (voltage divider):
+<BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+\dot{V}_C&=&\dot{V} H(\omega)=\dot{V} \frac{Z_C}{R+Z_C}
+  =\dot{V} \frac{1/j\omega C}{R+1/j\omega C}=\frac{\dot{V}}{j\omega \tau+1}
+  =\frac{\dot{V}}{\sqrt{(\omega \tau)^2+1}\;e^{j\phi}} 
+  \nonumber \\
+  &=&\frac{\dot{V}\;e^{-j\phi}}{\sqrt{(\omega \tau)^2+1}} 
+  =\frac{V_se^{j\psi}\;e^{-j\phi}}{\sqrt{(\omega \tau)^2+1}} 
+  =\frac{V_se^{j(\psi-\phi)}}{\sqrt{(\omega \tau)^2+1}} 
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.79ex; vertical-align: -0.46ex; " SRC="img173.svg"
+ ALT="$\displaystyle \dot{V}_C$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 6.74ex; vertical-align: -2.74ex; " SRC="img434.svg"
+ ALT="$\displaystyle \dot{V} H(\omega)=\dot{V} \frac{Z_C}{R+Z_C}
+=\dot{V} \frac{1/j\om...
+...c{\dot{V}}{j\omega \tau+1}
+=\frac{\dot{V}}{\sqrt{(\omega \tau)^2+1}\;e^{j\phi}}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 6.74ex; vertical-align: -2.74ex; " SRC="img435.svg"
+ ALT="$\displaystyle \frac{\dot{V}\;e^{-j\phi}}{\sqrt{(\omega \tau)^2+1}}
+=\frac{V_se^...
+...\sqrt{(\omega \tau)^2+1}}
+=\frac{V_se^{j(\psi-\phi)}}{\sqrt{(\omega \tau)^2+1}}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">147</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+
+where <!-- MATH
+ $\phi=\tan^{-1} \omega \tau$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.57ex; " SRC="img273.svg"
+ ALT="$\phi=\tan^{-1}\omega\tau$"></SPAN>, and <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img436.svg"
+ ALT="$H(\omega)$"></SPAN> is the 
+<EM>frequency response function (FRF)</EM> of the system:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+H(\omega)=\frac{Z_C}{Z_C+Z_R}=\frac{1/j\omega C}{R+1/j\omega C}
+  =\frac{1}{\sqrt{1+(\omega\tau)^2}} e^{-j\phi}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.27ex; vertical-align: -2.74ex; " SRC="img437.svg"
+ ALT="$\displaystyle H(\omega)=\frac{Z_C}{Z_C+Z_R}=\frac{1/j\omega C}{R+1/j\omega C}
+=\frac{1}{\sqrt{1+(\omega\tau)^2}} e^{-j\phi}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">148</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+In time domain the steady state voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.78ex; " SRC="img421.svg"
+ ALT="$v_p(t)$"></SPAN> is:
+<BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+v_p(t)&=&Re\left[\dot{V}_C e^{j\omega t} \right]
+  =Re\left[ \frac{V_s e^{j(\psi-\phi)} e^{j\omega t}}{\sqrt{(\omega \tau)^2+1}} \right]
+  = \frac{V_s}{\sqrt{(\omega \tau)^2+1}} \cos(\omega t+\psi-\phi)
+  \nonumber\\
+  &=&|H(\omega)|V_s\cos(\omega t+\psi-\angle H(\omega))
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.79ex; vertical-align: -0.78ex; " SRC="img438.svg"
+ ALT="$\displaystyle v_p(t)$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 7.20ex; vertical-align: -3.02ex; " SRC="img439.svg"
+ ALT="$\displaystyle Re\left[\dot{V}_C e^{j\omega t} \right]
+=Re\left[ \frac{V_s e^{j(...
+...)^2+1}} \right]
+= \frac{V_s}{\sqrt{(\omega \tau)^2+1}} \cos(\omega t+\psi-\phi)$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img440.svg"
+ ALT="$\displaystyle \vert H(\omega)\vert V_s\cos(\omega t+\psi-\angle H(\omega))$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">149</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+
+Note that this steady state output is simply the 
+input <!-- MATH
+ $v(t)=V_S\cos(\omega t+\psi)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img441.svg"
+ ALT="$v(t)=V_S\cos(\omega t+\psi)$"></SPAN> scaled by the magnitude of the FRF
+<!-- MATH
+ $|H(\omega)|=1/\sqrt{(\omega\tau)^2+1}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.25ex; vertical-align: -0.82ex; " SRC="img442.svg"
+ ALT="$\vert H(\omega)\vert=1/\sqrt{(\omega\tau)^2+1}$"></SPAN> with a phase shift equal to the 
+phase of the FRF <!-- MATH
+ $\angle H(\omega)=-\phi$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img443.svg"
+ ALT="$\angle H(\omega)=-\phi$"></SPAN>.
+
+<P>
+The complete solution is then the sum of the homogeneous and particular
+solutions:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_C(t)=v_h(t)+v_p(t)=
+  \frac{V_s}{\sqrt{(\omega \tau)^2+1}}\cos(\omega t+\psi-\phi)+A e^{-t/\tau}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.74ex; " SRC="img444.svg"
+ ALT="$\displaystyle v_C(t)=v_h(t)+v_p(t)=
+\frac{V_s}{\sqrt{(\omega \tau)^2+1}}\cos(\omega t+\psi-\phi)+A e^{-t/\tau}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">150</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+From the initial condition <!-- MATH
+ $v_C(0)=V_0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img221.svg"
+ ALT="$v_C(0)=V_0$"></SPAN>, we have
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_C(t)\bigg|_{t=0}=v_C(0)
+  =V_0=\frac{V_s}{\sqrt{(\omega \tau)^2+1}}\cos(\psi-\phi)+A
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.27ex; vertical-align: -2.74ex; " SRC="img445.svg"
+ ALT="$\displaystyle v_C(t)\bigg\vert _{t=0}=v_C(0)
+=V_0=\frac{V_s}{\sqrt{(\omega \tau)^2+1}}\cos(\psi-\phi)+A$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">151</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Solving for <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img9.svg"
+ ALT="$A$"></SPAN> we get
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+A=V_0-\frac{V_s}{\sqrt{(\omega \tau)^2+1}}\cos(\psi-\phi)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.74ex; " SRC="img446.svg"
+ ALT="$\displaystyle A=V_0-\frac{V_s}{\sqrt{(\omega \tau)^2+1}}\cos(\psi-\phi)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">152</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Substituting <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img9.svg"
+ ALT="$A$"></SPAN> back to the expression of <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img194.svg"
+ ALT="$v_C(t)$"></SPAN>, we get 
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_C(t)=\frac{V_s}{\sqrt{(\omega \tau)^2+1}}\cos(\omega t+\psi-\phi)+
+  \left[V_0-\frac{V_s}{\sqrt{(\omega \tau)^2+1}}\cos(\psi-\phi)\right] e^{-t/\tau}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 7.20ex; vertical-align: -3.02ex; " SRC="img447.svg"
+ ALT="$\displaystyle v_C(t)=\frac{V_s}{\sqrt{(\omega \tau)^2+1}}\cos(\omega t+\psi-\ph...
+...left[V_0-\frac{V_s}{\sqrt{(\omega \tau)^2+1}}\cos(\psi-\phi)\right] e^{-t/\tau}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">153</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The same result can also be obtained using the 
+<A ID="tex2html6"
+  HREF="../ch3_sub0/index.html">Laplace transform method</A>.
+
+<P>
+Again we consider a short-cut method, by generalizing the result above to 
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+f(t)=f_{\infty}(t)+[f(0)-f_{\infty}(0)]e^{-t/\tau}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img448.svg"
+ ALT="$\displaystyle f(t)=f_{\infty}(t)+[f(0)-f_{\infty}(0)]e^{-t/\tau}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">154</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+in terms of three essential components
+
+<OL>
+<LI><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img340.svg"
+ ALT="$f(0)$"></SPAN>: the initial value (same as before);
+</LI>
+<LI><!-- MATH
+ $f_{\infty}(t)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img449.svg"
+ ALT="$f_{\infty}(t)$"></SPAN>: the steady state response, and
+  <!-- MATH
+ $f_{\infty}(0)=f_{\infty}(t)\big|_{t=0}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.25ex; vertical-align: -1.05ex; " SRC="img450.svg"
+ ALT="$f_{\infty}(0)=f_{\infty}(t)\big\vert _{t=0}$"></SPAN> is <!-- MATH
+ $f_{\infty}(t)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img449.svg"
+ ALT="$f_{\infty}(t)$"></SPAN> evaluated 
+  at <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img219.svg"
+ ALT="$t=0$"></SPAN>;
+</LI>
+<LI><SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img234.svg"
+ ALT="$\tau$"></SPAN>: the time constant of the system (same as before).
+</LI>
+</OL>
+Note that when the input <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img300.svg"
+ ALT="$V_s$"></SPAN> is a constant, the steady state response
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img339.svg"
+ ALT="$f(\infty)$"></SPAN> is a constant, but when the input <!-- MATH
+ $V_s\cos(\omega t+\psi)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img422.svg"
+ ALT="$V_s\cos(\omega t+\psi)$"></SPAN>
+is sinusoidal, the steady state response <!-- MATH
+ $f_{\infty}(t)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img449.svg"
+ ALT="$f_{\infty}(t)$"></SPAN> is a function of 
+time <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img451.svg"
+ ALT="$t$"></SPAN>, but its evaluation at <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img219.svg"
+ ALT="$t=0$"></SPAN> <!-- MATH
+ $f_{\infty}(0)=f_{\infty}(t)\big|_{t=0}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.25ex; vertical-align: -1.05ex; " SRC="img450.svg"
+ ALT="$f_{\infty}(0)=f_{\infty}(t)\big\vert _{t=0}$"></SPAN> 
+is still a constant. We see that the complete response is composed of 
+the steady state response and the exponential decay of the difference 
+between the initial value <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img340.svg"
+ ALT="$f(0)$"></SPAN> and the steady state response evaluated
+at <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img219.svg"
+ ALT="$t=0$"></SPAN>.
+
+<P>
+If the initial voltage on <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img104.svg"
+ ALT="$C$"></SPAN> is zero <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img452.svg"
+ ALT="$V_0=0$"></SPAN>, then
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_C(t)=\frac{V_s}{\sqrt{(\omega \tau)^2+1}}[\cos(\omega t+\psi-\phi)
+    -\cos(\psi-\phi) e^{-t/\tau}]	
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.74ex; " SRC="img453.svg"
+ ALT="$\displaystyle v_C(t)=\frac{V_s}{\sqrt{(\omega \tau)^2+1}}[\cos(\omega t+\psi-\phi)
+-\cos(\psi-\phi) e^{-t/\tau}]$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">155</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+Note that the initial magnitude of the transient component at <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.12ex; " SRC="img327.svg"
+ ALT="$t=0^+$"></SPAN>
+varies depending on the angle <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img454.svg"
+ ALT="$\psi-\phi$"></SPAN>. 
+
+<UL>
+<LI>If <!-- MATH
+ $\psi-\phi=\pm 90^\circ$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img455.svg"
+ ALT="$\psi-\phi=\pm 90^\circ$"></SPAN>, then <!-- MATH
+ $\cos(\psi-\phi)=0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img456.svg"
+ ALT="$\cos(\psi-\phi)=0$"></SPAN>, and the 
+  transient component disappears altogether.
+</LI>
+<LI>If <!-- MATH
+ $\psi-\phi=0^\circ$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img457.svg"
+ ALT="$\psi-\phi=0^\circ$"></SPAN> or <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img458.svg"
+ ALT="$180^\circ$"></SPAN>, then <!-- MATH
+ $\cos(\psi-\phi)=\pm 1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img459.svg"
+ ALT="$\cos(\psi-\phi)=\pm 1$"></SPAN>,
+  i.e., the magnitude of the transient component reaches maximum (either 
+  positive or negative), and if <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img234.svg"
+ ALT="$\tau$"></SPAN> value is large and therefore the 
+  transient component decays slowly, the magnitude of the initial voltage
+  <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img194.svg"
+ ALT="$v_C(t)$"></SPAN> could be close to three times the peak of the steady state. 
+</LI>
+<LI>In all other cases, the amplitude of the transient component is
+  between 0 in the first case and the maximum value in the second case.
+</LI>
+</UL>
+
+<P>
+The three cases for <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img454.svg"
+ ALT="$\psi-\phi$"></SPAN> to be <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img460.svg"
+ ALT="$0^\circ$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img3.svg"
+ ALT="$90^\circ$"></SPAN>, and <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img458.svg"
+ ALT="$180^\circ$"></SPAN>
+are shown below:
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/first_order_response.gif"
+ ALT="first_order_response.gif">
+<IMG STYLE=""
+ SRC="../figures/first_order_response_0.gif"
+ ALT="first_order_response_0.gif">
+<IMG STYLE=""
+ SRC="../figures/first_order_response_90.gif"
+ ALT="first_order_response_90.gif">
+<IMG STYLE=""
+ SRC="../figures/first_order_response_180.gif"
+ ALT="first_order_response_180.gif">
+
+<P>
+<B>Example 2:</B>
+
+<P>
+An electromagnet, modeled by a resistor <!-- MATH
+ $R=20\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img461.svg"
+ ALT="$R=20\Omega$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img462.svg"
+ ALT="$L=0.3H$"></SPAN>,
+is powered by sinusoidal voltage of <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img463.svg"
+ ALT="$120V$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img464.svg"
+ ALT="$60Hz$"></SPAN>. Find the current
+through the circuit when the switch is closed at <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img219.svg"
+ ALT="$t=0$"></SPAN> when the phase
+angle happens to be <!-- MATH
+ $\psi=10^\circ$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img465.svg"
+ ALT="$\psi=10^\circ$"></SPAN>, i.e., <!-- MATH
+ $v(t)=120\sqrt{2}\;
+\cos(6.28\times 60 t+10^\circ)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img466.svg"
+ ALT="$v(t)=120\sqrt{2}\;
+\cos(6.28\times 60 t+10^\circ)$"></SPAN>.
+
+<P>
+
+<UL>
+<LI>Find initial value: <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img467.svg"
+ ALT="$i(0)=0$"></SPAN>. 
+</LI>
+<LI>Find impedance of circuit:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Z=R+j\omega L=20+j6.28\times 60 \times 0.3=20+j113=114.8\angle{80^\circ}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.57ex; " SRC="img468.svg"
+ ALT="$\displaystyle Z=R+j\omega L=20+j6.28\times 60 \times 0.3=20+j113=114.8\angle{80^\circ}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">156</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>Find steady state value <!-- MATH
+ $i_\infty(t)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img469.svg"
+ ALT="$i_\infty(t)$"></SPAN> by phasor method:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\dot{V}=120 \angle{10^\circ},\;\;\;\;\dot{I}=\frac{\dot{V}}{Z}
+  =\frac{120\angle{10^\circ}}{114.8\angle{80^\circ}}
+  =1.05\angle{-70^\circ}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -1.71ex; " SRC="img470.svg"
+ ALT="$\displaystyle \dot{V}=120 \angle{10^\circ},\;\;\;\;\dot{I}=\frac{\dot{V}}{Z}
+=\frac{120\angle{10^\circ}}{114.8\angle{80^\circ}}
+=1.05\angle{-70^\circ}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">157</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+i_\infty(t)=1.05\sqrt{2}\;\cos(6.28\times 60 t -70^\circ)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.25ex; vertical-align: -0.70ex; " SRC="img471.svg"
+ ALT="$\displaystyle i_\infty(t)=1.05\sqrt{2}\;\cos(6.28\times 60 t -70^\circ)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">158</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+i_\infty(0)=1.05\sqrt{2}\;\cos(-70^\circ)
+  =1.05\sqrt{2}\times 0.342=0.51
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.25ex; vertical-align: -0.70ex; " SRC="img472.svg"
+ ALT="$\displaystyle i_\infty(0)=1.05\sqrt{2}\;\cos(-70^\circ)
+=1.05\sqrt{2}\times 0.342=0.51$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">159</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>Find time constant <!-- MATH
+ $\tau=L/R=0.3/20=0.015$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img473.svg"
+ ALT="$\tau=L/R=0.3/20=0.015$"></SPAN>.
+</LI>
+<LI>Find current
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+i(t)=i_{\infty}(t)+[i(0)-i_{\infty}(0)]e^{-t/\tau}
+  =1.05\sqrt{2}\;\cos(6.28\times 60 t -70^\circ)-0.51 e^{-t/0.015}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.25ex; vertical-align: -0.70ex; " SRC="img474.svg"
+ ALT="$\displaystyle i(t)=i_{\infty}(t)+[i(0)-i_{\infty}(0)]e^{-t/\tau}
+=1.05\sqrt{2}\;\cos(6.28\times 60 t -70^\circ)-0.51 e^{-t/0.015}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">160</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+</UL>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/electromagnet1.gif"
+ ALT="electromagnet1.gif">
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node10.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node5.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node8.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node10.html">Second Order Systems</A>
+<B> Up:</B> <A
+ HREF="node5.html">First Order Systems</A>
+<B> Previous:</B> <A
+ HREF="node8.html">Complete Response I -</A></DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

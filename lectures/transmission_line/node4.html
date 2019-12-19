@@ -1,0 +1,1131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Examples</TITLE>
+<META NAME="description" CONTENT="Examples">
+<META NAME="keywords" CONTENT="transmission_line">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="transmission_line.css">
+
+<LINK REL="next" HREF="node5.html">
+<LINK REL="previous" HREF="node3.html">
+<LINK REL="up" HREF="transmission_line.html">
+<LINK REL="next" HREF="node5.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html49"
+  HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html47"
+  HREF="transmission_line.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html41"
+  HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html50"
+  HREF="node5.html">About this document ...</A>
+<B> Up:</B> <A NAME="tex2html48"
+  HREF="transmission_line.html">transmission_line</A>
+<B> Previous:</B> <A NAME="tex2html42"
+  HREF="node3.html">Forward and backward traveling</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00040000000000000000">
+Examples</A>
+</H1>
+
+<P>
+
+<UL>
+<LI>Given <IMG
+ WIDTH="109" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img175.png"
+ ALT="$Z_1=Z_2=Z_0$"> and <IMG
+ WIDTH="40" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img176.png"
+ ALT="$v_0(t)$">, find <IMG
+ WIDTH="17" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img120.png"
+ ALT="$A$">, <IMG
+ WIDTH="20" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img121.png"
+ ALT="$\eta_1$">, <IMG
+ WIDTH="20" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img122.png"
+ ALT="$\eta_2$">, <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img143.png"
+ ALT="$T_1$">, 
+  <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img148.png"
+ ALT="$T_2$">, <IMG
+ WIDTH="30" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img177.png"
+ ALT="$Z_{in}$">, and <IMG
+ WIDTH="36" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img178.png"
+ ALT="$Z_{out}$">,as well as <IMG
+ WIDTH="40" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img179.png"
+ ALT="$v_1(t)$"> and <IMG
+ WIDTH="40" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img180.png"
+ ALT="$v_2(t)$">.
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+A=\frac{Z_0}{Z_0+Z_1}=\frac{1}{2},\;\;\;\;\;\;
+  \eta_1=\frac{Z_1-Z_0}{Z_1+Z_0}=\eta_2=\frac{Z_2-Z_0}{Z_2+Z_0}=0
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="434" HEIGHT="45" BORDER="0"
+ SRC="img181.png"
+ ALT="\begin{displaymath}A=\frac{Z_0}{Z_0+Z_1}=\frac{1}{2},\;\;\;\;\;\;
+\eta_1=\frac{Z_1-Z_0}{Z_1+Z_0}=\eta_2=\frac{Z_2-Z_0}{Z_2+Z_0}=0 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+T_1=\frac{A[1+\eta_2e^{-2j\omega T}]}{1-\eta_1\eta_2e^{-2j\omega T}}=A=\frac{1}{2},
+  \;\;\;\;\;\;\;\;\;T_2=\frac{A[1+\eta_2]e^{-j\omega T}}{1-\eta_1\eta_2e^{-2j\omega T}}
+  =Ae^{-j\omega T}=\frac{1}{2}e^{-j\omega T}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="606" HEIGHT="49" BORDER="0"
+ SRC="img182.png"
+ ALT="\begin{displaymath}T_1=\frac{A[1+\eta_2e^{-2j\omega T}]}{1-\eta_1\eta_2e^{-2j\om...
+..._2e^{-2j\omega T}}
+=Ae^{-j\omega T}=\frac{1}{2}e^{-j\omega T} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Z_{in}=\frac{1+\eta_2e^{-2j\omega T}}{1-\eta_2e^{-2j\omega T}}Z_0=Z_0,
+  \;\;\;\;\;\;\;\;\;
+  Z_{in}=\frac{1-\eta_2e^{-2j\omega T}}{1+\eta_2e^{-2j\omega T}}Z_0=Z_0
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="473" HEIGHT="49" BORDER="0"
+ SRC="img183.png"
+ ALT="\begin{displaymath}Z_{in}=\frac{1+\eta_2e^{-2j\omega T}}{1-\eta_2e^{-2j\omega T}...
+...\frac{1-\eta_2e^{-2j\omega T}}{1+\eta_2e^{-2j\omega T}}Z_0=Z_0 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+For an input <!-- MATH
+ $V_0={\cal F}[v_0(t)]$
+ -->
+<IMG
+ WIDTH="105" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img87.png"
+ ALT="$V_0={\cal F}[v_0(t)]$">, we have
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V_1=\frac{1}{2}V_0,\;\;\;\;\;\;\;\;\;\;v_1(t)=\frac{1}{2}v_0(t)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="232" HEIGHT="42" BORDER="0"
+ SRC="img184.png"
+ ALT="\begin{displaymath}V_1=\frac{1}{2}V_0,\;\;\;\;\;\;\;\;\;\;v_1(t)=\frac{1}{2}v_0(t) \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+and
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V_2=T_2V_0=\frac{1}{2}e^{-j\omega T}V_0,\;\;\;\;\;\;\;\;\;\;\;\;
+  v_2(t)={\cal F}^{-1}[V_2]={\cal F}^{-1}\left[\frac{1}{2}e^{-j\omega T}V_0\right]
+  =\frac{1}{2}v_0(t-T)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="603" HEIGHT="45" BORDER="0"
+ SRC="img185.png"
+ ALT="\begin{displaymath}V_2=T_2V_0=\frac{1}{2}e^{-j\omega T}V_0,\;\;\;\;\;\;\;\;\;\;\...
+...left[\frac{1}{2}e^{-j\omega T}V_0\right]
+=\frac{1}{2}v_0(t-T) \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The load and the transmission line behave like a voltage divider with a 
+  pure delay of <IMG
+ WIDTH="17" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img150.png"
+ ALT="$T$">. In particular, if the internal impedance of the source 
+  is zero <IMG
+ WIDTH="56" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img101.png"
+ ALT="$Z_1=0$">, then <IMG
+ WIDTH="49" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img186.png"
+ ALT="$A=1$">, <IMG
+ WIDTH="66" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img102.png"
+ ALT="$\eta_1=-1$">, <IMG
+ WIDTH="52" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img118.png"
+ ALT="$\eta_2=0$">, <IMG
+ WIDTH="54" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img187.png"
+ ALT="$T_1=1$">, <!-- MATH
+ $T_2=e^{-j\omega T}$
+ -->
+<IMG
+ WIDTH="89" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img188.png"
+ ALT="$T_2=e^{-j\omega T}$">,
+  <IMG
+ WIDTH="72" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img189.png"
+ ALT="$Z_{in}=Z_0$">, and consequently, 
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V_1=T_1V_0=V_0,\;\;\;\;\;\;\;v_1(t)=v_0(t),\;\;\;\;\;\;\;
+  V_2=T_2V_0=V_0e^{-j\omega T},\;\;\;\;\;\; v_2(t)=v_1(t-T)=v_0(t-T)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="697" HEIGHT="31" BORDER="0"
+ SRC="img190.png"
+ ALT="\begin{displaymath}V_1=T_1V_0=V_0,\;\;\;\;\;\;\;v_1(t)=v_0(t),\;\;\;\;\;\;\;
+V_2=T_2V_0=V_0e^{-j\omega T},\;\;\;\;\;\; v_2(t)=v_1(t-T)=v_0(t-T) \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+i.e., the input voltage <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img97.png"
+ ALT="$V_0$"> is transmitted to the output (the load) with
+  no distortion but only a delay of <IMG
+ WIDTH="17" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img150.png"
+ ALT="$T$">. 
+
+<P>
+</LI>
+<LI>When <IMG
+ WIDTH="66" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img98.png"
+ ALT="$Z_1=Z_0$"> but the load is an open circuit of <IMG
+ WIDTH="64" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img111.png"
+ ALT="$Z_2=\infty$">, we have
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+A=\frac{1}{2},\;\;\;\;\;\;\eta_1=0,\;\;\;\;\;\;\eta_2=1,
+  \;\;\;\;\;\;T_1=\frac{1}{2}(1+e^{-2j\omega T}),\;\;\;\;\;\;T_2=e^{-j\omega T}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="525" HEIGHT="42" BORDER="0"
+ SRC="img191.png"
+ ALT="\begin{displaymath}A=\frac{1}{2},\;\;\;\;\;\;\eta_1=0,\;\;\;\;\;\;\eta_2=1,
+\;\...
+...=\frac{1}{2}(1+e^{-2j\omega T}),\;\;\;\;\;\;T_2=e^{-j\omega T} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Z_{in}=\frac{1+e^{-2j\omega T}}{1-e^{-2j\omega T}}Z_0
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="151" HEIGHT="47" BORDER="0"
+ SRC="img192.png"
+ ALT="\begin{displaymath}Z_{in}=\frac{1+e^{-2j\omega T}}{1-e^{-2j\omega T}}Z_0 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+In particular, if <!-- MATH
+ $|\omega T| << 1$
+ -->
+<IMG
+ WIDTH="83" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img193.png"
+ ALT="$\vert\omega T\vert &lt;&lt; 1$">, we have
+  <A NAME="tex2html1"
+  HREF="../transmission_line_footnote/index.html">(*)</A>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Z_{in}\approx \frac{Z_0}{j\omega T}=\frac{\sqrt{L/C}}{j\omega\;l\sqrt{LC}}
+  =\frac{1}{j\omega\;lC}=\frac{1}{j\omega C_{line}}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="334" HEIGHT="51" BORDER="0"
+ SRC="img194.png"
+ ALT="\begin{displaymath}Z_{in}\approx \frac{Z_0}{j\omega T}=\frac{\sqrt{L/C}}{j\omega\;l\sqrt{LC}}
+=\frac{1}{j\omega\;lC}=\frac{1}{j\omega C_{line}} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+i.e., if <IMG
+ WIDTH="17" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img150.png"
+ ALT="$T$"> is short compared to times of interest (pulse width or
+  period of signal), the open circuit load behaves like a capacitor with
+  a capacitance equal to that of the entire line <IMG
+ WIDTH="83" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img195.png"
+ ALT="$C_{line}=lC$">.
+
+<P>
+Give an input <!-- MATH
+ $V_0={\cal F}[v_0(t)]$
+ -->
+<IMG
+ WIDTH="105" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img87.png"
+ ALT="$V_0={\cal F}[v_0(t)]$">, we have
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V_2=T_2V_0=V_0 e^{-j\omega T},\;\;\;\;\;\;\;
+  v_2(t)={\cal F}^{-1}[V_2]={\cal F}[V_0 e^{-j\omega T}]=v_0(t-T)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="522" HEIGHT="31" BORDER="0"
+ SRC="img196.png"
+ ALT="\begin{displaymath}V_2=T_2V_0=V_0 e^{-j\omega T},\;\;\;\;\;\;\;
+v_2(t)={\cal F}^{-1}[V_2]={\cal F}[V_0 e^{-j\omega T}]=v_0(t-T) \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+i.e., the output is just a delayed version of the input. But at the front,
+  we have
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V_1=T_1V_0=\frac{1}{2}(1+e^{-2j\omega T}),\;\;\;\;\;\;
+  v_1(t)={\cal F}^{-1}[V_1]={\cal F}^{-1}\left[\frac{1}{2}(1+e^{-2j\omega T})\right]
+  =\frac{1}{2}[v_0(t)+v_0(t-2T)]
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="699" HEIGHT="45" BORDER="0"
+ SRC="img197.png"
+ ALT="\begin{displaymath}V_1=T_1V_0=\frac{1}{2}(1+e^{-2j\omega T}),\;\;\;\;\;\;
+v_1(t...
+...}{2}(1+e^{-2j\omega T})\right]
+=\frac{1}{2}[v_0(t)+v_0(t-2T)] \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The second term <IMG
+ WIDTH="76" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img198.png"
+ ALT="$v(t-2T)$"> is the reflection at the back end of the line 
+  with coefficient <IMG
+ WIDTH="52" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img112.png"
+ ALT="$\eta_2=1$">, which arrives at the front after traveling
+  along the line forward and backward in <IMG
+ WIDTH="26" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img129.png"
+ ALT="$2T$"> time. But as <IMG
+ WIDTH="52" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img99.png"
+ ALT="$\eta_1=0$">, it 
+  is no longer reflected at the front.
+
+<P>
+</LI>
+<LI>When <IMG
+ WIDTH="66" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img98.png"
+ ALT="$Z_1=Z_0$"> but the load is a short circuit <IMG
+ WIDTH="56" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img114.png"
+ ALT="$Z_2=0$">, we have
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+A=\frac{1}{2},\;\;\;\;\;\;\eta_1=0,\;\;\;\;\;\eta_2=-1,
+  \;\;\;\;\;\; T_1=\frac{1}{2}(1-e^{-2j\omega T}),\;\;\;\;\;\;T_2=0
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="498" HEIGHT="42" BORDER="0"
+ SRC="img199.png"
+ ALT="\begin{displaymath}A=\frac{1}{2},\;\;\;\;\;\;\eta_1=0,\;\;\;\;\;\eta_2=-1,
+\;\;\;\;\;\; T_1=\frac{1}{2}(1-e^{-2j\omega T}),\;\;\;\;\;\;T_2=0 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Z_{in}=\frac{1-e^{-2j\omega T}}{1+e^{-2j\omega T}}Z_0
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="151" HEIGHT="47" BORDER="0"
+ SRC="img200.png"
+ ALT="\begin{displaymath}Z_{in}=\frac{1-e^{-2j\omega T}}{1+e^{-2j\omega T}}Z_0 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+In particular, when <IMG
+ WIDTH="74" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img201.png"
+ ALT="$\omega T &lt;&lt; 1$">, we have
+  <A NAME="tex2html2"
+  HREF="../transmission_line_footnote/index.html">(*)</A>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Z_{in}\approx Z_0 \;j\omega T=\sqrt{L/C}j\omega\;l\sqrt{LC}
+  =j\omega\;lL=j\omega L_{line}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="391" HEIGHT="35" BORDER="0"
+ SRC="img202.png"
+ ALT="\begin{displaymath}Z_{in}\approx Z_0 \;j\omega T=\sqrt{L/C}j\omega\;l\sqrt{LC}
+=j\omega\;lL=j\omega L_{line} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+i.e., if <IMG
+ WIDTH="17" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img150.png"
+ ALT="$T$"> is short compared to times of interest, the short
+  circuit load behaves like an inductor of inductance equal to that of 
+  the entire line <IMG
+ WIDTH="81" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img203.png"
+ ALT="$L_{line}=lL$">.
+
+<P>
+Given an input <!-- MATH
+ $V_0={\cal F}[v_0(t)]$
+ -->
+<IMG
+ WIDTH="105" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img87.png"
+ ALT="$V_0={\cal F}[v_0(t)]$">, we have
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V_2=T_2V_0=0
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="107" HEIGHT="29" BORDER="0"
+ SRC="img204.png"
+ ALT="\begin{displaymath}V_2=T_2V_0=0 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+i.e., the output is zero due to the short circuit load. But at the front
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V_1=T_1V_0=\frac{1}{2}(1-e^{-2j\omega T}),\;\;\;\;\;\;
+  v_1(t)={\cal F}^{-1}[V_1]=\frac{1}{2}[v_0(t)-v_0(t-2T)]
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="540" HEIGHT="42" BORDER="0"
+ SRC="img205.png"
+ ALT="\begin{displaymath}V_1=T_1V_0=\frac{1}{2}(1-e^{-2j\omega T}),\;\;\;\;\;\;
+v_1(t)={\cal F}^{-1}[V_1]=\frac{1}{2}[v_0(t)-v_0(t-2T)] \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The second term <IMG
+ WIDTH="96" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img206.png"
+ ALT="$-v_0(t-2T)$"> is the reflection at the back end of the line 
+  with coefficient <IMG
+ WIDTH="66" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img115.png"
+ ALT="$\eta_2=-1$">, which arrives at the front after traveling along 
+  the line forward and backward in <IMG
+ WIDTH="26" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img129.png"
+ ALT="$2T$"> time. In particular, when <IMG
+ WIDTH="93" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img207.png"
+ ALT="$v_0(t)=u(t)$">,
+  the reflection <IMG
+ WIDTH="90" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img208.png"
+ ALT="$-u(t-2T)$"> cancels the input <IMG
+ WIDTH="34" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img209.png"
+ ALT="$u(t)$"> after <IMG
+ WIDTH="26" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img129.png"
+ ALT="$2T$"> time, the step
+  input becomes a pulse of width <IMG
+ WIDTH="26" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img129.png"
+ ALT="$2T$"> at the front of the line.
+
+<P>
+</LI>
+<LI>When <IMG
+ WIDTH="66" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img98.png"
+ ALT="$Z_1=Z_0$"> but the load is purely inductive <!-- MATH
+ $Z_2=j\omega L_2$
+ -->
+<IMG
+ WIDTH="86" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img210.png"
+ ALT="$Z_2=j\omega L_2$">, we have
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+A=\frac{1}{2},\;\;\;\;\;\;\eta_1=0,\;\;\;\;\;\;
+  \eta_2=\frac{j\omega L_2-Z_0}{j\omega L_2+Z_0}=\frac{j\omega-1/\tau}{j\omega+1/\tau}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="387" HEIGHT="48" BORDER="0"
+ SRC="img211.png"
+ ALT="\begin{displaymath}A=\frac{1}{2},\;\;\;\;\;\;\eta_1=0,\;\;\;\;\;\;
+\eta_2=\frac...
+..._2-Z_0}{j\omega L_2+Z_0}=\frac{j\omega-1/\tau}{j\omega+1/\tau} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where <!-- MATH
+ $\tau\stackrel{\triangle}{=}\omega L_2/Z_0$
+ -->
+<IMG
+ WIDTH="95" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img212.png"
+ ALT="$\tau\stackrel{\triangle}{=}\omega L_2/Z_0$"> is the time constant of the
+  circuit. Now we have
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+T_1=A(1+\eta_2e^{-2j\omega T})
+  =\frac{1}{2}\left[1+\frac{j\omega-1/\tau}{\omega+1/\tau} e^{-2j\omega T}\right]
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="370" HEIGHT="48" BORDER="0"
+ SRC="img213.png"
+ ALT="\begin{displaymath}T_1=A(1+\eta_2e^{-2j\omega T})
+=\frac{1}{2}\left[1+\frac{j\omega-1/\tau}{\omega+1/\tau} e^{-2j\omega T}\right] \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+T_2=A(1+\eta_2)e^{-j\omega T}=\frac{j\omega}{j\omega+1/\tau}e^{-j\omega T}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="297" HEIGHT="46" BORDER="0"
+ SRC="img214.png"
+ ALT="\begin{displaymath}T_2=A(1+\eta_2)e^{-j\omega T}=\frac{j\omega}{j\omega+1/\tau}e^{-j\omega T} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+Consider the response to a unit step <!-- MATH
+ $V_0={\cal F}[u(t)]=1/j\omega$
+ -->
+<IMG
+ WIDTH="159" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img215.png"
+ ALT="$V_0={\cal F}[u(t)]=1/j\omega$">.
+  At the front of the line we have
+  <BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+V_1 & = & T_1V_0
+    =\frac{1}{2}\left[1+\frac{j\omega-1/\tau}{j\omega+1/\tau}e^{-2j\omega T}\right]\frac{1}{j\omega}
+    \nonumber \\
+    &=&\frac{1}{2j\omega}\left[1+\left(\frac{2j\omega}{j\omega+1/\tau}-1\right)e^{-2j\omega T}\right]
+    =\frac{1}{2j\omega}\left(1-e^{-2j\omega T}\right)+\frac{1}{j\omega+1/\tau}e^{-2j\omega T}
+    \nonumber
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img216.png"
+ ALT="$\displaystyle V_1$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="18" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img217.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="274" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="img218.png"
+ ALT="$\displaystyle T_1V_0
+=\frac{1}{2}\left[1+\frac{j\omega-1/\tau}{j\omega+1/\tau}e^{-2j\omega T}\right]\frac{1}{j\omega}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="18" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img217.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="566" HEIGHT="55" ALIGN="MIDDLE" BORDER="0"
+ SRC="img219.png"
+ ALT="$\displaystyle \frac{1}{2j\omega}\left[1+\left(\frac{2j\omega}{j\omega+1/\tau}-1...
+...2j\omega}\left(1-e^{-2j\omega T}\right)+\frac{1}{j\omega+1/\tau}e^{-2j\omega T}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+or in time domain
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_1(t)={\cal F}^{-1}[V_1]=\frac{1}{2}[u(t)-u(t-2T)]+e^{-(t-2T)/\tau} u(t-2T)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="455" HEIGHT="42" BORDER="0"
+ SRC="img220.png"
+ ALT="\begin{displaymath}v_1(t)={\cal F}^{-1}[V_1]=\frac{1}{2}[u(t)-u(t-2T)]+e^{-(t-2T)/\tau} u(t-2T) \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The response at the back end of the line is
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V_2=T_2V_0=\frac{j\omega}{j\omega+\tau}e^{-j\omega T} \frac{1}{j\omega}
+  =\frac{1}{j\omega+\tau}e^{-j\omega T}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="342" HEIGHT="45" BORDER="0"
+ SRC="img221.png"
+ ALT="\begin{displaymath}V_2=T_2V_0=\frac{j\omega}{j\omega+\tau}e^{-j\omega T} \frac{1}{j\omega}
+=\frac{1}{j\omega+\tau}e^{-j\omega T} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+or in time domain
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_2(t)={\cal F}^{-1}[V_2]=u(t-T) e^{-(t-T)/\tau}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="274" HEIGHT="31" BORDER="0"
+ SRC="img222.png"
+ ALT="\begin{displaymath}v_2(t)={\cal F}^{-1}[V_2]=u(t-T) e^{-(t-T)/\tau} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+We see that this is a <EM>delayed differentiator</EM> with delay time <IMG
+ WIDTH="17" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img150.png"
+ ALT="$T$">. 
+
+<P>
+</LI>
+<LI>So far we have only considered some special cases where either <IMG
+ WIDTH="52" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img99.png"
+ ALT="$\eta_1=0$"> 
+  or <IMG
+ WIDTH="52" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img118.png"
+ ALT="$\eta_2=0$"> (reflection at either or both ends is zero). As the result, the 
+  denominator of <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img143.png"
+ ALT="$T_1$"> and <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img148.png"
+ ALT="$T_2$"> is always 1. Now we consider the general case
+  where <IMG
+ WIDTH="52" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img138.png"
+ ALT="$\eta_1\ne 0$"> and <IMG
+ WIDTH="52" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img139.png"
+ ALT="$\eta_2\ne 0$">. Assume <IMG
+ WIDTH="84" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img223.png"
+ ALT="$Z_1=Z_0/2$"> and <IMG
+ WIDTH="75" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img224.png"
+ ALT="$Z_2=2Z_0$">, then 
+  we have
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+A=\frac{Z_0}{Z_1+Z_0}=\frac{2Z_1}{Z_1+2Z_1}=\frac{2}{3}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="231" HEIGHT="45" BORDER="0"
+ SRC="img225.png"
+ ALT="\begin{displaymath}A=\frac{Z_0}{Z_1+Z_0}=\frac{2Z_1}{Z_1+2Z_1}=\frac{2}{3} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\eta_1=\frac{Z_1-Z_0}{Z_1+Z_0}=\frac{Z_1-2Z_1}{Z_1+2Z_1}=-\frac{1}{3}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="247" HEIGHT="45" BORDER="0"
+ SRC="img226.png"
+ ALT="\begin{displaymath}\eta_1=\frac{Z_1-Z_0}{Z_1+Z_0}=\frac{Z_1-2Z_1}{Z_1+2Z_1}=-\frac{1}{3} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\eta_2=\frac{Z_2-Z_0}{Z_2+Z_0}=\frac{2Z_0-Z_0}{2Z_0+Z_0}=\frac{1}{3}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="233" HEIGHT="45" BORDER="0"
+ SRC="img227.png"
+ ALT="\begin{displaymath}\eta_2=\frac{Z_2-Z_0}{Z_2+Z_0}=\frac{2Z_0-Z_0}{2Z_0+Z_0}=\frac{1}{3} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+If the input is a step <IMG
+ WIDTH="93" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img207.png"
+ ALT="$v_0(t)=u(t)$">, find <IMG
+ WIDTH="40" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img180.png"
+ ALT="$v_2(t)$">:
+  <BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+V_2&=&V_0A(1+\eta_2)e^{-j\omega T}\left[1+\eta_1\eta_2 e^{-2j\omega T}
+    +(\eta_1\eta_2)^2 e^{-4j\omega T}+\cdots \right]
+    \nonumber \\
+    &=&\frac{8}{9}V_0 e^{-j\omega T}\left[1-\frac{1}{9} e^{-2j\omega T}
+    +\left(\frac{1}{9}\right)^2 e^{-4j\omega T}-\cdots \right]
+    \nonumber \\
+    &=&V_0\left[ \frac{8}{9} e^{-j\omega T}-\frac{8}{81}e^{-3j\omega T}
+    +\frac{8}{729}e^{-5j\omega T}-\cdots \right]
+    \nonumber
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img228.png"
+ ALT="$\displaystyle V_2$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="18" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img217.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="438" HEIGHT="46" ALIGN="MIDDLE" BORDER="0"
+ SRC="img229.png"
+ ALT="$\displaystyle V_0A(1+\eta_2)e^{-j\omega T}\left[1+\eta_1\eta_2 e^{-2j\omega T}
++(\eta_1\eta_2)^2 e^{-4j\omega T}+\cdots \right]$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="18" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img217.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="354" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img230.png"
+ ALT="$\displaystyle \frac{8}{9}V_0 e^{-j\omega T}\left[1-\frac{1}{9} e^{-2j\omega T}
++\left(\frac{1}{9}\right)^2 e^{-4j\omega T}-\cdots \right]$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="18" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img217.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="336" HEIGHT="57" ALIGN="MIDDLE" BORDER="0"
+ SRC="img231.png"
+ ALT="$\displaystyle V_0\left[ \frac{8}{9} e^{-j\omega T}-\frac{8}{81}e^{-3j\omega T}
++\frac{8}{729}e^{-5j\omega T}-\cdots \right]$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Find the value of the output for each of the following time durations.
+  
+<UL>
+<LI><IMG
+ WIDTH="56" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img232.png"
+ ALT="$t&lt;T:$"> 
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_2(t)=0
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="67" HEIGHT="31" BORDER="0"
+ SRC="img233.png"
+ ALT="\begin{displaymath}v_2(t)=0 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI><IMG
+ WIDTH="101" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img234.png"
+ ALT="$T&lt;t&lt;3T:$"> 
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_2(t)=\frac{8}{9}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="70" HEIGHT="42" BORDER="0"
+ SRC="img235.png"
+ ALT="\begin{displaymath}v_2(t)=\frac{8}{9} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI><IMG
+ WIDTH="109" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img236.png"
+ ALT="$3T&lt;t&lt;5T:$"> 
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_2(t)=\frac{8}{9}-\frac{8}{81}=\frac{64}{81}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="157" HEIGHT="42" BORDER="0"
+ SRC="img237.png"
+ ALT="\begin{displaymath}v_2(t)=\frac{8}{9}-\frac{8}{81}=\frac{64}{81} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI><IMG
+ WIDTH="109" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img238.png"
+ ALT="$5T&lt;t&lt;7T:$"> 
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_2(t)=\frac{8}{9}-\frac{8}{81}+\frac{8}{729}=\frac{576}{729}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="217" HEIGHT="42" BORDER="0"
+ SRC="img239.png"
+ ALT="\begin{displaymath}v_2(t)=\frac{8}{9}-\frac{8}{81}+\frac{8}{729}=\frac{576}{729} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\cdots  \cdots  \cdots  \cdots
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="89" HEIGHT="27" BORDER="0"
+ SRC="img240.png"
+ ALT="\begin{displaymath}\cdots \cdots \cdots \cdots \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+</UL>
+  The steady state value <IMG
+ WIDTH="51" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img241.png"
+ ALT="$v_2(\infty)$"> can be found to be
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_2(\infty)=\frac{8}{9}\sum_{k=0}^\infty \left(\frac{1}{9}\right)^k
+  =\frac{8}{9}\frac{1}{1-(-1/9)}=\frac{4}{5}=0.8
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="360" HEIGHT="55" BORDER="0"
+ SRC="img242.png"
+ ALT="\begin{displaymath}v_2(\infty)=\frac{8}{9}\sum_{k=0}^\infty \left(\frac{1}{9}\right)^k
+=\frac{8}{9}\frac{1}{1-(-1/9)}=\frac{4}{5}=0.8 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Plot the output <IMG
+ WIDTH="40" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img180.png"
+ ALT="$v_2(t)$"> for <IMG
+ WIDTH="87" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img243.png"
+ ALT="$0&lt;t&lt;7T$">. 
+
+<P>
+Next we repeat the above for an impulse input <!-- MATH
+ $v_0(t)=u(t)-u(T/3)$
+ -->
+<IMG
+ WIDTH="167" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img244.png"
+ ALT="$v_0(t)=u(t)-u(T/3)$">. As the
+  signal only has a finite duration of <IMG
+ WIDTH="34" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img245.png"
+ ALT="$T/3$">, at any time <IMG
+ WIDTH="65" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img246.png"
+ ALT="$t=2kT$"> only the term 
+  <!-- MATH
+ $(\eta_1\eta_2)^k e^{-2kj\omega T}$
+ -->
+<IMG
+ WIDTH="117" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img135.png"
+ ALT="$(\eta_1\eta_2)^ke^{-2kj\omega T}$"> representing the wave arriving at the back end
+  most recently is non-zero. Therefore we have:
+  
+<UL>
+<LI><IMG
+ WIDTH="56" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img247.png"
+ ALT="$t=T:$"> 
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_2(t)=\frac{8}{9}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="70" HEIGHT="42" BORDER="0"
+ SRC="img235.png"
+ ALT="\begin{displaymath}v_2(t)=\frac{8}{9} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI><IMG
+ WIDTH="71" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img248.png"
+ ALT="$T=3T:$"> 
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_2(t)=\frac{8}{9}\left(-\frac{1}{9}\right)=-\frac{8}{81}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="181" HEIGHT="45" BORDER="0"
+ SRC="img249.png"
+ ALT="\begin{displaymath}v_2(t)=\frac{8}{9}\left(-\frac{1}{9}\right)=-\frac{8}{81} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI><IMG
+ WIDTH="65" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img250.png"
+ ALT="$t=5T:$"> 
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_2=\frac{8}{9}\left(\frac{1}{81}\right)=\frac{8}{729}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="151" HEIGHT="45" BORDER="0"
+ SRC="img251.png"
+ ALT="\begin{displaymath}v_2=\frac{8}{9}\left(\frac{1}{81}\right)=\frac{8}{729} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>    
+</LI>
+<LI>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\cdots  \cdots  \cdots  \cdots
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="89" HEIGHT="27" BORDER="0"
+ SRC="img240.png"
+ ALT="\begin{displaymath}\cdots \cdots \cdots \cdots \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+</UL>
+  Obviously the steady state value <IMG
+ WIDTH="83" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img252.png"
+ ALT="$v_2(\infty)=0$">.
+
+<P>
+</LI>
+</UL>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html49"
+  HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html47"
+  HREF="transmission_line.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html41"
+  HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html50"
+  HREF="node5.html">About this document ...</A>
+<B> Up:</B> <A NAME="tex2html48"
+  HREF="transmission_line.html">transmission_line</A>
+<B> Previous:</B> <A NAME="tex2html42"
+  HREF="node3.html">Forward and backward traveling</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Ruye Wang
+2016-05-20
+</ADDRESS>
+</BODY>
+</HTML>

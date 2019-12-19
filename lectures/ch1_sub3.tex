@@ -1,0 +1,25 @@
+\documentstyle[12pt]{article}
+\usepackage{html}
+\begin{document}
+
+Design a method to obtain the true source voltage $V_0$ and internal
+resistance $R_0$ by a voltmeter and an ammeter with known $R_v$ and $R_a$.
+Give the expression of $V_0$ and $R_0$ in terms of the measured open-circuit
+voltage $V$, short-circuit $I$, and $R_v$ and $R_a$. 
+
+
+
+\[
+V_{OC}=V_0\frac{R_V}{R_V+R_0},\;\;\;\;\;I_{SC}=\frac{V_0}{R_0+R_A}
+\]
+Solving these for $V_0$ and $R_0$ we get:
+\[
+R_0=R_V\;\frac{I_{SC}R_A-V_{OC}}{V_{OC}-I_{SC}R_V},\;\;\;\;
+V_0=V_{OC}\;\frac{I_{SC}(R_A-R_V)}{V_{OC}-I_{SC}R_V}
+\]
+
+
+\end{itemize}
+
+\end{document}
+

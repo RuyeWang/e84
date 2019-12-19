@@ -1,0 +1,341 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>First-order system as a filter</TITLE>
+<META NAME="description" CONTENT="First-order system as a filter">
+<META NAME="keywords" CONTENT="ch3">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="ch3.css">
+
+<LINK REL="next" HREF="node18.html">
+<LINK REL="previous" HREF="node16.html">
+<LINK REL="next" HREF="node18.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node18.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node16.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node16.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node18.html">Second-order system as a</A>
+<B> Up:</B> <A
+ HREF="node16.html">Frequency Response Functions and</A>
+<B> Previous:</B> <A
+ HREF="node16.html">Frequency Response Functions and</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H3><A ID="SECTION00017100000000000000">
+First-order system as a filter</A>
+</H3>
+
+<P>
+The first order RC and RL systems can be used as either a high-pass or
+low-pass filter, depending on voltage across which component is treated
+as the output, while the input voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img809.svg"
+ ALT="$v_0(t)$"></SPAN> is applied across both 
+components connected in series. For example, if the voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img222.svg"
+ ALT="$v_R(t)$"></SPAN> 
+across <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img112.svg"
+ ALT="$R$"></SPAN> is treated as the output, the RC circuit is a high-pass filter 
+and the RL circuit is a low-pass filter. The cut-off or corner frequency 
+of such filters is <!-- MATH
+ $\omega_c=1/\tau$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img810.svg"
+ ALT="$\omega_c=1/\tau$"></SPAN>.
+
+<P>
+
+<UL>
+<LI><B>RC circuit</B> 
+
+<P>
+Treating the RC circuit as a voltage divider, the phasor representations of
+  the voltage across <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img112.svg"
+ ALT="$R$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img104.svg"
+ ALT="$C$"></SPAN> are
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\dot{V}_R=\dot{V}_0\frac{R}{R+1/j\omega C}=\dot{V}_0\frac{j\omega RC}{j\omega RC+1}
+    =\dot{V}_0\frac{j\omega\tau}{j\omega\tau+1}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img811.svg"
+ ALT="$\displaystyle \dot{V}_R=\dot{V}_0\frac{R}{R+1/j\omega C}=\dot{V}_0\frac{j\omega RC}{j\omega RC+1}
+=\dot{V}_0\frac{j\omega\tau}{j\omega\tau+1}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">295</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+and
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\dot{V}_C=\dot{V}_0\frac{1/j\omega_c}{R+1/j\omega C}
+    =\dot{V}_0\frac{1}{1+j\omega RC}=\dot{V}_0\frac{1}{1+j\omega\tau}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img812.svg"
+ ALT="$\displaystyle \dot{V}_C=\dot{V}_0\frac{1/j\omega_c}{R+1/j\omega C}
+=\dot{V}_0\frac{1}{1+j\omega RC}=\dot{V}_0\frac{1}{1+j\omega\tau}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">296</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+where <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img224.svg"
+ ALT="$\tau=RC$"></SPAN> is the time constant of this RC first order system. The 
+  FRFs and transfer functions of the systems are
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+H_R(\omega)=\frac{\dot{V}_R}{\dot{V}_0}=\frac{j\omega\tau}{j\omega\tau+1}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.27ex; vertical-align: -2.35ex; " SRC="img813.svg"
+ ALT="$\displaystyle H_R(\omega)=\frac{\dot{V}_R}{\dot{V}_0}=\frac{j\omega\tau}{j\omega\tau+1}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">297</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+H_C(\omega)=\frac{\dot{V}_C}{\dot{V}_0}=\frac{1}{1+j\omega\tau}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.27ex; vertical-align: -2.35ex; " SRC="img814.svg"
+ ALT="$\displaystyle H_C(\omega)=\frac{\dot{V}_C}{\dot{V}_0}=\frac{1}{1+j\omega\tau}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">298</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+  <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img815.svg"
+ ALT="$H_R$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img816.svg"
+ ALT="$H_C$"></SPAN> are high-pass and low-pass filters, respectively. At the 
+  cut-off frequency defined as <!-- MATH
+ $\omega_c=1/\tau=1/RC$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img817.svg"
+ ALT="$\omega_c=1/\tau=1/RC$"></SPAN>, the magnitude of the 
+  output attenuates to <!-- MATH
+ $1/\sqrt{2}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img818.svg"
+ ALT="$1/\sqrt{2}$"></SPAN> of the peak magnitude, the output power 
+  is half of the input power:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+|H_R(\omega)|=\left\{\begin{array}{cl}0&\omega=0\\
+    1/\sqrt{2}&\omega=\omega_c=1/\tau\\1&\omega=\infty\end{array}\right.
+    \;\;\;\;\;\;\;
+    |H_C(\omega)|=\left\{\begin{array}{cl}1&\omega=0\\
+    1/\sqrt{2}&\omega=\omega_c=1/\tau\\0&\omega=\infty\end{array}\right.
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 8.83ex; vertical-align: -3.79ex; " SRC="img819.svg"
+ ALT="$\displaystyle \vert H_R(\omega)\vert=\left\{\begin{array}{cl}0&amp;\omega=0\\
+1/\s...
+...mega=0\\
+1/\sqrt{2}&amp;\omega=\omega_c=1/\tau\\ 0&amp;\omega=\infty\end{array}\right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">299</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+<LI><B>RL circuit</B>
+
+<P>
+Treating the RL circuit as a voltage divider, the phasor representation of
+  the voltage across <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img112.svg"
+ ALT="$R$"></SPAN> can be found to be
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\dot{V}_R=\dot{V}_0\frac{R}{R+j\omega L}
+    =\dot{V}_0\frac{1}{1+j\omega L/R}=\dot{V}_0\frac{1}{1+j\omega\tau}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img820.svg"
+ ALT="$\displaystyle \dot{V}_R=\dot{V}_0\frac{R}{R+j\omega L}
+=\dot{V}_0\frac{1}{1+j\omega L/R}=\dot{V}_0\frac{1}{1+j\omega\tau}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">300</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\dot{V}_L=\dot{V}_0\frac{j\omega L}{R+j\omega L}
+    =\dot{V}_0\frac{j\omega}{R/L+j\omega}=\dot{V}_0\frac{j\omega}{j\omega+1/\tau}
+    =\dot{V}_0\frac{j\omega\tau}{j\omega\tau+1}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img821.svg"
+ ALT="$\displaystyle \dot{V}_L=\dot{V}_0\frac{j\omega L}{R+j\omega L}
+=\dot{V}_0\frac{...
+...{V}_0\frac{j\omega}{j\omega+1/\tau}
+=\dot{V}_0\frac{j\omega\tau}{j\omega\tau+1}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">301</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+where <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img228.svg"
+ ALT="$\tau=L/R$"></SPAN> is the time constant of this RL first order system. The 
+  FRFs and transfer functions of the system are
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+H_R(\omega)=\frac{\dot{V}_R}{\dot{V}_0}=\frac{1}{j\omega\tau+1}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.27ex; vertical-align: -2.35ex; " SRC="img822.svg"
+ ALT="$\displaystyle H_R(\omega)=\frac{\dot{V}_R}{\dot{V}_0}=\frac{1}{j\omega\tau+1}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">302</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+H_L(\omega)=\frac{\dot{V}_L}{\dot{V}_0}=\frac{j\omega\tau}{j\omega\tau+1}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.27ex; vertical-align: -2.35ex; " SRC="img823.svg"
+ ALT="$\displaystyle H_L(\omega)=\frac{\dot{V}_L}{\dot{V}_0}=\frac{j\omega\tau}{j\omega\tau+1}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">303</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+and
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+|H_R(\omega)|=\left\{\begin{array}{cl}0&\omega=\infty\\
+    1/\sqrt{2}&\omega=\omega_c=1/\tau\\1&\omega=0\end{array}\right.
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 8.83ex; vertical-align: -3.79ex; " SRC="img824.svg"
+ ALT="$\displaystyle \vert H_R(\omega)\vert=\left\{\begin{array}{cl}0&amp;\omega=\infty\\
+1/\sqrt{2}&amp;\omega=\omega_c=1/\tau\\ 1&amp;\omega=0\end{array}\right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">304</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+This system is a low-pass filter as it passes low frequencies but 
+  attenuates high frequencies. 
+
+<P>
+</LI>
+</UL>
+
+<P>
+The cut-off or corner frequency <!-- MATH
+ $\omega_c=1/\tau=L/R$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img825.svg"
+ ALT="$\omega_c=1/\tau=L/R$"></SPAN> is defined as
+the frequency at which the magnitude of the output attenuates to 
+<!-- MATH
+ $|H(\omega_c)|=1/\sqrt{2}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img826.svg"
+ ALT="$\vert H(\omega_c)\vert=1/\sqrt{2}$"></SPAN> of the peak magnitude, unity in first 
+order systems, and the output power is half of the peak power, 
+the input power for first order systems. The gain of a system is
+typically measured in decibel (dB) and plotted in Bode plots in 
+terms of the log-magnitude of the FRF defined as <!-- MATH
+ $20 \log_{10}|H(\omega)|$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img827.svg"
+ ALT="$20 \log_{10}\vert H(\omega)\vert$"></SPAN>. 
+At the cut-off frequency, we have
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+20 \log_{10}(1/\sqrt{2})=-20\log_{10}\sqrt{2}=-10\log_{10}2=-3
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.25ex; vertical-align: -0.70ex; " SRC="img828.svg"
+ ALT="$\displaystyle 20 \log_{10}(1/\sqrt{2})=-20\log_{10}\sqrt{2}=-10\log_{10}2=-3$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">305</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+(For more discussion of the Bode plots, see
+<A ID="tex2html10"
+  HREF="http://fourier.eng.hmc.edu/e59/lectures/e59/node40.html">here</A>.)
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/E84FirstOrderFilter.png"
+ ALT="E84FirstOrderFilter.png">
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node18.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node16.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node16.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node18.html">Second-order system as a</A>
+<B> Up:</B> <A
+ HREF="node16.html">Frequency Response Functions and</A>
+<B> Previous:</B> <A
+ HREF="node16.html">Frequency Response Functions and</A></DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

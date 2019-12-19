@@ -1,0 +1,1180 @@
+\documentstyle[12pt]{article}
+\usepackage{html}
+\textwidth 6.0in
+\topmargin -0.5in
+\oddsidemargin -0in
+\evensidemargin -0.5in
+% \usepackage{graphics}  
+\begin{document}
+
+\section*{Chapter 4: Semiconductor Devices}
+
+\subsection*{Semiconductor materials}
+
+\begin{itemize}
+\item {\bf Conductors and Insulators:} 
+Good conductors such as copper and silver can conduct electricity with
+little resistance because their crystal structure allows a loosely
+bound valence electron per atom to move freely throughout the lattice. 
+Insulators do not conduct electric current as no free electrons exist
+in the material.
+
+\item {\bf Semiconductors:} 
+The two semiconductors of great importance are silicon (Si 14) and 
+germanium (Ge 32), which both have four valence electrons. In crystal
+structure (lattice)  is a tetrahedral pattern with each atom sharing one 
+valence electron with each of four neighbors (covalent bonds). 
+
+If an electron gains enough thermal energy (1.1 eV for Si or 0.7 eV for
+Ge), it may break the covalent bond and becomes a free electron of negative
+charge, while leaving a vacancy or a hole of positive charge. In an electric
+field, a free electron may move to a new location to fill a hole there, i.e.,
+both such electrons and holes contribute to electrical conduction. Such 
+crystal is called intrinsic semiconductor.
+
+At room temperature, relatively few electrons gain enough energy to become
+free electrons, the over all conductivity of such materials is low, thereby
+their name semiconductors. 
+
+\htmladdimg{../figures/elements.gif}
+
+\item {\bf Doped Semiconductors:}
+The conductivity of semiconductor material can be improved by doping, i.e.,
+by adding an impurity element with either three or five valence electrons,
+called, respectively, trivalent and pentavalent elements. 
+
+\begin{itemize}
+\item {\bf n-type semiconductor:}
+When a small amount of pentavalent element is added, a silicon atom in the
+lattice may be replaced by a pentavalent atom with four of its valent electrons
+forming the covalent bounds and one extra free electron. This is an {\bf n-type}
+semiconductor whose conductivity is much improved compared to the intrinsic
+semiconductors, due to the extra free electrons in the lattice, which are called
+{\bf predominant or majority current carriers}. There also exist some tiny number 
+of holes called {\bf minority carriers}.
+
+\item {\bf p-type semiconductor:}
+When a small amount of trivalent element is added, a silicon atom in the
+lattice may be replaced by a trivalent atom with only three valent electrons
+forming three covalent bounds and a hole in the lattice. This is a {\bf p-type}
+semiconductor whose conductivity is also much improved compared to the intrinsic
+semiconductors, due to the holes in the lattice, which are called {\bf predominant 
+or majority current carriers}. There also exist some tiny number of free electrons
+called {\bf minority carriers}.
+\end{itemize}
+
+\htmladdimg{../figures/lattice.gif}
+
+\item {\bf pn Junction}
+
+\htmladdimg{../figures/pn_junction0.gif}
+
+When p-type and n-type materials in contact with each other, a p-n junction is
+formed due to two effects:
+\begin{itemize}
+\item {\bf Diffusion:}
+Although both sides are electrically neutral, but they have different
+concentration of electrons (the n-type) and holes (the p-type), and the 
+free electrons in the n-type material begin to diffuse across the p-n junction
+between the two materials, due to their thermal motion, and to fill some of the
+holes in the p-type material. Equivalently, the holes are also drifting from
+the p-type side to the n-type side.
+
+\item {\bf Electric Field}
+If no other forces were involved, the diffusion would carry out 
+continuously until the free electrons and holes are uniformly distributed
+across both materials. However, as the result of the diffusion process,
+electrical field is gradually established, negative on the side of p-type 
+material due to the extra electrons, positive on the side of n-type 
+material due to the loss of free electrons. This electrical field prevents
+further diffusion as the electrons on the n-type side are expelled from
+the p-type side by the electrical field.
+
+\end{itemize}
+
+The effects of both diffusion and electric field eventually lead to an 
+equilibrium where the two effects balance each other so that there are
+no more charge carriers (free electrons or holes) crossing the p-n junction.
+This region around the p-n junction, called the {\bf depletion region} as 
+there no longer exist freely movable charge carriers, becomes a barrier 
+between the two ends of the material that prevent current to flow through.
+
+\htmladdimg{../figures/pn_junction1.gif}
+
+\end{itemize}
+
+\subsection*{Diodes}
+
+Due to the fact that there exist few freely movable charge carriers in the
+depletion region around the p-n junction, the conductivity is very poor.
+However, if certain voltage is applied to the two ends of the material, 
+the conductivity may change, depending one the polarity of the applied
+voltage:
+
+\htmladdimg{../figures/diode0.gif}
+
+\begin{itemize}
+\item {\bf Reverse bias} (negative to p-type, positive to n-type)
+
+  The negative voltage applied to the p-type will repel electrons in n-type
+  and attract holes in p-type so that both carriers are moving away from 
+  the p-n junction. As the depletion region becomes thicker than before, 
+  there is no current through the p-n junction and the conductivity is zero.
+
+\item {\bf Forward bias} (positive to p-type, negative to n-type)
+
+  The positive voltage applied to the p-type will attract electrons in n-type
+  and repel holes in p-type so that both carriers are moving towards the p-n
+  junction. As the depletion region becomes thinner, the conductivity is 
+  improved and there is current through the p-n junction. The conductivity
+  increases as the voltage becomes higher.
+  
+\end{itemize}
+The voltage-current behavior of a p-n junction is described by
+\[ I_D=I_0 ( e^{V_D/\eta V_T}-1 ), \;\;\;\;\mbox{or}\;\;\;\;
+	V_D=\eta V_T\;ln (\frac{I_D}{I_0}+1)=\eta V_T\;ln (\frac{I_D+I_0}{I_0})	\]
+
+where 
+\begin{itemize}
+\item $I_0$ is the {\em reverse saturation current}, a tiny current that 
+  flows in the reverse direction when $V_D \ll 0$, due to the minority 
+  carriers. $I_0$  is about $10^{-10} \sim 10^{-12}$ A for Si and $10^{-4}$
+  A for Ge.
+\item $ V_T=kT/e $ is the voltage equivalent temperature, where 
+  $k=1.38\times 10^{-23}$ Joules/Kelvin is Boltzmann's constant, 
+  $e=1.602\times 10^{-19}$ coulomb is the charge of an electron, and
+  $T$ is the temperature in degree K. For room temperature $T=300K$, 
+  $V_T=26\; mV$.
+\item $\eta$ is the ideality factor which is 1 for Ge and 1.4 for Si
+\end{itemize}
+In particular, when $V_D=0$, $I_D=0$, when $V_D\ll 0$, $I_D=I_0$, when
+$V_D\gg 0$, $I_D=I_0 e^{V_D/V_T}$.
+
+\htmladdimg{../figures/diode1.gif}
+
+The resistance of an electrical device is defined as $r=\Delta V/\Delta I$.
+For a diode, as $V_D(I_D)$ is not a linear function, the resistance 
+$R_0=dV_D/dI_D$ is not a constant, but a function of $I_D$:
+\[
+ R_0=\frac{d}{dI_D}V_D=\frac{d}{dI_D} [\eta V_T\;ln (\frac{I_D+I_0}{I_0})]
+=\eta V_T \frac{I_0}{I_D+I_0}\frac{1}{I_0}=\eta \; \frac{V_T}{I_D+I_0}	\]
+As $I_D \gg I_0$, i.e., $I_D+I_0\approx I_D$, we have
+\[	 R_0=\frac{dV_D}{dI_D}=\eta\; \frac{V_T}{I_D}	\]
+If we let $V_T=26\;mV$, $\eta=1$, and $I_D=2\;mA$, then we have 
+$R_0=13\;\Omega$.
+
+{\bf Models of diodes:}
+
+\htmladdimg{../figures/diode3.gif}
+
+\begin{itemize}
+\item Ideal model: if $V_D<0$, then $I_D=0$, else $I_D=V/R$
+\item Diode with a voltage threshold $V_0=0.7V$:
+	if $V_D<V_0$, then $I_D=0$, else $I_D=(V-V_0)/R$
+\item Diode with a voltage threshold $V_0=0.7V$ and a resistance $R_0=20\Omega$
+	if $V_D<V_0$, then $I_D=0$, else $I_D=(V-V_0)/(R+R_0)$
+\item A current source can be added to simulate the reverse saturation current.
+\end{itemize}
+
+\htmladdimg{../figures/diodemodel.gif}
+
+\begin{tabular}{c||c|c|c}\\ \hline
+ $I_0$	& 1 mA & 10 mA & 100 mA	\\ \hline
+$V_D$ for Si ($I_0=10^{-10}$, $\eta=1.4$) & 0.58 V & 0.67 V & 0.75 V \\
+$V_D$ for Ge ($I_0=10^{-4}$, $\eta=1.0$) & 0.06 V & 0.12 V & 0.18 V \\
+\end{tabular}
+
+In general, when the forward voltage applied to a diode exceeds 0.7V (or 
+0.3V) for silicon (or germanium) material, the diode is assumed to be 
+conducting with very little resistance.
+
+{\bf Example 1: } In the half-wave rectifier circuit shown below, 
+$R=1000\Omega$, $V=3V$, and $D$ is a silicon diode. Find the current
+$I_D$ through and voltage $V_D$ across $D$.
+
+\htmladdimg{../figures/diode2.gif}
+
+\begin{itemize}
+\item {\bf Method 1: } Since the diode is forward biased, we can assume 
+the voltage across the diode is $0.7V$ and the current can be determined 
+by Ohm's law to be $I_D=(V-0.7)/R=2.3/1000=2.3mA$.
+
+\item {\bf Method 2: } Applying KVL to the loop, we get a transcendental 
+equation $V=V_D+I_DR=V_D+RI_0(e^{V_D/V_T}-1)$ which can be solved for
+$V_D$ numerically. 
+
+\item {\bf Method 3: } The current $I_D$ and voltage $V_D$ have to satisfy 
+two equations simultaneously. First, we have the same equation above 
+relating the current $I_D$ through and voltage $V_D$ across diode
+$I_D=I_0(e^{V_D/V_T}-1)$. Second, according Ohm's law applied to $R$, we
+have $V=V_D+I_DR$. These two simultaneous equations can be solved 
+graphically to the two unknowns $I_D=2.4mA$ and $V_D=0.75V$.
+\end{itemize}
+
+{\bf Example 2: } Design a converter (adaptor) that converts AC power 
+supply of 115V and 60 Hz to a DC voltage source of 14 V. When the load is
+$10\Omega$, the variation (ripple) of the output DC voltage must be 5\% or
+less.
+
+\htmladdimg{../figures/halfwaverectifier.gif}
+
+\htmladdimg{../figures/diode4.gif}
+
+\begin{itemize}
+\item The peak of the secondary output is $14V$ with RMS value
+$14/\sqrt{2}=10V$, the ratio of the transformer should be 115:10. 
+\item When the load is $R_L=10\Omega$, the load current is $I=V/R_L=14/10=1.4A$.
+\item During the period between two peaks $T=1/f=1/60=16.7\;ms$, the charge 
+	on the capacitor is reduced by $\Delta Q=IT=1.4A\times 16.7\;ms
+	=23.4\;mC$. 	
+\item The voltage across the capacitor is therefore dropped by
+	$\Delta V=\Delta Q/C < 14\times 5/\%=0.7V $. 
+\item Solve above equation for $C$, we get $C=\Delta Q/\Delta V=23.4\;mC/0.7V
+	=33,400\;\mu F$.
+\end{itemize}
+This is an approximation based on the assumption that the load current is
+constant, as the voltage drop is small. Otherwise the exponential decay of
+the voltage across capacitor should be used, and the current is:
+\[	i(t)=\frac{V}{R_L} e^{-t/\tau}	\]
+
+\subsection*{Bipolar Junction Transistor (BJT)}
+
+A Bipolar Junction Transistor (BJT) has three terminals connected to three
+doped semiconductor regions. In an npn transistor, a thin and lightly doped 
+p-type material is sandwiched between two thicker n-type materials; while 
+in a pnp transistor, a thin and lightly doped n-type material is sandwiched 
+between two thicker p-type materials. In the following we will only consider
+npn BJTs.
+
+\htmladdimg{../figures/transistors1.gif}
+
+\htmladdimg{../figures/transistorBJT1.gif}
+
+In many schematics of transistor circuits (especially when there exist a
+large number of transistors in the circuit), the circle in the symbol of
+a transistor is omitted.
+
+\htmladdimg{../figures/transistorBJT2a.gif}
+
+\htmladdimg{../figures/transistorBJT2b.gif}
+
+The three terminals of a transistor are typically used as the input, output 
+and the common terminal of both input and output. Depending on which of the
+three terminals is used as common terminal, there are three different 
+configurations: common emitter (CE), common base (CB) and common collector 
+(CC). The common emitter (CE) is the most typical configuration:
+
+\htmladdimg{../figures/transistors2.gif}
+
+\begin{itemize}
+\item {\bf Common-Base (CB)}
+
+In the {\em normal operation}, the EB junction is forward biased while the 
+CB junction is reverse biased.
+
+\htmladdimg{../figures/CB.gif}
+
+%\htmladdimg{../figures/transistorDC.gif}
+
+\htmladdimg{../figures/CBnpn.gif}
+
+%\htmladdimg{../figures/transistorDC1.gif}
+
+The behavior of the npn-transistor is determined by its two pn-junctions:
+\begin{itemize}
+\item {\bf The emitter-base (EB) junction:}
+
+The forward biased EB junction allows a current $I_E=I_{EN}+I_{EP}$ to flow 
+through, where 
+\begin{itemize}
+\item $I_{EN}=\gamma I_E$ is due to electrons from E to B, 
+\item $I_{EP}=(1-\gamma) I_E$ is due to the holes from B to E. 
+\end{itemize}
+As p-type base is thin and lightly doped, the following result:
+\begin{itemize}
+\item The fraction $\gamma$ is very close to unity $\gamma \approx 1$, i.e.,
+\[	I_E=I_{EN}+I_{EP}\approx I_{EN}	\]
+\item Most of the electrons from emitter $\alpha I_E$ ($\alpha \approx 0.99$) 
+go through base to reach the CB junction, with only a small number of the 
+electrons $(\gamma-\alpha)I_E$ combined with the hole in base.
+\[	I_{CN}=\alpha I_{EN}	\]
+\end{itemize}
+
+\item {\bf The base-collector (BC) junction:}
+
+The reverse biased CB junction blocks the majority carriers (holes in
+p-type base, electrons in n-type collector), but lets through the 
+minority carriers, the electrons in base and holes in collector, including
+\begin{itemize}
+\item most of the electrons from emitter $I_{CN}=\alpha I_E$,
+\item the reverse saturate current of the CB junction $I_{CP}=I_{CB0}$,
+\end{itemize}
+These two currents form the overall collector current
+\[	I_C=I_{CN}+I_{CP}=\alpha I_E+I_{CB0}	\]
+
+Combining the three equations above (and assuming $\gamma=1$), we get:
+\[	I_C\approx \alpha I_E + I_{CB0},\;\;\;\;\mbox{and}\;\;\;\;
+	I_B=I_E-I_C=I_{EN}-I_{CN}-I_{CB0}	\]
+The base current $I_B$ is the small difference between two nearly equal
+currents.
+\end{itemize}
+
+\item {\bf Common-Emitter}
+
+\htmladdimg{../figures/CE.gif}
+
+\htmladdimg{../figures/CEnpn.gif}
+
+The input current is $I_B$, $I_E=I_B+I_C$, and the output current is 
+\[ I_C=\alpha I_E+I_{CB0}=\alpha (I_C+I_B) + I_{CB0}	\]
+Solving for $I_C$, we get
+\[ I_C=\frac{\alpha}{1-\alpha} I_B+\frac{1}{1-\alpha} I_{CB0}
+	=\beta I_B + (\beta+1) I_{CB0}=\beta I_B + I_{CE0}	\]
+Here $\beta\stackrel{\triangle}{=}\alpha/(1-\alpha)$ is the 
+{\bf current-transfer ratio} for CE (typically, $\alpha=0.99$ and $\beta=99$),
+and $I_{CE0}=(\beta+1) I_{CB0}$ is the reverse saturation current between
+collector and emitter.
+
+\end{itemize}
+
+
+\subsection*{Field-Effect Transistors (FET)}
+
+\begin{itemize}
+
+\item {\bf JFET}
+
+A junction-gate field-effect transistor (JFET) has three terminals, the 
+source, gate and drain (corresponding to the emitter, base and collector 
+of a BJT). In a JFET, the source and drain is connected by a conducting 
+channel (n- or p-doped), which is insulated by reverse biased pn junctions 
+(the p- or n-type substrate and gate) . The current flowing through the
+channel is due to the voltage $V_{DS}$ applied across drain and source, 
+and controlled by the voltage $V_{GS}$ applied to the gate. In the following,
+we only consider n-channel FETs.
+
+\htmladdimg{../figures/JFET.gif}
+
+The drain-source current $I_D$ is affected by two voltages $V_{GS}$
+and $V_{GS}$. 
+\begin{itemize}
+\item When $V_{GS}$ is fixed (e.g., $V_{GS}=0$) and $V_{DS}$ is small
+	and positive ($V_D>V_S$), the conducting channel behaves like a
+	resistor and $I_D$ increases linearly with $V_{DS}$.
+\item As $V_{DS}$ continues to increase, the pn-junction close to the 
+	drain is highly reverse biased and the depletion region widens
+	and the channel narrows, until eventually the channel is pinched 
+	off at $V_{GS}=V_P$ and $I_D$ no longer increases with $V_{DS}$ 
+	to reach saturation.
+\item After pinch-off point, $I_D$ is controlled by $V_{GS}$, which
+	determines how much the pn-junction between the gate and the 
+	channel is reverse biased and thereby the width of the channel.
+\end{itemize}
+
+This is the transfer characteristics:
+\htmladdimg{../figures/JFETplot1.gif}
+
+This is the output characteristics:
+\htmladdimg{../figures/JFETplot2.gif}
+
+As the pn-junction between G and S has to be reverse biased all the time, 
+i.e., $V_{GS}<0$. 
+
+\item {\bf MOSFET}
+
+In the metal-oxide-semiconductor FEAT (MOSFET), also called insulated gate
+FET (IGFET), the gate and the conducting channel is insulated by a thin 
+layer of $SiO_2$ instead of a reverse biased pn-junction as in JFET. Both
+the source S and drain D are n-type and the substrate between them is 
+p-type. Due to this insulation, the voltage applied to gate can be either 
+positive or negative (while it has to be negative to keep the pn-junction
+reverse biased for an n-channel JFET). 
+
+The current $I_D$ is controlled by input voltage $V_G$. 
+\begin{itemize}
+\item When input voltage $V_G$ is smaller than a threshold $V_G<V_T$, no 
+	current flows through S and D, due to the two pn-junctions.
+\item When $V_G>V_T$, the holes in p-type substrate are repelled away from
+	the gate and some electrons are pulled close to the gate. These
+	electrons (minority carriers in the p-type substrate) form a 
+	{\em inversion layer} close to the gate, which becomes an n-type 
+	channel between S and D so that the conductivity between them is 
+	enhanced. 
+\item When $I_{DS}$ is small, the n-channel behaves like a resistor and 
+	$I_{DS}$ increases proportionally to $V_{DS}$. But when $I_{DS}$ 
+	further increases, it cancels the effect of the positive gate 
+	voltage $V_G$ at the drain end, and the n-channel narrows, $I_{DS}$
+	no longer increase with $V_{DS}$.
+\end{itemize}
+
+\htmladdimg{../figures/MOSFET1.gif}
+
+{\bf Depletion MOSFET}
+\htmladdimg{../figures/MOSFET2.gif}
+
+{\bf Enhancement MOSFET}
+
+There exist two types of MOSFETs, depletion and enhancement, depending on
+where the pinch voltage $V_T$ is, as shown in the figure below:
+
+\htmladdimg{../figures/MOSFETplot1.gif}
+
+\end{itemize}
+
+{\bf The Transfer Characteristics:}
+
+The drain current $I_D$ in the constant-current region expressed as a 
+function of input voltage $V_{GS}$. For JFET the function is:
+\[ I_D=I_{DSS}(1-V_{GS}/V_P)^2	\]
+where $I_{DSS}$ is the value of $I_D$ with gate shorted with source,
+i.e., $V_{GS}=0$.
+and for enhancement MOSFET, it is:
+\[ I_D=K(V_{GS}-V_T)^2	\]
+
+{\bf Small Signal Model:}
+
+Similar to BJT, an FET can also represented by a small-signal model. As
+$i_G=0$, the model for FET is simpler than BJT. The model for common-source
+configuration is
+\[	i_g=0	\]
+and
+\[	i_d=f(v_{gs}, v_{ds})=\frac{\partial i_d}{\partial v_{gs}} v_{gs}
+	+\frac{\partial i_d}{\partial v_{ds}} v_{ds}
+	=g_m v_{gs}+v_{ds}/r_{ds}
+\]
+where $g_m=\partial i_d/\partial v_{gs}$ is the transfer admittance
+representing how input voltage $v_{gs}$ effects the current $i_{ds}$,
+$r_{ds}=\partial v_{ds}/\partial i_d$ is the output resistance (reciprocal 
+of the slope of the i-v curve in the output characteristics), representing
+how $v_{ds}$ effects $I_D$. As $r_{ds}$ is large, it can be omitted to 
+simplify the model to 
+\[	i_{ds}=g_m v_{gs}	\]
+
+\htmladdimg{../figures/smallsignalmodelFET.gif}
+
+
+{\bf Biasing}
+
+Similar to BJT, FET can also used as common-source, common-gate or
+common-drain circuit. The common-source configuration is most typical
+and there are two different biasing methods to set up the DC operating
+point:
+\begin{itemize}
+\item {\bf Self-Biasing}
+
+	\htmladdimg{../figures/JFETbiasing1.gif}
+\[	V_{GS}=-I_D R	\]
+\item {\bf Voltage Divider Biasing}
+
+	\htmladdimg{../figures/JFETbiasing2.gif}
+\[	V_{GS}=\frac{R_{g2}}{R_{g1}+R_{g2}} \;V_{DD}-I_D R \]
+\end{itemize}
+Also, common to both biasing methods, we have
+\[	V_{DS}=V_{DD}-I_D(R+R_d)	\]
+and from the transfer characteristics:
+\[	I_D=I_{DSS}(1-V_{GS}/V_P)^2	\]
+These three equations can be solved for $V_{GS}$, $V_D$ and $V_{DS}$
+for the DC operating point. 
+
+
+{\bf Comparison between BJT and FET}
+
+\begin{itemize}
+\item The input resistance $r_{in}$ is low for BJT but high for FET.
+	The gate pn-junction of a JFET is always reverse biased with
+	$r_{in}>10^8 \Omega$, the gate of a MOSFET is totally insulated
+	from the channel with $r_{in}>10^{11} \Omega$.
+\item FET is voltage ($V_{GS}$) controlled, while BJT is current ($I_b$) 
+	controlled, consequently, the power consumption of FETs is lower
+	than BJTs.
+\item Both majority and minority carriers are used in BJTs, but only 
+	majority carriers are used in FETs. Consequently FETs have better
+	temperature stability (minority carriers are more sensitive to
+	temperature).
+\item FETs are easy to fabricate in large scale and have higher element
+	density than BJTs.
+\item MOSFETs have thin insulation layer which is more prone to statics
+	and requires special protection. 
+\item BJTs have higher cutoff frequency and higher maximum current than 
+	FETs.
+\item FETs are much more widely used (especially in computers and digital 
+	systems) than BJTs.
+\end{itemize}
+
+\subsection*{Input/Output Characteristics and AC Behavior} 
+
+\begin{itemize}
+\item {\bf Common-Base:}
+
+\begin{itemize}
+\item {\bf Input characteristics:} 
+
+The EB junction is essentially the same as a forward biased diode, as the 
+effect of collector-base voltage $V_{CB}$ is small. The current-voltage 
+characteristics is essentially the same as that of a diode:
+\[ I_E=I_0 ( e^{V_{BE}/V_T}-1 )	\]
+
+\item {\bf Output characteristics:} 
+
+The CB junction is reverse biased, the current $I_C$ depends on the current
+$I_E$. When $I_E=0$, $I_C=I_{CB0}$, the current caused by the minority 
+carriers crossing the pn-junction. This is similar to the diode current-voltage 
+characteristics seen before, except both axes are reversed (rotated 180 
+degrees) as both voltage $I_{CB}$ and current $I_C$ are defined in the 
+opposite direction. When $I_E$ is increased, $I_C=\alpha I_E+I_{CB0}$ is 
+increased correspondingly. The voltage $V_{CB}$ only slightly effects $I_C$ 
+as $\alpha$ is slightly increased when $V_{CB}$ is increased.
+
+As $I_C<I_E$, CB configuration has not current amplification effect.
+
+\htmladdimg{../figures/transistorCBplots.gif}
+
+\end{itemize}
+
+\item {\bf Common-Emitter:}
+
+\begin{itemize}
+\item {\bf Input characteristics:} 
+
+As in CB case, the EB junction of CE is essentially the same as a forward
+biased diode, as the effect of collector-emitter voltage $V_{CE}$ is small. 
+The current-voltage characteristics is essentially the same as that of a diode:
+\[ I_B=I_0 ( e^{V_{BE}/V_T}-1 )	\]
+
+\item {\bf Output characteristics:} 
+
+The CB junction is reverse biased, the current $I_C=\beta I_B+(\beta+1)I_{CB0}$
+depends on the current $I_B$. When $I_B=0$, $I_C=I_{CE0}$, the current caused 
+by the minority carriers crossing the pn-junctions. When $I_B$ is increased,
+$I_C$ is correspondingly increased by $\beta$ fold. Also, as increased $V_{CE}$
+will slightly increase $\alpha$ but much greater increase in 
+$\beta=\alpha/(1-\alpha)$, $I_C$ will increase more significantly as $V_{CE}$
+increases.
+
+\htmladdimg{../figures/transistorCEplots.gif}
+
+\end{itemize}
+
+\htmladdimg{../figures/transistortemp.gif}
+It is seen that various parameters of a transistor change as functions of
+temperature. In particular, $\beta$ value increases along with temperature.
+
+{\bf Example:} Assume in the CE circuit shown above, $V_{CC}=20V$, $V_1=1V$, 
+$R_B=R_C=1K\Omega$, $\alpha=0.98$. Find output voltage $V_2$.
+\begin{itemize}
+\item Find $\beta=\alpha/(1-\alpha)=49$
+\item Find $I_B$. As the BE junction is forward biased, the voltage drop is
+	about $V_{BE}=0.7\;V$, and $I_B=(V_1-V_{BE})/R_B=(1-0.7)/1=0.3\;mA$
+\item Find $I_C=\beta I_B=49\times 0.3\;mA=14.7\; mA$
+\item Find $V_2=V_{CC}-I_C R_C=20\;V-14.7\;mA \times 1\;K\Omega=5.3\;V$
+\end{itemize}
+
+{\bf Load Line:} The last equation above $V_{CE}=V_{CC}-I_C R_C$ is a 
+straight line, called the load line, on the output (collector) current-voltage
+characteristics plot, which passes through the following two points:
+\begin{itemize}
+\item When $I_C=0$, $V_{CE}=V_{CC}$. 
+\item When $I_C=V_{CC}/R_C$, $V_{CE}=0$.
+\end{itemize}
+The actual collector current $I_C$ and voltage $V_{CE}$ can be determined 
+as the intersection of the load line and the curve in the current-voltage
+characteristics, given a specific base current $I_B$, as they have to satisfy 
+both the internal I-V characteristics of the transistor and the external 
+voltage source ($V_{CC}$ and load resistor $R_C$. The intersection is called
+the {\bf operating point} or {\bf $Q$-point}.
+
+\subsection*{Dynamics with AC input}
+
+As $I_C\approx \beta I_B$, common-emitter configuration is commonly used for
+amplification. Consider the following example:
+
+\htmladdimg{../figures/transistorCEplots1.gif}
+
+The $\beta$ value of the transistor can be estimated from the plot to be:
+\[ \beta=\frac{\triangle I_C}{\triangle I_B}=\frac{2\;mA}{0.05\;mA}=40 \]
+Assume $V_{CC}=15V$ and the load resistance is $R_L=R_C=1.5K\Omega$. The 
+two points that determine the load line are
+\begin{itemize}
+\item $I_C=0$, $V_{CE}=V_{CC}=15V$. 
+\item $V_{CE}=0$, $I_C=V_{CC}/R_C=15V/1.5K\Omega=10 mA$
+\end{itemize}
+Also assume the input current is a superposition of DC current $I_B=0.1mA$ 
+and a sinusoidal signal $i_b(t)=0.05mA\;cos(\omega t)$. The overall input
+base current is therefore $I_B+i_b=0.1mA+0.05mA cos(\omega t)$, i.e.,
+$0.05 mA \le I_B+i_b \le 0.15 mA$. 
+
+From the I-V characteristics plot, we can find graphically 
+\begin{itemize}
+\item DC component of the output (collector) current is $I_C=4 mA$; 
+\item DC component of output (collector) voltage is 
+	$V_C=V_{CC}-R_C I_C=15V-4 mA \times 1.5 K\Omega=9V$;
+\item Sinusoidal component of output current is (between 2 mA and 6 mA):
+  \[ i_c=\beta\;i_b=40\times 0.05\;cos(\omega t)=2mA\;cos(\omega t) \]
+\item Sinusoidal component of the output voltage is 
+  \[ v_c=R_L i_c=1.5 K\Omega \times 2mA cos(\omega t)=3 cos(\omega t) V \]
+\item Overall output current is 
+  \[I_C+i_c=4+2 cos(\omega t) V \] 
+\item Overall output voltage is 
+  \[ V_C+v_c=9+3 cos(\omega t) V \]
+\end{itemize}
+The magnitude (peak-to-peak) of the input current is $0.15-0.05=0.1\;mA$, 
+the magnitude of the output current is $6-2=4mA$, i.e., the current is
+amplified 40 fold.
+
+\end{itemize}
+
+{\bf Switch}
+
+From the current-voltage plot of the output characteristics, we see that
+the operation of a transistor can be in one of the three possible regions:
+\begin{itemize}
+\item {\bf Linear region:} When the input voltage is about $V_{BE}=0.7V$,
+the transistor works in the linear range where the collector current 
+$I_C=\beta I_B$ is proportional to base current $I_B$. Amplification 
+takes place in the linear region due to this relationship.
+\item {\bf Cutoff region:} When the input voltage $V_{BE}<0.7$ (possibly
+negative), $I_B\approx 0$ and $I_C=\beta I_B+I_{CE0}=I_{CE0}\approx 0$ 
+is close to zero. The transistor is said to be cut off. 
+\item {\bf Saturation region:} When the input voltage $V_{BE}$ is higher 
+than $0.7V$, $I_B$ will significantly increase (due to the exponential
+relationship between $I_B$ and $V_{BE}$). But as the maximum value of
+$I_C$ is restricted by the voltage supply and the collector and emitter
+resistors ($V_{CC}/(R_C+R_E)$), the linear relationship $I_C=\beta I_B$
+no longer holds. In this case, the transistor is said to be saturated
+and $V_{CE}\approx 0.2V$.
+\end{itemize}
+Severe distortion in output $v_c$ will be caused if a transistor 
+amplification circuit is working near either the cutoff or the
+saturation region, as can be seen in the following sections.
+
+\htmladdimg{../figures/OperatingRegins.gif}
+
+
+{\bf Example}
+\htmladdimg{../figures/CEswitch.gif}
+
+Assume $V_{CC}=15V$, $R_C=1.5\;K\Omega$, $\beta=40$, $I_{CE0}=10^{-9}A=1\;nA$, 
+find output voltage $V_2$ when the input voltage $V_1$ is 0.2V, 0.7V and 0.8V.
+\begin{itemize}
+\item $V_1=V_{BE}=0.2V < 0.7V$, the forward bias of BE junction is 
+	insufficient, $I_B=0$, $I_C=\beta I_B+I_{CE0}=I_{CE0}=1\;nA$, 
+	$V_2=V_{CC}-I_C R_C=15V-1.5\times 10^{3}\times 10^{-9}\approx 15V$. 
+	The transistor is cutoff, or the switch is {\bf open}.
+\item $V_1=V_{BE}=0.7V$, the BE junction is forward biased, from the input
+	characteristics, we find $I_B\approx 0.15\;mA$, and $I_C=\beta I_B=6
+	\;mA$, $V_C=V_{CC}-I_C R_C=15-6\times 10^{-3} 10^{3}=9\; V$. The
+	transistor is in linear range.
+\item $V_1=V_{BE}=0.8V>0.7V$, the BE junction is forward biased, from the input
+	characteristics, we find $I_B\approx 0.4\;mA$, and $I_C=\beta I_B=16
+	\;mA$, $V_C=V_{CC}-I_C R_C=15-16\times 10^{-3} 10^{3}=-1 V$. This 
+	means it is impossible for the transistor to draw $16mA$ from the 
+	power source of $15V$, as the maximum current is 
+	$V_{CC}/R_C=15\;V/1.5\;K\Omega=10\;mA$. In this case, $V_{CE}$ can 
+	be determined on the output characteristics to be about 0.2V 
+	(intersection of load line and the curve corresponding to 
+	$I_B=0.4\;mA$), and $I_C=(15-0.2)/1.5\approx 10\;mA$. The transistor
+	is in saturation range, or the switch is {\bf closed}.
+
+\end{itemize}
+{\bf Conclusion: } a change in input from 0.2 to 0.8 switches the output 
+	current from 0 to about 10 mA, and the output voltage from 15 to 0.2 V,
+	and the transistor is in cut-off, linear, and saturation region,
+	respectively. 
+	$I_C=\beta I_B$ is only valid when the transistor is in the linear
+	region.
+
+\subsection*{DC Biasing}
+
+The DC operating point of a transistor circuit need to be set up for it to 
+work properly. The operating point is determined by the biasing circuit:
+
+\htmladdimg{../figures/transistorbiasing.gif}
+
+\begin{itemize}
+\item {\bf Fixed current biasing} This is the simplest biasing. 
+
+	As the voltage $V_{BE}$ (0.7V) is small compared to $V_{CC}$ (>10V),
+	the base current can be estimated to be:
+\[	I_B=\frac{V_{CC}-V_{BE}}{R_B} \approx \frac{V_{CC}}{R_B}	\]
+	The collector current is
+\[	I_C=\beta I_B+(\beta+1)I_{CB0}=\beta I_B+I_{CE0}
+	\approx \beta \frac{V_{CC}-V_{BE}}{R_B} \approx \beta \frac{V_{CC}}{R_B}
+\]
+which is directly proportional to $\beta$. The output voltage is 
+\[	V_{CE}=V_{CC}-I_C R_C	\]
+
+As $I_C$ and $V_{CE}$ depend on $\beta$, which is different for different
+transistors and changes as a function of temperature, the operating point 
+is unstable and inconsistent. 
+
+{\bf Example 1:} In the circuit of fixed current biasing, $V_{CC}=15V$,
+$R_B=2M\Omega=2\times 10^6\Omega$, $R_C=10K\Omega=10^4\Omega$. Assume 
+$V_{BE}=0.7$ and $\beta$ changes from $20$ to $220$. Find the operating
+points for $\beta=100$ and the two extreme values of $\beta$.
+
+\begin{itemize}
+
+\item When $\beta=20$,
+\[ I_C=\beta I_B=\beta \frac{V_{CC}-V_{BE}}{R_B}=
+	20 \frac{15-0.7}{2\times 10^6}=20\times 7.15 \mu A=0.143 mA \]
+\[ V_C=V_{CC}-I_CR_C=15-0.143\times 10^{-3} \times 10^4=14.57 V	\]
+
+\item When $\beta=100$, 
+\[ I_C=\beta I_B=\beta \frac{V_{CC}-V_{BE}}{R_B}=
+	100 \frac{15-0.7}{2\times 10^6}=100\times 7.15 \mu A=0.715 mA \]
+\[ V_C=V_{CC}-I_CR_C=15-0.715\times 10^{-3} \times 10^4=7.85 V	\]
+
+\item When $\beta=220$,
+\[ I_C=\beta I_B=\beta \frac{V_{CC}-V_{BE}}{R_B}=
+	220 \frac{15-0.7}{2\times 10^6}=220\times 7.15 \mu A=1.57mA \]
+\[ V_C=V_{CC}-I_CR_C=15-1.57\times 10^{-3} \times 10^4=-0.7 V	\]
+How can there be a negative voltage while the voltage supply is 15V?
+The collector current can no longer be determined by $I_C=\beta I_B$,
+as the maximum $I_C$ corresponding to the transistor fully saturated
+with $V_{CE}=0.2$ is $(V_{CC}-V_{CE})/R_C=14.8/10=1.48\;mA$. 
+
+\end{itemize}
+
+\item {\bf Self-biasing} 
+
+To correct the problem above, self-biasing circuit is used to decrease the 
+effect of changing $\beta$ by negative feed back. Qualitatively, if $I_C$ is 
+increased due to increased $\beta$ or temperature, the following happens:
+\[	I_C \uparrow \Longrightarrow V_E \uparrow \Longrightarrow V_{BE} 
+	\downarrow \Longrightarrow I_B \downarrow \Longrightarrow 
+	I_C=\beta I_B \downarrow	\]
+This is a negative feedback loop which tends to stabilize the operating point.
+
+To analyze this circuit quantitatively, we first find the base voltage 
+$V_B$ and base current $I_B$. Note that only when the base current is much 
+smaller than the current through $R_2$ ($I_B \ll I_2$), can we approximate
+$V_B$ by voltage divider as:
+\[	V_B=V_{CC} \frac{R_2}{R_1+R_2}	\]
+If the condition $I_B \ll I_2$ is not satisfied, we have to use Thevenin's 
+theorem to replace the base circuit by a voltage source 
+\[	V_{BB}=\frac{R_2}{R_1+R_2} V_{CC}	\]
+in series with a resistance
+\[	R_B=\frac{R_1R_2}{R_1+R_2}	\]
+
+\htmladdimg{../figures/transistorbiasing1.gif}
+
+Next we use KVL to the base loop to get
+\[ V_{BB}-I_BR_B-V_{BE}-(I_C+I_B)R_E=V_{BB}-V_{BE}-I_CR_E-I_B(R_B+R_E)=0 \]
+Substituting 
+\[	I_B=\frac{I_C}{\beta}-\frac{\beta+1}{\beta} I_{CB0}\approx
+	\frac{I_C}{\beta}	\]
+and solving for $I_B$, we get
+\[	I_B=\frac{V_{BB}-V_{BE}}{(\beta+1) R_E+R_B}	\]
+\[	I_C =\beta I_B=\frac{\beta(V_{BB}-V_{BE})}{(\beta+1) R_E+R_B}
+            \approx \frac{\beta(V_{BB}-V_{BE})}{\beta R_E+R_B}
+            \approx \frac{V_{BB}-V_{BE}}{R_E} \]
+The last approximation is based on the further assumption that even for 
+the minimum possible $\beta$ value of the transistor in the circuit,
+it is still true that $R_B \ll \beta_{min} R_E$, e.g., 
+$R_B =0.1\times \beta_{min} R_E$. If this condition is 
+satisfied, $I_C$, and thereby the Q operation point is totally determined 
+by the resistors independent of the $\beta$ value of the transistor. 
+Comparing this with fixed biasing, where 
+$I_C \approx \beta (V_{CC}-V_{BE})/R_B$ is directly proportional to the
+$\beta$ value of the transistor, circuit has a much more stable operating
+point.
+
+{\bf Example 2:} In the circuit of self-biasing, $V_{CC}=28V$, 
+$R_1=90 K\Omega$, $R_2=10 K\Omega$, $R_E=2 K\Omega$, $R_C=14 K\Omega$, 
+Assume $V_{BE}=0.7$ and $\beta$ changes from $20$ to $200$. Find the 
+operating points for $\beta=100$ and the two extreme values of $\beta$.
+\[	R_B=R_1R_2/(R_1+R_2)=10\times 90/(10+90)=9 K\Omega	\]
+\[	V_{BB}=V_{CC} R_2/(R_1+R_2)=28\times 10/(10+90)=2.8V	\]
+\begin{itemize}
+\item When $\beta=20$, 
+\[ I_C=\beta I_B=\beta \frac{V_{BB}-V_{BE}}{(\beta+1) R_E+R_B}
+	=\frac{20\times (2.8-0.7)}{21\times 2000+9000}
+	\approx 0.82 mA	\]
+\[ V_C=V_{CC}-I_CR_C=28-0.82\times 10^{-3} \times 14\times 10^3=16.5 V	\]
+\[ V_E=I_E R_E=(I_C+I_E)R_E=(\beta+1)I_B R_E\approx 0.82 mA 2K\Omega=1.64V \]
+\[ V_{CE}=V_C-V_E=16.5-1.64=14.8V \]
+
+\item When $\beta=100$, 
+\[ I_C=\beta I_B=\beta \frac{V_{BB}-V_{BE}}{(\beta+1) R_E+R_B}
+	=\frac{100\times (2.8-0.7)}{101\times 2000+9000}
+	=2.1/2110 \approx 1 mA	\]
+\[ V_C=V_{CC}-I_CR_C=28-10^{-3} \times 14\times 10^3=14 V	\]
+\[ V_E=I_E R_E=(I_C+I_E)R_E=(\beta+1)I_B R_E\approx 1mA 2K\Omega=2V \]
+\[ V_{CE}=V_C-V_E=12V \]
+
+\item When $\beta=200$, 
+\[ I_C=\beta I_B=\beta\frac{V_{BB}-V_{BE}}{(\beta+1) R_E+R_B}
+	=\frac{200\times (2.8-0.7)}{201\times 2000+9000}
+	\approx 1.02 mA	\]
+\[ V_C=V_{CC}-I_CR_C=28-1.02\times 10^{-3} \times 14\times 10^3=13.7 V	\]
+\[ V_E=I_E R_E=(I_C+I_E)R_E=(\beta+1)I_B R_E\approx 1.02mA 2K\Omega=2V \]
+\[ V_{CE}=V_C-V_E=13.7-2=11.7V \]
+\end{itemize}
+
+\end{itemize}
+
+\subsection*{Small Signal Model and H parameters}
+
+{\bf Two-port circuit:} 
+
+\htmladdimg{../figures/twoportmodel.gif}
+\htmladdimg{../figures/transistorHmodel.gif}
+
+A transistor circuit can be treated as a two-port circuit with input and output
+ports with four variables $(v_1, i_1, v_2, i_2)$. In general two of the four
+variables are independent and the rest two can be expressed as their functions:
+\[
+	\left\{ \begin{array}{l} v_1=f_1(i_1,i_2) \\ v_2=f_2(i_1,i_2)
+	\end{array} \right.
+	\;\;\;\;\mbox{or}\;\;\;\;
+	\left\{ \begin{array}{l} i_1=f_3(_1,v_2) \\ i_2=f_4(v_1,v_2)
+	\end{array} \right.
+	\;\;\;\;\mbox{or}\;\;\;\;
+	\left\{ \begin{array}{l} v_1=f_5(i_1,v_2) \\ i_2=f_6(i_1,v_2)
+	\end{array} \right.
+\]
+We use the third {\em hybrid} model to describe the CE transistor circuit with 
+$v_1=v_{be}$, $i_1=i_b$, $v_2=v_{ce}$, and $i_2=i_{ce}$:
+\[
+	\left\{ \begin{array}{l} v_{be}=v_{be}(i_b,v_{ce}) \\ i_c=i_c(i_b,v_{ce})
+	\end{array} \right.
+\]
+Taking the total derivative, we get:
+\[
+	dv_{be}=\frac{\partial v_{be}}{\partial i_b} d i_b
+	+\frac{\partial v_{be}}{\partial v_{ce}} d v_{ce} 
+	=h_i d i_b+h_r d v_{ce}	
+	\;\;\;\;\;\;
+	di_c=\frac{\partial i_c}{\partial i_b} d i_b
+	+\frac{\partial i_c}{\partial v_{ce}} d v_{ce} 
+	=h_f d i_b+h_o d v_{ce}
+\]
+where $h_i, h_f, h_r, h_o$ are the hybrid model parameters:
+\begin{itemize}
+\item $h_i=\partial v_{be}/\partial i_b}=r_{be}$: input impedance with 
+  $v_{ce}=0$ (output short-circuit). This is AC resistance between base and 
+  emitter, the reciprocal of the slope of the current-voltage curve of the 
+  input characteristics. 
+
+\item $h_r=\partial v_{be}/\partial v_{ce}}$: reverse transfer voltage ratio
+  with $i_b=0$ (input open-circuit), representing how $V_{CE}$ affects $V_{BE}$.
+  In general $h_i$ is small and can be ignored.
+
+\item $h_f=\partial i_c}/\partial i_b}=\beta$: forward transfer current 
+    ratio or current amplification factor  with $v_{ce}=0$ (output 
+    short-circuit). Typically, $h_f=\beta$ is in the range of 20 to 200.
+
+\item $h_o=\partial i_c/\partial v_{ce}}=1/r_{ce}$: output admittance with 
+  $i_b=0$ (input open-circuit). It is slope of the current-voltage curve in 
+  the output characteristics. In general $h_o$ is small and can be ignored.
+\end{itemize}
+If all variables $i_b$, $v_{be}$, $i_c$ and $v_{ce}$ are small signals (around 
+the DC operating point $Q$ and far away from either the cut-off or the saturation 
+region), these differential quantities can be rewritten as 
+\[
+	v_{be}=\frac{\partial v_{be}}{\partial i_b}
+	i_b+\frac{\partial v_{be}}{\partial v_{ce}} v_{ce}=h_i i_b+h_r v_{ce}	
+	\approx h_i i_b
+	\;\;\;\;\;\;
+	i_c=\frac{\partial i_c}{\partial i_b} i_b
+	+\frac{\partial i_c}{\partial v_{ce}} v_{ce}=h_f i_b+h_o v_{ce}
+	\approx h_f i_b
+\]
+
+
+\htmladdimg{../figures/hparameters.gif}
+
+\htmladdimg{../figures/smallsignalmodelBJT.gif}
+
+In general, $h_r$ and $h_o$ are small and could be assumed zero to further 
+simplify the model, as shown on the left of the figure.
+
+The equivalent AC resistance between base and emitter $r_{be}$ can be found 
+as below. Assume small signal $(v_B(t), i_B(t))$ around the DC operating point 
+$(V_B, I_B)$, the base voltage is $V_B+v_B(t)$ and the base current is
+\begin{eqnarray}
+&& I_0 [e^{(V_B+v_B(t))/V_T}-1]\approx I_0 e^{(V_B+v_B(t))/V_T}
+	=I_0 e^{V_B/V_T} e^{v_B(t)/V_T}
+	\nonumber \\
+&=& I_B e^{v_B(t)/V_T} \approx I_B(1+\frac{v_B(t)}{V_T})=I_B+i_B(t)	
+\end{eqnarray}
+Note that $e^x=1+x+x^2/2!+x^3/3!+\cdots $, and 
+\[	i_B(t)=I_B \frac{v_B(t)}{V_T}	\]
+Then we get
+\[	r_{be}=\frac{v_B(t)}{i_B(t)}=\frac{V_T}{I_B}	\]
+
+Typically, $\beta=100$, $I_B=50\mu A$, $I_C=\beta I_B=100\times 50\mu A=5mA$.
+Based on the small signal model, a transistor can be analyzed as a two-port 
+circuit containing four elements, as shown in the figure below:
+
+
+\subsection*{AC Amplification}
+
+Based on the previous discussion, a single transistor AC amplification circuit 
+is given as shown in the figure.
+
+\htmladdimg{../figures/ACamplification1.gif}
+
+If the capacitances of the coupling capacitors and the emitter by-pass 
+capacitor are large enough with respect to the frequency of the AC signal 
+in the circuit is high enough, these capacitors can all be approximated as 
+short circuit. Moreover, note that the AC voltage of the voltage supply
+$V_{CC}$ is zero, it can be treated the same as the ground. Now the AC
+behavior of the transistor amplification circuit can be modeled by the 
+following small signal equivalent circuit:
+
+\htmladdimg{../figures/ACamplification2.gif}
+
+{\bf AC Input Impedance:} For AC signals, the input of the amplification
+circuit is shown below, where $R_s$ is the internal resistance of the signal 
+source, and the input impedance of the circuit is the three resistances $R_1$, 
+$R_2$ and $r_{be}$ in parallel:
+\[	R_{in}=R_1||R_2||r_{be}
+	=(\frac{1}{R_1}+\frac{1}{R_2}+\frac{1}{r_{be}})^{-1}
+	=\frac{R_1 R_2 r_{be}}{R_1R_2+R_1r_{be}+R_2r_{be}}	\]
+where $r_{be}$ is the resistance of the PN-junction) between the base and 
+the emitter of the transistor, as discussed before:
+\[	r_{be}=\eta V_T/I_B	\]
+
+{\bf AC Output Impedance:} This is simply the resistance of the resistor 
+\[	R_{out}=R_C	\]
+
+{\bf AC Amplification Gain:} Given the AC input voltage $v_{in}$, the base
+voltage can be found (voltage divider) to be
+\[	v_B=v_{in}\; \frac{(R_1||R_2||r_{be})}{(R_1||R_2||r_{be})+R_s}	\]
+and the base current is
+\[	i_B=\frac{v_B}{r_{be}}=v_{in}\;\frac{(R_1||R_2||r_{be})}{(R_1||R_2||r_{be})+R_s}\frac{1}{r_{be}}		\]
+The collector current is $i_C=\beta \;i_B$ and the output voltage is
+\[	v_C=-i_C\;(R_C||R_L)=-\beta\;i_B\;(R_C||R_L)	\]
+Here the negative sign indicates the fact that $v_C$ is $180^\circ$ out of
+phase with $v_B$, as 
+\[	v_B \uparrow \Longrightarrow i_B \uparrow \Longrightarrow i_C \uparrow
+	\Longrightarrow v_C \downarrow	\]
+The voltage gain is therefore
+\[
+G=\frac{v_{out}}{v_{in}}=\frac{v_C}{v_{in}}=
+	-\beta \frac{(R_1||R_2||r_{be})}{(R_1||R_2||r_{be})+R_s}
+	\frac{1}{r_{be}}(R_C||R_L)	\]
+In particular, if the input resistance is much larger than the internal 
+resistance of the voltage source, i.e., 
+\[	R_{in} R_1||R_2||r_{be} \gg  R_s	\]
+and the output resistance is much smaller than the load resistance, i.e.,
+\[	R_{out}=R_C \ll R_L	\]
+then the gain can be approximated as
+\[	G=\frac{v_{out}}{v_{in}}=-\beta \frac{R_C}{r_{be}}	\]
+
+{\bf Example:} 
+
+\htmladdimg{../figures/transistorBJTexample1.gif}
+
+This figure shows a common-emitter amplification circuit of npn BJT. Assume
+$V_{CC}=V_{BB}=12V$, 
+
+We assume the capacitors are large enough so that they can be considered
+as short circuit for the AC signals. The DC and AC circuits are shown
+below:
+
+\htmladdimg{../figures/transistorBJTexample1a.gif}
+\htmladdimg{../figures/transistorBJTexample1b.gif}
+
+\begin{itemize}
+\item Find base current:
+\[	I_B=(V_{BB}-V_{BE})/R_B \approx V_{BB}/R_B=12/(300\times 10^3)
+	=40\times 10^{-6}\; A=40\;\mu A	\]
+\item Find DC load line: when $I_C=0$, $V_{CE}=12V$, when $V_{CE}=0$,
+\[	I_C=V_{CC}/R_C=12V/(4\times 10^3)=3\times 10^{-3}A=3 \;mA	\]
+	The DC load line is determined by these two points
+\item Find DC operating point $Q$: 
+	The intersection of the DC load line and the $I_C$ curve 
+	corresponding to $I_B=40 \;\mu A$ is the DC operating point with 
+	$V_{CE}=6V$ and $I_C=1.5 mA$ (i.e., $\beta=1.5ma/40 \mu A=37.5$).
+\item Find AC load line: 
+	The AC load is $R'_L=R_C//R_L=(R_C+R_L)/R_CR_L=2\;K\Omega$. The AC load
+	line is a straight line passing the DC operating point $Q$ with its
+	slope equal to $-1/R'_L=-1/2$. The intersections of AC load line 
+	with $V_{CE}$ and $I_C$ axes can be found by
+\[	\frac{1.5}{6-v_0}=-\frac{1}{2}\;\;\;\;\Longrightarrow v_0=9V \]
+	and 
+\[	\frac{i_0-1.5}{-6}=-\frac{1}{2}\;\;\;\;\Longrightarrow i_0=4.5\;mA \]
+\item Find input current:
+	Assume input voltage is $v_i=20\; sin\;\omega\;t\;mV$ and $V_{BE}=0.6V$, 
+	the overall base voltage is $v_{BE}=V_{BE}+v_i=0.6+0.02\;sin\;\omega\;t\;V$, 
+	and the corresponding base current can be found from the input i-v 
+	characteristics to be $i_B=I_B+i_i=40+20\; sin\;\omega\;t\;\mu A$ 
+	between 20 and 60 $\mu A$.
+\item Find AC output voltage: This can be found graphically from the 
+	output i-v characteristics, based on $I_B$, to be 
+	$V_o=v_{CE}+v_o=6-1.5 \;sin\;\omega\; t\; V$, and the current is
+	$I_o=i_C+i_o=1.5+ 0.75 \;sin\omega \;t\; mA$.
+	Note that the output is in opposite phase (180 phase shift) with 
+	the input. 
+\item Find the voltage gain:
+	\[ A_v=\frac{|v_o|}{|v_i|}=\frac{1.5}{0.02}=75	\]
+\end{itemize}
+
+\htmladdimg{../figures/transistorBJTexample1c.gif}
+
+For a transistor to work properly, its DC operating point has to be set right,
+otherwise distortion may be caused, as shown below. So to avid distortion, the
+dynamic range should be maximized by setting the DC operating point at the 
+middle point of the load line.
+
+\htmladdimg{../figures/transistorQpoint.gif}
+
+The circuit above can also be analyzed using the small-signal model. 
+
+\htmladdimg{../figures/BJTexamplesmallsignal.gif}
+The DC variables:
+\[	I_B=(V_{BB}-V_{BE})/R_B \approx V_{BB}/R_B=40 \;\mu A	\]
+\[	I_C=\beta\;I_B=37.5\times 40\;\mu A=1.5\;mA	\]
+\[	V_{CE}=V_{CC}-R_C I_C=12-1.5\times 4000=6\;V	\]
+\[	r_{be}=V_T/I_B=26\;mV/40\mu A=650 \;\Omega	\]
+The AC variables:
+\[	v_i=i_b r_{be}, \;\;\;\;v_o=-i_c R_C//R_L=-\beta i_b R_C//R_L	\]
+The voltage gain is:
+\[	A_v=\frac{v_o}{v_i}=-\frac{\beta R_C//R_L}{r_{be}}
+	=-\frac{37.5\times 2000}{650}=-115	\]
+The input resistance is $R_i=R_B//r_{be}\approx 650 \Omega$, the output 
+resistance is $R_o=R_C//r_{ce}\approx R_C=4\;K\Omega$.
+
+\subsection*{Emitter Follower}
+
+An emitter follower circuit shown in the figure is widely used in AC 
+amplification circuits. The input and output of the emitter follower are
+the base and the emitter, respectively, therefore this circuit is also
+called common-collector circuit.
+
+\htmladdimg{../figures/emitterfollower.gif}
+
+% Assume $\beta=50$, $R_B=300K\Omega$, $R_E=4K\Omega$, $R_S=500\Omega$, 
+% $R_L=5.1K\Omega$, and $V_{CC}=12$.
+
+{\bf DC operating point}
+
+\[ \left\{ \begin{array}{l} V_{CC}=R_B I_B+V_{be}+R_E I_E	\\
+	I_E=(\beta+1) I_B	\\
+	V_{ce}=V_{CC}-R_E I_E \end{array} \right. \]
+Solving these equations, we can get $I_B$, $I_E$ and $V_{ce}$.
+
+{\bf AC small-signal equivalent circuit}
+
+\htmladdimg{../figures/emitterfollower1.gif}
+
+We assume $R_B \gg r_{be}+R_E$ and therefore can be ignored, and have
+\[ \left\{ \begin{array}{l} 
+	v_{out}=i_e (R_E||R_L)=(\beta+1) i_b (R_E||R_L) 	\\
+	v_{in}=i_b (R_S+r_{be})+(\beta+1) i_b (R_E||R_L)=i_b (R_S+r_{be})+v_{out}
+\end{array} \right. \]
+
+{\bf Voltage gain:}
+\[	G=\frac{v_{out}}{v_{in}}
+	=\frac{(\beta+1) (R_E||R_L)}{(R_S+r_{be})+(\beta+1) (R_E||R_L)} 
+\]
+As $R_S+r_{be} \ll (\beta+1) (R_E||R_L)$, $G$ is smaller than but approximately
+equal to 1.
+
+{\bf The input resistance:} 
+
+The input resistance is $R_B$ in parallel with the resistances of the circuit
+to its right including the load $R_L$, which can be found by $v_b/i_b$. But as
+\[ v_b=i_b(r_{be}+(\beta+1)(R_E||R_L) \]
+we have
+\[ r_{in}=R_B || (r_{be}+(\beta+1) (R_E||R_L) )\approx (\beta+1)(R_E||R_L) \]
+Comparing this with the input resistance of the common-emitter circuit
+$r_{in}=R_1||R_2|| r_{be} \approx r_{be}$, we see that the emitter
+follower has a very large input resistance.
+
+{\bf The output resistance:}
+
+The output resistance is $R_E$ in parallel with the resistances of the circuit
+to its left including the source, which can be found by $v_e/i_e$, where
+\[ v_e=i_b(r_{be}+R_S||R_B), \;\;\;\;\;\mbox{and}\;\;\;\;\; i_e=(\beta+1)i_b\]
+and we have
+\[	\frac{v_e}{i_e}=\frac{r_{be}+R_S||R_B}{\beta+1}	\]
+Alternatively, this resistance can be found as $v_{open}/i_{short}$, where 
+$v_{open}$ is the output voltage with load open-circuit $R_L=\infty$ and
+$i_{short}$ is the current with load short-circuit $R_L=0$. To find $v_{open}$
+and $i_{short}$, the voltage source $v_{in}$ with internal resistance $R_S$ 
+and a load $R_B$ can be converted by Thevenin's theorem to 
+\[ R_{th}=R_S||R_B=\frac{R_B R_S}{R_B+R_S},	\;\;\;\;
+	v_{th}=v_{in} \frac{R_B}{R_B+R_S}=v_{open}	\]
+and $i_{short}$ can be found to be
+\[	i_{short}=i_e=(\beta+1)i_b=(\beta+1)\frac{v_{th}}{r_{be}+R_{th}} \]
+now we have
+\[ \frac{v_{open}}{i_{short}}=\frac{v_{th}(r_{be}+R_{th})}{(\beta+1) v_{th}}
+	=\frac{r_{be}+R_{th}}{\beta+1} =\frac{r_{be}+R_S||R_B}{\beta+1} \]
+The overall output resistance is
+\[	r_{out}	= R_E || \frac{r_{be}+R_S||R_B}{\beta+1}	
+	\approx \frac{r_{be}+R_S}{\beta+1}	\]
+
+%with voltage $v_{in}=0$ (source short)
+
+Comparing this with the output resistance of the common-emitter circuit
+$r_{out}=R_C$, we see that the emitter follower circuit has very small
+output resistance.
+
+{\bf Conclusion:} 
+
+Emitter follower does not amplify voltage. However, due to its large input 
+resistance drawing little current from the source, and its small output 
+resistance capable of driving heavy load, it is widely used as both the 
+input and output stages for a multi-stage voltage amplification circuit 
+due to its property of very favorable input/output resistances.
+
+\subsection*{Multi-stage Amplification}
+
+In order to have an amplification gain, multi-stage amplification circuits
+are needed. Such a circuit is typically composed of two or more cascaded
+transistor amplifiers, coupled in one of three possible ways:
+\begin{itemize}
+\item Capacitor coupling:
+\htmladdimg{../figures/coupling_capacitor.gif}
+	\begin{itemize}
+	\item Independent DC operating point;
+	\item AC amplification of high gain if coupling capacitors are
+		larger enough;
+	\item Cannot amplify DC and low frequency signals;
+	\item Difficult implementation on IC.
+	\end{itemize}
+
+\item Transformer coupling:
+\htmladdimg{../figures/coupling_transformer.gif}
+	\begin{itemize}
+	\item Independent DC operating point;
+	\item Can achieve maximal power by impedance match;
+	\item Cannot amplify DC and low frequency signals;
+	\item Difficult implementation on IC.
+	\end{itemize}
+
+\item Direct coupling:
+\htmladdimg{../figures/coupling_direct.gif}
+	\begin{itemize}
+	\item DC operating point not independent;
+	\item Can amplify both DC and AC signals;
+	\item Easy implementation on IC.
+	\end{itemize}
+
+\end{itemize}
+
+
+
+
+
+\end{document}
+
+
+	
+
+	
+
+
+
+
+
+
+
+
+
+
+
+

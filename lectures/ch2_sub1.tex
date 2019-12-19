@@ -1,0 +1,130 @@
+\documentstyle[12pt]{article}
+\usepackage{html}
+
+\begin{document}
+
+  \htmladdimg{../figures/BufferModels.png}
+
+  Model the transistor emitter follower (top) and the op-amp unit gain 
+  buffer (bottom) by the circuit below, in terms of the three parameters
+  open-circuit gain $A_{oc}$, input resistance $R_{in}$ and output 
+  resistance $R_{out}$:
+
+  \htmladdimg{../figures/TwoPortModel.png}
+
+  \begin{itemize}
+  \item We first consider the two-port model of the op-amp circuit
+    based on the Thevinen voltage source model:
+
+    \begin{itemize}
+    \item {\bf Open voltage gain $A_{oc}$:} Here $A_{oc}$ measures
+      the capability of the two-port model independent of the 
+      external circuit parameters, we can therefore assume $R_S=0$ 
+      and $R_L=\infty$, i.e., $v_{in}=v_s$. Apply KVL to the loop to 
+      get:
+      \[
+      v_s=i_{in} r_{in} +i_{in} r_{out} +A r_{in} i_{in}
+      =i_{in}\left[r_{out}+(A+1) r_{in}\right] 
+      \]
+      i.e.,
+      \[
+      i_{in}=\frac{v_s}{r_{out}+(A+1) r_{in}} 
+      \]
+      The voltage across the output port CD is:
+      \[
+      v_{out}=A r_{in} i_{in}+r_{out}i_{in}
+      =v_s\frac{A r_{in}+r_{out}}{r_{out}+(A+1) r_{in}} 
+      \]
+      i.e.,
+      \[
+      A_{oc}=\frac{A r_{in}+r_{out}}{r_{out}+(A+1) r_{in}} \approx 1 
+      \]
+  
+    \item {\bf Input resistance $R_{in}$:} Here we take $R_L$ into 
+      consideration, as it affects $R_{in}$. Apply KVL to the two 
+      loops and get:
+      \begin{eqnarray}
+        v_s&=&(r_{in}+r_{out}+A r_{in})i_{in}-r_{out}i_{out} 
+        \nonumber\\
+        Ar_{in}i_{in}&=&(r_{out}+R_L)i_{out}-r_{out} i_{in}
+        \nonumber
+      \end{eqnarray}
+      Solving the second equation we get
+      \[
+      i_{out}=\frac{Ar_{in}+r_{out}}{r_{out}+R_L} i_{in} 
+      \]
+      Plugging that into the first equation we get
+      \[ 
+      v_s =i_{in}\left[(r_{in}+r_{out}+A r_{in})
+        -r_{out}\frac{Ar_{in}+r_{out}}{r_{out}+R_L}\right] 
+      \]
+      i.e.,
+      \[
+      R_{in}=\frac{v_s}{i_{in}}=r_{in}\left(1+\frac{AR_L}{r_{out}+R_L}\right)
+      +R_L||r_{out}
+      \]
+      Assuming $R_L\gg r_{out}$, we get 
+      \[
+      R_{in}\approx (A+1) r_{in}+r_{out}\approx Ar_{in}
+      \]
+
+    \item {\bf Output resistance $R_{out}$:} Here we take $R_s$ into
+      consideration, as it affects $R_{out}$. Apply KVL to the loop 
+      and get:
+      \[ 
+      v_s=i_{in} \left(R_s+r_{in}+r_{out}\right)+A r_{in}i_{in}
+      =i_{in} \left(R_s+r_{in}+r_{out} +A r_{in}\right)
+      \]
+      i.e.,
+      \[
+      i_{in}=\frac{v_s}{R_s+(A+1)r_{in}+r_{out}} 
+      \]
+      The open-circuit output voltage is:
+      \[
+      v_{oc}=(r_{out}+Ar_{in}) i_{in}=(r_{out}+Ar_{in}) \frac{v_s}{R_s+(A+1)r_{in}+r_{out}} 
+      \]
+      Next, we find short-circuit output current. Due to superposition (two voltage 
+      sources $v_s$ and $Ar_{in}i_{in}$) we have:
+      \[
+      i_{sc}=\frac{v_s}{R_s+r_{in}}+\frac{Ar_{in}i_{in}}{r_{out}}
+      =\frac{v_s}{R_s+r_{in}}+Ar_{in}\frac{v_s}{(R_s+r_{in})}\frac{1}{r_{out}}
+      =v_s\frac{Ar_{in}+r_{out}}{(R_s+r_{in})r_{out}} 
+      \]
+      Now we get:
+      \[
+      R_{out}=\frac{v_{oc}}{i_{sc}}=\frac{(R_s+r_{in})r_{out}}{R_s+(A+1)r_{in}+r_{out}}
+      \approx \frac{r_{out}}{A}
+      \]
+      The approximation is due to the assumption that $r_{in}\gg R_s$,
+      $Ar_{in}\gg R_s+r_{out}$.
+	      
+  \end{itemize}
+\item We next consider the two-port model of the emitter follower 
+  circuit, of which the three parameters $A_{oc}$, $R_{in}$ and $R_{out}$ 
+  can be obtained by simply converting the results above for Thevinen
+  voltage source model $Av_{in}$ and $r_{out}$ for the op-amp circuit into
+  the corresponding Norton current source model:
+  \[
+  i_N=\frac{v_T}{r_{out}}=\frac{Av_{in}}{r_{out}}=\frac{Ar_{in}i_{in}}{r_{out}}
+  \]
+  Comparing this current with the Norton current model $\beta i_b$ and $R_E$
+  of the emitter follower with $r_{be}=r_{in}$, $i_b=i_{in}$ and $R_E=r_{out}$,
+  we get
+  \[
+  \frac{Ar_{in}i_{in}}{r_{out}}=\frac{Ar_{be}i_b}{R_E}=\beta i_b,
+  \;\;\;\;\;\mbox{i.e.,}\;\;\;\;A=\frac{\beta R_E}{r_{be}}
+  \]
+  Now the three parameters for the Norton current model of the emitter
+  follower can be found to be:
+  \begin{itemize}
+  \item Open-circuit voltage gain: $A_{oc}\approx 1$,
+  \item Input resistance:
+    \[ R_{in}\approx Ar_{in}=Ar_{be}=\frac{\beta R_E}{r_{be}}r_{be}=\beta R_E \]
+  \item Output resistance:
+    \[ R_{out}\approx \frac{r_{out}}{A}=\frac{R_E}{\beta R_E/r_{be}}=\frac{r_{be}}{\beta} \]
+  \end{itemize}
+
+  \end{itemize}
+
+\end{document}
+

@@ -1,0 +1,853 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Energy Dissipation/Storage in R, C, and L</TITLE>
+<META NAME="description" CONTENT="Energy Dissipation/Storage in R, C, and L">
+<META NAME="keywords" CONTENT="ch1">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="ch1.css">
+
+<LINK REL="next" HREF="node5.html">
+<LINK REL="previous" HREF="node3.html">
+<LINK REL="next" HREF="node5.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node5.html">Examples: Mechanical and Electrical</A>
+<B> Up:</B> <A
+ HREF="node1.html">Chapter 1: Basic Quantities</A>
+<B> Previous:</B> <A
+ HREF="node3.html">Resistor, Capacitor, and Inductor</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION00013000000000000000">
+Energy Dissipation/Storage in R, C, and L</A>
+</H2>
+
+<P>
+The electric power associated with an element (R, C, or L) is the 
+product of the voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img87.svg"
+ ALT="$v(t)$"></SPAN> across and current <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img86.svg"
+ ALT="$i(t)$"></SPAN> through the
+element:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+p(t)=\frac{dw}{dt}=\frac{dw}{dq}\;\frac{dq}{dt}=v(t)\,i(t)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.16ex; " SRC="img155.svg"
+ ALT="$\displaystyle p(t)=\frac{dw}{dt}=\frac{dw}{dq}\;\frac{dq}{dt}=v(t)\,i(t)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">38</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Integrating <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img156.svg"
+ ALT="$p(t)$"></SPAN> over a time period <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img157.svg"
+ ALT="$T$"></SPAN>, we get the energy 
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+w=\int_0^T p(t)\; dt=\int_0^T v(t)\; i(t)\; dt
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.23ex; " SRC="img158.svg"
+ ALT="$\displaystyle w=\int_0^T p(t)\; dt=\int_0^T v(t)\; i(t)\; dt$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">39</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Depending on its sign, the energy can be either consumed (dissipated,
+converted to heat) if <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.21ex; " SRC="img159.svg"
+ ALT="$w&gt;0$"></SPAN>, or stored in the element if <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.21ex; " SRC="img160.svg"
+ ALT="$w&lt;0$"></SPAN>. We 
+consider specifically the energy dissipation/storage in each of 
+the three types of elements <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img91.svg"
+ ALT="$R$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img97.svg"
+ ALT="$C$"></SPAN>, and <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img127.svg"
+ ALT="$L$"></SPAN>.
+
+<P>
+
+<UL>
+<LI><B>Energy dissipated by resistor <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img91.svg"
+ ALT="$R$"></SPAN></B>
+
+<P>
+When a voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img87.svg"
+ ALT="$v(t)$"></SPAN> is applied across <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img91.svg"
+ ALT="$R$"></SPAN>, the current through it is
+  <!-- MATH
+ $i(t)=v(t)/R$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img161.svg"
+ ALT="$i(t)=v(t)/R$"></SPAN>, power consumption is 
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+p(t)=v(t)\;i(t)=\frac{v^2(t)}{R}=i^2(t)R
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -1.71ex; " SRC="img162.svg"
+ ALT="$\displaystyle p(t)=v(t)\;i(t)=\frac{v^2(t)}{R}=i^2(t)R$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">40</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The energy dissipated during time period <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img163.svg"
+ ALT="$0 \sim T$"></SPAN> is
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+w=\int_0^T p(t) dt=\int_0^T v(t)\; i(t) dt
+    =\frac{1}{R}\;\int_0^T v^2(t)\; dt =R\;\int_0^T i^2(t)\; dt
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.23ex; " SRC="img164.svg"
+ ALT="$\displaystyle w=\int_0^T p(t) dt=\int_0^T v(t)\; i(t) dt
+=\frac{1}{R}\;\int_0^T v^2(t)\; dt =R\;\int_0^T i^2(t)\; dt$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">41</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+This energy is converted irreversibly from electrical energy to heat. The 
+  rate of dissipation is <!-- MATH
+ $p(t)=d\,w/dt$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img165.svg"
+ ALT="$p(t)=d\,w/dt$"></SPAN>.
+
+<P>
+
+<UL>
+<LI>When a DC voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img166.svg"
+ ALT="$v(t)=V$"></SPAN> is applied across <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img91.svg"
+ ALT="$R$"></SPAN>, the current 
+      through it is <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img167.svg"
+ ALT="$I=V/R$"></SPAN>, and the power consumed by the resistor is 
+      <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+P=VI=\frac{V^2}{R}=I^2R
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -1.71ex; " SRC="img168.svg"
+ ALT="$\displaystyle P=VI=\frac{V^2}{R}=I^2R$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">42</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The energy dissipation during time period <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img163.svg"
+ ALT="$0 \sim T$"></SPAN> is
+      <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+w=\int_0^T P\; dt=PT=VIT=\frac{V^2}{R}\,T=I^2RT
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.23ex; " SRC="img169.svg"
+ ALT="$\displaystyle w=\int_0^T P\; dt=PT=VIT=\frac{V^2}{R}\,T=I^2RT$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">43</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>When a sinusoidal voltage <!-- MATH
+ $v(t)=V_p \sin(\omega t)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.78ex; " SRC="img170.svg"
+ ALT="$v(t)=V_p \sin(\omega t)$"></SPAN> is applied 
+      across <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img91.svg"
+ ALT="$R$"></SPAN>, the current through it is <!-- MATH
+ $i(t)=v(t)/R=V_p\sin(\omega t)/R$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.78ex; " SRC="img171.svg"
+ ALT="$i(t)=v(t)/R=V_p\sin(\omega t)/R$"></SPAN>, 
+      and the energy dissipated in time period <!-- MATH
+ $T=1/f=2\pi/\omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img172.svg"
+ ALT="$T=1/f=2\pi/\omega$"></SPAN> is:
+      <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+w=\frac{1}{R}\int_0^T v^2(t) dt
+        =\frac{V_p^2}{R}\int_0^T \sin^2(\omega t) dt
+        =\frac{V_p^2}{2R}\int_0^T [1-\cos(2\omega t)] dt=\frac{V_p^2}{2R}\,T
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.23ex; " SRC="img173.svg"
+ ALT="$\displaystyle w=\frac{1}{R}\int_0^T v^2(t) dt
+=\frac{V_p^2}{R}\int_0^T \sin^2(\omega t) dt
+=\frac{V_p^2}{2R}\int_0^T [1-\cos(2\omega t)] dt=\frac{V_p^2}{2R}\,T$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">44</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+We define the <EM>effective</EM> or <EM>root-mean-square (RMS)</EM> <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img174.svg"
+ ALT="$V_{rms}$"></SPAN> 
+      as the equivalent DC voltage needed for <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img91.svg"
+ ALT="$R$"></SPAN> to dissipate the same amount 
+      of energy as <!-- MATH
+ $v(t)=V_p \sin(\omega t)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.78ex; " SRC="img170.svg"
+ ALT="$v(t)=V_p \sin(\omega t)$"></SPAN>:
+      <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\frac{{\bf V}^2_{rms}}{R}T=\frac{1}{R}\int_0^T v^2(t)dt=\frac{V_p^2}{2R}T
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.23ex; " SRC="img175.svg"
+ ALT="$\displaystyle \frac{{\bf V}^2_{rms}}{R}T=\frac{1}{R}\int_0^T v^2(t)dt=\frac{V_p^2}{2R}T$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">45</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Solving for <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img174.svg"
+ ALT="$V_{rms}$"></SPAN> we get
+      <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_{rms}=\sqrt{\frac{1}{T}\int_0^T v^2(t) dt }=\frac{V_p}{\sqrt{2}}=0.707\,V_p
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 7.43ex; vertical-align: -2.59ex; " SRC="img176.svg"
+ ALT="$\displaystyle V_{rms}=\sqrt{\frac{1}{T}\int_0^T v^2(t) dt }=\frac{V_p}{\sqrt{2}}=0.707\,V_p$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">46</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+i.e., the same amount of energy is dissipated by resistor <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img91.svg"
+ ALT="$R$"></SPAN> when 
+      either a sinusoidal voltage with peak amplitude <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.78ex; " SRC="img177.svg"
+ ALT="$V_p$"></SPAN> or a DC voltage 
+      <!-- MATH
+ $V_{rms}=V_p/\sqrt{2}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.78ex; " SRC="img178.svg"
+ ALT="$V_{rms}=V_p/\sqrt{2}$"></SPAN> is applied across it.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/dissipation.gif"
+ ALT="dissipation.gif">
+
+<P>
+Some useful trigonometric identities:
+      <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\sin\alpha \cos\alpha=\frac{1}{2} \sin{2\alpha},\;\;\;
+        \sin^2\alpha =\frac{1}{2}[1-\cos(2\alpha)],\;\;\;
+        \cos^2\alpha =\frac{1}{2}[1+\cos(2\alpha)]
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.88ex; vertical-align: -1.71ex; " SRC="img179.svg"
+ ALT="$\displaystyle \sin\alpha \cos\alpha=\frac{1}{2} \sin{2\alpha},\;\;\;
+\sin^2\alpha =\frac{1}{2}[1-\cos(2\alpha)],\;\;\;
+\cos^2\alpha =\frac{1}{2}[1+\cos(2\alpha)]$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">47</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+The average of a time varying current <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img86.svg"
+ ALT="$i(t)$"></SPAN> is the value of
+      a DC (direct current) current <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img180.svg"
+ ALT="$I_{av}$"></SPAN> that in period <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img157.svg"
+ ALT="$T$"></SPAN> would 
+      transfer the same charge <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img96.svg"
+ ALT="$Q$"></SPAN>:
+      <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_{av}T=Q=\int_0^T i(t) dt,\;\;\;\;\mbox{i.e.}\;\;\;\;
+        I_{av}=\frac{1}{T}\int_0^T i(t) dt
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.23ex; " SRC="img181.svg"
+ ALT="$\displaystyle I_{av}T=Q=\int_0^T i(t) dt,\;\;\;\;$">i.e.<IMG STYLE="height: 6.04ex; vertical-align: -2.23ex; " SRC="img182.svg"
+ ALT="$\displaystyle \;\;\;\;
+I_{av}=\frac{1}{T}\int_0^T i(t) dt$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">48</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Similarly, the average voltage is defined as:
+      <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_{av}=\frac{1}{T}\int_0^T v(t) dt
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.23ex; " SRC="img183.svg"
+ ALT="$\displaystyle V_{av}=\frac{1}{T}\int_0^T v(t) dt$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">49</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+If the current/voltage is sinusoidal
+      <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+i(t)=I_p\,\sin(\omega t)=I_p\,\sin(2\pi ft)=I_p\,\sin(2\pi t/T)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.78ex; " SRC="img184.svg"
+ ALT="$\displaystyle i(t)=I_p\,\sin(\omega t)=I_p\,\sin(2\pi ft)=I_p\,\sin(2\pi t/T)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">50</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The average over the complete cycle <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img185.svg"
+ ALT="$T=1/f$"></SPAN> is always zero (the 
+      charge transferred during the first half is the opposite to that 
+      transferred in the second). However, if we consider the half-cycle 
+      over <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img186.svg"
+ ALT="$T/2$"></SPAN>, the average is:
+      <BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+I_{av}&=&\frac{1}{T/2}\int_0^{T/2} i(t)\; dt
+        =\frac{2}{T}\int_0^{T/2} \;I_p\,\sin(2\pi t/T)\;dt
+        =-\frac{2}{T}\frac{T}{2\pi} I_p\,\cos(2\pi t/T)\bigg|_0^{T/2}
+        \nonumber \\
+        &=& \frac{I_p}{\pi}\left[\cos(0)-\cos(\pi)\right]
+        =\frac{2}{\pi}\,I_p=0.637\,I_p
+      
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img187.svg"
+ ALT="$\displaystyle I_{av}$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img188.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 6.74ex; vertical-align: -2.44ex; " SRC="img189.svg"
+ ALT="$\displaystyle \frac{1}{T/2}\int_0^{T/2} i(t)\; dt
+=\frac{2}{T}\int_0^{T/2} \;I_...
+...\pi t/T)\;dt
+=-\frac{2}{T}\frac{T}{2\pi} I_p\,\cos(2\pi t/T)\bigg\vert _0^{T/2}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img188.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 5.11ex; vertical-align: -1.71ex; " SRC="img190.svg"
+ ALT="$\displaystyle \frac{I_p}{\pi}\left[\cos(0)-\cos(\pi)\right]
+=\frac{2}{\pi}\,I_p=0.637\,I_p$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">51</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+
+<P>
+</LI>
+</UL>
+
+<P>
+</LI>
+<LI><B>Energy storage in capacitor <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img97.svg"
+ ALT="$C$"></SPAN></B>
+
+<P>
+Given voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img87.svg"
+ ALT="$v(t)$"></SPAN> across and current <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img86.svg"
+ ALT="$i(t)$"></SPAN> through a capacitor <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img97.svg"
+ ALT="$C$"></SPAN>,
+  the associated energy is:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+w=\int_0^T p(t)dt=\int_0^T v(t)\; i(t) dt
+    =\int_0^T v(t) \;C\frac{dv(t)}{dt} dt
+    =C \int_0^V v\;dv=\frac{1}{2}CV^2
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.23ex; " SRC="img191.svg"
+ ALT="$\displaystyle w=\int_0^T p(t)dt=\int_0^T v(t)\; i(t) dt
+=\int_0^T v(t) \;C\frac{dv(t)}{dt} dt
+=C \int_0^V v\;dv=\frac{1}{2}CV^2$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">52</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+where we have assumed <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img192.svg"
+ ALT="$v(0)=0$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img193.svg"
+ ALT="$v(T)=V$"></SPAN>. 
+
+<P>
+If <!-- MATH
+ $v(t)=V_p \sin(\omega t)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.78ex; " SRC="img170.svg"
+ ALT="$v(t)=V_p \sin(\omega t)$"></SPAN>, then
+  <!-- MATH
+ $i(t)=C\;dv(t)/dt=\omega C V_p\;\cos(\omega t)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.78ex; " SRC="img194.svg"
+ ALT="$i(t)=C\;dv(t)/dt=\omega C V_p\;\cos(\omega t)$"></SPAN>, and the energy dissipated
+  in period <!-- MATH
+ $T=2\pi/\omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img195.svg"
+ ALT="$T=2\pi/\omega$"></SPAN> is
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+w= \int_0^T v(t)\; i(t) dt
+    =V_p^2\omega C\int_0^T \sin(\omega t)\;\cos(\omega t)\,dt
+    =\frac{V_p^2\omega C}{2} \int_0^T \sin(2\omega t) dt=0
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.23ex; " SRC="img196.svg"
+ ALT="$\displaystyle w= \int_0^T v(t)\; i(t) dt
+=V_p^2\omega C\int_0^T \sin(\omega t)\;\cos(\omega t)\,dt
+=\frac{V_p^2\omega C}{2} \int_0^T \sin(2\omega t) dt=0$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">53</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+This results indicates that there is no energy dissipated over the complete 
+  period <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img157.svg"
+ ALT="$T$"></SPAN>. In the first and third quarters of the period <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img157.svg"
+ ALT="$T$"></SPAN>, the energy
+  is stored in the electric field of the capacitor (equivalent to a battery 
+  being charged), but in the 2nd and 4th quarters of the period <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img157.svg"
+ ALT="$T$"></SPAN>, the energy
+  is released from the capacitor to the rest of the circuit (equivalent to a 
+  battery delivering power).
+
+<P>
+</LI>
+<LI><B>Energy storage in inductor <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img127.svg"
+ ALT="$L$"></SPAN></B>
+
+<P>
+Given voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img87.svg"
+ ALT="$v(t)$"></SPAN> across and current <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img86.svg"
+ ALT="$i(t)$"></SPAN> through an inductor <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img127.svg"
+ ALT="$L$"></SPAN>,
+  the associated energy is
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+w=\int_0^T p(t)dt=\int_0^T i(t)\; v(t) dt
+    =\int_0^T i(t) \;L \frac{di(t)}{dt} dt
+    =L \int_0^I i\;di=\frac{1}{2}LI^2
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.23ex; " SRC="img197.svg"
+ ALT="$\displaystyle w=\int_0^T p(t)dt=\int_0^T i(t)\; v(t) dt
+=\int_0^T i(t) \;L \frac{di(t)}{dt} dt
+=L \int_0^I i\;di=\frac{1}{2}LI^2$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">54</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+where we have assumed <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img198.svg"
+ ALT="$i(0)=0$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img199.svg"
+ ALT="$i(T)=I$"></SPAN>. 
+
+<P>
+If <!-- MATH
+ $i(t)=I_p \sin(\omega t)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.78ex; " SRC="img200.svg"
+ ALT="$i(t)=I_p \sin(\omega t)$"></SPAN>, then
+  <!-- MATH
+ $v(t)= L\;di(t)/dt=L I_p\omega\;\cos(\omega t)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.78ex; " SRC="img201.svg"
+ ALT="$v(t)= L\;di(t)/dt=L I_p\omega\;\cos(\omega t)$"></SPAN>, and the energy dissipated
+  in time period <!-- MATH
+ $T=2\pi/\omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img195.svg"
+ ALT="$T=2\pi/\omega$"></SPAN> is
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+w=\int_0^T v(t)\;i(t) dt=I_p^2\omega L\int_0^T \sin(\omega t)\;\cos(\omega t)\,dt
+    =\frac{I_p^2\omega L}{2} \int_0^T \sin(2\omega t) dt=0
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.23ex; " SRC="img202.svg"
+ ALT="$\displaystyle w=\int_0^T v(t)\;i(t) dt=I_p^2\omega L\int_0^T \sin(\omega t)\;\cos(\omega t)\,dt
+=\frac{I_p^2\omega L}{2} \int_0^T \sin(2\omega t) dt=0$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">55</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Again, no energy is dissipated by the inductor during the complete period
+  <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img157.svg"
+ ALT="$T$"></SPAN> of a sinusoidal voltage. In the first and third quarter of the period 
+  <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img157.svg"
+ ALT="$T$"></SPAN>, the energy is stored in the magnetic field of the inductor, but in 
+  the 2nd and 4th quarter of the period <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img157.svg"
+ ALT="$T$"></SPAN>, the energy is released from the 
+  inductor to the rest of the circuit.
+
+<P>
+</LI>
+</UL>
+
+<P>
+The figure below shows the plots of the voltage across and current through the 
+capacitor and inductor. We note that the voltage and current are <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img203.svg"
+ ALT="$\pi/2$"></SPAN> or
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img204.svg"
+ ALT="$90^\circ$"></SPAN> out of phase. Specifically,
+
+<UL>
+<LI>Capacitor: the voltage <!-- MATH
+ $v_C(t)=\sin(\omega t)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img205.svg"
+ ALT="$v_C(t)=\sin(\omega t)$"></SPAN> (red) lags the current
+  <!-- MATH
+ $i_C=\omega C\cos(\omega t)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img206.svg"
+ ALT="$i_C=\omega C\cos(\omega t)$"></SPAN> (green) by <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img203.svg"
+ ALT="$\pi/2$"></SPAN> (or <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img204.svg"
+ ALT="$90^\circ$"></SPAN>).
+</LI>
+<LI>Inductor: the voltage <!-- MATH
+ $v_L(t)=\omega L \cos(\omega t)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img207.svg"
+ ALT="$v_L(t)=\omega L \cos(\omega t)$"></SPAN> (green) leads 
+  the current <!-- MATH
+ $i_L=\sin(\omega t)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img208.svg"
+ ALT="$i_L=\sin(\omega t)$"></SPAN> (red) by <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img203.svg"
+ ALT="$\pi/2$"></SPAN> (or <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img204.svg"
+ ALT="$90^\circ$"></SPAN>).
+</LI>
+</UL>
+
+<P>
+The figure below illustrates the energy flow in a circuit involving capacitor
+and inductor, as energy storing components:
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/storage.gif"
+ ALT="storage.gif">
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/energyexchange.gif"
+ ALT="energyexchange.gif">
+
+<P>
+Comparison of Energy storage in mechanical and electromagnetic systems:
+
+<UL>
+<LI><B>Electromagnetic energy:</B>
+  
+<UL>
+<LI>Energy stored in a capacitor with capacity <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img97.svg"
+ ALT="$C$"></SPAN> and voltage <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img85.svg"
+ ALT="$V$"></SPAN>:
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+w=\frac{1}{2}CV^2
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.88ex; vertical-align: -1.71ex; " SRC="img209.svg"
+ ALT="$\displaystyle w=\frac{1}{2}CV^2$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">56</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+    <BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+&&[Farad][volt]^2=\frac{[Ampere][second]}{[Volt]}[Volt]^2
+      \nonumber\\
+      &=&[Ampere][Volt][second]=[Watt][second]=[Joule]
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT">&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img210.svg"
+ ALT="$\displaystyle [Farad][volt]^2=\frac{[Ampere][second]}{[Volt]}[Volt]^2$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img188.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img211.svg"
+ ALT="$\displaystyle [Ampere][Volt][second]=[Watt][second]=[Joule]$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">57</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+
+</LI>
+<LI>Energy stored in an inductor with inductance <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img127.svg"
+ ALT="$L$"></SPAN> and current <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img84.svg"
+ ALT="$I$"></SPAN>:
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+w=\frac{1}{2}LI^2
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.88ex; vertical-align: -1.71ex; " SRC="img212.svg"
+ ALT="$\displaystyle w=\frac{1}{2}LI^2$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">58</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+    <BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+&&[Henry][Ampere]^2=\frac{[Volt][second]}{[Ampere]}[Ampere]^2
+      \nonumber\\
+      &=&[Volt][Ampere][second]=[Watt][second]=[Joule]
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT">&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img213.svg"
+ ALT="$\displaystyle [Henry][Ampere]^2=\frac{[Volt][second]}{[Ampere]}[Ampere]^2$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img188.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img214.svg"
+ ALT="$\displaystyle [Volt][Ampere][second]=[Watt][second]=[Joule]$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">59</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+</LI>
+</UL>
+
+<P>
+</LI>
+<LI><B>Mechanical energy:</B>
+  
+<UL>
+<LI><B>Kinetic Energy:</B> Energy stored in a mass of 1 kilogram
+    moving with a velocity <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img215.svg"
+ ALT="$u$"></SPAN> of 1 meter per second possesses 1/2 Joule 
+    of kinetic energy.
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+w=\frac{1}{2}mu^2,\;\;\;\;\;\frac{[kilogram][meter]^2}{[second]^2}=[Joule]
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.29ex; " SRC="img216.svg"
+ ALT="$\displaystyle w=\frac{1}{2}mu^2,\;\;\;\;\;\frac{[kilogram][meter]^2}{[second]^2}=[Joule]$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">60</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Another unit for energy is <EM>calorie</EM>:
+    <!-- MATH
+ $1 \; \mbox{cal}=4.2\;\mbox{Joules}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img49.svg"
+ ALT="$1 \;$">&nbsp; &nbsp;cal<IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img217.svg"
+ ALT="$=4.2\;$">Joules<IMG STYLE="height: 0.23ex; vertical-align: -0.12ex; " SRC="img51.svg"
+ ALT="$$"></SPAN>
+
+<P>
+</LI>
+<LI><B>Potential energy:</B> Energy stored in a spring (<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img218.svg"
+ ALT="$x=Cf=f/K$"></SPAN>) 
+    of <EM>stiffness</EM> <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img219.svg"
+ ALT="$K$"></SPAN> or <EM>compliance</EM> <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img220.svg"
+ ALT="$C=1/K$"></SPAN> is 
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+w=\frac{1}{2}Cf^2,\;\;\;\;\;
+      \frac{[meter]}{[Newton]}[Newton]^2=[meter][Newton]=[Joule]
+    
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img221.svg"
+ ALT="$\displaystyle w=\frac{1}{2}Cf^2,\;\;\;\;\;
+\frac{[meter]}{[Newton]}[Newton]^2=[meter][Newton]=[Joule]$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">61</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+</UL>
+
+<P>
+</LI>
+</UL>
+
+<P>
+<B>Comparison with mechanical systems:</B>
+
+<P>
+The work of a mechanical system does is <!-- MATH
+ $w=\int_0^X f(x)\; dx$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.48ex; vertical-align: -0.94ex; " SRC="img222.svg"
+ ALT="$w=\int_0^X f(x)\; dx$"></SPAN> where <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img223.svg"
+ ALT="$f(x)$"></SPAN> 
+is force and <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img224.svg"
+ ALT="$X$"></SPAN> is displacement.
+
+<UL>
+<LI><B>Potential energy:</B> A spring can be described by Hooke's law <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img225.svg"
+ ALT="$f=Kx$"></SPAN>
+  where <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img219.svg"
+ ALT="$K$"></SPAN> is the <EM>stiffness</EM>, or <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img226.svg"
+ ALT="$x=Cf$"></SPAN> where <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img220.svg"
+ ALT="$C=1/K$"></SPAN> is the 
+  <EM>compliance</EM>. The potential energy stored in the spring is
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+w=\int_0^X f(x)\;dx=\int_0^F f\;C\;df=\frac{1}{2}CF^2
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.23ex; " SRC="img227.svg"
+ ALT="$\displaystyle w=\int_0^X f(x)\;dx=\int_0^F f\;C\;df=\frac{1}{2}CF^2$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">62</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+i.e., the compliance <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img97.svg"
+ ALT="$C$"></SPAN> is a measure of the spring's ability to 
+  store potential energy (the less stiff, the more potential energy can
+  be stored in the spring with the same force).
+</LI>
+<LI><B>Kinetic energy:</B> A mass moving at a velocity <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img89.svg"
+ ALT="$v$"></SPAN> has kinetic
+  energy
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+w=\int_0^T f\;v(t)\;dt=\int_0^T m \frac{dv}{dt}\;v(t)\;dt
+    =m \int_0^V v\;dv=\frac{1}{2}mV^2
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.23ex; " SRC="img228.svg"
+ ALT="$\displaystyle w=\int_0^T f\;v(t)\;dt=\int_0^T m \frac{dv}{dt}\;v(t)\;dt
+=m \int_0^V v\;dv=\frac{1}{2}mV^2$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">63</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+i.e., the mass <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img8.svg"
+ ALT="$m$"></SPAN> of a body is a measure of the body's ability to 
+  store kinetic energy (the more mass, the more kinetic energy can be 
+  stored in the body with the same velocity).
+</LI>
+</UL>		
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node5.html">Examples: Mechanical and Electrical</A>
+<B> Up:</B> <A
+ HREF="node1.html">Chapter 1: Basic Quantities</A>
+<B> Previous:</B> <A
+ HREF="node3.html">Resistor, Capacitor, and Inductor</A></DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

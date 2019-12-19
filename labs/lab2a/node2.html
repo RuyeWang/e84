@@ -1,0 +1,272 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Transistor Testing</TITLE>
+<META NAME="description" CONTENT="Transistor Testing">
+<META NAME="keywords" CONTENT="lab2a">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="lab2a.css">
+
+<LINK REL="next" HREF="node3.html">
+<LINK REL="previous" HREF="node1.html">
+<LINK REL="up" HREF="node1.html">
+<LINK REL="next" HREF="node3.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html45"
+  HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html43"
+  HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html37"
+  HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html46"
+  HREF="node3.html">Transistor Circuit Construction</A>
+<B> Up:</B> <A NAME="tex2html44"
+  HREF="node1.html">Part 1: Transistor Circuits</A>
+<B> Previous:</B> <A NAME="tex2html38"
+  HREF="node1.html">Part 1: Transistor Circuits</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00011000000000000000">
+Transistor Testing</A>
+</H2>
+
+<P>
+Different types of transistors are used in the 
+<A NAME="tex2html1"
+  HREF="../amfm108TK.pdf">AM/FM radio receiver kit</A>
+of this lab, including five
+<A NAME="tex2html2"
+  HREF="http://www.fairchildsemi.com/ds/2N/2N3904.pdf">2N3904</A>
+transistors (also available in the stock room). Use the 
+<A NAME="tex2html3"
+  HREF="http://en.wikipedia.org/wiki/Semiconductor_curve_tracer">Type 575 semiconductor curve tracer</A>
+in the electronic lab to test these transistors in common emitter mode. 
+Observe and take pictures of both the input and output characteristic plots. 
+
+<P>
+<B>Important note:</B> To make sure you do not burn your transistor, 
+(a) study the datasheet of the transistor to determine the leads for E, B and C,
+(b) do not apply <IMG
+ WIDTH="37" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$V_{CC}$"> voltage higher than 30 V.
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../2n3904.gif"
+ ALT="2n3904.gif">
+
+<P>
+<B>Initial control knob settings before you start:</B>
+
+<UL>
+<LI><B>Display control</B> (top-right)
+  
+<UL>
+<LI>Vertical axis (for <IMG
+ WIDTH="24" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.png"
+ ALT="$I_B$"> or <IMG
+ WIDTH="24" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="$I_C$">): 1 mA/Div
+</LI>
+<LI>Horizontal axis (<IMG
+ WIDTH="38" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$V_{BE}$"> or ``base voltage''): 0.1 or 0.5 V/Div
+</LI>
+<LI>Horizontal axis (<IMG
+ WIDTH="37" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$V_{CE}$"> or ``collector voltage''): 2 V/Div
+  
+</LI>
+</UL>
+</LI>
+<LI><B>Collector voltage</B> (lower-left)
+  
+<UL>
+<LI>Peak voltage range: x1 (be careful to use x10 as maximum voltage is 200 V!)
+</LI>
+<LI>Polarity: + for npn transistors
+</LI>
+<LI>Peak Volt (<IMG
+ WIDTH="37" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$V_{CC}$">): 10 to 20 Volts
+</LI>
+<LI>Dissipation limiting resistor (<IMG
+ WIDTH="30" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.png"
+ ALT="$R_C$">): 1 k<IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.png"
+ ALT="$\Omega$">
+</LI>
+</UL>
+</LI>
+<LI><B>Base voltage</B> (lower-right)
+  
+<UL>
+<LI>Repetitive/Single scan: 
+
+<P>
+single for input characteristic plot, repetitive for output characteristic plot.
+</LI>
+<LI>Steps/family: 12
+</LI>
+<LI>Polarity: +
+</LI>
+<LI>Steps/Sec: 240
+</LI>
+<LI>Series resistor (<IMG
+ WIDTH="30" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.png"
+ ALT="$R_B$">) (no relevance here)
+</LI>
+<LI>Step selection: <!-- MATH
+ $0.005 mA = 5 \mu A$
+ -->
+<IMG
+ WIDTH="137" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.png"
+ ALT="$0.005 mA = 5 \mu A$">
+</LI>
+</UL>
+</LI>
+</UL>
+
+<P>
+<B>What to submit:</B>
+
+<P>
+
+<UL>
+<LI>Take screenshots of both the input and output characteristic plots 
+  observed on the semiconductor curve tracer with the following clear 
+  labeled (with meaningful increment):
+  
+<UL>
+<LI>The voltage (horizontal axis) <IMG
+ WIDTH="38" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$V_{BE}$"> or <IMG
+ WIDTH="37" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$V_{CE}$">
+</LI>
+<LI>The current (vertical axis) <IMG
+ WIDTH="24" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.png"
+ ALT="$I_B$"> or <IMG
+ WIDTH="24" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="$I_C$">
+</LI>
+<LI>For the output plot, each one of the 12 <IMG
+ WIDTH="24" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.png"
+ ALT="$I_B$"> values in the family
+  
+</LI>
+</UL>
+</LI>
+<LI>Determine the value <IMG
+ WIDTH="90" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.png"
+ ALT="$\beta=I_C/I_B$"> (also referred to as the 
+  ``forward transfer current ratio'' and denoted by <IMG
+ WIDTH="24" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.png"
+ ALT="$h_f$"> or <IMG
+ WIDTH="37" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.png"
+ ALT="$h_{FE}$"> on
+  the <A NAME="tex2html4"
+  HREF="http://www.fairchildsemi.com/ds/2N/2N3904.pdf">2N3904 datasheet</A>
+(also see <A NAME="tex2html5"
+  HREF="http://fourier.eng.hmc.edu/e84/lectures/ch4/node7.html">class notes</A>)
+  from the output plot for each of the 5 transistors.
+</LI>
+<LI>Determine <IMG
+ WIDTH="38" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$V_{BE}$"> from the input plot when <IMG
+ WIDTH="24" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.png"
+ ALT="$I_B$"> is within the range of
+  0.01 to 0.1 mA, i.e., <IMG
+ WIDTH="24" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="$I_C$"> is within the range of <IMG
+ WIDTH="55" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.png"
+ ALT="$0.01\;\beta$"> to <IMG
+ WIDTH="45" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.png"
+ ALT="$0.1\;\beta$">.
+</LI>
+<LI>Describe how the load line changes in the output plot when <IMG
+ WIDTH="30" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.png"
+ ALT="$R_C$"> and <IMG
+ WIDTH="37" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$V_{CC}$">
+  increases/decreases.
+</LI>
+</UL>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html45"
+  HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html43"
+  HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html37"
+  HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html46"
+  HREF="node3.html">Transistor Circuit Construction</A>
+<B> Up:</B> <A NAME="tex2html44"
+  HREF="node1.html">Part 1: Transistor Circuits</A>
+<B> Previous:</B> <A NAME="tex2html38"
+  HREF="node1.html">Part 1: Transistor Circuits</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Ruye Wang
+2015-07-26
+</ADDRESS>
+</BODY>
+</HTML>

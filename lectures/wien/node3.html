@@ -1,0 +1,173 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Wien bridge oscillator</TITLE>
+<META NAME="description" CONTENT="Wien bridge oscillator">
+<META NAME="keywords" CONTENT="wien">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="wien.css">
+
+<LINK REL="next" HREF="node4.html">
+<LINK REL="previous" HREF="node2.html">
+<LINK REL="up" HREF="wien.html">
+<LINK REL="next" HREF="node4.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html37"
+  HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html35"
+  HREF="wien.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html29"
+  HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html38"
+  HREF="node4.html">Wien osillator</A>
+<B> Up:</B> <A NAME="tex2html36"
+  HREF="wien.html">wien</A>
+<B> Previous:</B> <A NAME="tex2html30"
+  HREF="node2.html">Wien bridge</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00003000000000000000">
+Wien bridge oscillator</A>
+</H2>
+
+<P>
+An osillator is typically formed by an amplifier with gain <IMG
+ WIDTH="42" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img85.png"
+ ALT="$A(s)$"> and
+a feedback branch of gain <IMG
+ WIDTH="43" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img86.png"
+ ALT="$B(s)$">. The open-loop gain is 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\frac{V_o}{V_i}=A(j\omega)\;B(j\omega)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="150" HEIGHT="49" BORDER="0"
+ SRC="img87.png"
+ ALT="\begin{displaymath}
+\frac{V_o}{V_i}=A(j\omega)\;B(j\omega)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+If the input <!-- MATH
+ $V_i=\cos(\omega_0 t)$
+ -->
+<IMG
+ WIDTH="111" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img88.png"
+ ALT="$V_i=\cos(\omega_0 t)$"> is a sinusoid, and 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+|A(j\omega_0)\;B(j\omega_0)|=1
+\;\;\;\;\;\;\mbox{and}\;\;\;\;\;\;
+\angle A(j\omega_0)B(j\omega_0)=0
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="415" HEIGHT="33" BORDER="0"
+ SRC="img89.png"
+ ALT="\begin{displaymath}
+\vert A(j\omega_0)\;B(j\omega_0)\vert=1
+\;\;\;\;\;\;\mbox{and}\;\;\;\;\;\;
+\angle A(j\omega_0)B(j\omega_0)=0
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+then the output <!-- MATH
+ $V_o=A(j\omega_0)B(j\omega_0)V_i=\cos(\omega_0 t)$
+ -->
+<IMG
+ WIDTH="269" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img90.png"
+ ALT="$V_o=A(j\omega_0)B(j\omega_0)V_i=\cos(\omega_0 t)$">. In 
+other words, the closed loop is an oscillator.
+
+<P>
+The op-amp circuit shown in the figure has both positive and negative
+feedback branches. If the voltage to non-inverting input <IMG
+ WIDTH="27" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img91.png"
+ ALT="$V_+$"> is 
+considered as the input, the circuit is a non-inverting amplifier 
+with gain:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+A=\frac{V_o}{V_+}=1+\frac{R_f}{R_3}=K
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="191" HEIGHT="50" BORDER="0"
+ SRC="img92.png"
+ ALT="\begin{displaymath}
+A=\frac{V_o}{V_+}=1+\frac{R_f}{R_3}=K
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+On the other hand, the positive feedback gain is
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+B(j\omega)=\frac{V_+}{V'_o}=\frac{Z_1}{Z_1+Z_2}
+=\frac{R_1||1/j\omega C_1}{R_1||1/j\omega C_1+R_2+1/j\omega C_2}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="443" HEIGHT="52" BORDER="0"
+ SRC="img93.png"
+ ALT="\begin{displaymath}
+B(j\omega)=\frac{V_+}{V'_o}=\frac{Z_1}{Z_1+Z_2}
+=\frac{R_1\v...
+... 1/j\omega C_1}{R_1\vert\vert 1/j\omega C_1+R_2+1/j\omega C_2}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+<BR><HR>
+<ADDRESS>
+Ruye Wang
+2015-11-29
+</ADDRESS>
+</BODY>
+</HTML>

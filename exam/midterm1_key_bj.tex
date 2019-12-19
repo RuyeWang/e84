@@ -1,0 +1,107 @@
+\documentstyle[11pt]{article}
+\usepackage{html}
+\begin{document}
+\begin{center}
+{\Large \bf E84 Midterm Exam 1}
+\end{center}
+
+\begin{itemize}
+\item {\bf Problem 1. (33 points)}
+  Find all node voltages in the circuit with respect to the bottom node treated 
+  as ground, where $R_1=200\Omega$, $R_2=75\Omega$, $R_3=25\Omega$, $R_4=50\Omega$, 
+  $R_5=100\Omega$, $V=10V$, $I=0.2A$. Use both node voltage and loop current methods.
+  (Of course they should produce the same results.)
+
+  \htmladdimg{../hw3b.gif}
+
+%  {\bf Solution:}
+%  \begin{itemize}
+%    \item {\bf Node voltage:}
+%      \[ \begin{array}{ll}
+%	\mbox{left node:} & V_1/200+(V_1-V_2)/75=0.2 \\
+%	\mbox{middle node:} & (V_2-V_1)/75+V_2/25+V_3/100=0 \\
+%	\mbox{voltage source:} & V_3=V_2-V=V_2-10 \end{array} \]
+%      Solving this we get:
+%      \[ V_1=14.24,\;\;\;\;\;V_2=4.58,\;\;\;\;V_3=-5.42 \]
+%    \item {\bf Loop current:}
+%      first convert the current source $I=0.2A$ and the parallel resistor
+%      $R_1=200\Omega$ into a voltage source with $V_1=40V$ in series with
+%      $R_1=200\Omega$. Assume loop currents $I_a$ (left loop) and $I_b$
+%      (right loop) and get loop current equations:
+%      \[ \begin{array}{ll}
+%	\mbox{left loop:} & (200+75+25)I_a-25I_b=40 \\
+%	\mbox{right loop:} & -25I_a+(100+25)I_b=-10 \end{array} \right. \]
+%      Solving these we get $I_a=0.129A$, $I_b=-0.054A$. 
+%      $V_2=(I_a-I_b)R_3=0.183\times 25=4.58V$, same as previous result.
+%  \end{itemize}
+
+\item {\bf Problem 2. (33 points)} 
+
+  Find the current $i(t)$ through the resistor of $5\Omega$. Assume the 
+  voltage and current sources are respectively, 
+  \[ v_0(t)=10\sqrt{2} \cos \; 2t\; V,\;\;\;\;\; 
+  i_0(t)=2\sqrt{2} \cos(3t+45^\circ)\; A \]
+  \htmladdimg{../midterm05f1.gif}
+
+  {\bf Hint:} The two energy sources are at different frequencies. But
+  you can still use superposition theorem to find $i(t)$.
+
+  % {\bf Solution:} Represent $v_0(t)$ and $i_0(t)$ as phasors:
+  % \[ \dot{V}_0=10\angle 0^\circ V,\;\;\;\;\; \dot{I}_0=2 \angle 45^\circ A \]
+  % Use superposition:
+  % \begin{itemize}
+  % \item Due to voltage source along with current source open,
+  % \[ \dot{I}'=\frac{\dot{V}_0}{j2/3+j2||(-j0.5)+5}
+  %            =\frac{10\angle 0^\circ}{j2/3-j2/3+5}=2\angle 0^\circ \; A \]
+  % \[ i'(t)=2\sqrt{2} \cos 2t \; A \]
+  % \item Due to current source along with voltage source shorted, 
+  % \[ \dot{I}''=\dot{I}_0 \frac{j1+j3||(-j1/3)}{5+j1+j3||(-j1/3)}
+  %    =2\angle 45^\circ \; \frac{j5/8}{5+j5/8}=0.25\angle 127.87^\circ \;A
+  % \]
+  % \[ i''(t)=0.25\sqrt{2} \cos(3t+127.87^\circ) \; A \]
+  % \end{itemize}
+  % The current $i(t)$ is therefore
+  % \[ i(t)=i'(t)+i''(t)=2\sqrt{2} \cos 2t+0.25\sqrt{2} \cos(3t+127.87^\circ) \; A \]
+
+
+\item {\bf Problem 3. (34 points)} 
+
+  In the circuit below, $R_1=150\Omega$, $R_2=50\Omega$, $L=0.2H$, $C=5\mu F$.
+  The input voltage is $v_s(t)=70\sin(\omega t+36.9^\circ)=70\sin(1000 t+36.9^\circ)$.
+  The system is in steady state before the switch is closed at $t=0$. Find voltage 
+  $v_C(t)$ across $C$ and current $i_L(t)$ through $L$ for $t>0$.
+
+  \htmladdimg{../midterm2f.gif}
+
+%  {\bf Solution:} 
+%  The phasor form of the input voltage is:
+%  \[ \dot{V}_s=70/\sqrt{2}\angle 36.9^\circ =49.49\angle 36.9^\circ \]
+%  Find $i_L(t)$:
+%  \[ \dot{I}_L=\frac{\dot{V_s}}{R_1+R_2+j(\omega L-1/\omega C)}
+%  =\frac{49.49\angle 36.9^\circ}{150+50+j(200-200)}=0.247\angle 36.9^\circ \]
+%  \[ i_L(t)=0.35\;\sin(\omega t+36.9^\circ)\;\;\;\;\;(t<0) \]
+%  \[ i_L(0_-)=0.35\;\sin(36.9^\circ)=0.21\;A \]
+%  \[ \dot{V}_C=Z_C \dot{I}=\dot{I}/j\omega C =49.49\angle -53.1^\circ \]
+%  \[ v_C(0_-)=70\;sin(-53.1^\circ)=-55.98\;V \]
+
+%  For $t>0$, the switch is closed, $\tau_C=R_2C=2.5\times 10^{-4}$, 
+%  $1/\tau_1=4000$, $\tau_L=L/R_1=1.33\times 10^{-3}$, $1/\tau_L=750$.
+%  As the steady state of $v_C(t)$ is zero, we can find $v_C(t)$ to be
+%  \[ v_C(t)=-55.98\;e^{-4000  t} \]
+%  Find steady state of $i_L(t)$:
+%  \[ \dot{I}_L=\frac{\dot{V}_s}{R_1+j\omega L}=\frac{49.49\angle 36.9}{150+j200}
+%  =0.2\angle -16.23 \]
+%  the steady state of $i_L(t)$ is
+%  \[ i_L(t)=0.2\sqrt{2}\sin(\omega t-16.23^\circ)=0.283\sin(\omega t-16.23^\circ) \]
+%  Evaluating $i_L(t)$ at $t=0$ we get:
+%  \[ i_L(0)=0.283\sin(-16.23^\circ)=-0.08 \]
+%  The complete $i_L(t)$ is
+%  \[ i_L(t)=0.283\sin(\omega t-16.23^\circ)+[0.21-(-0.08)]e^{-t/\tau_L}
+%  =0.283\sin(\omega t-16.23^\circ)+0.29\;e^{-750\;t} \]
+
+\end{itemize}
+
+\end{document}
+
+8795-0122
+

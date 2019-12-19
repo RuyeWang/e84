@@ -1,0 +1,441 @@
+\documentstyle[12pt]{article}
+\usepackage{html}
+% \usepackage{graphics}  
+\begin{document}
+
+\subsection{The Sallen-Key filters}
+
+\begin{itemize}
+\item {\bf Second order low-pass filter}
+  
+  If we let $Z_1=R_1$, $Z_2=R_2$, $Z_3=1/j\omega C_1$, $Z_4=1/j\omega C_2$, 
+  the FRF becomes:
+
+  \begin{eqnarray}
+    H&=&\frac{1/(j\omega)^2C_1C_2}
+    {R_1R_2+(R_1+R_2)/j\omega C_1+1/(j\omega)^2C_1C_2}
+    \nonumber \\
+    &=&\frac{1/R_1R_2C_1C_2}{(j\omega)^2+j\omega(R_1+R_2)/R_1R_2C_1+1/R_1R_2C_1C_2}
+    \nonumber \\
+    &=&\frac{1/R_1R_2C_1C_2}{(j\omega)^2+j\omega/R_pC_1+1/R_1R_2C_1C_2}
+    \nonumber \\
+    &=&\frac{\omega_n^2}{(j\omega)^2+2\zeta\omega_n\;j\omega+\omega_n^2} 
+    =\frac{\omega_n^2}{(j\omega)^2+\omega_n/Q \;j\omega+\omega_n^2}
+    =\frac{\omega_n^2}{(j\omega)^2+\Delta\omega\;j\omega+\omega_n^2} 
+    \nonumber
+  \end{eqnarray}
+
+\item {\bf Second order high-pass filter}
+    
+  If we let $Z_1=1/j\omega C_1$, $Z_2=1/j\omega C_2$, $Z_3=R_1$, $Z_4=R_2$, 
+  the FRF becomes:
+  \begin{eqnarray}
+    H&=&\frac{R_1R_2}
+    {1/(j\omega)^2C_1C_2+R_1(1/j\omega C_1+1/j\omega C_2)+R_1R_2}
+    \nonumber \\
+    &=&\frac{(j\omega)^2}{1/R_1R_2C_1C_2+j\omega\;(C_1+C_2)/C_1C_2R_2+(j\omega)^2}
+    \nonumber \\
+    &=&\frac{(j\omega)^2}{(j\omega)^2+j\omega\;/C_sR_2+1/R_1R_2C_1C_2}
+    \nonumber \\
+    &=&\frac{(j\omega)^2}{(j\omega)^2+2\zeta\omega_n\;j\omega+\omega_n^2} 
+    =\frac{(j\omega)^2}{(j\omega)^2+\omega_n/Q \;j\omega+\omega_n^2} 
+    =\frac{(j\omega_n)^2}{(j\omega)^2+\Delta\omega\;j\omega+\omega_n^2}
+    \nonumber
+  \end{eqnarray}
+\end{itemize}
+
+
+
+\subsection{The Twin-T notch (band-stop) filter}
+
+{\bf The twin-T filter}
+
+\htmladdimg{../figures/TwinT.png}
+
+%\begin{comment}
+The twin-T network is composed of two T-networks: 
+\begin{itemize}
+\item The RCR network is formed by two resistors $R_1=R_2=R$ and one
+  capacitor $C_3=2C$. 
+
+  \begin{comment}
+  This T (or Y) network can be converted to a $\pi$ (or $\Delta$) network (see 
+  \htmladdnormallink{here}{http://fourier.eng.hmc.edu/e84/lectures/ch2/node3.html}) of three branches:
+  \[
+  Z'_1=Z'_2=R+\frac{1}{2j\omega C}+\frac{R/2j\omega C}{R}
+  =R+\frac{1}{j\omega C}=\frac{j\omega RC+1}{j\omega C}
+  \]
+  \[
+  Z'_3=R+R+\frac{R^2}{1/2j\omega C}=2R+2R^2j\omega C=2R(1+j\omega RC)
+  \]
+  The frequency response function of the voltage divider formed by 
+  $Z'_3$ and $Z'_2$ is:
+  \begin{eqnarray}
+  H'(j\omega)&=&\frac{Z'_2}{Z'_2+Z'_3}
+  =\frac{(1+j\omega RC)/j\omega C}{(1+j\omega RC)/j\omega C+2R(1+j\omega RC)}
+  \nonumber\\
+  &=&\frac{1}{1+2j\omega RC}=\frac{1}{1+2j\omega\tau}
+  \nonumber
+  \end{eqnarray}
+  where $\tau=RC$. This is a first-order low-pass filter with cut-off
+  frequency at $\omega_c=1/2\tau$:
+  \[
+  |H'(j\omega)|=\left\{\begin{array}{ll}1 & \omega=0\\1/\sqrt{2}& 
+  \omega=1/2\tau\\ 0&\omega\rightarrow\infty\end{array}\right.
+  \]
+  \end{comment}
+
+\item The CRC network is formed by two capacitors $C_1=C_2=C$ and one
+  resistor $R_3=R/2$. 
+
+  \begin{comment}
+  This T (or Y) network can be converted to a
+  $\pi$ (or $\Delta$) network of three branches:
+  \[
+  Z''_1=Z''_2=\frac{R}{2}+\frac{1}{j\omega C}+\frac{R/2j\omega C}{1/j\omega C}
+  =R+\frac{1}{j\omega C}  =\frac{j\omega RC+1}{j\omega C}
+  \]
+  \[
+  Z''_3=\frac{1}{j\omega C}+\frac{1}{j\omega C}+\frac{1/(j\omega C)^2}{R/2}
+  =\frac{2}{j\omega C}+\frac{2}{R(j\omega C)^2}
+  =\frac{2(1+j\omega RC)}{R(j\omega C)^2}
+  \]
+  The frequency response function of the voltage divider formed by $Z''_3$ 
+  and $Z''_2$ is:
+  \begin{eqnarray}
+  H''(j\omega)&=&\frac{Z''_2}{Z''_2+Z''_3}
+  =\frac{(1+j\omega RC)/j\omega C}
+  {(1+j\omega RC)/j\omega C+2(1+j\omega RC)/R(j\omega C)^2}
+  \nonumber \\
+  &=&\frac{j\omega RC}{j\omega RC+2}=\frac{j\omega\tau}{j\omega\tau+2}
+  =\frac{1}{1-j2/\omega\tau}
+  \nonumber 
+  \end{eqnarray}
+  This is a first-order high-pass filter with cut-off frequency at
+  $\omega_c=2/\tau$:
+  \[
+  |H'(j\omega)|=\left\{\begin{array}{ll}0 & \omega=0\\1/\sqrt{2}& 
+  \omega=2/\tau\\ 1&\omega\rightarrow\infty\end{array}\right.
+  \]
+  \end{comment}
+
+\end{itemize}
+
+\begin{comment}
+
+As these two $\pi$-networks are combined in parallel, they form a single
+$\pi$-network with three branches $Z_1=Z'_1||Z''_1$, $Z_2=Z'_2||Z''_2$, 
+and $Z_3=Z'_3||Z''_3$:
+\[
+Z_1=Z'_1||Z''_1=Z_2=Z'_2||Z''_2=\frac{1}{2}\left(R+\frac{1}{j\omega C}\right)
+\]
+\[
+  Z_3=Z'_3||Z''_3=\frac{Z'_3 Z''_3}{Z'_3+Z''_3}
+  =\frac{2R(1+j\omega RC)}{1+(j\omega RC)^2}
+\]
+The frequency response function of this $\pi$-network (a voltage divider) is:
+\begin{eqnarray}
+  H(j\omega)&=&\frac{Z_2}{Z_2+Z_3}=\frac{R+1/j\omega C}
+  {R+1/j\omega C+4R(1+j\omega RC)/(1+(j\omega RC)^2)}
+  \nonumber \\
+  &=&\frac{(1+j\omega RC)/j\omega C}{(1+j\omega RC)/j\omega C+4R(1+j\omega RC)/(1+(j\omega RC)^2)}
+  \nonumber \\
+  &=&\frac{1/j\omega C}{1/j\omega C+4R/(1+(j\omega RC)^2)}
+  =\frac{1}{1+4j\omega RC/(1+(j\omega RC)^2)}
+  \nonumber \\
+  &=&\frac{1+(j\omega\tau)^2}{1+(j\omega\tau)^2+4j\omega\tau}
+  =\frac{(j\omega)^2+(1/\tau)^2}{(j\omega)^2+4j\omega/\tau+(1/\tau)^2}
+  \nonumber
+\end{eqnarray}
+
+\end{comment}
+
+When the output is open-circuit, i.e., $Z_L=\infty$, the frequency 
+response function of the twin-T network can be found to be
+(see \htmladdnormallink{here}{../TwinT/TwinT.html}):
+\begin{eqnarray}
+H(j\omega)&=&\frac{v_{out}}{v_{in}}
+=\frac{(j\omega)^2+\omega_n^2}{(j\omega)^2+4\omega_nj\omega+\omega_n^2}
+\nonumber\\
+&=&\frac{(j\omega)^2+\omega_n^2}{(j\omega)^2+\omega_nj\omega/Q+\omega_n^2}
+=\frac{\omega_n^2-\omega^2}{\omega_n^2-\omega^2+j\omega\Delta\omega}
+\nonumber
+\end{eqnarray}
+where
+\[
+\omega_n=\frac{1}{RC}=\frac{1}{\tau}
+\]
+$Q=1/4=0.25$ is the quality factor, and $\Delta\omega=\omega_n/Q=4\omega_n$ 
+is the bandwidth of the filter. This twin-T network is a band-stop filter 
+(notch filter) which attenuates the frequency $\omega_n=1/\tau$ to zero:
+\[
+|H(j\omega)|=\left\{\begin{array}{ll} 
+H(0)=\omega_n^2/\omega_n^2=1 & \omega=0 \\
+H(j\omega_n)=0 & \omega=\omega_n=1/\tau\\
+H(\infty)=\lim\limits_{\omega\rightarrow\infty}H(j\omega)=\omega^2/\omega^2=1 & \omega\rightarrow \infty
+\end{array}\right.
+\]
+
+\begin{comment}
+This result can also be reached by noticing the following
+\[
+H'(j\omega)\big|_{\omega=1/\tau}=\frac{1}{1+j2},\;\;\;\;\;\;\;
+H''(j\omega)\big|_{\omega=1/\tau}=\frac{1}{1-j2}
+\]
+As they are equal in magnitude but opposite in phase, their outputs 
+cancel each other to produce zero output.
+\end{comment}
+
+When this notch filter is used in a negative feedback loop of an 
+amplifier, it becomes an oscillator.
+
+\htmladdimg{../figures/TwinTPlots1.png}
+
+{\bf The active twin-T filter}
+
+The bandwidth $\Delta\omega=\omega_n/Q=4\omega_n$ may be too large for 
+most applications due to the small quality factor $Q=1/4$. To overcome 
+this problem, an active filter containing two op-amp followers (with 
+unity gain $A=1$) can be used to introduce a positive feedback loop as 
+shown below:
+
+\htmladdimg{../figures/TwinTActive.png}
+
+Now the common terminal of the twin-T filter is no longer grounded, 
+instead it is connected a potentiometer, a voltage divider composed 
+of $R_4$ and $R_5$, to form a feedback loop by which a fraction of the
+output $V_{out}$ is fed back:
+\[
+V_1=\frac{R_5}{R_4+R_5}\;V_{out}=\alpha v_{out}
+\]
+where $\alpha=R_5/(R_4+R_5)$, i.e., $1-\alpha=R_4/(R_4+R_5)$.
+
+\begin{comment}
+
+The input and output of the twin-T network are respectively $V_{in}-V_1$ and
+$V_{out}-V_1$, and they are now related by the frequency response function 
+$H(j\omega)$ of the twin-T network:
+\[
+V_{out}-V_1=H(j\omega)(V_{in}-V_1)
+\]
+Rearranging and substituting $V_1=V_{out}\;R_5/(R_4+R_5)$, we get
+\begin{eqnarray}
+  H(j\omega)V_{in}&=&V_{out}+(H(j\omega)-1) V_1
+  =V_{out}+(H(j\omega)-1)\frac{R_5}{R_4+R_5}V_{out}
+  \nonumber \\
+  &=&\left(1+(H(j\omega)-1)\;\frac{R_5}{R_4+R_5}\right)\,V_{out}
+  =\frac{R_4+H(j\omega)R_5}{R_4+R_5}\;V_{out}
+  \nonumber
+\end{eqnarray}
+Now the frequency response function of this active filter with feedback 
+can be found to be
+\[
+H_{active}(j\omega)=\frac{V_{out}}{V_{in}}
+=\frac{H(j\omega)(R_4+R_5)}{R_4+H(j\omega)R_5}
+\]
+Substituting $H(j\omega)=((j\omega)^2+\omega_n^2)/((j\omega)^2+4\omega_n j\omega
++\omega_n^2)$ we get
+\begin{eqnarray}
+  H_{active}(j\omega)&=&\frac{(\omega_n^2-\omega^2)(R_4+R_5)}
+  {R_4(\omega_n^2-\omega^2+4\omega_n j\omega)+(\omega_n^2-\omega^2)R_5}
+  \nonumber \\
+  &=&\frac{(\omega_n^2-\omega^2)(R_4+R_5)}
+  {4\omega_nR_4 j\omega+(\omega_n^2-\omega^2)(R_4+R_5)}
+  \nonumber \\
+  &=&\frac{\omega_n^2-\omega^2}{j\omega 4\omega_n R_4/(R_4+R_5)+\omega_n^2-\omega^2}
+  \nonumber \\
+  &=&\frac{\omega_n^2-\omega^2}{\omega_n^2-\omega^2+\omega_n/Q_{active} j\omega}
+  =\frac{\omega_n^2-\omega^2}{\omega_n^2-\omega^2+\Delta\omega_{active} j\omega}
+  \nonumber
+\end{eqnarray}
+where 
+\[
+Q_{active}=\frac{R_4+R_5}{4R_4},\;\;\;\;\;\;
+\Delta\omega_{active}=\frac{\omega_n}{Q}_{active}
+\]
+are respectively the quality factor and the bandwidth of the active 
+filter with feedback. 
+\end{comment}
+
+It can be shown (see \htmladdnormallink{here}{../TwinT/TwinT.html})
+that the frequency response function of this active twin-T filter is
+\begin{eqnarray}
+H_{active}(j\omega)
+&=&\frac{\omega_n^2-\omega^2}{\omega_n^2+4j\omega\omega_n R_4/(R_4+R_5)-\omega^2}
+\nonumber\\
+&=&\frac{\omega_n^2-\omega^2}{\omega_n^2-\omega^2+\omega_n/Q_{active} j\omega}
+=\frac{\omega_n^2-\omega^2}{\omega_n^2-\omega^2+\Delta\omega_{active} j\omega}
+\nonumber
+\end{eqnarray}
+where 
+\[
+Q_{active}=\frac{R_4+R_5}{4R_4},\;\;\;\;\;\;
+\Delta\omega_{active}=\frac{\omega_n}{Q}_{active}
+\]
+are respectively the quality factor and the bandwidth of the active 
+filter with feedback. By changing $R_4$ and $R_5$, the bandwidth 
+$\Delta\omega_{active}$ can be adjusted. In particular, 
+\begin{itemize}
+\item when $R_5=0$, $V_1=0$ (no feedback), $Q_{active}=1/4=Q$, 
+  $\Delta\omega=\omega_n/Q=4\omega_n$; 
+\item when $R_4=0$, $V_1=V_{out}$ (one hundred percent feedback), 
+  $Q_{active}=\infty$, $\Delta\omega_{active}=\omega_n/Q_{active}=0$.
+\end{itemize}
+
+
+{\bf The bridged T filter}
+
+If in the RCR T-network the vertical capacitor branch is dropped, 
+i.e., $C=0$, the twin-T network becomes a bridged T network. Now
+we have $Z'_3=2R$, while the CRC T-network is still the same with 
+$Z''_3=2(1+j\omega RC)/R(j\omega C)^2$, we get:
+\[
+  Z_3=Z'_3||Z''_3=\frac{Z'_3 Z''_3}{Z'_3+Z''_3}
+  =\frac{2R(1+j\omega RC)}{1+j\omega RC+(j\omega RC)^2}
+\]
+The frequency response function of this bridged T network (a voltage 
+divider) is:
+\begin{eqnarray}
+  H(j\omega)&=&\frac{Z_2}{Z_2+Z_3}=\frac{R+1/j\omega C}{R+1/j\omega C+2R(1+j\omega RC)/(1+j\omega RC+(j\omega RC)^2)}
+  \nonumber \\
+  &=&\frac{1/C}{1/j\omega C+2R/(1+j\omega RC+(j\omega RC)^2)}
+  =\frac{1}{1+2j\omega RC/(1+j\omega RC+(j\omega RC)^2)}
+  \nonumber \\
+  &=&\frac{1+j\omega RC+(j\omega RC)^2}{1+3j\omega RC+(j\omega RC)^2}
+  =\frac{(j\omega)^2+j\omega /RC+1/(RC)^2}{(j\omega)^2+3j\omega /RC+1/(RC)^2}
+  \nonumber
+\end{eqnarray}
+We let $\omega_n=1/RC$, and express both the numerator and the
+denominator in the canonical form as
+\[
+H(j\omega)=\frac{(j\omega)^2+\omega_n j\omega +\omega_n^2}{(j\omega)^2+3\omega_nj\omega +\omega_n^2}
+=\frac{(j\omega)^2+\Delta\omega_n j\omega+\omega_n^2}{(j\omega)^2+\Delta\omega_dj\omega +\omega_n^2}
+=\frac{\omega_n^2-\omega^2+\Delta\omega_n j\omega }{\omega_n^2-\omega^2+\Delta\omega_dj\omega}
+\]
+where 
+\[
+\Delta\omega_n=\omega_n,\;\;\;\;\;\;\;\Delta\omega_d=3\omega_n
+\]
+are the bandwidth of the 2nd-order systems of the numerator and the
+denominator, respectively. 
+\begin{itemize}
+\item If $\omega=0$, $H(j\omega)=H(0)=1$
+\item If $\omega\rightarrow \infty$, $H(j\omega)=1$
+\item If $\omega=\omega_n=1/RC$, $H(j\omega_n)=1/3$
+\end{itemize}
+We see that this is a band-stop filter.
+
+
+\subsection*{Wien bridge}
+
+The Wien bridge is a particular type of the Wheatstone bridge of which
+two of the four arms are composed of a capacitor as well as a resistor
+in parallel and series:
+
+%\htmladdimg{../figures/WienBridge.png}
+\htmladdimg{../figures/WienBridge2.png}
+
+For this bridge to balance, the ratios of the left and right branches
+should be the same:
+\[
+\frac{R_3}{R_4}=\frac{R_2+1/j\omega C_2}{R_1||1/j\omega C_1}
+=\frac{(j\omega R_1C_1+1)(j\omega R_2C_2+1)}{j\omega R_1C_2}
+=\frac{1-\omega^2R_1R_2C_1C_2+j\omega(R_1C_1+R_2C_2)}{j\omega R_1C_2}
+\]
+For this equation to hold, the right-hand side needs to be real, i.e.,
+\[
+1-\omega^2R_1R_2C_1C_2=0,\;\;\;\;\;\mbox{i.e.,}\;\;\;\;\;
+\omega=\frac{1}{\sqrt{R_1R_2C_1C_2}}
+\]
+and the equation above becomes
+\[
+\frac{R_3}{R_4}=\frac{R_1C_1+R_2C_2}{R_1C_2}=\frac{C_1}{C_2}+\frac{R_2}{R_1}
+\]
+In particular, if $R_1=R_2=R$ and $C_1=C_2=C$, we have:
+\[
+\omega=\frac{1}{\sqrt{R_1R_2C_1C_2}}
+=\frac{1}{\sqrt{R^2C^2}}=\frac{1}{RC}
+\]
+and
+\[
+\frac{R_3}{R_4}=\frac{C_1}{C_2}+\frac{R_2}{R_1}=1+1=2,
+\;\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;R_4=2R_3
+\]
+
+
+{\bf Wien-Robinson Filter}
+
+\htmladdimg{../figures/WienRobinson.png}
+
+\begin{itemize}
+\item
+  \[
+  \frac{V_{in}}{R_4}+\frac{V_{out}}{R_3}+\frac{V_1}{R_2}=0\;\;\;\;\;\;\;\;(1)
+  \]
+\item
+  \[
+  V_2=\frac{R+1/j\omega C}{R+1/j\omega C+R/j\omega C/(R+1/j\omega C)}V_1
+  =\frac{(j\omega\tau+1)^2}{(j\omega\tau+1)^2+j\omega\tau}V_1,
+  \]
+  where $\tau=RC$, i.e.,
+  \[
+  V_1=\left(1+\frac{j\omega\tau}{(j\omega\tau+1)^2}\right)V_2,\;\;\;\;\;\;(2)
+  \]
+\item
+  \[
+  \frac{V_1-V_2}}{R_1}+\frac{V_{out}-V_2}{2R_1}=0,
+    \;\;\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;\; V_{out}=3V_2-2V_1,\;\;\;\;\;\;(3)
+  \]
+\end{itemize}
+\[
+V_{out}=3V_2-2V_1=3V_2-2\left(1+\frac{j\omega\tau}{(j\omega\tau+1)^2}\right)V_2
+=V_2-\frac{j\omega 2\tau}{(j\omega\tau+1)^2}\;V_2
+=\frac{(j\omega\tau)^2+1}{(j\omega\tau+1)^2}\;V_2
+\]
+or
+\[
+V_2=\frac{(j\omega\tau+1)^2}{(j\omega\tau)^2+1}V_{out}
+\]
+Substituting this into (2) we get
+\[
+V_1=\left(1+\frac{j\omega\tau}{(j\omega\tau+1)^2}\right)V_2
+=\left(1+\frac{j\omega\tau}{(j\omega\tau+1)^2}\right)\frac{(j\omega\tau+1)^2}{(j\omega\tau)^2+1}V_{out}
+=\frac{(j\omega\tau)^2+3j\omega\tau+1}{(j\omega\tau)^2+1}\;V_{out}
+\]
+Substituting this into (1) we get
+\[
+\frac{V_{in}}{R_4}+\frac{V_{out}}{R_3}
++\frac{(j\omega\tau)^2+3j\omega\tau+1}{(j\omega\tau)^2+1}\;\frac{V_{out}}{R_2}=0
+\]
+We rearrange to get
+\[
+\frac{V_{in}}{R_4}=-\left(\frac{1}{R_3}
++\frac{(j\omega\tau)^2+3j\omega\tau+1}{(j\omega\tau)^2+1}\;\frac{1}{R_2}\right)V_{out}
+\]
+\[
+\frac{R_2}{R_4}=-\left(\frac{R_2}{R_3}
++\frac{(j\omega\tau)^2+3j\omega\tau+1}{(j\omega\tau)^2+1}\right)
+\frac{V_{out}}{V_{in}}
+\]
+\[
+H(j\omega)=\frac{V_{out}}{V_{in}}
+=-\frac{R_2R_3}{R_4(R_2+R_3)}\;\frac{(j\omega\tau)^2+1}{(j\omega\tau)^2+3j\omega\tau R_3/(R_2+R_3)+1}
+\]
+\[
+H(j\omega)=A\;\frac{(j\omega)^2+\omega_n^2}{(j\omega)^2+\Delta\omega/Q\;j\omega+\omega_n^2}
+=\left\{\begin{array}{ll}A&\omega=0\\0&\omega=\omega_n=1/\tau
+\\A&\omega\rightarrow\infty\end{array}\right.
+\]
+This is a band-stop filter with passband gain $A=-R_2R_3/R_4(R_2+R_3)=(R_2//R_3)/R_4$,
+stop-band $\omega_n=1/\tau$ and $Q=(R_2+R_3)/3R_3$.
+
+
+Further reading for 
+\begin{itemize}
+\item \htmladdnormallink{Oscillator circuits}{http://www.ti.com/lit/an/sloa060/sloa060.pdf}
+\item \htmladdnormallink{Active filters}{http://www.ti.com/lit/ml/sloa088/sloa088.pdf}
+\end{itemize}
+
+
+
+\end{document}

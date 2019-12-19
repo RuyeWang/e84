@@ -1,0 +1,353 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Lab4</TITLE>
+<META NAME="description" CONTENT="Lab4">
+<META NAME="keywords" CONTENT="Lab4">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="Lab4.css">
+
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html9"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev_g.png">   
+<BR>
+<B> Next:</B> <A NAME="tex2html10"
+  HREF="node1.html">E84 Lab 1: Design</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+<B><FONT SIZE="+2">E84 Lab 4: Design, Build, and Test a Multimeter</FONT></B>
+
+<P>
+In this lab you are to use either of the two multimeter kits (AMK200 and
+M1250) available in the stockroom to build a multimeter. The lab contains 
+the following two  parts:
+
+<UL>
+<LI><B>Part I: The warm-up problems</B>
+
+<P>
+
+<OL>
+<LI>Measurement of a physical process by instruments may be tricky 
+  due to the 
+  <A NAME="tex2html1"
+  HREF="http://en.wikipedia.org/wiki/Observer_effect_(physics)">inevitable interfere</A>
+on the process being caused by the instruments (remember what you learned 
+  in quantum mechanics?). The figure below shows two possible configurations 
+  for the measurement of the voltage across and the current through the load. 
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../hw1b.gif"
+ ALT="hw1b.gif">
+
+<P>
+What are required of the ammeter and the voltmeter to minimize their
+  influences on the measurements? 
+
+<P>
+How would the ammeter and the voltmeter affect the measurement of the
+  current and the voltage in either of the configurations (a and b)?
+
+<P>
+</LI>
+<LI>Design a multimeter that can measure both DC and AC voltage, DC current,
+  and resistance with different scales. Specifically, you are given an analog 
+  meter <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.png"
+ ALT="$A$"> with a needle display, which reaches full scale when a DC current 
+  of <!-- MATH
+ $I=100\;\mu A=10^{-4}\;A$
+ -->
+<IMG
+ WIDTH="179" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.png"
+ ALT="$I=100\;\mu A=10^{-4}\;A$"> goes through it. The internal resistance of the
+  meter is 10 Ohms. In addition, you need some multi-position rotary switches 
+  to select different scales for each of the three types of measurements, and 
+  resistors with any values needed in your design.
+
+<P>
+
+<UL>
+<LI>DC Voltage measurement: DC voltages in these ranges can be measured
+    0-2.5, 0-10, 0-50, and 0-250 (all in volts). Use a 4-position rotary switch
+    to select one of the four ranges as shown in the figure below. For example, 
+    when the range of 0-10 is selected, the needle display will reach full scale 
+    when the voltage being measured is 10 V. The circuit is shown below. Determine 
+    all resistances labeled.
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../multimeterV.gif"
+ ALT="multimeterV.gif">
+
+<P>
+</LI>
+<LI>AC Voltage measurement: To measure an AC voltage (in terms of its
+    RMS value), it first needs to be converted into a DC voltage. This can 
+    be achieved by a diode which only allows the current to pass in one
+    direction (along the arrow) but not the other. This process is called
+    rectification. The diode will also cause a voltage drop of 0.7 volt 
+    along the direction. The actual reading of the meter reflects the 
+    average value of the rectified current, as show in the figure below.
+
+<P>
+Find the resistance <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.png"
+ ALT="$R$"> so that when the incoming AC voltage is <IMG
+ WIDTH="64" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img4.png"
+ ALT="$V=10$"> 
+    volt (RMS), the meter shows a full scale display.
+
+<P>
+<IMG
+ WIDTH="426" HEIGHT="244" ALIGN="BOTTOM" BORDER="0"
+ SRC="../HalfWaveRectifier4.png"
+ ALT="HalfWaveRectifier4.png">
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../multimeterACV.gif"
+ ALT="multimeterACV.gif">
+
+<P>
+</LI>
+<LI>DC current measurement: measure currents in these ranges (all in mA):
+    0-0.5, 0-2.5, 0-10, 0-50. Use a 4-position rotary switch to select one 
+    of the four ranges as shown in the figure below. For example, when the 
+    range of 0-10 is selected, the needle display will reach full scale when 
+    a 10 mA current is measured. Determine all resistances labeled. Use
+    <!-- MATH
+ $R_0=1\;K\Omega$
+ -->
+<IMG
+ WIDTH="97" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$R_0=1\;K\Omega$">.
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../multimeterA1a.gif"
+ ALT="multimeterA1a.gif">
+
+<P>
+</LI>
+<LI>Resistance measurement: The circuit for resistance measurement is
+    provided as shown below, where <IMG
+ WIDTH="87" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.png"
+ ALT="$V_1=1.5V$">. Determine the values for the 
+    resistors labeled as <IMG
+ WIDTH="26" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.png"
+ ALT="$R_0$">, <IMG
+ WIDTH="26" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.png"
+ ALT="$R_1$">, <IMG
+ WIDTH="33" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.png"
+ ALT="$R_{10}$">, <IMG
+ WIDTH="40" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.png"
+ ALT="$R_{100}$"> and <IMG
+ WIDTH="47" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.png"
+ ALT="$R_{1000}$"> 
+    and <IMG
+ WIDTH="23" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.png"
+ ALT="$V_2$"> so that the needle display of the meter is full scale 
+    (<IMG
+ WIDTH="98" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.png"
+ ALT="$I=100\;\mu A$">) when the resistor <IMG
+ WIDTH="54" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img14.png"
+ ALT="$R=0$"> being measured (between the 
+    two leads labeled + and -) is zero, or half scale (<IMG
+ WIDTH="89" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.png"
+ ALT="$I=50\;\mu A$">) when 
+    the value of <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.png"
+ ALT="$R$"> and the position of he two synchronized rotary switches
+    are given in each of the four case shown in the table:
+
+<P>
+<TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="LEFT">positions</TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="29" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.png"
+ ALT="$\times 1$"></TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="38" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$\times 10$"></TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="48" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.png"
+ ALT="$\times 100$"></TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="46" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.png"
+ ALT="$\times 1K$"></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.png"
+ ALT="$R$"> values</TD>
+<TD ALIGN="LEFT">20<IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img20.png"
+ ALT="$\Omega$"></TD>
+<TD ALIGN="LEFT">200<IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img20.png"
+ ALT="$\Omega$"></TD>
+<TD ALIGN="LEFT">2000<IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img20.png"
+ ALT="$\Omega$"></TD>
+<TD ALIGN="LEFT">20 <IMG
+ WIDTH="35" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img21.png"
+ ALT="$K\Omega$"></TD>
+</TR>
+</TABLE>
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../multimeterR.gif"
+ ALT="multimeterR.gif">
+
+<P>
+</LI>
+</UL>
+
+<P>
+</LI>
+</OL>
+
+<P>
+</LI>
+<LI><B>Part II: Design, build, and test the multimeter</B>
+
+<P>
+You can use either of the two different multimeter models available in the 
+  stockroom. They are very similar to each other, in terms of their circuits, 
+  and the degree of difficulty to build. In this part, you need to understand 
+  how the DC voltage and current are measured, and come up with the values of
+  the resistors used for measuring DC voltage and current. (You are NOT required
+  to do any calculation for the AC voltage or resistance measurement.)
+
+<P>
+It will be considered as an honor code violation if you copy the values of 
+  these resistors from the schematics of these multimeters which you may be 
+  able to find on the Internet. Show your own derivation and keep at least 2
+  digits after the decimal point in the values of the resistors.
+
+<P>
+
+<UL>
+<LI><A NAME="tex2html2"
+  HREF="http://fourier.eng.hmc.edu/e84/labs/AMK200/node1.html">AMK-200</A>
+<P>
+Find the values of the resistors used for DC voltage and current measurements
+    (values not shown in the diagram).
+
+<P>
+</LI>
+<LI><A NAME="tex2html3"
+  HREF="http://fourier.eng.hmc.edu/e84/labs/M1250/node1.html">M1250</A>
+<P>
+Find the values of <IMG
+ WIDTH="26" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.png"
+ ALT="$R_1$"> through <IMG
+ WIDTH="26" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.png"
+ ALT="$R_6$"> for DC voltage measurement,
+    and the values of <IMG
+ WIDTH="33" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.png"
+ ALT="$R_{10}$">, <IMG
+ WIDTH="33" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img23.png"
+ ALT="$R_{11}$">, and <IMG
+ WIDTH="33" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img24.png"
+ ALT="$R_{12}$"> for DC current measurement.
+  
+</LI>
+</UL>
+
+<P>
+Then, build and test the multimeter, which you can keep and use in the future!
+  Make sure it works correctly for all measurements.
+
+<P>
+</LI>
+</UL>
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html11"
+  HREF="node1.html">E84 Lab 1: Design of a Multimeter</A>
+<LI><A NAME="tex2html12"
+  HREF="node2.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html9"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev_g.png">   
+<BR>
+<B> Next:</B> <A NAME="tex2html10"
+  HREF="node1.html">E84 Lab 1: Design</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Ruye Wang
+2015-01-30
+</ADDRESS>
+</BODY>
+</HTML>

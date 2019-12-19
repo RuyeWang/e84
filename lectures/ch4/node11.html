@@ -1,0 +1,889 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Typical Transistor Circuits</TITLE>
+<META NAME="description" CONTENT="Typical Transistor Circuits">
+<META NAME="keywords" CONTENT="ch4">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="ch4.css">
+
+<LINK REL="next" HREF="node12.html">
+<LINK REL="previous" HREF="node10.html">
+<LINK REL="next" HREF="node12.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node12.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="ch4.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node10.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node12.html">Colpitts Oscillators</A>
+<B> Up:</B> <A
+ HREF="ch4.html">ch4</A>
+<B> Previous:</B> <A
+ HREF="node10.html">Multi-stage Amplification</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A ID="SECTION000110000000000000000">
+Typical Transistor Circuits</A>
+</H1>
+
+<P>
+
+<UL>
+<LI><B>Differential Amplifier</B>
+
+<P>
+Differential amplifier amplifies the difference <!-- MATH
+ $\triangle V=V_1-V_2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img488.svg"
+ ALT="$\triangle V=V_1-V_2$"></SPAN> 
+between two voltages <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img139.svg"
+ ALT="$V_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img489.svg"
+ ALT="$V_2$"></SPAN>. Differential amplification has 
+many applications, such as the first stage of 
+<A ID="tex2html13"
+  HREF="http://fourier.eng.hmc.edu/e84/lectures/opamp/node2.html">operational amplifiers (Op-amps)</A>.
+
+<P>
+The two transistors <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img490.svg"
+ ALT="$T_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img491.svg"
+ ALT="$T_2$"></SPAN> in the circuit are identical with
+the same properties, and their emitters are connected to a current source
+with constant current so that <!-- MATH
+ $I_E=I_1+I_2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img492.svg"
+ ALT="$I_E=I_1+I_2$"></SPAN>. If <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img493.svg"
+ ALT="$I_1$"></SPAN> increases, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img251.svg"
+ ALT="$I_2$"></SPAN>
+will decrease, and vice versa. Consider these three cases:
+
+<UL>
+<LI>When the two input voltages are the same <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img494.svg"
+ ALT="$V_1=V_2$"></SPAN>, i.e., <!-- MATH
+ $\Delta V=V_1-V_2=0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img495.svg"
+ ALT="$\Delta V=V_1-V_2=0$"></SPAN>,
+  then <!-- MATH
+ $I_1=I_2=I_E/2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img496.svg"
+ ALT="$I_1=I_2=I_E/2$"></SPAN> and the output voltage is <!-- MATH
+ $V_{out}=V_{CC}-I_2 R_C$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img497.svg"
+ ALT="$V_{out}=V_{CC}-I_2 R_C$"></SPAN>, which
+  is treated as a reference level corresponding to <!-- MATH
+ $\Delta V=0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img498.svg"
+ ALT="$\Delta V=0$"></SPAN>.
+</LI>
+<LI>If <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img499.svg"
+ ALT="$V_1&gt;V_2$"></SPAN>, the following changes take place:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_1 \uparrow \Longrightarrow I_1 \uparrow \Longrightarrow I_2
+    \downarrow \Longrightarrow V_{out}=V_{CC}-I_2 R_c \uparrow 
+  
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img500.svg"
+ ALT="$\displaystyle V_1 \uparrow \Longrightarrow I_1 \uparrow \Longrightarrow I_2
+\downarrow \Longrightarrow V_{out}=V_{CC}-I_2 R_c \uparrow$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">123</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>If <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img501.svg"
+ ALT="$V_1&lt;V_2$"></SPAN>, the following changes take place:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_1 \downarrow \Longrightarrow I_1 \downarrow \Longrightarrow I_2
+    \uparrow \Longrightarrow V_{out}=V_{CC}-I_2 R_c \downarrow 
+  
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img502.svg"
+ ALT="$\displaystyle V_1 \downarrow \Longrightarrow I_1 \downarrow \Longrightarrow I_2
+\uparrow \Longrightarrow V_{out}=V_{CC}-I_2 R_c \downarrow$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">124</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+</UL>
+The output voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img503.svg"
+ ALT="$V_{out}$"></SPAN> can be further amplified to indicate the 
+difference and its polarity between the two input voltages <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img139.svg"
+ ALT="$V_1$"></SPAN> and 
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img489.svg"
+ ALT="$V_2$"></SPAN>.
+
+<P>
+A simple current source is also shown in the figure. The base voltage 
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img253.svg"
+ ALT="$V_B$"></SPAN> of the transistor is fixed at approximately <!-- MATH
+ $0.7\times 3=2.1V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.31ex; " SRC="img504.svg"
+ ALT="$0.7\times 3=2.1V$"></SPAN>, 
+so that the load current <!-- MATH
+ $I_L=I_{ce}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img505.svg"
+ ALT="$I_L=I_{ce}$"></SPAN> is also approximately constant, 
+independent of the load, i.e., the circuit can be used as a current source 
+providing a current determined by <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img253.svg"
+ ALT="$V_B$"></SPAN> but independent of the load. A 
+better way to hold <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img253.svg"
+ ALT="$V_B$"></SPAN> constant is to replace the diodes by a reverse biased
+<A ID="tex2html14"
+  HREF="https://en.wikipedia.org/wiki/Zener_diode">Zener diode</A>.
+When a zener diode is reversely biased by a voltage exceeding its
+<EM>breakdown voltage</EM>, the voltage drop across it, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img253.svg"
+ ALT="$V_B$"></SPAN> in the circuit,
+is held at the breakdown voltage, a constant value independent of any
+other variables in the circuit. Consequently <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img506.svg"
+ ALT="$I_L$"></SPAN> is also constant.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/DifferentialAmplifier.png"
+ ALT="DifferentialAmplifier.png">
+
+<P>
+</LI>
+<LI><B>Current Mirror circuits</B>
+
+<P>
+The current mirror circuit shown below is a simple current source
+  that provides a constant current <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img506.svg"
+ ALT="$I_L$"></SPAN> independent of the load <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img358.svg"
+ ALT="$R_L$"></SPAN>. 
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/CurrentMirror.png"
+ ALT="CurrentMirror.png">  
+
+<P>
+This circuit is composed of two matching transistors <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img507.svg"
+ ALT="$Q_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img508.svg"
+ ALT="$Q_2$"></SPAN>
+  with identical behaviors such as the input and output characteristics
+  and <!-- MATH
+ $\beta_1=\beta_2=\beta$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img509.svg"
+ ALT="$\beta_1=\beta_2=\beta$"></SPAN>. They are the input and output stages of
+  the circuit, respectively. As the input, the reference current <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.78ex; " SRC="img510.svg"
+ ALT="$I_{ref}$"></SPAN>
+  can be determined as
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_{ref}=\frac{V_{CC}-V_B}{R_C}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img511.svg"
+ ALT="$\displaystyle I_{ref}=\frac{V_{CC}-V_B}{R_C}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">125</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Applying KCL to the collector of <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img507.svg"
+ ALT="$Q_1$"></SPAN>, and realizing <!-- MATH
+ $\beta\gg 1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img512.svg"
+ ALT="$\beta\gg 1$"></SPAN>,
+  we also get
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_{ref}=I_C+2I_B=I_C(1+2/\beta)\approx I_C
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.78ex; " SRC="img513.svg"
+ ALT="$\displaystyle I_{ref}=I_C+2I_B=I_C(1+2/\beta)\approx I_C$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">126</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+  
+<UL>
+<LI>In the input stage, as <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img507.svg"
+ ALT="$Q_1$"></SPAN>'s collector and base are short-circuited,
+    it behaves like a diode, in terms of the relationship between <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img514.svg"
+ ALT="$V_B=V_C$"></SPAN> 
+    and <!-- MATH
+ $I_B=I_C/\beta$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img515.svg"
+ ALT="$I_B=I_C/\beta$"></SPAN>, the voltage across and current through the base-emitter 
+    <A ID="tex2html15"
+  HREF="node2.html">PN junction</A>:
+
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_B=V_T\ln \left(\frac{I_B}{I_0}+1\right)
+      \approx V_T\;\ln \left(\frac{I_B}{I_0}\right)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img516.svg"
+ ALT="$\displaystyle V_B=V_T\ln \left(\frac{I_B}{I_0}+1\right)
+\approx V_T\;\ln \left(\frac{I_B}{I_0}\right)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">127</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+where <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img8.svg"
+ ALT="$I_0$"></SPAN> is the reverse saturation current of the BE PN-junction, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img517.svg"
+ ALT="$V_T$"></SPAN>
+    is the thermal voltage. Transistor <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img507.svg"
+ ALT="$Q_1$"></SPAN> can be therefore be considered as
+    a current-voltage converter by which the collector current <!-- MATH
+ $I_C=\beta I_B$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img115.svg"
+ ALT="$I_C=\beta I_B$"></SPAN>
+    is converted to an output voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img253.svg"
+ ALT="$V_B$"></SPAN>, which is held constant due to 
+    negative feedback loop:
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_B\uparrow \Longrightarrow I_B\uparrow \Longrightarrow
+      (I_C=\beta I_B) \uparrow \Longrightarrow (V_C=V_B=V_{CC}-I_C R_C)\downarrow
+    
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img518.svg"
+ ALT="$\displaystyle V_B\uparrow \Longrightarrow I_B\uparrow \Longrightarrow
+(I_C=\beta I_B) \uparrow \Longrightarrow (V_C=V_B=V_{CC}-I_C R_C)\downarrow$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">128</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+As <!-- MATH
+ $V_B=V_{C1}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img519.svg"
+ ALT="$V_B=V_{C1}$"></SPAN> is solely determined by <!-- MATH
+ $I_{C1}\approx I_{ref}=(V_{CC}-V_B)/R_C$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.78ex; " SRC="img520.svg"
+ ALT="$I_{C1}\approx I_{ref}=(V_{CC}-V_B)/R_C$"></SPAN>, 
+    <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img521.svg"
+ ALT="$I_{B2}$"></SPAN> and therefore <!-- MATH
+ $I_{C2}=\beta I_{B2}=I_L$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img522.svg"
+ ALT="$I_{C2}=\beta I_{B2}=I_L$"></SPAN> will be constant independent 
+    of the load <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img358.svg"
+ ALT="$R_L$"></SPAN>.
+
+<P>
+</LI>
+<LI>In the output stage, as <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img507.svg"
+ ALT="$Q_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img508.svg"
+ ALT="$Q_2$"></SPAN> are identical and 
+    <!-- MATH
+ $V_{B2}=V_{B1}=V_B$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img523.svg"
+ ALT="$V_{B2}=V_{B1}=V_B$"></SPAN>, we have <!-- MATH
+ $I_{B2}=I_{B1}=I_B$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img524.svg"
+ ALT="$I_{B2}=I_{B1}=I_B$"></SPAN> and <!-- MATH
+ $I_{C2}=\beta I_B=I_{C1}=I_C$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img525.svg"
+ ALT="$I_{C2}=\beta I_B=I_{C1}=I_C$"></SPAN>. 
+    The load current is determined by <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img173.svg"
+ ALT="$R_C$"></SPAN> but independent of the load <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img358.svg"
+ ALT="$R_L$"></SPAN>:
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_L=I_C=I_{ref}/(1+2/\beta) \approx I_{ref}
+      =\frac{V_{CC}-V_B}{R_C}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img526.svg"
+ ALT="$\displaystyle I_L=I_C=I_{ref}/(1+2/\beta) \approx I_{ref}
+=\frac{V_{CC}-V_B}{R_C}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">129</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Note that the discussion above is valid only if <!-- MATH
+ $I_C=\beta I_B$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img115.svg"
+ ALT="$I_C=\beta I_B$"></SPAN> holds,
+    i.e., both <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img507.svg"
+ ALT="$Q_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img508.svg"
+ ALT="$Q_2$"></SPAN> must be working in the linear (active) region 
+    away from either the cutoff or saturation region.
+  
+</LI>
+</UL>
+
+<P>
+<A ID="tex2html16"
+  HREF="https://en.wikipedia.org/wiki/Wilson_current_mirror"><B>Wilson current mirror:</B></A>
+<P>
+<IMG STYLE=""
+ SRC="../figures/WilsonCurrentMirror.png"
+ ALT="WilsonCurrentMirror.png">  
+
+<P>
+Again, here transistor <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img508.svg"
+ ALT="$Q_2$"></SPAN> can be considered as a current-voltage
+  converter by which the current <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img527.svg"
+ ALT="$I_{C2}$"></SPAN> through <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img508.svg"
+ ALT="$Q_2$"></SPAN> is converted to 
+  the base voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img253.svg"
+ ALT="$V_B$"></SPAN> shared by both <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img507.svg"
+ ALT="$Q_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img508.svg"
+ ALT="$Q_2$"></SPAN>. The following
+  negative feedback hold the load current <!-- MATH
+ $I_L=I_{C3}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img528.svg"
+ ALT="$I_L=I_{C3}$"></SPAN> constant:  
+
+<P>
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+(I_L=I_{C3})\uparrow \Longrightarrow I_{C2}\uparrow \Longrightarrow
+  I_{C1}\uparrow\Longrightarrow (V_{C1}=V_{B3})\downarrow \Longrightarrow 
+  I_{B3}\downarrow \Longrightarrow (I_L=I_{C3})\downarrow
+  
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img529.svg"
+ ALT="$\displaystyle (I_L=I_{C3})\uparrow \Longrightarrow I_{C2}\uparrow \Longrightarr...
+...wnarrow \Longrightarrow
+I_{B3}\downarrow \Longrightarrow (I_L=I_{C3})\downarrow$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">130</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+<LI><A ID="tex2html17"
+  HREF="http://en.wikipedia.org/wiki/Power_amplifier_classes"><B>Different Classes of Amplifier</B></A>
+<P>
+By properly settng the DC operating point of the transistor circuit, 
+it can be working in any one of the following modes:
+
+<UL>
+<LI>Class A: The transistor remains conducting in the entire sinusoidal
+  cycle (conduction angle <!-- MATH
+ $\theta=360^\circ$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img530.svg"
+ ALT="$\theta=360^\circ$"></SPAN>). The DC operating point is 
+  in the middle of the linear range of the transistor to minimize distortion
+  (clipping). However, the DC power consumption is maximized even the AC 
+  sinusoidal signal is zero. 
+
+<P>
+</LI>
+<LI>Class B: The transistor is conducting and amplifies the AC signal
+  only in half of the sinusoidal cycle (conduction angle <!-- MATH
+ $\theta=180^\circ$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img531.svg"
+ ALT="$\theta=180^\circ$"></SPAN>), 
+  while it is turned off and consumes no energy for the other half.
+
+<P>
+</LI>
+<LI>Class AB: this is intermediate between class A and B, the two 
+  transistors are active and conducting current more than half of the
+  time.
+
+<P>
+</LI>
+<LI>Class C: Less than half of the signal cycle is used (conduction angle
+  <!-- MATH
+ $\theta<180^\circ$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.21ex; " SRC="img532.svg"
+ ALT="$\theta&lt;180^\circ$"></SPAN>)
+
+<P>
+</LI>
+</UL>
+
+<P>
+</LI>
+<LI>The <A ID="tex2html18"
+  HREF="https://en.wikipedia.org/wiki/Push-pull_output">Push-pull circuits</A>
+<P>
+This circuit can be considered as a class AB amplifier that is 
+  typically used as the last stage of an amplification system, such as 
+  in an op-amp circuit, for power amplification with large current and
+  low output resistance to drive a heavy load (small <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img358.svg"
+ ALT="$R_L$"></SPAN>). A push-pull
+  circuit is composed of a pair of two transistors that work in alternation
+  during the two half cycles of the sinusoidal signal. The circuit can be 
+  implemented in either of the following two ways:
+  
+<UL>
+<LI>The push-pull pair (one NPN, the other PNP) receives the same 
+    input signal from their bases. During the positive half cycle, the 
+    NPN transistor is conductive and drives current through the load 
+    <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img358.svg"
+ ALT="$R_L$"></SPAN>, while PNP transistor is cutoff; during the negative half cycle, 
+    the PNP NPN transistor is conductive and draws current from the load 
+    <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img358.svg"
+ ALT="$R_L$"></SPAN>, while NPN transistor is cutoff. In either polarity, the output 
+    resistance, the conducting transistor, is small.
+
+<P>
+</LI>
+<LI>The push-pull pair (both NPN) receives the input signal <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img197.svg"
+ ALT="$180^\circ$"></SPAN> 
+    out of phase (e.g., from a transformer, or from the collector and emitter
+    of the transistor in previous stage). The transistor receiving positive
+    peak of the input is active and drives current through <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img358.svg"
+ ALT="$R_L$"></SPAN>, with small
+    output resistance, while the other transistor receiving negative peak 
+    is cutoff (open-circuit). During the next half cycle, the two transistor 
+    switch roles with the conducting transistor drawing current from the load.
+
+<P>
+</LI>
+</UL>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/PushPull.png"
+ ALT="PushPull.png">
+  <IMG STYLE=""
+ SRC="../figures/PushPull2.png"
+ ALT="PushPull2.png">
+  <IMG STYLE=""
+ SRC="../figures/PushPull1.png"
+ ALT="PushPull1.png">
+
+<P>
+</LI>
+<LI><B>Oscillators</B>
+
+<P>
+An oscillator is a circuit that receives no input but generates a sinusoidal 
+  output at a desired frequency. A typical oscillator circuit is based on an
+  active component (a transistor or an op-amp) with positive feedback and an 
+  LC circuit (tank circuit). Initially trigged by switching on the circuit, 
+  the LC circuit starts to resonate at frequency <!-- MATH
+ $\omega_0=1/\sqrt{LC}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img533.svg"
+ ALT="$\omega_0=1/\sqrt{LC}$"></SPAN>, and 
+  the active component with positive feedback compensates for the attenuation 
+  due to the inevitable resistance in the circuit and keeps the oscillation 
+  going.
+
+<P>
+Specifically, the Hartley and Colpitts oscillators are two typical oscillation
+  circuits. In either cases, a transistor amplifier is used to receive positive 
+  feedback taken from the LC circuit as a collector impedance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img534.svg"
+ ALT="$Z_c$"></SPAN>, which is 
+  maximized at the resonant frequency, thereby the voltage gain of this circuit 
+  is also maximized. A fraction of the sinusoidal at the collector is positively 
+  fed back to the emitter to prevent attenuation.
+
+<P>
+
+<UL>
+<LI><A ID="tex2html19"
+  HREF="http://www.learnabout-electronics.org/Oscillators/osc21.php">Hartley Oscillator</A>
+The feedback signal is taken from the <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img535.svg"
+ ALT="$L$"></SPAN> branch between <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img536.svg"
+ ALT="$L_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img537.svg"
+ ALT="$L_2$"></SPAN> in series.
+    The resonant frequency is <!-- MATH
+ $\omega_0=1/\sqrt{C(L_1+L_2)}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.25ex; vertical-align: -0.82ex; " SRC="img538.svg"
+ ALT="$\omega_0=1/\sqrt{C(L_1+L_2)}$"></SPAN>.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/Hartley.png"
+ ALT="Hartley.png">
+    <IMG STYLE=""
+ SRC="../figures/Colpitts.png"
+ ALT="Colpitts.png">
+
+<P>
+</LI>
+<LI><A ID="tex2html20"
+  HREF="http://www.learnabout-electronics.org/Oscillators/osc23.php">Colpitts Oscillator</A>
+The feedback signal is taken from the <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img72.svg"
+ ALT="$C$"></SPAN> branch between <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img539.svg"
+ ALT="$C_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img540.svg"
+ ALT="$C_2$"></SPAN> in series.
+    The resonant frequency is <!-- MATH
+ $\omega_0=1/\sqrt{LC_1C_2/(C_1+C_2)}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.25ex; vertical-align: -0.82ex; " SRC="img541.svg"
+ ALT="$\omega_0=1/\sqrt{LC_1C_2/(C_1+C_2)}$"></SPAN>.
+
+<P>
+</LI>
+</UL>
+  In both circuits, the feedback is a fraction of the output <!-- MATH
+ $v_c=v_{out}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img542.svg"
+ ALT="$v_c=v_{out}$"></SPAN>
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_{feedback}=v_c\frac{Z_{L_1}}{Z_{L_1}+{Z_{L_2}}}=v_c\frac{L_1}{L_1+L_2},\;\;\;\;\;\;
+  v_{feedback}=v_c\frac{Z_{C_2}}{Z_{C_2}+{Z_{C_3}}}=v_c\frac{C_3}{C_2+C_3}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img543.svg"
+ ALT="$\displaystyle v_{feedback}=v_c\frac{Z_{L_1}}{Z_{L_1}+{Z_{L_2}}}=v_c\frac{L_1}{L...
+...\;\;\;
+v_{feedback}=v_c\frac{Z_{C_2}}{Z_{C_2}+{Z_{C_3}}}=v_c\frac{C_3}{C_2+C_3}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">131</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+and it is then sent to the emitter of the transistor, which is in phase with the 
+  collector connected to the LC circuit, i.e., the feedback is indeed positive:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_c\uparrow \Longrightarrow v_{feedback} \uparrow \Longrightarrow
+  v_e\uparrow \Longrightarrow v_{be} \downarrow 
+  \Longrightarrow i_b\downarrow  \Longrightarrow i_c\downarrow
+  \Longrightarrow v_c\uparrow
+  
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.78ex; " SRC="img544.svg"
+ ALT="$\displaystyle v_c\uparrow \Longrightarrow v_{feedback} \uparrow \Longrightarrow...
+...htarrow i_b\downarrow \Longrightarrow i_c\downarrow
+\Longrightarrow v_c\uparrow$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">132</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+<LI><A ID="tex2html21"
+  HREF="https://en.wikipedia.org/wiki/Frequency_mixer"><B>Frequency Mixer</B></A>
+<P>
+When a transistor is used for amplification, its DC operating point of 
+a type A amplifier is typically set in the middle of the load line to 
+maximize the linear dynamic range. By so doing, the signal distortion 
+will be minimized by avoiding the nonlinear region of the transistor 
+circuit.
+
+<P>
+However, in some applications, the nonlinear behavior of the transistor 
+circuit is taken advantage of, such as in a <EM>frequency mixer</EM>, used
+for converting all radio frequencies <!-- MATH
+ $\omega_{RF}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img545.svg"
+ ALT="$\omega_{RF}$"></SPAN> of different radio/TV 
+broaccast channels to an <A ID="tex2html22"
+  HREF="https://en.wikipedia.org/wiki/Intermediate_frequency"><EM>intermediate frequency</EM></A>
+<!-- MATH
+ $\omega_{IF}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img546.svg"
+ ALT="$\omega_{IF}$"></SPAN>, so 
+that the amplification circuit of the receiver can be specialized for 
+this intermediate frequency, instead of a wide range of all possible
+broadcast frequencies. In radio reception, <!-- MATH
+ $\omega_{IF}=455$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.46ex; " SRC="img547.svg"
+ ALT="$\omega_{IF}=455$"></SPAN> KHz for AM 
+(535-1605 KHz) and <!-- MATH
+ $\omega_{IF}=10.7$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.46ex; " SRC="img548.svg"
+ ALT="$\omega_{IF}=10.7$"></SPAN> MHz for FM (88-108 MHz). 
+
+<P>
+As discussed previously, the output current <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img80.svg"
+ ALT="$I_C$"></SPAN> is approximately an 
+exponential function of the input voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img75.svg"
+ ALT="$V_{BE}$"></SPAN>:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+i_c=\beta i_b=\beta\, I_o\, (e^{v_{be}/V_T}-1)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img549.svg"
+ ALT="$\displaystyle i_c=\beta i_b=\beta\, I_o\, (e^{v_{be}/V_T}-1)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">133</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+and in general an exponential function can be approximated by the first
+few terms of the Taylor series expansion:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+e^x=\sum_{k=0}^\infty \frac{x^k}{k!},\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;
+  e^x-1=x+\frac{1}{2} x^2+\frac{1}{3!} x^3+\cdots
+  \approx x+\frac{1}{2} x^2
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 7.20ex; vertical-align: -3.14ex; " SRC="img550.svg"
+ ALT="$\displaystyle e^x=\sum_{k=0}^\infty \frac{x^k}{k!},\;\;\;\;\;$">i.e.<IMG STYLE="height: 4.88ex; vertical-align: -1.71ex; " SRC="img551.svg"
+ ALT="$\displaystyle \;\;\;\;\;
+e^x-1=x+\frac{1}{2} x^2+\frac{1}{3!} x^3+\cdots
+\approx x+\frac{1}{2} x^2$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">134</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+If the input voltage <!-- MATH
+ $v_{be}=\cos(\omega_1t)+\cos(\omega_2t)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img552.svg"
+ ALT="$v_{be}=\cos(\omega_1t)+\cos(\omega_2t)$"></SPAN> contains 
+two frequency components, then the output current can be approximated as:
+<BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+i_c &\propto& (\cos\omega_1t+\cos\omega_2t) +\frac{1}{2}(\cos\omega_1t+\cos\omega_2t)^2
+  +\cdots 
+  \nonumber \\
+  &\approx &\cos\omega_1t+\cos\omega_2t+\frac{1}{2}\left(\cos^2\omega_1t+2\cos\omega_1t\;\cos\omega_2t +\cos^2\omega_2t\right) 
+  \nonumber \\
+  &=&\cos\omega_1t+\cos\omega_2t
+  +\frac{1}{4}(1+\cos(2\omega_1t))
+  +\frac{1}{2}\cos(\omega_1+\omega_2)t  +\frac{1}{2}\cos(\omega_1-\omega_2)t
+  +\frac{1}{4}(1+\cos(2\omega_2t))
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img553.svg"
+ ALT="$\displaystyle i_c$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img554.svg"
+ ALT="$\displaystyle \propto$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 4.88ex; vertical-align: -1.71ex; " SRC="img555.svg"
+ ALT="$\displaystyle (\cos\omega_1t+\cos\omega_2t) +\frac{1}{2}(\cos\omega_1t+\cos\omega_2t)^2
++\cdots$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img282.svg"
+ ALT="$\displaystyle \approx$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 4.88ex; vertical-align: -1.71ex; " SRC="img556.svg"
+ ALT="$\displaystyle \cos\omega_1t+\cos\omega_2t+\frac{1}{2}\left(\cos^2\omega_1t+2\cos\omega_1t\;\cos\omega_2t +\cos^2\omega_2t\right)$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img87.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 4.88ex; vertical-align: -1.71ex; " SRC="img557.svg"
+ ALT="$\displaystyle \cos\omega_1t+\cos\omega_2t
++\frac{1}{4}(1+\cos(2\omega_1t))
++\fr...
+...omega_2)t +\frac{1}{2}\cos(\omega_1-\omega_2)t
++\frac{1}{4}(1+\cos(2\omega_2t))$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">135</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+
+where we have used the trigonometry identities:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\cos^2\alpha=\frac{1+\cos 2\alpha}{2},\;\;\;\;\;
+\cos\alpha\;\cos\beta=\frac{\cos(\alpha+\beta)+\cos(\alpha-\beta)}{2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -1.71ex; " SRC="img558.svg"
+ ALT="$\displaystyle \cos^2\alpha=\frac{1+\cos 2\alpha}{2},\;\;\;\;\;
+\cos\alpha\;\cos\beta=\frac{\cos(\alpha+\beta)+\cos(\alpha-\beta)}{2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">136</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+We see that <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img343.svg"
+ ALT="$i_c$"></SPAN> contains many new frequency components in addition 
+to the two original frequencies <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img559.svg"
+ ALT="$\omega_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img560.svg"
+ ALT="$\omega_2$"></SPAN>, including 
+<!-- MATH
+ $\omega_1+\omega_2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.46ex; " SRC="img561.svg"
+ ALT="$\omega_1+\omega_2$"></SPAN>, <!-- MATH
+ $\omega_1-\omega_2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.46ex; " SRC="img562.svg"
+ ALT="$\omega_1-\omega_2$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.46ex; " SRC="img563.svg"
+ ALT="$2\omega_1$"></SPAN>, and <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.46ex; " SRC="img564.svg"
+ ALT="$2\omega_2$"></SPAN>. 
+This transistor circuit is therefore called a frequency mixer. By properly 
+filtering in the circuit following this mixer, one of such frequencies, 
+such as the difference frequency <!-- MATH
+ $\omega_1-\omega_2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.46ex; " SRC="img562.svg"
+ ALT="$\omega_1-\omega_2$"></SPAN> (the &ldquo;beat frequency&rdquo;) 
+is amplified, while all other frequency components are suppressed. 
+
+<P>
+Note that the specific nonlinear behavior of the circuit is not important, 
+as the Taylor series expansion of any nonlinear function will contain constant,
+first and second order terms as the exponential function assumed above, and 
+the same frequency components will result. Frequency mixer is an important 
+component in 
+<A ID="tex2html23"
+  HREF="http://en.wikipedia.org/wiki/Superheterodyne_receiver">super-heterodyne reception</A>
+which is used in all modern radio and TV broadcasting. Here the frequency 
+<!-- MATH
+ $\omega_{OS}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img565.svg"
+ ALT="$\omega_{OS}$"></SPAN> of the local oscillator is changed by a variable capacitor,
+which can be adjusted jointly with the capacitor of the tuning circuit, so 
+that the <!-- MATH
+ $\omega_{OS}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img565.svg"
+ ALT="$\omega_{OS}$"></SPAN> of the local oscillator changes with the carrier 
+frequency <!-- MATH
+ $\omega_{RF}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img545.svg"
+ ALT="$\omega_{RF}$"></SPAN> (radio frequency) of the broadcast signal received
+by the antenna in such a way that their difference is always a constant:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\Delta\omega=\omega_{OS}-\omega_{RF}=\omega_{IF}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img566.svg"
+ ALT="$\displaystyle \Delta\omega=\omega_{OS}-\omega_{RF}=\omega_{IF}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">137</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/superheterodyne1.png"
+ ALT="superheterodyne1.png">
+
+<P>
+The circuit diagram of a simple super-heterodyne radio receiver is shown below.
+Note that the first transistor is an oscillator that also receives signal from
+the LC tuning circuit at the base, i.e., it is also a mixer that mixes two
+frequencies. The next two transistors amplify frequency component the signal from the mixer, but
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/RadioReceiver.png"
+ ALT="RadioReceiver.png">
+
+<P>
+</LI>
+</UL>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node12.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="ch4.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node10.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node12.html">Colpitts Oscillators</A>
+<B> Up:</B> <A
+ HREF="ch4.html">ch4</A>
+<B> Previous:</B> <A
+ HREF="node10.html">Multi-stage Amplification</A></DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

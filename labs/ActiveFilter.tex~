@@ -1,0 +1,78 @@
+\documentstyle[12pt]{article}
+\usepackage{html}
+% \usepackage{graphics}  
+\begin{document}
+
+{\Large \bf E84 Lab: Active Filters}
+
+
+\begin{itemize}
+
+\item Derive the transfer function of the active twin-T filter
+  discussed \htmladdnormallink{here}{http://fourier.eng.hmc.edu/e84/lectures/ActiveFilters/node4.html}.
+
+  Here $R_4$ and $R_5$ are the top and bottom parts of a potentiameter
+  which controls the amount of feedback from the output to the 
+  twin-T filter:
+  \[
+  V_{feedback}=\frac{R_5}{R_4+R_5}V_{out}=\alpha V_{out},\;\;\;\;\;\;  \alpha=R_5/(R_4+R_5)
+  \]
+  The middle point between $R_4$ and $R_5$ is the wiper position of 
+  the potentiameter that can move from top ($R_4=0$, $\alpha=1$) to 
+  bottem ($R_5=\alpha=0$).
+
+  Express the frequency response function (FRF) of the circuit in the 
+  canonical 2nd order form and determine $\omega_n$ and $Q$ in terms 
+  of R, C, and $\alpha$. 
+
+\item Select component values for your twin-T filter circuit so that 
+  the 60 Hz powerline noise is attenuated by 20 dB or more, while 
+  frequencies below 50 and above 70 Hz should be attenuated by less 
+  than 3 dB. The width of the twin-T notch filter is configurable using 
+  the potentiometer. Use $C=270\,pF$. Make a Bode plot and show your 
+  design meets these specifications.
+
+\item Derive the transfer function of Sallen-Key low-pass filter
+  discussed \htmladdnormallink{here}{http://fourier.eng.hmc.edu/e84/lectures/ActiveFilters/node3.html}.
+
+\item Select component values for the Sallen-Key filter so that it 
+  can be used as an antialias low-pass filter that have a passband 
+  of 0-140 Hz and a stopband of 1 KHz and above to allow for 2 KHz 
+  sampling. The attenuation should be less than 3 dB in the passband 
+  but >30 dB in the stopband. Make a Bode plot to show your design 
+  meets these specifications.
+
+\item Construct the filter circuit that combines the twin-T filter 
+  and the Sallen-Key filter you designed above. Test and verify the
+  circuit to show that its FRF satisfies the specifications.
+
+  \htmladdimg{../TwinTLab.png}
+
+\item Test your EKG circuit with and without the filter, and show that 
+  the filter eliminates 60 Hz (which may or may not be detectable, 
+  depending on the specific location in the lab).
+
+
+\end{itemize}
+
+
+What to turn in:
+\begin{enumerate}
+  \item Hand analysis of your design of both filters in terms of the 
+    component value selection. The Bode plots of their FRFs.
+  \item Multisim Bode plots showing that your filter circuit agrees 
+    with the hand analysis and meets the specifications.
+  \item Measurement results of the circuit showing that its FRF
+    matches the simulation and the specifications. Pay special 
+    attention to frequencies of interest such as the shape of the 
+    notch and the transition between pass and stop band.
+  \item Test results of the filter circuit with the EKG signals.
+\end{enumerate}
+
+\end{document}
+
+
+ 
+
+ 
+

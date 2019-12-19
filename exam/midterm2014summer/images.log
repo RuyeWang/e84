@@ -1,0 +1,404 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=latex 2014.5.25)  4 JUL 2015 17:37
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**./images.tex
+(./images.tex
+LaTeX2e <2014/05/01>
+Babel <3.9k> and hyphenation patterns for 78 languages loaded.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/latex209.def
+File: latex209.def 1998/05/13 v0.52 Standard LaTeX file
+
+          Entering LaTeX 2.09 COMPATIBILITY MODE
+ *************************************************************
+    !!WARNING!!    !!WARNING!!    !!WARNING!!    !!WARNING!!   
+ 
+ This mode attempts to provide an emulation of the LaTeX 2.09
+ author environment so that OLD documents can be successfully
+ processed. It should NOT be used for NEW documents!
+ 
+ New documents should use Standard LaTeX conventions and start
+ with the \documentclass command.
+ 
+ Compatibility mode is UNLIKELY TO WORK with LaTeX 2.09 style
+ files that change any internal macros, especially not with
+ those that change the FONT SELECTION or OUTPUT ROUTINES.
+ 
+ Therefore such style files MUST BE UPDATED to use
+          Current Standard LaTeX: LaTeX2e.
+ If you suspect that you may be using such a style file, which
+ is probably very, very old by now, then you should attempt to
+ get it updated by sending a copy of this error message to the
+ author of that file.
+ *************************************************************
+
+\footheight=\dimen102
+\@maxsep=\dimen103
+\@dblmaxsep=\dimen104
+\@cla=\count79
+\@clb=\count80
+\mscount=\count81
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/tracefnt.sty
+Package: tracefnt 1997/05/29 v3.0j Standard LaTeX package (font tracing)
+\tracingfonts=\count82
+LaTeX Info: Redefining \selectfont on input line 101.
+)
+\symbold=\mathgroup4
+\symsans=\mathgroup5
+\symtypewriter=\mathgroup6
+\symitalic=\mathgroup7
+\symsmallcaps=\mathgroup8
+\symslanted=\mathgroup9
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 293.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 294.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 295.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 301.
+LaTeX Info: Redefining \em on input line 311.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup10
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 47.
+)
+LaTeX Font Info:    Redeclaring math delimiter \lgroup on input line 375.
+LaTeX Font Info:    Redeclaring math delimiter \rgroup on input line 377.
+LaTeX Font Info:    Redeclaring math delimiter \bracevert on input line 379.
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count83
+\c@section=\count84
+\c@subsection=\count85
+\c@subsubsection=\count86
+\c@paragraph=\count87
+\c@subparagraph=\count88
+\c@figure=\count89
+\c@table=\count90
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+Compatibility mode: definition of \rm ignored.
+Compatibility mode: definition of \sf ignored.
+Compatibility mode: definition of \tt ignored.
+Compatibility mode: definition of \bf ignored.
+Compatibility mode: definition of \it ignored.
+Compatibility mode: definition of \sl ignored.
+Compatibility mode: definition of \sc ignored.
+LaTeX Info: Redefining \cal on input line 506.
+LaTeX Info: Redefining \mit on input line 507.
+\bibindent=\dimen105
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+
+! LaTeX Error: LaTeX2e command \usepackage in LaTeX 2.09 document.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 \usepackage
+               {html}
+This is a LaTeX 2.09 document, but it contains \usepackage.
+If you want to use the new features of LaTeX2e, your document
+should begin with \documentclass rather than \documentstyle
+
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 \usepackage{
+                html}
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
+
+! LaTeX Error: LaTeX2e command \usepackage in LaTeX 2.09 document.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.15 \usepackage
+                []{inputenc}
+This is a LaTeX 2.09 document, but it contains \usepackage.
+If you want to use the new features of LaTeX2e, your document
+should begin with \documentclass rather than \documentstyle
+
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.15 \usepackage[]{
+                   inputenc}
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
+\sizebox=\box26
+\lthtmlwrite=\write3
+
+! LaTeX Error: Command \selectlanguage already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.111 \providecommand{\selectlanguage}[1]{}
+                                           %
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+No file images.aux.
+\openout1 = `images.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+
+latex2htmlLength hsize=349.0pt
+
+latex2htmlLength vsize=621.80023pt
+
+latex2htmlLength hoffset=0.0pt
+
+latex2htmlLength voffset=0.0pt
+
+latex2htmlLength topmargin=0.0pt
+
+latex2htmlLength topskip=0.00003pt
+
+latex2htmlLength headheight=0.0pt
+
+latex2htmlLength headsep=0.0pt
+
+latex2htmlLength parskip=0.0pt plus 1.0pt
+
+latex2htmlLength oddsidemargin=54.0pt
+
+latex2htmlLength evensidemargin=54.0pt
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 139.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 139.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 139.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 139.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+l2hSize :tex2html_wrap_inline20:7.98248pt::7.98248pt::11.64162pt.
+[1
+
+
+
+]
+l2hSize :tex2html_wrap_inline22:7.98248pt::7.98248pt::13.21567pt.
+[2
+
+
+]
+l2hSize :tex2html_wrap_inline24:7.98248pt::7.98248pt::15.14238pt.
+[3
+
+
+]
+l2hSize :tex2html_wrap_inline26:7.98248pt::7.98248pt::46.05585pt.
+[4
+
+
+]
+l2hSize :tex2html_wrap_inline28:7.98248pt::7.98248pt::46.05585pt.
+[5
+
+
+]
+l2hSize :tex2html_wrap_inline30:7.48248pt::0.0pt::34.50766pt.
+[6
+
+
+]
+l2hSize :tex2html_wrap_inline32:7.98248pt::7.98248pt::126.1182pt.
+[7
+
+
+]
+l2hSize :tex2html_wrap_inline38:7.48248pt::0.0pt::36.9296pt.
+[8
+
+
+]
+l2hSize :tex2html_wrap_inline40:7.48248pt::0.0pt::50.72224pt.
+[9
+
+
+]
+l2hSize :tex2html_wrap_inline42:7.98248pt::7.98248pt::55.34209pt.
+[10
+
+
+]
+l2hSize :tex2html_wrap_inline44:8.7125pt::8.7125pt::101.15657pt.
+[11
+
+
+]
+l2hSize :tex2html_wrap_inline46:8.7125pt::8.7125pt::86.29967pt.
+[12
+
+
+]
+l2hSize :tex2html_wrap_inline48:8.7125pt::8.7125pt::23.74228pt.
+[13
+
+
+]
+l2hSize :tex2html_wrap_inline50:8.7125pt::8.7125pt::23.91423pt.
+[14
+
+
+]
+l2hSize :tex2html_wrap_inline52:8.7125pt::8.7125pt::16.79082pt.
+[15
+
+
+]
+l2hSize :tex2html_wrap_inline54:8.7125pt::8.7125pt::22.75673pt.
+[16
+
+
+]
+l2hSize :tex2html_wrap_inline56:8.7125pt::8.7125pt::24.60677pt.
+[17
+
+
+]
+l2hSize :tex2html_wrap_inline58:7.48248pt::0.0pt::38.26411pt.
+[18
+
+
+]
+l2hSize :tex2html_wrap_inline60:7.48248pt::0.0pt::34.50766pt.
+[19
+
+
+]
+l2hSize :tex2html_wrap_inline62:7.98248pt::7.98248pt::69.25925pt.
+[20
+
+
+]
+l2hSize :tex2html_wrap_inline64:7.98248pt::7.98248pt::52.90875pt.
+[21
+
+
+]
+l2hSize :tex2html_wrap_inline66:7.48248pt::0.0pt::38.06639pt.
+[22
+
+
+]
+l2hSize :tex2html_wrap_inline68:7.98248pt::7.98248pt::12.01207pt.
+[23
+
+
+]
+l2hSize :tex2html_wrap_inline70:7.98248pt::7.98248pt::12.01207pt.
+[24
+
+
+]
+l2hSize :tex2html_wrap_inline72:7.07185pt::0.0pt::24.57663pt.
+[25
+
+
+]
+l2hSize :tex2html_wrap_inline76:8.7125pt::8.7125pt::25.44954pt.
+[26
+
+
+]
+l2hSize :tex2html_wrap_inline78:7.48248pt::0.0pt::9.15694pt.
+[27
+
+
+]
+l2hSize :tex2html_wrap_inline82:7.57185pt::7.57185pt::24.57663pt.
+[28
+
+
+]
+l2hSize :tex2html_wrap_inline84:8.7125pt::8.7125pt::26.97037pt.
+[29
+
+
+]
+l2hSize :tex2html_wrap_inline86:8.7125pt::8.7125pt::32.44539pt.
+[30
+
+
+]
+l2hSize :tex2html_wrap_inline88:7.48248pt::0.0pt::38.18198pt.
+[31
+
+
+]
+l2hSize :tex2html_wrap_inline90:8.7125pt::8.7125pt::23.07146pt.
+[32
+
+
+]
+l2hSize :tex2html_wrap_inline92:7.48248pt::0.0pt::7.99962pt.
+[33
+
+
+]
+l2hSize :tex2html_wrap_inline98:8.7125pt::8.7125pt::24.59229pt.
+[34
+
+
+]
+l2hSize :tex2html_wrap_inline100:8.7125pt::8.7125pt::30.0673pt.
+[35
+
+
+]
+l2hSize :tex2html_wrap_inline102:8.7125pt::8.7125pt::42.49966pt.
+[36
+
+
+]
+l2hSize :tex2html_wrap_inline104:8.7125pt::8.7125pt::107.8698pt.
+[37
+
+
+] (./images.aux) ) 
+Here is how much of TeX's memory you used:
+ 450 strings out of 493118
+ 5359 string characters out of 6135459
+ 53705 words of memory out of 5000000
+ 3964 multiletter control sequences out of 15000+600000
+ 12042 words of font info for 44 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 23i,4n,19p,166b,145s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on images.dvi (37 pages, 5392 bytes).

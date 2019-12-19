@@ -1,0 +1,522 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Particular Solution</TITLE>
+<META NAME="description" CONTENT="Particular Solution">
+<META NAME="keywords" CONTENT="ch3">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="ch3.css">
+
+<LINK REL="next" HREF="node8.html">
+<LINK REL="previous" HREF="node6.html">
+<LINK REL="next" HREF="node8.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node8.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node5.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node6.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node8.html">Complete Response I -</A>
+<B> Up:</B> <A
+ HREF="node5.html">First Order Systems</A>
+<B> Previous:</B> <A
+ HREF="node6.html">Homogeneous Solution</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H3><A ID="SECTION00014200000000000000">
+Particular Solution</A>
+</H3>
+
+<P>
+<B>RC circuit:</B>
+
+<P>
+When the input to the system represented by the term on the right-hand 
+side of the DE is non-zero, the DE can be solved to find its particular 
+or steady state solution. We first a constant input:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\tau\dot{v}_C(t)+v_C(t)=v_s(t)=V_S
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img259.svg"
+ ALT="$\displaystyle \tau\dot{v}_C(t)+v_C(t)=v_s(t)=V_S$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">79</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+We assume <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img260.svg"
+ ALT="$v_C(t)=c$"></SPAN> is a constant, and the DE becomes <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img261.svg"
+ ALT="$c=V_s$"></SPAN>, i.e.,
+the solution is trivially <!-- MATH
+ $v_C(t)=V_s$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img262.svg"
+ ALT="$v_C(t)=V_s$"></SPAN>. 
+
+<P>
+We then consider an complex exponential input:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\tau\dot{v}_C(t)+v_C(t)=v_s(t)=e^{j\omega t}=\cos(\omega t)+j\sin(\omega t)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img263.svg"
+ ALT="$\displaystyle \tau\dot{v}_C(t)+v_C(t)=v_s(t)=e^{j\omega t}=\cos(\omega t)+j\sin(\omega t)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">80</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+We assume
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_C(t)=A\;e^{j\omega t},\;\;\;\;\;\frac{d}{dt}v_C(t)=j\omega A\;e^{j\omega t}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.11ex; vertical-align: -1.71ex; " SRC="img264.svg"
+ ALT="$\displaystyle v_C(t)=A\;e^{j\omega t},\;\;\;\;\;\frac{d}{dt}v_C(t)=j\omega A\;e^{j\omega t}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">81</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+and substitute them back into the DE to get
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+j\omega \tau A e^{j\omega t}+A e^{j\omega t}
+  =(j\omega \tau+1)A\; e^{j\omega t}=e^{j\omega t}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img265.svg"
+ ALT="$\displaystyle j\omega \tau A e^{j\omega t}+A e^{j\omega t}
+=(j\omega \tau+1)A\; e^{j\omega t}=e^{j\omega t}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">82</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+i.e.
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+A=\frac{1}{j\omega\tau+1}=|A|e^{-j\phi},\;\;\;\;\mbox{where}
+  \;\;\;\;\;\;|A|=\frac{1}{\sqrt{\omega^2 \tau^2+1}},\;\;\;\;\;
+  \phi=\angle A=tan^{-1}\omega\tau
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.16ex; " SRC="img266.svg"
+ ALT="$\displaystyle A=\frac{1}{j\omega\tau+1}=\vert A\vert e^{-j\phi},\;\;\;\;$">where<IMG STYLE="height: 5.57ex; vertical-align: -2.28ex; " SRC="img267.svg"
+ ALT="$\displaystyle \;\;\;\;\;\;\vert A\vert=\frac{1}{\sqrt{\omega^2 \tau^2+1}},\;\;\;\;\;
+\phi=\angle A=tan^{-1}\omega\tau$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">83</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+and the solution is:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+A\;e^{j\omega t}=\frac{1}{\sqrt{\omega^2 \tau^2+1}} e^{j(\omega t-\phi)}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.28ex; " SRC="img268.svg"
+ ALT="$\displaystyle A\;e^{j\omega t}=\frac{1}{\sqrt{\omega^2 \tau^2+1}} e^{j(\omega t-\phi)}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">84</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+If the input is sinusoidal <!-- MATH
+ $v_s(t)=\cos(\omega t)=Re(e^{j\omega t})$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img269.svg"
+ ALT="$v_s(t)=\cos(\omega t)=Re(e^{j\omega t})$"></SPAN>,
+then the solution of the DE can be found by taking the real part 
+of the solution above, due to the linearity of the system
+(superposition):
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_C(t)=Re\left[\frac{1}{\sqrt{\omega^2 \tau^2+1}} e^{j(\omega t-\phi)}\right]
+  =\frac{1}{\sqrt{\omega^2 \tau^2+1}} \cos(\omega t-\phi)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img270.svg"
+ ALT="$\displaystyle v_C(t)=Re\left[\frac{1}{\sqrt{\omega^2 \tau^2+1}} e^{j(\omega t-\phi)}\right]
+=\frac{1}{\sqrt{\omega^2 \tau^2+1}} \cos(\omega t-\phi)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">85</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+Alternatively, this RC circuit can also be solved more conveniently by
+the phasor method, if only the steady state solution (the particular
+solution) is of interest. The phasor of the input voltage 
+<!-- MATH
+ $v(t)=\cos(\omega t)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img271.svg"
+ ALT="$v(t)=\cos(\omega t)$"></SPAN> is simply 1, and the phasor of the voltage across
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img104.svg"
+ ALT="$C$"></SPAN> can be found by voltage divider:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_C=V\frac{Z_C}{Z_R+Z_C}=\frac{1/j\omega C}{R+1/j\omega C}
+  =\frac{1}{j\omega RC+1}=\frac{1}{j\omega \tau+1}
+  =\frac{1}{\sqrt{\omega^2\tau^2+1}} e^{-j\phi}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img272.svg"
+ ALT="$\displaystyle V_C=V\frac{Z_C}{Z_R+Z_C}=\frac{1/j\omega C}{R+1/j\omega C}
+=\frac...
+...ga RC+1}=\frac{1}{j\omega \tau+1}
+=\frac{1}{\sqrt{\omega^2\tau^2+1}} e^{-j\phi}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">86</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+where <!-- MATH
+ $\phi=\tan^{-1}\omega\tau$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.57ex; " SRC="img273.svg"
+ ALT="$\phi=\tan^{-1}\omega\tau$"></SPAN>. Converting this into time domain
+we get
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_C(t)=Re[V_Ce^{j\omega t}]
+  =Re\left[\frac{1}{\sqrt{\omega^2\tau^2+1}}e^{j(\omega t-\phi)}\right]
+  =\frac{1}{\sqrt{\omega^2\tau^2+1}}\cos(\omega t-\phi)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img274.svg"
+ ALT="$\displaystyle v_C(t)=Re[V_Ce^{j\omega t}]
+=Re\left[\frac{1}{\sqrt{\omega^2\tau^...
+...{j(\omega t-\phi)}\right]
+=\frac{1}{\sqrt{\omega^2\tau^2+1}}\cos(\omega t-\phi)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">87</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+<B>RL circuit:</B>
+
+<P>
+Given an RL circuit consisted of a resistor and an inductor in 
+series connected to an AC voltage source <!-- MATH
+ $v(t)=\cos(\omega t)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img271.svg"
+ ALT="$v(t)=\cos(\omega t)$"></SPAN>, we
+want to find the current <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img21.svg"
+ ALT="$i(t)$"></SPAN>. The governing DE describing the 
+circuit can be obtained based on KVL:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_L(t)+v_R(t)=L\frac{d}{dt}i(t)+R\;i(t)=v(t)=\cos(\omega t)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.11ex; vertical-align: -1.71ex; " SRC="img275.svg"
+ ALT="$\displaystyle v_L(t)+v_R(t)=L\frac{d}{dt}i(t)+R\;i(t)=v(t)=\cos(\omega t)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">88</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+We first consider an complex exponential input:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+L\frac{d}{dt}i(t)+Ri(t)=e^{j\omega t}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.11ex; vertical-align: -1.71ex; " SRC="img276.svg"
+ ALT="$\displaystyle L\frac{d}{dt}i(t)+Ri(t)=e^{j\omega t}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">89</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+We assume
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+i(t)=A\;e^{j\omega t},\;\;\;\;\;\frac{d}{dt}i(t)=j\omega A\;e^{j\omega t}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.11ex; vertical-align: -1.71ex; " SRC="img277.svg"
+ ALT="$\displaystyle i(t)=A\;e^{j\omega t},\;\;\;\;\;\frac{d}{dt}i(t)=j\omega A\;e^{j\omega t}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">90</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+and substitute them back into the DE to get
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+j\omega L A e^{j\omega t}+RA e^{j\omega t}
+  =(R+j\omega L)A\; e^{j\omega t}=e^{j\omega t}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img278.svg"
+ ALT="$\displaystyle j\omega L A e^{j\omega t}+RA e^{j\omega t}
+=(R+j\omega L)A\; e^{j\omega t}=e^{j\omega t}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">91</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+i.e.
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+A=\frac{1}{R+j\omega L}=|A|e^{-j\phi},\;\;\;\;\mbox{where}
+  \;\;\;\;\;\;|A|=\frac{1}{\sqrt{R^2+\omega^2 L^2}},\;\;\;\;\;
+  \phi=\angle A=tan^{-1}\left(\frac{\omega L}{R}\right)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.16ex; " SRC="img279.svg"
+ ALT="$\displaystyle A=\frac{1}{R+j\omega L}=\vert A\vert e^{-j\phi},\;\;\;\;$">where<IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img280.svg"
+ ALT="$\displaystyle \;\;\;\;\;\;\vert A\vert=\frac{1}{\sqrt{R^2+\omega^2 L^2}},\;\;\;\;\;
+\phi=\angle A=tan^{-1}\left(\frac{\omega L}{R}\right)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">92</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+and the solution is:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+A\;e^{j\omega t}=\frac{1}{\sqrt{R^2+\omega^2 L^2}} e^{j(\omega t-\phi)}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.28ex; " SRC="img281.svg"
+ ALT="$\displaystyle A\;e^{j\omega t}=\frac{1}{\sqrt{R^2+\omega^2 L^2}} e^{j(\omega t-\phi)}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">93</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The solution for the DE with input <!-- MATH
+ $v(t)=\cos \omega t$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img282.svg"
+ ALT="$v(t)=\cos \omega t$"></SPAN> is
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+i(t)=Re\left[\frac{1}{\sqrt{R^2+\omega^2 L^2}} e^{j(\omega t-\phi)}\right]
+  =\frac{1}{\sqrt{R^2+\omega^2 L^2}} \cos(\omega t-\phi)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img283.svg"
+ ALT="$\displaystyle i(t)=Re\left[\frac{1}{\sqrt{R^2+\omega^2 L^2}} e^{j(\omega t-\phi)}\right]
+=\frac{1}{\sqrt{R^2+\omega^2 L^2}} \cos(\omega t-\phi)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">94</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+Alternatively, this RL circuit can also be resolved by the phasor
+method. Now the current <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img21.svg"
+ ALT="$i(t)$"></SPAN> can be much more easily found by 
+generalized Ohm's law. The phasor representation of the input voltage 
+<!-- MATH
+ $v(t)=\cos(\omega t)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img271.svg"
+ ALT="$v(t)=\cos(\omega t)$"></SPAN> is simply 1, and the overall complex impedance 
+of the two elements in series is:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Z=Z_R+Z_L=R+j\omega L=|Z| e^{j\angle Z}=\sqrt{R^2+\omega^2L^2}\;e^{j \phi}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.48ex; vertical-align: -0.70ex; " SRC="img284.svg"
+ ALT="$\displaystyle Z=Z_R+Z_L=R+j\omega L=\vert Z\vert e^{j\angle Z}=\sqrt{R^2+\omega^2L^2}\;e^{j \phi}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">95</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+where <!-- MATH
+ $\phi=tan^{-1}(\omega L/R)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img285.svg"
+ ALT="$\phi=tan^{-1}(\omega L/R)$"></SPAN>. By generalized Ohm's law, 
+the phasor representation of the current can be found as
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I=\frac{1}{\sqrt{R^2+\omega^2L^2}\;e^{j\phi}}
+  =\frac{1}{\sqrt{R^2+\omega^2L^2}} e^{-j\phi}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.28ex; " SRC="img286.svg"
+ ALT="$\displaystyle I=\frac{1}{\sqrt{R^2+\omega^2L^2}\;e^{j\phi}}
+=\frac{1}{\sqrt{R^2+\omega^2L^2}} e^{-j\phi}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">96</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+and the real current is
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+i(t)=Re\left[\frac{1}{\sqrt{R^2+\omega^2 L^2}}e^{-j\phi)}e^{j\omega t}\right]
+  =\frac{1}{\sqrt{R^2+\omega^2 L^2}}\cos(\omega t-\phi)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img287.svg"
+ ALT="$\displaystyle i(t)=Re\left[\frac{1}{\sqrt{R^2+\omega^2 L^2}}e^{-j\phi)}e^{j\omega t}\right]
+=\frac{1}{\sqrt{R^2+\omega^2 L^2}}\cos(\omega t-\phi)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">97</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Note that in general, the <EM>frequency response function (FRF)</EM> of 
+the system is defined as the ratio of the output to the input of the
+system, both represented as complex exponentials. In this specific case,
+we have
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+H=\frac{{\bf I}}{{\bf V}}=\frac{1}{Z}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.11ex; vertical-align: -1.71ex; " SRC="img288.svg"
+ ALT="$\displaystyle H=\frac{{\bf I}}{{\bf V}}=\frac{1}{Z}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">98</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+with 
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+|H|=\frac{1}{\sqrt{R^2+\omega^2L^2}},\;\;\;\;\;\angle H=-\phi
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.28ex; " SRC="img289.svg"
+ ALT="$\displaystyle \vert H\vert=\frac{1}{\sqrt{R^2+\omega^2L^2}},\;\;\;\;\;\angle H=-\phi$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">99</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Therefore the steady state output can be found to be:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+i(t)=|H| \cos(\omega t+\angle H)
+  =\frac{1}{\sqrt{R^2+\omega^2 L^2}}\cos(\omega t-\phi)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.28ex; " SRC="img290.svg"
+ ALT="$\displaystyle i(t)=\vert H\vert \cos(\omega t+\angle H)
+=\frac{1}{\sqrt{R^2+\omega^2 L^2}}\cos(\omega t-\phi)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">100</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The second method, much easier than the first one, is actually a short 
+cut representation of the first DE method. This is the justification of
+the complex variable or phasor method for analyzing AC circuits. However,
+note that the phasor method can only find the steady state solution. The
+homogeneous differential equation will have to be solved to obtain the
+transient solution.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/phasorfigure.gif"
+ ALT="phasorfigure.gif">
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node8.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node5.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node6.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node8.html">Complete Response I -</A>
+<B> Up:</B> <A
+ HREF="node5.html">First Order Systems</A>
+<B> Previous:</B> <A
+ HREF="node6.html">Homogeneous Solution</A></DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

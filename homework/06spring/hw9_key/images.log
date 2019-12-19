@@ -1,0 +1,606 @@
+This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2005.3.31)  8 APR 2006 23:42
+**./images.tex
+(./images.tex
+LaTeX2e <2001/06/01>
+Babel <v3.7h> and hyphenation patterns for american, french, german, ngerman, n
+ohyphenation, loaded.
+
+(/sw/share/texmf/tex/latex/base/latex209.def
+File: latex209.def 1998/05/13 v0.52 Standard LaTeX file
+
+          Entering LaTeX 2.09 COMPATIBILITY MODE
+ *************************************************************
+    !!WARNING!!    !!WARNING!!    !!WARNING!!    !!WARNING!!   
+ 
+ This mode attempts to provide an emulation of the LaTeX 2.09
+ author environment so that OLD documents can be successfully
+ processed. It should NOT be used for NEW documents!
+ 
+ New documents should use Standard LaTeX conventions and start
+ with the \documentclass command.
+ 
+ Compatibility mode is UNLIKELY TO WORK with LaTeX 2.09 style
+ files that change any internal macros, especially not with
+ those that change the FONT SELECTION or OUTPUT ROUTINES.
+ 
+ Therefore such style files MUST BE UPDATED to use
+          Current Standard LaTeX: LaTeX2e.
+ If you suspect that you may be using such a style file, which
+ is probably very, very old by now, then you should attempt to
+ get it updated by sending a copy of this error message to the
+ author of that file.
+ *************************************************************
+
+\footheight=\dimen102
+\@maxsep=\dimen103
+\@dblmaxsep=\dimen104
+\@cla=\count79
+\@clb=\count80
+\mscount=\count81
+(/sw/share/texmf/tex/latex/base/tracefnt.sty
+Package: tracefnt 1997/05/29 v3.0j Standard LaTeX package (font tracing)
+\tracingfonts=\count82
+LaTeX Info: Redefining \selectfont on input line 96.
+)
+\symbold=\mathgroup4
+\symsans=\mathgroup5
+\symtypewriter=\mathgroup6
+\symitalic=\mathgroup7
+\symsmallcaps=\mathgroup8
+\symslanted=\mathgroup9
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 288.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 289.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 290.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 296.
+LaTeX Info: Redefining \em on input line 306.
+(/sw/share/texmf/tex/latex/base/latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup10
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 42.
+)
+LaTeX Font Info:    Redeclaring math delimiter \lgroup on input line 370.
+LaTeX Font Info:    Redeclaring math delimiter \rgroup on input line 372.
+LaTeX Font Info:    Redeclaring math delimiter \bracevert on input line 374.
+(/sw/share/texmf/tex/latex/config/latex209.cfg
+File: latex209.cfg 2001/06/05 v1.0 teTeX customized LaTeX 2.09 compatibility mo
+de setup
+) (/sw/share/texmf/tex/latex/tools/rawfonts.sty
+Package: rawfonts 1994/05/08 Low-level LaTeX 2.09 font compatibility
+(/sw/share/texmf/tex/latex/tools/somedefs.sty
+Package: somedefs 1994/06/01 Toolkit for optional definitions
+)
+LaTeX Font Info:    Try loading font information for U+lasy on input line 44.
+(/sw/share/texmf/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+))) (/sw/share/texmf/tex/latex/base/article.cls
+Document Class: article 2001/04/21 v1.4e Standard LaTeX document class
+(/sw/share/texmf/tex/latex/base/size11.clo
+File: size11.clo 2001/04/21 v1.4e Standard LaTeX file (size option)
+)
+\c@part=\count83
+\c@section=\count84
+\c@subsection=\count85
+\c@subsubsection=\count86
+\c@paragraph=\count87
+\c@subparagraph=\count88
+\c@figure=\count89
+\c@table=\count90
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+Compatibility mode: definition of \rm ignored.
+Compatibility mode: definition of \sf ignored.
+Compatibility mode: definition of \tt ignored.
+Compatibility mode: definition of \bf ignored.
+Compatibility mode: definition of \it ignored.
+Compatibility mode: definition of \sl ignored.
+Compatibility mode: definition of \sc ignored.
+LaTeX Info: Redefining \cal on input line 501.
+LaTeX Info: Redefining \mit on input line 502.
+\bibindent=\dimen105
+) (/sw/share/texmf/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+
+! LaTeX Error: LaTeX2e command \usepackage in LaTeX 2.09 document.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 \usepackage
+               {html}
+This is a LaTeX 2.09 document, but it contains \usepackage.
+If you want to use the new features of LaTeX2e, your document
+should begin with \documentclass rather than \documentstyle
+
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 \usepackage{
+                html}
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
+
+! LaTeX Error: LaTeX2e command \usepackage in LaTeX 2.09 document.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.15 \usepackage
+                []{inputenc}
+This is a LaTeX 2.09 document, but it contains \usepackage.
+If you want to use the new features of LaTeX2e, your document
+should begin with \documentclass rather than \documentstyle
+
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.15 \usepackage[]{
+                   inputenc}
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
+\sizebox=\box26
+\lthtmlwrite=\write3
+
+! LaTeX Error: Command \selectlanguage already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.106 \providecommand{\selectlanguage}[1]{}
+                                           %
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+No file images.aux.
+\openout1 = `images.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+
+latex2htmlLength hsize=349.0pt
+
+latex2htmlLength vsize=621.80023pt
+
+latex2htmlLength hoffset=0.0pt
+
+latex2htmlLength voffset=0.0pt
+
+latex2htmlLength topmargin=0.0pt
+
+latex2htmlLength topskip=0.00003pt
+
+latex2htmlLength headheight=0.0pt
+
+latex2htmlLength headsep=0.0pt
+
+latex2htmlLength parskip=0.0pt plus 1.0pt
+
+latex2htmlLength oddsidemargin=54.0pt
+
+latex2htmlLength evensidemargin=54.0pt
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 134.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 134.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 134.
+l2hSize :tex2html_wrap_inline225:10.4103pt::10.4103pt::122.44353pt.
+[1
+
+
+
+]
+l2hSize :tex2html_wrap_inline227:7.98248pt::7.98248pt::52.54507pt.
+[2
+
+
+]
+l2hSize :tex2html_wrap_inline229:7.98248pt::7.98248pt::47.07007pt.
+[3
+
+
+]
+l2hSize :tex2html_wrap_inline231:7.98248pt::7.98248pt::58.38376pt.
+[4
+
+
+]
+l2hSize :tex2html_wrap_inline233:7.48248pt::0.0pt::52.05807pt.
+[5
+
+
+]
+l2hSize :tex2html_wrap_inline235:9.62923pt::9.62923pt::100.33372pt.
+[6
+
+
+]
+l2hSize :tex2html_wrap_inline237:8.10416pt::8.10416pt::27.14684pt.
+[7
+
+
+]
+l2hSize :displaymath181:24.05319pt::0.0pt::349.0pt.
+[8
+
+
+]
+l2hSize :displaymath182:15.72917pt::0.0pt::349.0pt.
+[9
+
+
+]
+l2hSize :displaymath183:26.26056pt::0.0pt::349.0pt.
+[10
+
+
+]
+l2hSize :displaymath184:25.26985pt::0.0pt::349.0pt.
+[11
+
+
+]
+l2hSize :displaymath185:27.78377pt::0.0pt::349.0pt.
+[12
+
+
+]
+l2hSize :tex2html_wrap_inline241:8.7125pt::8.7125pt::108.98921pt.
+[13
+
+
+]
+l2hSize :tex2html_wrap_inline243:7.98248pt::7.98248pt::117.69716pt.
+[14
+
+
+]
+l2hSize :tex2html_wrap_inline245:8.12646pt::8.12646pt::169.3838pt.
+[15
+
+
+]
+l2hSize :tex2html_wrap_inline247:8.12646pt::8.12646pt::168.27283pt.
+[16
+
+
+]
+l2hSize :tex2html_wrap_inline249:7.48248pt::0.0pt::9.15694pt.
+[17
+
+
+]
+l2hSize :tex2html_wrap_inline253:8.7125pt::8.7125pt::70.63548pt.
+[18
+
+
+]
+l2hSize :tex2html_wrap_inline255:8.7125pt::8.7125pt::51.84663pt.
+[19
+
+
+]
+Overfull \hbox (38.33087pt too wide) detected at line 254
+\OML/cmm/m/it/10.95 Z[] \OT1/cmr/m/n/10.95 = \OMS/cmsy/m/n/10.95 ^^@\OML/cmm/m/
+it/10.95 jX\OMS/cmsy/m/n/10.95 jj\OML/cmm/m/it/10.95 Z[] \OT1/cmr/m/n/10.95 = [
+] = [] = \OMS/cmsy/m/n/10.95 j\OML/cmm/m/it/10.95 Z\OMS/cmsy/m/n/10.95 j[]\OML/
+cmm/m/it/10.95 Z \OT1/cmr/m/n/10.95 = \OMS/cmsy/m/n/10.95 j\OML/cmm/m/it/10.95 
+Z\OMS/cmsy/m/n/10.95 j[]\OML/cmm/m/it/10.95 ^^^
+ []
+
+l2hSize :displaymath186:26.86888pt::0.0pt::349.0pt.
+[20
+
+
+]
+l2hSize :tex2html_wrap_inline257:9.62923pt::9.62923pt::107.80226pt.
+[21
+
+
+]
+l2hSize :displaymath187:24.1314pt::0.0pt::349.0pt.
+[22
+
+
+]
+l2hSize :displaymath188:23.40138pt::0.0pt::349.0pt.
+[23
+
+
+]
+l2hSize :displaymath189:23.88806pt::0.0pt::349.0pt.
+[24
+
+
+]
+l2hSize :displaymath190:24.1314pt::0.0pt::349.0pt.
+[25
+
+
+]
+l2hSize :displaymath191:23.40138pt::0.0pt::349.0pt.
+[26
+
+
+]
+l2hSize :displaymath192:23.88806pt::0.0pt::349.0pt.
+[27
+
+
+]
+l2hSize :tex2html_wrap_inline259:9.12923pt::0.0pt::44.03925pt.
+[28
+
+
+]
+l2hSize :tex2html_wrap_inline261:7.98248pt::7.98248pt::30.18596pt.
+[29
+
+
+]
+l2hSize :tex2html_wrap_inline263:8.7125pt::8.7125pt::104.30269pt.
+[30
+
+
+]
+l2hSize :tex2html_wrap_inline265:8.7125pt::8.7125pt::104.30269pt.
+[31
+
+
+]
+l2hSize :tex2html_wrap_inline267:7.98248pt::7.98248pt::30.18596pt.
+[32
+
+
+]
+l2hSize :tex2html_wrap_inline269:8.7125pt::8.7125pt::104.30269pt.
+[33
+
+
+]
+l2hSize :tex2html_wrap_inline271:8.7125pt::8.7125pt::137.48286pt.
+[34
+
+
+]
+l2hSize :tex2html_wrap_inline273:7.98248pt::7.98248pt::31.76001pt.
+[35
+
+
+]
+l2hSize :tex2html_wrap_inline275:8.7125pt::8.7125pt::136.36505pt.
+[36
+
+
+]
+l2hSize :tex2html_wrap_inline277:8.7125pt::8.7125pt::102.02756pt.
+[37
+
+
+]
+l2hSize :tex2html_wrap_inline279:7.98248pt::7.98248pt::31.76001pt.
+[38
+
+
+]
+l2hSize :tex2html_wrap_inline281:8.7125pt::8.7125pt::102.02756pt.
+[39
+
+
+]
+l2hSize :tex2html_wrap_inline283:8.7125pt::8.7125pt::102.02756pt.
+[40
+
+
+]
+Overfull \hbox (139.89418pt too wide) detected at line 392
+\OT1/cmr/bx/n/10.95 Z[] \OT1/cmr/m/n/10.95 = [][] = [] [] = []
+ []
+
+l2hSize :displaymath193:32.98918pt::0.0pt::349.0pt.
+[41
+
+
+]
+l2hSize :tex2html_wrap_inline285:7.98248pt::7.98248pt::44.49635pt.
+[42
+
+
+]
+l2hSize :tex2html_wrap_inline287:7.98248pt::7.98248pt::35.97966pt.
+[43
+
+
+]
+l2hSize :tex2html_wrap_inline289:7.98248pt::7.98248pt::35.97966pt.
+[44
+
+
+]
+l2hSize :tex2html_wrap_inline291:7.98248pt::7.98248pt::44.49635pt.
+[45
+
+
+]
+l2hSize :tex2html_wrap_inline293:7.98248pt::7.98248pt::40.58084pt.
+[46
+
+
+]
+l2hSize :tex2html_wrap_inline295:7.98248pt::7.98248pt::40.75575pt.
+[47
+
+
+]
+l2hSize :tex2html_wrap_inline297:7.98248pt::7.98248pt::47.42241pt.
+[48
+
+
+]
+l2hSize :tex2html_wrap_inline299:7.98248pt::7.98248pt::10.11104pt.
+[49
+
+
+]
+l2hSize :tex2html_wrap_inline301:7.98248pt::7.98248pt::10.11104pt.
+[50
+
+
+]
+l2hSize :tex2html_wrap_inline303:7.98248pt::7.98248pt::11.68509pt.
+[51
+
+
+]
+l2hSize :tex2html_wrap_inline305:7.98248pt::7.98248pt::11.68509pt.
+[52
+
+
+]
+l2hSize :displaymath194:32.98918pt::0.0pt::349.0pt.
+[53
+
+
+]
+l2hSize :displaymath195:31.00029pt::0.0pt::349.0pt.
+[54
+
+
+]
+l2hSize :displaymath196:31.00029pt::0.0pt::349.0pt.
+[55
+
+
+]
+l2hSize :displaymath197:31.00029pt::0.0pt::349.0pt.
+[56
+
+
+]
+l2hSize :displaymath198:26.86888pt::0.0pt::349.0pt.
+[57
+
+
+]
+l2hSize :displaymath199:26.86888pt::0.0pt::349.0pt.
+[58
+
+
+]
+l2hSize :tex2html_wrap_inline317:7.98248pt::7.98248pt::15.14238pt.
+[59
+
+
+]
+l2hSize :tex2html_wrap_inline319:7.98248pt::7.98248pt::19.5499pt.
+[60
+
+
+]
+l2hSize :tex2html_wrap_inline321:7.98248pt::7.98248pt::106.11372pt.
+[61
+
+
+]
+l2hSize :tex2html_wrap_inline323:7.98248pt::7.98248pt::69.7453pt.
+[62
+
+
+]
+l2hSize :tex2html_wrap_inline325:7.98248pt::7.98248pt::76.68794pt.
+[63
+
+
+]
+l2hSize :tex2html_wrap_inline327:7.98248pt::7.98248pt::42.79115pt.
+[64
+
+
+]
+l2hSize :tex2html_wrap_inline331:7.98248pt::7.98248pt::69.7453pt.
+[65
+
+
+]
+l2hSize :tex2html_wrap_inline333:7.98248pt::7.98248pt::35.84851pt.
+[66
+
+
+]
+l2hSize :tex2html_wrap_inline335:8.7125pt::8.7125pt::80.4008pt.
+[67
+
+
+]
+l2hSize :tex2html_wrap_inline337:7.98248pt::7.98248pt::18.4625pt.
+[68
+
+
+]
+l2hSize :tex2html_wrap_inline343:7.98248pt::7.98248pt::41.32352pt.
+[69
+
+
+]
+l2hSize :tex2html_wrap_inline345:7.98248pt::7.98248pt::41.32352pt.
+[70
+
+
+]
+l2hSize :tex2html_wrap_inline347:8.7125pt::8.7125pt::180.51776pt.
+[71
+
+
+]
+l2hSize :tex2html_wrap_inline349:8.7125pt::8.7125pt::41.13597pt.
+[72
+
+
+]
+l2hSize :tex2html_wrap_inline351:7.98248pt::7.98248pt::93.91331pt.
+[73
+
+
+]
+l2hSize :displaymath202:25.53055pt::0.0pt::349.0pt.
+[74
+
+
+] (./images.aux) ) 
+Here is how much of TeX's memory you used:
+ 597 strings out of 95847
+ 6609 string characters out of 1196009
+ 48855 words of memory out of 1000001
+ 3552 multiletter control sequences out of 10000+50000
+ 22500 words of font info for 84 fonts, out of 500000 for 1000
+ 14 hyphenation exceptions out of 1000
+ 25i,9n,22p,261b,219s stack positions out of 1500i,500n,5000p,200000b,5000s
+
+Output written on images.dvi (74 pages, 15916 bytes).

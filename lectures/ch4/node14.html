@@ -1,0 +1,851 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>MOSFET Amplifier</TITLE>
+<META NAME="description" CONTENT="MOSFET Amplifier">
+<META NAME="keywords" CONTENT="ch4">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="ch4.css">
+
+<LINK REL="next" HREF="node15.html">
+<LINK REL="previous" HREF="node13.html">
+<LINK REL="next" HREF="node15.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node15.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="ch4.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node13.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node15.html">CMOS Digital Logic Circuits</A>
+<B> Up:</B> <A
+ HREF="ch4.html">ch4</A>
+<B> Previous:</B> <A
+ HREF="node13.html">Metal-Oxide-Semiconductor Field-Effect Transistors</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A ID="SECTION000140000000000000000">
+MOSFET Amplifier</A>
+</H1>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/MOSFETamplifier.gif"
+ ALT="MOSFETamplifier.gif">
+ <IMG STYLE=""
+ SRC="../figures/MOSFETtransfer.gif"
+ ALT="MOSFETtransfer.gif">
+
+<P>
+Assume in the circuit above <!-- MATH
+ $V_{in}=V_{GS}>V_T$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img634.svg"
+ ALT="$V_{in}=V_{GS}&gt;V_T$"></SPAN> and the transistor is in 
+saturation region, i.e., <!-- MATH
+ $V_{DS}>V_{in}-V_T$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img635.svg"
+ ALT="$V_{DS}&gt;V_{in}-V_T$"></SPAN>, then we have 
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left\{ \begin{array}{l}
+I_D=K(V_{in}-V_T)^2 \\
+V_{out}=V_{DS}=V_{dd}-I_D R=V_{dd}-KR(V_{in}-V_T)^2  \end{array} \right.
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img636.svg"
+ ALT="$\displaystyle \left\{ \begin{array}{l}
+I_D=K(V_{in}-V_T)^2 \\
+V_{out}=V_{DS}=V_{dd}-I_D R=V_{dd}-KR(V_{in}-V_T)^2 \end{array} \right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">156</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The second equation relates the output <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img503.svg"
+ ALT="$V_{out}$"></SPAN> to the input <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img637.svg"
+ ALT="$V_{in}$"></SPAN>, as
+shown by the red segment of the curve in the plot above. As the transistor is 
+in saturation region,
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_{DS}=V_{out}=V_{dd}-KR(V_{in}-V_T)^2\ge V_{in}-V_T
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img638.svg"
+ ALT="$\displaystyle V_{DS}=V_{out}=V_{dd}-KR(V_{in}-V_T)^2\ge V_{in}-V_T$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">157</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+which can be solved for <!-- MATH
+ $V_{in}-V_T$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img639.svg"
+ ALT="$V_{in}-V_T$"></SPAN> to get:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_{in}-V_T <\frac{-1+\sqrt{1+4KRV_{dd}}}{2KR},\;\;\;\;\mbox{i.e.}\;\;\;\;
+V_{in}<\frac{-1+\sqrt{1+4KRV_{dd}}}{2KR}+V_T
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -1.71ex; " SRC="img640.svg"
+ ALT="$\displaystyle V_{in}-V_T &lt;\frac{-1+\sqrt{1+4KRV_{dd}}}{2KR},\;\;\;\;$">i.e.<IMG STYLE="height: 5.57ex; vertical-align: -1.71ex; " SRC="img641.svg"
+ ALT="$\displaystyle \;\;\;\;
+V_{in}&lt;\frac{-1+\sqrt{1+4KRV_{dd}}}{2KR}+V_T$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">158</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+We see that for the transistor to be in the saturation region, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img637.svg"
+ ALT="$V_{in}$"></SPAN>
+needs to satisfy both <!-- MATH
+ $V_{in}>V_T$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img642.svg"
+ ALT="$V_{in}&gt;V_T$"></SPAN> and the inequality above, i.e., it 
+needs to be in the following range:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_T<V_{in}<\frac{-1+\sqrt{1+4KRV_{dd}}}{2KR}+V_T
+\;\;\;\;\mbox{i.e.}\;\;\;\;
+0<V_{in}-V_T <\frac{-1+\sqrt{1+4KRV_{dd}}}{2KR}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -1.71ex; " SRC="img643.svg"
+ ALT="$\displaystyle V_T&lt;V_{in}&lt;\frac{-1+\sqrt{1+4KRV_{dd}}}{2KR}+V_T
+\;\;\;\;$">i.e.<IMG STYLE="height: 5.57ex; vertical-align: -1.71ex; " SRC="img644.svg"
+ ALT="$\displaystyle \;\;\;\;
+0&lt;V_{in}-V_T &lt;\frac{-1+\sqrt{1+4KRV_{dd}}}{2KR}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">159</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+When the transistor is in saturation mode the slope of the curve (red) 
+indicates the ratio between input <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img503.svg"
+ ALT="$V_{out}$"></SPAN> and output <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img637.svg"
+ ALT="$V_{in}$"></SPAN>, the voltage
+gain of the circuit:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+g=\frac{d V_{out}}{d V_{in}}=\frac{d}{d V_{in}}(V_{dd}-KR(V_{in}-V_T)^2 )
+=-2KR(V_{in}-V_T)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img645.svg"
+ ALT="$\displaystyle g=\frac{d V_{out}}{d V_{in}}=\frac{d}{d V_{in}}(V_{dd}-KR(V_{in}-V_T)^2 )
+=-2KR(V_{in}-V_T)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">160</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+<B>Example:</B> Assume <!-- MATH
+ $V_{dd}=10V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img646.svg"
+ ALT="$V_{dd}=10V$"></SPAN>, <!-- MATH
+ $R=10 k\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img647.svg"
+ ALT="$R=10 k\Omega$"></SPAN>, <!-- MATH
+ $K=0.5\;mA/V^2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img648.svg"
+ ALT="$K=0.5\;mA/V^2$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img624.svg"
+ ALT="$V_T=1V$"></SPAN>.
+For the transistor to be in saturation region, we need
+
+<UL>
+<LI><!-- MATH
+ $V_{in}>V_T=1\;V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img649.svg"
+ ALT="$V_{in}&gt;V_T=1\;V$"></SPAN> 
+</LI>
+<LI><!-- MATH
+ $V_{in}<[-1+\sqrt{1+4KRV_{dd}}\;]/2KR+V_T=2.32\;V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img650.svg"
+ ALT="$V_{in}&lt;[-1+\sqrt{1+4KRV_{dd}}\;]/2KR+V_T=2.32\;V $"></SPAN>
+</LI>
+</UL>
+then we have
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_{out}=V_{dd}-K(V_{in}-V_T)^2 R=10-5(V_{in}-1)^2
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img651.svg"
+ ALT="$\displaystyle V_{out}=V_{dd}-K(V_{in}-V_T)^2 R=10-5(V_{in}-1)^2$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">161</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+and the voltage gain is a function of the input <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img637.svg"
+ ALT="$V_{in}$"></SPAN>:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+g(V_{in})=\frac{d}{d\,V_{in}} V_{out}(V_{in})=-10(V_{in}-1)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img652.svg"
+ ALT="$\displaystyle g(V_{in})=\frac{d}{d\,V_{in}} V_{out}(V_{in})=-10(V_{in}-1)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">162</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+This nonlinear equation can be represented by the table below:
+<TABLE class="PAD  BORDER" style="">
+<TR><TD CLASS="LEFT"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img637.svg"
+ ALT="$V_{in}$"></SPAN></TD>
+<TD CLASS="LEFT">0</TD>
+<TD CLASS="LEFT">1</TD>
+<TD CLASS="LEFT">1.4</TD>
+<TD CLASS="LEFT">1.5</TD>
+<TD CLASS="LEFT">1.8</TD>
+<TD CLASS="LEFT">1.9</TD>
+<TD CLASS="LEFT">2.0</TD>
+<TD CLASS="LEFT">2.1</TD>
+<TD CLASS="LEFT">2.2</TD>
+<TD CLASS="LEFT">2.3</TD>
+<TD CLASS="LEFT">2.32</TD>
+<TD CLASS="LEFT">2.35</TD>
+<TD CLASS="LEFT">2.4</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+</TR>
+<TR><TD CLASS="LEFT"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img503.svg"
+ ALT="$V_{out}$"></SPAN></TD>
+<TD CLASS="LEFT">10</TD>
+<TD CLASS="LEFT">10</TD>
+<TD CLASS="LEFT">9.2</TD>
+<TD CLASS="LEFT">8.8</TD>
+<TD CLASS="LEFT">6.8</TD>
+<TD CLASS="LEFT">6.0</TD>
+<TD CLASS="LEFT">5.0</TD>
+<TD CLASS="LEFT">4.0</TD>
+<TD CLASS="LEFT">2.8</TD>
+<TD CLASS="LEFT">1.6</TD>
+<TD CLASS="LEFT">1.3</TD>
+<TD CLASS="LEFT">0.9</TD>
+<TD CLASS="LEFT">0.0</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+</TR>
+</TABLE>
+In particular, when the input <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img637.svg"
+ ALT="$V_{in}$"></SPAN> increases from <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img653.svg"
+ ALT="$1.8V$"></SPAN> to <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img654.svg"
+ ALT="$1.9V$"></SPAN>, the output 
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img503.svg"
+ ALT="$V_{out}$"></SPAN> decreases from <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img655.svg"
+ ALT="$6.8V$"></SPAN> to <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img656.svg"
+ ALT="$6V$"></SPAN>, with a gain <!-- MATH
+ $g(V_{in})=g(1.8)=-10(1.8-1)=-8$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img657.svg"
+ ALT="$g(V_{in})=g(1.8)=-10(1.8-1)=-8$"></SPAN>.
+Also when the input <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img637.svg"
+ ALT="$V_{in}$"></SPAN> increases from <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img658.svg"
+ ALT="$2.0V$"></SPAN> to <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img659.svg"
+ ALT="$2.1V$"></SPAN>, the output <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img503.svg"
+ ALT="$V_{out}$"></SPAN> 
+decreases from <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img660.svg"
+ ALT="$5V$"></SPAN> to <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img661.svg"
+ ALT="$4V$"></SPAN>, with a gain <!-- MATH
+ $g(V_{in})=g(2)=-10(2-1)=-10$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img662.svg"
+ ALT="$g(V_{in})=g(2)=-10(2-1)=-10$"></SPAN>. 
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/MOSFETexample.gif"
+ ALT="MOSFETexample.gif">
+
+<P>
+In summary, we see that
+
+<UL>
+<LI>When the transistor is in saturation mode, the circuit behaves as a voltage amplifier.
+</LI>
+<LI>The voltage gain is the slope of the tangent of the curve (red) as a function of <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img637.svg"
+ ALT="$V_{in}$"></SPAN>.
+</LI>
+<LI>The value of the gain depends on the level of input <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img637.svg"
+ ALT="$V_{in}$"></SPAN>. When 
+  <!-- MATH
+ $V_T=1V<V_{in}<2.32V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img663.svg"
+ ALT="$V_T=1V&lt;V_{in}&lt;2.32V$"></SPAN>, the gain <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img664.svg"
+ ALT="$\vert g\vert&gt;1$"></SPAN> is greater than one.
+</LI>
+<LI>The output voltage is <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img197.svg"
+ ALT="$180^\circ$"></SPAN> out of phase with the input voltage (<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img665.svg"
+ ALT="$g&lt;0$"></SPAN>),
+  as the slope of <!-- MATH
+ $V_{out}(V_{in})$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img666.svg"
+ ALT="$V_{out}(V_{in})$"></SPAN> is negative.
+</LI>
+<LI>When <!-- MATH
+ $V_{in}<V_T=1V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img667.svg"
+ ALT="$V_{in}&lt;V_T=1V$"></SPAN>, the transistor is cutoff.  On the other hand, when 
+  <!-- MATH
+ $V_{in}>2.32V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img668.svg"
+ ALT="$V_{in}&gt;2.32V$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img503.svg"
+ ALT="$V_{out}$"></SPAN> is more than one <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img517.svg"
+ ALT="$V_T$"></SPAN> below <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img637.svg"
+ ALT="$V_{in}$"></SPAN>, for example, 
+  <!-- MATH
+ $V_{in}=2.32$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img669.svg"
+ ALT="$V_{in}=2.32$"></SPAN>, <!-- MATH
+ $V_{out}=1.3<V_{in}-V_T=2.32-1=1.32$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img670.svg"
+ ALT="$V_{out}=1.3&lt;V_{in}-V_T=2.32-1=1.32$"></SPAN>, the transistor is in triode
+  region. In either of the two cases, the transistor has no amplification capability.
+</LI>
+</UL>
+
+<P>
+Next we consider a MOSFET circuit with sinusoidal input. Assume the drain resistor
+is <!-- MATH
+ $R=10\;k\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img671.svg"
+ ALT="$R=10\;k\Omega$"></SPAN>, <!-- MATH
+ $K=1\;mA/V^2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img672.svg"
+ ALT="$K=1\;mA/V^2$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img624.svg"
+ ALT="$V_T=1V$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img673.svg"
+ ALT="$V_{dd}=5V$"></SPAN> and a sinusoidal input 
+<!-- MATH
+ $v_{in}(t)=V_{bias}+\sin(\omega t)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img674.svg"
+ ALT="$v_{in}(t)=V_{bias}+\sin(\omega t)$"></SPAN>. If the bias voltage is <!-- MATH
+ $V_{bias}=1.5V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img675.svg"
+ ALT="$V_{bias}=1.5V$"></SPAN>, the
+input voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img676.svg"
+ ALT="$v_{in}(t)$"></SPAN> varies between 1.4V and 1.6V. The output voltage can be
+found to be:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_{out}=V_{dd}-RI_D=V_{dd}-RK(V_{in}-V_T)^2=5-10 (V_{in}-1)^2
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img677.svg"
+ ALT="$\displaystyle v_{out}=V_{dd}-RI_D=V_{dd}-RK(V_{in}-V_T)^2=5-10 (V_{in}-1)^2$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">163</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+In particular, corresponding to <!-- MATH
+ $V_{in}=1.4V,\;1.5V,\;1.6V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img678.svg"
+ ALT="$V_{in}=1.4V,\;1.5V,\;1.6V$"></SPAN>, the output voltage 
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img679.svg"
+ ALT="$v_{out}$"></SPAN> and the current <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img680.svg"
+ ALT="$i_{DS}$"></SPAN> are, respectively, <!-- MATH
+ $v_{out}=3.4V,\;2.5V,\;1.4V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img681.svg"
+ ALT="$v_{out}=3.4V,\;2.5V,\;1.4V$"></SPAN>, 
+and <!-- MATH
+ $i_{DS}=0.16mA,\;0.25mA,\;0.36mA$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img682.svg"
+ ALT="$i_{DS}=0.16mA,\;0.25mA,\;0.36mA$"></SPAN>, as shown in the figure below:
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/MOSFETloadline.gif"
+ ALT="MOSFETloadline.gif">
+
+<P>
+<B>Biasing:</B> In the example above, the DC offset of the input is at 1.5V, so that
+the transistor is working in the saturation region when the magnitude of the AC input
+is limited. However, if this offset is either too high or too low, the gate voltage
+may go beyond the saturation region to enter either the triode or the cutoff region.
+In either case, the output voltage will be severely distorted, as shown below:
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/MOSFETregions.gif"
+ ALT="MOSFETregions.gif">
+
+<P>
+It is therefore clear that the DC offset or biasing gate voltage has to be properly
+setup to make sure the dynamic range of the input signal is within the saturation 
+region. 
+
+<P>
+<B>Method 1:</B> One way to provide the desired DC offset is to use two resistors 
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img249.svg"
+ ALT="$R_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img250.svg"
+ ALT="$R_2$"></SPAN> that form a voltage divider, as shown in the figure below (a). As 
+the input resistance of a MOSFET transistor is very high, therefore the gate of 
+the transistor does not draw any current, the DC offset voltage can simply obtained
+as:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_{bias}=V_{dd}\frac{R_1}{R_1+R_2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img683.svg"
+ ALT="$\displaystyle V_{bias}=V_{dd}\frac{R_1}{R_1+R_2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">164</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The input AC signal through the input capacitor is then superimposed on this DC 
+offset. 
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/MOSFETbiasing.gif"
+ ALT="MOSFETbiasing.gif">
+
+<P>
+<B>Method 2: </B> Another way to set up the bias is the circuit shown in (b) above.
+Assume <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img684.svg"
+ ALT="$R_1=84k$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img685.svg"
+ ALT="$R_2=16k$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img686.svg"
+ ALT="$R_d=20k$"></SPAN>, <!-- MATH
+ $V_{dd}=10V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img646.svg"
+ ALT="$V_{dd}=10V$"></SPAN>, and <!-- MATH
+ $K=0.5mA/V^2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img687.svg"
+ ALT="$K=0.5mA/V^2$"></SPAN>.  The bias 
+voltage can be found to be <!-- MATH
+ $V_B=V_{bias}=1.6V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img688.svg"
+ ALT="$V_B=V_{bias}=1.6V$"></SPAN>, and the voltage between gate and 
+source is <!-- MATH
+ $V_{GS}=V_B-V_{in}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img689.svg"
+ ALT="$V_{GS}=V_B-V_{in}$"></SPAN>. The output voltage is
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_{out}=V_{dd}-R_d K (V_{GS}-V_T)^2=V_{dd}-R_d K (V_B-V_{in}-V_T)^2=10-10\times
+(0.6-V_{in})^2  
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img690.svg"
+ ALT="$\displaystyle V_{out}=V_{dd}-R_d K (V_{GS}-V_T)^2=V_{dd}-R_d K (V_B-V_{in}-V_T)^2=10-10\times
+(0.6-V_{in})^2$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">165</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+When <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img691.svg"
+ ALT="$V_{in}=0$"></SPAN>, <!-- MATH
+ $V_{out}=6.4V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img692.svg"
+ ALT="$V_{out}=6.4V$"></SPAN>.
+
+<P>
+To determine the dynamic range of the input <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img637.svg"
+ ALT="$V_{in}$"></SPAN>, recall the conditions for the
+transistor to be in saturation region:
+
+<UL>
+<LI>To avoid cutoff region: <!-- MATH
+ $V_{GS}-V_T \ge 0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img693.svg"
+ ALT="$V_{GS}-V_T \ge 0$"></SPAN>. For this particular circuit, 
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_{GS}-V_T=V_B-V_{in}-V_T=0.6-V_{in} \ge 0
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img694.svg"
+ ALT="$\displaystyle V_{GS}-V_T=V_B-V_{in}-V_T=0.6-V_{in} \ge 0$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">166</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Solving this we get <!-- MATH
+ $V_{in} \le 0.6V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img695.svg"
+ ALT="$V_{in} \le 0.6V$"></SPAN> with corresponding output <!-- MATH
+ $V_{out} < 10V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img696.svg"
+ ALT="$V_{out} &lt; 10V$"></SPAN>.
+
+<P>
+</LI>
+<LI>To avoid triode region: <!-- MATH
+ $V_{DS} \ge V_{GS}-V_T$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img697.svg"
+ ALT="$V_{DS} \ge V_{GS}-V_T$"></SPAN>. For this particular circuit, 
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_{DS}=V_{out}-V_{in}=(V_{dd}-R_dI_D)-V_{in}
+    =V_{dd}-R_dK (V_B-V_{in}-V_T)^2-V_{in} \ge V_B-V_{in}-V_T
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img698.svg"
+ ALT="$\displaystyle V_{DS}=V_{out}-V_{in}=(V_{dd}-R_dI_D)-V_{in}
+=V_{dd}-R_dK (V_B-V_{in}-V_T)^2-V_{in} \ge V_B-V_{in}-V_T$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">167</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+that is
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_{out}=V_{dd}-R_dK (V_B-V_{in}-V_T)^2 \ge V_B-V_T
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img699.svg"
+ ALT="$\displaystyle V_{out}=V_{dd}-R_dK (V_B-V_{in}-V_T)^2 \ge V_B-V_T$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">168</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+i.e.,
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_{out}=10-10\times (0.6-V_{in})^2 \ge 0.6
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img700.svg"
+ ALT="$\displaystyle V_{out}=10-10\times (0.6-V_{in})^2 \ge 0.6$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">169</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Solving this for <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img637.svg"
+ ALT="$V_{in}$"></SPAN> we get <!-- MATH
+ $V_{in} \ge -0.37V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img701.svg"
+ ALT="$V_{in} \ge -0.37V $"></SPAN>, with corresponding output
+<!-- MATH
+ $V_{out} \ge 0.6V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img702.svg"
+ ALT="$V_{out} \ge 0.6V$"></SPAN>
+</LI>
+</UL>
+Therefore the overall dynamic range for the input is 
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+-0.37V \le V_{in} \le 0.6V
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img703.svg"
+ ALT="$\displaystyle -0.37V \le V_{in} \le 0.6V$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">170</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+with the corresponding output range
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+0.6V \le V_{out} \le 10V
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img704.svg"
+ ALT="$\displaystyle 0.6V \le V_{out} \le 10V$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">171</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+and the overall voltage gain is about <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img705.svg"
+ ALT="$g=9.7$"></SPAN>. Note that the output voltage is in
+phase with the input voltage.
+
+<P>
+<B>Source Follower: </B> If the output is taken from the source, instead of the 
+drain of the transistor, the circuit is called a source follower. 
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/MOSFETfollower.gif"
+ ALT="MOSFETfollower.gif">
+
+<P>
+Assume <!-- MATH
+ $R_s=10 k\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img706.svg"
+ ALT="$R_s=10 k\Omega$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img624.svg"
+ ALT="$V_T=1V$"></SPAN> and <!-- MATH
+ $K=10 mA/V^2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img707.svg"
+ ALT="$K=10 mA/V^2$"></SPAN>. To find the input and output 
+voltages and the gain of the circuit, consider the current <!-- MATH
+ $I_D=V_{out}/R_s$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img708.svg"
+ ALT="$I_D=V_{out}/R_s$"></SPAN>:
+
+<P>
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_D=K(V_{GS}-V_T)^2=K(V_{in}-V_{out}-V_T)^2=V_{out}/R_s
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img709.svg"
+ ALT="$\displaystyle I_D=K(V_{GS}-V_T)^2=K(V_{in}-V_{out}-V_T)^2=V_{out}/R_s$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">172</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Plugging in the given values, we get
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+(V_{in}-V_{out}-1)^2=V_{out}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img710.svg"
+ ALT="$\displaystyle (V_{in}-V_{out}-1)^2=V_{out}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">173</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+If <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img150.svg"
+ ALT="$V_{in}=2V$"></SPAN>, this equation becomes:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+(V_{out}-1)^2=V_{out}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img711.svg"
+ ALT="$\displaystyle (V_{out}-1)^2=V_{out}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">174</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+which can be solved to get <!-- MATH
+ $V_{out}=2.6V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img712.svg"
+ ALT="$V_{out}=2.6V$"></SPAN> or <!-- MATH
+ $V_{out}=0.4V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img713.svg"
+ ALT="$V_{out}=0.4V$"></SPAN>. We take the smaller 
+voltage in order for the transistor to be outside the cutoff region:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_{GS}=V_{in}-V_{out}=2-V_{out}>V_T=1
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img714.svg"
+ ALT="$\displaystyle V_{GS}=V_{in}-V_{out}=2-V_{out}&gt;V_T=1$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">175</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Similarly, if <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img715.svg"
+ ALT="$V_{in}=3V$"></SPAN>, the equation becomes:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+(V_{out}-2)^2=V_{out}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img716.svg"
+ ALT="$\displaystyle (V_{out}-2)^2=V_{out}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">176</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+and we get <!-- MATH
+ $V_{out}=1V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img717.svg"
+ ALT="$V_{out}=1V$"></SPAN>. The voltage gain of the source follower is 
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+g=\frac{\Delta V_{out}}{\Delta V_{in}}=\frac{1-0.4}{3-2}=0.6<1
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img718.svg"
+ ALT="$\displaystyle g=\frac{\Delta V_{out}}{\Delta V_{in}}=\frac{1-0.4}{3-2}=0.6&lt;1$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">177</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+To maximize the dynamic range for the input AC signal, the DC operation point
+in terms of the DC variables <!-- MATH
+ $\{V_{GS}, I_D, V_{DS}\}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img719.svg"
+ ALT="$\{V_{GS}, I_D, V_{DS}\}$"></SPAN> needs to be set around
+the middle point of the saturation region. If the AC signal around the DC 
+operation point is small enough, the behavior of the circuit can be linearized
+(first term of Taylor expansion of the nonlinear relationship) to simplify the
+analysis. 
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/MOSFETsmallsignal.gif"
+ ALT="MOSFETsmallsignal.gif">
+
+<P>
+Specifically, the nonlinear relationship between <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img610.svg"
+ ALT="$V_{GS}$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img28.svg"
+ ALT="$I_D$"></SPAN> can 
+be linearized around the DC operation point for small changes:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+g_m=\frac{\Delta I_D}{\Delta V_{GS}}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img720.svg"
+ ALT="$\displaystyle g_m=\frac{\Delta I_D}{\Delta V_{GS}}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">178</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Here <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.57ex; " SRC="img721.svg"
+ ALT="$g_m$"></SPAN>, called incremental transconductance, is the ratio between small 
+change in <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img28.svg"
+ ALT="$I_D$"></SPAN> and the small change in <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img610.svg"
+ ALT="$V_{GS}$"></SPAN>.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node15.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="ch4.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node13.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node15.html">CMOS Digital Logic Circuits</A>
+<B> Up:</B> <A
+ HREF="ch4.html">ch4</A>
+<B> Previous:</B> <A
+ HREF="node13.html">Metal-Oxide-Semiconductor Field-Effect Transistors</A></DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

@@ -1,0 +1,980 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>hw1_key</TITLE>
+<META NAME="description" CONTENT="hw1_key">
+<META NAME="keywords" CONTENT="hw1_key">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="hw1_key.css">
+
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev_g.png">   
+<BR>
+<B> Next:</B> <A NAME="tex2html3"
+  HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<DIV ALIGN="CENTER">
+<FONT SIZE="+2"><B>E84 Home Work 1</B></FONT>
+
+</DIV>
+
+<OL>
+<LI>(a) If two light bulbs both labeled as 110V and 40W in series are
+connected to a socket outlet of 190V, what is the power consumption of 
+each of the bulbs?
+
+<P>
+<B>Solution:</B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+R=V^2/W=110^2/40,\;\;\;\;\; V'=190/2=95
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="326" HEIGHT="31" BORDER="0"
+ SRC="img1.png"
+ ALT="\begin{displaymath}R=V^2/W=110^2/40,\;\;\;\;\; V'=190/2=95 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+W'=V'^2/R=W (V'/V)^2=40 (95/110)^2=40\times 0.746=29.83
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="475" HEIGHT="31" BORDER="0"
+ SRC="img2.png"
+ ALT="\begin{displaymath}W'=V'^2/R=W (V'/V)^2=40 (95/110)^2=40\times 0.746=29.83 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+(b) Replace one of the two bulbs by another bulb labeled as 110V 15W, and
+find the power consumption of each of the bulbs. What will happen to each
+of the two bulbs? (Note that when the power consumption by a bulb is larger
+than the specified wattage, it will be burned out!)
+
+<P>
+<B>Solution:</B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V=110,\;\;V'=190,\;\;R1=V^2/W1=110^2/40,\;\;R2=V^2/W2=110^2/15
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="555" HEIGHT="31" BORDER="0"
+ SRC="img3.png"
+ ALT="\begin{displaymath}V=110,\;\;V'=190,\;\;R1=V^2/W1=110^2/40,\;\;R2=V^2/W2=110^2/15 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+I=V'/R=V'/(R1+R2),\;\; W1'=I^2 R1=8.89,\;\;W2'=I^2 R2=23.67>15\;\;\;
+	\mbox{burned out!}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="677" HEIGHT="31" BORDER="0"
+ SRC="img4.png"
+ ALT="\begin{displaymath}I=V'/R=V'/(R1+R2),\;\; W1'=I^2 R1=8.89,\;\;W2'=I^2 R2=23.67&gt;15\;\;\;
+\mbox{burned out!} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+</LI>
+<LI>Measurement of a physical process by instruments may be tricky as
+the instruments will inevitably affect the process being measured. The 
+figure below shows two possible configurations for the measurement of the
+voltage across and the current through the load. 
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../hw1b.gif"
+ ALT="hw1b.gif">
+
+<P>
+
+<OL>
+<LI>What are required of the ammeter and the voltmeter to minimize their
+	influences on the measurements? 
+
+<P>
+<B>Solution:</B>
+The ammeter should have minimum (ideally 0) impedance while the voltmeter
+should have maximum (ideally infinity) impedance. 
+
+<P>
+</LI>
+<LI>How would the ammeter and the voltmeter affect the measurement of the
+	current and the voltage in either of the configurations (a and b)?
+</LI>
+</OL>
+
+<P>
+<B>Solution:</B>
+In (a) the voltmeter will by-pass some current so that the actual current
+through the load is smaller than the reading of the ammeter.
+
+<P>
+In (b) the ammeter will cause some voltage drop and the actual voltage 
+across the load is lower than the reading of the voltmeter. 
+
+<P>
+</LI>
+<LI>Use Kirchhoff's voltage and current laws to find voltage <IMG
+ WIDTH="37" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$V_{BD}$"> and resistance 
+<IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.png"
+ ALT="$R_2$"> in the circuit shown below:
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../hw1c.gif"
+ ALT="hw1c.gif">
+
+<P>
+(Note: The direction of a current and the polarity of a voltage source can
+be assumed arbitrarily. To determined the actual direction and polarity, the
+sign of the values also should be considered. For example, a current labeled 
+in left-to-right direction with a negative value is actually flowing 
+right-to-left.)
+
+<P>
+<B>Solution:</B>
+
+<UL>
+<LI>apply KCL to node B: <IMG
+ WIDTH="141" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.png"
+ ALT="$2+(-6)+I2=0$">, <IMG
+ WIDTH="67" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.png"
+ ALT="$I2=-4$"> 
+</LI>
+<LI>apply KCL to node C: <IMG
+ WIDTH="127" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.png"
+ ALT="$-4+1-I3=0$">, <IMG
+ WIDTH="67" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.png"
+ ALT="$I3=-3$">
+</LI>
+<LI>apply KCL to node D: <IMG
+ WIDTH="114" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.png"
+ ALT="$5-3+I4=0$">, <IMG
+ WIDTH="67" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.png"
+ ALT="$I4=-2$">
+</LI>
+<LI>apply KVL to loop ABCD: 
+	<!-- MATH
+ $10+2\times 1+(-4)\times R2+6+(-3)\times 1-(-2)\itimes 5=0$
+ -->
+<IMG
+ WIDTH="397" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.png"
+ ALT="$10+2\times 1+(-4)\times R2+6+(-3)\times 1-(-2)\itimes 5=0$">, 
+	<IMG
+ WIDTH="80" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img14.png"
+ ALT="$R2=6.25$">
+</LI>
+<LI>apply KVL to loop BDA: <!-- MATH
+ $V_{BD}+2\times 5+10+2\times 1=0$
+ -->
+<IMG
+ WIDTH="228" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.png"
+ ALT="$V_{BD}+2\times 5+10+2\times 1=0$">, 
+	<IMG
+ WIDTH="106" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.png"
+ ALT="$V_{BD}=-22V$">, or
+</LI>
+<LI>apply KVL to loop BDC: <!-- MATH
+ $V_{BD}-(-3)\times 1-6-(-4\times 6.25)=0$
+ -->
+<IMG
+ WIDTH="296" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$V_{BD}-(-3)\times 1-6-(-4\times 6.25)=0$">, 
+	<IMG
+ WIDTH="106" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.png"
+ ALT="$V_{BD}=-22V$">
+</LI>
+</UL>
+
+<P>
+</LI>
+<LI>Find the equivalent resistance between the two terminals before and
+after the switch is closed. (Note, the two diagonal branches are NOT
+connected to each other in the middle.)
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../hw2e.gif"
+ ALT="hw2e.gif">
+
+<P>
+<B>Solution:</B>
+ before S is closed, <!-- MATH
+ $R=(3+2)//(6+2)=5//8=40/13 \Omega$
+ -->
+<IMG
+ WIDTH="300" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.png"
+ ALT="$R=(3+2)//(6+2)=5//8=40/13 \Omega$">
+
+<P>
+after S is closed, <!-- MATH
+ $R=2//2+3//6=1+2=3 \Omega$
+ -->
+<IMG
+ WIDTH="238" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.png"
+ ALT="$R=2//2+3//6=1+2=3 \Omega$">
+
+<P>
+</LI>
+<LI>Find the equivalent resistance <IMG
+ WIDTH="31" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.png"
+ ALT="$R_{eq}$"> between the two terminals
+in the figure, where <IMG
+ WIDTH="69" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.png"
+ ALT="$R_0=3\Omega$">, <IMG
+ WIDTH="69" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.png"
+ ALT="$R_1=4\Omega$">, <IMG
+ WIDTH="69" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img23.png"
+ ALT="$R_2=2\Omega$">, <IMG
+ WIDTH="69" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img24.png"
+ ALT="$R_3=2\Omega$">, 
+<IMG
+ WIDTH="69" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.png"
+ ALT="$R_4=1\Omega$">. What is <IMG
+ WIDTH="31" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.png"
+ ALT="$R_{eq}$"> if <IMG
+ WIDTH="69" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img26.png"
+ ALT="$R_0=5\Omega$">?
+
+<P>
+(Hint: apply a test voltage <IMG
+ WIDTH="37" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.png"
+ ALT="$V_{test}$"> across the terminals and the 
+equivalent resistance can be found to be <!-- MATH
+ $R_{eq}=V_{test}/I_{test}$
+ -->
+<IMG
+ WIDTH="127" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img28.png"
+ ALT="$R_{eq}=V_{test}/I_{test}$">.
+The circuit can be solved by applying KCL to <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img29.png"
+ ALT="$V_1$"> and <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img30.png"
+ ALT="$V_2$">.)
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../hw1f.gif"
+ ALT="hw1f.gif">
+
+<P>
+<B>Solution:</B>
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\frac{v_1-v_{test}}{4}+\frac{v_1-0}{2}+\frac{v_1-v_2}{3}=0
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="252" HEIGHT="42" BORDER="0"
+ SRC="img31.png"
+ ALT="\begin{displaymath}\frac{v_1-v_{test}}{4}+\frac{v_1-0}{2}+\frac{v_1-v_2}{3}=0 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\frac{v_2-v_{test}}{2}+\frac{v_2-0}{1}+\frac{v_2-v_1}{3}=0
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="252" HEIGHT="42" BORDER="0"
+ SRC="img32.png"
+ ALT="\begin{displaymath}\frac{v_2-v_{test}}{2}+\frac{v_2-0}{1}+\frac{v_2-v_1}{3}=0 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+solving these we get <!-- MATH
+ $v_1=v_2=v_{test}/3$
+ -->
+<IMG
+ WIDTH="132" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img33.png"
+ ALT="$v_1=v_2=v_{test}/3$">. Then apply KCL to the
+positive terminal to get
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+i_{test}+\frac{v_1-v_{test}}{4}+\frac{v_2-v_{test}}{2}=0
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="249" HEIGHT="41" BORDER="0"
+ SRC="img34.png"
+ ALT="\begin{displaymath}i_{test}+\frac{v_1-v_{test}}{4}+\frac{v_2-v_{test}}{2}=0 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+solving to get
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+R_{eq}=\frac{v_{test}}{i_{test}}=2 \Omega
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="129" HEIGHT="41" BORDER="0"
+ SRC="img35.png"
+ ALT="\begin{displaymath}R_{eq}=\frac{v_{test}}{i_{test}}=2 \Omega \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Note that in this case <IMG
+ WIDTH="59" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img36.png"
+ ALT="$v_1=v_2$">, independent of the value of <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img37.png"
+ ALT="$R_0$">.
+
+<P>
+Alternatively, based on delta-Y conversion (to be considered later), the 
+triangle (delta) formed by <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img37.png"
+ ALT="$R_0$">, <IMG
+ WIDTH="26" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img38.png"
+ ALT="$R1$">, and <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.png"
+ ALT="$R_2$"> can be coonverted to a Y 
+configuration with <IMG
+ WIDTH="74" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img39.png"
+ ALT="$R'_0=8/9$"> (top), <IMG
+ WIDTH="74" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img40.png"
+ ALT="$R'_1=4/3$"> (left), and <IMG
+ WIDTH="74" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img41.png"
+ ALT="$R'_2=2/3$">. Then
+we have <IMG
+ WIDTH="125" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img42.png"
+ ALT="$R'_1+R_3=10/3$"> and <IMG
+ WIDTH="116" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img43.png"
+ ALT="$R'_2+R_4=5/3$">. Their parallel combination is 
+<!-- MATH
+ $10/3 || 5/3=10/9$
+ -->
+<IMG
+ WIDTH="133" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img44.png"
+ ALT="$10/3 \vert\vert 5/3=10/9$">, in series with <IMG
+ WIDTH="74" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img39.png"
+ ALT="$R'_0=8/9$">, i.e., the total resistance
+is <!-- MATH
+ $R_{eq}=10/9+8/9=2$
+ -->
+<IMG
+ WIDTH="168" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img45.png"
+ ALT="$R_{eq}=10/9+8/9=2$">. However, this approach does not reveal the fact that 
+<IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img37.png"
+ ALT="$R_0$"> can take any value without changing <IMG
+ WIDTH="31" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.png"
+ ALT="$R_{eq}$">.
+
+<P>
+</LI>
+<LI>Design a multimeter that can measure both DC and AC voltage, DC current,
+  and resistance with different scales. Specifically, you are given an analog 
+  meter <IMG
+ WIDTH="17" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img46.png"
+ ALT="$A$"> with a needle display, which reaches full scale when a DC current 
+  of <!-- MATH
+ $I=100\;\mu A=10^{-4}\;A$
+ -->
+<IMG
+ WIDTH="168" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img47.png"
+ ALT="$I=100\;\mu
+A=10^{-4}\;A$"> goes through it. The internal resistance of the
+  meter is 10 Ohms. In addition, you need some multi-position rotary switches 
+  to select different scales for each of the three types of measurements, and 
+  resistors with any values needed in your design.
+
+<P>
+
+<UL>
+<LI>DC Voltage measurement: DC voltages in these ranges can be measured
+      0-2.5, 0-10, 0-50, and 0-250 (all in volts). Use a 4-position rotary switch
+      to select one of the four ranges as shown in the figure below. For example, 
+      when the range of 0-10 is selected, the needle display will reach full scale 
+      when the voltage being measured is 10 V. The circuit is shown below. Determine 
+      all resistances labeled.
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../multimeterV.gif"
+ ALT="multimeterV.gif">
+
+<P>
+<B>Solution:</B> <!-- MATH
+ $R_1=25\;K\Omega$
+ -->
+<IMG
+ WIDTH="99" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img48.png"
+ ALT="$R_1=25\;K\Omega$">, <!-- MATH
+ $R_2=75\;K\Omega$
+ -->
+<IMG
+ WIDTH="99" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img49.png"
+ ALT="$R_2=75\;K\Omega$">, <!-- MATH
+ $R_3=400\;K\Omega$
+ -->
+<IMG
+ WIDTH="108" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img50.png"
+ ALT="$R_3=400\;K\Omega$">
+
+<P>
+and <!-- MATH
+ $R_4=2\;M\Omega$
+ -->
+<IMG
+ WIDTH="93" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img51.png"
+ ALT="$R_4=2\;M\Omega$">.
+</LI>
+<LI>AC Voltage measurement: To measure an AC voltage (in terms of its
+      RMS value), it first needs to be converted into a DC voltage. This can 
+      be achieved by a diode which only allows the current to pass in one
+      direction (along the arrow) but not the other. This process is called
+      rectification. The diode will also cause a voltage drop of 0.7 volt 
+      along the direction. The actual reading of the meter reflects the 
+      average value of the rectified current. Find the resistance <IMG
+ WIDTH="18" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img52.png"
+ ALT="$R$"> so 
+      that when the incoming AC voltage is <IMG
+ WIDTH="59" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img53.png"
+ ALT="$V=10$"> volt (RMS), the meter shows 
+      a full scale display.
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../multimeterACV.gif"
+ ALT="multimeterACV.gif">
+
+<P>
+<B>Solution:</B> The peak value of voltage is <!-- MATH
+ $10\times \sqrt{2}=14.14$
+ -->
+<IMG
+ WIDTH="129" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img54.png"
+ ALT="$10\times \sqrt{2}=14.14$">,
+      which is reduced (due to voltage drop of the diode) to <!-- MATH
+ $14.14-0.7=13.44$
+ -->
+<IMG
+ WIDTH="150" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img55.png"
+ ALT="$14.14-0.7=13.44$">.
+      The average value of the rectified voltage is <!-- MATH
+ $13.44/\pi=4.28$
+ -->
+<IMG
+ WIDTH="117" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img56.png"
+ ALT="$13.44/\pi=4.28$">. For the
+      meter to have a full scale display, the current need to be
+      <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+10^{-4}=\frac{4.28}{R},\;\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;\;R=42.8\,k\Omega
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="273" HEIGHT="42" BORDER="0"
+ SRC="img57.png"
+ ALT="\begin{displaymath}10^{-4}=\frac{4.28}{R},\;\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;\;R=42.8\,k\Omega \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The internal resistance of <IMG
+ WIDTH="37" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img58.png"
+ ALT="$10\,\Omega$"> can be neglected.
+
+<P>
+</LI>
+<LI>DC current measurement: measure currents in these ranges (all in mA):
+      0-0.5, 0-2.5, 0-10, 0-50. Use a 4-position rotary switch to select one 
+      of the four ranges as shown in the figure below. For example, when the 
+      range of 0-10 is selected, the needle display will reach full scale when 
+      a 10 mA current is measured. Determine all resistances labeled. Use
+      <!-- MATH
+ $R_0=1\;K\Omega$
+ -->
+<IMG
+ WIDTH="90" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$R_0=1\;K\Omega$">.
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../multimeterA1a.gif"
+ ALT="multimeterA1a.gif">
+
+<P>
+<B>Solution:</B> Voltage across input is <!-- MATH
+ $V=0.1\;mA\times 1\;K\Omega=100\;mV$
+ -->
+<IMG
+ WIDTH="244" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img60.png"
+ ALT="$V=0.1\;mA\times 1\;K\Omega=100\;mV$">.
+      Therefore 
+      <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\begin{array}{l}
+        R_1=100/(0.5-0.1)=250\;\Omega \\
+        R_2=100/(2.5-0.1)=41.67\;\Omega \\
+        R_1=100/(10-0.1)=10.1\;\Omega \\
+        R_1=100/(50-0.1)=2\;\Omega
+      \end{array}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="238" HEIGHT="93" BORDER="0"
+ SRC="img61.png"
+ ALT="\begin{displaymath}\begin{array}{l}
+R_1=100/(0.5-0.1)=250\;\Omega \\
+R_2=100/...
+...0.1)=10.1\;\Omega \\
+R_1=100/(50-0.1)=2\;\Omega
+\end{array} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+</LI>
+<LI>Resistance measurement: The circuit for resistance measurement is
+      provided as shown below, where <IMG
+ WIDTH="81" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img62.png"
+ ALT="$V_1=1.5V$">. Determine the values for the 
+      resistors labeled as <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img37.png"
+ ALT="$R_0$">, <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img63.png"
+ ALT="$R_1$">, <IMG
+ WIDTH="32" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img64.png"
+ ALT="$R_{10}$">, <IMG
+ WIDTH="38" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img65.png"
+ ALT="$R_{100}$"> and <IMG
+ WIDTH="45" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img66.png"
+ ALT="$R_{1000}$"> 
+      and <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img30.png"
+ ALT="$V_2$"> so that the needle display of the meter is full scale 
+      (<IMG
+ WIDTH="91" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img67.png"
+ ALT="$I=100\;\mu A$">) when the resistor <IMG
+ WIDTH="49" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img68.png"
+ ALT="$R=0$"> being measured (between the 
+      two leads labeled + and -) is zero, or half scale (<IMG
+ WIDTH="82" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img69.png"
+ ALT="$I=50\;\mu A$">) when 
+      the value of <IMG
+ WIDTH="18" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img52.png"
+ ALT="$R$"> and the position of he two synchronized rotary switches
+      are given in each of the four case shown in the table:
+
+<P>
+<TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="LEFT">positions</TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="26" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img70.png"
+ ALT="$\times 1$"></TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="35" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$\times 10$"></TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="44" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img72.png"
+ ALT="$\times 100$"></TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="42" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img73.png"
+ ALT="$\times 1K$"></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><IMG
+ WIDTH="18" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img52.png"
+ ALT="$R$"> values</TD>
+<TD ALIGN="LEFT">20<IMG
+ WIDTH="17" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img74.png"
+ ALT="$\Omega$"></TD>
+<TD ALIGN="LEFT">200<IMG
+ WIDTH="17" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img74.png"
+ ALT="$\Omega$"></TD>
+<TD ALIGN="LEFT">2000<IMG
+ WIDTH="17" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img74.png"
+ ALT="$\Omega$"></TD>
+<TD ALIGN="LEFT">20 <IMG
+ WIDTH="33" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img75.png"
+ ALT="$K\Omega$"></TD>
+</TR>
+</TABLE>
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../multimeterR.gif"
+ ALT="multimeterR.gif">
+
+<P>
+<B>Solution:</B>
+
+<P>
+
+<UL>
+<LI>First determine <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img37.png"
+ ALT="$R_0$">: when <IMG
+ WIDTH="49" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img68.png"
+ ALT="$R=0$">, we get 
+	  <!-- MATH
+ $R_0=1.5V/0.1\;mA=15\;K\Omega$
+ -->
+<IMG
+ WIDTH="221" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img76.png"
+ ALT="$R_0=1.5V/0.1\;mA=15\;K\Omega$">.
+</LI>
+<LI>When <IMG
+ WIDTH="76" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img77.png"
+ ALT="$R=20\;\Omega$">, the current through meter <IMG
+ WIDTH="17" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img46.png"
+ ALT="$A$"> should be:
+	  <BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+I&=&\frac{V_1}{R+R_1||R_0}\frac{R_1}{R_1+R_0}
+	  =\frac{V_1}{R+\frac{R_1R_0}{R_1+R_0}}\frac{R_1}{R_1+R_0}
+	  =V_1\frac{R_1}{RR_1+RR_0+R_1R_0} 	  \nonumber \\
+	  &=&5\times 10^{-4}\;A 
+	  \nonumber
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="13" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img78.png"
+ ALT="$\displaystyle I$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="18" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img79.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="534" HEIGHT="56" ALIGN="MIDDLE" BORDER="0"
+ SRC="img80.png"
+ ALT="$\displaystyle \frac{V_1}{R+R_1\vert\vert R_0}\frac{R_1}{R_1+R_0}
+=\frac{V_1}{R+\frac{R_1R_0}{R_1+R_0}}\frac{R_1}{R_1+R_0}
+=V_1\frac{R_1}{RR_1+RR_0+R_1R_0}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="18" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img79.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="88" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img81.png"
+ ALT="$\displaystyle 5\times 10^{-4}\;A$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Given <IMG
+ WIDTH="81" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img62.png"
+ ALT="$V_1=1.5V$">, <IMG
+ WIDTH="82" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img82.png"
+ ALT="$R_0=15K$"> and <IMG
+ WIDTH="71" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img83.png"
+ ALT="$R=20\Omega$">, we can solve this 
+	  equation to get 
+	  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+R_1=\frac{R_0RI}{V_1-I(R+R_0)}=20\Omega
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="217" HEIGHT="47" BORDER="0"
+ SRC="img84.png"
+ ALT="\begin{displaymath}R_1=\frac{R_0RI}{V_1-I(R+R_0)}=20\Omega \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI>When <IMG
+ WIDTH="84" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img85.png"
+ ALT="$R=200\;\Omega$">, solving the above equation we get 
+	  <!-- MATH
+ $R_{10}=202.7\Omega$
+ -->
+<IMG
+ WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img86.png"
+ ALT="$R_{10}=202.7\Omega$">.
+</LI>
+<LI>When <IMG
+ WIDTH="83" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img87.png"
+ ALT="$R=2\;K\Omega$">, solving the above equation we get 
+	  <!-- MATH
+ $R_{10}=2307.7\Omega$
+ -->
+<IMG
+ WIDTH="116" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img88.png"
+ ALT="$R_{10}=2307.7\Omega$">.
+</LI>
+<LI>When <IMG
+ WIDTH="92" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img89.png"
+ ALT="$R=20\;K\Omega$">, we need to determine <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img30.png"
+ ALT="$V_2$"> and 
+	  <IMG
+ WIDTH="32" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img90.png"
+ ALT="$R_{1k}$"> so that <!-- MATH
+ $I=5\items 10^{-5} A$
+ -->
+<IMG
+ WIDTH="94" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img91.png"
+ ALT="$I=5\items 10^{-5} A$">, and also when <IMG
+ WIDTH="49" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img68.png"
+ ALT="$R=0$">, 
+	  <IMG
+ WIDTH="85" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img92.png"
+ ALT="$I=10^{-4}A$">. <IMG
+ WIDTH="32" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img90.png"
+ ALT="$R_{1k}$"> and <IMG
+ WIDTH="61" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img93.png"
+ ALT="$V_1+V_2$"> can be found by solving
+	  these equations:
+	  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\left\{ \begin{array}{l}
+	    (V_1+V_2)/(R_{1k}+R_0)=10^{-4}A \\
+	    (V_1+V_2)/(R+R_{1k}+R_0)=5\times 10^{-5}A
+	  \end{array}\right.
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="318" HEIGHT="54" BORDER="0"
+ SRC="img94.png"
+ ALT="\begin{displaymath}\left\{ \begin{array}{l}
+(V_1+V_2)/(R_{1k}+R_0)=10^{-4}A \\
+(V_1+V_2)/(R+R_{1k}+R_0)=5\times 10^{-5}A
+\end{array}\right. \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Solving we get <IMG
+ WIDTH="107" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img95.png"
+ ALT="$V_1+V_2=2V$">, <!-- MATH
+ $R_{1k}+R_0=20\;K\Omega$
+ -->
+<IMG
+ WIDTH="149" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img96.png"
+ ALT="$R_{1k}+R_0=20\;K\Omega$">, i.e.,
+	  <!-- MATH
+ $R_{1k}=5K\Omega$
+ -->
+<IMG
+ WIDTH="93" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img97.png"
+ ALT="$R_{1k}=5K\Omega$">, <IMG
+ WIDTH="81" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img98.png"
+ ALT="$V_2=0.5V$">
+</LI>
+</UL>
+
+<P>
+</LI>
+</UL>
+
+<P>
+</LI>
+</OL>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html4"
+  HREF="node1.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev_g.png">   
+<BR>
+<B> Next:</B> <A NAME="tex2html3"
+  HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Ruye Wang
+2016-06-25
+</ADDRESS>
+</BODY>
+</HTML>

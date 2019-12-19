@@ -1,0 +1,153 @@
+\documentstyle[11pt]{article}
+\usepackage{html}
+\begin{document}
+\begin{center}
+{\Large \bf  Final Exam ---- E84, Fall, 2005}
+\end{center}
+
+\begin{itemize}
+\item Take home, open everything except discussion.
+\item Mark your start and end times. % Don't spend more than 3 hours.
+\item Due Thursday 5pm.
+\item Mark your name and question number clearly on top of each page.
+	Indicate the total number of pages submitted.
+\item When solving a problem, itemize all the steps. In each step, 
+  describe what you are doing, then show the calculation and the result 
+  of the step. A final answer, even if correct, without evidence of the
+  steps leading to the answer will not receive credit.
+\end{itemize}
+
+\begin{enumerate}
+
+\item {\bf Problem 1. (30 points)} 
+
+Assume $V_{CC}=12V$, $\beta=100$, $V_{BE}=0.7V$ when the base-emitter PN 
+junction is forward biased. 
+\begin{enumerate}
+\item What value should $R_B$ be to achieve the desired $I_B=0.02mA$?
+With this $I_B$, what value should $R_C$ be to achieve the desired output
+voltage $V_{CE}=6V$ (in the middle of the linear range of the output 
+characteristic plot)?
+\item If the measured effective (RMS) voltage of the output $v_{out}(t)$ 
+  (the AC component of $V_{CE}$) is $0.6 V$ and the voltage gain of the
+  circuit is known to be $A_V=-200$ (negative sign for 180 degree phase 
+  shift), what is the effective voltage of the input $v_{in}(t)$ (AC
+  component of $V_{BE}$)? What is the input resistance of the transistor
+  $r_{be}=\Delta V_{BE}/\Delta I_B$, the reciprical of the slope of the 
+  input characteristic plot, at the current DC operating point $V_{BE}=0.7$?
+\end{enumerate}
+
+\htmladdimg{../final05f_a.gif}
+
+% {\bf Solution:} $(V_{CC}-V_{BE})/I_B=11.7/0.02=565K\Omega$. For 
+% $V_{CE}=6V$, the corresponding $R_C$ can be found to be $R_C=3K\Omega$
+% by solving $I_{C}=(V_{CC}-V_{CE})/R_C=6/R_C=\beta I_B=2 mA$.
+
+% If $A_V=-200$ and AC component of $v_{out}$ is $0.6 V$, the AC component 
+% of $V_{in}$ is $0.6/200=3 mV$. The corresponding AC component of $I_C$ 
+% can be found as $0.6 V/3K\Omega=0.2 mA$, and the AC component of $i_b$
+% is $i_b=i_c/\beta=0.002 mA$. Therefore the slope of the input 
+% characteristic curve is $0.002 mA/3 mV$, i.e., the equivalent resistance
+% $r_{be}$ is $3 mV/0.002 mA=1.5 K\Omega$.
+
+
+\item {\bf Problem 2. (35 points)} 
+
+A transistor circuit and the output characteristic plot of the transistor 
+in the circuit are shown below. Assume $R_B=15 K\Omega$, $R_C=3 K\Omega$, 
+and $V_{BB}=1 V$. Assume $V_{BE}=0.7 V$ when the base-emitter PN-junction 
+is forward biased, and $V_{CE}=0.3 V$ when the transistor is saturated. 
+
+\begin{itemize}
+\item When $V_{CC}=12 V$, find the operating point in terms of $V_C$ 
+  and $I_C$, and the dynamic range of output voltage, i.e., the 
+  peak-to-peak value of an AC voltage without distortion. 
+
+\item Then answer the same questions above assuming $V_{CC}=6 V$. 
+\end{itemize}
+
+\htmladdimg{../final05f_b.gif}
+\htmladdimg{../final05f_c.gif}
+
+% {\bf Solution:} $I_B=(1-0.7)V /15 K\Omega=20 \mu A$, $I_C=2 mA$, 
+% When $V_{CC}=12 V$, $V_C=V_{CC}-R_C I_C=12V-3 K\Omega\; 2 mA=6 V$. 
+% $2(6-0.3)=2\times 5.7=11.4V$.
+
+% When $V_{CC}=6 V$, $V_C=V_{CC}-R_C I_C=6V-1.5 K\Omega 2 mA=3 V$. 
+% $2(3-0.3)=2\times 2.7=5.4V$.
+
+\item {\bf Problem 3. (35 points)}
+
+In the transistor amplification circuit shown below, $V_{CC}=12V$, 
+$\beta=100$. Assume the AC component of the input current is 
+$i_b(t)=0.05\cos \omega t mA$. Sketch the output characteristic plot 
+of the transistor circuit with the load line, and the current $i_c(t)$,
+output voltage $v_{out}(t)$ on the same plot, for each of the 
+following three cases:
+\begin{enumerate}
+\item $R_B=110 K\Omega$, $R_C=1.2 K\Omega$;
+\item $R_B=110 K\Omega$, $R_C=0.6 K\Omega$;
+\item $R_B=220 K\Omega$, $R_C=1.2 K\Omega$.
+\end{enumerate}
+Commont on each of the three cases in terms of both amplification and 
+distortion.
+
+\htmladdimg{../final05f_d.gif}
+
+% {\bf Solution:}
+
+% \begin{enumerate}
+% \item $R_B=110 K\Omega$, $R_C=1.2 K\Omega$; 
+
+% The two points of the load line are:
+% $(I_C=0, V_{CE}=V_{CC}=12V)$ and $(I_C=V_{CC}/R_C=10 mA, V_{CE}=0)$.
+% The DC component of base current is $(12-0.7)/110=0.1 mA$, and the
+% correspondingly $i_c(t)=10 mA$. The corresponding output voltage is 
+% $v_c=V_{CC}-R_C i_c=12 - 1.2\items 10=0 V$, the transistor is in the
+% saturation region of its output characteristic plot. 
+
+% At the negative peak of input current $i_b=0.05 mA$, 
+% $i_c=\beta i_b=5 mA$ and $v_c=V_{CC}-R_C i_c=12-1.2\times 5=6V$. 
+
+% At the positive peak of input current $i_b=0.15 mA$, 
+% $i_c=\beta i_b=15 mA$ and $v_c=V_{CC}-R_C i_c=12-1.2\times 15=-6V$, 
+% indicating the transistor is deeply saturated, the actually $v_c=0.2$.
+
+% \item $R_B=110 K\Omega$, $R_C=0.6 K\Omega$;
+% The two points of the load line are:
+% $(I_C=0, V_{CE}=V_{CC}=12V)$ and $(I_C=V_{CC}/R_C=20 mA, V_{CE}=0)$.
+% The DC component of $i_b$ and $i_c$ are the same as above.
+% When $i_b=0.1 mA$ and $i_c=10 mA$, the corresponding output voltage
+% is $v_c=V_{CC}-R_C i_c=12 - 0.6\items 10=6 V$, in the middle of the linear
+% region of the output characteristic plot.
+
+% At the negative peak of input current $i_b=0.05 mA$, 
+% $i_c=\beta i_b=5 mA$ and $v_c=V_{CC}-R_C i_c=12-0.6\times 5=9V$. 
+
+% At the positive peak of input current $i_b=0.15 mA$, 
+% $i_c=\beta i_b=15 mA$ and $v_c=V_{CC}-R_C i_c=12-0.6\times 15=3V$. 
+
+% \item $R_B=220 K\Omega$, $R_C=1.2 K\Omega$.
+
+% The two points of the load line are:
+% $(I_C=0, V_{CE}=V_{CC}=12V)$ and $(I_C=V_{CC}/R_C=10 mA, V_{CE}=0)$.
+% The DC component of base current is $(12-0.7)/220=0.05 mA$, and the
+% correspondingly $i_c(t)=5 mA$. The corresponding output voltage is 
+% $v_c=V_{CC}-R_C i_c=12 - 1.2\items 5=6 V$, the transistor is in the
+% middle of the linear region of its output characteristic plot. 
+
+% At the negative peak of input current $i_b=0.05 mA$, 
+% $i_c=\beta i_b=0 mA$ and $v_c=V_{CC}-R_C i_c=12V$. 
+
+% At the positive peak of input current $i_b=0.05 mA$, 
+% $i_c=\beta i_b=10 mA$ and $v_c=V_{CC}-R_C i_c=12-1.2\times 10=0V$. 
+
+% \end{enumerate}
+% Case 1 has severe distortion, case 3 has better amplification without
+% distortion.
+
+
+\end{enumerate}
+
+\end{document}
+

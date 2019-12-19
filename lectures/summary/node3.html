@@ -1,0 +1,168 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>DC circuit analysis</TITLE>
+<META NAME="description" CONTENT="DC circuit analysis">
+<META NAME="keywords" CONTENT="summary">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="summary.css">
+
+<LINK REL="next" HREF="node4.html">
+<LINK REL="previous" HREF="node2.html">
+<LINK REL="up" HREF="summary.html">
+<LINK REL="next" HREF="node4.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html38"
+  HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html36"
+  HREF="summary.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html30"
+  HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html39"
+  HREF="node4.html">AC circuit analysis</A>
+<B> Up:</B> <A NAME="tex2html37"
+  HREF="summary.html">summary</A>
+<B> Previous:</B> <A NAME="tex2html31"
+  HREF="node2.html">Basic Laws</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00030000000000000000">
+DC circuit analysis</A>
+</H1>
+
+<P>
+
+<UL>
+<LI>Loop-current method based on KVL
+</LI>
+<LI>Node-voltage method based on KCL
+</LI>
+<LI>Superposition principle
+</LI>
+<LI>Thevenin's theorem: convert any circuit to a voltage source
+  with <IMG
+ WIDTH="26" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.png"
+ ALT="$V_T$"> and <IMG
+ WIDTH="29" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.png"
+ ALT="$R_T$"> in series.
+</LI>
+<LI>Norton's theorem: convert any circuit to a current source
+  with <IMG
+ WIDTH="26" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.png"
+ ALT="$I_N$"> and <IMG
+ WIDTH="32" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.png"
+ ALT="$R_N$"> in parallel.
+</LI>
+<LI>Conversion between the voltage and current sources.
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+R_T=R_N,\;\;\;\;V_T=I_N R_N,\;\;\;\;\;I_N=V_T/R_T
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="336" HEIGHT="33" BORDER="0"
+ SRC="img13.png"
+ ALT="\begin{displaymath}
+R_T=R_N,\;\;\;\;V_T=I_N R_N,\;\;\;\;\;I_N=V_T/R_T
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI>Delta-Y conversion
+</LI>
+<LI>A two-port network can be modeled in terms of three parameters: 
+  
+<UL>
+<LI>Input resistance <!-- MATH
+ $R_{in}=v_{in}/i_{in}$
+ -->
+<IMG
+ WIDTH="110" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.png"
+ ALT="$R_{in}=v_{in}/i_{in}$"> (Ohm's law) 
+</LI>
+<LI>Output resistance <!-- MATH
+ $R_{out}=v_{oc}/i_{sc}$
+ -->
+<IMG
+ WIDTH="115" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.png"
+ ALT="$R_{out}=v_{oc}/i_{sc}$"> (Thevinin's theorem)
+</LI>
+<LI>Voltage source: <IMG
+ WIDTH="54" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.png"
+ ALT="$A_{oc} v_{in}$"> in series with <IMG
+ WIDTH="39" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$R_{out}$">, or a 
+    current source: <!-- MATH
+ $I=A_{oc} v_{in}/R_{out}$
+ -->
+<IMG
+ WIDTH="133" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.png"
+ ALT="$I=A_{oc} v_{in}/R_{out}$"> in parallel with <IMG
+ WIDTH="39" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$R_{out}$">.
+    where <IMG
+ WIDTH="32" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.png"
+ ALT="$A_{oc}$"> is the open-circuit gain.
+  
+</LI>
+</UL>
+  Transistors, op-amps, and many other circuits that takes an input 
+  and generates an output can all be examples of such a two-port network.
+</LI>
+<LI>The loading effact, the voltage <IMG
+ WIDTH="123" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.png"
+ ALT="$V=V_S-IR_S$"> across load <IMG
+ WIDTH="29" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.png"
+ ALT="$R_L$"> is
+  lower than the open-voltage voltage of the source.
+</LI>
+</UL>
+
+<P>
+<BR><HR>
+<ADDRESS>
+Ruye Wang
+2019-05-27
+</ADDRESS>
+</BODY>
+</HTML>

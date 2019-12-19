@@ -1,0 +1,318 @@
+\documentstyle[11pt]{article}
+\usepackage{html}
+\begin{document}
+\begin{center}
+{\Large \bf E84 Home Work 2}
+\end{center}
+\begin{enumerate}
+
+The calculations of all problems in this problem set are straight forward.
+However, the concepts involving source, load, internal (output) impedance
+of the source and the input impedance of the load are very important. After
+finding the numerical solutions of the problem, pause and reflect what they
+mean. 
+
+\item Find the equivalent resistance between the two terminals before and
+after the switch is closed. (Note, the two diagonal branches are NOT
+connected to each other in the middle.)
+
+\htmladdimg{../hw2e.gif}
+
+% before S is closed, $R=(3+2)//(6+2)=5//8=40/13 \Omega$
+% after S is closed, $R=2//2+3//6=1+2=3 \Omega$
+
+\item (a) In reality, an ammeter can be modeled by an ideal meter with zero impedance 
+  in series with an internal impedance $r_a$. To minimize the influnce of the ammeter
+  on the circuit during the measurement, should $r_a$ be minimized or maximized?
+
+  (b) A voltmeter can be modeled by an ideal meter with infinite impedance in parallel
+  with an internal (or input) impedance $r_v$. To minimize the influnce of the voltmeter 
+  on the circuit during the measurement, should $r_v$ be minimized or maximized?
+
+  (c) Calculate current $I$ and voltage $V$ in the simple circuit below, assuming 
+  $V_0=10V$, $R=500\Omega$ and the measuring meters are not connected, i.e., the ammeter
+  is short circuit, the voltmeter is open circuit.
+
+  (d) What is the reading on the ammeter with $r_a=10\Omega$ inserted in the circuit 
+  as shown? Assume the voltmeter is not connected.
+
+  (e) What is the reading on the voltmeter with $r_v=10^4 \Omega = 10 K\Omega$, connected
+  to the circuit as shown? Assume the ammeter is not connected.
+
+  \htmladdimg{../meters.gif}
+
+%  {\bf Solution:} 
+
+%  (a) $r_a$ should be minimized, ideally, zero.
+
+%  (b) $r_v$ should be maximized, ideally, infinity.
+
+%  (c) \[ I=10V/(500+500)\Omega=10 mA,\;\;\;\;V=10V\frac{500}{500+500}=5 V \]
+
+%  (d) \[ I=10V/(500+500+10)\Omega=9.9 mA \]
+
+%  (e) \[ V=10V\frac{500||10000}{500||10000+500}=4.878 V \]
+
+\item Ideally, a voltage source, such as a battery, should output constant voltage,
+  independent of how much current will be drawn by its load, e.g., a resistor. However, 
+  in reality, all voltage sources have some internal (output) impedance, modeled by an 
+  ideal voltage source $V_0$ in series with an impedance $R_0$. Assume $V_0=10V$ and 
+  $R_0=10\Omega$ in the following circuit, find the voltage $V_L$ the load resistor 
+  $R_L$ gets when (a) $R_L=100 \Omega$ and then (b) $R_L=10K\Omage$. 
+  (c) In general, if you want the load to get maximal voltage from the source, do you 
+  want $R_L$ and $R_0$ to be minimized or maximized, individually?
+
+  \htmladdimg{../source_load.gif}
+
+%  {\bf Solution:}
+
+%   (a) When $R_L=100 \Omega$, 
+%   \[V_L=V_0 \frac{R_L}{R_L+r_0}=10 \frac{100}{100+10}=9 V \]
+
+%   (b) $R_L=10K\Omage$.
+%   \[V_L=V_0 \frac{R_L}{R_L+r_0}=10 \frac{10000}{10000+10}=9.99 V \]
+
+%   (c) To maximize $V_L$, we want maximize $R_L$ and minimize $R_0$.
+
+\item The circuit below with $R=10 \Omega$ can be used to measure the internal 
+  impedance $R_0$ of a battery.
+  \begin{itemize}
+    \item When the battery is fresh, it is found $V_{out}=1.6V$ when the switch is open 
+      and $V_{out}=1.4V$ when the switch is closed. Find the internal impedance $R_0$.
+    \item The same battery is tested one year later, and $V_{out}=1.2V$ when the switch 
+      is open and $V_{out}=0.3V$ when the switch is closed. Find the internal impedance 
+      $R_0$.
+  \end{itemize}
+(Hint: assume the input impedance of the voltmeter is infinity, i.e., the voltmeter
+  does not draw any current.)
+
+  \htmladdimg{../battery_impedance.gif}
+
+% {\bf Solution:}
+% \[ V_{out}=1.6\times \frac{10}{10+R_0}=1.4, \longrightarrow R_0=1.43 \Omega \]
+% \[ V_{out}=1.2\times \frac{10}{10+R_0}=0.3, \longrightarrow R_0=30 \Omega \]
+
+\item The circuit below can be used to find the input impedance $r_v=R_{in}$ of 
+  a voltmeter (or an oscilloscope that also measures voltages). Assume $V_0=9V$
+  and $R_1=R_2=10 M\Omega$, and the reading of the voltmeter is $V_L=3V$. 
+  What is the input impedance of the voltmeter?
+  
+  \htmladdimg{../meter_impedance.gif}
+
+%   {\bf Solution:}
+
+%   \[ V_L=V_0\frac{R_2||R_{in}}{R_2||R_{in}+R_1}
+%   =9 \frac{R_2 || R_{in}}{R_2 || R_{in}+R_1}=3 \]
+%   Solving this equation for $R_{in}$ we get $R_{in}=10 M\Omega$.
+
+
+\end{enumerate}
+
+\end{document}
+
+\item Assume in the circuits in the figure, the voltage source is $V_0=2V$,
+	the current source is $I_0=1A$, and the resistor is $R=3\Omega$.
+	For both (a) and (b).
+
+\htmladdimg{../hw1d.gif}
+
+Find:
+\begin{enumerate}
+\item the current going through each of the three elements
+
+{\bf Solution:}
+\begin{itemize}
+\item (a) I=1A going thru all 3 elements 
+\item (b) 1A thru current source, 2/3A thru R, 1/3 thru voltage source.
+\end{itemize}
+
+\item the voltage across each of the three elements
+
+{\bf Solution:}
+\begin{itemize}
+\item (a) 2V across voltage source, 3V across R, 5V across current source
+\item (b) 2V across all 3 elements.
+\end{itemize}
+
+\item which of the power sources is delivering power and how much? which is 
+	receiving power and how much? How much power is dissipated by the
+	resistor $R$?
+
+{\bf Solution:}
+\begin{itemize}
+\item (a) current source delivers 5W, R dissipates 3W, voltage source 
+	receives 2W
+\item (b) current source delivers 2W, R dissipates 4/3W, voltage source 
+	receives 2/3W 
+\end{itemize}
+When receiving power, the voltage source is being charged.
+\end{enumerate}
+
+\end{enumerate}
+\end{document}
+
+
+\item Find the current I3 through the load resistor of 6$\Omega$ by the
+following two methods:
+\begin{enumerate}
+\item Convert the two voltage sources to equivalent current sources, 
+	simplify the circuit and solve for the current;
+\item Use superposition theorem to consider one of the two sources at a
+  time, then add the two partial results to get the final result.
+
+{\bf Hint: Superposition theorem}
+
+When there exist multiple energy sources, the currents and voltages in 
+the circuit can be found as the algebraic sum of the corresponding values 
+obtained by assuming only one source at a time, with all other sources 
+turned off (voltage sources treated as short circuit, current sources 
+treated as open circuit).
+
+\end{enumerate}
+
+\htmladdimg{../hw2g.gif}
+
+% convert first voltage source (left):   I1=10V/1 ohm=10A, R1=1
+% convert second voltage source (right): I2=6V/3 ohm=2A, R2=3
+% combine two parallel current sources: I0=I1+I2=12A
+% combine two parallel resistors: R0=(R1 x R2)/(R1+R2)=3/4=0.75
+% use current divider to find current:
+%       I=I0 R0/(R+R0)=12 x 0.75/(6+0.75)=4/3=1.33A
+
+\item Find the three currents labeled as I1, I2 and I3 in the same figure 
+	above by the following method:
+\begin{enumerate}
+\item Apply KCL to node a to get a current equation;
+\item Apply KVL to the two loops to get two voltage equations;
+\item Solve the three equations for the unknown currents I1, I2 and I3.
+\end{enumerate}
+
+% I1+I2-I3=0, 10V-I1=6V+3I2, 10V-I1=6I3
+% solve to get: I1=2, I2=-2/3, I3=4/3
+
+\item Find all currents labeled $I_k (k=1,2,3,4,5)$ in the circuit below. 
+The resistance of a resistor labeled by 10K, for example, is 10,000
+Ohms ($10,000 \Omega=10K\Omega$).
+
+{\bf Hint:} follow these steps:
+\begin{itemize}
+\item Choose node 0 as the reference point or ``ground'', and let the 
+	voltages at nodes 1 and 2 be $V_1$ and $V_2$ (with respect to
+	node 0), respectively. 
+\item Express all currents in terms of the node voltages $V_1$, $V_2$
+	and other known quantaties such as the current and voltage sources
+	and the resistors.
+\item Apply KCL to node 1 and node 2 to get two current equations, 
+	substitute all current expressions into the two equations.
+\item Solve the two equations for $V_1$ and $V_2$.
+\item Find all currents.
+\end{itemize}
+
+\htmladdimg{../hw2h.gif}
+
+% KCL equations: I1+I2+I3-I0=0, -I3+I4+I5=0
+% I1=V1/R1, I2=V1/R2, I3=(V1-V2)/R3, I4=V2/R4, I5=(V2+V0)/R5
+% substitute I1 through I5 into KCL equations and solve for V1 and V2 
+% to get: V1=21.8V, V2=-21.8V
+% obtain all currents: I1=1.09, I2=0.545, I3=4.36, I4=-1.09, I5=5.46
+
+\item Find all currents I1 through I5 in the circuit below. 
+
+{\bf Hint:} use the loop current method: 
+
+\begin{itemize}
+\item Assume the currents around the four loops are Ia, Ib, Ic and Id 
+  with Ia=10A and Id=6.5A (due to the two current sources).
+\item Apply KVL to the two middle loops to get two equations.
+\item solve them for two unknown currents Ib and Ic, get I1 through I5.
+\end{itemize}
+
+\htmladdimg{../hw2i.gif}
+
+% KVL: (2+3+4)Ib-2Ia-4Ic=-10, (4+3+2)Ic-4Ib-2Id=10
+% solve to get Ib=2.8A, Ic=3.8A, then find I1 thru I5:
+% I1=Ia-Ib=7.2A, I2=Ib-Ic=-1A, I3=Ic-Id=-2.7A, I4=Ib=2.8A, I5=Ic=3.8A
+
+
+\item Find the optimal load resistance $R_L$ so that it receives maximal
+power from the current source $I_0=10A$ with internal resistance 
+$R_0=1\Omega$ and power transmission line resistance $R_T=9\Omega$. 
+Find the maximum load power and the power loss along the transmission 
+line.
+
+\htmladdimg{../hw2f.gif}
+
+To verify your choice of load resistance, show that the power consumption
+of the load will always be lower than this maximum when its resistance is 
+either increased or decreased by ten percent.
+
+% First convert current source to voltage source with $V_0=I_0 R_0=10V$
+% and $R_0=1 \Omega$. To maximize load power consumption, let 
+% $R_L=R_0+R_T=10 \Omega$. The current is $I=10V/20\Omega=0.5A$. Load power 
+% is $I^2R_L=10/4=2.5W$, power loss on transmission line is $I^2R_T=9/4A$
+% When $R_L=11\Omega$, $I=10V/21\Omega$, $W_L=I^2 R_L=2.494$
+% When $R_L=9\Omega$, $I=10V/19\Omega$, $W_L=I^2 R_L=2.493$
+
+
+
+
+\end{enumerate}
+\end{document}
+
+
+\item Using Thevenin's theorem to determine the current in the $3-\Omega$ 
+resistor of the following figure.
+
+\htmladdimg{../hw2c.gif}
+
+% move two voltage sources to left, and 3-$\Omega$ resistor to the right as load
+% find equivalent voltage Vo and internal resistance and Ro:
+% current going clockwise around the loop (without load): (30-24)/(6+12)=1/3
+% voltages across 6 ohm resistor and 12 ohm resistor are -2V and 4V, Vo=30-2=24+4=28V
+% Ro=6//12=4ohm, current through load resistor is 28/(4+3)=7A
+
+\item Find voltage across and the current through the 10-$\Omega$ resistor.
+
+\htmladdimg{../hw2d.gif}
+
+% use superposition principle. When 24V is acting alone with 1A open, 
+% parallel resistors 15 and 10 become 15//10=6, V'ab=24 x 6/(6+6)=12V
+% I'=12/10=1.2A. When 1A is acting alone with 24V closed, parallel resistors
+% 6 and 15 become 90/21, I''=10/(10+90/21)=3/10=0.3 A, V''ab=I'' x 10=3V
+% overall V=V'+V''=12+3=15, I=I'+I''=1.2+0.3=1.5A
+
+
+\item The circuit in the figure below has a voltage source $V_0=20V$ and a current 
+source $I_0=3A$, and four resistors $R_1=20\Omega$, $R_2=10\Omega$, $R_3=30\Omega$ 
+and $R_4=10\Omega$. Find the voltage across $R_4$ and the power dissipated by it.
+
+\htmladdimg{../hw2a.gif}
+
+%If voltage source acts alone (current source open), according to voltage divider,
+%V'_4=V0 R4/(R2+R2) = 10V, power consumption is W'=V^2/R=10^2/10=10W
+%If current source acts alone (voltage source short), according to current divider
+%V''_4=(I0 R2/(R22+R4) R4=[3x10/(10+10)x10=15V, power consumption is W''=V^2/R=15^2/10=22.5W
+%Total V_4=V'_4+V''_4=10+15=25V, total power W=25^2/10=62.5W not equal to 10+22.5=32.5
+
+\item 
+
+Find all currents in the diagram in which V=120V, $R_1=2\Omega$, $R_2=20\Omega$. 
+{\bf Hint:} it is very hard to solve the problem by finding the currents in the
+order of $I_1$, $I_3$, $I_5$, as computing the resistances of the resistor 
+network is tedious. However, it is much more straight forward to find the 
+currents in the order of $I_5$, $I_3$, $I_1$, if you assume $I_5$ is known, e.g.,
+$I_5=1A$. However, the voltage for the voltage source obtained based on this 
+assumption is of course not as given (120V). In this case, the linearity property
+$F(ax+by)=aF(x)+bF(y)$ can be applied. In particular, given $y=F(x)$, then 
+$ay=F(ax)=aF(x)$. Use this relationship to find the actual values of the 
+currents.
+
+\htmladdimg{../hw2b.gif}
+
+
+
+
+
+\end{enumerate}
+\end{document}
+

@@ -1,0 +1,368 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>ch3_sub0</TITLE>
+<META NAME="description" CONTENT="ch3_sub0">
+<META NAME="keywords" CONTENT="ch3_sub0">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="ch3_sub0.css">
+
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev_g.png">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+  HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+
+<UL>
+<LI><B>RC first-order system with constant input:</B>
+
+<P>
+Taking the unilateral Laplace transform of the original DE:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\tau\frac{d}{dt} v_c(t)+v_c(t)=v_s(t)=V_s\,u(t)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="268" HEIGHT="46" BORDER="0"
+ SRC="img1.png"
+ ALT="\begin{displaymath}
+\tau\frac{d}{dt} v_c(t)+v_c(t)=v_s(t)=V_s\,u(t)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+we get
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+{\cal L}\left[\tau\frac{d}{dt} v_c(t)+v_c(t)\right]
+=s\tau V_c(s)-\tau V_0+V_c(s)={\cal L}\right[V_s\,u(t)\right]=\frac{V_s}{s}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="500" HEIGHT="55" BORDER="0"
+ SRC="img2.png"
+ ALT="\begin{displaymath}
+{\cal L}\left[\tau\frac{d}{dt} v_c(t)+v_c(t)\right]
+=s\tau V...
+...-\tau V_0+V_c(s)={\cal L}\right[V_s\,u(t)\right]=\frac{V_s}{s}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Here we have used the property <!-- MATH
+ ${\cal L}(dx/dt)=s X(s)-x(0)$
+ -->
+<IMG
+ WIDTH="211" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="${\cal L}(dx/dt)=s X(s)-x(0)$">,
+where <!-- MATH
+ $x(0)=\lim_{t\rightarrow 0}x(t)$
+ -->
+<IMG
+ WIDTH="151" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$x(0)=\lim_{t\rightarrow 0}x(t)$"> is the initial condition.
+Solving for <IMG
+ WIDTH="45" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$V_c(s)$">, we further get
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V_c(s)=\frac{V_s}{s(s\tau+1)}+\frac{\tau V_0}{s\tau+1}
+=V_s\left(\frac{1}{s}-\frac{\tau}{s\tau+1}\right)+\frac{\tau V_0}{s\tau+1}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="460" HEIGHT="51" BORDER="0"
+ SRC="img6.png"
+ ALT="\begin{displaymath}
+V_c(s)=\frac{V_s}{s(s\tau+1)}+\frac{\tau V_0}{s\tau+1}
+=V_s\...
+...rac{1}{s}-\frac{\tau}{s\tau+1}\right)+\frac{\tau V_0}{s\tau+1}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Taking the inverse Laplace trannsform we get the solution of the DE in time domain:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_c(t)={\cal L}^{-1}V_c(s)=V_s-V_s e^{-t/\tau}+V_0e^{-t/\tau}
+=V_s+(V_0-V_s)e^{-t/\tau}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="516" HEIGHT="33" BORDER="0"
+ SRC="img7.png"
+ ALT="\begin{displaymath}
+v_c(t)={\cal L}^{-1}V_c(s)=V_s-V_s e^{-t/\tau}+V_0e^{-t/\tau}
+=V_s+(V_0-V_s)e^{-t/\tau}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+To find the steady state solution, we can use the final-value theorem:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\lim_{t\rightarrow\infty}v_c(t)=\lim_{s\rightarrow 0} s V_c(s)
+=\lim_{s\rightarrow 0} \left[\frac{V_s}{(s\tau+1)}+\frac{\tau sV_0}{s\tau+1}\right]=V_s
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="440" HEIGHT="55" BORDER="0"
+ SRC="img8.png"
+ ALT="\begin{displaymath}
+\lim_{t\rightarrow\infty}v_c(t)=\lim_{s\rightarrow 0} s V_c(...
+...eft[\frac{V_s}{(s\tau+1)}+\frac{\tau sV_0}{s\tau+1}\right]=V_s
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+</LI>
+<LI><B>RC first-order system with simultaneous input:</B>
+
+<P>
+First consider a complex input <!-- MATH
+ $V_s e^{j\omega t}\,u(t)=V_s(\cos\omega t+j\sin\omega t)u(t)$
+ -->
+<IMG
+ WIDTH="304" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.png"
+ ALT="$V_s e^{j\omega t}\,u(t)=V_s(\cos\omega t+j\sin\omega t)u(t)$">
+on the right-hand side. Taking the bilateral Laplace transform of the DE:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\tau\frac{d}{dt} v_c(t)+v_c(t)=V_s \cos(\omega t)=V_s Re(e^{j\omega t})\,u(t)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="376" HEIGHT="46" BORDER="0"
+ SRC="img10.png"
+ ALT="\begin{displaymath}
+\tau\frac{d}{dt} v_c(t)+v_c(t)=V_s \cos(\omega t)=V_s Re(e^{j\omega t})\,u(t)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+we get
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+{\cal L}\left[\tau\frac{d}{dt} v_c(t)+v_c(t)\right]
+=s\tau V_c(s)-\tau V_0+V_c(s)={\cal L}\left[V_s\,e^{j\omega t}u(t)\right]=\frac{V_s}{s-j\omega}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="566" HEIGHT="55" BORDER="0"
+ SRC="img11.png"
+ ALT="\begin{displaymath}
+{\cal L}\left[\tau\frac{d}{dt} v_c(t)+v_c(t)\right]
+=s\tau V...
+...al L}\left[V_s\,e^{j\omega t}u(t)\right]=\frac{V_s}{s-j\omega}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Solving for <IMG
+ WIDTH="45" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$V_c(s)$">, we further get
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V_c(s)=\frac{1}{s\tau+1}\left(\frac{V_s}{s-j\omega}+\tau V_0\right)
+=\frac{V_s}{j\omega\tau+1}\left(\frac{1}{s-j\omega}-\frac{1}{s+1/\tau}\right)
++\frac{\tau V_0}{s\tau+1}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="592" HEIGHT="55" BORDER="0"
+ SRC="img12.png"
+ ALT="\begin{displaymath}
+V_c(s)=\frac{1}{s\tau+1}\left(\frac{V_s}{s-j\omega}+\tau V_0...
+...s-j\omega}-\frac{1}{s+1/\tau}\right)
++\frac{\tau V_0}{s\tau+1}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Taking the inverse Laplace trannsform we get the solution of the DE in time domain:
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+v_c(t)&=&{\cal L}^{-1}V_c(s)=\frac{V_s}{j\omega\tau+1}\left[{\cal L}^{-1}
+    \left(\frac{1}{s-j\omega}\right)-{\cal L}^{-1}\left(\frac{1}{s+1/\tau}\right)\right]+{\cal L}^{-1}\left( \frac{\tau V_0}{s\tau+1} \right)
+  \nonumber\\
+  &=&\frac{V_se^{-j\phi}}{\sqrt{\omega^2\tau^2+1}}\left[e^{j\omega t}-e^{-t/\tau}\right]+V_0 e^{-t/\tau}
+  =\frac{V_s}{\sqrt{\omega^2\tau^2+1}}e^{j(\omega t-\phi)}
+  -\frac{V_se^{-j\phi}}{\sqrt{\omega^2\tau^2+1}}e^{-t/\tau}+V_0 e^{-t/\tau}
+  \nonumber
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="41" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.png"
+ ALT="$\displaystyle v_c(t)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="587" HEIGHT="66" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.png"
+ ALT="$\displaystyle {\cal L}^{-1}V_c(s)=\frac{V_s}{j\omega\tau+1}\left[{\cal L}^{-1}
+...
+...1}{s+1/\tau}\right)\right]+{\cal L}^{-1}\left( \frac{\tau V_0}{s\tau+1} \right)$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="688" HEIGHT="66" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.png"
+ ALT="$\displaystyle \frac{V_se^{-j\phi}}{\sqrt{\omega^2\tau^2+1}}\left[e^{j\omega t}-...
+...hi)}
+-\frac{V_se^{-j\phi}}{\sqrt{\omega^2\tau^2+1}}e^{-t/\tau}+V_0 e^{-t/\tau}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Taking the real part we get the solution:
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+v_c(t)&=&\frac{V_s}{\sqrt{\omega^2\tau^2+1}}\cos(\omega t-\phi)
+  -\frac{V_se^{-t/\tau}}{\sqrt{\omega^2\tau^2+1}}\cos(-\phi)
+  +V_0 e^{-t/\tau}
+  \nonumber\\
+  &=&\frac{V_s}{\sqrt{\omega^2\tau^2+1}}\cos(\omega t-\phi)
+  +\left[V_0 -\frac{V_s}{\sqrt{\omega^2\tau^2+1}}\cos(-\phi)\right] e^{-t/\tau}
+  \nonumber
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="41" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.png"
+ ALT="$\displaystyle v_c(t)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="453" HEIGHT="69" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$\displaystyle \frac{V_s}{\sqrt{\omega^2\tau^2+1}}\cos(\omega t-\phi)
+-\frac{V_se^{-t/\tau}}{\sqrt{\omega^2\tau^2+1}}\cos(-\phi)
++V_0 e^{-t/\tau}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="475" HEIGHT="66" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.png"
+ ALT="$\displaystyle \frac{V_s}{\sqrt{\omega^2\tau^2+1}}\cos(\omega t-\phi)
++\left[V_0 -\frac{V_s}{\sqrt{\omega^2\tau^2+1}}\cos(-\phi)\right] e^{-t/\tau}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+</LI>
+</UL>
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html3"
+  HREF="node1.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev_g.png">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+  HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Ruye Wang
+2018-01-17
+</ADDRESS>
+</BODY>
+</HTML>

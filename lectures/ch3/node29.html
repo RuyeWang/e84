@@ -1,0 +1,905 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Bode Plots of Components</TITLE>
+<META NAME="description" CONTENT="Bode Plots of Components">
+<META NAME="keywords" CONTENT="ch3">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="ch3.css">
+
+<LINK REL="next" HREF="node30.html">
+<LINK REL="previous" HREF="node28.html">
+<LINK REL="next" HREF="node30.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node30.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node24.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node28.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node30.html">Bode Plots of first</A>
+<B> Up:</B> <A
+ HREF="node24.html">Appendix</A>
+<B> Previous:</B> <A
+ HREF="node28.html">Bode Plots</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION00025000000000000000">
+Bode Plots of Components</A>
+</H2>
+
+<P>
+
+<OL>
+<LI><B>Constant gain <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img767.svg"
+ ALT="$k$"></SPAN></B>
+
+<P>
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left\{ \begin{array}{l}
+      \mbox{If $k>0, \;\;\;\;k=|k|e^{j0}, \;\;Lm\;k=20 \;\log_{10}|k|,\;\;\angle k=0$} \\
+      \mbox{If $k<0, \;\;\;\;k=-|k|=|k|e^{j\pi}, \;\;Lm\;k=20\;\log_{10}|k|,\;\;\angle k=\pi$}
+    \end{array} \right. 
+  
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img1337.svg"
+ ALT="$\displaystyle \left\{ \begin{array}{l}
+\mbox{If $k&gt;0, \;\;\;\;k=\vert k\vert e^...
+...pi}, \;\;Lm\;k=20\;\log_{10}\vert k\vert,\;\;\angle k=\pi$}
+\end{array} \right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">489</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+<LI>Delay factor: <!-- MATH
+ $e^{\pm j\omega \tau}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.12ex; " SRC="img1332.svg"
+ ALT="$e^{\pm j\omega \tau}$"></SPAN>
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Lm \;e^{ j\omega \tau}=20\;\log_{10} |e^{ j\omega \tau}|=20\;\log_{10} 1=0,\;\;\;\;
+    \angle e^{ j\omega \tau} =\pm \omega \tau
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img1338.svg"
+ ALT="$\displaystyle Lm \;e^{ j\omega \tau}=20\;\log_{10} \vert e^{ j\omega \tau}\vert=20\;\log_{10} 1=0,\;\;\;\;
+\angle e^{ j\omega \tau} =\pm \omega \tau$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">490</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+<LI><B>Derivative factor <!-- MATH
+ $j\omega=\omega\; e^{j\pi/2}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.57ex; " SRC="img1339.svg"
+ ALT="$j\omega=\omega\; e^{j\pi/2}$"></SPAN>:</B>
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Lm\; (j\omega)=20\; log_{10} \omega\;dB,\;\;\;\;\;\angle(j\omega)=\frac{\pi}{2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.41ex; vertical-align: -1.71ex; " SRC="img1340.svg"
+ ALT="$\displaystyle Lm\; (j\omega)=20\; log_{10} \omega\;dB,\;\;\;\;\;\angle(j\omega)=\frac{\pi}{2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">491</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+In particular:
+  
+<UL>
+<LI>When <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img1341.svg"
+ ALT="$\omega=1$"></SPAN>, <!-- MATH
+ $Lm \;(1) =20\; \log_{10} 1=0\;dB$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1342.svg"
+ ALT="$Lm \;(1) =20\; \log_{10} 1=0\;dB$"></SPAN>
+</LI>
+<LI>If a frequency <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img10.svg"
+ ALT="$\omega$"></SPAN> becomes ten times higher, then
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Lm\; (j10\omega)=20\; \log_{10} 10\omega=20 \;\log_{10} 10+20\;\log_{10}\omega
+      =20+Lm(j\omega) 
+    
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1343.svg"
+ ALT="$\displaystyle Lm\; (j10\omega)=20\; \log_{10} 10\omega=20 \;\log_{10} 10+20\;\log_{10}\omega
+=20+Lm(j\omega)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">492</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The Lm plot of <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img1344.svg"
+ ALT="$j\omega$"></SPAN> is a straight line with a slop of 20 dB/dec that goes
+    through a zero-crossing at <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img1341.svg"
+ ALT="$\omega=1$"></SPAN>.
+
+<P>
+</LI>
+</UL>
+
+<P>
+Also consider two additional cases related to <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img1344.svg"
+ ALT="$j\omega$"></SPAN>. First, 
+  <!-- MATH
+ $(j\omega)^{\pm m}=\omega^{\pm m} e^{\pm j m\pi/2}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img1345.svg"
+ ALT="$(j\omega)^{\pm m}=\omega^{\pm m} e^{\pm j m\pi/2}$"></SPAN>
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Lm(j\omega)^{\pm m}=\pm m\;Lm(j\omega),\;\;\;\;\;\angle(j\omega)^{\pm m}=\pm m\pi/2
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img1346.svg"
+ ALT="$\displaystyle Lm(j\omega)^{\pm m}=\pm m\;Lm(j\omega),\;\;\;\;\;\angle(j\omega)^{\pm m}=\pm m\pi/2$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">493</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The slop of the Lm plot is <!-- MATH
+ $\pm 20m/dec$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1347.svg"
+ ALT="$\pm 20m/dec$"></SPAN>. For example, when <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img1348.svg"
+ ALT="$m=2$"></SPAN>, we have:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Lm\; (j\omega)^2=40\log_{10}\omega,\;\;\;\;\;\angle\;(j\omega)^2=\pi
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img1349.svg"
+ ALT="$\displaystyle Lm\; (j\omega)^2=40\log_{10}\omega,\;\;\;\;\;\angle\;(j\omega)^2=\pi$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">494</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+Second, the plots of <!-- MATH
+ $j\omega\tau$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img1350.svg"
+ ALT="$j\omega\tau$"></SPAN> are similar to those of <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img1344.svg"
+ ALT="$j\omega$"></SPAN>, except the
+  zero-crossing occurs at <!-- MATH
+ $\omega\tau=1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img1351.svg"
+ ALT="$\omega\tau=1$"></SPAN>, i.e., <!-- MATH
+ $\omega=1/\tau$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1352.svg"
+ ALT="$\omega=1/\tau$"></SPAN>.
+
+<P>
+</LI>
+<LI><B>Integral factor <!-- MATH
+ $1/j\omega=(j\omega)^{-1}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img1353.svg"
+ ALT="$1/j\omega=(j\omega)^{-1}$"></SPAN>:</B>
+
+<P>
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Lm \;(j\omega)^{-1}=-Lm\;(j\omega)=-20\;log_{10} \omega\;dB,
+    \;\;\;\;\angle\; (j\omega)^{-1}=-\angle(j\omega)=-\frac{\pi}{2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.41ex; vertical-align: -1.71ex; " SRC="img1354.svg"
+ ALT="$\displaystyle Lm \;(j\omega)^{-1}=-Lm\;(j\omega)=-20\;log_{10} \omega\;dB,
+\;\;\;\;\angle\; (j\omega)^{-1}=-\angle(j\omega)=-\frac{\pi}{2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">495</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The Lm plot of <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1355.svg"
+ ALT="$1/j\omega$"></SPAN> is a straight line with a slop of -20 dB/dec that goes
+  through a zero-crossing at <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img1341.svg"
+ ALT="$\omega=1$"></SPAN>.
+
+<P>
+</LI>
+<LI><B>First order factor in numerator <!-- MATH
+ $1+j\omega\tau$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img1356.svg"
+ ALT="$1+j\omega\tau$"></SPAN></B>
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+1+j\omega \tau=\sqrt{1+(\omega \tau)^2}\;e^{j\tan^{-1}(\omega \tau)}
+    =\sqrt{1+(\omega \tau)^2}\;\angle \tan^{-1}(\omega \tau)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.25ex; vertical-align: -0.71ex; " SRC="img1357.svg"
+ ALT="$\displaystyle 1+j\omega \tau=\sqrt{1+(\omega \tau)^2}\;e^{j\tan^{-1}(\omega \tau)}
+=\sqrt{1+(\omega \tau)^2}\;\angle \tan^{-1}(\omega \tau)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">496</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Lm(1+j\omega \tau)=20\;\log_{10}\sqrt{1+(\omega \tau)^2}
+    =20\;\log_{10}(1+(\omega \tau)^2)^{1/2}=10\;\log_{10}(1+(\omega \tau)^2)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.25ex; vertical-align: -0.71ex; " SRC="img1358.svg"
+ ALT="$\displaystyle Lm(1+j\omega \tau)=20\;\log_{10}\sqrt{1+(\omega \tau)^2}
+=20\;\log_{10}(1+(\omega \tau)^2)^{1/2}=10\;\log_{10}(1+(\omega \tau)^2)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">497</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\angle(1+j\omega \tau)=\tan^{-1}(\omega\tau)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img1359.svg"
+ ALT="$\displaystyle \angle(1+j\omega \tau)=\tan^{-1}(\omega\tau)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">498</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Consider the following three cases:
+  
+<UL>
+<LI><!-- MATH
+ $\omega\tau=1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img1351.svg"
+ ALT="$\omega\tau=1$"></SPAN>, i.e., <!-- MATH
+ $\omega_c=1/\tau$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img810.svg"
+ ALT="$\omega_c=1/\tau$"></SPAN> is the corner frequency, we have
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Lm(1+j)=20\;\log_{10} \sqrt{1^2+1^2}=20\;\log_{10} 0.707\approx 3.01\;dB,\;\;\;\;\;
+      \angle(1+j)=\frac{\pi}{4}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.41ex; vertical-align: -1.71ex; " SRC="img1360.svg"
+ ALT="$\displaystyle Lm(1+j)=20\;\log_{10} \sqrt{1^2+1^2}=20\;\log_{10} 0.707\approx 3.01\;dB,\;\;\;\;\;
+\angle(1+j)=\frac{\pi}{4}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">499</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI><!-- MATH
+ $\omega\tau \ll 1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.21ex; " SRC="img1361.svg"
+ ALT="$\omega\tau \ll 1$"></SPAN> (e.g., <!-- MATH
+ $\omega\tau\le 10$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.43ex; " SRC="img1362.svg"
+ ALT="$\omega\tau\le 10$"></SPAN>):
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Lm(1+j\omega \tau)\approx10\;\log_{10}(1)=0,\;\;\;\;\;
+      \angle(1+j\omega \tau)\approx \angle(1)=0
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1363.svg"
+ ALT="$\displaystyle Lm(1+j\omega \tau)\approx10\;\log_{10}(1)=0,\;\;\;\;\;
+\angle(1+j\omega \tau)\approx \angle(1)=0$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">500</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI><!-- MATH
+ $\omega\tau \gg 1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.21ex; " SRC="img1364.svg"
+ ALT="$\omega\tau \gg 1$"></SPAN> (e.g., <!-- MATH
+ $\omega\tau\ge 10$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.43ex; " SRC="img1365.svg"
+ ALT="$\omega\tau\ge 10$"></SPAN>):
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Lm(1+j\omega \tau)\approx 20\;\log_{10}(\omega \tau),\;\;\;\;
+      \angle(1+j\omega \tau)\approx \angle(j\omega \tau)=\frac{\pi}{2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.41ex; vertical-align: -1.71ex; " SRC="img1366.svg"
+ ALT="$\displaystyle Lm(1+j\omega \tau)\approx 20\;\log_{10}(\omega \tau),\;\;\;\;
+\angle(1+j\omega \tau)\approx \angle(j\omega \tau)=\frac{\pi}{2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">501</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+</UL>
+  The straight-line asymptote of <!-- MATH
+ $Lm(1+j\omega\tau)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1367.svg"
+ ALT="$Lm(1+j\omega\tau)$"></SPAN> has zero slope when <!-- MATH
+ $\omega\tau<1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.21ex; " SRC="img1368.svg"
+ ALT="$\omega\tau&lt;1$"></SPAN>
+  but a slope 20 dB/dec when <!-- MATH
+ $\omega\tau>1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.21ex; " SRC="img1369.svg"
+ ALT="$\omega\tau&gt;1$"></SPAN>. The straight-line asymptote of 
+  <!-- MATH
+ $\angle(1+j\omega\tau)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1370.svg"
+ ALT="$\angle(1+j\omega\tau)$"></SPAN> is zero when <!-- MATH
+ $\omega\tau<0.1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.21ex; " SRC="img1371.svg"
+ ALT="$\omega\tau&lt;0.1$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img199.svg"
+ ALT="$\pi/2$"></SPAN> when <!-- MATH
+ $\omega\tau>10$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.21ex; " SRC="img1372.svg"
+ ALT="$\omega\tau&gt;10$"></SPAN>, 
+  but with a slope <!-- MATH
+ $45^\circ/dec$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1373.svg"
+ ALT="$45^\circ/dec$"></SPAN> in between.
+
+<P>
+</LI>
+<LI><B>First order factor in denominator <!-- MATH
+ $1/(1+j\omega\tau)=(1+j\omega\tau)^{-1}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img1374.svg"
+ ALT="$1/(1+j\omega\tau)=(1+j\omega\tau)^{-1}$"></SPAN></B>
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Lm\;(1+j\omega\tau)^{-1}=-Lm(1+j\omega\tau)
+    =-10\;\log_{10}(1+(\omega \tau)^2)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img1375.svg"
+ ALT="$\displaystyle Lm\;(1+j\omega\tau)^{-1}=-Lm(1+j\omega\tau)
+=-10\;\log_{10}(1+(\omega \tau)^2)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">502</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\angle\;(1+j\omega \tau)^{-1}=-\angle(1+j\omega \tau)
+    =-\tan^{-1}(\omega\tau)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img1376.svg"
+ ALT="$\displaystyle \angle\;(1+j\omega \tau)^{-1}=-\angle(1+j\omega \tau)
+=-\tan^{-1}(\omega\tau)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">503</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Both the Lm and phase plots of <!-- MATH
+ $1/(1+j\omega\tau)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1377.svg"
+ ALT="$1/(1+j\omega\tau)$"></SPAN> is simply the negative 
+  version of <!-- MATH
+ $(1+j\omega\tau)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1333.svg"
+ ALT="$(1+j\omega\tau)$"></SPAN>. 
+
+<P>
+The figure below shows the plots of two first order systems corner frequencies 
+  <!-- MATH
+ $\omega_1=100$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.46ex; " SRC="img1378.svg"
+ ALT="$\omega_1=100$"></SPAN> and <!-- MATH
+ $\omega_2=1000$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.46ex; " SRC="img1379.svg"
+ ALT="$\omega_2=1000$"></SPAN>, together with the plots of their product, a 
+  second order system.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/bodeplot1storder.gif"
+ ALT="bodeplot1storder.gif">
+
+<P>
+</LI>
+<LI><B>Second-order factor</B>
+
+<P>
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+H(j\omega)=\frac{1}{(j\omega)^2+2\zeta\omega_n j\omega+\omega_n^2}
+    =\frac{1}{(\omega^2_n-\omega^2)+2\zeta\omega_n j\omega}
+    =\frac{\frac{1}{\omega_n^2}}{1-(\frac{\omega}{\omega_n})^2+j\,2\zeta\frac{\omega}{\omega_n}}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.97ex; vertical-align: -2.74ex; " SRC="img1380.svg"
+ ALT="$\displaystyle H(j\omega)=\frac{1}{(j\omega)^2+2\zeta\omega_n j\omega+\omega_n^2...
+...1}{\omega_n^2}}{1-(\frac{\omega}{\omega_n})^2+j\,2\zeta\frac{\omega}{\omega_n}}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">504</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The denominator is a 2nd order polynomial for variable <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img1344.svg"
+ ALT="$j\omega$"></SPAN>. Consider the
+  following two cases:
+
+<P>
+First, if <!-- MATH
+ $\Delta=b^2-4ac=(2\zeta\omega_n)^2-4\omega_n^2=4\omega^2_n(\zeta^2-1)\ge 0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img1381.svg"
+ ALT="$\Delta=b^2-4ac=(2\zeta\omega_n)^2-4\omega_n^2=4\omega^2_n(\zeta^2-1)\ge 0$"></SPAN>
+  i.e., if <!-- MATH
+ $\zeta\ge 1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img1382.svg"
+ ALT="$\zeta\ge 1$"></SPAN>, the denominator has two real and negative roots:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+p_{1,2}=(-\zeta\pm\sqrt{\zeta^2-1})\omega_n < 0
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.25ex; vertical-align: -0.78ex; " SRC="img1383.svg"
+ ALT="$\displaystyle p_{1,2}=(-\zeta\pm\sqrt{\zeta^2-1})\omega_n &lt; 0$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">505</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+and <!-- MATH
+ $H(j\omega)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1326.svg"
+ ALT="$H(j\omega)$"></SPAN> can be written as a product of two first order FRFs:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+H(j\omega)=\frac{1}{(j\omega-p_1)(j\omega-p_2)}
+    =\frac{1/p_1p_2}{(j\omega/p_1-1)(j\omega/p_2-1)} 
+    =\frac{\tau_1}{1+j\omega\tau_1}\;\frac{\tau_2}{1+j\omega\tau_2}
+    =H_1(j\omega)H_2(j\omega) 
+  
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img1384.svg"
+ ALT="$\displaystyle H(j\omega)=\frac{1}{(j\omega-p_1)(j\omega-p_2)}
+=\frac{1/p_1p_2}{...
+...u_1}{1+j\omega\tau_1}\;\frac{\tau_2}{1+j\omega\tau_2}
+=H_1(j\omega)H_2(j\omega)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">506</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+where <!-- MATH
+ $\tau_1=-1/p_1>0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1385.svg"
+ ALT="$\tau_1=-1/p_1&gt;0$"></SPAN> and <!-- MATH
+ $\tau_2=-1/p_2>0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1386.svg"
+ ALT="$\tau_2=-1/p_2&gt;0$"></SPAN> are the two time constant of the two
+  first order systems. Now the second order factor is the product of two first order 
+  factors and
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Lm\;(H_1 H_2)=Lm\; H_1+Lm\; H_2,\;\;\;\;\angle (H_1 H_2)=\angle H_1+\angle H_2
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1387.svg"
+ ALT="$\displaystyle Lm\;(H_1 H_2)=Lm\; H_1+Lm\; H_2,\;\;\;\;\angle (H_1 H_2)=\angle H_1+\angle H_2$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">507</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+with corner frequencies at <!-- MATH
+ $\omega_{c1}=1/\tau_1=p_1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1388.svg"
+ ALT="$\omega_{c1}=1/\tau_1=p_1$"></SPAN> and <!-- MATH
+ $\omega_{c1}=1/\tau_2=p_2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1389.svg"
+ ALT="$\omega_{c1}=1/\tau_2=p_2$"></SPAN>.
+
+<P>
+Second, if <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img649.svg"
+ ALT="$0 &lt; \zeta &lt; 1$"></SPAN>, i.e., the two roots are complex. We consider the numerator 
+  and the denominator separately. The numerator is just a constant with zero phase and
+  log-magnitude of <!-- MATH
+ $20\log_{10} \omega_n^{-}2=-40\log_{10} \omega_n$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.69ex; " SRC="img1390.svg"
+ ALT="$20\log_{10} \omega_n^{-}2=-40\log_{10} \omega_n$"></SPAN>. Next consider the
+  rest of the function:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+|H(j\omega)|=[(1-(\frac{\omega}{\omega_n})^2)^2+(2\zeta\frac{\omega}{\omega_n})^2]^{-1/2
+  }
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.88ex; vertical-align: -2.06ex; " SRC="img1391.svg"
+ ALT="$\displaystyle \vert H(j\omega)\vert=[(1-(\frac{\omega}{\omega_n})^2)^2+(2\zeta\frac{\omega}{\omega_n})^2]^{-1/2
+}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">508</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+We have
+  <BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+&& Lm\;H(j\omega)=20\log_{10} |H(j\omega)|
+    =-10\;\log_{10}[\; (1-(\frac{\omega}{\omega_n})^2)^2+(2\zeta\frac{\omega}{\omega_n})^2\;]
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT">&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 4.88ex; vertical-align: -2.06ex; " SRC="img1392.svg"
+ ALT="$\displaystyle Lm\;H(j\omega)=20\log_{10} \vert H(j\omega)\vert
+=-10\;\log_{10}[\; (1-(\frac{\omega}{\omega_n})^2)^2+(2\zeta\frac{\omega}{\omega_n})^2\;]$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">509</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\angle H(j\omega)=-\tan^{-1}\frac{2\zeta\omega/\omega_n}{1-(\omega/\omega_n)^2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img1393.svg"
+ ALT="$\displaystyle \angle H(j\omega)=-\tan^{-1}\frac{2\zeta\omega/\omega_n}{1-(\omega/\omega_n)^2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">510</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Consider three cases:
+  
+<UL>
+<LI><!-- MATH
+ $\omega/\omega_n=1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1394.svg"
+ ALT="$\omega/\omega_n=1$"></SPAN>:
+    Now <!-- MATH
+ $H(j\omega)=1/j2\zeta=-j/2\zeta$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1395.svg"
+ ALT="$H(j\omega)=1/j2\zeta=-j/2\zeta$"></SPAN> and 
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Lm\;H(j\omega)=-20\;\log_{10} 2\zeta,\;\;\;\;\;\angle H(j\omega)=-\frac{\pi}{2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.41ex; vertical-align: -1.71ex; " SRC="img1396.svg"
+ ALT="$\displaystyle Lm\;H(j\omega)=-20\;\log_{10} 2\zeta,\;\;\;\;\;\angle H(j\omega)=-\frac{\pi}{2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">511</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI><!-- MATH
+ $\omega/\omega_n\ll 1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1397.svg"
+ ALT="$\omega/\omega_n\ll 1$"></SPAN>, i.e., <!-- MATH
+ $\omega \ll \omega_n$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.46ex; " SRC="img1398.svg"
+ ALT="$\omega \ll \omega_n$"></SPAN>:
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Lm\;H(j\omega) \approx -10\;\log_{10} (1)=0,\;\;\;\;\;\angle H(j\omega)=0^\circ
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1399.svg"
+ ALT="$\displaystyle Lm\;H(j\omega) \approx -10\;\log_{10} (1)=0,\;\;\;\;\;\angle H(j\omega)=0^\circ$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">512</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI><!-- MATH
+ $\omega/\omega_n\gg 1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1400.svg"
+ ALT="$\omega/\omega_n\gg 1$"></SPAN>, i.e., <!-- MATH
+ $\omega \ll \omega_n$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.46ex; " SRC="img1398.svg"
+ ALT="$\omega \ll \omega_n$"></SPAN>:
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Lm\;H(j\omega)\approx-10\;\log_{10}[\; (\frac{\omega}{\omega_n})^4 ]
+      =-40 \;\log_{10} \frac{\omega}{\omega_n}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.88ex; vertical-align: -2.06ex; " SRC="img1401.svg"
+ ALT="$\displaystyle Lm\;H(j\omega)\approx-10\;\log_{10}[\; (\frac{\omega}{\omega_n})^4 ]
+=-40 \;\log_{10} \frac{\omega}{\omega_n}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">513</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+This is a straight line with slop of -40 dB per decade.
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\angle H(j\omega) \approx -\tan^{-1} (-2\zeta \omega_n/\omega)
+      \approx -\tan^{-1} (-0)=-\pi=-180^\circ
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img1402.svg"
+ ALT="$\displaystyle \angle H(j\omega) \approx -\tan^{-1} (-2\zeta \omega_n/\omega)
+\approx -\tan^{-1} (-0)=-\pi=-180^\circ$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">514</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+</UL>
+
+<P>
+</LI>
+</OL>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/bodeplotzeta.gif"
+ ALT="bodeplotzeta.gif">
+
+<P>
+The magnitude of the second-order factor is
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+|H(j\omega)|
+    =\frac{1}{\sqrt{(1-\frac{\omega^2}{\omega_n^2})^2+4\zeta^2 \frac{\omega^2}{\omega_n^2}}}
+    =\frac{1}{\sqrt{(1-u)^2+4\zeta^2 u}}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 7.43ex; vertical-align: -4.13ex; " SRC="img1403.svg"
+ ALT="$\displaystyle \vert H(j\omega)\vert
+=\frac{1}{\sqrt{(1-\frac{\omega^2}{\omega_n^2})^2+4\zeta^2 \frac{\omega^2}{\omega_n^2}}}
+=\frac{1}{\sqrt{(1-u)^2+4\zeta^2 u}}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">515</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+where <!-- MATH
+ $u=(\omega/\omega_n)^2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img1404.svg"
+ ALT="$u=(\omega/\omega_n)^2$"></SPAN>. When <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img1405.svg"
+ ALT="$u=1$"></SPAN> i.e., <!-- MATH
+ $\omega=\omega_n$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img832.svg"
+ ALT="$\omega=\omega_n$"></SPAN>, we have
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+| H(j\omega_n) |=\frac{1}{2\zeta}=Q
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.16ex; " SRC="img1406.svg"
+ ALT="$\displaystyle \vert H(j\omega_n) \vert=\frac{1}{2\zeta}=Q$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">516</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+However, the peak of <!-- MATH
+ $|H(j\omega)|$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1318.svg"
+ ALT="$\vert H(j\omega)\vert$"></SPAN> is not at <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img488.svg"
+ ALT="$\omega_n$"></SPAN>, but at the resonant frequency 
+  <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.78ex; " SRC="img988.svg"
+ ALT="$\omega_p$"></SPAN>, which can be found by taking derivative of the magnitude of the denominator 
+  with respect to <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img1407.svg"
+ ALT="$u$"></SPAN> and setting it to zero:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\frac{d}{du}[u^2+(4\zeta^2-2)u+1]=2u+4\zeta^2-2=0
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.11ex; vertical-align: -1.71ex; " SRC="img1408.svg"
+ ALT="$\displaystyle \frac{d}{du}[u^2+(4\zeta^2-2)u+1]=2u+4\zeta^2-2=0$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">517</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Solving it, we get:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+u=\frac{\omega^2}{\omega_n^2}=1-2\zeta^2,\;\;\;\mbox{i.e.,}
+    \;\;\;\;\omega=\omega_n\sqrt{1-2\zeta^2} < \omega_n
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.28ex; " SRC="img1409.svg"
+ ALT="$\displaystyle u=\frac{\omega^2}{\omega_n^2}=1-2\zeta^2,\;\;\;$">i.e.,<IMG STYLE="height: 3.25ex; vertical-align: -0.66ex; " SRC="img1410.svg"
+ ALT="$\displaystyle \;\;\;\;\omega=\omega_n\sqrt{1-2\zeta^2} &lt; \omega_n$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">518</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+At this peak frequency <!-- MATH
+ $\omega_p=\omega_n\sqrt{1-2\zeta^2}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.25ex; vertical-align: -0.78ex; " SRC="img1411.svg"
+ ALT="$\omega_p=\omega_n\sqrt{1-2\zeta^2}$"></SPAN>, the peak is:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+| H(j\omega_p) |=\frac{1}{2\zeta\sqrt{1-\zeta^2}} > \frac{1}{2\zeta}=| H(j\omega_n) |
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.74ex; " SRC="img1412.svg"
+ ALT="$\displaystyle \vert H(j\omega_p) \vert=\frac{1}{2\zeta\sqrt{1-\zeta^2}} &gt; \frac{1}{2\zeta}=\vert H(j\omega_n) \vert$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">519</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Note that if <!-- MATH
+ $\zeta^2>1/2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img1413.svg"
+ ALT="$\zeta^2&gt;1/2$"></SPAN>, i.e., <!-- MATH
+ $\zeta>0.707$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img1414.svg"
+ ALT="$\zeta&gt;0.707$"></SPAN>, the result is complex indicating there 
+  is no peak.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node30.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node24.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node28.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node30.html">Bode Plots of first</A>
+<B> Up:</B> <A
+ HREF="node24.html">Appendix</A>
+<B> Previous:</B> <A
+ HREF="node28.html">Bode Plots</A></DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

@@ -1,0 +1,132 @@
+\documentstyle[11pt]{article}
+\usepackage{html}
+\begin{document}
+\begin{center}
+{\Large \bf E84 Home Work on transmission line}
+\end{center}
+\begin{enumerate}
+
+A voltage source $v_0(t)$ with internal impedance $Z_1$ is connected to a load
+$Z_2$ by a transmission line with $Z_0$. Find $A$, $\eta_1$, $\eta_2$, $T_1$, 
+$T_2$, $Z_{in}$, and $Z_{out}$, for each of the following cases. Also, for a 
+given input $v_0(t)$, find the voltages $v_1(t)$ and $v_2(t)$.  
+
+\item $Z_1=Z_2=Z_0$. 
+
+  \[ A=\frac{Z_0}{Z_0+Z_1}=\frac{1}{2},\;\;\;\;\;\;
+  \eta_1=\frac{Z_1-Z_0}{Z_1+Z_0}=\eta_2=\frac{Z_2-Z_0}{Z_2+Z_0}=0 \]
+
+  \[ T_1=\frac{A[1+\eta_2e^{-2j\omega T}]}{1-\eta_1\eta_2e^{-2j\omega T}}=A=\frac{1}{2}	\]
+
+  \[ T_2=\frac{A[1+\eta_2]e^{-j\omega T}}{1-\eta_1\eta_2e^{-2j\omega T}}
+  =Ae^{-j\omega T}=\frac{1}{2}e^{-j\omega T}	\]
+
+  \[ Z_{in}=\frac{1+\eta_2e^{-2j\omega T}}{1-\eta_2e^{-2j\omega T}}Z_0=Z_0 \]
+
+  For an input $V_0={\cal F}[v_0(t)]$, we have
+  \[	V_1=\frac{1}{2}V_0,\;\;\;\;\;\;\;\;\;\;v_1(t)=\frac{1}{2}v_0(t) \]
+  and
+  \[	V_2=T_2V_0=\frac{1}{2}e^{-j\omega T}V_0,\;\;\;\;\;\;\;\;\;\;\;\;
+  v_2(t)={\cal F}^{-1}[V_2]={\cal F}^{-1}\left[\frac{1}{2}e^{-j\omega T}V_0\right]
+  =\frac{1}{2}v_0(t-T)	\]
+  The load and the transmission line behave like a voltage divider with
+  a pure delay of $T$. 
+
+\item $Z_0=Z_2$, $Z_1=0$.
+
+  $A=1$, $\eta_1=-1$, $\eta_2=0$, $T_1=1$, $T_2=e^{-j\omega T}$, $Z_{in}=Z_0$, 
+  \[	V_1=T_1V_0=V_0,\;\;\;\;\;\;\;V_2=T_2V_0=V_0e^{-j\omega T},\;\;\;\;\;\;
+  v_2(t)=v_1(t-T)=v_0(t-T)	\]
+  Input voltage $V_0$ is transmitted to the output (the load) without
+  distortion but a pure delay of $T$. 
+
+\item $Z_1=Z_0$, $Z_2=\infty$ (load is an open circuit)
+
+  \[	A=\frac{1}{2},\;\;\;\;\;\;\eta_1=0,\;\;\;\;\;\;\eta_2=1,
+  \;\;\;\;\;\;T_1=\frac{1}{2}(1+e^{-2j\omega T}),\;\;\;\;\;\;T_2=e^{-j\omega T}	\]
+  \[ Z_{in}=\frac{1+e^{-2j\omega T}}{1-e^{-2j\omega T}}Z_0 \]
+  
+  In particular, if $|\omega T| << 1$, we have
+  \htmladdnormallink{(*)}{../transmission_line_footnote/index.html}
+  \[ Z_{in}\approx \frac{Z_0}{j\omega T}=\frac{\sqrt{L/C}}{j\omega\;l\sqrt{LC}}
+  =\frac{1}{j\omega\;lC}=\frac{1}{j\omega C_{line}}	\]
+  i.e., if $T$ is short compared to times of interest (pulse width or
+  period of signal), the open circuit load behaves like a capacitor of
+  capacitance equal to that of the entire line $C_{line}=lC$.
+
+  Under the same step input $V_0={\cal F}[v_0(t)]$, we have
+  \[	V_2=T_2V_0=V_0 e^{-j\omega T},\;\;\;\;\;\;\;
+  v_2(t)={\cal F}^{-1}[V_2]={\cal F}[V_0 e^{-j\omega T]]=v_0(t-T)	\]
+  i.e., the output is just a delayed version of the input. But at the front,
+  we have
+  \[	V_1=T_1V_0=\frac{1}{2}(1+e^{-2j\omega T}),\;\;\;\;\;\;
+  v_1(t)={\cal F}^{-1}[V_1]={\cal F}^{-1}\left[\frac{1}{2}(1+e^{-2j\omega T})\right]
+  =\frac{1}{2}[v_0(t)+v_0(t-2T)]	\]
+  The second term $v(t-2T)$ is the reflection at the end of the line 
+  with coefficient $\eta_2=1$ which arrives at the front after the signal 
+  traveling along the line forward and backward in $2T$ time. But as 
+  $\eta_1=0$, it is no longer reflected at the front.
+
+\item $Z_1=Z_0$ but the load is an open circuit, i.e., $Z_2=0$.
+
+
+
+\item $Z_1=Z_0/2$ and $Z_2=2Z_0$. Find the response $v_2(t)$ to 
+
+  \begin{itemize}
+  \item a step input $v_0(t)=u(t)$
+  \item an impulse input $v_0(t)=u(t)-u(t-T/3)$ 
+  \end{itemize}
+
+
+  then we have
+  \[ A=\frac{Z_0}{Z_1+Z_0}=\frac{2Z_1}{Z_1+2Z_1}=\frac{2}{3} \]
+  \[ \eta_1=\frac{Z_1-Z_0}{Z_1+Z_0}=\frac{Z_1-2Z_1}{Z_1+2Z_1}=-\frac{1}{3} \]
+  \[ \eta_2=\frac{Z_2-Z_0}{Z_2+Z_0}=\frac{2Z_0-Z_0}{2Z_0+Z_0}=\frac{1}{3}  \]
+  
+  If the input is a step $v_0(t)=u(t)$, find the output $v_2(t)$.
+  \begin{eqnarray}
+    V_2&=&V_0A(1+\eta_2)e^{-j\omega T}[1+\eta_1\eta_2 e^{-2j\omega T}
+    +(\eta_1\eta_2)^2 e^{-4j\omega T}+\cdots ]
+    \nonumber \\
+    &=&\frac{8}{9}V_0 e^{-j\omega T}\left[1-\frac{1}{9} e^{-2j\omega T}
+    +\left(\frac{1}{9}\right)^2 e^{-4j\omega T}-\cdots \right]
+    \nonumber \\
+    &=&V_0\left[ \frac{8}{9} e^{-j\omega T}-\frac{8}{81}e^{-3j\omega T}
+    +\frac{8}{729}e^{-5j\omega T}-\cdots \right]
+    \nonumber 
+  \end{eqnarray}
+  Find the value of the output $v_2(t)$ for each of the following time durations.
+  \begin{itemize}
+  \item $t<T:$ 
+    \[ v_2(t)=0 \]
+  \item $T<t<3T:$ 
+    \[	v_2(t)=\frac{8}{9}	\]
+  \item $3T<t<5T:$ 
+    \[ v_2(t)=\frac{8}{9}-\frac{8}{81}=\frac{64}{81} \]
+  \item $5T<t<7T:$ 
+    \[ v_2(t)=\frac{8}{9}-\frac{8}{81}+\frac{8}{729}=\frac{576}{729} \]
+  \item
+    \[	\cdots  \cdots  \cdots  \cdots  \]
+  \end{itemize}
+  Find the steady state value $v_2(\infty)$, % (4/5=0.8)
+  Plot the output $v_2(t)$ for $0<t<7T$. 
+
+  \begin{itemize}
+  \item $t=T:$ 
+    \[	v_2=\frac{4}{3}Av_0=\frac{8}{9}v_0	\]
+  \item $t=3T:$ 
+    \[ v_2=\frac{4}{3}A\left(-\frac{1}{9}\right)v_0=-\frac{4}{27}Av_0=-\frac{8}{81}v_0 \]
+  \item $t=5T:$ 
+    \[ v_2=\frac{4}{3}A\left(\frac{1}{81}\right)v_0=\frac{4}{243}Av_0=\frac{8}{729}v_0	\]
+  \item
+    \[	\cdots  \cdots  \cdots  \cdots  \]
+  \end{itemize}
+  Note that as the signal only has a finite $T/3$ duration, at any time $t=2kT$
+  only the term $(\eta_1\eta_2)^k e^{-2kj\omega T}$ representing the wave arriving at
+  the end most recently is non-zero.
+
+
+\end{enumerate}
+\end{document}
+

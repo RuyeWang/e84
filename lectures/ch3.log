@@ -1,0 +1,684 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=latex 2019.5.29)  31 OCT 2019 15:40
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**ch3
+(./ch3.tex
+LaTeX2e <2018-12-01>
+(/usr/local/texlive/2019/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
+(/usr/local/texlive/2019/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
+)
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2018/12/01 v2.17b AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks14
+\ex@=\dimen103
+))
+(/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen104
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count88
+LaTeX Info: Redefining \frac on input line 223.
+\uproot@=\count89
+\leftroot@=\count90
+LaTeX Info: Redefining \overline on input line 385.
+\classnum@=\count91
+\DOTSCASE@=\count92
+LaTeX Info: Redefining \ldots on input line 482.
+LaTeX Info: Redefining \dots on input line 485.
+LaTeX Info: Redefining \cdots on input line 606.
+\Mathstrutbox@=\box27
+\strutbox@=\box28
+\big@size=\dimen105
+LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
+\macc@depth=\count93
+\c@MaxMatrixCols=\count94
+\dotsspace@=\muskip10
+\c@parentequation=\count95
+\dspbrk@lvl=\count96
+\tag@help=\toks15
+\row@=\count97
+\column@=\count98
+\maxfields@=\count99
+\andhelp@=\toks16
+\eqnshift@=\dimen106
+\alignsep@=\dimen107
+\tagshift@=\dimen108
+\tagwidth@=\dimen109
+\totwidth@=\dimen110
+\lineht@=\dimen111
+\@envbody=\toks17
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks18
+LaTeX Info: Redefining \[ on input line 2844.
+LaTeX Info: Redefining \] on input line 2845.
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: dvips.def on input line 99.
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics-def/dvips.def
+File: dvips.def 2017/06/20 v3.1d Graphics/color driver for dvips
+))
+(/usr/local/texlive/2019/texmf-dist/tex/latex/comment/comment.sty
+\CommentStream=\write3
+
+Excluding comment 'comment')
+(/usr/local/texlive/texmf-local/tex/latex/html/html.sty
+Package: html 1999/07/19 v1.38 hypertext commands for latex2html (nd, hws, rrm)
+
+\c@lpart=\count100
+\c@lchapter=\count101
+\c@chapter=\count102
+\c@lsection=\count103
+\c@lsubsection=\count104
+\c@lsubsubsection=\count105
+\c@lparagraph=\count106
+\c@lsubparagraph=\count107
+\c@lsubsubparagraph=\count108
+\ptrfile=\write4
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/base/makeidx.sty
+Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
+) (./ch3.aux)
+\openout1 = `ch3.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Try loading font information for U+msa on input line 14.
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 14.
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 48.
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 48.
+ [1
+
+]
+Overfull \hbox (14.4167pt too wide) in alignment at lines 112--119
+ [][][] []
+ []
+
+
+Overfull \hbox (1.16263pt too wide) detected at line 146
+\OML/cmm/m/it/10 I[] \OT1/cmr/m/n/10 = [] [][] \OML/cmm/m/it/10 i[]\OT1/cmr/m/n
+/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 dt \OT1/cmr/m/n/10 = [
+] [][] [][](2\OML/cmm/m/it/10 ^^Yt=T\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 dt \OT1/c
+mr/m/n/10 = [] [][][1 + [](4\OML/cmm/m/it/10 ^^Yt=T\OT1/cmr/m/n/10 )] \OML/cmm/
+m/it/10 dt \OT1/cmr/m/n/10 = []
+ []
+
+[2] [3]
+Overfull \hbox (3.29645pt too wide) detected at line 237
+\OML/cmm/m/it/10 v\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) = \OML/c
+mm/m/it/10 v[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) + \OML/cmm/m
+/it/10 v[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) + \OML/cmm/m/it/
+10 v[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) = 6[]  [](\OML/cmm/m
+/it/10 !t\OT1/cmr/m/n/10 ) + 12[]  [](\OML/cmm/m/it/10 !t \OT1/cmr/m/n/10 + \OM
+L/cmm/m/it/10 ^^Y=\OT1/cmr/m/n/10 2) + 4[]  [](\OML/cmm/m/it/10 !t \OMS/cmsy/m/
+n/10 ^^@ \OML/cmm/m/it/10 ^^Y=\OT1/cmr/m/n/10 2)
+ []
+
+
+Overfull \hbox (40.43697pt too wide) in alignment at lines 262--269
+ [][][] []
+ []
+
+[4] [5]
+Overfull \hbox (5.07008pt too wide) detected at line 402
+\OML/cmm/m/it/10 v\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) = \OML/c
+mm/m/it/10 V[] []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 !t \OT1/cmr/m/n/10 + \OML/cm
+m/m/it/10 ^^^\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 Re\OT1/cmr/m/n/10 [\OML/cmm/m
+/it/10 V[]e[]\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 ;         i\OT1/cmr/m/n/10 (\OML
+/cmm/m/it/10 t\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 I[] []\OT1/cmr/m/n/10 (\OML/
+cmm/m/it/10 !t \OT1/cmr/m/n/10 + \OML/cmm/m/it/10  \OT1/cmr/m/n/10 ) = \OML/cmm
+/m/it/10 Re\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 I[]e[]\OT1/cmr/m/n/10 ]
+ []
+
+[6] [7]
+Overfull \hbox (25.05833pt too wide) detected at line 545
+\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 Y\OMS/cmsy/m/n/10 j \OT1/cmr/m/n/10 = [] = [
+]\OML/cmm/m/it/10 ;      \U/msa/m/n/10 \\OML/cmm/m/it/10 Y \OT1/cmr/m/n/10 = []
+[] [] = [][] [] = \OMS/cmsy/m/n/10 ^^@\U/msa/m/n/10 \\OML/cmm/m/it/10 Z
+ []
+
+[8]
+Overfull \hbox (17.55823pt too wide) in paragraph at lines 589--591
+[]\OT1/cmr/m/n/10 Solve the cir-cuit be-low. The volt-age from the gen-er-a-tor
+ is $\OML/cmm/m/it/10 v\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) = 2
+8\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 3  [](5000\OML/cmm/m/it/10 t \OT1/cmr/m/n/10
+ +
+ []
+
+[9]
+Overfull \hbox (48.76712pt too wide) detected at line 666
+\OML/cmm/m/it/10 Z[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 R \OT1/cmr/m/n/10 = 18\
+OML/cmm/m/it/10 ;     Z[] \OT1/cmr/m/n/10 = 1\OML/cmm/m/it/10 =j!C \OT1/cmr/m/n
+/10 = 12\U/msa/m/n/10 \[] \OT1/cmr/m/n/10 = 0 \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/i
+t/10 j\OT1/cmr/m/n/10 12\OML/cmm/m/it/10 ;     Z[] \OT1/cmr/m/n/10 = \OML/cmm/m
+/it/10 j!L \OT1/cmr/m/n/10 = 30\U/msa/m/n/10 \[] \OT1/cmr/m/n/10 = 0 + \OML/cmm
+/m/it/10 j\OT1/cmr/m/n/10 30
+ []
+
+[10] [11]
+Overfull \hbox (5.05354pt too wide) detected at line 787
+\OML/cmm/m/it/10 v[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) + \OML
+/cmm/m/it/10 v[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) = \OML/cmm
+/m/it/10 R i\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) + \OML/cmm/m/i
+t/10 v[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10
+ RC[]v[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) + \OML/cmm/m/it/10
+ v[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 ^^\
+[]v[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) + \OML/cmm/m/it/10 v[
+]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 v\OT1/
+cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 )
+ []
+
+[12] [13] [14]
+Overfull \hbox (27.68176pt too wide) detected at line 988
+\OML/cmm/m/it/10 A \OT1/cmr/m/n/10 = [] = \OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 A\
+OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 e[];     []      \OMS/cmsy/m/n/10 j\OML/cmm/m
+/it/10 A\OMS/cmsy/m/n/10 j \OT1/cmr/m/n/10 = []\OML/cmm/m/it/10 ;      ^^^ \OT1
+/cmr/m/n/10 = \U/msa/m/n/10 \\OML/cmm/m/it/10 A \OT1/cmr/m/n/10 = \OML/cmm/m/it
+/10 tan[] []
+ []
+
+[15] [16] [17] [18] [19] [20]
+Overfull \hbox (28.84915pt too wide) detected at line 1341
+\OML/cmm/m/it/10 v[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) = \OML
+/cmm/m/it/10 v[]\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 1\OT1/cmr/m/n/10 ) + [\OML/cm
+m/m/it/10 v[]\OT1/cmr/m/n/10 (0) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 v[]\OT1/
+cmr/m/n/10 (\OMS/cmsy/m/n/10 1\OT1/cmr/m/n/10 )]\OML/cmm/m/it/10 e[] \OT1/cmr/m
+/n/10 = 5 + (\OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 5 \OMS/cmsy/m/n/10 ^^@ \OT1/cm
+r/m/n/10 5)\OML/cmm/m/it/10 e[] \OT1/cmr/m/n/10 = 5 \OMS/cmsy/m/n/10 ^^@ \OT1/c
+mr/m/n/10 10\OML/cmm/m/it/10 e[] \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 V\OT1/cmr/m/
+n/10 )
+ []
+
+[21] [22] [23] [24]
+Overfull \hbox (10.52097pt too wide) detected at line 1671
+\OML/cmm/m/it/10 i\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) = \OML/c
+mm/m/it/10 i[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) + [\OML/cmm/
+m/it/10 i\OT1/cmr/m/n/10 (0) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 i[]\OT1/cmr/
+m/n/10 (0)]\OML/cmm/m/it/10 e[] \OT1/cmr/m/n/10 = 1\OML/cmm/m/it/10 :\OT1/cmr/m
+/n/10 05[]  [](6\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 28 \OMS/cmsy/m/n/10 ^^B \OT1/
+cmr/m/n/10 60\OML/cmm/m/it/10 t \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 70[]) \OMS
+/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 51\OML/cmm/
+m/it/10 e[]
+ []
+
+
+Overfull \hbox (42.09338pt too wide) detected at line 1699
+\OML/cmm/m/it/10 v[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) = \OML
+/cmm/m/it/10 R i\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) = \OML/cmm
+/m/it/10 R C[];       v[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) =
+ \OML/cmm/m/it/10 L[]i\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) = \O
+ML/cmm/m/it/10 L[] [] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 LC[]
+ []
+
+[25]
+Overfull \hbox (57.64575pt too wide) detected at line 1725
+[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 C[] \OT1/cmr/m/n/10 + [] [] \OML/cmm/m/it
+/10 v dt;      [] []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 v[] \OMS/cmsy/m/n/10 ^^@ 
+\OML/cmm/m/it/10 v\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 dt \OT1/cmr/m/n/10 = [] + \
+OML/cmm/m/it/10 C[];      C[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 v[] \OMS/cmsy/m/
+n/10 ^^@ \OML/cmm/m/it/10 v\OT1/cmr/m/n/10 ) = [] + [] [] \OML/cmm/m/it/10 v dt
+
+ []
+
+
+Overfull \hbox (44.48878pt too wide) detected at line 1732
+\OML/cmm/m/it/10 v[] \OT1/cmr/m/n/10 + []\OML/cmm/m/it/10 v[] \OT1/cmr/m/n/10 +
+ []\OML/cmm/m/it/10 v \OT1/cmr/m/n/10 = []\OML/cmm/m/it/10 ;        v[] \OT1/cm
+r/m/n/10 + []\OML/cmm/m/it/10 v[] \OT1/cmr/m/n/10 + []\OML/cmm/m/it/10 v \OT1/c
+mr/m/n/10 = []\OML/cmm/m/it/10 v[];        v[] \OT1/cmr/m/n/10 + []\OML/cmm/m/i
+t/10 v[] \OT1/cmr/m/n/10 + []\OML/cmm/m/it/10 v \OT1/cmr/m/n/10 = \OML/cmm/m/it
+/10 v[]
+ []
+
+[26]
+Overfull \hbox (16.56096pt too wide) detected at line 1788
+[] \OT1/cmr/m/n/10 = [] = [] = [] = [\OML/cmm/m/it/10 Ohm\OT1/cmr/m/n/10 ]
+ []
+
+
+Overfull \hbox (1.9728pt too wide) detected at line 1794
+[] \OT1/cmr/m/n/10 = [] = [] = [\OML/cmm/m/it/10 second\OT1/cmr/m/n/10 ]
+ []
+
+[27]
+Overfull \hbox (8.90813pt too wide) detected at line 1839
+\U/msa/m/n/10 \\OML/cmm/m/it/10 Z \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 tan[] [] \
+OT1/cmr/m/n/10 = []
+ []
+
+[28] [29] [30]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.2085 ...n-suspension-bridge-resonance-disaster/}
+                                                  .
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.2088 
+       
+? 
+
+Overfull \hbox (571.14848pt too wide) in paragraph at lines 2081--2088
+\OT1/cmr/m/n/10 am-ple of res-o-nance caus-ing dam-age in me-chan-i-cal struc-t
+ures is the Broughton$[]\OML/cmm/m/it/10 uspension[]ridge:Ontheotherhand; reson
+anceplaysanimportantroleintuningcircuitsinradioandTVreception; aswewilldiscussl
+ater:$ 
+ []
+
+[31]
+Overfull \hbox (27.80656pt too wide) in alignment at lines 2181--2186
+ [][][] []
+ []
+
+[32]
+Overfull \hbox (50.51476pt too wide) in alignment at lines 2227--2235
+ [][][] []
+ []
+
+[33] [34]
+Overfull \hbox (3.97926pt too wide) in alignment at lines 2323--2339
+ [][][] []
+ []
+
+[35] [36]
+Overfull \hbox (36.95404pt too wide) detected at line 2438
+[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ![]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t \OMS
+/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 t[]\OT1/cmr/m/n/10 )) = [](\OML/cmm/m/it/10 !
+[]t\OT1/cmr/m/n/10 )  [](\OML/cmm/m/it/10 ![]t[]\OT1/cmr/m/n/10 ) + [](\OML/cmm
+/m/it/10 ![]t\OT1/cmr/m/n/10 )  [](\OML/cmm/m/it/10 ![]t[]\OT1/cmr/m/n/10 ) \OM
+S/cmsy/m/n/10 ^^Y []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ![]t\OT1/cmr/m/n/10 ) + [
+](\OML/cmm/m/it/10 ![]t\OT1/cmr/m/n/10 ) \OML/cmm/m/it/10 ![]t[]
+ []
+
+
+Overfull \hbox (51.77853pt too wide) detected at line 2452
+\OT1/cmr/m/n/10 [1 \OMS/cmsy/m/n/10 ^^@ []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ![]
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 T=\OT
+1/cmr/m/n/10 4))]\OML/cmm/m/it/10 u\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t \OMS/cms
+y/m/n/10 ^^@ \OML/cmm/m/it/10 T=\OT1/cmr/m/n/10 4) = [1 \OMS/cmsy/m/n/10 ^^@ []
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ![]t \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 ^^
+Y=\OT1/cmr/m/n/10 2)]\OML/cmm/m/it/10 u\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t \OMS
+/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 T=\OT1/cmr/m/n/10 4) = [1 \OMS/cmsy/m/n/10 ^^
+@ []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ![]t\OT1/cmr/m/n/10 )]\OML/cmm/m/it/10 u\
+OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 T=\OT1
+/cmr/m/n/10 4)
+ []
+
+
+Overfull \hbox (65.08963pt too wide) detected at line 2474
+[]\OT1/cmr/m/n/10 [1 \OMS/cmsy/m/n/10 ^^@ []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 !
+[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 T=\
+OT1/cmr/m/n/10 2))]\OML/cmm/m/it/10 u\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t \OMS/c
+msy/m/n/10 ^^@ \OML/cmm/m/it/10 T=\OT1/cmr/m/n/10 2) = [][1 \OMS/cmsy/m/n/10 ^^
+@ []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ![]t \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/1
+0 ^^Y\OT1/cmr/m/n/10 )]\OML/cmm/m/it/10 u\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t \O
+MS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 T=\OT1/cmr/m/n/10 2) = [][1 + [](\OML/cmm/m
+/it/10 ![]t\OT1/cmr/m/n/10 )]\OML/cmm/m/it/10 u\OT1/cmr/m/n/10 (\OML/cmm/m/it/1
+0 t \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 T=\OT1/cmr/m/n/10 2)
+ []
+
+[37]
+Overfull \hbox (76.40364pt too wide) detected at line 2502
+[][][] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 V![] [][] \OT1/cmr/m/n/10 = \OML/cmm/
+m/it/10 V![] [] \OT1/cmr/m/n/10 = 0
+ []
+
+
+Overfull \hbox (133.89247pt too wide) detected at line 2514
+\OML/cmm/m/it/10 y\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t[]\OT1/cmr/m/n/10 ) = \OML
+/cmm/m/it/10 V [] \OT1/cmr/m/n/10 = 2\OML/cmm/m/it/10 V\OT1/cmr/m/n/10 (1 \OMS/
+cmsy/m/n/10 ^^@ []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ![]t[]=\OT1/cmr/m/n/10 2) =
+ 4\OML/cmm/m/it/10 V [][]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ![]t[]=\OT1/cmr/m/n/
+10 4) = 1
+ []
+
+[38]
+Overfull \hbox (62.07794pt too wide) detected at line 2587
+\OML/cmm/m/it/10 V[] \OT1/cmr/m/n/10 = [] = []\OML/cmm/m/it/10 ;         V[] \O
+T1/cmr/m/n/10 = [] = []\OML/cmm/m/it/10 ;       V[] \OT1/cmr/m/n/10 + \OML/cmm/
+m/it/10 V[] \OT1/cmr/m/n/10 = 1
+ []
+
+[39]
+Overfull \hbox (69.58472pt too wide) detected at line 2620
+\OML/cmm/m/it/10 y\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) = (1 \OM
+S/cmsy/m/n/10 ^^@ [] \OML/cmm/m/it/10 ![]t\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^
+@ \OT1/cmr/m/n/10 (1 \OMS/cmsy/m/n/10 ^^@ [] \OML/cmm/m/it/10 ![]\OT1/cmr/m/n/1
+0 (\OML/cmm/m/it/10 t \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 T[]\OT1/cmr/m/n/10 
+)) = \OMS/cmsy/m/n/10 ^^@ [] \OML/cmm/m/it/10 ![]t \OT1/cmr/m/n/10 + [] \OML/cm
+m/m/it/10 ![]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t \OMS/cmsy/m/n/10 ^^@ \OML/cmm/
+m/it/10 T[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ;               \OT1/cmr/m/n/10 (\
+OML/cmm/m/it/10 T[] < t < \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 T[]\OT1/cmr/m/n/10 
+)
+ []
+
+
+Overfull \hbox (34.80544pt too wide) in alignment at lines 2622--2627
+ [][][] []
+ []
+
+
+Overfull \hbox (104.91418pt too wide) in alignment at lines 2629--2635
+ [][][] []
+ []
+
+[40]
+Overfull \hbox (81.77913pt too wide) detected at line 2675
+\OML/cmm/m/it/10 y\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) = 1 \OMS
+/cmsy/m/n/10 ^^@ [] \OML/cmm/m/it/10 ![]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t \OM
+S/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 T\OT1/cmr/m/n/10 ) + [] \OML/cmm/m/it/10 ![]
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 T=\OT
+1/cmr/m/n/10 2) \OMS/cmsy/m/n/10 ^^@ [] \OML/cmm/m/it/10 ![]t \OT1/cmr/m/n/10 =
+ 1 \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 3 [] \OML/cmm/m/it/10 ![]t;            
+   \OT1/cmr/m/n/10 (2\OML/cmm/m/it/10 T[] < t < \OT1/cmr/m/n/10 3\OML/cmm/m/it/
+10 T[]\OT1/cmr/m/n/10 )
+ []
+
+
+Overfull \hbox (139.62411pt too wide) detected at line 2679
+\OML/cmm/m/it/10 y\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) = [] \OM
+L/cmm/m/it/10 ![]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t \OMS/cmsy/m/n/10 ^^@ \OML/
+cmm/m/it/10 T=\OT1/cmr/m/n/10 2) \OMS/cmsy/m/n/10 ^^@ [] \OML/cmm/m/it/10 ![]t 
+\OT1/cmr/m/n/10 + [] \OML/cmm/m/it/10 ![]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t \O
+MS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 3\OML/cmm/m/it/10 T=\OT1/cmr/m/n/10 2) \OMS/
+cmsy/m/n/10 ^^@ [] \OML/cmm/m/it/10 ![]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t \OMS
+/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 T\OT1/cmr/m/n/10 ) = \OMS/cmsy/m/n/10 ^^@\OT1
+/cmr/m/n/10 4 [] \OML/cmm/m/it/10 ![]t;               \OT1/cmr/m/n/10 (3\OML/cm
+m/m/it/10 T[] < t < \OT1/cmr/m/n/10 4\OML/cmm/m/it/10 T[]\OT1/cmr/m/n/10 )
+ []
+
+[41]
+Overfull \hbox (9.62961pt too wide) in paragraph at lines 2748--2751
+\OT1/cmr/m/n/10 Given the zero ini-tial con-di-tion $\OT1/cmr/bx/n/10 y\OT1/cmr
+/m/n/10 (0) = \OT1/cmr/bx/n/10 0$ \OT1/cmr/m/n/10 and an in-put $\OT1/cmr/bx/n/
+10 x\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) = [0\OML/cmm/m/it/10 ;
+  \OT1/cmr/m/n/10 0\OML/cmm/m/it/10 ;  \OT1/cmr/m/n/10 10[]\OML/cmm/m/it/10 ^^N
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 =L[]\OT1/c
+mr/m/n/10 ][]$,
+ []
+
+[42]
+Overfull \hbox (22.46921pt too wide) detected at line 2857
+\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 H[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 !\OT1/c
+mr/m/n/10 )\OMS/cmsy/m/n/10 j \OT1/cmr/m/n/10 = []        \OMS/cmsy/m/n/10 j\OM
+L/cmm/m/it/10 H[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 !\OT1/cmr/m/n/10 )\OMS/cmsy/
+m/n/10 j \OT1/cmr/m/n/10 = []
+ []
+
+[43] [44]
+Overfull \hbox (4.82785pt too wide) detected at line 2931
+[] \OT1/cmr/m/n/10 = [] [] = [] [] = [] []
+ []
+
+[45]
+Overfull \hbox (11.04019pt too wide) detected at line 3035
+\OML/cmm/m/it/10 H[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 !\OT1/cmr/m/n/10 ) = [] =
+ [] = []
+ []
+
+
+Overfull \hbox (23.33191pt too wide) in alignment at lines 3040--3048
+ [][][] []
+ []
+
+[46]
+Overfull \hbox (31.36552pt too wide) in alignment at lines 3057--3064
+ [][][] []
+ []
+
+[47]
+Overfull \hbox (24.07175pt too wide) in alignment at lines 3105--3113
+ [][][] []
+ []
+
+[48]
+Overfull \hbox (33.16386pt too wide) detected at line 3275
+\OML/cmm/m/it/10 H[] \OT1/cmr/m/n/10 = [] = [] = [] = []
+ []
+
+[49] [50] [51]
+Overfull \hbox (36.30936pt too wide) detected at line 3460
+\OML/cmm/m/it/10 V[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 V[] \OT1/cmr/m/n/10 = \
+OML/cmm/m/it/10 I[]X[] \OT1/cmr/m/n/10 = 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 125
+ \OMS/cmsy/m/n/10 ^^B \OT1/cmr/m/n/10 10[] \OMS/cmsy/m/n/10 ^^B \OT1/cmr/m/n/10
+ 1206 = 150 \OMS/cmsy/m/n/10 ^^B \OT1/cmr/m/n/10 10[] \OML/cmm/m/it/10 V \OT1/c
+mr/m/n/10 = 150 \OML/cmm/m/it/10 ^^VV \OT1/cmr/m/n/10 = 0\OML/cmm/m/it/10 :\OT1
+/cmr/m/n/10 150 \OML/cmm/m/it/10 mV \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 Q V[]
+ []
+
+[52] [53] [54] [55] [56]
+Overfull \hbox (60.08208pt too wide) detected at line 3799
+[][] [] \OT1/cmr/m/n/10 = [][] [] \OML/cmm/m/it/10 ;      []      [] \OT1/cmr/m
+/n/10 = []     []      \OML/cmm/m/it/10 L \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10
+ ![]L[]C \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 R[]C
+ []
+
+[57] [58]
+LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 3893.
+
+
+Overfull \hbox (15.42725pt too wide) detected at line 3898
+\OML/cmm/m/it/10 Z[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 Z[] \OT1/cmr/m/n/10 = \
+OML/cmm/m/it/10 Z[]\OMS/cmsy/m/n/10 jj\OML/cmm/m/it/10 Z[] \OT1/cmr/m/n/10 = []
+ = [] = 10(1 \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 j\OT1/cmr/m/n/10 ) = \OML/cm
+m/m/it/10 R[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 jX[]
+ []
+
+[59] [60]
+Overfull \hbox (91.14677pt too wide) detected at line 3995
+\OML/cmm/m/it/10 Z[] \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 j\O
+T1/cmr/m/n/10 (\OML/cmm/m/it/10 X \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 X[]\OT1/cm
+r/m/n/10 ) + \OML/cmm/m/it/10 jX\OMS/cmsy/m/n/10 jj\OT1/cmr/m/n/10 (\OML/cmm/m/
+it/10 R[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 jX\OT1/cmr/m/n/10 ) = \OMS/cmsy
+/m/n/10 ^^@\OML/cmm/m/it/10 j\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 X \OT1/cmr/m/n/1
+0 + \OML/cmm/m/it/10 X[]\OT1/cmr/m/n/10 ) + [] = [] \OMS/cmsy/m/n/10 ^^@ \OML/c
+mm/m/it/10 jX[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 R[] \OMS/cmsy/m/n/10 ^^@ \OM
+L/cmm/m/it/10 jX[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 Z[]
+ []
+
+[61] [62]
+Overfull \hbox (1.62697pt too wide) detected at line 4125
+\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) = \OML/c
+mm/m/it/10 f\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 1\OT1/cmr/m/n/10 ) + [\OML/cmm/m/
+it/10 f\OT1/cmr/m/n/10 (0) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 f\OT1/cmr/m/n/
+10 (\OMS/cmsy/m/n/10 1\OT1/cmr/m/n/10 )] \OML/cmm/m/it/10 e[];     []    f\OT1/
+cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 f[]\OT1/cmr/
+m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) + [\OML/cmm/m/it/10 f[]\OT1/cmr/m/n
+/10 ) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 f[]\OT1/cmr/m/n/10 (0)] \OML/cmm/m/
+it/10 e[]
+ []
+
+[63] [64] [65]
+Overfull \hbox (1.14703pt too wide) in paragraph at lines 4280--4284
+\OT1/cmr/m/it/10 where we have used the trigono-met-ric iden-tity $[]\OT1/cmr/m
+/n/10 (\OML/cmm/m/it/10  \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 ^^L\OT1/cmr/m/n/10
+ ) = [] \OML/cmm/m/it/10  [] ^^L \OMS/cmsy/m/n/10 ^^@ [] \OML/cmm/m/it/10  []
+ ^^L$
+ []
+
+[66]
+Overfull \hbox (11.51778pt too wide) detected at line 4360
+[] \OT1/cmr/m/n/10 = [] = [] = [] = [] \OML/cmm/m/it/10 e[]
+ []
+
+[67] [68]
+Overfull \hbox (11.18013pt too wide) detected at line 4515
+\OML/cmm/m/it/10 L[] \OT1/cmr/m/n/10 = [][] [] = [][] 100 = 2 \OML/cmm/m/it/10 
+B \OT1/cmr/m/n/10 = 20 \OML/cmm/m/it/10 dB;     []     L[] \OT1/cmr/m/n/10 = 10
+ [][] [] = 20 \OML/cmm/m/it/10 dB
+ []
+
+
+Overfull \hbox (13.40244pt too wide) detected at line 4521
+\OML/cmm/m/it/10 L[] \OT1/cmr/m/n/10 = [][] [] = [][] 1000 = 3 \OML/cmm/m/it/10
+ B \OT1/cmr/m/n/10 = 30 \OML/cmm/m/it/10 dB;     []    L[] \OT1/cmr/m/n/10 = 10
+ [][] [] = 30 \OML/cmm/m/it/10 dB
+ []
+
+[69] [70]
+Overfull \hbox (2.96123pt too wide) in paragraph at lines 4590--4596
+[]\OT1/cmr/m/it/10 The \OT1/cmr/bx/n/10 Bode plot \OT1/cmr/m/it/10 presents bot
+h the mag-ni-tude $\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 H\OT1/cmr/m/n/10 (\OML/cm
+m/m/it/10 j!\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 j$ \OT1/cmr/m/it/10 and phase an-
+gle $\U/msa/m/n/10 \\OML/cmm/m/it/10 H\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 j!\OT1/
+cmr/m/n/10 )$
+ []
+
+[71]
+Overfull \hbox (17.43433pt too wide) in paragraph at lines 4690--4692
+[]\OT1/cmr/m/it/10 Also con-sider two ad-di-tional cases re-lated to $\OML/cmm/
+m/it/10 j!$\OT1/cmr/m/it/10 . First, $\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 j!\OT1/
+cmr/m/n/10 )[] = \OML/cmm/m/it/10 ![]e[]$ 
+ []
+
+[72]
+Overfull \hbox (36.03993pt too wide) detected at line 4720
+\OML/cmm/m/it/10 Lm\OT1/cmr/m/n/10 (1 + \OML/cmm/m/it/10 j!^^\\OT1/cmr/m/n/10 )
+ = 20  [][] [] = 20  [][](1 + (\OML/cmm/m/it/10 !^^\\OT1/cmr/m/n/10 )[])[] = 10
+  [][](1 + (\OML/cmm/m/it/10 !^^\\OT1/cmr/m/n/10 )[])
+ []
+
+
+Overfull \hbox (28.24446pt too wide) detected at line 4730
+\OML/cmm/m/it/10 Lm\OT1/cmr/m/n/10 (1 + \OML/cmm/m/it/10 j\OT1/cmr/m/n/10 ) = 2
+0  [][] [] = 20  [][] 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 707 \OMS/cmsy/m/n/10 ^
+^Y \OT1/cmr/m/n/10 3\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 01 \OML/cmm/m/it/10 dB;  
+    \U/msa/m/n/10 \\OT1/cmr/m/n/10 (1 + \OML/cmm/m/it/10 j\OT1/cmr/m/n/10 ) = [
+]
+ []
+
+[73]
+Overfull \hbox (18.95628pt too wide) detected at line 4771
+\OML/cmm/m/it/10 H\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 j!\OT1/cmr/m/n/10 ) = [] = 
+[] = []
+ []
+
+
+Overfull \hbox (95.45944pt too wide) detected at line 4786
+\OML/cmm/m/it/10 H\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 j!\OT1/cmr/m/n/10 ) = [] = 
+[] = [] [] = \OML/cmm/m/it/10 H[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 j!\OT1/cmr/m
+/n/10 )\OML/cmm/m/it/10 H[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 j!\OT1/cmr/m/n/10 
+)
+ []
+
+
+Overfull \hbox (0.86761pt too wide) in alignment at lines 4803--4806
+ [][][] []
+ []
+
+[74] [75]
+Overfull \hbox (48.54735pt too wide) in alignment at lines 4918--4926
+ [][][] []
+ []
+
+[76]
+Overfull \hbox (43.38995pt too wide) in alignment at lines 4942--4950
+ [][][] []
+ []
+
+
+Overfull \hbox (37.78293pt too wide) detected at line 4955
+\OML/cmm/m/it/10 Lm H[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 j!\OT1/cmr/m/n/10 ) = 
+\OML/cmm/m/it/10 Lm H[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 j!\OT1/cmr/m/n/10 ) + 
+\OML/cmm/m/it/10 Lm \OT1/cmr/m/n/10 (2\OML/cmm/m/it/10 ^^P![] j!\OT1/cmr/m/n/10
+ )\OML/cmm/m/it/10 ;     \U/msa/m/n/10 \\OML/cmm/m/it/10 H[]\OT1/cmr/m/n/10 (\O
+ML/cmm/m/it/10 j!\OT1/cmr/m/n/10 ) = \U/msa/m/n/10 \\OML/cmm/m/it/10 H[]\OT1/cm
+r/m/n/10 (\OML/cmm/m/it/10 j!\OT1/cmr/m/n/10 ) + \U/msa/m/n/10 \\OT1/cmr/m/n/10
+ (2\OML/cmm/m/it/10 ^^P![] j!\OT1/cmr/m/n/10 )
+ []
+
+
+Overfull \hbox (42.81601pt too wide) in alignment at lines 4964--4972
+ [][][] []
+ []
+
+
+Overfull \hbox (42.94926pt too wide) detected at line 5000
+\OML/cmm/m/it/10 H\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 j!\OT1/cmr/m/n/10 ) = \OMS/
+cmsy/m/n/10 ^^@[] \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 ^^@[] \OT1/cmr/m/n/10 = \O
+MS/cmsy/m/n/10 ^^@[] \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 ^^@[]
+ []
+
+[77] [78] (./ch3.aux) ) 
+Here is how much of TeX's memory you used:
+ 1687 strings out of 492617
+ 20019 string characters out of 6129507
+ 89601 words of memory out of 5000000
+ 5623 multiletter control sequences out of 15000+600000
+ 7822 words of font info for 30 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 27i,12n,27p,234b,255s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on ch3.dvi (78 pages, 311092 bytes).

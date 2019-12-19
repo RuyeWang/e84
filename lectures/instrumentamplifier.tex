@@ -1,0 +1,18 @@
+\documentstyle[12pt]{article}
+\usepackage{html}
+
+\begin{document}
+
+  \htmladdimg{../figures/instrumentamplifier.gif}
+
+  As the two opamp circuits at the first stage are identical, we analyze the
+  lower one only.  We recognize this as a noninverting amplifier with gain:
+  \[ A=1+\frac{R_2}{R_1/2}=1+\frac{2R_2}{R_1} \]
+  and the opamp circuit at the second stage is a differential amplifier, 
+  therefore we have:
+  \[ V_o=\frac{R_f}{R}(AV_1-AV_2)=\frac{R_f}{R}(1+\frac{2R_2}{R_1})(V_1-V_2) \]
+  i.e., the total voltage gain is:
+  \[ A_{total}=\frac{V_o}{V_1-V_2}=\frac{R_f}{R}(1+\frac{2R_2}{R_1}) \]
+
+\end{document}
+

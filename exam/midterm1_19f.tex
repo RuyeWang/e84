@@ -1,0 +1,226 @@
+\documentstyle[11pt]{article}
+\usepackage{html}
+\begin{document}
+\begin{center}
+{\Large \bf  Midterm Exam 1 ---- E84, Fall 2019}
+\end{center}
+
+
+\begin{comment}
+\section*{Please fill out the feedback form}
+
+{\bf Note: } To help me improve my teaching of the course in the future, I
+would like to collect your feedback and comments. Please fill the following 
+form {\bf anonymously} and turn it in {\bf separately} from your midterm 
+exam. Your help is greatly appreciated!
+
+\begin{itemize}
+\item {\bf Feedback:} (circle one of the numbers)
+\begin{itemize}
+
+\item {\bf Lecture pace:} (1 too slow, 3 just right, 5 too fast)
+
+\framebox[0.5in]{1}\framebox[0.5in]{2}\framebox[0.5in]{3}\framebox[0.5in]{4}\framebox[0.5in]{5}
+
+\item {\bf Lecture clearity:} (1 Too sketchy, 3 just right, 5 too tedious)
+
+\framebox[0.5in]{1}\framebox[0.5in]{2}\framebox[0.5in]{3}\framebox[0.5in]{4}\framebox[0.5in]{5}
+
+\item {\bf Overall homework workload:} (1 too little, 3 just right, 5 too much)
+
+\framebox[0.5in]{1}\framebox[0.5in]{2}\framebox[0.5in]{3}\framebox[0.5in]{4}\framebox[0.5in]{5}
+
+\item {\bf Overall difficulty of course materials:} (1 too easy, 3 just right, 5 too hard)
+
+\framebox[0.5in]{1}\framebox[0.5in]{2}\framebox[0.5in]{3}\framebox[0.5in]{4}\framebox[0.5in]{5}
+\end{itemize} 
+
+\item {\bf Comments:}
+\begin{itemize}
+
+\item {\bf What went well for your learning in the course? Be specific.}
+
+\begin{tabular}{l}
+.  \\
+.  \\
+.  \\
+\end{tabular}
+\vskip 5cm
+
+\item {\bf What did not go well for your learning in the course? Be specific.}
+\begin{tabular}{l}
+.  \\
+.  \\
+.  \\
+\end{tabular}
+\vskip 0.9in
+
+\item {\bf Indicate one thing you want to improve and how.}
+\begin{tabular}{l}
+.  \\
+.  \\
+.  \\
+\end{tabular}
+\vskip 0.9in
+
+\end{itemize}
+
+\end{itemize}
+\end{comment}
+
+
+\section*{Instructions}
+
+{\bf Instructions}
+\begin{itemize}
+\item Take home, open everything except discussion. Due Thursday in class.
+\item Mark your start and end times. Spend no more than 3 hours.
+  (Don't click the problems until you are ready to start.)
+\item If you want to have a hard copy of the exam, compare your print-out
+  with the online version to make sure your copy is complete.
+\item Mark your name clearly on top of each page, and indicate the total
+  number of pages submitted. For example, 2/5 for the second of the total 
+  five pages.
+\item Show all steps towards getting the final answers. Box your final 
+  answers. A final answer without evidence of the steps leading to it 
+  will receive no credit.
+\item You may consider using different methods to solve the same probem 
+  (e.g., Problems 2 and 3) and compare results to make sure they are 
+  consistent and correct.
+\end{itemize}
+
+\section*{The Problems (Don't click until you are ready to start)}
+\begin{enumerate}
+
+\item {\bf Problem 1. (20 points)} 
+Show the relationship between the output voltage $V_o$ and the three input
+voltages $V_1$, $V_2$ and $V_3$ of the circuit shown below, where all 
+resistors have the same resistance value $R$. Extrapolate your result to 
+cover the general case of $n$ inputs $V_i$, $i=1,\cdots,n$.
+
+\htmladdimg{../midterm1d.gif}
+
+\begin{comment}
+{\bf Solution:}
+
+\[ \frac{V_1-V_0}{R}+\frac{V_2-V_0}{R}+\frac{V_3-V_0}{R}=\frac{V_0}{R}
+,\;\;\;\;\; V_0=\frac{V_1+V_2+V_3}{4}	\]
+In general
+\[ V_0=\frac{1}{n+1}\sum_{i=1}^n V_i \]
+\end{comment}
+
+
+\item {\bf Problem 2. (40 points)} 
+
+In the figure below, $V_1=20V$, $V_2=V_3=10V$, $R_1=R_5=10\Omega$, 
+$R_2=R_4=5\Omega$, $R_6=1.5\Omega$, $R_3=6\Omega$. Find voltage $V_{ab}$
+
+\htmladdimg{../midterm1e.gif}
+
+\begin{comment}
+{\bf Solution:} Use Thevenin's theorem. 
+\begin{itemize}
+\item Remove $R_3$ and $V_3$ as the load
+\item Find open-circuit voltage $V_T$:
+\[	V_{ab}=V_a-V_b=V_1\frac{R_5}{R_1+R_5}-V_2\frac{R_4}{R_2+R_4}
+	=20 \frac{10}{10+10}-10 \frac{5}{5+5}=10-5=5 \]
+\item Find $R_T$:
+\[	R_T=R_1//R_5+R_6+R_2//R_4
+	=\frac{R_1R_5}{R_1+R_5}+R_6+\frac{R_4R_2}{R_2+R_4}=9 \]
+\item Connect load of $V_3$ and $R_3$, find current
+\[	I=\frac{V_T-V_3}{R_T+R_3}=\frac{5-10}{9+6}=-\frac{1}{3} \]
+\item Find $V_{ab}$
+\[	V_{ab}=-\frac{1}{3}\times 6 +10=8V	\]
+\end{itemize}
+\end{comment}
+
+\item {\bf Problem 3. (40 points)} 
+
+In the circuit below, $I_0=6A$, $V_0=5V$, $R_2=R_4=4\Omega$, $R_1=2\Omega$,
+$R_3=8\Omega$. Find the current through $R_5=6\Omega$.
+
+\htmladdimg{../midterm1f.gif}
+
+\begin{comment}
+{\bf Solution:} Use superposition. First consider the current source $I_0$ 
+only with $V_0=0$ (short-circuit). Convert the delta composed of the top three 
+resistors ($R_1$, $R_2$ and $R_5$) to Y:
+\[	R_a=\frac{2\times 4}{2+6+4}=\frac{2}{3},\;\;\;\;
+	R_b=\frac{2\times 6}{2+6+4}=1,\;\;\;\;R_c=\frac{4\times 6}{2+6+4}=2 \]
+where $R_a$ is in series with $I_0$, and $R_b$ and $R_c$ are in series with 
+$R_4$ and $R_3$, respectively. Treating the two branches as two voltage dividers,
+we find the voltage across $R_5$ is zero and therefore $I'=0$,
+
+Next consider the voltage source $V_0$ only, with $I_0=0$ (open-circuit).
+The total resistance of the loop is $15\Omega$, and the total current is 
+$I_{total}=5V/15\Omega=1/3\;A$, and the current through $R_5$ can be  found
+by current divider to be $I''=1/6\;A$. The current due to both $I_0$ and $V_0$
+is therefore $I=I'+I''=1/6\;A$ 
+\end{comment}
+
+\end{enumerate}
+\end{document}
+
+
+
+
+
+\item {\bf Problem 4. (25 points)}
+
+\htmladdimg{../midterm1h.png}
+
+In the circuit shown, $R=20 \Omega$, $C=1\,\mu F$, and $L=0.8\;mH$. 
+The current source is $i_0(t)=\sqrt{2}\,\cos(50,000 t)$ Ampere. 
+Find the following:
+\begin{itemize}
+\item current $i_L(t)$ through $L$ 
+\item current $i_{RC}(t)$ through $R$ and $C$ in series
+\item voltage $v_R(t)$ across $R$
+\item voltage $v_C(t)$ across $C$
+\item voltage $v_L(t)$ across $L$
+\end{itemize}
+
+\begin{comment}
+{\bf Solution:} 
+\[
+\dot{I}=1
+\]
+\[
+Z_R=20;\;\;\;Z_C=\frac{1}{j\omega C}=\frac{1}{j5\times 10^{-2}}=-j20;\;\;\;
+Z_L=j\omega L=j\,40=40 e^{j\pi/2}
+\]
+\[
+Z_{RC}=Z_R+Z_C=20-j20=20\sqrt{2}e^{j\pi/4}
+\]
+\[ 
+Z_{total}=\frac{Z_{RC} Z_L}{Z_{RC}+Z_L}
+=\frac{20\sqrt{2}e^{j\pi/4} 40 e^{j\pi/2}}{20-j20+j40}
+=\frac{800\sqrt{2}e^{j\pi/4}}{20\sqrt{2}e^{j\pi/4}}=40
+\]
+\[
+\dot{V}=\dot{I}Z_{total}=40
+\]
+\[ 
+\dot{I}_{RC}=\frac{\dot{V}}{Z_{RC}}=\frac{40}{20\sqrt{2} e^{-j\pi/4}}=\sqrt{2}e^{j\pi/4}
+=1+j,\;\;\;\;i_{RC}(t)=2\cos(\omega t+\pi/4)
+\]
+\[
+\dot{I}_{L}=\frac{\dot{V}}{Z_L}=\frac{40}{40 e^{j\pi/2}}=e^{-j\pi/2}=-j,\;\;\;\;
+i_L(t)=\sqrt{2}\cos(\omega t-\pi/2)
+\]
+\[
+\dot{V}_R=\dot{I}_{RC} R=20(1+j)=20\sqrt{2}e^{j\pi/4},\;\;\;\;\;v_R(t)=40\cos(\omega t+\pi/4)
+\]
+\[
+\dot{V}_C=\dot{I}_{RC} Z_C=-j 20(1+j)=20(1-j)=20\sqrt{2}e^{-j\pi/4},\;\;\;\;\;
+v_C(t)=40\cos(\omega t-\pi/4)
+\]
+\[ 
+\dot{V}_R+\dot{V}_C=40=\dot{V}
+\]
+\end{comment}
+
+\end{enumerate}
+
+\end{document}
+

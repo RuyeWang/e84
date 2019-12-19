@@ -1,0 +1,1500 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Second-order system as a filter</TITLE>
+<META NAME="description" CONTENT="Second-order system as a filter">
+<META NAME="keywords" CONTENT="ch3">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="ch3.css">
+
+<LINK REL="next" HREF="node19.html">
+<LINK REL="previous" HREF="node17.html">
+<LINK REL="next" HREF="node19.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node19.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node16.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node17.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node19.html">Radio/TV Broadcasting and the</A>
+<B> Up:</B> <A
+ HREF="node16.html">Frequency Response Functions and</A>
+<B> Previous:</B> <A
+ HREF="node17.html">First-order system as a</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H3><A ID="SECTION00017200000000000000">
+Second-order system as a filter</A>
+</H3>
+
+<P>
+Consider a second order circuit of the series combination of R, C, 
+and L, connected to an input voltage source <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img809.svg"
+ ALT="$v_0(t)$"></SPAN>. We can treat 
+any of the voltages <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img222.svg"
+ ALT="$v_R(t)$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img194.svg"
+ ALT="$v_C(t)$"></SPAN>, and <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img195.svg"
+ ALT="$v_L(t)$"></SPAN>, across R, C, 
+and L, respectively as the output. The second order system can be 
+used as a band-pass (BP), high-pass (HP), or low-pass (LP) filter, 
+if the voltage across R, L, or C is treated as the output. In general, 
+the <EM>resonant frequency</EM> <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img829.svg"
+ ALT="$\omega_r$"></SPAN> of a system is the frequency 
+at which the magnitude of its frequency response function is maximized. 
+In the following, we specifically consider the magnitude of the 
+frequency response function (FRF) of these filters. In particular,
+we will consider <!-- MATH
+ $|H(\omega)|$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img830.svg"
+ ALT="$\vert H(\omega)\vert$"></SPAN> when <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img106.svg"
+ ALT="$\omega=0$"></SPAN>, <!-- MATH
+ $\omega=\omega_r$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img831.svg"
+ ALT="$\omega=\omega_r$"></SPAN>, 
+<!-- MATH
+ $\omega=\omega_n$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img832.svg"
+ ALT="$\omega=\omega_n$"></SPAN>, and <!-- MATH
+ $\omega=\infty$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img833.svg"
+ ALT="$\omega=\infty$"></SPAN>.
+
+<P>
+
+<UL>
+<LI><B>2nd-order Band-pas Filter</B>:
+
+<P>
+If the voltage across <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img112.svg"
+ ALT="$R$"></SPAN> is treated as the output, we have
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\dot{V}_R=\dot{V}_0\;\frac{Z_R}{Z_R+Z_C+Z_L}
+    =\dot{V}_0\;\frac{R}{R+1/j\omega C+j\omega L}
+    =\dot{V}_0\;\frac{R}{R+j(\omega L-1/\omega C)}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img834.svg"
+ ALT="$\displaystyle \dot{V}_R=\dot{V}_0\;\frac{Z_R}{Z_R+Z_C+Z_L}
+=\dot{V}_0\;\frac{R}{R+1/j\omega C+j\omega L}
+=\dot{V}_0\;\frac{R}{R+j(\omega L-1/\omega C)}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">306</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The FRF of the system is
+  <BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+H_R(\omega)&=&\frac{R}{R+j\omega L+1/j\omega C}
+    =\frac{R \;j\omega/L}{(R+j\omega L+1/j\omega C)\;j\omega/L}
+    \nonumber\\
+    &=&\frac{j\omega R/L}{j\omega R/L+(j\omega)^2+1/LC}
+    =\frac{j\omega 2\zeta \omega_n}{(j\omega)^2
+      +j\omega 2\zeta \omega_n+\omega_n^2}
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img835.svg"
+ ALT="$\displaystyle H_R(\omega)$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img836.svg"
+ ALT="$\displaystyle \frac{R}{R+j\omega L+1/j\omega C}
+=\frac{R \;j\omega/L}{(R+j\omega L+1/j\omega C)\;j\omega/L}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img837.svg"
+ ALT="$\displaystyle \frac{j\omega R/L}{j\omega R/L+(j\omega)^2+1/LC}
+=\frac{j\omega 2\zeta \omega_n}{(j\omega)^2
++j\omega 2\zeta \omega_n+\omega_n^2}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">307</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+
+<P>
+At the natural frequency <!-- MATH
+ $\omega=\omega_n=1/\sqrt{LC}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img517.svg"
+ ALT="$\omega=\omega_n=1/\sqrt{LC}$"></SPAN>, the imaginary 
+  part of the denominator <!-- MATH
+ $\omega_n L-1/\omega_n C$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img838.svg"
+ ALT="$\omega_n L-1/\omega_n C$"></SPAN> is zero and 
+  <!-- MATH
+ $H_R(\omega_n)=1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img839.svg"
+ ALT="$H_R(\omega_n)=1$"></SPAN> is the maximum, i.e., the resonant frequency is the 
+  same as the natural frequency <!-- MATH
+ $\omega_r=\omega_n=1/\sqrt{LC}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img840.svg"
+ ALT="$\omega_r=\omega_n=1/\sqrt{LC}$"></SPAN>. When 
+  <!-- MATH
+ $\omega\ne \omega_n$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img841.svg"
+ ALT="$\omega\ne \omega_n$"></SPAN> <!-- MATH
+ $|H_R(\omega)|<|H_R(\omega_n)|$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img842.svg"
+ ALT="$\vert H_R(\omega)\vert&lt;\vert H_R(\omega_n)\vert$"></SPAN>. In particular,
+  we have:
+
+<P>
+
+<UL>
+<LI><!-- MATH
+ $|H_R(0)|=0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img843.svg"
+ ALT="$\vert H_R(0)\vert=0$"></SPAN>
+</LI>
+<LI><!-- MATH
+ $|H_R(\omega_n)|=|H_R(\omega_r)|=1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img844.svg"
+ ALT="$\vert H_R(\omega_n)\vert=\vert H_R(\omega_r)\vert=1$"></SPAN>
+</LI>
+<LI><!-- MATH
+ $|H_R(\infty)|=0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img845.svg"
+ ALT="$\vert H_R(\infty)\vert=0$"></SPAN>
+</LI>
+</UL>
+
+<P>
+This is a band-pass filter with the <EM>bandwidth</EM> defined as:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\triangle \omega=\omega_2-\omega_1
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img846.svg"
+ ALT="$\displaystyle \triangle \omega=\omega_2-\omega_1$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">308</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+where <!-- MATH
+ $\omega_1<\omega_r$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.46ex; " SRC="img847.svg"
+ ALT="$\omega_1&lt;\omega_r$"></SPAN> and <!-- MATH
+ $\omega_2>\omega_r$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.46ex; " SRC="img848.svg"
+ ALT="$\omega_2&gt;\omega_r$"></SPAN> are the two 
+  <EM>cut-off frequencies</EM> at which
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+|H(\omega_1)|=|H(\omega_2)|=\frac{1}{\sqrt{2}}=0.707,\;\;\;\;\;\mbox{or}
+    \;\;\;\;\;\;|H(\omega_1)|^2=|H(\omega_2)|^2=\frac{1}{2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.28ex; " SRC="img849.svg"
+ ALT="$\displaystyle \vert H(\omega_1)\vert=\vert H(\omega_2)\vert=\frac{1}{\sqrt{2}}=0.707,\;\;\;\;\;$">or<IMG STYLE="height: 4.88ex; vertical-align: -1.71ex; " SRC="img850.svg"
+ ALT="$\displaystyle \;\;\;\;\;\;\vert H(\omega_1)\vert^2=\vert H(\omega_2)\vert^2=\frac{1}{2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">309</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+In other words, the power of the output is halved when compared to 
+  that of the input. The cut-off frequency is therefore also called the 
+  <EM>half-power frequency</EM>. To find the bandwidth of this 2nd order 
+  system, we rewrite the FRF as:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+H_R(\omega)=\frac{R}{R+j\omega C+1/j\omega C}
+    =\frac{1}{1+j(\omega L/R-1/\omega RC)}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img851.svg"
+ ALT="$\displaystyle H_R(\omega)=\frac{R}{R+j\omega C+1/j\omega C}
+=\frac{1}{1+j(\omega L/R-1/\omega RC)}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">310</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Note that <!-- MATH
+ $|H_R(\omega)|=1/\sqrt{2}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img852.svg"
+ ALT="$\vert H_R(\omega)\vert=1/\sqrt{2}$"></SPAN> when the imaginary part of the 
+  denominator is:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\frac{\omega L}{R}-\frac{1}{\omega CR}=\pm 1
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.11ex; vertical-align: -1.71ex; " SRC="img853.svg"
+ ALT="$\displaystyle \frac{\omega L}{R}-\frac{1}{\omega CR}=\pm 1$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">311</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+To solve this equation for the cut-off frequency, we multiply both sides
+  by <!-- MATH
+ $\omega R/L$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img854.svg"
+ ALT="$\omega R/L$"></SPAN>, and get two quadratic equations:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\omega^2\pm \frac{R}{L}\omega-\frac{1}{LC}=\omega^2\pm 2\zeta\omega_n\omega-\omega_n^2=0
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.11ex; vertical-align: -1.71ex; " SRC="img855.svg"
+ ALT="$\displaystyle \omega^2\pm \frac{R}{L}\omega-\frac{1}{LC}=\omega^2\pm 2\zeta\omega_n\omega-\omega_n^2=0$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">312</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+with four roots:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\omega=\frac{1}{2}\left(\mp 2\zeta\omega_n\pm\sqrt{4\zeta^2\omega_n^2+4\omega_n^2}\right)
+    =\left(\mp\zeta\pm\sqrt{\zeta^2+1}\right)\omega_n
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.88ex; vertical-align: -1.71ex; " SRC="img856.svg"
+ ALT="$\displaystyle \omega=\frac{1}{2}\left(\mp 2\zeta\omega_n\pm\sqrt{4\zeta^2\omega_n^2+4\omega_n^2}\right)
+=\left(\mp\zeta\pm\sqrt{\zeta^2+1}\right)\omega_n$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">313</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Ignoring the negative roots (with no physical meaning) we get
+  the two cut-off frequencies <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img857.svg"
+ ALT="$\omega_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img858.svg"
+ ALT="$\omega_2$"></SPAN>:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\omega_{1,2}=\left(\sqrt{1+\zeta^2}\mp \zeta\right) \omega_n
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.41ex; vertical-align: -1.63ex; " SRC="img859.svg"
+ ALT="$\displaystyle \omega_{1,2}=\left(\sqrt{1+\zeta^2}\mp \zeta\right) \omega_n$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">314</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+and the bandwidth is
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\triangle \omega=\omega_2-\omega_1=2\zeta \omega_n=\frac{\omega_n}{Q}
+  =\frac{R}{L}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.16ex; " SRC="img860.svg"
+ ALT="$\displaystyle \triangle \omega=\omega_2-\omega_1=2\zeta \omega_n=\frac{\omega_n}{Q}
+=\frac{R}{L}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">315</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+This happens to be the coefficient of the first order term in the 
+  canonical form of the second order system, which can now be written as:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+y''(t)+2\zeta\omega_n\,y'(t)+\omega_n^2\, y(t)
+    =y''(t)+\triangle\omega\,y'(t)+\omega_n^2\, y(t)= x(t)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img861.svg"
+ ALT="$\displaystyle y''(t)+2\zeta\omega_n\,y'(t)+\omega_n^2\, y(t)
+=y''(t)+\triangle\omega\,y'(t)+\omega_n^2\, y(t)= x(t)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">316</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The equation <!-- MATH
+ $\triangle\omega=\omega_n/Q$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img862.svg"
+ ALT="$\triangle\omega=\omega_n/Q$"></SPAN> is of great importance as
+  it directly relates the bandwidth <!-- MATH
+ $\Delta\omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img863.svg"
+ ALT="$\Delta\omega$"></SPAN> and the natural 
+  frequency <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img488.svg"
+ ALT="$\omega_n$"></SPAN>.
+
+<P>
+The middle point between the two cut-off frequencies <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img857.svg"
+ ALT="$\omega_1$"></SPAN> and 
+  <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img858.svg"
+ ALT="$\omega_2$"></SPAN> is 
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\omega_0=\frac{\omega_1+\omega_2}{2}
+    =\omega_n \sqrt{1+\zeta^2}\;>\;\omega_n
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.88ex; vertical-align: -1.71ex; " SRC="img864.svg"
+ ALT="$\displaystyle \omega_0=\frac{\omega_1+\omega_2}{2}
+=\omega_n \sqrt{1+\zeta^2}\;&gt;\;\omega_n$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">317</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+which is greater than the resonant frequency <!-- MATH
+ $\omega_r=\omega_n$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img865.svg"
+ ALT="$\omega_r=\omega_n$"></SPAN>,
+  and we have <!-- MATH
+ $\omega_2-\omega_n>\omega_n-\omega_1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.46ex; " SRC="img866.svg"
+ ALT="$\omega_2-\omega_n&gt;\omega_n-\omega_1$"></SPAN>.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/bandwidth1.png"
+ ALT="bandwidth1.png">
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/bandwidth.png"
+ ALT="bandwidth.png">
+
+<P>
+If <!-- MATH
+ $Q=1/2\zeta \gg 1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img867.svg"
+ ALT="$Q=1/2\zeta \gg 1$"></SPAN> (typically <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img868.svg"
+ ALT="$Q&gt;10$"></SPAN>, i.e., <!-- MATH
+ $\zeta<0.05$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img869.svg"
+ ALT="$\zeta&lt;0.05$"></SPAN>),
+  we have <!-- MATH
+ $\sqrt{1+\zeta^2} =\sqrt{1+(1/2Q)^2} \approx 1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.25ex; vertical-align: -0.82ex; " SRC="img870.svg"
+ ALT="$\sqrt{1+\zeta^2} =\sqrt{1+(1/2Q)^2} \approx 1$"></SPAN>, 
+  <!-- MATH
+ $\omega_0\approx\omega_n$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.46ex; " SRC="img871.svg"
+ ALT="$\omega_0\approx\omega_n$"></SPAN>, and
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\omega_{1,2}\approx \omega_n\mp \frac{\triangle\omega}{2}
+    =\omega_n\mp\frac{2\zeta\omega_n}{2}=\omega_n(1\mp\zeta)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.11ex; vertical-align: -1.71ex; " SRC="img872.svg"
+ ALT="$\displaystyle \omega_{1,2}\approx \omega_n\mp \frac{\triangle\omega}{2}
+=\omega_n\mp\frac{2\zeta\omega_n}{2}=\omega_n(1\mp\zeta)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">318</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+H_{bp}(\omega)=\frac{j\omega 2\zeta \omega_n}{(j\omega)^2
+      +j\omega 2\zeta \omega_n+\omega_n^2}
+    =\frac{j\omega \triangle \omega}
+    {(j\omega)^2+\triangle \omega j\omega+\omega_n^2}
+    =\frac{j\omega \triangle \omega}
+    {\triangle \omega j\omega+\omega_n^2-\omega^2}
+  
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img873.svg"
+ ALT="$\displaystyle H_{bp}(\omega)=\frac{j\omega 2\zeta \omega_n}{(j\omega)^2
++j\omeg...
+...=\frac{j\omega \triangle \omega}
+{\triangle \omega j\omega+\omega_n^2-\omega^2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">319</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+<LI><B>2nd-order High-pass Filter:</B>
+
+<P>
+If the voltage across <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img105.svg"
+ ALT="$L$"></SPAN> is treated as the output, we have
+  <BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+H_L(\omega)&=&H_{hp}(\omega)=\frac{j\omega L}{R+j\omega L+1/j\omega C}
+  =\frac{j\omega L\;j\omega/L}{(R+j\omega L+1/j\omega C)\;j\omega/L}
+  \nonumber\\
+  &=&\frac{(j\omega)^2}{(j\omega)^2+j\omega 2\zeta \omega_n+\omega_n^2}
+  =\frac{(j\omega)^2}{(j\omega)^2+\triangle \omega j\omega +\omega_n^2}
+  =\frac{-\omega^2}{\triangle \omega j\omega +\omega_n^2-\omega^2}
+  %\;\;\;\;\;\;H(s)=\frac{s^2}{s^2+\triangle\omega s +\omega_n^2}
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img874.svg"
+ ALT="$\displaystyle H_L(\omega)$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img875.svg"
+ ALT="$\displaystyle H_{hp}(\omega)=\frac{j\omega L}{R+j\omega L+1/j\omega C}
+=\frac{j\omega L\;j\omega/L}{(R+j\omega L+1/j\omega C)\;j\omega/L}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 6.04ex; vertical-align: -2.29ex; " SRC="img876.svg"
+ ALT="$\displaystyle \frac{(j\omega)^2}{(j\omega)^2+j\omega 2\zeta \omega_n+\omega_n^2...
+...n^2-\omega^2}
+%\;\;\;\;\;\;H(s)=\frac{s^2}{s^2+\triangle\omega s +\omega_n^2}
+$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">320</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+
+  This is a high-pass filter as
+  
+<UL>
+<LI><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img877.svg"
+ ALT="$\vert H(0)\vert=0$"></SPAN>
+</LI>
+<LI><!-- MATH
+ $|H(\omega_n)|=\omega_nL/R=Q$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img878.svg"
+ ALT="$\vert H(\omega_n)\vert=\omega_nL/R=Q$"></SPAN>
+</LI>
+<LI><!-- MATH
+ $|H(\infty)|=1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img879.svg"
+ ALT="$\vert H(\infty)\vert=1$"></SPAN>
+</LI>
+</UL>
+  To decide whether <!-- MATH
+ $H_L(\omega)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img880.svg"
+ ALT="$H_L(\omega)$"></SPAN> peaks and, if so, to find the resonant
+  frequency, we solve the following equation:
+  <BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+\frac{d}{d\omega}|H_{hp}(\omega)|^2
+    &=&\frac{d}{d\omega}\left[\frac{\omega^4}{(\omega_n^2-\omega^2)^2
+        +4\zeta^2\omega^2\omega_n^2}\right]
+    \nonumber\\
+    &=&\frac{4\omega^3[(\omega_n^2-\omega^2)^2+4\zeta^2\omega^2\omega_n^2]
+      -\omega^4[4\omega(\omega^2-\omega^2_n)+8\zeta^2\omega\omega_n^2]}{[(\omega_n^2-\omega^2)^2+4\zeta^2\omega^2\omega_n^2]^2}  =0
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 5.11ex; vertical-align: -1.71ex; " SRC="img881.svg"
+ ALT="$\displaystyle \frac{d}{d\omega}\vert H_{hp}(\omega)\vert^2$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 6.04ex; vertical-align: -2.32ex; " SRC="img882.svg"
+ ALT="$\displaystyle \frac{d}{d\omega}\left[\frac{\omega^4}{(\omega_n^2-\omega^2)^2
++4\zeta^2\omega^2\omega_n^2}\right]$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 6.04ex; vertical-align: -2.29ex; " SRC="img883.svg"
+ ALT="$\displaystyle \frac{4\omega^3[(\omega_n^2-\omega^2)^2+4\zeta^2\omega^2\omega_n^...
+...^2\omega\omega_n^2]}{[(\omega_n^2-\omega^2)^2+4\zeta^2\omega^2\omega_n^2]^2} =0$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">321</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+
+  i.e., the numerator is zero, or
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+4\omega^3[(\omega_n^2-\omega^2)^2+4\zeta^2\omega^2\omega_n^2]
+    =4\omega^5[\omega^2-\omega^2_n+2\zeta^2\omega_n^2]
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img884.svg"
+ ALT="$\displaystyle 4\omega^3[(\omega_n^2-\omega^2)^2+4\zeta^2\omega^2\omega_n^2]
+=4\omega^5[\omega^2-\omega^2_n+2\zeta^2\omega_n^2]$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">322</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Solving this for <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img10.svg"
+ ALT="$\omega$"></SPAN>, we get the resonant frequency:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\omega_r=\frac{\omega_n}{\sqrt{1-2\zeta^2}}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.74ex; " SRC="img885.svg"
+ ALT="$\displaystyle \omega_r=\frac{\omega_n}{\sqrt{1-2\zeta^2}}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">323</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+We also have
+  <BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+|H_{lp}(\omega)|^2&=&\frac{\omega^4}{(2\zeta\omega_n\omega)^2+(\omega_n^2-\omega^2)^2}
+    =\frac{\omega^4}{\omega^4-(1-2\zeta^2)2\omega_n^2\omega^2+\omega_n^4}
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 3.02ex; vertical-align: -0.78ex; " SRC="img886.svg"
+ ALT="$\displaystyle \vert H_{lp}(\omega)\vert^2$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 6.04ex; vertical-align: -2.29ex; " SRC="img887.svg"
+ ALT="$\displaystyle \frac{\omega^4}{(2\zeta\omega_n\omega)^2+(\omega_n^2-\omega^2)^2}
+=\frac{\omega^4}{\omega^4-(1-2\zeta^2)2\omega_n^2\omega^2+\omega_n^4}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">324</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+
+  Consider the following three cases:
+  
+<UL>
+<LI>If <!-- MATH
+ $\zeta<1/\sqrt{2}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img888.svg"
+ ALT="$\zeta&lt;1/\sqrt{2}$"></SPAN>, <!-- MATH
+ $\omega_r>\omega_n$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.46ex; " SRC="img889.svg"
+ ALT="$\omega_r&gt;\omega_n$"></SPAN> is real and 
+    <!-- MATH
+ $|H_L(\omega)|$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img890.svg"
+ ALT="$\vert H_L(\omega)\vert$"></SPAN> peaks at <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img829.svg"
+ ALT="$\omega_r$"></SPAN>. In particular,
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+|H_{hp}(\omega_n)|^2=\frac{1}{4\zeta^2}\;<\;
+      |H_{hp}(\omega_r)|^2=\frac{1}{4\zeta^2(1-\zeta^2)}
+      \;>\; |H_{hp}(\infty)|=1
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img891.svg"
+ ALT="$\displaystyle \vert H_{hp}(\omega_n)\vert^2=\frac{1}{4\zeta^2}\;&lt;\;
+\vert H_{hp}(\omega_r)\vert^2=\frac{1}{4\zeta^2(1-\zeta^2)}
+\;&gt;\; \vert H_{hp}(\infty)\vert=1$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">325</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+If <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img487.svg"
+ ALT="$\zeta$"></SPAN> is small, <!-- MATH
+ $\omega_r\approx\omega_n$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.46ex; " SRC="img892.svg"
+ ALT="$\omega_r\approx\omega_n$"></SPAN>. For example,
+    <!-- MATH
+ $\zeta=0.05$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img893.svg"
+ ALT="$\zeta=0.05$"></SPAN>, <!-- MATH
+ $\omega_r=1.0025\,\omega_n$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.46ex; " SRC="img894.svg"
+ ALT="$\omega_r=1.0025\,\omega_n$"></SPAN>. 
+
+<P>
+</LI>
+<LI>If <!-- MATH
+ $\zeta=1/\sqrt{2}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img895.svg"
+ ALT="$\zeta=1/\sqrt{2}$"></SPAN>, we have <!-- MATH
+ $\omega_r=\infty$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img896.svg"
+ ALT="$\omega_r=\infty$"></SPAN>, and
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+|H_{hp}(\omega_n)|^2=\frac{1}{2}\;<\; |H_{hp}(\omega_r)|^2\;=\;1
+      \;=\;|H_{lp}(\infty)|
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.88ex; vertical-align: -1.71ex; " SRC="img897.svg"
+ ALT="$\displaystyle \vert H_{hp}(\omega_n)\vert^2=\frac{1}{2}\;&lt;\; \vert H_{hp}(\omega_r)\vert^2\;=\;1
+\;=\;\vert H_{lp}(\infty)\vert$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">326</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+i.e., <!-- MATH
+ $|H_{hp}(\omega_n)|=1/\sqrt{2}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.78ex; " SRC="img898.svg"
+ ALT="$\vert H_{hp}(\omega_n)\vert=1/\sqrt{2}$"></SPAN>, or <!-- MATH
+ $20\log |H_{hp}(\omega_n)|=-3\,dB$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.78ex; " SRC="img899.svg"
+ ALT="$20\log \vert H_{hp}(\omega_n)\vert=-3\,dB$"></SPAN>,
+    <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img488.svg"
+ ALT="$\omega_n$"></SPAN> is the cut-off frequency of the HP filter.
+</LI>
+<LI>If <!-- MATH
+ $\zeta>1/\sqrt{2}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img900.svg"
+ ALT="$\zeta&gt;1/\sqrt{2}$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img829.svg"
+ ALT="$\omega_r$"></SPAN> is imaginary, indicating
+    there does not exist a frequency at which <!-- MATH
+ $H_L(\omega)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img880.svg"
+ ALT="$H_L(\omega)$"></SPAN> peaks. 
+  
+</LI>
+</UL>
+
+<P>
+</LI>
+<LI><B>2nd-order Low-pass Filter:</B>
+
+<P>
+If the voltage across <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img104.svg"
+ ALT="$C$"></SPAN> is treated as the output, we have
+  <BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+H_C(\omega)&=&H_{lp}(\omega)=\frac{1/j\omega C}{R+j\omega L+1/j\omega C}
+    =\frac{1/j\omega C\;j\omega/L}{(R+j\omega L+1/j\omega C)\;j\omega/L}
+    \nonumber\\
+    &=&\frac{\omega_n^2}{(j\omega)^2+j\omega 2\zeta \omega_n+\omega_n^2}
+    =\frac{\omega_n^2}{(j\omega)^2+\triangle \omega j\omega+\omega_n^2}
+    =\frac{\omega_n^2}{\triangle \omega j\omega+\omega_n^2-\omega^2}
+    %\;\;\;\;\;\;H(s)=\frac{\omega_n^2}{s^2+\triangle\omega s +\omega_n^2}
+  
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img901.svg"
+ ALT="$\displaystyle H_C(\omega)$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img902.svg"
+ ALT="$\displaystyle H_{lp}(\omega)=\frac{1/j\omega C}{R+j\omega L+1/j\omega C}
+=\frac{1/j\omega C\;j\omega/L}{(R+j\omega L+1/j\omega C)\;j\omega/L}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 6.04ex; vertical-align: -2.29ex; " SRC="img903.svg"
+ ALT="$\displaystyle \frac{\omega_n^2}{(j\omega)^2+j\omega 2\zeta \omega_n+\omega_n^2}...
+...ega^2}
+%\;\;\;\;\;\;H(s)=\frac{\omega_n^2}{s^2+\triangle\omega s +\omega_n^2}
+$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">327</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+
+  This is a low-pass filter as
+  
+<UL>
+<LI><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img904.svg"
+ ALT="$\vert H(0)\vert=1$"></SPAN>
+</LI>
+<LI><!-- MATH
+ $|H(\omega_n)|=1/\omega_nCR=Q$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img905.svg"
+ ALT="$\vert H(\omega_n)\vert=1/\omega_nCR=Q$"></SPAN>
+</LI>
+<LI><!-- MATH
+ $|H(\infty)|=0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img906.svg"
+ ALT="$\vert H(\infty)\vert=0$"></SPAN>
+</LI>
+</UL>
+  To decide whether <!-- MATH
+ $H_L(\omega)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img880.svg"
+ ALT="$H_L(\omega)$"></SPAN> peaks and, if so, to find the resonant
+  frequency, we solve the following equation, we find the frequency that
+  minimizes the magnitude of the denominator: 
+  <BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+\frac{d}{d\omega}\bigg|(j\omega)^2+j\omega 2\zeta\omega_n+\omega^2\bigg|^2
+    &=&\frac{d}{d\omega} [(\omega_n^2-\omega^2)^2+4\zeta^2\omega_n^2\omega^2]
+    \nonumber\\
+    &=&-4\omega(\omega_n^2-\omega^2)+8\zeta^2\omega_n^2\omega=0
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 6.27ex; vertical-align: -2.32ex; " SRC="img907.svg"
+ ALT="$\displaystyle \frac{d}{d\omega}\bigg\vert(j\omega)^2+j\omega 2\zeta\omega_n+\omega^2\bigg\vert^2$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 5.11ex; vertical-align: -1.71ex; " SRC="img908.svg"
+ ALT="$\displaystyle \frac{d}{d\omega} [(\omega_n^2-\omega^2)^2+4\zeta^2\omega_n^2\omega^2]$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img909.svg"
+ ALT="$\displaystyle -4\omega(\omega_n^2-\omega^2)+8\zeta^2\omega_n^2\omega=0$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">328</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+
+  Solving for <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img10.svg"
+ ALT="$\omega$"></SPAN> we get the resonant frequency of this system:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\omega_r=\omega_n\sqrt{1-2\zeta^2}<\omega_n
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.25ex; vertical-align: -0.66ex; " SRC="img910.svg"
+ ALT="$\displaystyle \omega_r=\omega_n\sqrt{1-2\zeta^2}&lt;\omega_n$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">329</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+We also have
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+|H_C(\omega)|^2=\frac{\omega_n^4}{(2\zeta\omega_n\omega)^2+(\omega_n^2-\omega^2)^2}
+    =\frac{\omega_n^4}{\omega^4-(1-2\zeta^2)2\omega_n^2\omega^2+\omega_n^4}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.29ex; " SRC="img911.svg"
+ ALT="$\displaystyle \vert H_C(\omega)\vert^2=\frac{\omega_n^4}{(2\zeta\omega_n\omega)...
+...a^2)^2}
+=\frac{\omega_n^4}{\omega^4-(1-2\zeta^2)2\omega_n^2\omega^2+\omega_n^4}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">330</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+
+<UL>
+<LI>If <!-- MATH
+ $\zeta<1/\sqrt{2}=0.707$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img912.svg"
+ ALT="$\zeta&lt;1/\sqrt{2}=0.707$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img829.svg"
+ ALT="$\omega_r$"></SPAN> is real and <!-- MATH
+ $|H_C(\omega)|$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img913.svg"
+ ALT="$\vert H_C(\omega)\vert$"></SPAN>
+    has a maximum. In particular,
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+|H_{lp}(0)|\;<\;|H_{lp}(\omega_r)|^2=\frac{1}{4\zeta^2(1-\zeta^2)}
+      \;>\; |H_{lp}(\omega_n)|^2=\frac{1}{4\zeta^2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img914.svg"
+ ALT="$\displaystyle \vert H_{lp}(0)\vert\;&lt;\;\vert H_{lp}(\omega_r)\vert^2=\frac{1}{4\zeta^2(1-\zeta^2)}
+\;&gt;\; \vert H_{lp}(\omega_n)\vert^2=\frac{1}{4\zeta^2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">331</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+If <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img487.svg"
+ ALT="$\zeta$"></SPAN> is small, <!-- MATH
+ $\omega_r\approx\omega_n$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.46ex; " SRC="img892.svg"
+ ALT="$\omega_r\approx\omega_n$"></SPAN>. For example,
+    <!-- MATH
+ $\zeta=0.05$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img893.svg"
+ ALT="$\zeta=0.05$"></SPAN>, <!-- MATH
+ $\omega_r=0.9975\,\omega_n$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.46ex; " SRC="img915.svg"
+ ALT="$\omega_r=0.9975\,\omega_n$"></SPAN>. 
+
+<P>
+</LI>
+<LI>If <!-- MATH
+ $\zeta=1/\sqrt{2}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img895.svg"
+ ALT="$\zeta=1/\sqrt{2}$"></SPAN>, we have
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+|H_{lp}(0)|\;=\;|H_{lp}(\omega_r)|^2=1>|H_{lp}(\omega_n)|^2=\frac{1}{2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.88ex; vertical-align: -1.71ex; " SRC="img916.svg"
+ ALT="$\displaystyle \vert H_{lp}(0)\vert\;=\;\vert H_{lp}(\omega_r)\vert^2=1&gt;\vert H_{lp}(\omega_n)\vert^2=\frac{1}{2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">332</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+i.e., <!-- MATH
+ $|H_{lp}(\omega_n)|=1/\sqrt{2}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.78ex; " SRC="img917.svg"
+ ALT="$\vert H_{lp}(\omega_n)\vert=1/\sqrt{2}$"></SPAN>, or <!-- MATH
+ $20\log |H_{lp}(\omega_n)|=-3\,dB$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.78ex; " SRC="img918.svg"
+ ALT="$20\log \vert H_{lp}(\omega_n)\vert=-3\,dB$"></SPAN>,
+    <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img488.svg"
+ ALT="$\omega_n$"></SPAN> is the cut-off frequency of the LP filter.
+</LI>
+<LI>If <!-- MATH
+ $\zeta>1/\sqrt{2}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img900.svg"
+ ALT="$\zeta&gt;1/\sqrt{2}$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img829.svg"
+ ALT="$\omega_r$"></SPAN> is imaginary, indicating
+    there does not exist a frequency at which <!-- MATH
+ $H_C(\omega)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img919.svg"
+ ALT="$H_C(\omega)$"></SPAN> peaks. 
+  
+</LI>
+</UL>
+
+<P>
+</LI>
+</UL>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/E84SecondOrderFilter.png"
+ ALT="E84SecondOrderFilter.png">
+
+<P>
+At the natural frequency, the impedance of a series RCL circuit reaches
+minimum, consequently the current reaches maximum and so does the voltage 
+across the resistor. However, the voltage across the inductor reaches 
+maximum at a frequency slightly higher than the natural frequency, and 
+the voltage across the capacitor reaches maximum at a frequency slightly 
+lower than the resonant frequency, as shown in the linear and log-scale 
+plots below. (For Bode plots, see
+<A ID="tex2html11"
+  HREF="http://fourier.eng.hmc.edu/e59/lectures/e59/node40.html">here</A>.)
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/rcl_plots2.gif"
+ ALT="rcl_plots2.gif">
+<IMG STYLE=""
+ SRC="../figures/rcl_plots1.gif"
+ ALT="rcl_plots1.gif">
+
+<P>
+In summary,
+
+<P>
+
+<UL>
+<LI>Low-pass filter:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+H_{lp}=\frac{\omega_n^2}{(j\omega)^2+\triangle \omega j\omega+\omega_n^2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.29ex; " SRC="img920.svg"
+ ALT="$\displaystyle H_{lp}=\frac{\omega_n^2}{(j\omega)^2+\triangle \omega j\omega+\omega_n^2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">333</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>High-pass filter:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+H_{hp}=\frac{(j\omega)^2}{(j\omega)^2+\triangle \omega j\omega+\omega_n^2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.29ex; " SRC="img921.svg"
+ ALT="$\displaystyle H_{hp}=\frac{(j\omega)^2}{(j\omega)^2+\triangle \omega j\omega+\omega_n^2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">334</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>Band-pass filter:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+H_{bp}=\frac{\triangle\omega j\omega}{(j\omega)^2+\triangle \omega j\omega+\omega_n^2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img922.svg"
+ ALT="$\displaystyle H_{bp}=\frac{\triangle\omega j\omega}{(j\omega)^2+\triangle \omega j\omega+\omega_n^2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">335</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>Band-stop filter:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+H_{bs}=\frac{\omega_n^2+(j\omega)^2}{(j\omega)^2+\triangle \omega j\omega+\omega_n^2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.29ex; " SRC="img923.svg"
+ ALT="$\displaystyle H_{bs}=\frac{\omega_n^2+(j\omega)^2}{(j\omega)^2+\triangle \omega j\omega+\omega_n^2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">336</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+</UL>
+
+<P>
+For a parallel RCL circuit with current input, due to the duality between 
+current and voltage, parallel and series configuration, the same derivation
+of bandwidth can be carried out to obtain the same conclusions. 
+
+<P>
+While the phenomenon of resonance can be destructive in mechanical systems
+(for example, the famous story of the
+<A ID="tex2html12"
+  HREF="http://en.wikipedia.org/wiki/Angers_Bridge">Angers bridge</A>),
+and it therefore needs to be avoided, it can also be very useful in electrical
+system such as in the tuning circuit in radio or TV broadcasting.
+
+<P>
+<B>Example:</B> Given the RLC circuits below, find what kind of filters they
+are (HP, LP, BP, or BS).
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/LC_R.png"
+ ALT="LC_R.png">
+
+<P>
+The impedance of the parallel combination of <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img105.svg"
+ ALT="$L$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img104.svg"
+ ALT="$C$"></SPAN> is:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Z_{LC}=Z_C||Z_L=\frac{Z_LZ_C}{Z_L+Z_C}
+  =\frac{j\omega L/j\omega C}{j\omega L+1/j\omega C}
+  =\frac{j\omega L}{1-\omega^2 LC}
+  =\frac{j\omega L}{1-(\omega/\omega_n)^2 }
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img924.svg"
+ ALT="$\displaystyle Z_{LC}=Z_C\vert\vert Z_L=\frac{Z_LZ_C}{Z_L+Z_C}
+=\frac{j\omega L/...
+...a C}
+=\frac{j\omega L}{1-\omega^2 LC}
+=\frac{j\omega L}{1-(\omega/\omega_n)^2 }$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">337</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+At the resonant frequency <!-- MATH
+ $\omega=\omega_n=1/\sqrt{LC}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img517.svg"
+ ALT="$\omega=\omega_n=1/\sqrt{LC}$"></SPAN>, <!-- MATH
+ $Z_{LC}=\infty$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img925.svg"
+ ALT="$Z_{LC}=\infty$"></SPAN>
+(open-circuit):
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+|Z_{LC}|=\left\{\begin{array}{cc}0 & \omega=0\\\infty & \omega=\omega_n\\
+  0 & \omega=\infty\end{array}\right.
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 8.59ex; vertical-align: -3.72ex; " SRC="img926.svg"
+ ALT="$\displaystyle \vert Z_{LC}\vert=\left\{\begin{array}{cc}0 &amp; \omega=0\\ \infty &amp; \omega=\omega_n\\
+0 &amp; \omega=\infty\end{array}\right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">338</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+
+<UL>
+<LI>The FRF of the first circuit is
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+H_{LC}=\frac{Z_{LC}}{Z_{LC}+R}=\frac{\frac{j\omega L}{1-(\omega/\omega_n)^2}}{
+      \frac{j\omega L}{1-(\omega/\omega_n)^2 } +R}
+    =\frac{j\omega L}{j\omega L+R(1-(\omega/\omega_n)^2)}
+    =\frac{1}{1-j\frac{(1-(\omega/\omega_n)^2)}{\omega L/R}}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 7.90ex; vertical-align: -3.41ex; " SRC="img927.svg"
+ ALT="$\displaystyle H_{LC}=\frac{Z_{LC}}{Z_{LC}+R}=\frac{\frac{j\omega L}{1-(\omega/\...
+...-(\omega/\omega_n)^2)}
+=\frac{1}{1-j\frac{(1-(\omega/\omega_n)^2)}{\omega L/R}}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">339</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+When <!-- MATH
+ $\omega=\omega_n$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img832.svg"
+ ALT="$\omega=\omega_n$"></SPAN>, <!-- MATH
+ $Z_{LC}=\infty$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img925.svg"
+ ALT="$Z_{LC}=\infty$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img928.svg"
+ ALT="$H_{LC}=1$"></SPAN>. In this case
+  no current goes through <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img112.svg"
+ ALT="$R$"></SPAN> and the voltage drop across it is zero, 
+  then the output voltage is the same as the input voltage. Otherwise 
+  either <!-- MATH
+ $\omega>\omega_n$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.46ex; " SRC="img929.svg"
+ ALT="$\omega&gt;\omega_n$"></SPAN> or <!-- MATH
+ $\omega<\omega_n$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.46ex; " SRC="img930.svg"
+ ALT="$\omega&lt;\omega_n$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img931.svg"
+ ALT="$Z_{LC}$"></SPAN> is finite, the 
+  voltage across <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img112.svg"
+ ALT="$R$"></SPAN> is non-zero, the output voltage is reduced. This is
+  a band-pass filter:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+|H_{BP}|=\bigg|\frac{Z_C||Z_L}{R+Z_C||Z_L}\bigg|
+    =\left\{\begin{array}{cc}0&\omega\rightarrow 0\\
+    1&\omega=\omega_n\\0&\omega\rightarrow\infty\end{array}\right.
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 8.59ex; vertical-align: -3.72ex; " SRC="img932.svg"
+ ALT="$\displaystyle \vert H_{BP}\vert=\bigg\vert\frac{Z_C\vert\vert Z_L}{R+Z_C\vert\v...
+...rightarrow 0\\
+1&amp;\omega=\omega_n\\ 0&amp;\omega\rightarrow\infty\end{array}\right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">340</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+<LI>The FRF of the second circuit is
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+H_R=\frac{R}{Z_{LC}+R}=\frac{R}{\frac{j\omega L}{1-(\omega/\omega_n)^2}+R}
+    =\frac{1}{j\,\frac{\omega L/R}{1-(\omega/\omega_n)^2 }+1}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.74ex; vertical-align: -3.41ex; " SRC="img933.svg"
+ ALT="$\displaystyle H_R=\frac{R}{Z_{LC}+R}=\frac{R}{\frac{j\omega L}{1-(\omega/\omega_n)^2}+R}
+=\frac{1}{j\,\frac{\omega L/R}{1-(\omega/\omega_n)^2 }+1}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">341</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+when <!-- MATH
+ $\omega=\omega_n$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img832.svg"
+ ALT="$\omega=\omega_n$"></SPAN>, <!-- MATH
+ $Z_{LC}=\infty$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img925.svg"
+ ALT="$Z_{LC}=\infty$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img934.svg"
+ ALT="$H_R=0$"></SPAN>. In this case,
+  the LC parallel branch is an open-circuit, the output voltage is 
+  zero. Otherwise either <!-- MATH
+ $\omega>\omega_n$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.46ex; " SRC="img929.svg"
+ ALT="$\omega&gt;\omega_n$"></SPAN> or <!-- MATH
+ $\omega<\omega_n$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.46ex; " SRC="img930.svg"
+ ALT="$\omega&lt;\omega_n$"></SPAN>, 
+  <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img931.svg"
+ ALT="$Z_{LC}$"></SPAN> is finite, the voltage is non-zero. The circuit is a 
+  band-stop or band-block filter:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+|H_{BS}|=\bigg|\frac{R}{R+Z_C||Z_L}\bigg|
+    =\left\{\begin{array}{cc}1&\omega\rightarrow 0\\
+    0&\omega=\omega_n\\1&\omega\rightarrow\infty\end{array}\right.
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 8.59ex; vertical-align: -3.72ex; " SRC="img935.svg"
+ ALT="$\displaystyle \vert H_{BS}\vert=\bigg\vert\frac{R}{R+Z_C\vert\vert Z_L}\bigg\ve...
+...rightarrow 0\\
+0&amp;\omega=\omega_n\\ 1&amp;\omega\rightarrow\infty\end{array}\right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">342</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+</UL>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/BPBS.png"
+ ALT="BPBS.png">
+
+<P>
+<B>Example:</B> Find the bandwidth of each of the two filters above as 
+a function of <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img112.svg"
+ ALT="$R$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img104.svg"
+ ALT="$C$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img105.svg"
+ ALT="$L$"></SPAN>. Determine whether the peak frequency
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img488.svg"
+ ALT="$\omega_n$"></SPAN> is lower or higher than the center of the passing/stop
+band. Design a band-pass and a band-stop filter so that the peak
+frequency is <!-- MATH
+ $\omega_n=1000$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.46ex; " SRC="img936.svg"
+ ALT="$\omega_n=1000$"></SPAN> and the bandwidth is <!-- MATH
+ $\Delta\omega=100$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img937.svg"
+ ALT="$\Delta\omega=100$"></SPAN>.
+
+<P>
+The bandwidth is defined as <!-- MATH
+ $\Delta\omega=\omega_2-\omega_1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img938.svg"
+ ALT="$\Delta\omega=\omega_2-\omega_1$"></SPAN>, the
+difference between the two cut-off frequencies <!-- MATH
+ $\omega_1<\omega_n$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.46ex; " SRC="img939.svg"
+ ALT="$\omega_1&lt;\omega_n$"></SPAN> 
+and <!-- MATH
+ $\omega_2>\omega_n$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.46ex; " SRC="img940.svg"
+ ALT="$\omega_2&gt;\omega_n$"></SPAN> at which <!-- MATH
+ $|H|=1/\sqrt{2}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img941.svg"
+ ALT="$\vert H\vert=1/\sqrt{2}$"></SPAN>. For both filters,
+the cut-off frequencies can be found by solving
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+1-\left(\frac{\omega}{\omega_n}\right)^2 =\pm \frac{\omega L}{R}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.27ex; vertical-align: -2.32ex; " SRC="img942.svg"
+ ALT="$\displaystyle 1-\left(\frac{\omega}{\omega_n}\right)^2 =\pm \frac{\omega L}{R}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">343</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+i.e., the two filters always have the same bandwidth.
+
+<P>
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+1-\omega^2LC=\pm \omega L/R,\;\;\;\;\;
+  \omega^2\pm\frac{1}{RC}\omega-\frac{1}{LC}=0
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.88ex; vertical-align: -1.71ex; " SRC="img943.svg"
+ ALT="$\displaystyle 1-\omega^2LC=\pm \omega L/R,\;\;\;\;\;
+\omega^2\pm\frac{1}{RC}\omega-\frac{1}{LC}=0$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">344</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Solving these two quadratic equations and take the positive roots
+of each, we get
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\omega_{1,2}=\frac{1}{2}\left(\sqrt{\frac{1}{R^2C^2}+\frac{4}{LC}}\pm
+  \frac{1}{RC}\right)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 7.20ex; vertical-align: -3.02ex; " SRC="img944.svg"
+ ALT="$\displaystyle \omega_{1,2}=\frac{1}{2}\left(\sqrt{\frac{1}{R^2C^2}+\frac{4}{LC}}\pm
+\frac{1}{RC}\right)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">345</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The bandwidth is
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\Delta\omega=\omega_2-\omega_1=\frac{1}{RC}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.88ex; vertical-align: -1.71ex; " SRC="img945.svg"
+ ALT="$\displaystyle \Delta\omega=\omega_2-\omega_1=\frac{1}{RC}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">346</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The center of the bandwidth is greater than peak frequency:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\frac{\omega_1+\omega_2}{2}=\frac{1}{2}\sqrt{\frac{1}{R^2C^2}+\frac{4}{LC}}
+  >\frac{1}{\sqrt{LC}}=\omega_n
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.27ex; vertical-align: -2.28ex; " SRC="img946.svg"
+ ALT="$\displaystyle \frac{\omega_1+\omega_2}{2}=\frac{1}{2}\sqrt{\frac{1}{R^2C^2}+\frac{4}{LC}}
+&gt;\frac{1}{\sqrt{LC}}=\omega_n$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">347</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+Given the desired properties:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\omega_n=\frac{1}{\sqrt{LC}}=10^3,\;\;\;\;\;\;\;\Delta\omega=\frac{1}{RC}=10^2
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.28ex; " SRC="img947.svg"
+ ALT="$\displaystyle \omega_n=\frac{1}{\sqrt{LC}}=10^3,\;\;\;\;\;\;\;\Delta\omega=\frac{1}{RC}=10^2$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">348</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+we further get
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+LC=10^{-6},\;\;\;\;\;\;\;\;\;\;\;\;\;\;RC=10^{-2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.57ex; " SRC="img948.svg"
+ ALT="$\displaystyle LC=10^{-6},\;\;\;\;\;\;\;\;\;\;\;\;\;\;RC=10^{-2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">349</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+If we let <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img949.svg"
+ ALT="$R=100$"></SPAN>, then we get <!-- MATH
+ $C=10^{-4}\;F$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.12ex; " SRC="img950.svg"
+ ALT="$C=10^{-4}\;F$"></SPAN>, <!-- MATH
+ $L=10^{-2}\;H$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.12ex; " SRC="img951.svg"
+ ALT="$L=10^{-2}\;H$"></SPAN>, 
+and
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\omega_n=\frac{1}{\sqrt{LC}}=\frac{1}{\sqrt{10^{-6}}}=10^3,
+  \;\;\;\;\;
+  \Delta\omega=\frac{1}{RC}=\frac{1}{10^{-2}}=100
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.28ex; " SRC="img952.svg"
+ ALT="$\displaystyle \omega_n=\frac{1}{\sqrt{LC}}=\frac{1}{\sqrt{10^{-6}}}=10^3,
+\;\;\;\;\;
+\Delta\omega=\frac{1}{RC}=\frac{1}{10^{-2}}=100$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">350</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node19.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node16.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node17.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node19.html">Radio/TV Broadcasting and the</A>
+<B> Up:</B> <A
+ HREF="node16.html">Frequency Response Functions and</A>
+<B> Previous:</B> <A
+ HREF="node17.html">First-order system as a</A></DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

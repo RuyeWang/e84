@@ -1,0 +1,893 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Load/Source Matching for Maximum Power</TITLE>
+<META NAME="description" CONTENT="Load/Source Matching for Maximum Power">
+<META NAME="keywords" CONTENT="ch3">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="ch3.css">
+
+<LINK REL="next" HREF="node22.html">
+<LINK REL="previous" HREF="node20.html">
+<LINK REL="next" HREF="node22.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node22.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node20.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node22.html">Summary</A>
+<B> Up:</B> <A
+ HREF="node1.html">Chapter 3: AC Circuit</A>
+<B> Previous:</B> <A
+ HREF="node20.html">Real and Reactive Power</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION00019000000000000000">
+Load/Source Matching for Maximum Power</A>
+</H2>
+
+<P>
+<B>Maximize power delivery in AC systems</B>
+
+<P>
+Previously we considered the maximization of the power received by a
+resistive load <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1068.svg"
+ ALT="$R_L$"></SPAN>. This problem can be generalized to AC circuit containing
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img104.svg"
+ ALT="$C$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img105.svg"
+ ALT="$L$"></SPAN>, as well as <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img112.svg"
+ ALT="$R$"></SPAN>. Consider a voltage source composed of an ideal 
+voltage source <!-- MATH
+ $\dot{V}_0=V_{rms}\angle 0^\circ$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.46ex; " SRC="img1069.svg"
+ ALT="$\dot{V}_0=V_{rms}\angle 0^\circ$"></SPAN> in series with an internal 
+impedance <!-- MATH
+ $Z_0=R_0+jX_0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img1070.svg"
+ ALT="$Z_0=R_0+jX_0$"></SPAN>, and a load impedance <!-- MATH
+ $Z_L=R_L+jX_L$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img1071.svg"
+ ALT="$Z_L=R_L+jX_L$"></SPAN>. The load current
+is:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\dot{I}=\frac{\dot{V}_0}{Z_0+Z_L}=\frac{\dot{V}_0}{(R_0+R_L)+j(X_0+X_L)}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.27ex; vertical-align: -2.29ex; " SRC="img1072.svg"
+ ALT="$\displaystyle \dot{I}=\frac{\dot{V}_0}{Z_0+Z_L}=\frac{\dot{V}_0}{(R_0+R_L)+j(X_0+X_L)}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">395</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+And we have:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+|\dot{I}|^2=I^2_{rms}=\frac{|\dot{V}_0|^2}{|Z_0+Z_L|^2}
+  =\frac{V^2_{rms}}{(R_0+R_L)^2+(X_0+X_L)^2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.27ex; vertical-align: -2.29ex; " SRC="img1073.svg"
+ ALT="$\displaystyle \vert\dot{I}\vert^2=I^2_{rms}=\frac{\vert\dot{V}_0\vert^2}{\vert Z_0+Z_L\vert^2}
+=\frac{V^2_{rms}}{(R_0+R_L)^2+(X_0+X_L)^2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">396</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The real power consumed by the load is:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+P_L=I_{rms}^2 R_L =\frac{V^2_{rms}R_L}{(R_0+R_L)^2+(X_0+X_L)^2}
+  =\frac{V^2_{rms}R_L}{|Z_0+Z_L|^2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.29ex; " SRC="img1074.svg"
+ ALT="$\displaystyle P_L=I_{rms}^2 R_L =\frac{V^2_{rms}R_L}{(R_0+R_L)^2+(X_0+X_L)^2}
+=\frac{V^2_{rms}R_L}{\vert Z_0+Z_L\vert^2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">397</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The denominator is the squared magnitude of a complex variable
+<!-- MATH
+ $Z_0+Z_L=(R_0+R_L)+j(X_0+X_L)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1075.svg"
+ ALT="$Z_0+Z_L=(R_0+R_L)+j(X_0+X_L)$"></SPAN>, which is minimized if the imaginary part 
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1076.svg"
+ ALT="$X_0+X_L$"></SPAN> is zero, i.e., <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1077.svg"
+ ALT="$X_0=-X_L$"></SPAN> (while the real part <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1078.svg"
+ ALT="$R_0+R_L&gt;0$"></SPAN> is 
+always positive). Now <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1079.svg"
+ ALT="$P_L$"></SPAN> becomes:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+P_L=I_{rms}^2 R_L=\frac{V^2_{rms}R_L}{(R_0+R_L)^2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.29ex; " SRC="img1080.svg"
+ ALT="$\displaystyle P_L=I_{rms}^2 R_L=\frac{V^2_{rms}R_L}{(R_0+R_L)^2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">398</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+This is the power delivered to the load resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1068.svg"
+ ALT="$R_L$"></SPAN>, which is maximized
+if it matches the internal resistance of the source <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1081.svg"
+ ALT="$R_L=R_0$"></SPAN>, as discussed 
+before. Combining these two requirements <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1082.svg"
+ ALT="$X_L=-X_0$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1081.svg"
+ ALT="$R_L=R_0$"></SPAN>, we conclude
+that if <!-- MATH
+ $Z_L=R_L+jX_l=R_0-jX_0=Z_0^*$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.69ex; " SRC="img1083.svg"
+ ALT="$Z_L=R_L+jX_l=R_0-jX_0=Z_0^*$"></SPAN>, i.e., the load impedance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1084.svg"
+ ALT="$Z_L$"></SPAN> is the 
+complex conjugate of the internal impedance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1085.svg"
+ ALT="$Z_0$"></SPAN>, the load receives maximum
+power:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+P_L=\frac{V^2_{rms}R_L}{(R_0+R_L)^2}=\frac{V_{rms}^2}{4R_0}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.29ex; " SRC="img1086.svg"
+ ALT="$\displaystyle P_L=\frac{V^2_{rms}R_L}{(R_0+R_L)^2}=\frac{V_{rms}^2}{4R_0}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">399</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+<B>Example:</B>
+Find load impedance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1084.svg"
+ ALT="$Z_L$"></SPAN> so that it receives maximum power from the rest 
+of the circuit. Find this maximum power <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1079.svg"
+ ALT="$P_L$"></SPAN> and load current <SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.46ex; " SRC="img1087.svg"
+ ALT="$\dot{I}_L$"></SPAN>.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/ch3Ex1.gif"
+ ALT="ch3Ex1.gif">
+
+<P>
+Assume voltage source <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1088.svg"
+ ALT="$V_0=200 V$"></SPAN>, current source <!-- MATH
+ $I_0=j\;10 A$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img1089.svg"
+ ALT="$I_0=j\;10 A$"></SPAN>, and the 
+impedances of <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img112.svg"
+ ALT="$R$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img105.svg"
+ ALT="$L$"></SPAN>, and <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img104.svg"
+ ALT="$C$"></SPAN> are respectively <!-- MATH
+ $10\;\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img1090.svg"
+ ALT="$10\;\Omega$"></SPAN>, 
+<!-- MATH
+ $j\;10\;\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img1091.svg"
+ ALT="$j\;10\;\Omega$"></SPAN>, and <!-- MATH
+ $-j\;10\;\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img1092.svg"
+ ALT="$-j\;10\;\Omega$"></SPAN>. To solve this circuit, we can use 
+either Thevenin's voltage source or Norton's current source method.
+
+<P>
+
+<UL>
+<LI>Find <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1093.svg"
+ ALT="$Z_N=Z_T$"></SPAN>: turn off both voltage and current sources, find 
+  <!-- MATH
+ $Z_{RL}=Z_L+Z_R=10+j10$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img1094.svg"
+ ALT="$Z_{RL}=Z_L+Z_R=10+j10$"></SPAN> and the internal (Thevenin or Norton) impedance:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Z_N=Z_T=Z_{RL}||Z_C=\frac{Z_{RC}Z_C}{Z_{RC}+Z_C}
+    =\frac{-j10(10+j10)}{10+j10-j10}=10(1-j)=R_0+jX_0
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.16ex; " SRC="img1095.svg"
+ ALT="$\displaystyle Z_N=Z_T=Z_{RL}\vert\vert Z_C=\frac{Z_{RC}Z_C}{Z_{RC}+Z_C}
+=\frac{-j10(10+j10)}{10+j10-j10}=10(1-j)=R_0+jX_0$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">400</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+where <!-- MATH
+ $R_0=10\;\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1096.svg"
+ ALT="$R_0=10\;\Omega$"></SPAN>, <!-- MATH
+ $X_0=-10\;\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1097.svg"
+ ALT="$X_0=-10\;\Omega$"></SPAN>.
+</LI>
+<LI>Find open-circuit voltage <!-- MATH
+ $\dot{V}_T=\dot{V}_{oc}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.46ex; " SRC="img1098.svg"
+ ALT="$\dot{V}_T=\dot{V}_{oc}$"></SPAN> across load port 
+  by superposition principle. Due to voltage source alone:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\dot{V}'_{oc}=V_0\frac{Z_C}{Z_{RL}+Z_C}
+    =200\frac{-j10}{(10+j10)-j10}=-200j
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img1099.svg"
+ ALT="$\displaystyle \dot{V}'_{oc}=V_0\frac{Z_C}{Z_{RL}+Z_C}
+=200\frac{-j10}{(10+j10)-j10}=-200j$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">401</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Due to current source alone:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\dot{V}''_{oc}=I_0\;Z_{RL}||Z_C
+  =j10\frac{(10+j10)(-j10)}{(10+j10)-j10}=100+100j
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img1100.svg"
+ ALT="$\displaystyle \dot{V}''_{oc}=I_0\;Z_{RL}\vert\vert Z_C
+=j10\frac{(10+j10)(-j10)}{(10+j10)-j10}=100+100j$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">402</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Now we have
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\dot{V}_T=\dot{V}_{oc}=\dot{V}'_{oc}+\dot{V}''_{oc}=-200j+100+100j=100(1-j)
+    =100\sqrt{2}\angle(-45^\circ)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.25ex; vertical-align: -0.70ex; " SRC="img1101.svg"
+ ALT="$\displaystyle \dot{V}_T=\dot{V}_{oc}=\dot{V}'_{oc}+\dot{V}''_{oc}=-200j+100+100j=100(1-j)
+=100\sqrt{2}\angle(-45^\circ)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">403</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>Find short-circuit current <!-- MATH
+ $\dot{I}_N=\dot{I}_{sc}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.46ex; " SRC="img1102.svg"
+ ALT="$\dot{I}_N=\dot{I}_{sc}$"></SPAN> through load port
+  by superposition principle:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\dot{I}_N=I_0+\frac{V_0}{Z_{RL}}
+    =10j+\frac{200}{10+10j}=10j+\frac{20(1-j)}{(1+j)(1-j)}=10
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img1103.svg"
+ ALT="$\displaystyle \dot{I}_N=I_0+\frac{V_0}{Z_{RL}}
+=10j+\frac{200}{10+10j}=10j+\frac{20(1-j)}{(1+j)(1-j)}=10$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">404</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+</UL>
+The relationship between the Norton current and Thevenin voltage can be
+verified:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\dot{I}_N Z_N=10\times10(1-j)=100(1-j)=100\sqrt{2}\angle(-45^\circ)=\dot{V}_T
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.25ex; vertical-align: -0.70ex; " SRC="img1104.svg"
+ ALT="$\displaystyle \dot{I}_N Z_N=10\times10(1-j)=100(1-j)=100\sqrt{2}\angle(-45^\circ)=\dot{V}_T$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">405</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+For the load to receive maximum power, it needs to be
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Z_L=Z_T^*=Z_N^*=R_0-jX_0=10(1+j)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1105.svg"
+ ALT="$\displaystyle Z_L=Z_T^*=Z_N^*=R_0-jX_0=10(1+j)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">406</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The maximum power delivered to load is:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+P_L=\frac{V^2_{rms}}{4R_0}=\frac{(100\sqrt{2})^2}{4\times 10}=500\;W
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.06ex; " SRC="img1106.svg"
+ ALT="$\displaystyle P_L=\frac{V^2_{rms}}{4R_0}=\frac{(100\sqrt{2})^2}{4\times 10}=500\;W$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">407</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The current through the load is:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\dot{I}=\frac{\dot{V}}{2R_0}=\frac{100\sqrt{2}\angle(-45^\circ)}{20}
+  =5\sqrt{2}\angle (-45^\circ)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.06ex; " SRC="img1107.svg"
+ ALT="$\displaystyle \dot{I}=\frac{\dot{V}}{2R_0}=\frac{100\sqrt{2}\angle(-45^\circ)}{20}
+=5\sqrt{2}\angle (-45^\circ)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">408</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+<B>Geometric mean method</B>
+
+<P>
+The load resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1068.svg"
+ ALT="$R_L$"></SPAN> will receive maximum power only if it matches the 
+internal resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1108.svg"
+ ALT="$R_0$"></SPAN> of the voltage source, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1081.svg"
+ ALT="$R_L=R_0$"></SPAN>. However, when
+<!-- MATH
+ $R_L\ne R_0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img1109.svg"
+ ALT="$R_L\ne R_0$"></SPAN>, the resistance match can still be achieved by inserting a 
+matching circuit between the source and load as shown in the figure. 
+
+<P>
+The matching circuit is composed of two capacitors <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1110.svg"
+ ALT="$C_1=C_2$"></SPAN> of the same 
+impedance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img1111.svg"
+ ALT="$-jX$"></SPAN> and an inductor <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img105.svg"
+ ALT="$L$"></SPAN> of impedance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img1112.svg"
+ ALT="$jX$"></SPAN>. Alternatively, the 
+two capacitors and the inductor in the matching circuit can be replaced by 
+two inductors and a capacitor. If the frequency of the voltage source is 
+<!-- MATH
+ $\omega=2\pi f$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img1113.svg"
+ ALT="$\omega=2\pi f$"></SPAN>, then <!-- MATH
+ $X=\omega L=1/\omega C$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1114.svg"
+ ALT="$X=\omega L=1/\omega C$"></SPAN>, i.e., <!-- MATH
+ $LC=1/\omega^2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img1115.svg"
+ ALT="$LC=1/\omega^2$"></SPAN>.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/matchingcircuits.gif"
+ ALT="matchingcircuits.gif">
+
+<P>
+The total impedance of the new load composed of all four components <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1110.svg"
+ ALT="$C_1=C_2$"></SPAN>,
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img105.svg"
+ ALT="$L$"></SPAN> as well as <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1068.svg"
+ ALT="$R_L$"></SPAN> is real (resistive):
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Z_L=-jX+jX || (R_L-jX)=-jX+\frac{jX(R_L-jX)}{R_L}=\frac{X^2}{R_L}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.06ex; " SRC="img1116.svg"
+ ALT="$\displaystyle Z_L=-jX+jX \vert\vert (R_L-jX)=-jX+\frac{jX(R_L-jX)}{R_L}=\frac{X^2}{R_L}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">409</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Or, in the alternative case, the impedance of the new load is the same:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Z_L=jX+(-jX) || (R_L+jX)=jX+\frac{-jX(R_L+jX)}{R_L}=\frac{X^2}{R_L}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.06ex; " SRC="img1117.svg"
+ ALT="$\displaystyle Z_L=jX+(-jX) \vert\vert (R_L+jX)=jX+\frac{-jX(R_L+jX)}{R_L}=\frac{X^2}{R_L}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">410</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+For this load impedance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1084.svg"
+ ALT="$Z_L$"></SPAN> to match the internal resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1108.svg"
+ ALT="$R_0$"></SPAN> of the 
+source, we have
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Z_L=\frac{X^2}{R_L}=R_0,\;\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;\;\;X=\sqrt{R_0R_L}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.06ex; " SRC="img1118.svg"
+ ALT="$\displaystyle Z_L=\frac{X^2}{R_L}=R_0,\;\;\;\;\;\;$">i.e.<IMG STYLE="height: 3.25ex; vertical-align: -0.67ex; " SRC="img1119.svg"
+ ALT="$\displaystyle \;\;\;\;\;\;\;X=\sqrt{R_0R_L}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">411</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+i.e., the reactance <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img59.svg"
+ ALT="$X$"></SPAN> is the geometric mean of the source and load resistances
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1108.svg"
+ ALT="$R_0$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1068.svg"
+ ALT="$R_L$"></SPAN>. Note that the matching circuit consumes no real power as it 
+does not have any resistance. We can verify that the power consumed by <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1068.svg"
+ ALT="$R_L$"></SPAN> is 
+<!-- MATH
+ $P_L=V^2/4R_0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img1120.svg"
+ ALT="$P_L=V^2/4R_0$"></SPAN>.
+
+<P>
+This method can be generalized to any AC circuit composed of a voltage 
+source with an internal impedance <!-- MATH
+ $Z_0=R_0+jX_0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img1070.svg"
+ ALT="$Z_0=R_0+jX_0$"></SPAN> and load impedance 
+<!-- MATH
+ $Z_L=R_L+jX_L$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img1071.svg"
+ ALT="$Z_L=R_L+jX_L$"></SPAN> in the following two steps:
+
+<UL>
+<LI>First we replace the impedance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img1111.svg"
+ ALT="$-jX$"></SPAN> of capacitor <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img599.svg"
+ ALT="$C_2$"></SPAN> in series 
+  with the load by <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1121.svg"
+ ALT="$-j(X+X_L)$"></SPAN>, so that the additional reactance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1122.svg"
+ ALT="$-X_L$"></SPAN> 
+  cancels the load reactance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1123.svg"
+ ALT="$X_L$"></SPAN>, and the impedance in the load branch
+  is <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img1124.svg"
+ ALT="$R_L-jX$"></SPAN>.
+</LI>
+<LI>Next we replace the impedance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img1111.svg"
+ ALT="$-jX$"></SPAN> of capacitor <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img598.svg"
+ ALT="$C_1$"></SPAN> in series 
+  with the source by <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1125.svg"
+ ALT="$-j(X+X_0)$"></SPAN>, so that the additional reactance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img1126.svg"
+ ALT="$-jX_0$"></SPAN>
+  cancels the source reactance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1127.svg"
+ ALT="$X_0$"></SPAN>, and the impedance in the source
+  branch is <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img1128.svg"
+ ALT="$R_0-jX$"></SPAN>.
+</LI>
+<LI>We can show that the impedance of the equivalent load composed 
+  of <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1125.svg"
+ ALT="$-j(X+X_0)$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img1112.svg"
+ ALT="$jX$"></SPAN>, and <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1121.svg"
+ ALT="$-j(X+X_L)$"></SPAN> of the matching circuit and 
+  <!-- MATH
+ $Z_L=R_L+jX_L$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img1071.svg"
+ ALT="$Z_L=R_L+jX_L$"></SPAN> of the load is indeed the complex conjugate of the
+  internal impedance <!-- MATH
+ $Z_L=R_0+jX_0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img1129.svg"
+ ALT="$Z_L=R_0+jX_0$"></SPAN> of the source:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Z_L=-j(X+X_0)+jX || (R_L-jX)=-j(X+X_0)+\frac{jX(R_L-jX)}{R_L}
+    =\frac{X^2}{R_L}-jX_0=R_0-jX_0 =Z^*_0
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.06ex; " SRC="img1130.svg"
+ ALT="$\displaystyle Z_L=-j(X+X_0)+jX \vert\vert (R_L-jX)=-j(X+X_0)+\frac{jX(R_L-jX)}{R_L}
+=\frac{X^2}{R_L}-jX_0=R_0-jX_0 =Z^*_0$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">412</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+i.e., now the load-source resistance match is achieved. 
+</LI>
+</UL>
+
+<P>
+As this method requires a fixed reactance <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img59.svg"
+ ALT="$X$"></SPAN>, it is valid for single
+frequency <!-- MATH
+ $\omega=1/\sqrt{LC}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img1131.svg"
+ ALT="$\omega=1/\sqrt{LC}$"></SPAN>.
+
+<P>
+<B>Example:</B> An audio amplification circuit with an output voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img329.svg"
+ ALT="$V_0$"></SPAN>
+and internal resistance <!-- MATH
+ $R_0=200\;\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1132.svg"
+ ALT="$R_0=200\;\Omega$"></SPAN> is used to drive a speaker with 
+<!-- MATH
+ $R_L=8\;\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1133.svg"
+ ALT="$R_L=8\;\Omega$"></SPAN>. 
+The power received by the speaker is:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+P_L=I^2R_L=\frac{V_0^2}{(R_0+R_L)^2}R_L=V_0^2\frac{8}{208^2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.29ex; " SRC="img1134.svg"
+ ALT="$\displaystyle P_L=I^2R_L=\frac{V_0^2}{(R_0+R_L)^2}R_L=V_0^2\frac{8}{208^2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">413</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The power consumed by the internal resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1108.svg"
+ ALT="$R_0$"></SPAN> is:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+P_0=I^2R_0=\frac{V_0^2}{(R_0+R_L)^2}R_0=V_0^2\frac{200}{208^2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.29ex; " SRC="img1135.svg"
+ ALT="$\displaystyle P_0=I^2R_0=\frac{V_0^2}{(R_0+R_L)^2}R_0=V_0^2\frac{200}{208^2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">414</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The total power delivered is:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+P_T=P_L+P_0=\frac{V_0^2}{R_0 || R_L} =V_0^2\frac{208}{208^2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.29ex; " SRC="img1136.svg"
+ ALT="$\displaystyle P_T=P_L+P_0=\frac{V_0^2}{R_0 \vert\vert R_L} =V_0^2\frac{208}{208^2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">415</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The speaker gets only <!-- MATH
+ $P_L/P_T=8/208=3.8\%$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1137.svg"
+ ALT="$P_L/P_T=8/208=3.8\%$"></SPAN> of the total power, while the 
+remaining <!-- MATH
+ $P_0/P_T=200/208=96.2\%$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1138.svg"
+ ALT="$P_0/P_T=200/208=96.2\%$"></SPAN> of the power is consumed internally. 
+
+<P>
+To maximize the power delivered to the speaker, we add a matching circuit 
+composed of <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1110.svg"
+ ALT="$C_1=C_2$"></SPAN> with impedance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img1139.svg"
+ ALT="$Z_C=-jX$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img105.svg"
+ ALT="$L$"></SPAN> with impedance 
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img1140.svg"
+ ALT="$X_L=jX$"></SPAN>. When <!-- MATH
+ $X=\sqrt{R_0R_L}=\sqrt{1600}=40$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.55ex; " SRC="img1141.svg"
+ ALT="$X=\sqrt{R_0R_L}=\sqrt{1600}=40$"></SPAN>, the resistance of the new
+load <!-- MATH
+ $R'_L=200\;\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.76ex; " SRC="img1142.svg"
+ ALT="$R'_L=200\;\Omega$"></SPAN> matches the internal resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1108.svg"
+ ALT="$R_0$"></SPAN> of the source,
+and the speaker receives maximum power of <!-- MATH
+ $P_L=V_0^2/4R_0=V^2/800$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img1143.svg"
+ ALT="$P_L=V_0^2/4R_0=V^2/800$"></SPAN> (half of
+the total power <!-- MATH
+ $P_T=V^2/2R_0=V^2/400$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img1144.svg"
+ ALT="$P_T=V^2/2R_0=V^2/400$"></SPAN>), 6.76 times the power without
+the matching circuit. 
+
+<P>
+As the frequency in the system is not constant, the matching is achieved
+only at one particular frequency, typically chosen to be the middle of
+the frequency range. 
+
+<P>
+<B>Matching resistances by a transformer</B>
+
+<P>
+An ideal transformer can be used to match the load <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1068.svg"
+ ALT="$R_L$"></SPAN> to the internal 
+resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1108.svg"
+ ALT="$R_0$"></SPAN> of the source. Recall the following relations for an ideal 
+transformer
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+P_1=V_1I_1=P_2=V_2I_2,\;\;\;\;\mbox{i.e.}\;\;\;\;
+  \frac{I_2}{I_1}=\frac{V_1}{V_2}=\frac{n_1}{n_2}=r
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img1145.svg"
+ ALT="$\displaystyle P_1=V_1I_1=P_2=V_2I_2,\;\;\;\;$">i.e.<IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img1146.svg"
+ ALT="$\displaystyle \;\;\;\;
+\frac{I_2}{I_1}=\frac{V_1}{V_2}=\frac{n_1}{n_2}=r$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">416</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+where <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1147.svg"
+ ALT="$r=n_1/n_2$"></SPAN> is the turn ratio. As <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1148.svg"
+ ALT="$V_2=V_1/r$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1149.svg"
+ ALT="$I_2=rI_1$"></SPAN>, we have 
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+R_L=\frac{V_2}{I_2}=\frac{V_1/r}{rI_1}=\frac{1}{r^2}\frac{V_1}{I_1}
+  =\frac{R'_L}{r^2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.06ex; " SRC="img1150.svg"
+ ALT="$\displaystyle R_L=\frac{V_2}{I_2}=\frac{V_1/r}{rI_1}=\frac{1}{r^2}\frac{V_1}{I_1}
+=\frac{R'_L}{r^2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">417</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+where we have defined <!-- MATH
+ $R'_L=V_1/I_1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.76ex; " SRC="img1151.svg"
+ ALT="$R'_L=V_1/I_1$"></SPAN>, which is related to the real load by
+<!-- MATH
+ $R'_L=r^2 R_L$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.76ex; " SRC="img1152.svg"
+ ALT="$R'_L=r^2 R_L$"></SPAN>. For the load to receive maximum power <SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.76ex; " SRC="img1153.svg"
+ ALT="$P_L=P'_L$"></SPAN>, we need to 
+match the equivalent load resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.76ex; " SRC="img1154.svg"
+ ALT="$R'_L$"></SPAN> to match <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1108.svg"
+ ALT="$R_0$"></SPAN>:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+R_0=R'_L=r^2 R_L,\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;
+  r=\frac{n_1}{n_2}=\sqrt{\frac{R_0}{R_L}}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.69ex; " SRC="img1155.svg"
+ ALT="$\displaystyle R_0=R'_L=r^2 R_L,\;\;\;\;\;$">i.e.<IMG STYLE="height: 6.04ex; vertical-align: -2.08ex; " SRC="img1156.svg"
+ ALT="$\displaystyle \;\;\;\;\;
+r=\frac{n_1}{n_2}=\sqrt{\frac{R_0}{R_L}}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">418</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/transformerexample.gif"
+ ALT="transformerexample.gif">
+
+<P>
+<B>Example:</B> In the previous example with <!-- MATH
+ $R_0=200\;\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1132.svg"
+ ALT="$R_0=200\;\Omega$"></SPAN>, 
+<!-- MATH
+ $R_L=8\;\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1133.svg"
+ ALT="$R_L=8\;\Omega$"></SPAN>, a transformer with turn ratio of 
+<!-- MATH
+ $r=\sqrt{R_0/R_L}=\sqrt{200/8}=5$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.25ex; vertical-align: -0.82ex; " SRC="img1157.svg"
+ ALT="$r=\sqrt{R_0/R_L}=\sqrt{200/8}=5$"></SPAN> can be used to match the load
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1158.svg"
+ ALT="$R_L=8$"></SPAN> to internal resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1159.svg"
+ ALT="$R_0=200$"></SPAN>.
+
+<P>
+<B>Example:</B> <!-- MATH
+ $R_0=1000\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1160.svg"
+ ALT="$R_0=1000\Omega$"></SPAN>, <!-- MATH
+ $R_L=10\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1161.svg"
+ ALT="$R_L=10\Omega$"></SPAN>, and the voltage 
+source is <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img1162.svg"
+ ALT="$V=12V$"></SPAN>. Find the turn ratio of the transformer so that 
+the load resistor will get maximum power from the voltage source.
+
+<P>
+When the load resistor receives maximum power if its resistance 
+is equal to the internal resistance of the voltage source. 
+
+<UL>
+<LI>Convert load resistance on the secondary side <!-- MATH
+ $R_L=10\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1161.svg"
+ ALT="$R_L=10\Omega$"></SPAN> to 
+	<!-- MATH
+ $R'_L=r^2\; R_L=10\; r^2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.76ex; " SRC="img1163.svg"
+ ALT="$R'_L=r^2\; R_L=10\; r^2$"></SPAN> on the primary side.
+</LI>
+<LI>Match <!-- MATH
+ $R'_L=10\;r^2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.76ex; " SRC="img1164.svg"
+ ALT="$R'_L=10\;r^2$"></SPAN> to <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1108.svg"
+ ALT="$R_0$"></SPAN>, i.e., <!-- MATH
+ $10\; r^2=1000\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.12ex; " SRC="img1165.svg"
+ ALT="$10\; r^2=1000\Omega$"></SPAN>
+</LI>
+<LI>Find turn ratio <!-- MATH
+ $r=n_1/n_2=10$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1166.svg"
+ ALT="$r=n_1/n_2=10$"></SPAN>.
+</LI>
+<LI>Find power consumption on <SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.76ex; " SRC="img1154.svg"
+ ALT="$R'_L$"></SPAN>: 
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+P=\frac{V}{4R'_L}=36/1000=0.036W
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.39ex; " SRC="img1167.svg"
+ ALT="$\displaystyle P=\frac{V}{4R'_L}=36/1000=0.036W$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">419</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>The power consumed by real load <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1068.svg"
+ ALT="$R_L$"></SPAN> is the same, due to ideal 
+transformer.
+</LI>
+</UL>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node22.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node20.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node22.html">Summary</A>
+<B> Up:</B> <A
+ HREF="node1.html">Chapter 3: AC Circuit</A>
+<B> Previous:</B> <A
+ HREF="node20.html">Real and Reactive Power</A></DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

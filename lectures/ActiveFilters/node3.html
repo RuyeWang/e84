@@ -1,0 +1,643 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>The Sallen-Key filters</TITLE>
+<META NAME="description" CONTENT="The Sallen-Key filters">
+<META NAME="keywords" CONTENT="ActiveFilters">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="ActiveFilters.css">
+
+<LINK REL="next" HREF="node4.html">
+<LINK REL="previous" HREF="node2.html">
+<LINK REL="next" HREF="node4.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node4.html">The Twin-T notch (band-stop)</A>
+<B> Up:</B> <A
+ HREF="node1.html">Chapter 6: Active Filter</A>
+<B> Previous:</B> <A
+ HREF="node2.html">First and Second Order</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION00012000000000000000">
+The Sallen-Key filters</A>
+</H2>
+
+<P>
+The
+<A ID="tex2html1"
+  HREF="http://en.wikipedia.org/wiki/Sallen-Key_topology">Sallen-Key filters</A>
+are second-order active filters (low-pass, high-pass, and band-pass) that 
+can be easily implemented using the configuration below:
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/SallenKey.gif"
+ ALT="SallenKey.gif">
+
+<P>
+We represent all voltages in phasor form. Due to the virtual ground 
+assumption, <!-- MATH
+ $V_b\approx V_{out}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img44.svg"
+ ALT="$V_b\approx V_{out}$"></SPAN> at non-inverting input is virtually 
+the same as that at the inverting input, which is connected to the 
+output <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img45.svg"
+ ALT="$V_{out}$"></SPAN>. Applying KCL to nodes a and b to get:
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+\frac{V_a-V_{in}}{Z_1}+\frac{V_a-V_{out}}{Z_3}+\frac{V_a-V_{out}}{Z_2}
+=\frac{V_a-V_{in}}{Z_1}+(V_a-V_{out})\left(\frac{1}{Z_3}+\frac{1}{Z_2}\right)=0
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img46.svg"
+ ALT="$\displaystyle \frac{V_a-V_{in}}{Z_1}+\frac{V_a-V_{out}}{Z_3}+\frac{V_a-V_{out}}...
+...frac{V_a-V_{in}}{Z_1}+(V_a-V_{out})\left(\frac{1}{Z_3}+\frac{1}{Z_2}\right)=0
+$"> 
+
+(<SPAN CLASS="arabic">8</SPAN>)
+</DIV>
+and
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+\frac{V_{out}-V_a}{Z_2}+\frac{V_{out}}{Z_4}=0,
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img47.svg"
+ ALT="$\displaystyle \frac{V_{out}-V_a}{Z_2}+\frac{V_{out}}{Z_4}=0,
+$"> 
+
+(<SPAN CLASS="arabic">9</SPAN>)
+</DIV>
+The second equation can also be written as
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+V_a-V_{out}=V_{out}\frac{Z_2}{Z_4}, \;\;\;\;\;\;\;V_a=V_{out}\frac{Z_2+Z_4}{Z_4}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img48.svg"
+ ALT="$\displaystyle V_a-V_{out}=V_{out}\frac{Z_2}{Z_4}, \;\;\;\;\;\;\;V_a=V_{out}\frac{Z_2+Z_4}{Z_4}
+$"> 
+
+(<SPAN CLASS="arabic">10</SPAN>)
+</DIV>
+Substituting these into the first equation we get 
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+V_{out}\;\left(\frac{Z_2+Z_4}{Z_1Z_4}+\frac{Z_2}{Z_3Z_4}+\frac{Z_2}{Z_2Z_4} \right)
+=\frac{V_{in}}{Z_1}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img49.svg"
+ ALT="$\displaystyle V_{out}\;\left(\frac{Z_2+Z_4}{Z_1Z_4}+\frac{Z_2}{Z_3Z_4}+\frac{Z_2}{Z_2Z_4} \right)
+=\frac{V_{in}}{Z_1}
+$"> 
+
+(<SPAN CLASS="arabic">11</SPAN>)
+</DIV>
+Now the frequency response of the Sallen-Key filter can be found as
+the ratio of <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img45.svg"
+ ALT="$V_{out}$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img50.svg"
+ ALT="$V_{in}$"></SPAN>:
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+H&=&\frac{V_{out}}{V_{in}}=\frac{Z_3Z_4}{Z_1Z_2+Z_1Z_3+Z_2Z_3+Z_3Z_4}
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img51.svg"
+ ALT="$\displaystyle H$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img2.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img52.svg"
+ ALT="$\displaystyle \frac{V_{out}}{V_{in}}=\frac{Z_3Z_4}{Z_1Z_2+Z_1Z_3+Z_2Z_3+Z_3Z_4}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">12</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+
+<UL>
+<LI><B>Second order low-pass filter</B>
+
+<P>
+If we let <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img53.svg"
+ ALT="$Z_1=R_1$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img54.svg"
+ ALT="$Z_2=R_2$"></SPAN>, <!-- MATH
+ $Z_3=1/j\omega C_1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img55.svg"
+ ALT="$Z_3=1/j\omega C_1$"></SPAN>, <!-- MATH
+ $Z_4=1/j\omega C_2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img56.svg"
+ ALT="$Z_4=1/j\omega C_2$"></SPAN>, 
+  the FRF becomes (see
+  <A ID="tex2html2"
+  HREF="../ActiveFilters_sub/index.html">here</A>):
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+H(j\omega)=\frac{\omega_n^2}{(j\omega)^2+\Delta\omega\;j\omega+\omega_n^2}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 6.04ex; vertical-align: -2.29ex; " SRC="img57.svg"
+ ALT="$\displaystyle H(j\omega)=\frac{\omega_n^2}{(j\omega)^2+\Delta\omega\;j\omega+\omega_n^2}
+$"> 
+
+(<SPAN CLASS="arabic">13</SPAN>)
+</DIV>
+where
+  
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+\omega_n=\frac{1}{\sqrt{R_1R_2C_1C_2}},\;\;\;\;\;\;\;
+  \Delta\omega=\frac{1}{(R_1||R_2)C_1}=\frac{1}{R_pC_1},\;\;\;\;
+  R_p=R_1||R_2=\frac{R_1R_2}{R_1+R_2}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.81ex; vertical-align: -2.37ex; " SRC="img58.svg"
+ ALT="$\displaystyle \omega_n=\frac{1}{\sqrt{R_1R_2C_1C_2}},\;\;\;\;\;\;\;
+\Delta\ome...
+...)C_1}=\frac{1}{R_pC_1},\;\;\;\;
+R_p=R_1\vert\vert R_2=\frac{R_1R_2}{R_1+R_2}
+$"> 
+
+(<SPAN CLASS="arabic">14</SPAN>)
+</DIV>
+and
+  
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+Q=\frac{\omega_n}{\Delta\omega}=\frac{\sqrt{R_1R_2C_1C_2}}{(R_1+R_2)C_2},
+  \;\;\;\;\;
+  \zeta=\frac{1}{2Q}=\frac{(R_1+R_2)C_2}{2\sqrt{R_1R_2C_1C_2}}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 6.04ex; vertical-align: -2.29ex; " SRC="img59.svg"
+ ALT="$\displaystyle Q=\frac{\omega_n}{\Delta\omega}=\frac{\sqrt{R_1R_2C_1C_2}}{(R_1+R...
+...2},
+\;\;\;\;\;
+\zeta=\frac{1}{2Q}=\frac{(R_1+R_2)C_2}{2\sqrt{R_1R_2C_1C_2}}
+$"> 
+
+(<SPAN CLASS="arabic">15</SPAN>)
+</DIV>
+As there are only two parameters <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img60.svg"
+ ALT="$\omega_n$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img61.svg"
+ ALT="$\zeta$"></SPAN> or <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img62.svg"
+ ALT="$Q=1/2\zeta$"></SPAN> 
+  to satisfy, we can arbitrarily set any two of the four variables <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img63.svg"
+ ALT="$R_1$"></SPAN>, 
+  <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img64.svg"
+ ALT="$R_2$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img65.svg"
+ ALT="$C_1$"></SPAN>, and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img66.svg"
+ ALT="$C_2$"></SPAN>, and then solve for the other two. For example, 
+  for convenience, if we let <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img67.svg"
+ ALT="$R_1=R_2=1$"></SPAN>, we get
+  
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+\omega_n=\frac{1}{\sqrt{C_1C_2}},\;\;\;\;\;\Delta\omega=\frac{1}{C_1}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.57ex; vertical-align: -2.28ex; " SRC="img68.svg"
+ ALT="$\displaystyle \omega_n=\frac{1}{\sqrt{C_1C_2}},\;\;\;\;\;\Delta\omega=\frac{1}{C_1}
+$"> 
+
+(<SPAN CLASS="arabic">16</SPAN>)
+</DIV>
+
+<P>
+</LI>
+<LI><B>Second order high-pass filter</B>
+
+<P>
+If we let <!-- MATH
+ $Z_1=1/j\omega C_1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img69.svg"
+ ALT="$Z_1=1/j\omega C_1$"></SPAN>, <!-- MATH
+ $Z_2=1/j\omega C_2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img70.svg"
+ ALT="$Z_2=1/j\omega C_2$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img71.svg"
+ ALT="$Z_3=R_1$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img72.svg"
+ ALT="$Z_4=R_2$"></SPAN>, 
+  the FRF becomes (see
+  <A ID="tex2html3"
+  HREF="../ActiveFilters_sub/index.html">here</A>):
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+H(j\omega)=\frac{(j\omega)^2}{(j\omega)^2+\Delta\omega\;j\omega+\omega_n^2}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 6.04ex; vertical-align: -2.29ex; " SRC="img73.svg"
+ ALT="$\displaystyle H(j\omega)=\frac{(j\omega)^2}{(j\omega)^2+\Delta\omega\;j\omega+\omega_n^2}
+$"> 
+
+(<SPAN CLASS="arabic">17</SPAN>)
+</DIV>
+where 
+  
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+\omega_n=\frac{1}{\sqrt{R_1R_2C_1C_2}},\;\;\;\;\;\;\;
+  \Delta\omega=\frac{1}{C_sR_2},\;\;\;\;\;
+  C_s=\frac{C_1C_2}{C_1+C_2}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.57ex; vertical-align: -2.28ex; " SRC="img74.svg"
+ ALT="$\displaystyle \omega_n=\frac{1}{\sqrt{R_1R_2C_1C_2}},\;\;\;\;\;\;\;
+\Delta\omega=\frac{1}{C_sR_2},\;\;\;\;\;
+C_s=\frac{C_1C_2}{C_1+C_2}
+$"> 
+
+(<SPAN CLASS="arabic">18</SPAN>)
+</DIV>
+and
+  
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+Q=\frac{\sqrt{R_1R_2C_1C_2}}{(C_1+C_2)R_1},\;\;\;\;\;\;
+  \zeta=\frac{1}{2Q}=\frac{(C_1+C_2)R_1}{2\sqrt{R_1R_2C_1C_2}}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 6.04ex; vertical-align: -2.29ex; " SRC="img75.svg"
+ ALT="$\displaystyle Q=\frac{\sqrt{R_1R_2C_1C_2}}{(C_1+C_2)R_1},\;\;\;\;\;\;
+\zeta=\frac{1}{2Q}=\frac{(C_1+C_2)R_1}{2\sqrt{R_1R_2C_1C_2}}
+$"> 
+
+(<SPAN CLASS="arabic">19</SPAN>)
+</DIV>
+
+<P>
+</LI>
+<LI><B>Band-pass filter</B>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/SallenKeyBP.png"
+ ALT="SallenKeyBP.png">
+
+<P>
+By voltage divider and virtual ground, we get
+  
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+V_2=\frac{R_a}{R_a+R_b}V_{out}=kV_{out},\;\;\;\;\;\;\;\left(k=\frac{R_a}{R_a+R_b}\right)
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img76.svg"
+ ALT="$\displaystyle V_2=\frac{R_a}{R_a+R_b}V_{out}=kV_{out},\;\;\;\;\;\;\;\left(k=\frac{R_a}{R_a+R_b}\right)
+$"> 
+
+(<SPAN CLASS="arabic">20</SPAN>)
+</DIV>
+Apply KCL to node <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img77.svg"
+ ALT="$V_2$"></SPAN> to get:
+  
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+\frac{V_1-V_2}{Z_2}=\frac{V_2}{Z_4},\;\;\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;
+  V_1=V_2\left(\frac{1}{Z_2}+\frac{1}{Z_4}\right)Z_2
+  =V_2\left(1+\frac{Z_2}{Z_4}\right)
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img78.svg"
+ ALT="$\displaystyle \frac{V_1-V_2}{Z_2}=\frac{V_2}{Z_4},\;\;\;\;\;\;\;\mbox{i.e.}\;\;...
+...eft(\frac{1}{Z_2}+\frac{1}{Z_4}\right)Z_2
+=V_2\left(1+\frac{Z_2}{Z_4}\right)
+$"> 
+
+(<SPAN CLASS="arabic">21</SPAN>)
+</DIV>
+Apply KCL to node <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img79.svg"
+ ALT="$V_1$"></SPAN> to get:
+  
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+\frac{V_{in}-V_1}{Z_1}+\frac{V_{out}-V_1}{R_f}+\frac{V_2-V_1}{Z_2}
+  =\frac{V_1}{Z_3}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.81ex; vertical-align: -2.37ex; " SRC="img80.svg"
+ ALT="$\displaystyle \frac{V_{in}-V_1}{Z_1}+\frac{V_{out}-V_1}{R_f}+\frac{V_2-V_1}{Z_2}
+=\frac{V_1}{Z_3}
+$"> 
+
+(<SPAN CLASS="arabic">22</SPAN>)
+</DIV>
+Rearrange the terms, and replace <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img79.svg"
+ ALT="$V_1$"></SPAN> by <!-- MATH
+ $V_2(1+Z_2/Z_4)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img81.svg"
+ ALT="$V_2(1+Z_2/Z_4)$"></SPAN> to get
+  <BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+&&\frac{V_{in}}{Z_1}+\frac{V_{out}}{R_f}+\frac{V_2}{Z_2}
+    =V_1\left(\frac{1}{Z_1}+\frac{1}{R_f}+\frac{1}{Z_2}+\frac{1}{Z_3}\right)
+    \nonumber\\
+    &=&V_2\left(1+\frac{Z_2}{Z_4}\right)\left(\frac{1}{Z_1}
+    +\frac{1}{R_f}+\frac{1}{Z_2}+\frac{1}{Z_3}\right)
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 6.04ex; vertical-align: -2.37ex; " SRC="img82.svg"
+ ALT="$\displaystyle \frac{V_{in}}{Z_1}+\frac{V_{out}}{R_f}+\frac{V_2}{Z_2}
+=V_1\left(\frac{1}{Z_1}+\frac{1}{R_f}+\frac{1}{Z_2}+\frac{1}{Z_3}\right)$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img2.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 6.04ex; vertical-align: -2.37ex; " SRC="img83.svg"
+ ALT="$\displaystyle V_2\left(1+\frac{Z_2}{Z_4}\right)\left(\frac{1}{Z_1}
++\frac{1}{R_f}+\frac{1}{Z_2}+\frac{1}{Z_3}\right)$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">23</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Further rearrange the terms and replace <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img77.svg"
+ ALT="$V_2$"></SPAN> by <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img84.svg"
+ ALT="$kV_{out}$"></SPAN> to get
+  
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+\frac{V_{in}}{Z_1}+\frac{V_{out}}{R_f}
+  =kV_{out}\left[\left(1+\frac{Z_2}{Z_4}\right)\left(\frac{1}{Z_1}+\frac{1}{R_f}
+    +\frac{1}{Z_2}+\frac{1}{Z_3}\right)-\frac{1}{Z_2}\right]
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 6.04ex; vertical-align: -2.37ex; " SRC="img85.svg"
+ ALT="$\displaystyle \frac{V_{in}}{Z_1}+\frac{V_{out}}{R_f}
+=kV_{out}\left[\left(1+\f...
+...{Z_1}+\frac{1}{R_f}
++\frac{1}{Z_2}+\frac{1}{Z_3}\right)-\frac{1}{Z_2}\right]
+$"> 
+
+(<SPAN CLASS="arabic">24</SPAN>)
+</DIV>
+Further rearrange the terms
+  <BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+\frac{V_{in}}{Z_1}&=&kV_{out}\left[\left(1+\frac{Z_2}{Z_4}\right)
+\left(\frac{1}{Z_1}
+      +\frac{1}{R_f}+\frac{1}{Z_2}+\frac{1}{Z_3}\right)-\frac{1}{Z_2}\right]-\frac{V_{out}}{R_f}
+    \nonumber \\
+    &=&
+    V_{out}\left\{k\left[\left(1+\frac{Z_2}{Z_4}\right)\left(\frac{1}{Z_1}
+      +\frac{1}{R_f}+\frac{1}{Z_2}+\frac{1}{Z_3}\right)-\frac{1}{Z_2}\right]-\frac{1}{R_f}\right\}
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img86.svg"
+ ALT="$\displaystyle \frac{V_{in}}{Z_1}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img2.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 6.04ex; vertical-align: -2.37ex; " SRC="img87.svg"
+ ALT="$\displaystyle kV_{out}\left[\left(1+\frac{Z_2}{Z_4}\right)
+\left(\frac{1}{Z_1}
+...
+..._f}+\frac{1}{Z_2}+\frac{1}{Z_3}\right)-\frac{1}{Z_2}\right]-\frac{V_{out}}{R_f}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img2.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 6.04ex; vertical-align: -2.37ex; " SRC="img88.svg"
+ ALT="$\displaystyle V_{out}\left\{k\left[\left(1+\frac{Z_2}{Z_4}\right)\left(\frac{1}...
+...}+\frac{1}{Z_2}+\frac{1}{Z_3}\right)-\frac{1}{Z_2}\right]-\frac{1}{R_f}\right\}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">25</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Finally we get the frequency response function:
+  <BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+H=\frac{V_{out}}{V_{in}}&=&
+    \frac{1}{Z_1\left\{k\left[\left(1+\frac{Z_2}{Z_4}\right)\left(\frac{1}{Z_1}+\frac{1}{R_f}+\frac{1}{Z_2}+\frac{1}{Z_3}\right)-\frac{1}{Z_2}\right]-\frac{1}{R_f}\right\}}
+    \nonumber \\
+    &=&
+    \frac{1/k}{Z_1\left[\left(1+\frac{Z_2}{Z_4}\right)\left(\frac{1}{Z_1}+\frac{1}{R_f}+\frac{1}{Z_2}+\frac{1}{Z_3}\right)-\frac{1}{Z_2}\right]-\frac{Z_1}{kR_f}}
+    \nonumber \\
+    &=&
+    \frac{1/k}{1+\frac{Z_1}{R_f}+\frac{Z_1}{Z_3}+\frac{Z_2}{Z_4}+\frac{Z_1Z_2}{Z_4R_f}+\frac{Z_1}{Z_4}+\frac{Z_1Z_2}{Z_3Z_4}-\frac{Z_1}{kR_f}}
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img89.svg"
+ ALT="$\displaystyle H=\frac{V_{out}}{V_{in}}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img2.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 7.20ex; vertical-align: -4.04ex; " SRC="img90.svg"
+ ALT="$\displaystyle \frac{1}{Z_1\left\{k\left[\left(1+\frac{Z_2}{Z_4}\right)\left(\fr...
+...+\frac{1}{Z_2}+\frac{1}{Z_3}\right)-\frac{1}{Z_2}\right]-\frac{1}{R_f}\right\}}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img2.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 7.66ex; vertical-align: -4.04ex; " SRC="img91.svg"
+ ALT="$\displaystyle \frac{1/k}{Z_1\left[\left(1+\frac{Z_2}{Z_4}\right)\left(\frac{1}{...
+...{R_f}+\frac{1}{Z_2}+\frac{1}{Z_3}\right)-\frac{1}{Z_2}\right]-\frac{Z_1}{kR_f}}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img2.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 6.74ex; vertical-align: -3.20ex; " SRC="img92.svg"
+ ALT="$\displaystyle \frac{1/k}{1+\frac{Z_1}{R_f}+\frac{Z_1}{Z_3}+\frac{Z_2}{Z_4}+\frac{Z_1Z_2}{Z_4R_f}+\frac{Z_1}{Z_4}+\frac{Z_1Z_2}{Z_3Z_4}-\frac{Z_1}{kR_f}}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">26</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Now if we let
+  
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+Z_1=R_1,\;\;\;\;\;Z_4=R_2,\;\;\;\;Z_2=\frac{1}{j\omega C_2},
+  \;\;\;\;Z_3=\frac{1}{j\omega C_1}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.34ex; vertical-align: -2.16ex; " SRC="img93.svg"
+ ALT="$\displaystyle Z_1=R_1,\;\;\;\;\;Z_4=R_2,\;\;\;\;Z_2=\frac{1}{j\omega C_2},
+\;\;\;\;Z_3=\frac{1}{j\omega C_1}
+$"> 
+
+(<SPAN CLASS="arabic">27</SPAN>)
+</DIV>
+the frequency response function becomes
+  <BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+H&=&\frac{\left(1+\frac{R_b}{R_a}\right)\frac{1}{R_1C_1}j\omega}{(j\omega)^2+\left(\frac{1}{R_2C_1}+\frac{1}{R_2C_2}+\frac{1}{R_1C_1}-\frac{R_b}{R_aR_fC_1}\right)j\omega+\frac{R_1+R_f}{R_fR_1R_2C_1C_2}}
+  \nonumber\\
+  &=&\frac{Aj\omega}{(j\omega)^2+\Delta\omega j\omega+\omega_n^2},
+  \;\;\;\;\;\;\;\;\;
+  A=(1+R_b/R_a)/R_1C_1
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img51.svg"
+ ALT="$\displaystyle H$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img2.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 9.29ex; vertical-align: -4.04ex; " SRC="img94.svg"
+ ALT="$\displaystyle \frac{\left(1+\frac{R_b}{R_a}\right)\frac{1}{R_1C_1}j\omega}{(j\o...
+...1}{R_1C_1}-\frac{R_b}{R_aR_fC_1}\right)j\omega+\frac{R_1+R_f}{R_fR_1R_2C_1C_2}}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img2.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img95.svg"
+ ALT="$\displaystyle \frac{Aj\omega}{(j\omega)^2+\Delta\omega j\omega+\omega_n^2},
+\;\;\;\;\;\;\;\;\;
+A=(1+R_b/R_a)/R_1C_1$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">28</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+This is a band-pass filter with the peak frequency equal to the natural
+  frequency:
+  
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+\omega_n=\sqrt{\frac{R_1+R_f}{R_fR_1R_2C_1C_2}}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 7.43ex; vertical-align: -2.93ex; " SRC="img96.svg"
+ ALT="$\displaystyle \omega_n=\sqrt{\frac{R_1+R_f}{R_fR_1R_2C_1C_2}}
+$"> 
+
+(<SPAN CLASS="arabic">29</SPAN>)
+</DIV>
+the bandwidth
+  
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+\Delta\omega=\frac{1}{R_2C_1}+\frac{1}{R_2C_2}+\frac{1}{R_1C_1}-\frac{R_b}{R_aR_fC_1}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.81ex; vertical-align: -2.37ex; " SRC="img97.svg"
+ ALT="$\displaystyle \Delta\omega=\frac{1}{R_2C_1}+\frac{1}{R_2C_2}+\frac{1}{R_1C_1}-\frac{R_b}{R_aR_fC_1}
+$"> 
+
+(<SPAN CLASS="arabic">30</SPAN>)
+</DIV>
+The gain of the filter is controlled by <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img98.svg"
+ ALT="$1+R_b/R_a$"></SPAN>.
+
+<P>
+</LI>
+</UL>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node4.html">The Twin-T notch (band-stop)</A>
+<B> Up:</B> <A
+ HREF="node1.html">Chapter 6: Active Filter</A>
+<B> Previous:</B> <A
+ HREF="node2.html">First and Second Order</A></DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

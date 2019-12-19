@@ -1,0 +1,1120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>The wave equations</TITLE>
+<META NAME="description" CONTENT="The wave equations">
+<META NAME="keywords" CONTENT="transmission_line">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="transmission_line.css">
+
+<LINK REL="next" HREF="node2.html">
+<LINK REL="previous" HREF="transmission_line.html">
+<LINK REL="up" HREF="transmission_line.html">
+<LINK REL="next" HREF="node2.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html19"
+  HREF="node2.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html17"
+  HREF="transmission_line.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html11"
+  HREF="transmission_line.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html20"
+  HREF="node2.html">Reflection and termination</A>
+<B> Up:</B> <A NAME="tex2html18"
+  HREF="transmission_line.html">transmission_line</A>
+<B> Previous:</B> <A NAME="tex2html12"
+  HREF="transmission_line.html">transmission_line</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00010000000000000000">
+The wave equations</A>
+</H1>
+
+<P>
+As shown in the figure, a transmission line can be modeled by its 
+resistance and inductance in series, and the conductance and capacitance
+in parallel, all distributed along its length in <IMG
+ WIDTH="14" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.png"
+ ALT="$x$"> direction. Here <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$R$">,
+<IMG
+ WIDTH="16" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.png"
+ ALT="$L$">, <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img4.png"
+ ALT="$G$"> and <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.png"
+ ALT="$C$"> represent, respectively, the resistance, inductance, 
+conductance, and capacitance per unit length
+( <!-- MATH
+ $[ohm]/[meter],\;[siemens]/[meter],\;[henry]/[meter],\;[farad]/[meter]$
+ -->
+<IMG
+ WIDTH="529" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.png"
+ ALT="$[ohm]/[meter],\;[siemens]/[meter],\;[henry]/[meter],\;[farad]/[meter] $">).
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../TransmissionLine.gif"
+ ALT="TransmissionLine.gif">
+
+<P>
+The voltage <IMG
+ WIDTH="51" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.png"
+ ALT="$v(x,t)$"> and current <IMG
+ WIDTH="48" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.png"
+ ALT="$i(x,t)$"> along the transmission line are 
+functions of both time variable <IMG
+ WIDTH="11" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$t$"> and space variable <IMG
+ WIDTH="14" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.png"
+ ALT="$x$">. Across an
+infinitesimal section <IMG
+ WIDTH="30" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.png"
+ ALT="$\triangle x$"> along the line, the voltage and current
+changes are
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\triangle v=-R\triangle x\; i-L\triangle x \;\frac{di}{dt},
+\;\;\;\;\;\;\;\;\;\;\;\;
+\triangle i=-G\triangle x\; v-C\triangle x\; \frac{dv}{dt}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="456" HEIGHT="42" BORDER="0"
+ SRC="img11.png"
+ ALT="\begin{displaymath}\triangle v=-R\triangle x\; i-L\triangle x \;\frac{di}{dt},
+\...
+...;\;
+\triangle i=-G\triangle x\; v-C\triangle x\; \frac{dv}{dt} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Dividing both sides of these equations by <IMG
+ WIDTH="30" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.png"
+ ALT="$\triangle x$"> and let 
+<!-- MATH
+ $\triangle x\rightarrow 0$
+ -->
+<IMG
+ WIDTH="65" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.png"
+ ALT="$\triangle x\rightarrow 0$"> we get the <EM>telegrapher's equations</EM>:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\frac{\partial v}{\partial x}+L \frac{\partial i}{\partial t}+Ri=0,
+\;\;\;\;\;\;\;\;\;\;\;\;
+\frac{\partial i}{\partial x}+C \frac{\partial v}{\partial t}+Gv=0
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="372" HEIGHT="42" BORDER="0"
+ SRC="img13.png"
+ ALT="\begin{displaymath}
+\frac{\partial v}{\partial x}+L \frac{\partial i}{\partial t...
+...c{\partial i}{\partial x}+C \frac{\partial v}{\partial t}+Gv=0
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+These coupled partial differential equations (PDEs) of two variables <IMG
+ WIDTH="14" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.png"
+ ALT="$x$"> and 
+<IMG
+ WIDTH="11" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$t$">, called the telegrapher's equations, can be more conveniently solved by 
+the Fourier transform method. We denote the Fourier transforms of the voltage
+and current with respect of <IMG
+ WIDTH="11" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$t$"> (<IMG
+ WIDTH="14" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.png"
+ ALT="$x$"> treated as a parameter) as
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+{\cal F}[v(x,t)]=V(x,\omega),\;\;\;\;\;\;\;\;\;\;\;{\cal F}[i(x,t)]=I(x,\omega)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="353" HEIGHT="31" BORDER="0"
+ SRC="img14.png"
+ ALT="\begin{displaymath}{\cal F}[v(x,t)]=V(x,\omega),\;\;\;\;\;\;\;\;\;\;\;{\cal F}[i(x,t)]=I(x,\omega) \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+For convenience we may sometimes denote the voltage <IMG
+ WIDTH="61" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.png"
+ ALT="$V(x,\omega)$"> and current 
+<IMG
+ WIDTH="56" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.png"
+ ALT="$I(x,\omega)$"> in the Fourier domain as <IMG
+ WIDTH="42" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$V(x)$"> and <IMG
+ WIDTH="37" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.png"
+ ALT="$I(x)$"> or simply <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img19.png"
+ ALT="$V$"> and <IMG
+ WIDTH="13" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img20.png"
+ ALT="$I$">.
+Taking the Fourier transform on both sides of the two PDEs we get two ordinary 
+differential equations (ODEs) with respect to a single variable <IMG
+ WIDTH="14" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.png"
+ ALT="$x$">:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\frac{dV(x)}{dx}+(R+j\omega L)I(x)=0,
+\;\;\;\;\;\;\;\;\frac{dI(x)}{dx}+(G+j\omega C)V(x)=0
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="478" HEIGHT="43" BORDER="0"
+ SRC="img21.png"
+ ALT="\begin{displaymath}
+\frac{dV(x)}{dx}+(R+j\omega L)I(x)=0,
+\;\;\;\;\;\;\;\;\frac{dI(x)}{dx}+(G+j\omega C)V(x)=0
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+These ODEs can also be obtained when both voltage <IMG
+ WIDTH="51" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.png"
+ ALT="$v(x,t)$"> and current <IMG
+ WIDTH="48" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.png"
+ ALT="$i(x,t)$"> 
+are represented respectively as phasors <IMG
+ WIDTH="42" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$V(x)$"> and <IMG
+ WIDTH="37" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.png"
+ ALT="$I(x)$">, and the transmission 
+line is represented in terms of the impedances <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$R$">, <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img4.png"
+ ALT="$G$">, <IMG
+ WIDTH="36" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.png"
+ ALT="$j\omega L$">, and 
+<IMG
+ WIDTH="55" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img23.png"
+ ALT="$1/j\omega C$">. Therefore the variables <IMG
+ WIDTH="42" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$V(x)$"> and <IMG
+ WIDTH="37" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.png"
+ ALT="$I(x)$"> in the ODEs can be 
+considered as either the Fourier transform or the phasor representations of 
+the voltage <IMG
+ WIDTH="51" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.png"
+ ALT="$v(x,t)$"> and current <IMG
+ WIDTH="48" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.png"
+ ALT="$i(x,t)$">.
+
+<P>
+Combining the two equations we get
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\frac{d^2V}{dx^2}=(R+j\omega L)(G+j\omega C)V=s^2V,
+\;\;\;\;\;\;\;\;
+\frac{d^2I}{dx^2}=(j\omega C+R)(j\omega C+G)I=s^2I
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="572" HEIGHT="45" BORDER="0"
+ SRC="img24.png"
+ ALT="\begin{displaymath}\frac{d^2V}{dx^2}=(R+j\omega L)(G+j\omega C)V=s^2V,
+\;\;\;\;\;\;\;\;
+\frac{d^2I}{dx^2}=(j\omega C+R)(j\omega C+G)I=s^2I \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where we have defined
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+s=\sqrt{(j\omega L+R)(j\omega C+G)}=s_R+js_I=|s| e^{j\angle s}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="367" HEIGHT="35" BORDER="0"
+ SRC="img25.png"
+ ALT="\begin{displaymath}s=\sqrt{(j\omega L+R)(j\omega C+G)}=s_R+js_I=\vert s\vert e^{j\angle s} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+with 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+|s|=\left[ (RG-\omega^2LC)^2+(\omega LG+\omega CR)^2\right]^{1/4},
+\;\;\;\;\;\;\;\;\;\;\;\;\;\;
+\angle s=\frac{1}{2}\tan^{-1}\left(\frac{\omega LG+\omega CR}{RG-\omega^2LC}\right)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="632" HEIGHT="45" BORDER="0"
+ SRC="img26.png"
+ ALT="\begin{displaymath}\vert s\vert=\left[ (RG-\omega^2LC)^2+(\omega LG+\omega CR)^2...
+...\tan^{-1}\left(\frac{\omega LG+\omega CR}{RG-\omega^2LC}\right)\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+and
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+s_R=|s|\cos\angle s,\;\;\;\;\;\;\;s_I=|s|\sin\angle s
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="252" HEIGHT="31" BORDER="0"
+ SRC="img27.png"
+ ALT="\begin{displaymath}s_R=\vert s\vert\cos\angle s,\;\;\;\;\;\;\;s_I=\vert s\vert\sin\angle s \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+The solutions of these two second order ODEs can be found to be:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V(x)=V_f e^{-xs}+V_b e^{xs}=V_F(x)+V_B(x),
+\;\;\;\;\;\;\;\; I(x)=I_f e^{-xs}+I_b e^{xs}=I_F(x)+I_B(x)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="614" HEIGHT="32" BORDER="0"
+ SRC="img28.png"
+ ALT="\begin{displaymath}V(x)=V_f e^{-xs}+V_b e^{xs}=V_F(x)+V_B(x),
+\;\;\;\;\;\;\;\; I(x)=I_f e^{-xs}+I_b e^{xs}=I_F(x)+I_B(x) \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where we have defined
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V_F(x)=V_f e^{-st},\;\;\;\;\;V_B(x)=V_b e^{st};\;\;\;\;\;
+I_F(x)=I_f e^{-st},\;\;\;\;\;I_B(x)=I_b e^{st}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="530" HEIGHT="32" BORDER="0"
+ SRC="img29.png"
+ ALT="\begin{displaymath}V_F(x)=V_f e^{-st},\;\;\;\;\;V_B(x)=V_b e^{st};\;\;\;\;\;
+I_F(x)=I_f e^{-st},\;\;\;\;\;I_B(x)=I_b e^{st} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Here <IMG
+ WIDTH="27" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img30.png"
+ ALT="$e^{sx}$"> and <IMG
+ WIDTH="38" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img31.png"
+ ALT="$e^{-sx}$"> are the two particular solutions, weighted by 
+the arbitrary constants <IMG
+ WIDTH="21" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.png"
+ ALT="$V_b$"> and <IMG
+ WIDTH="23" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img33.png"
+ ALT="$V_f$">, which are to be determined based 
+on the boundary conditions <!-- MATH
+ $V(0)={\cal F}[v(0,t)]$
+ -->
+<IMG
+ WIDTH="133" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.png"
+ ALT="$V(0)={\cal F}[v(0,t)]$"> at the front and 
+<!-- MATH
+ $V(l)={\cal F}[v(l,t)]$
+ -->
+<IMG
+ WIDTH="127" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img35.png"
+ ALT="$V(l)={\cal F}[v(l,t)]$"> at the back end of the transmission line of length 
+<IMG
+ WIDTH="10" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.png"
+ ALT="$l$">. Note that <IMG
+ WIDTH="23" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img33.png"
+ ALT="$V_f$"> and <IMG
+ WIDTH="21" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.png"
+ ALT="$V_b$"> are constants with respect to variable <IMG
+ WIDTH="14" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.png"
+ ALT="$x$">, 
+but in time domain, they are still functions of variable <IMG
+ WIDTH="11" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$t$">. Constant <IMG
+ WIDTH="21" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img37.png"
+ ALT="$I_f$"> 
+and <IMG
+ WIDTH="18" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img38.png"
+ ALT="$I_b$"> can be found the same way.
+
+<P>
+Substituting <!-- MATH
+ $V(x)=V_fe^{-xs}+V_be^{xs}$
+ -->
+<IMG
+ WIDTH="178" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img39.png"
+ ALT="$V(x)=V_fe^{-xs}+V_be^{xs}$"> into the equation 
+<!-- MATH
+ $dV(x)/dx+(R+j\omega L)I(x)=0$
+ -->
+<IMG
+ WIDTH="244" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img40.png"
+ ALT="$dV(x)/dx+(R+j\omega L)I(x)=0$"> and solving for <IMG
+ WIDTH="37" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.png"
+ ALT="$I(x)$">, we get
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+I(x)=-\frac{1}{j\omega L+R}\frac{dV(x)}{dx}
+  =\frac{s}{(j\omega L+R)}[V_f e^{-xs}-V_b e^{xs}]
+  =\sqrt{\frac{j\omega C+G}{j\omega L+R}}\;[V_f e^{-xs}-V_b e^{xs}]
+  =\frac{1}{Z_0}\;[V_f e^{-xs}-V_b e^{xs}]
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="807" HEIGHT="55" BORDER="0"
+ SRC="img41.png"
+ ALT="\begin{displaymath}I(x)=-\frac{1}{j\omega L+R}\frac{dV(x)}{dx}
+=\frac{s}{(j\ome...
+... e^{-xs}-V_b e^{xs}]
+=\frac{1}{Z_0}\;[V_f e^{-xs}-V_b e^{xs}]
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Z_0=\sqrt{\frac{j\omega L+R}{j\omega C+G}}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="130" HEIGHT="55" BORDER="0"
+ SRC="img42.png"
+ ALT="\begin{displaymath}Z_0=\sqrt{\frac{j\omega L+R}{j\omega C+G}} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+is the <EM>characteristic impedance</EM> of the transmission line measured in ohm. 
+Comparing the two expressions of <IMG
+ WIDTH="37" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.png"
+ ALT="$I(x)$"> above, we see that
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+I_f=\frac{V_f}{Z_0},\;\;\;\;\;\;I_b=\frac{V_b}{-Z_0},
+\;\;\;\;\;\;\;\;\;\;\;\;I(x)=I_f e^{-xs}+I_b e^{xs}
+=\frac{V_f}{Z_0}e^{-xs}-\frac{V_b}{Z_0}e^{xs}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="550" HEIGHT="45" BORDER="0"
+ SRC="img43.png"
+ ALT="\begin{displaymath}I_f=\frac{V_f}{Z_0},\;\;\;\;\;\;I_b=\frac{V_b}{-Z_0},
+\;\;\;\...
+...{-xs}+I_b e^{xs}
+=\frac{V_f}{Z_0}e^{-xs}-\frac{V_b}{Z_0}e^{xs} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+<B>Lossless transmission line</B>
+
+<P>
+When the frequency <IMG
+ WIDTH="16" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img44.png"
+ ALT="$\omega$"> is high, <IMG
+ WIDTH="28" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img45.png"
+ ALT="$\omega L$"> and <IMG
+ WIDTH="29" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img46.png"
+ ALT="$\omega C$"> are much
+greater than <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$R$"> and <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img4.png"
+ ALT="$G$">, we can assume the transmission line is <EM>loss-less</EM> 
+with <IMG
+ WIDTH="86" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img47.png"
+ ALT="$R=G=0$">. In this case the two ODEs above become
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\frac{dV(x)}{dx}+j\omega L\,I(x)=0,\;\;\;\;\;\;\;\;\frac{dI(x)}{dx}+j\omega C\,V(x)=0
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="387" HEIGHT="43" BORDER="0"
+ SRC="img48.png"
+ ALT="\begin{displaymath}
+\frac{dV(x)}{dx}+j\omega L\,I(x)=0,\;\;\;\;\;\;\;\;\frac{dI(x)}{dx}+j\omega C\,V(x)=0
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+and we also have
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Z_0 = \sqrt{L/C},\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;
+s = \sqrt{-\omega^2 LC}=\pm j\omega\sqrt{LC}=\pm j\omega/\mu
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="478" HEIGHT="35" BORDER="0"
+ SRC="img49.png"
+ ALT="\begin{displaymath}Z_0 = \sqrt{L/C},\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;
+s = \sqrt{-\omega^2 LC}=\pm j\omega\sqrt{LC}=\pm j\omega/\mu \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where <IMG
+ WIDTH="15" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img50.png"
+ ALT="$\mu$"> the transmission speed (measued in meter/second) defined as
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\mu=1/\sqrt{LC}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="91" HEIGHT="31" BORDER="0"
+ SRC="img51.png"
+ ALT="\begin{displaymath}\mu=1/\sqrt{LC} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+and
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V(x) = V_f e^{-sx}+V_b e^{sx} = V_f e^{-j\omega x/\mu}+V_b e^{j\omega x/\mu}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="355" HEIGHT="32" BORDER="0"
+ SRC="img52.png"
+ ALT="\begin{displaymath}V(x) = V_f e^{-sx}+V_b e^{sx} = V_f e^{-j\omega x/\mu}+V_b e^{j\omega x/\mu}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+I(x) = I_f e^{-j\omega x/\mu}+I_b e^{j\omega x/\mu}
+=\frac{1}{Z_0}\left(V_fe^{-j\omega x/\mu}-V_be^{j\omega x/\mu} \right)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="438" HEIGHT="44" BORDER="0"
+ SRC="img53.png"
+ ALT="\begin{displaymath}I(x) = I_f e^{-j\omega x/\mu}+I_b e^{j\omega x/\mu}
+=\frac{1}{Z_0}\left(V_fe^{-j\omega x/\mu}-V_be^{j\omega x/\mu} \right) \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The voltage and current in time domain can be obtained as the inverse Fourier
+transforms of <!-- MATH
+ $V(x)=V(x,\omega)$
+ -->
+<IMG
+ WIDTH="122" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img54.png"
+ ALT="$V(x)=V(x,\omega)$"> and <!-- MATH
+ $I(x)=I(x,\omega)$
+ -->
+<IMG
+ WIDTH="112" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img55.png"
+ ALT="$I(x)=I(x,\omega)$">:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v(x,t)={\cal F}^{-1}[V(x,\omega)]={\cal F}^{-1}[V_f e^{-j\omega x/\mu}+V_b e^{j\omega x/\mu}]
+=v_f(t-x/\mu)+v_b(t+x/\mu)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="579" HEIGHT="32" BORDER="0"
+ SRC="img56.png"
+ ALT="\begin{displaymath}v(x,t)={\cal F}^{-1}[V(x,\omega)]={\cal F}^{-1}[V_f e^{-j\omega x/\mu}+V_b e^{j\omega x/\mu}]
+=v_f(t-x/\mu)+v_b(t+x/\mu)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+and
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+i(x,t)={\cal F}^{-1}[I(x,\omega)]={\cal F}^{-1}[I_f e^{-j\omega x/\mu}+I_b e^{j\omega x/\mu}]
+  =v_f(t-x/\mu)+v_b(t+x/\mu)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="566" HEIGHT="32" BORDER="0"
+ SRC="img57.png"
+ ALT="\begin{displaymath}i(x,t)={\cal F}^{-1}[I(x,\omega)]={\cal F}^{-1}[I_f e^{-j\omega x/\mu}+I_b e^{j\omega x/\mu}]
+=v_f(t-x/\mu)+v_b(t+x/\mu)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_f(t)={\cal F}[V_f],\;\;\;v_b(t)={\cal F}[V_b],\;\;\;\;\;\;\;
+   i_f(t)={\cal F}[I_f],\;\;\;i_b(t)={\cal F}[I_b]
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="478" HEIGHT="32" BORDER="0"
+ SRC="img58.png"
+ ALT="\begin{displaymath}v_f(t)={\cal F}[V_f],\;\;\;v_b(t)={\cal F}[V_b],\;\;\;\;\;\;\;
+i_f(t)={\cal F}[I_f],\;\;\;i_b(t)={\cal F}[I_b] \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Both <IMG
+ WIDTH="51" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.png"
+ ALT="$v(x,t)$"> and <IMG
+ WIDTH="48" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.png"
+ ALT="$i(x,t)$"> are composed of two components traveling at velocity
+<IMG
+ WIDTH="15" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img50.png"
+ ALT="$\mu$"> in opposite directions along the transmission line. The time for the wave
+to travel the whole length <IMG
+ WIDTH="10" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.png"
+ ALT="$l$"> of the transmission line is <IMG
+ WIDTH="65" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$T=l/\mu$">. At the 
+front (<IMG
+ WIDTH="46" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.png"
+ ALT="$x=0$">) and back (<IMG
+ WIDTH="43" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img61.png"
+ ALT="$x=l$">) ends of the line we have
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V(x)\big|_{x=0}=V(0)=V_f+V_b=V_F(0)+V_B(0)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="338" HEIGHT="32" BORDER="0"
+ SRC="img62.png"
+ ALT="\begin{displaymath}V(x)\big\vert _{x=0}=V(0)=V_f+V_b=V_F(0)+V_B(0) \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V(x)\big|_{x=l}=V(l)=V_f e^{-sl/\mu}+V_b e^{-sl/\mu}
+=V_f e^{-j\omega T}+V_b e^{-j\omega T}=V_F(l)+V_B(l)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="560" HEIGHT="32" BORDER="0"
+ SRC="img63.png"
+ ALT="\begin{displaymath}V(x)\big\vert _{x=l}=V(l)=V_f e^{-sl/\mu}+V_b e^{-sl/\mu}
+=V_f e^{-j\omega T}+V_b e^{-j\omega T}=V_F(l)+V_B(l)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+i.e., the coefficients <IMG
+ WIDTH="23" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img33.png"
+ ALT="$V_f$"> and <IMG
+ WIDTH="21" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.png"
+ ALT="$V_b$"> are just the forward and backward 
+voltages at the front of the line (<IMG
+ WIDTH="46" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.png"
+ ALT="$x=0$">):
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V_b=V_B(0),\;\;\;\;\;\;\;\;V_f=V_F(0)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="214" HEIGHT="32" BORDER="0"
+ SRC="img64.png"
+ ALT="\begin{displaymath}V_b=V_B(0),\;\;\;\;\;\;\;\;V_f=V_F(0) \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+<B>Lossy transmission line</B>
+
+<P>
+When the signal frequency is low, <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$R$"> and <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img4.png"
+ ALT="$G$"> can no longer be assumed as 
+zero and the signal is always attenuated due to the resistance <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$R$"> in serie
+ with the inductance <IMG
+ WIDTH="16" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.png"
+ ALT="$L$"> and the leakage conductance <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img4.png"
+ ALT="$G$"> in parallel with the
+capacitance <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.png"
+ ALT="$C$">. The two first order ODEs can be written as
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\frac{dV(x)}{dx}+(R+j\omega L)I(x)=\frac{dV(x)}{dx}+j\omega L'\,I(x)=0
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="380" HEIGHT="43" BORDER="0"
+ SRC="img65.png"
+ ALT="\begin{displaymath}\frac{dV(x)}{dx}+(R+j\omega L)I(x)=\frac{dV(x)}{dx}+j\omega L'\,I(x)=0 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\frac{dI(x)}{dx}+(G+j\omega C)V(x)=\frac{dI(x)}{dx}+j\omega C'\,V(x)=0
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="384" HEIGHT="43" BORDER="0"
+ SRC="img66.png"
+ ALT="\begin{displaymath}\frac{dI(x)}{dx}+(G+j\omega C)V(x)=\frac{dI(x)}{dx}+j\omega C'\,V(x)=0 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where we have defined
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+L'\stackrel{\triangle}{=}L\left(1+\frac{R}{j\omega L}\right),
+\;\;\;\;\;\;\;\;\;\;
+	C'\stackrel{\triangle}{=}C\left(1+\frac{G}{j\omega C}\right)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="348" HEIGHT="46" BORDER="0"
+ SRC="img67.png"
+ ALT="\begin{displaymath}L'\stackrel{\triangle}{=}L\left(1+\frac{R}{j\omega L}\right),...
+...
+C'\stackrel{\triangle}{=}C\left(1+\frac{G}{j\omega C}\right) \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+As the above equations take the same form as in the loss-less case (with <IMG
+ WIDTH="16" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.png"
+ ALT="$L$"> 
+and <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.png"
+ ALT="$C$"> replaced by <IMG
+ WIDTH="21" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img68.png"
+ ALT="$L'$"> and <IMG
+ WIDTH="22" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img69.png"
+ ALT="$C'$">, respectively), it can be solved in the 
+same way. Now we have
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Z_0=\sqrt{\frac{L'}{C'}}=\sqrt{\frac{L(1+R/j\omega L)}{C(1+G/j\omega C)}}
+=\sqrt{\frac{j\omega L+R}{j\omega C+G}}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="347" HEIGHT="57" BORDER="0"
+ SRC="img70.png"
+ ALT="\begin{displaymath}Z_0=\sqrt{\frac{L'}{C'}}=\sqrt{\frac{L(1+R/j\omega L)}{C(1+G/j\omega C)}}
+=\sqrt{\frac{j\omega L+R}{j\omega C+G}} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+and
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\sqrt{L'C'}=\sqrt{LC}\left[ \left(1+\frac{R}{j\omega L}\right)
+\left(1+\frac{G}{j\omega C}\right) \right]^{1/2}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="333" HEIGHT="50" BORDER="0"
+ SRC="img71.png"
+ ALT="\begin{displaymath}\sqrt{L'C'}=\sqrt{LC}\left[ \left(1+\frac{R}{j\omega L}\right)
+\left(1+\frac{G}{j\omega C}\right) \right]^{1/2} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+which can be approximated as below when <IMG
+ WIDTH="78" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img72.png"
+ ALT="$R&lt;&lt;\omega L$">, <IMG
+ WIDTH="80" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img73.png"
+ ALT="$G&lt;&lt;\omega C$">:
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+\sqrt{L'C'}&\approx&\sqrt{LC}\left(1+\frac{R}{j\omega L}+\frac{G}{j\omega C}\right)^{1/2}
+  \approx \sqrt{LC}\left[1+\frac{1}{2}\left(\frac{R}{j\omega L}+\frac{G}{j\omega C}\right)\right]
+  \nonumber \\
+  &\approx&\sqrt{LC}+\frac{1}{j\omega}\left( \frac{R}{2}\sqrt{\frac{C}{L}}+\frac{G}{2}\sqrt{\frac{L}{C}} \right)=\frac{1}{\mu}+\frac{\zeta }{j\omega}
+  \nonumber
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="53" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img74.png"
+ ALT="$\displaystyle \sqrt{L'C'}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="18" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img75.png"
+ ALT="$\textstyle \approx$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="461" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img76.png"
+ ALT="$\displaystyle \sqrt{LC}\left(1+\frac{R}{j\omega L}+\frac{G}{j\omega C}\right)^{...
+...}\left[1+\frac{1}{2}\left(\frac{R}{j\omega L}+\frac{G}{j\omega C}\right)\right]$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="18" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img75.png"
+ ALT="$\textstyle \approx$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="325" HEIGHT="76" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\displaystyle \sqrt{LC}+\frac{1}{j\omega}\left( \frac{R}{2}\sqrt{\frac{C}{L}}+\frac{G}{2}\sqrt{\frac{L}{C}} \right)=\frac{1}{\mu}+\frac{\zeta }{j\omega}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+The second approximation is due to the Taylor series:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+f(x,y)=(1+x+y)^{1/2}=f(0,0)+f_x(0,0)x+f_y(0,0)y+\cdots
+=1+\frac{1}{2}(x+y)+\cdots
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="563" HEIGHT="42" BORDER="0"
+ SRC="img78.png"
+ ALT="\begin{displaymath}f(x,y)=(1+x+y)^{1/2}=f(0,0)+f_x(0,0)x+f_y(0,0)y+\cdots
+=1+\frac{1}{2}(x+y)+\cdots \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Here we have defined the <EM>attenuation constant</EM> or <EM>damping coefficient</EM> 
+as
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\zeta\stackrel{\triangle}{=}\frac{R}{2}\sqrt{\frac{C}{L}}+
+\frac{G}{2}\sqrt{\frac{L}{C}}=\zeta_s+\zeta_p
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="229" HEIGHT="55" BORDER="0"
+ SRC="img79.png"
+ ALT="\begin{displaymath}\zeta\stackrel{\triangle}{=}\frac{R}{2}\sqrt{\frac{C}{L}}+
+\frac{G}{2}\sqrt{\frac{L}{C}}=\zeta_s+\zeta_p
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+which is simply the sum of the damping coefficient <IMG
+ WIDTH="19" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img80.png"
+ ALT="$\zeta_s$"> of the
+series RCL circuit and the damping coefficient <IMG
+ WIDTH="19" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img81.png"
+ ALT="$\zeta_p$"> of the parallel
+GCL circuit:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\zeta_s=\frac{R}{2}\sqrt{\frac{C}{L}},\;\;\;\;\;\;\;\;
+\zeta_p=\frac{G}{2}\sqrt{\frac{L}{C}}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="225" HEIGHT="55" BORDER="0"
+ SRC="img82.png"
+ ALT="\begin{displaymath}\zeta_s=\frac{R}{2}\sqrt{\frac{C}{L}},\;\;\;\;\;\;\;\;
+\zeta_p=\frac{G}{2}\sqrt{\frac{L}{C}} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+As before, the solution of the above equations is
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V(x)=V_be^{j\omega x\sqrt{L'C'}}+V_fe^{-j\omega x\sqrt{L'C'}}
+\approx V_be^{\zeta x}e^{j\omega x/\mu}+V_fe^{-\zeta x}e^{-j\omega x/\mu}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="509" HEIGHT="32" BORDER="0"
+ SRC="img83.png"
+ ALT="\begin{displaymath}V(x)=V_be^{j\omega x\sqrt{L'C'}}+V_fe^{-j\omega x\sqrt{L'C'}}...
+...e^{\zeta x}e^{j\omega x/\mu}+V_fe^{-\zeta x}e^{-j\omega x/\mu}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+In the time domain we have
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v(x,t)={\cal F}^{-1}[V(x)]={\cal F}^{-1}\left[V_f e^{-j\omega x/\mu}+V_b e^{j\omega x/\mu}\right]
+=v_f(t-x/\mu)e^{-\zeta x}+v_b(t+x/\mu) e^{\zeta x}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="633" HEIGHT="37" BORDER="0"
+ SRC="img84.png"
+ ALT="\begin{displaymath}v(x,t)={\cal F}^{-1}[V(x)]={\cal F}^{-1}\left[V_f e^{-j\omega...
+...\mu}\right]
+=v_f(t-x/\mu)e^{-\zeta x}+v_b(t+x/\mu) e^{\zeta x}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Note that the forward wave <IMG
+ WIDTH="41" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img85.png"
+ ALT="$v_f(t)$"> attenuates exponentially as <IMG
+ WIDTH="14" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.png"
+ ALT="$x$"> increases
+from 0 to <IMG
+ WIDTH="10" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.png"
+ ALT="$l$">, while the backward wave <IMG
+ WIDTH="39" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img86.png"
+ ALT="$v_b(t)$"> attenuates exponentially as <IMG
+ WIDTH="14" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.png"
+ ALT="$x$"> 
+decreases from <IMG
+ WIDTH="10" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.png"
+ ALT="$l$"> to 0.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html19"
+  HREF="node2.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html17"
+  HREF="transmission_line.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html11"
+  HREF="transmission_line.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html20"
+  HREF="node2.html">Reflection and termination</A>
+<B> Up:</B> <A NAME="tex2html18"
+  HREF="transmission_line.html">transmission_line</A>
+<B> Previous:</B> <A NAME="tex2html12"
+  HREF="transmission_line.html">transmission_line</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Ruye Wang
+2016-05-20
+</ADDRESS>
+</BODY>
+</HTML>

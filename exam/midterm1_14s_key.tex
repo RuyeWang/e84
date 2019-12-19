@@ -1,0 +1,227 @@
+\documentstyle[11pt]{article}
+\usepackage{html}
+\begin{document}
+\begin{center}
+{\Large \bf  Midterm Exam 1 ---- E84, Spring 2014}
+\end{center}
+
+\section*{E84 Midterm Exam 1}
+
+{\bf Instructions}
+\begin{itemize}
+\item Take home, open everything except discussion. Due Monday in class.
+\item There are in total four problems, 25 points each.
+\item Mark your start and end times. Don't spend more than 3 hours.
+\item Compare your print-out of the exam with the online version to make
+	sure your hard copy is complete.
+\item Mark your name and question number clearly on top of each page.
+	Indicate the total number of pages submitted.
+\item When solving a problem, list all the steps. In each step, describe 
+	concisely what you are doing in English, then show the calculation 
+	and the result of the step. A final answer, even if correct, without 
+	evidence of the steps leading to the answer will not receive credit.
+\end{itemize}
+
+{\bf The Problems}
+\begin{enumerate}
+
+\item {\bf Problem 1. (25 points)} 
+Show the relationship between the output voltage $V_o$ and the three input
+voltages $V_1$, $V_2$ and $V_3$ of the circuit shown below, where all 
+resistors have the same resistance value $R$. Extrapolate your result to 
+cover the general case of $n$ inputs $V_i$, $i=1,\cdots,n$.
+
+\htmladdimg{../midterm1d.gif}
+
+{\bf Solution:}
+
+\[ \frac{V_1-V_0}{R}+\frac{V_2-V_0}{R}+\frac{V_3-V_0}{R}=\frac{V_0}{R}
+,\;\;\;\;\; V_0=\frac{V_1+V_2+V_3}{4}	\]
+In general
+\[ V_0=\frac{1}{n+1}\sum_{i=1}^n V_i \]
+
+\item {\bf Problem 2. (25 points)} 
+
+In the figure below, $V_1=20V$, $V_2=V_3=10V$, $R_1=R_5=10\Omega$, 
+$R_2=R_4=5\Omega$, $R_6=1.5\Omega$, $R_3=6\Omega$. Find voltage $V_{ab}$
+
+\htmladdimg{../midterm1e.gif}
+
+{\bf Solution:} 
+
+Method I based on Thevenin's theorem:
+\begin{itemize}
+\item Remove $R_3$ and $V_3$ as the load
+\item Find open-circuit voltage $V_T$:
+\[	V_{ab}=V_a-V_b=V_1\frac{R_5}{R_1+R_5}-V_2\frac{R_4}{R_2+R_4}
+	=20 \frac{10}{10+10}-10 \frac{5}{5+5}=10-5=5 \]
+\item Find $R_T$:
+\[	R_T=R_1//R_5+R_6+R_2//R_4
+	=\frac{R_1R_5}{R_1+R_5}+R_6+\frac{R_4R_2}{R_2+R_4}=9 \]
+\item Connect load of $V_3$ and $R_3$, find current
+\[	I=\frac{V_T-V_3}{R_T+R_3}=\frac{5-10}{9+6}=-\frac{1}{3} \]
+\item Find $V_{ab}$
+\[	V_{ab}=-\frac{1}{3}\times 6 +10=8V	\]
+\end{itemize}
+
+Method II based on voltage source conversion:
+\begin{itemize}
+\item Convert $V_1$ and $R_1$ treated as a voltage source to a current
+  source $I_1=V_1/R_1=2$ and $R_1$, which is in parallel with $R_5$.
+\item Find parallel combination $R_a=R_1 || R_5=5$.
+\item Convert current source $I_1=2$ and $R_a=5$ to a voltage source
+  of $V_a=10$ and $R_a=5$.
+\item Convert $V_2$ and $R_2$ treated as a voltage source to a current 
+  source $I_2=V_2/R_2=2$ and $R_2$, which is in parallel with $R_4$.
+\item Find parallel combination $R_b=R_2 || R_4=2.5$.
+\item Convert current source $I_2=2$ and $R_b=2.5$ to a voltage source
+  of $V_a=5$ and $R_b=2.5$.
+\item Find voltage across $R_3$ (voltage divider) to be 
+  $(V_a+V_b+V_3) R_3/(R_3+R_a+R_6+R_b)=5\times 6/(6+5+1.5+2.5)=2$
+  (+ on right).
+\item Find $V_{ab}=10-2=8$.
+\end{itemize}
+
+Method III based on loop current method ($I_1$, $I_2$, and $I_3$ for the
+three loops):
+
+\begin{itemize}
+\item Left loop:
+  \[ R_1I_a+R_5(I_a-I_b)-V_1=0 \]
+\item Middle loop:
+  \[ R_3I_b+V_3+R_4(I_b-I_c)+R_6-R_5(I_b-I_a)=0 \]
+\item Right loop:
+  \[ R_2I_c+V_2+R_4(I_c-I_b)=0 \]
+\item Solving the three equations to get
+  \[ I_a=5/6,\;\;\;I_b=-1/3,\;\;\;\;I_c=-7/6 \]
+\item Find $V_{ab}=V_3+R_3 I_3=10-6/3=8$
+\end{itemize}
+
+
+\item {\bf Problem 3. (25 points)} 
+
+In the circuit below, $I_0=6A$, $V_0=5V$, $R_2=R_4=4\Omega$, $R_1=2\Omega$,
+$R_3=8\Omega$. Find the current through $R_5=6\Omega$.
+
+\htmladdimg{../midterm1f.gif}
+
+{\bf Solution:} 
+
+Method I based on superposition. 
+
+\begin{itemize}
+\item Consider the current source $I_0$ only with $V_0=0$ (short-circuit). 
+  Convert the delta composed of the top three resistors ($R_1$, $R_2$ and 
+  $R_5$) to Y:
+  \[
+  R_a=\frac{2\times 4}{2+6+4}=\frac{2}{3},\;\;\;\;
+  R_b=\frac{2\times 6}{2+6+4}=1,\;\;\;\;R_c=\frac{4\times 6}{2+6+4}=2 
+  \]
+  where $R_a$ is in series with $I_0$, and $R_b$ and $R_c$ are in series 
+  with $R_4$ and $R_3$, respectively. Treating the two branches as two 
+  voltage dividers, we find the voltage across $R_5$ is zero and therefore 
+  $I'=0$.
+\item Consider the voltage source $V_0$ only, with $I_0=0$ (open-circuit).
+  The total resistance of the loop is $15\Omega$, and the total current is 
+  $I_{total}=5V/15\Omega=1/3\;A$, and the current through $R_5$ can be  found
+  by current divider to be $I''=1/6\;A$. 
+\item The current due to both $I_0$ and $V_0$ is therefore $I=I'+I''=1/6\;A$ 
+\end{itemize}
+
+Method II based on Thevenin's theorem. 
+\begin{itemize}
+\item Pull $R_5$ out, and treat the rest as a Thevenin voltage source
+  with $V_T$ and $R_T$.
+\itme Find $R_T=(R_1+R_2)||(R_3+R_4)=6||12=4$
+\item Find $V_T$ by superposition:
+  \begin{itemize}
+  \item Due to $I_0=6$ alone ($V_0=0$): 
+    \[ 
+    I_{14}=I_0\frac{R_2+R_3}{(R_1+R_4)+(R_2+R_3)}=4,\;\;\;\;
+    I_{23}=I_0\frac{R_1+R_4}{(R_1+R_4)+(R_2+R_3)}=8
+    \]
+    $V'_T=R_1I_{14}-R_2I_{23}=2\times 4-4\times 2=0$.
+  \item Due to $V_0=5$ alone ($I_0=0$): 
+    \[
+    V''_T=V_0\frac{R_1+R_2}{(R_1+R_2)+(R_3+R_4)}=5\times \frac{6}{18}=\frac{5}{3}
+    \]
+  \item $V_T=V'_T+T''_T=5/3$
+  \end{itemize}
+\item Find current through $R_5$:
+  \[
+  I=\frac{V_T}{R_T+R_5}=\frac{5}{3}\times \frac{1}{4+6}=\frac{1}{6}
+  \]
+\end{itemize}
+
+Method III based on loop current method:
+
+\begin{itemize}
+\item Top loop current $I_a$:
+  \[   2(I_a-I_0)+4I_a+6(I_a-I_b)=0   \]
+\item Bottom loop current $I_b$:
+  \[   4(I_b-6)+6(I_b-I_a)-5+8I_b=0 \]
+\item Solve these two equations to get $I_a$, $I_b$ and current
+  through $R_5$:
+  \[ I_a=\frac{13}{6},\;\;\;\;\;\;I_b=\frac{7}{3},\;\;\;\;\;
+  I_b-I_a=\frac{14}{6}-\frac{13}{6}=\frac{1}{6} \]
+\end{itemize}
+
+
+
+\item {\bf Problem 4. (25 points)}
+
+\htmladdimg{../midterm1h.png}
+
+In the circuit shown, $R=20 \Omega$, $C=1\,\mu F$, and $L=0.8\;mH$. 
+The current source is $i_0(t)=\sqrt{2}\,\cos(50,000 t)$ Ampere. 
+Find the following:
+\begin{itemize}
+\item current $i_L(t)$ through $L$ 
+\item current $i_{RC}(t)$ through $R$ and $C$ in series
+\item voltage $v_R(t)$ across $R$
+\item voltage $v_C(t)$ across $C$
+\item voltage $v_L(t)$ across $L$
+\end{itemize}
+
+{\bf Solution:} 
+\[
+\dot{I}=1
+\]
+\[
+Z_R=20;\;\;\;Z_C=\frac{1}{j\omega C}=\frac{1}{j5\times 10^{-2}}=-j20;\;\;\;
+Z_L=j\omega L=j\,40=40 e^{j\pi/2}
+\]
+\[
+Z_{RC}=Z_R+Z_C=20-j20=20\sqrt{2}e^{j\pi/4}
+\]
+\[ 
+Z_{total}=\frac{Z_{RC} Z_L}{Z_{RC}+Z_L}
+=\frac{20\sqrt{2}e^{j\pi/4} 40 e^{j\pi/2}}{20-j20+j40}
+=\frac{800\sqrt{2}e^{j\pi/4}}{20\sqrt{2}e^{j\pi/4}}=40
+\]
+\[
+\dot{V}=\dot{I}Z_{total}=40
+\]
+\[ 
+\dot{I}_{RC}=\frac{\dot{V}}{Z_{RC}}=\frac{40}{20\sqrt{2} e^{-j\pi/4}}=\sqrt{2}e^{j\pi/4}
+=1+j,\;\;\;\;i_{RC}(t)=2\cos(\omega t+\pi/4)
+\]
+\[
+\dot{I}_{L}=\frac{\dot{V}}{Z_L}=\frac{40}{40 e^{j\pi/2}}=e^{-j\pi/2}=-j,\;\;\;\;
+i_L(t)=\sqrt{2}\cos(\omega t-\pi/2)
+\]
+\[
+\dot{V}_R=\dot{I}_{RC} R=20(1+j)=20\sqrt{2}e^{j\pi/4},\;\;\;\;\;v_R(t)=40\cos(\omega t+\pi/4)
+\]
+\[
+\dot{V}_C=\dot{I}_{RC} Z_C=-j 20(1+j)=20(1-j)=20\sqrt{2}e^{-j\pi/4},\;\;\;\;\;
+v_C(t)=40\cos(\omega t-\pi/4)
+\]
+\[ 
+\dot{V}_R+\dot{V}_C=40=\dot{V}
+\]
+
+\end{enumerate}
+
+\end{document}
+

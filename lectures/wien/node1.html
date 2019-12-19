@@ -1,0 +1,989 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Twin-T filter</TITLE>
+<META NAME="description" CONTENT="Twin-T filter">
+<META NAME="keywords" CONTENT="wien">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="wien.css">
+
+<LINK REL="next" HREF="node2.html">
+<LINK REL="previous" HREF="wien.html">
+<LINK REL="up" HREF="wien.html">
+<LINK REL="next" HREF="node2.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html17"
+  HREF="node2.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html15"
+  HREF="wien.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html9"
+  HREF="wien.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html18"
+  HREF="node2.html">Wien bridge</A>
+<B> Up:</B> <A NAME="tex2html16"
+  HREF="wien.html">wien</A>
+<B> Previous:</B> <A NAME="tex2html10"
+  HREF="wien.html">wien</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00001000000000000000">
+Twin-T filter</A>
+</H2>
+
+<P>
+The twin-T network is composed of two T-networks: 
+
+<UL>
+<LI>The CRC network is formed by two capacitors <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.png"
+ ALT="$C$"> and one
+  resistor <IMG
+ WIDTH="38" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.png"
+ ALT="$R/2$">. This T (or Y) network can be converted to a
+  <IMG
+ WIDTH="16" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.png"
+ ALT="$\pi$"> (or <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img4.png"
+ ALT="$\Delta$">) network:
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Z'_1=Z'_2=\frac{R}{2}+\frac{1}{sC}+\frac{R/2sC}{1/sC}=R+\frac{1}{sC}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="331" HEIGHT="52" BORDER="0"
+ SRC="img5.png"
+ ALT="\begin{displaymath}
+Z'_1=Z'_2=\frac{R}{2}+\frac{1}{sC}+\frac{R/2sC}{1/sC}=R+\frac{1}{sC}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Z'_3=\frac{1}{sC}+\frac{1}{sC}+\frac{1/s^2C^2}{R/2}
+  =\frac{2}{sC}+\frac{2}{Rs^2C^2}=\frac{2(1+sRC)}{Rs^2C^2}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="460" HEIGHT="53" BORDER="0"
+ SRC="img6.png"
+ ALT="\begin{displaymath}
+Z'_3=\frac{1}{sC}+\frac{1}{sC}+\frac{1/s^2C^2}{R/2}
+=\frac{2}{sC}+\frac{2}{Rs^2C^2}=\frac{2(1+sRC)}{Rs^2C^2}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI>The RCR network is formed by two resistors <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.png"
+ ALT="$R$"> and one
+  capacitor <IMG
+ WIDTH="29" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img8.png"
+ ALT="$2C$">. This T (or Y) network can be converted to a
+  <IMG
+ WIDTH="16" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.png"
+ ALT="$\pi$"> (or <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img4.png"
+ ALT="$\Delta$">) network:
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Z''_1=Z''_2=R+\frac{1}{2sC}+\frac{R/2sC}{R}=R+\frac{1}{sC}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="340" HEIGHT="47" BORDER="0"
+ SRC="img9.png"
+ ALT="\begin{displaymath}
+Z''_1=Z''_2=R+\frac{1}{2sC}+\frac{R/2sC}{R}=R+\frac{1}{sC}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Z''_3=R+R+\frac{R^2}{1/2sC}=2R+2R^2sC=2R(1+sRC)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="435" HEIGHT="53" BORDER="0"
+ SRC="img10.png"
+ ALT="\begin{displaymath}
+Z''_3=R+R+\frac{R^2}{1/2sC}=2R+2R^2sC=2R(1+sRC)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+</UL>
+The two parallel <IMG
+ WIDTH="16" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.png"
+ ALT="$\pi$">-networks can be combined to become one
+<IMG
+ WIDTH="16" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.png"
+ ALT="$\pi$">-network with three branches <!-- MATH
+ $Z_1=Z'_1||Z''_1$
+ -->
+<IMG
+ WIDTH="103" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.png"
+ ALT="$Z_1=Z'_1\vert\vert Z''_1$">, <!-- MATH
+ $Z_2=Z'_2||Z''_2$
+ -->
+<IMG
+ WIDTH="103" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.png"
+ ALT="$Z_2=Z'_2\vert\vert Z''_2$">, 
+and <!-- MATH
+ $Z_3=Z'_3||Z''_3$
+ -->
+<IMG
+ WIDTH="103" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.png"
+ ALT="$Z_3=Z'_3\vert\vert Z''_3$">:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Z_1=Z'_1||Z''_1=Z_2=Z'_2||Z''_2=\frac{1}{2}\left(R+\frac{1}{sC}\right)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="349" HEIGHT="46" BORDER="0"
+ SRC="img14.png"
+ ALT="\begin{displaymath}
+Z_1=Z'_1\vert\vert Z''_1=Z_2=Z'_2\vert\vert Z''_2=\frac{1}{2}\left(R+\frac{1}{sC}\right)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Z_3=Z'_3||Z''_3=\frac{Z'_3 Z''_3}{Z'_3+Z''_3}
+  =\frac{4(1+sRC)^2/s^2C^2}{2R(1+sRC)(1/Rs^2C^2+1)}
+  =\frac{2R(1+sRC)}{1+(sRC)^2}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="584" HEIGHT="53" BORDER="0"
+ SRC="img15.png"
+ ALT="\begin{displaymath}
+Z_3=Z'_3\vert\vert Z''_3=\frac{Z'_3 Z''_3}{Z'_3+Z''_3}
+=\f...
+.../s^2C^2}{2R(1+sRC)(1/Rs^2C^2+1)}
+=\frac{2R(1+sRC)}{1+(sRC)^2}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+The transfer function of this <IMG
+ WIDTH="16" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.png"
+ ALT="$\pi$">-network (a voltage divider) is:
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+H(s)&=&\frac{Z_2}{Z_2+Z_3}=\frac{R+1/sC}{R+1/sC+4R(1+sRC)/(1+(sRC)^2)}
+\nonumber \\
+&=&\frac{(1+sRC)/sC}{(1+sRC)/sC+4R(1+sRC)/(1+(sRC)^2)}
+\nonumber \\
+&=&\frac{1/sC}{1/sC+4R/(1+(sRC)^2)}
+=\frac{1}{1+4sRC/(1+(sRC)^2)}
+\nonumber \\
+&=&\frac{1+(sRC)^2}{1+(sRC)^2+4sRC}
+=\frac{s^2+(1/RC)^2}{s^2+4s/RC+(1/RC)^2}
+\nonumber
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="45" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.png"
+ ALT="$\displaystyle H(s)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="429" HEIGHT="63" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.png"
+ ALT="$\displaystyle \frac{Z_2}{Z_2+Z_3}=\frac{R+1/sC}{R+1/sC+4R(1+sRC)/(1+(sRC)^2)}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="374" HEIGHT="63" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.png"
+ ALT="$\displaystyle \frac{(1+sRC)/sC}{(1+sRC)/sC+4R(1+sRC)/(1+(sRC)^2)}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="438" HEIGHT="63" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.png"
+ ALT="$\displaystyle \frac{1/sC}{1/sC+4R/(1+(sRC)^2)}
+=\frac{1}{1+4sRC/(1+(sRC)^2)}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="389" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.png"
+ ALT="$\displaystyle \frac{1+(sRC)^2}{1+(sRC)^2+4sRC}
+=\frac{s^2+(1/RC)^2}{s^2+4s/RC+(1/RC)^2}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+We define
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\omega_0=\frac{1}{RC},\;\;\;\;\;\mbox{i.e.,}\;\;\;\;\;
+f_0=\frac{1}{2\pi RC}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="262" HEIGHT="45" BORDER="0"
+ SRC="img22.png"
+ ALT="\begin{displaymath}
+\omega_0=\frac{1}{RC},\;\;\;\;\;\mbox{i.e.,}\;\;\;\;\;
+f_0=\frac{1}{2\pi RC}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+and express the second order denominator in the canonical form as
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+H(s)=\frac{V_{out}(s)}{V_{in}(s)}=\frac{s^2+\omega_0^2}{s^2+4\omega_0s+\omega_0^2}
+=\frac{s^2+\omega_0^2}{s^2+\omega_0s/Q+\omega_0^2}
+=\frac{s^2+\omega_0^2}{s^2+\Delta\omega\;s+\omega_0^2}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="586" HEIGHT="53" BORDER="0"
+ SRC="img23.png"
+ ALT="\begin{displaymath}
+H(s)=\frac{V_{out}(s)}{V_{in}(s)}=\frac{s^2+\omega_0^2}{s^2+...
+...ga_0^2}
+=\frac{s^2+\omega_0^2}{s^2+\Delta\omega\;s+\omega_0^2}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where <IMG
+ WIDTH="131" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img24.png"
+ ALT="$Q=1/4=0.25$"> is the quality factor, and 
+<!-- MATH
+ $\Delta\omega=\omega_0/Q=4\omega_0$
+ -->
+<IMG
+ WIDTH="155" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.png"
+ ALT="$\Delta\omega=\omega_0/Q=4\omega_0$"> is the bandwidth of the filter.
+We let <IMG
+ WIDTH="60" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img26.png"
+ ALT="$s=j\omega$"> and get the frequency response function:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+H(j\omega)=\frac{\omega_0^2-\omega^2}{-\omega^2+j\omega_0\omega/Q+\omega_0^2}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="244" HEIGHT="53" BORDER="0"
+ SRC="img27.png"
+ ALT="\begin{displaymath}
+H(j\omega)=\frac{\omega_0^2-\omega^2}{-\omega^2+j\omega_0\omega/Q+\omega_0^2}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+
+<UL>
+<LI>When <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img28.png"
+ ALT="$\omega=0$">, 
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+H(j\omega)\big|_{\omega=0}=H(0)=\frac{\omega_0}{\omega_0}=1
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="231" HEIGHT="44" BORDER="0"
+ SRC="img29.png"
+ ALT="\begin{displaymath}
+H(j\omega)\big\vert _{\omega=0}=H(0)=\frac{\omega_0}{\omega_0}=1
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI>When <!-- MATH
+ $\omega\rightarrow \infty$
+ -->
+<IMG
+ WIDTH="66" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img30.png"
+ ALT="$\omega\rightarrow \infty$">, 
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+H(j\omega)\big|_{\omega\rightarrow\infty}=\lim\limits_{\omega\rightarrow\infty}
+  \left( \frac{\omega_0^2-\omega^2}{-\omega^2+j\omega_0\omega/Q+\omega_0^2} \right)
+  =\lim\limits_{\omega\rightarrow\infty}\left(\frac{\omega^2}{\omega^2}\right)=1
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="499" HEIGHT="55" BORDER="0"
+ SRC="img31.png"
+ ALT="\begin{displaymath}
+H(j\omega)\big\vert _{\omega\rightarrow\infty}=\lim\limits_...
+...ega\rightarrow\infty}\left(\frac{\omega^2}{\omega^2}\right)=1
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI>When <!-- MATH
+ $\omega=\omega_0=1/RC$
+ -->
+<IMG
+ WIDTH="134" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.png"
+ ALT="$\omega=\omega_0=1/RC$">, <!-- MATH
+ $H(j\omega_0)=0$
+ -->
+<IMG
+ WIDTH="99" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img33.png"
+ ALT="$H(j\omega_0)=0$">
+</LI>
+</UL>
+When <!-- MATH
+ $\omega=\omega_0=1/RC$
+ -->
+<IMG
+ WIDTH="134" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.png"
+ ALT="$\omega=\omega_0=1/RC$">, <IMG
+ WIDTH="92" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.png"
+ ALT="$H(j\omega)=0$">, the output is zero, i.e.,
+this twin-T network is a band-stop filter (notch filter) which attenuates
+frequncy <IMG
+ WIDTH="97" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img35.png"
+ ALT="$\omega_0=1/RC$"> to zero.
+
+<P>
+The bandwidth <!-- MATH
+ $\Delta\omega=\omega_0/Q=4\omega_0$
+ -->
+<IMG
+ WIDTH="155" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.png"
+ ALT="$\Delta\omega=\omega_0/Q=4\omega_0$"> is likely to be too large 
+for certain applications due to the small quality factor <IMG
+ WIDTH="72" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img36.png"
+ ALT="$Q=1/4$">. To overcome 
+this problem, an active filter circuit containing two opamp followers (with
+unity gain <IMG
+ WIDTH="53" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img37.png"
+ ALT="$A=1$"> can be used to intruce a positive feedback loop as shown below:
+
+<P>
+Now the common terminal of the twin-T filter is no longer grounded, instead
+it is connected a potentiameter, to the voltage dividor composed of <IMG
+ WIDTH="26" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img38.png"
+ ALT="$R_4$"> and
+<IMG
+ WIDTH="26" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img39.png"
+ ALT="$R_5$">, to form a feedback loop by which a fraction of the output <IMG
+ WIDTH="35" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img40.png"
+ ALT="$V_{out}$"> is 
+fed back:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V_1=\frac{R_5}{R_4+R_5}\;V_{out}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="148" HEIGHT="49" BORDER="0"
+ SRC="img41.png"
+ ALT="\begin{displaymath}
+V_1=\frac{R_5}{R_4+R_5}\;V_{out}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The input and output of the twin-T network are now related by
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V_{out}-V_1=H(V_{in}-V_1)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="193" HEIGHT="33" BORDER="0"
+ SRC="img42.png"
+ ALT="\begin{displaymath}
+V_{out}-V_1=H(V_{in}-V_1)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Substituting <!-- MATH
+ $V_1=V_{out}\;R_5/(R_4+R_5)$
+ -->
+<IMG
+ WIDTH="197" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img43.png"
+ ALT="$V_1=V_{out}\;R_5/(R_4+R_5)$"> and rearranging, we get
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+HV_{in}&=&V_{out}+(H-1) V_1=V_{out}+(H-1)\frac{R_5}{R_4+R_5}V_{out}
+  \nonumber \\
+  &=&V_{out}\;\left(1+(H-1)\;\frac{R_5}{R_4+R_5}\right)
+  \nonumber
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="46" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img44.png"
+ ALT="$\displaystyle HV_{in}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="386" HEIGHT="62" ALIGN="MIDDLE" BORDER="0"
+ SRC="img45.png"
+ ALT="$\displaystyle V_{out}+(H-1) V_1=V_{out}+(H-1)\frac{R_5}{R_4+R_5}V_{out}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="240" HEIGHT="62" ALIGN="MIDDLE" BORDER="0"
+ SRC="img46.png"
+ ALT="$\displaystyle V_{out}\;\left(1+(H-1)\;\frac{R_5}{R_4+R_5}\right)$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+The transfer function of this active filter with feedback can be found to be
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+H'(s)=\frac{V_{out}}{V_{in}}=\frac{H}{1+(H-1)R_5/(R_4+R_5)}
+=\frac{H(R_4+R_5)}{(R_4+R_5)+(H-1)R_5}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="559" HEIGHT="52" BORDER="0"
+ SRC="img47.png"
+ ALT="\begin{displaymath}
+H'(s)=\frac{V_{out}}{V_{in}}=\frac{H}{1+(H-1)R_5/(R_4+R_5)}
+=\frac{H(R_4+R_5)}{(R_4+R_5)+(H-1)R_5}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Substituting <!-- MATH
+ $H(s)=(s^2+\omega_0^2)/(s^2+4\omega_0 s+\omega_0^2)$
+ -->
+<IMG
+ WIDTH="287" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img48.png"
+ ALT="$H(s)=(s^2+\omega_0^2)/(s^2+4\omega_0 s+\omega_0^2)$"> and
+<!-- MATH
+ $H(s)-1=-4\omega_0s/(s^2+4\omega_0 s+\omega_0^2)$
+ -->
+<IMG
+ WIDTH="298" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img49.png"
+ ALT="$H(s)-1=-4\omega_0s/(s^2+4\omega_0 s+\omega_0^2)$">, we
+get
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+H'(s)&=&\frac{(S^2+\omega_0^2)(R_4+R_5)}{(R_4+R_5)(s^2+4\omega_0 s+\omega_0^2)- 4\omega_0 s R_5}
+  \nonumber \\
+  &=&\frac{S^2+\omega_0^2}{(s^2+4\omega_0s+\omega_0^2)-4\omega_0 s\;R_5/(R_4+R_5)}
+  \nonumber \\
+  &=&\frac{S^2+\omega_0^2}{s^2+\omega_0 4(1-R_5/(R_4+R_5)) s+\omega_0^2}
+  \nonumber \\
+  &=&\frac{S^2+\omega_0^2}{s^2+\omega_0 4R_4/(R_4+R_5) s+\omega_0^2}
+  \nonumber \\
+  &=&\frac{S^2+\omega_0^2}{s^2+\omega_0/Q' s+\omega_0^2}
+  =\frac{S^2+\omega_0^2}{s^2+\Delta\omega' s+\omega_0^2}
+  \nonumber
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="49" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img50.png"
+ ALT="$\displaystyle H'(s)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="306" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img51.png"
+ ALT="$\displaystyle \frac{(S^2+\omega_0^2)(R_4+R_5)}{(R_4+R_5)(s^2+4\omega_0 s+\omega_0^2)- 4\omega_0 s R_5}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="321" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img52.png"
+ ALT="$\displaystyle \frac{S^2+\omega_0^2}{(s^2+4\omega_0s+\omega_0^2)-4\omega_0 s\;R_5/(R_4+R_5)}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="287" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img53.png"
+ ALT="$\displaystyle \frac{S^2+\omega_0^2}{s^2+\omega_0 4(1-R_5/(R_4+R_5)) s+\omega_0^2}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="240" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img54.png"
+ ALT="$\displaystyle \frac{S^2+\omega_0^2}{s^2+\omega_0 4R_4/(R_4+R_5) s+\omega_0^2}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="300" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img55.png"
+ ALT="$\displaystyle \frac{S^2+\omega_0^2}{s^2+\omega_0/Q' s+\omega_0^2}
+=\frac{S^2+\omega_0^2}{s^2+\Delta\omega' s+\omega_0^2}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+where <IMG
+ WIDTH="24" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img56.png"
+ ALT="$Q'$"> and <IMG
+ WIDTH="37" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img57.png"
+ ALT="$\Delta\omega'$"> are respectively the quality factor and the bandwidth of the 
+active filter with feedback:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Q'=\frac{R_4+R_5}{4R_4},\;\;\;\;\;\;\Delta\omega'=\frac{\omega_0}{Q'}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="233" HEIGHT="50" BORDER="0"
+ SRC="img58.png"
+ ALT="\begin{displaymath}
+Q'=\frac{R_4+R_5}{4R_4},\;\;\;\;\;\;\Delta\omega'=\frac{\omega_0}{Q'}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Now by varying <IMG
+ WIDTH="26" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img38.png"
+ ALT="$R_4$"> and <IMG
+ WIDTH="26" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img39.png"
+ ALT="$R_5$">, the quality factor <IMG
+ WIDTH="24" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img56.png"
+ ALT="$Q'$"> and bandwidth <IMG
+ WIDTH="37" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img57.png"
+ ALT="$\Delta\omega'$"> can 
+be adjusted. In particular, 
+
+<UL>
+<LI>when <IMG
+ WIDTH="61" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$R_5=0$">, <IMG
+ WIDTH="57" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img60.png"
+ ALT="$V_1=0$"> (no feedback), <IMG
+ WIDTH="117" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img61.png"
+ ALT="$Q'=1/4=Q$">, <!-- MATH
+ $\Delta\omega=\omega_0/Q=4\omega_0$
+ -->
+<IMG
+ WIDTH="155" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.png"
+ ALT="$\Delta\omega=\omega_0/Q=4\omega_0$">; 
+</LI>
+<LI>when <IMG
+ WIDTH="61" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img62.png"
+ ALT="$R_4=0$">, <IMG
+ WIDTH="79" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img63.png"
+ ALT="$V_1=V_{out}$"> (one hundred percent feedback), <IMG
+ WIDTH="68" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img64.png"
+ ALT="$Q'=\infty$">, <!-- MATH
+ $\Delta\omega=\omega_0/Q'=0$
+ -->
+<IMG
+ WIDTH="140" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img65.png"
+ ALT="$\Delta\omega=\omega_0/Q'=0$">.
+</LI>
+</UL>
+
+<P>
+If in the CRC T-network the vertical capacitor branch is dropped, i.e.,
+<IMG
+ WIDTH="54" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img66.png"
+ ALT="$C=0$">, while the RCR T-network is still the same, we get a bridged T 
+network. Now <IMG
+ WIDTH="76" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img67.png"
+ ALT="$Z''_3=2R$">, and we have
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Z_3=Z'_3||Z''_3=\frac{Z'_3 Z''_3}{Z'_3+Z''_3}
+  =\frac{2R(1+sRC)}{1+sRC+(sRC)^2}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="373" HEIGHT="52" BORDER="0"
+ SRC="img68.png"
+ ALT="\begin{displaymath}
+Z_3=Z'_3\vert\vert Z''_3=\frac{Z'_3 Z''_3}{Z'_3+Z''_3}
+=\frac{2R(1+sRC)}{1+sRC+(sRC)^2}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The transfer function of this bridged T network (a voltage divider) is:
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+H(s)&=&\frac{Z_2}{Z_2+Z_3}=\frac{R+1/sC}{R+1/sC+2R(1+sRC)/(1+sRC+(sRC)^2)}
+\nonumber \\
+&=&\frac{1/sC}{1/sC+2R/(1+sRC+(sRC)^2)}
+=\frac{1}{1+2sRC/(1+sRC+(sRC)^2)}
+\nonumber \\
+&=&\frac{1+sRC+(sRC)^2}{1+3sRC+(sRC)^2}
+=\frac{s^2+s/RC+1/(RC)^2}{s^2+3s/RC+1/(RC)^2}
+\nonumber
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="45" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.png"
+ ALT="$\displaystyle H(s)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="490" HEIGHT="63" ALIGN="MIDDLE" BORDER="0"
+ SRC="img69.png"
+ ALT="$\displaystyle \frac{Z_2}{Z_2+Z_3}=\frac{R+1/sC}{R+1/sC+2R(1+sRC)/(1+sRC+(sRC)^2)}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="557" HEIGHT="63" ALIGN="MIDDLE" BORDER="0"
+ SRC="img70.png"
+ ALT="$\displaystyle \frac{1/sC}{1/sC+2R/(1+sRC+(sRC)^2)}
+=\frac{1}{1+2sRC/(1+sRC+(sRC)^2)}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="389" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$\displaystyle \frac{1+sRC+(sRC)^2}{1+3sRC+(sRC)^2}
+=\frac{s^2+s/RC+1/(RC)^2}{s^2+3s/RC+1/(RC)^2}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+We let <IMG
+ WIDTH="97" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img35.png"
+ ALT="$\omega_0=1/RC$">, and express the second order denominator in the
+canonical form as
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+H(s)=\frac{s^2+\omega_0 s+\omega_0^2}{s^2+3\omega_0s+\omega_0^2}
+=\frac{s^2+\Delta\omega_n s+\omega_0^2}{s^2+\Delta\omega_ds+\omega_0^2}
+=\frac{s^2+\Delta\omega_n s+\omega_0^2}{s^2+\Delta\omega_ds+\omega_0^2}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="342" HEIGHT="52" BORDER="0"
+ SRC="img72.png"
+ ALT="\begin{displaymath}
+H(s)=\frac{s^2+\omega_0 s+\omega_0^2}{s^2+3\omega_0s+\omega_...
+...2+\Delta\omega_n s+\omega_0^2}{s^2+\Delta\omega_ds+\omega_0^2}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\Delta\omega_n=\omega_0,\;\;\;\;\;\;\;\Delta\omega_d=3\omega_0
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="213" HEIGHT="32" BORDER="0"
+ SRC="img73.png"
+ ALT="\begin{displaymath}
+\Delta\omega_n=\omega_0,\;\;\;\;\;\;\;\Delta\omega_d=3\omega_0
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+are the bandwidth of the 2nd-order systems of the numerator and the
+denominator, respectively.
+We let <IMG
+ WIDTH="60" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img26.png"
+ ALT="$s=j\omega$"> and get the frequency response function:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+H(j\omega)=\frac{-\omega^2+\Delta\omega_n j\omega+\omega_0^2}{-\omega^2+\Delta\omega_dj\omega+\omega_0^2}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="237" HEIGHT="52" BORDER="0"
+ SRC="img74.png"
+ ALT="\begin{displaymath}
+H(j\omega)=\frac{-\omega^2+\Delta\omega_n j\omega+\omega_0^2}{-\omega^2+\Delta\omega_dj\omega+\omega_0^2}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<UL>
+<LI>When <IMG
+ WIDTH="51" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img28.png"
+ ALT="$\omega=0$">, <!-- MATH
+ $H(j\omega)=H(0)=1$
+ -->
+<IMG
+ WIDTH="158" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img75.png"
+ ALT="$H(j\omega)=H(0)=1$">
+</LI>
+<LI>When <!-- MATH
+ $\omega\rightarrow \infty$
+ -->
+<IMG
+ WIDTH="66" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img30.png"
+ ALT="$\omega\rightarrow \infty$">, <IMG
+ WIDTH="92" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img76.png"
+ ALT="$H(j\omega)=1$">
+</LI>
+<LI>When <!-- MATH
+ $\omega=\omega_0=1/RC$
+ -->
+<IMG
+ WIDTH="134" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.png"
+ ALT="$\omega=\omega_0=1/RC$">, <!-- MATH
+ $H(j\omega_0)=1/3$
+ -->
+<IMG
+ WIDTH="117" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$H(j\omega_0)=1/3$">
+</LI>
+</UL>
+We see that this is a band-stop filter.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html17"
+  HREF="node2.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html15"
+  HREF="wien.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html9"
+  HREF="wien.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html18"
+  HREF="node2.html">Wien bridge</A>
+<B> Up:</B> <A NAME="tex2html16"
+  HREF="wien.html">wien</A>
+<B> Previous:</B> <A NAME="tex2html10"
+  HREF="wien.html">wien</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Ruye Wang
+2015-11-29
+</ADDRESS>
+</BODY>
+</HTML>

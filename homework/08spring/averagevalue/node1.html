@@ -1,0 +1,172 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Average Value of Sinusoids</TITLE>
+<META NAME="description" CONTENT="Average Value of Sinusoids">
+<META NAME="keywords" CONTENT="averagevalue">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="averagevalue.css">
+
+<LINK REL="next" HREF="node2.html">
+<LINK REL="previous" HREF="averagevalue.html">
+<LINK REL="up" HREF="averagevalue.html">
+<LINK REL="next" HREF="node2.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html15"
+  HREF="node2.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html13"
+  HREF="averagevalue.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html7"
+  HREF="averagevalue.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html16"
+  HREF="node2.html">The Effective or RMS</A>
+<B> Up:</B> <A NAME="tex2html14"
+  HREF="averagevalue.html">averagevalue</A>
+<B> Previous:</B> <A NAME="tex2html8"
+  HREF="averagevalue.html">averagevalue</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00010000000000000000">
+Average Value of Sinusoids</A>
+</H1>
+
+<P>
+The average voltage is defined as:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V_{av}=\frac{1}{T}\int_0^T v(t) dt
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="147" HEIGHT="47" BORDER="0"
+ SRC="img1.png"
+ ALT="\begin{displaymath}
+V_{av}=\frac{1}{T}\int_0^T v(t) dt
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+If the current/voltage is periodic, i.e., it repeats itself every 
+time cycle <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$T$">, then <IMG
+ WIDTH="122" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="$i(t)=i(t+T)$"> and <IMG
+ WIDTH="128" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$v(t)=v(t+T)$">. The reciprocal 
+of <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$T$"> is called the <EM>fundamental frequency</EM>. In particular, for 
+a sinusoidal current 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+i(t)=I_p\,\sin(\omega t)=I_p\,\sin(2\pi ft)=I_P\,\sin(2\pi t/T)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="392" HEIGHT="34" BORDER="0"
+ SRC="img5.png"
+ ALT="\begin{displaymath}
+i(t)=I_p \sin(\omega t)=I_p \sin(2\pi ft)=I_P \sin(2\pi t/T)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+the average over the complete cycle <IMG
+ WIDTH="73" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.png"
+ ALT="$T=1/f$"> is always zero (the charge
+transferred during the first half is the opposite to that transferred
+in the second). However, we can consider the half-cycle average over 
+<IMG
+ WIDTH="36" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.png"
+ ALT="$T/2$">:
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+I_{av}&=&\frac{1}{T/2}\int_0^{T/2} i(t)\; dt
+  =\frac{2}{T}\int_0^{T/2} \;I_P\,\sin(2\pi t/T)\;dt	
+  =-\frac{2}{T}\frac{TI_P}{2\pi} \cos(2\pi t/T)\bigg|_0^{T/2}
+  \nonumber \\
+  &=& \frac{1}{\pi}\left[\cos(0)-\cos(\pi)\right]I_P
+  =\frac{2}{\pi}I_P\;=0.637\,I_P
+  \nonumber
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="28" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.png"
+ ALT="$\displaystyle I_{av}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="578" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.png"
+ ALT="$\displaystyle \frac{1}{T/2}\int_0^{T/2} i(t)\; dt
+=\frac{2}{T}\int_0^{T/2} \;I...
+...\pi t/T)\;dt
+=-\frac{2}{T}\frac{TI_P}{2\pi} \cos(2\pi t/T)\bigg\vert _0^{T/2}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="334" HEIGHT="59" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.png"
+ ALT="$\displaystyle \frac{1}{\pi}\left[\cos(0)-\cos(\pi)\right]I_P
+=\frac{2}{\pi}I_P\;=0.637 I_P$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+<BR><HR>
+<ADDRESS>
+Ruye Wang
+2016-01-17
+</ADDRESS>
+</BODY>
+</HTML>

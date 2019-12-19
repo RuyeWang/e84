@@ -1,0 +1,1749 @@
+\batchmode
+\documentstyle[11pt]{article}
+
+\let\providecommand\newcommand
+\RequirePackage{ifthen}
+
+
+\usepackage{html}
+
+
+
+
+
+
+\usepackage[]{inputenc}
+
+
+
+\makeatletter
+
+\makeatletter
+\count@=\the\catcode`\_ \catcode`\_=8 
+\newenvironment{tex2html_wrap}{}{}%
+\catcode`\<=12\catcode`\_=\count@
+\newcommand{\providedcommand}[1]{\expandafter\providecommand\csname #1\endcsname}%
+\newcommand{\renewedcommand}[1]{\expandafter\providecommand\csname #1\endcsname{}%
+  \expandafter\renewcommand\csname #1\endcsname}%
+\newcommand{\newedenvironment}[1]{\newenvironment{#1}{}{}\renewenvironment{#1}}%
+\let\newedcommand\renewedcommand
+\let\renewedenvironment\newedenvironment
+\makeatother
+\let\mathon=$
+\let\mathoff=$
+\ifx\AtBeginDocument\undefined \newcommand{\AtBeginDocument}[1]{}\fi
+\newbox\sizebox
+\setlength{\hoffset}{0pt}\setlength{\voffset}{0pt}
+\addtolength{\textheight}{\footskip}\setlength{\footskip}{0pt}
+\addtolength{\textheight}{\topmargin}\setlength{\topmargin}{0pt}
+\addtolength{\textheight}{\headheight}\setlength{\headheight}{0pt}
+\addtolength{\textheight}{\headsep}\setlength{\headsep}{0pt}
+\setlength{\textwidth}{349pt}
+\newwrite\lthtmlwrite
+\makeatletter
+\let\realnormalsize=\normalsize
+\global\topskip=2sp
+\def\preveqno{}\let\real@float=\@float \let\realend@float=\end@float
+\def\@float{\let\@savefreelist\@freelist\real@float}
+\def\liih@math{\ifmmode$\else\bad@math\fi}
+\def\end@float{\realend@float\global\let\@freelist\@savefreelist}
+\let\real@dbflt=\@dbflt \let\end@dblfloat=\end@float
+\let\@largefloatcheck=\relax
+\let\if@boxedmulticols=\iftrue
+\def\@dbflt{\let\@savefreelist\@freelist\real@dbflt}
+\def\adjustnormalsize{\def\normalsize{\mathsurround=0pt \realnormalsize
+ \parindent=0pt\abovedisplayskip=0pt\belowdisplayskip=0pt}%
+ \def\phantompar{\csname par\endcsname}\normalsize}%
+\def\lthtmltypeout#1{{\let\protect\string \immediate\write\lthtmlwrite{#1}}}%
+\newcommand\lthtmlhboxmathA{\adjustnormalsize\setbox\sizebox=\hbox\bgroup\kern.05em }%
+\newcommand\lthtmlhboxmathB{\adjustnormalsize\setbox\sizebox=\hbox to\hsize\bgroup\hfill }%
+\newcommand\lthtmlvboxmathA{\adjustnormalsize\setbox\sizebox=\vbox\bgroup %
+ \let\ifinner=\iffalse \let\)\liih@math }%
+\newcommand\lthtmlboxmathZ{\@next\next\@currlist{}{\def\next{\voidb@x}}%
+ \expandafter\box\next\egroup}%
+\newcommand\lthtmlmathtype[1]{\gdef\lthtmlmathenv{#1}}%
+\newcommand\lthtmllogmath{\dimen0\ht\sizebox \advance\dimen0\dp\sizebox
+  \ifdim\dimen0>.95\vsize
+   \lthtmltypeout{%
+*** image for \lthtmlmathenv\space is too tall at \the\dimen0, reducing to .95 vsize ***}%
+   \ht\sizebox.95\vsize \dp\sizebox\z@ \fi
+  \lthtmltypeout{l2hSize %
+:\lthtmlmathenv:\the\ht\sizebox::\the\dp\sizebox::\the\wd\sizebox.\preveqno}}%
+\newcommand\lthtmlfigureA[1]{\let\@savefreelist\@freelist
+       \lthtmlmathtype{#1}\lthtmlvboxmathA}%
+\newcommand\lthtmlpictureA{\bgroup\catcode`\_=8 \lthtmlpictureB}%
+\newcommand\lthtmlpictureB[1]{\lthtmlmathtype{#1}\egroup
+       \let\@savefreelist\@freelist \lthtmlhboxmathB}%
+\newcommand\lthtmlpictureZ[1]{\hfill\lthtmlfigureZ}%
+\newcommand\lthtmlfigureZ{\lthtmlboxmathZ\lthtmllogmath\copy\sizebox
+       \global\let\@freelist\@savefreelist}%
+\newcommand\lthtmldisplayA{\bgroup\catcode`\_=8 \lthtmldisplayAi}%
+\newcommand\lthtmldisplayAi[1]{\lthtmlmathtype{#1}\egroup\lthtmlvboxmathA}%
+\newcommand\lthtmldisplayB[1]{\edef\preveqno{(\theequation)}%
+  \lthtmldisplayA{#1}\let\@eqnnum\relax}%
+\newcommand\lthtmldisplayZ{\lthtmlboxmathZ\lthtmllogmath\lthtmlsetmath}%
+\newcommand\lthtmlinlinemathA{\bgroup\catcode`\_=8 \lthtmlinlinemathB}
+\newcommand\lthtmlinlinemathB[1]{\lthtmlmathtype{#1}\egroup\lthtmlhboxmathA
+  \vrule height1.5ex width0pt }%
+\newcommand\lthtmlinlineA{\bgroup\catcode`\_=8 \lthtmlinlineB}%
+\newcommand\lthtmlinlineB[1]{\lthtmlmathtype{#1}\egroup\lthtmlhboxmathA}%
+\newcommand\lthtmlinlineZ{\egroup\expandafter\ifdim\dp\sizebox>0pt %
+  \expandafter\centerinlinemath\fi\lthtmllogmath\lthtmlsetinline}
+\newcommand\lthtmlinlinemathZ{\egroup\expandafter\ifdim\dp\sizebox>0pt %
+  \expandafter\centerinlinemath\fi\lthtmllogmath\lthtmlsetmath}
+\newcommand\lthtmlindisplaymathZ{\egroup %
+  \centerinlinemath\lthtmllogmath\lthtmlsetmath}
+\def\lthtmlsetinline{\hbox{\vrule width.1em \vtop{\vbox{%
+  \kern.1em\copy\sizebox}\ifdim\dp\sizebox>0pt\kern.1em\else\kern.3pt\fi
+  \ifdim\hsize>\wd\sizebox \hrule depth1pt\fi}}}
+\def\lthtmlsetmath{\hbox{\vrule width.1em\kern-.05em\vtop{\vbox{%
+  \kern.1em\kern0.8 pt\hbox{\hglue.17em\copy\sizebox\hglue0.8 pt}}\kern.3pt%
+  \ifdim\dp\sizebox>0pt\kern.1em\fi \kern0.8 pt%
+  \ifdim\hsize>\wd\sizebox \hrule depth1pt\fi}}}
+\def\centerinlinemath{%
+  \dimen1=\ifdim\ht\sizebox<\dp\sizebox \dp\sizebox\else\ht\sizebox\fi
+  \advance\dimen1by.5pt \vrule width0pt height\dimen1 depth\dimen1 
+ \dp\sizebox=\dimen1\ht\sizebox=\dimen1\relax}
+
+\def\lthtmlcheckvsize{\ifdim\ht\sizebox<\vsize 
+  \ifdim\wd\sizebox<\hsize\expandafter\hfill\fi \expandafter\vfill
+  \else\expandafter\vss\fi}%
+\providecommand{\selectlanguage}[1]{}%
+\makeatletter \tracingstats = 1 
+
+
+\begin{document}
+\pagestyle{empty}\thispagestyle{empty}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength hsize=\the\hsize}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength vsize=\the\vsize}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength hoffset=\the\hoffset}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength voffset=\the\voffset}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength topmargin=\the\topmargin}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength topskip=\the\topskip}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength headheight=\the\headheight}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength headsep=\the\headsep}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength parskip=\the\parskip}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength oddsidemargin=\the\oddsidemargin}\lthtmltypeout{}%
+\makeatletter
+\if@twoside\lthtmltypeout{latex2htmlLength evensidemargin=\the\evensidemargin}%
+\else\lthtmltypeout{latex2htmlLength evensidemargin=\the\oddsidemargin}\fi%
+\lthtmltypeout{}%
+\makeatother
+\setcounter{page}{1}
+\onecolumn
+
+% !!! IMAGES START HERE !!!
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline950}%
+$x$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline952}%
+$R$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline954}%
+$L$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline956}%
+$G$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline958}%
+$C$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline960}%
+$[ohm]/[meter],\;[siemens]/[meter],\;[henry]/[meter],\;[farad]/[meter] $%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline962}%
+$v(x,t)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline964}%
+$i(x,t)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline966}%
+$t$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline970}%
+$\triangle x$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath746}%
+\begin{displaymath} \triangle v=-R\triangle x\; i-L\triangle x \;\frac{di}{dt},
+\;\;\;\;\;\;\;\;\;\;\;\;
+\triangle i=-G\triangle x\; v-C\triangle x\; \frac{dv}{dt} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline974}%
+$\triangle x\rightarrow 0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath747}%
+\begin{displaymath}
+\frac{\partial v}{\partial x}+L \frac{\partial i}{\partial t}+Ri=0,
+\;\;\;\;\;\;\;\;\;\;\;\;
+\frac{\partial i}{\partial x}+C \frac{\partial v}{\partial t}+Gv=0
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath748}%
+\begin{displaymath} {\cal F}[v(x,t)]=V(x,\omega),\;\;\;\;\;\;\;\;\;\;\;{\cal F}[i(x,t)]=I(x,\omega) \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline984}%
+$V(x,\omega)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline986}%
+$I(x,\omega)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline988}%
+$V(x)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline990}%
+$I(x)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline992}%
+$V$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline994}%
+$I$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath749}%
+\begin{displaymath}
+\frac{dV(x)}{dx}+(R+j\omega L)I(x)=0,
+\;\;\;\;\;\;\;\;\frac{dI(x)}{dx}+(G+j\omega C)V(x)=0 
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1010}%
+$j\omega L$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1012}%
+$1/j\omega C$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath750}%
+\begin{displaymath} \frac{d^2V}{dx^2}=(R+j\omega L)(G+j\omega C)V=s^2V,
+\;\;\;\;\;\;\;\;
+\frac{d^2I}{dx^2}=(j\omega C+R)(j\omega C+G)I=s^2I \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath751}%
+\begin{displaymath} s=\sqrt{(j\omega L+R)(j\omega C+G)}=s_R+js_I=|s| e^{j\angle s} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath752}%
+\begin{displaymath} |s|=\left[ (RG-\omega^2LC)^2+(\omega LG+\omega CR)^2\right]^{1/4},
+\;\;\;\;\;\;\;\;\;\;\;\;\;\;
+\angle s=\frac{1}{2}\tan^{-1}\left(\frac{\omega LG+\omega CR}{RG-\omega^2LC}\right)\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath753}%
+\begin{displaymath} s_R=|s|\cos\angle s,\;\;\;\;\;\;\;s_I=|s|\sin\angle s \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath754}%
+\begin{displaymath} V(x)=V_f e^{-xs}+V_b e^{xs}=V_F(x)+V_B(x),
+\;\;\;\;\;\;\;\; I(x)=I_f e^{-xs}+I_b e^{xs}=I_F(x)+I_B(x) \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath755}%
+\begin{displaymath} V_F(x)=V_f e^{-st},\;\;\;\;\;V_B(x)=V_b e^{st};\;\;\;\;\;
+I_F(x)=I_f e^{-st},\;\;\;\;\;I_B(x)=I_b e^{st} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1022}%
+$e^{sx}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1024}%
+$e^{-sx}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1026}%
+$V_b$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1028}%
+$V_f$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1030}%
+$V(0)={\cal F}[v(0,t)]$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1032}%
+$V(l)={\cal F}[v(l,t)]$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1034}%
+$l$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1044}%
+$I_f$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1046}%
+$I_b$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1048}%
+$V(x)=V_fe^{-xs}+V_be^{xs}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1050}%
+$dV(x)/dx+(R+j\omega L)I(x)=0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath756}%
+\begin{displaymath} I(x)=-\frac{1}{j\omega L+R}\frac{dV(x)}{dx}
+  =\frac{s}{(j\omega L+R)}[V_f e^{-xs}-V_b e^{xs}]
+  =\sqrt{\frac{j\omega C+G}{j\omega L+R}}\;[V_f e^{-xs}-V_b e^{xs}]
+  =\frac{1}{Z_0}\;[V_f e^{-xs}-V_b e^{xs}]
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath757}%
+\begin{displaymath} Z_0=\sqrt{\frac{j\omega L+R}{j\omega C+G}} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath758}%
+\begin{displaymath} I_f=\frac{V_f}{Z_0},\;\;\;\;\;\;I_b=\frac{V_b}{-Z_0},
+\;\;\;\;\;\;\;\;\;\;\;\;I(x)=I_f e^{-xs}+I_b e^{xs}
+=\frac{V_f}{Z_0}e^{-xs}-\frac{V_b}{Z_0}e^{xs} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1056}%
+$\omega$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1058}%
+$\omega L$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1060}%
+$\omega C$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1066}%
+$R=G=0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath759}%
+\begin{displaymath}
+\frac{dV(x)}{dx}+j\omega L\,I(x)=0,\;\;\;\;\;\;\;\;\frac{dI(x)}{dx}+j\omega C\,V(x)=0 
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath760}%
+\begin{displaymath} Z_0 = \sqrt{L/C},\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;
+s = \sqrt{-\omega^2 LC}=\pm j\omega\sqrt{LC}=\pm j\omega/\mu  \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1068}%
+$\mu$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath761}%
+\begin{displaymath} \mu=1/\sqrt{LC} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath762}%
+\begin{displaymath} V(x) = V_f e^{-sx}+V_b e^{sx} = V_f e^{-j\omega x/\mu}+V_b e^{j\omega x/\mu} 
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath763}%
+\begin{displaymath} I(x) = I_f e^{-j\omega x/\mu}+I_b e^{j\omega x/\mu}
+=\frac{1}{Z_0}\left(V_fe^{-j\omega x/\mu}-V_be^{j\omega x/\mu} \right) \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1070}%
+$V(x)=V(x,\omega)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1072}%
+$I(x)=I(x,\omega)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath764}%
+\begin{displaymath}  v(x,t)={\cal F}^{-1}[V(x,\omega)]={\cal F}^{-1}[V_f e^{-j\omega x/\mu}+V_b e^{j\omega x/\mu}]
+=v_f(t-x/\mu)+v_b(t+x/\mu) 
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath765}%
+\begin{displaymath}  i(x,t)={\cal F}^{-1}[I(x,\omega)]={\cal F}^{-1}[I_f e^{-j\omega x/\mu}+I_b e^{j\omega x/\mu}]
+  =v_f(t-x/\mu)+v_b(t+x/\mu)
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath766}%
+\begin{displaymath} v_f(t)={\cal F}[V_f],\;\;\;v_b(t)={\cal F}[V_b],\;\;\;\;\;\;\;
+   i_f(t)={\cal F}[I_f],\;\;\;i_b(t)={\cal F}[I_b] \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1082}%
+$T=l/\mu$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1084}%
+$x=0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1086}%
+$x=l$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath767}%
+\begin{displaymath} V(x)\big|_{x=0}=V(0)=V_f+V_b=V_F(0)+V_B(0) \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath768}%
+\begin{displaymath} V(x)\big|_{x=l}=V(l)=V_f e^{-sl/\mu}+V_b e^{-sl/\mu}
+=V_f e^{-j\omega T}+V_b e^{-j\omega T}=V_F(l)+V_B(l)
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath769}%
+\begin{displaymath}	V_b=V_B(0),\;\;\;\;\;\;\;\;V_f=V_F(0)	\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath770}%
+\begin{displaymath} \frac{dV(x)}{dx}+(R+j\omega L)I(x)=\frac{dV(x)}{dx}+j\omega L'\,I(x)=0 \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath771}%
+\begin{displaymath} \frac{dI(x)}{dx}+(G+j\omega C)V(x)=\frac{dI(x)}{dx}+j\omega C'\,V(x)=0 \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath772}%
+\begin{displaymath}	L'\stackrel{\triangle}{=}L\left(1+\frac{R}{j\omega L}\right),
+\;\;\;\;\;\;\;\;\;\;
+	C'\stackrel{\triangle}{=}C\left(1+\frac{G}{j\omega C}\right)	\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1110}%
+$L'$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1112}%
+$C'$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath773}%
+\begin{displaymath} Z_0=\sqrt{\frac{L'}{C'}}=\sqrt{\frac{L(1+R/j\omega L)}{C(1+G/j\omega C)}}
+=\sqrt{\frac{j\omega L+R}{j\omega C+G}} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath774}%
+\begin{displaymath} \sqrt{L'C'}=\sqrt{LC}\left[ \left(1+\frac{R}{j\omega L}\right)
+\left(1+\frac{G}{j\omega C}\right) \right]^{1/2} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1114}%
+$R<<\omega L$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1116}%
+$G<<\omega C$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1713}%
+$\displaystyle \sqrt{L'C'}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1714}%
+$\textstyle \approx$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1715}%
+$\displaystyle \sqrt{LC}\left(1+\frac{R}{j\omega L}+\frac{G}{j\omega C}\right)^{1/2}
+  \approx \sqrt{LC}\left[1+\frac{1}{2}\left(\frac{R}{j\omega L}+\frac{G}{j\omega C}\right)\right]$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1717}%
+$\displaystyle \sqrt{LC}+\frac{1}{j\omega}\left( \frac{R}{2}\sqrt{\frac{C}{L}}+\frac{G}{2}\sqrt{\frac{L}{C}} \right)=\frac{1}{\mu}+\frac{\zeta }{j\omega}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath775}%
+\begin{displaymath} f(x,y)=(1+x+y)^{1/2}=f(0,0)+f_x(0,0)x+f_y(0,0)y+\cdots
+=1+\frac{1}{2}(x+y)+\cdots \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath776}%
+\begin{displaymath} \zeta\stackrel{\triangle}{=}\frac{R}{2}\sqrt{\frac{C}{L}}+
+\frac{G}{2}\sqrt{\frac{L}{C}}=\zeta_s+\zeta_p
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1118}%
+$\zeta_s$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1120}%
+$\zeta_p$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath777}%
+\begin{displaymath} \zeta_s=\frac{R}{2}\sqrt{\frac{C}{L}},\;\;\;\;\;\;\;\;
+\zeta_p=\frac{G}{2}\sqrt{\frac{L}{C}} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath778}%
+\begin{displaymath}	V(x)=V_be^{j\omega x\sqrt{L'C'}}+V_fe^{-j\omega x\sqrt{L'C'}}
+\approx V_be^{\zeta x}e^{j\omega x/\mu}+V_fe^{-\zeta x}e^{-j\omega x/\mu}
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath779}%
+\begin{displaymath}  v(x,t)={\cal F}^{-1}[V(x)]={\cal F}^{-1}\left[V_f e^{-j\omega x/\mu}+V_b e^{j\omega x/\mu}\right]
+=v_f(t-x/\mu)e^{-\zeta x}+v_b(t+x/\mu) e^{\zeta x}
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1122}%
+$v_f(t)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1128}%
+$v_b(t)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1134}%
+$V_0={\cal F}[v_0(t)]$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1136}%
+$Z_1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1138}%
+$Z_2$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath780}%
+\begin{displaymath}	V_1=V_0-I_1Z_1	\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath781}%
+\begin{displaymath} V_1=V(x)|_{x=0}=\left[V_be^{j\omega Tx/l}+V_fe^{-j\omega Tx/l}\right]_{x=0}=V_b+V_f \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath782}%
+\begin{displaymath} I_1=I(x)|_{x=0}=\left[I_be^{j\omega Tx/l}+I_fe^{-\omega Tx/l}\right]_{x=0}=I_b+I_f \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath783}%
+\begin{displaymath} V_1=V_b+V_f=V_0-I_1Z_1=V_0-[I_b+I_f]Z_1
+  =V_0-[-V_b+V_f]\frac{Z_1}{Z_0}	\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath784}%
+\begin{displaymath}V_f=\frac{Z_0}{Z_0+Z_1}V_0+\frac{Z_1-Z_0}{Z_1+Z_0}V_b
+  =AV_0+\eta_1V_b	\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath785}%
+\begin{displaymath}	A\stackrel{\triangle}{=}\frac{Z_0}{Z_0+Z_1},\;\;\;\;\;\;\;\;\;
+  \eta_1\stackrel{\triangle}{=}\frac{Z_1-Z_0}{Z_1+Z_0} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1144}%
+$Z_0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1148}%
+$V_0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1152}%
+$Z_1=Z_0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1154}%
+$\eta_1=0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1158}%
+$V_f=A V_0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1160}%
+$Z_1=0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1162}%
+$\eta_1=-1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1166}%
+$V_f=AV_0-V_b$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath786}%
+\begin{displaymath}	V_2=I_2Z_2	\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath787}%
+\begin{displaymath} V_2=V(x)|_{x=l}=[V_be^{sx/\mu}+V_fe^{-sx/\mu}]_{x=l}
+  =V_be^{j\omega T}+V_fe^{-j\omega T}	\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath788}%
+\begin{displaymath} I_2=I(x)|_{x=l}=[I_be^{sx/\mu}+I_fe^{-sx/\mu}]_{x=l}
+  =I_be^{j\omega T}+I_fe^{-j\omega T}	\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath789}%
+\begin{displaymath} V_2=V_be^{j\omega T}+V_fe^{-j\omega T}=I_2Z_2=[I_be^{j\omega T}+I_fe^{-j\omega T}]Z_2
+  =[-V_be^{j\omega T}+V_fe^{-j\omega T}]\frac{Z_2}{Z_0} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath790}%
+\begin{displaymath} [Z_0+Z_2]V_be^{j\omega T}=[Z_2-Z_0]V_fe^{-j\omega T} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath791}%
+\begin{displaymath}	\eta_2\stackrel{\triangle}{=}\frac{V_B(l)}{V_F(l)}
+  =\frac{V_be^{j\omega T}}{V_fe^{-j\omega T}}=\frac{Z_2-Z_0}{Z_2+Z_0}	\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath792}%
+\begin{displaymath} V_B(l)=V_b e^{j\omega T}=\eta_2 V_F(l)=\eta_2 V_f e^{-j\omega T}  \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1170}%
+$Z_2=\infty$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1172}%
+$\eta_2=1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1174}%
+$V_B(l)=V_F(l)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1176}%
+$Z_2=0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1178}%
+$\eta_2=-1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1180}%
+$V_B(l)=-V_F(l)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1182}%
+$Z_2=Z_0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1184}%
+$\eta_2=0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1186}%
+$V_B(l)=\eta_2 V_F(l)=0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1198}%
+$A$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1200}%
+$\eta_1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1202}%
+$\eta_2$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1208}%
+$V_b=V_B(0)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1210}%
+$V_f=V_F(0)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath793}%
+\begin{displaymath} \left\{ \begin{array}{ll}
+V_f=AV_0+\eta_1V_b & \mbox{(at front end $x=0$)} \\
+V_be^{j\omega T}=\eta_2V_fe^{-j\omega T} & \mbox{(at back end $x=l$)}
+	\end{array} \right. \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath794}%
+\begin{displaymath} V_f=\frac{AV_0}{1-\eta_1\eta_2e^{-2j\omega T}},\;\;\;\;\;\;\;\;\;\;
+   V_b=\frac{AV_0\;\eta_2\;e^{-2j\omega T}}{1-\eta_1\eta_2e^{-2j\omega T}}
+   =\eta_2e^{-2j\omega T} V_f
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1220}%
+$AV_0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1222}%
+$t=0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1228}%
+$2T$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1230}%
+$e^{-j2\omega T}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1232}%
+$|\eta_1|<1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1234}%
+$|\eta_2|<1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1236}%
+$|\eta_1\eta_2e^{-2j\omega T}|<1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath795}%
+\begin{displaymath}	\frac{1}{1-\eta_1\eta_2e^{-2j\omega T}}=1+\eta_1\eta_2e^{-2j\omega T}
+	+(\eta_1\eta_2e^{-2j\omega T})^2+(\eta_1\eta_2e^{-2j\omega T})^3+\cdots 
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1238}%
+$(\eta_1\eta_2)^ke^{-2kj\omega T}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1240}%
+$k$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1242}%
+$k=0,1,2,\cdots$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1244}%
+$\eta_1\ne 0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1246}%
+$\eta_2\ne 0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1252}%
+$V(0)=V_1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1254}%
+$V(l)=V_2$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath796}%
+\begin{displaymath} V_1=V_b+V_f=\frac{A(1+\eta_2e^{-2j\omega T})}{1-\eta_1\eta_2e^{-2j\omega T}}V_0 = T_1V_0 \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1256}%
+$T_1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath797}%
+\begin{displaymath} T_1\stackrel{\triangle}{=}\frac{A(1+\eta_2e^{-2j\omega T})}{1-\eta_1\eta_2e^{-2j\omega T}}	\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath798}%
+\begin{displaymath}  I_1=I_b+I_f=\frac{-V_b+V_f}{Z_0}
+=\frac{A(1-\eta_2e^{-2j\omega T})}{1-\eta_1\eta_2e^{-2j\omega T}} \frac{V_0}{Z_0}	\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath799}%
+\begin{displaymath} Z_{in}\stackrel{\triangle}{=}\frac{V_1}{I_1}=\frac{1+\eta_2e^{-2j\omega T}}{1-\eta_2e^{-2j\omega T}}
+Z_0 \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath800}%
+\begin{displaymath}  V_2=V_be^{j\omega T}+V_fe^{-j\omega T}
+=\frac{A(1+\eta_2)e^{-j\omega T}}{1-\eta_1\eta_2e^{-2j\omega T}}V_0 = T_2V_0 \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1258}%
+$T_2$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath801}%
+\begin{displaymath} T_2\stackrel{\triangle}{=}\frac{A(1+\eta_2)e^{-j\omega T}}{1-\eta_1\eta_2e^{-2j\omega T}}	\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1260}%
+$T$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath802}%
+\begin{displaymath}  I_2=I_be^{j\omega T}+I_fe^{-j\omega T}=\frac{-V_be^{j\omega T}+V_fe^{-j\omega T}}{Z_0}
+=\frac{A(1-\eta_2)e^{-j\omega T}}{1-\eta_1\eta_2e^{-2j\omega T}} \frac{V_0}{Z_0}	\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1262}%
+$V_2/I_2=Z_2$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath803}%
+\begin{displaymath} \frac{V_2}{I_2}=\frac{1+\eta_2}{1-\eta_2}Z_0=Z_2 \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1264}%
+$V_2$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1270}%
+$I_2$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath804}%
+\begin{displaymath} V_{2oc}=V_2\big|_{Z_2=\infty}=\frac{2Ae^{-j\omega T}}{1-\eta_1e^{-2j\omega T}}\;V_0,\;\;\;\;\;\;
+   I_{2sc}=I_2\big|_{Z_2=0}=\frac{2Ae^{-j\omega T}}{1+\eta_1e^{-2j\omega T}}\frac{V_0}{Z_0}
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath805}%
+\begin{displaymath} Z_{out}\stackrel{\triangle}{=}\frac{V_{2oc}}{I_{2sc}}
+=\frac{1-\eta_2e^{-2j\omega T}}{1+\eta_2e^{-2j\omega T}} Z_0 \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1276}%
+$\lambda=\mu/f$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath806}%
+\begin{displaymath} l=n\frac{\lambda}{2}=n\frac{\mu}{2f}=n\frac{\mu\pi}{\omega}  \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath807}%
+\begin{displaymath} e^{-j2\omega T}=e^{-j2\omega l/\mu}=e^{-j2n\pi}=1 \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath808}%
+\begin{displaymath} Z_{in}=\frac{1+\eta_2}{1-\eta_2}Z_0=Z_2,\;\;\;\;\;
+  Z_{out}=\frac{1-\eta_2}{1+\eta_2}Z_0=\frac{Z_0^2}{Z_2} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1282}%
+$Z_{in}=Z_{out}=Z_0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1288}%
+$V_1=AV_0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1290}%
+$V_{2oc}=V_2\big|_{Z_2=\infty}=2AV_0 e^{-j\omega T}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1292}%
+$V_2=AV_0e^{-j\omega T}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath809}%
+\begin{displaymath}	Z_0=\sqrt{L/C},\;\;\;\;\;\;\;\;\;\;\mu=\frac{1}{\sqrt{LC}}	\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath810}%
+\begin{displaymath} A=\frac{Z_0}{Z_0+Z_1},\;\;\;\;\;\;\;\; \eta_1=\frac{Z_1-Z_0}{Z_1+Z_0},
+  \;\;\;\;\;\;\;\;\eta_2=\frac{Z_2-Z_0}{Z_2+Z_0} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath811}%
+\begin{displaymath} T_1=\frac{A(1+\eta_2e^{-2j\omega T})}{1-\eta_1\eta_2e^{-2j\omega T}},
+  \;\;\;\;\;\;\;\;\;\;\;\;
+  T_2=\frac{A(1+\eta_2)e^{-j\omega T}}{1-\eta_1\eta_2e^{-2j\omega T}} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath812}%
+\begin{displaymath} Z_{in}=\frac{1+\eta_2e^{-2j\omega T}}{1-\eta_2e^{-2j\omega T}}Z_0,
+  \;\;\;\;\;\;\;\;\;\;\;\;
+  Z_{out}=\frac{1-\eta_2e^{-2j\omega T}}{1+\eta_2e^{-2j\omega T}}Z_0 \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1296}%
+$10^{-6}\;\;[henry]/[meter]$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1300}%
+$10^{-11}\;\;[farad]/[meter]$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1302}%
+$\mu=1/\sqrt{LC}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1304}%
+$3\times 10^8$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1306}%
+$[meter]/[second]$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1308}%
+$Z_1=Z_2=Z_0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1310}%
+$v_0(t)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1322}%
+$Z_{in}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1324}%
+$Z_{out}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1326}%
+$v_1(t)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1328}%
+$v_2(t)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath813}%
+\begin{displaymath} A=\frac{Z_0}{Z_0+Z_1}=\frac{1}{2},\;\;\;\;\;\;
+  \eta_1=\frac{Z_1-Z_0}{Z_1+Z_0}=\eta_2=\frac{Z_2-Z_0}{Z_2+Z_0}=0 \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath814}%
+\begin{displaymath} T_1=\frac{A[1+\eta_2e^{-2j\omega T}]}{1-\eta_1\eta_2e^{-2j\omega T}}=A=\frac{1}{2},
+  \;\;\;\;\;\;\;\;\;T_2=\frac{A[1+\eta_2]e^{-j\omega T}}{1-\eta_1\eta_2e^{-2j\omega T}}
+  =Ae^{-j\omega T}=\frac{1}{2}e^{-j\omega T}	\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath815}%
+\begin{displaymath} Z_{in}=\frac{1+\eta_2e^{-2j\omega T}}{1-\eta_2e^{-2j\omega T}}Z_0=Z_0,
+  \;\;\;\;\;\;\;\;\;
+  Z_{in}=\frac{1-\eta_2e^{-2j\omega T}}{1+\eta_2e^{-2j\omega T}}Z_0=Z_0 \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath816}%
+\begin{displaymath}	V_1=\frac{1}{2}V_0,\;\;\;\;\;\;\;\;\;\;v_1(t)=\frac{1}{2}v_0(t) \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath817}%
+\begin{displaymath}	V_2=T_2V_0=\frac{1}{2}e^{-j\omega T}V_0,\;\;\;\;\;\;\;\;\;\;\;\;
+  v_2(t)={\cal F}^{-1}[V_2]={\cal F}^{-1}\left[\frac{1}{2}e^{-j\omega T}V_0\right]
+  =\frac{1}{2}v_0(t-T)	\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1336}%
+$A=1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1342}%
+$T_1=1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1344}%
+$T_2=e^{-j\omega T}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1346}%
+$Z_{in}=Z_0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath818}%
+\begin{displaymath}	V_1=T_1V_0=V_0,\;\;\;\;\;\;\;v_1(t)=v_0(t),\;\;\;\;\;\;\;
+  V_2=T_2V_0=V_0e^{-j\omega T},\;\;\;\;\;\; v_2(t)=v_1(t-T)=v_0(t-T)	\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath819}%
+\begin{displaymath}	A=\frac{1}{2},\;\;\;\;\;\;\eta_1=0,\;\;\;\;\;\;\eta_2=1,
+  \;\;\;\;\;\;T_1=\frac{1}{2}(1+e^{-2j\omega T}),\;\;\;\;\;\;T_2=e^{-j\omega T}	\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath820}%
+\begin{displaymath} Z_{in}=\frac{1+e^{-2j\omega T}}{1-e^{-2j\omega T}}Z_0 \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1356}%
+$|\omega T| << 1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath821}%
+\begin{displaymath} Z_{in}\approx \frac{Z_0}{j\omega T}=\frac{\sqrt{L/C}}{j\omega\;l\sqrt{LC}}
+  =\frac{1}{j\omega\;lC}=\frac{1}{j\omega C_{line}}	\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1360}%
+$C_{line}=lC$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath822}%
+\begin{displaymath}	V_2=T_2V_0=V_0 e^{-j\omega T},\;\;\;\;\;\;\;
+  v_2(t)={\cal F}^{-1}[V_2]={\cal F}[V_0 e^{-j\omega T}]=v_0(t-T)	\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath823}%
+\begin{displaymath}	V_1=T_1V_0=\frac{1}{2}(1+e^{-2j\omega T}),\;\;\;\;\;\;
+  v_1(t)={\cal F}^{-1}[V_1]={\cal F}^{-1}\left[\frac{1}{2}(1+e^{-2j\omega T})\right]
+  =\frac{1}{2}[v_0(t)+v_0(t-2T)]	\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1364}%
+$v(t-2T)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath824}%
+\begin{displaymath}	A=\frac{1}{2},\;\;\;\;\;\;\eta_1=0,\;\;\;\;\;\eta_2=-1,
+  \;\;\;\;\;\; T_1=\frac{1}{2}(1-e^{-2j\omega T}),\;\;\;\;\;\;T_2=0 \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath825}%
+\begin{displaymath} Z_{in}=\frac{1-e^{-2j\omega T}}{1+e^{-2j\omega T}}Z_0 \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1376}%
+$\omega T << 1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath826}%
+\begin{displaymath} Z_{in}\approx Z_0 \;j\omega T=\sqrt{L/C}j\omega\;l\sqrt{LC}
+  =j\omega\;lL=j\omega L_{line}	\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1380}%
+$L_{line}=lL$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath827}%
+\begin{displaymath}	V_2=T_2V_0=0	\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath828}%
+\begin{displaymath}	V_1=T_1V_0=\frac{1}{2}(1-e^{-2j\omega T}),\;\;\;\;\;\;
+  v_1(t)={\cal F}^{-1}[V_1]=\frac{1}{2}[v_0(t)-v_0(t-2T)]	\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1384}%
+$-v_0(t-2T)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1390}%
+$v_0(t)=u(t)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1392}%
+$-u(t-2T)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1394}%
+$u(t)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1402}%
+$Z_2=j\omega L_2$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath829}%
+\begin{displaymath}	A=\frac{1}{2},\;\;\;\;\;\;\eta_1=0,\;\;\;\;\;\;
+  \eta_2=\frac{j\omega L_2-Z_0}{j\omega L_2+Z_0}=\frac{j\omega-1/\tau}{j\omega+1/\tau} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1404}%
+$\tau\stackrel{\triangle}{=}\omega L_2/Z_0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath830}%
+\begin{displaymath} T_1=A(1+\eta_2e^{-2j\omega T})
+  =\frac{1}{2}\left[1+\frac{j\omega-1/\tau}{\omega+1/\tau} e^{-2j\omega T}\right] \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath831}%
+\begin{displaymath} T_2=A(1+\eta_2)e^{-j\omega T}=\frac{j\omega}{j\omega+1/\tau}e^{-j\omega T} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1406}%
+$V_0={\cal F}[u(t)]=1/j\omega$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1922}%
+$\displaystyle V_1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1923}%
+$\textstyle =$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1924}%
+$\displaystyle T_1V_0
+    =\frac{1}{2}\left[1+\frac{j\omega-1/\tau}{j\omega+1/\tau}e^{-2j\omega T}\right]\frac{1}{j\omega}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1926}%
+$\displaystyle \frac{1}{2j\omega}\left[1+\left(\frac{2j\omega}{j\omega+1/\tau}-1\right)e^{-2j\omega T}\right]
+    =\frac{1}{2j\omega}\left(1-e^{-2j\omega T}\right)+\frac{1}{j\omega+1/\tau}e^{-2j\omega T}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath832}%
+\begin{displaymath}	v_1(t)={\cal F}^{-1}[V_1]=\frac{1}{2}[u(t)-u(t-2T)]+e^{-(t-2T)/\tau} u(t-2T) \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath833}%
+\begin{displaymath} 	V_2=T_2V_0=\frac{j\omega}{j\omega+\tau}e^{-j\omega T} \frac{1}{j\omega}
+  =\frac{1}{j\omega+\tau}e^{-j\omega T} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath834}%
+\begin{displaymath}	v_2(t)={\cal F}^{-1}[V_2]=u(t-T) e^{-(t-T)/\tau} 	\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1422}%
+$Z_1=Z_0/2$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1424}%
+$Z_2=2Z_0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath835}%
+\begin{displaymath} A=\frac{Z_0}{Z_1+Z_0}=\frac{2Z_1}{Z_1+2Z_1}=\frac{2}{3} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath836}%
+\begin{displaymath} \eta_1=\frac{Z_1-Z_0}{Z_1+Z_0}=\frac{Z_1-2Z_1}{Z_1+2Z_1}=-\frac{1}{3} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath837}%
+\begin{displaymath} \eta_2=\frac{Z_2-Z_0}{Z_2+Z_0}=\frac{2Z_0-Z_0}{2Z_0+Z_0}=\frac{1}{3}  \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1945}%
+$\displaystyle V_2$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1947}%
+$\displaystyle V_0A(1+\eta_2)e^{-j\omega T}\left[1+\eta_1\eta_2 e^{-2j\omega T}
+    +(\eta_1\eta_2)^2 e^{-4j\omega T}+\cdots \right]$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1949}%
+$\displaystyle \frac{8}{9}V_0 e^{-j\omega T}\left[1-\frac{1}{9} e^{-2j\omega T}
+    +\left(\frac{1}{9}\right)^2 e^{-4j\omega T}-\cdots \right]$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1951}%
+$\displaystyle V_0\left[ \frac{8}{9} e^{-j\omega T}-\frac{8}{81}e^{-3j\omega T}
+    +\frac{8}{729}e^{-5j\omega T}-\cdots \right]$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1430}%
+$t<T:$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath838}%
+\begin{displaymath} v_2(t)=0 \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1432}%
+$T<t<3T:$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath839}%
+\begin{displaymath}	v_2(t)=\frac{8}{9}	\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1434}%
+$3T<t<5T:$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath840}%
+\begin{displaymath} v_2(t)=\frac{8}{9}-\frac{8}{81}=\frac{64}{81} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1436}%
+$5T<t<7T:$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath841}%
+\begin{displaymath} v_2(t)=\frac{8}{9}-\frac{8}{81}+\frac{8}{729}=\frac{576}{729} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath842}%
+\begin{displaymath}	\cdots  \cdots  \cdots  \cdots  \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1438}%
+$v_2(\infty)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath843}%
+\begin{displaymath} v_2(\infty)=\frac{8}{9}\sum_{k=0}^\infty \left(\frac{1}{9}\right)^k
+  =\frac{8}{9}\frac{1}{1-(-1/9)}=\frac{4}{5}=0.8 \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1442}%
+$0<t<7T$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1444}%
+$v_0(t)=u(t)-u(T/3)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1446}%
+$T/3$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1448}%
+$t=2kT$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1452}%
+$t=T:$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1454}%
+$T=3T:$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath845}%
+\begin{displaymath} v_2(t)=\frac{8}{9}\left(-\frac{1}{9}\right)=-\frac{8}{81} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1456}%
+$t=5T:$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath846}%
+\begin{displaymath} v_2=\frac{8}{9}\left(\frac{1}{81}\right)=\frac{8}{729}	\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1458}%
+$v_2(\infty)=0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+
+\end{document}

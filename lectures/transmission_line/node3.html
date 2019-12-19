@@ -1,0 +1,686 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Forward and backward traveling signals</TITLE>
+<META NAME="description" CONTENT="Forward and backward traveling signals">
+<META NAME="keywords" CONTENT="transmission_line">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="transmission_line.css">
+
+<LINK REL="next" HREF="node4.html">
+<LINK REL="previous" HREF="node2.html">
+<LINK REL="up" HREF="transmission_line.html">
+<LINK REL="next" HREF="node4.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html39"
+  HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html37"
+  HREF="transmission_line.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html31"
+  HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html40"
+  HREF="node4.html">Examples</A>
+<B> Up:</B> <A NAME="tex2html38"
+  HREF="transmission_line.html">transmission_line</A>
+<B> Previous:</B> <A NAME="tex2html32"
+  HREF="node2.html">Reflection and termination</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00030000000000000000">
+Forward and backward traveling signals</A>
+</H1>
+
+<P>
+Summarizing the above, we have two simultaneous equations of two unknowns
+<IMG
+ WIDTH="88" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img123.png"
+ ALT="$V_b=V_B(0)$"> and <IMG
+ WIDTH="90" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img124.png"
+ ALT="$V_f=V_F(0)$"> for the forward and backward voltages at the
+front end (<IMG
+ WIDTH="46" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.png"
+ ALT="$x=0$">):
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\left\{ \begin{array}{ll}
+V_f=AV_0+\eta_1V_b & \mbox{(at front end $x=0$)} \\
+V_be^{j\omega T}=\eta_2V_fe^{-j\omega T} & \mbox{(at back end $x=l$)}
+	\end{array} \right.
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="339" HEIGHT="54" BORDER="0"
+ SRC="img125.png"
+ ALT="\begin{displaymath}\left\{ \begin{array}{ll}
+V_f=AV_0+\eta_1V_b &amp; \mbox{(at fron...
+...{-j\omega T} &amp; \mbox{(at back end $x=l$)}
+\end{array} \right. \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Solving these simultaneous equations we get
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V_f=\frac{AV_0}{1-\eta_1\eta_2e^{-2j\omega T}},\;\;\;\;\;\;\;\;\;\;
+   V_b=\frac{AV_0\;\eta_2\;e^{-2j\omega T}}{1-\eta_1\eta_2e^{-2j\omega T}}
+   =\eta_2e^{-2j\omega T} V_f
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="481" HEIGHT="49" BORDER="0"
+ SRC="img126.png"
+ ALT="\begin{displaymath}V_f=\frac{AV_0}{1-\eta_1\eta_2e^{-2j\omega T}},\;\;\;\;\;\;\;...
+...T}}{1-\eta_1\eta_2e^{-2j\omega T}}
+=\eta_2e^{-2j\omega T} V_f
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The numerators represent the sources of the signals. The forward signal 
+<IMG
+ WIDTH="90" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img124.png"
+ ALT="$V_f=V_F(0)$"> is caused by the input <IMG
+ WIDTH="35" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img127.png"
+ ALT="$AV_0$"> first entering the line at <IMG
+ WIDTH="42" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img128.png"
+ ALT="$t=0$">.
+The backward signal <IMG
+ WIDTH="88" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img123.png"
+ ALT="$V_b=V_B(0)$"> is due to the forward signal reflected at 
+the back end of the line (<IMG
+ WIDTH="20" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img122.png"
+ ALT="$\eta_2$">), delayed by the round-trip traveling 
+time <IMG
+ WIDTH="26" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img129.png"
+ ALT="$2T$"> (<!-- MATH
+ $e^{-j2\omega T}$
+ -->
+<IMG
+ WIDTH="55" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img130.png"
+ ALT="$e^{-j2\omega T}$">) for the signal to travel forward and then backward 
+along the length of the line. The common denominator represents the subsequent
+reflections at both ends. As in general <IMG
+ WIDTH="62" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img131.png"
+ ALT="$\vert\eta_1\vert&lt;1$"> and <IMG
+ WIDTH="62" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img132.png"
+ ALT="$\vert\eta_2\vert&lt;1$">, we 
+have <!-- MATH
+ $|\eta_1\eta_2e^{-2j\omega T}|<1$
+ -->
+<IMG
+ WIDTH="129" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img133.png"
+ ALT="$\vert\eta_1\eta_2e^{-2j\omega T}\vert&lt;1$"> and the denominator can be expanded to 
+become:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\frac{1}{1-\eta_1\eta_2e^{-2j\omega T}}=1+\eta_1\eta_2e^{-2j\omega T}
+	+(\eta_1\eta_2e^{-2j\omega T})^2+(\eta_1\eta_2e^{-2j\omega T})^3+\cdots
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="545" HEIGHT="45" BORDER="0"
+ SRC="img134.png"
+ ALT="\begin{displaymath}\frac{1}{1-\eta_1\eta_2e^{-2j\omega T}}=1+\eta_1\eta_2e^{-2j\...
+...ta_2e^{-2j\omega T})^2+(\eta_1\eta_2e^{-2j\omega T})^3+\cdots
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Here the general term <!-- MATH
+ $(\eta_1\eta_2)^ke^{-2kj\omega T}$
+ -->
+<IMG
+ WIDTH="117" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img135.png"
+ ALT="$(\eta_1\eta_2)^ke^{-2kj\omega T}$"> represents the signal 
+arriving at the front of the line after traveling forward and backward along 
+the line and being reflected at both ends <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img136.png"
+ ALT="$k$"> times (<!-- MATH
+ $k=0,1,2,\cdots$
+ -->
+<IMG
+ WIDTH="107" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img137.png"
+ ALT="$k=0,1,2,\cdots$">). When 
+<IMG
+ WIDTH="52" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img138.png"
+ ALT="$\eta_1\ne 0$"> and  <IMG
+ WIDTH="52" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img139.png"
+ ALT="$\eta_2\ne 0$">, there will be infinite reflections between
+the two ends.
+
+<P>
+Given <IMG
+ WIDTH="23" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img33.png"
+ ALT="$V_f$"> and <IMG
+ WIDTH="21" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.png"
+ ALT="$V_b$">, the voltages <IMG
+ WIDTH="81" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img140.png"
+ ALT="$V(0)=V_1$"> and <IMG
+ WIDTH="78" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img141.png"
+ ALT="$V(l)=V_2$"> at the two ends.
+At the front, we have
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V_1=V_b+V_f=\frac{A(1+\eta_2e^{-2j\omega T})}{1-\eta_1\eta_2e^{-2j\omega T}}V_0 = T_1V_0
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="323" HEIGHT="49" BORDER="0"
+ SRC="img142.png"
+ ALT="\begin{displaymath}V_1=V_b+V_f=\frac{A(1+\eta_2e^{-2j\omega T})}{1-\eta_1\eta_2e^{-2j\omega T}}V_0 = T_1V_0 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img143.png"
+ ALT="$T_1$"> is the <EM>voltage transfer function at the front</EM> 
+defined as
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+T_1\stackrel{\triangle}{=}\frac{A(1+\eta_2e^{-2j\omega T})}{1-\eta_1\eta_2e^{-2j\omega T}}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="167" HEIGHT="49" BORDER="0"
+ SRC="img144.png"
+ ALT="\begin{displaymath}T_1\stackrel{\triangle}{=}\frac{A(1+\eta_2e^{-2j\omega T})}{1-\eta_1\eta_2e^{-2j\omega T}} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The two terms of the numerator correspond to the in-coming voltage and the
+reflection from the back end, respectively. The input current is
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+I_1=I_b+I_f=\frac{-V_b+V_f}{Z_0}
+=\frac{A(1-\eta_2e^{-2j\omega T})}{1-\eta_1\eta_2e^{-2j\omega T}} \frac{V_0}{Z_0}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="361" HEIGHT="49" BORDER="0"
+ SRC="img145.png"
+ ALT="\begin{displaymath}I_1=I_b+I_f=\frac{-V_b+V_f}{Z_0}
+=\frac{A(1-\eta_2e^{-2j\omega T})}{1-\eta_1\eta_2e^{-2j\omega T}} \frac{V_0}{Z_0} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The <EM>input impedance</EM> of the transmission line can be obtained as:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Z_{in}\stackrel{\triangle}{=}\frac{V_1}{I_1}=\frac{1+\eta_2e^{-2j\omega T}}{1-\eta_2e^{-2j\omega T}}
+Z_0
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="213" HEIGHT="49" BORDER="0"
+ SRC="img146.png"
+ ALT="\begin{displaymath}Z_{in}\stackrel{\triangle}{=}\frac{V_1}{I_1}=\frac{1+\eta_2e^{-2j\omega T}}{1-\eta_2e^{-2j\omega T}}
+Z_0 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+At the back end, we have
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V_2=V_be^{j\omega T}+V_fe^{-j\omega T}
+=\frac{A(1+\eta_2)e^{-j\omega T}}{1-\eta_1\eta_2e^{-2j\omega T}}V_0 = T_2V_0
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="395" HEIGHT="49" BORDER="0"
+ SRC="img147.png"
+ ALT="\begin{displaymath}V_2=V_be^{j\omega T}+V_fe^{-j\omega T}
+=\frac{A(1+\eta_2)e^{-j\omega T}}{1-\eta_1\eta_2e^{-2j\omega T}}V_0 = T_2V_0 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img148.png"
+ ALT="$T_2$"> is the <EM>voltage transfer function at the back end</EM> defined as
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+T_2\stackrel{\triangle}{=}\frac{A(1+\eta_2)e^{-j\omega T}}{1-\eta_1\eta_2e^{-2j\omega T}}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="161" HEIGHT="49" BORDER="0"
+ SRC="img149.png"
+ ALT="\begin{displaymath}T_2\stackrel{\triangle}{=}\frac{A(1+\eta_2)e^{-j\omega T}}{1-\eta_1\eta_2e^{-2j\omega T}} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The two terms of the numerator correspond to the in-coming voltage arriving at
+the back end after a time dealy of <IMG
+ WIDTH="17" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img150.png"
+ ALT="$T$"> and the immediate reflection at the back
+end. The output current is
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+I_2=I_be^{j\omega T}+I_fe^{-j\omega T}=\frac{-V_be^{j\omega T}+V_fe^{-j\omega T}}{Z_0}
+=\frac{A(1-\eta_2)e^{-j\omega T}}{1-\eta_1\eta_2e^{-2j\omega T}} \frac{V_0}{Z_0}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="509" HEIGHT="49" BORDER="0"
+ SRC="img151.png"
+ ALT="\begin{displaymath}I_2=I_be^{j\omega T}+I_fe^{-j\omega T}=\frac{-V_be^{j\omega T...
+...e^{-j\omega T}}{1-\eta_1\eta_2e^{-2j\omega T}} \frac{V_0}{Z_0} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+We can easily verify that indeed <IMG
+ WIDTH="89" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img152.png"
+ ALT="$V_2/I_2=Z_2$">:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\frac{V_2}{I_2}=\frac{1+\eta_2}{1-\eta_2}Z_0=Z_2
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="153" HEIGHT="46" BORDER="0"
+ SRC="img153.png"
+ ALT="\begin{displaymath}\frac{V_2}{I_2}=\frac{1+\eta_2}{1-\eta_2}Z_0=Z_2 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+The <EM>output impedance</EM> of the transmission line can be defined as the 
+ratio of the open-circuit voltage <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img154.png"
+ ALT="$V_2$"> (when <IMG
+ WIDTH="64" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img111.png"
+ ALT="$Z_2=\infty$">, <IMG
+ WIDTH="52" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img112.png"
+ ALT="$\eta_2=1$">) and 
+the short-circuit current <IMG
+ WIDTH="19" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img155.png"
+ ALT="$I_2$"> (when <IMG
+ WIDTH="56" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img114.png"
+ ALT="$Z_2=0$">, <IMG
+ WIDTH="66" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img115.png"
+ ALT="$\eta_2=-1$">). But as
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V_{2oc}=V_2\big|_{Z_2=\infty}=\frac{2Ae^{-j\omega T}}{1-\eta_1e^{-2j\omega T}}\;V_0,\;\;\;\;\;\;
+   I_{2sc}=I_2\big|_{Z_2=0}=\frac{2Ae^{-j\omega T}}{1+\eta_1e^{-2j\omega T}}\frac{V_0}{Z_0}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="550" HEIGHT="49" BORDER="0"
+ SRC="img156.png"
+ ALT="\begin{displaymath}V_{2oc}=V_2\big\vert _{Z_2=\infty}=\frac{2Ae^{-j\omega T}}{1-...
+...frac{2Ae^{-j\omega T}}{1+\eta_1e^{-2j\omega T}}\frac{V_0}{Z_0}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+we get
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Z_{out}\stackrel{\triangle}{=}\frac{V_{2oc}}{I_{2sc}}
+=\frac{1-\eta_2e^{-2j\omega T}}{1+\eta_2e^{-2j\omega T}} Z_0
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="231" HEIGHT="49" BORDER="0"
+ SRC="img157.png"
+ ALT="\begin{displaymath}Z_{out}\stackrel{\triangle}{=}\frac{V_{2oc}}{I_{2sc}}
+=\frac{1-\eta_2e^{-2j\omega T}}{1+\eta_2e^{-2j\omega T}} Z_0 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../TransmissionLine2.gif"
+ ALT="TransmissionLine2.gif">
+
+<P>
+We consider some special cases.
+
+<P>
+
+<UL>
+<LI>When the length of the transmission line is integer multiple of half of
+  the wavelength <IMG
+ WIDTH="67" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img158.png"
+ ALT="$\lambda=\mu/f$">; i.e.,
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+l=n\frac{\lambda}{2}=n\frac{\mu}{2f}=n\frac{\mu\pi}{\omega}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="167" HEIGHT="46" BORDER="0"
+ SRC="img159.png"
+ ALT="\begin{displaymath}l=n\frac{\lambda}{2}=n\frac{\mu}{2f}=n\frac{\mu\pi}{\omega} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+we have
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+e^{-j2\omega T}=e^{-j2\omega l/\mu}=e^{-j2n\pi}=1
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="238" HEIGHT="27" BORDER="0"
+ SRC="img160.png"
+ ALT="\begin{displaymath}e^{-j2\omega T}=e^{-j2\omega l/\mu}=e^{-j2n\pi}=1 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+and
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Z_{in}=\frac{1+\eta_2}{1-\eta_2}Z_0=Z_2,\;\;\;\;\;
+  Z_{out}=\frac{1-\eta_2}{1+\eta_2}Z_0=\frac{Z_0^2}{Z_2}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="363" HEIGHT="48" BORDER="0"
+ SRC="img161.png"
+ ALT="\begin{displaymath}Z_{in}=\frac{1+\eta_2}{1-\eta_2}Z_0=Z_2,\;\;\;\;\;
+Z_{out}=\frac{1-\eta_2}{1+\eta_2}Z_0=\frac{Z_0^2}{Z_2} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+</LI>
+<LI>If the transmission line matches the load, <IMG
+ WIDTH="66" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img117.png"
+ ALT="$Z_2=Z_0$"> and <IMG
+ WIDTH="52" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img118.png"
+ ALT="$\eta_2=0$">,
+  we have <!-- MATH
+ $Z_{in}=Z_{out}=Z_0$
+ -->
+<IMG
+ WIDTH="128" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img162.png"
+ ALT="$Z_{in}=Z_{out}=Z_0$">. Moreover, if the transmission line also matches the
+  internal impedance of the source, <IMG
+ WIDTH="66" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img98.png"
+ ALT="$Z_1=Z_0$"> and <IMG
+ WIDTH="52" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img99.png"
+ ALT="$\eta_1=0$">, we have <IMG
+ WIDTH="76" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img163.png"
+ ALT="$V_1=AV_0$">,
+  <!-- MATH
+ $V_{2oc}=V_2\big|_{Z_2=\infty}=2AV_0 e^{-j\omega T}$
+ -->
+<IMG
+ WIDTH="228" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img164.png"
+ ALT="$V_{2oc}=V_2\big\vert _{Z_2=\infty}=2AV_0 e^{-j\omega T}$">, and <!-- MATH
+ $V_2=AV_0e^{-j\omega T}$
+ -->
+<IMG
+ WIDTH="120" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img165.png"
+ ALT="$V_2=AV_0e^{-j\omega T}$">.
+</LI>
+</UL>
+
+<P>
+In summary, we have:
+
+<UL>
+<LI><B>Characteristic impedance and traveling velocity:</B>
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Z_0=\sqrt{L/C},\;\;\;\;\;\;\;\;\;\;\mu=\frac{1}{\sqrt{LC}}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="224" HEIGHT="46" BORDER="0"
+ SRC="img166.png"
+ ALT="\begin{displaymath}Z_0=\sqrt{L/C},\;\;\;\;\;\;\;\;\;\;\mu=\frac{1}{\sqrt{LC}} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI><B>Attenuation ratio and reflection coefficients:</B>
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+A=\frac{Z_0}{Z_0+Z_1},\;\;\;\;\;\;\;\; \eta_1=\frac{Z_1-Z_0}{Z_1+Z_0},
+  \;\;\;\;\;\;\;\;\eta_2=\frac{Z_2-Z_0}{Z_2+Z_0}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="399" HEIGHT="45" BORDER="0"
+ SRC="img167.png"
+ ALT="\begin{displaymath}A=\frac{Z_0}{Z_0+Z_1},\;\;\;\;\;\;\;\; \eta_1=\frac{Z_1-Z_0}{Z_1+Z_0},
+\;\;\;\;\;\;\;\;\eta_2=\frac{Z_2-Z_0}{Z_2+Z_0} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI><B>Voltage transfer functions:</B>
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+T_1=\frac{A(1+\eta_2e^{-2j\omega T})}{1-\eta_1\eta_2e^{-2j\omega T}},
+  \;\;\;\;\;\;\;\;\;\;\;\;
+  T_2=\frac{A(1+\eta_2)e^{-j\omega T}}{1-\eta_1\eta_2e^{-2j\omega T}}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="395" HEIGHT="49" BORDER="0"
+ SRC="img168.png"
+ ALT="\begin{displaymath}T_1=\frac{A(1+\eta_2e^{-2j\omega T})}{1-\eta_1\eta_2e^{-2j\om...
+...frac{A(1+\eta_2)e^{-j\omega T}}{1-\eta_1\eta_2e^{-2j\omega T}} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI><B>Input and output impedances:</B>
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Z_{in}=\frac{1+\eta_2e^{-2j\omega T}}{1-\eta_2e^{-2j\omega T}}Z_0,
+  \;\;\;\;\;\;\;\;\;\;\;\;
+  Z_{out}=\frac{1-\eta_2e^{-2j\omega T}}{1+\eta_2e^{-2j\omega T}}Z_0
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="409" HEIGHT="49" BORDER="0"
+ SRC="img169.png"
+ ALT="\begin{displaymath}Z_{in}=\frac{1+\eta_2e^{-2j\omega T}}{1-\eta_2e^{-2j\omega T}...
+...ut}=\frac{1-\eta_2e^{-2j\omega T}}{1+\eta_2e^{-2j\omega T}}Z_0 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI><IMG
+ WIDTH="16" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.png"
+ ALT="$L$"> is of the order <!-- MATH
+ $10^{-6}\;\;[henry]/[meter]$
+ -->
+<IMG
+ WIDTH="170" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img170.png"
+ ALT="$10^{-6}\;\;[henry]/[meter]$">, <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.png"
+ ALT="$C$"> is of the
+  order <!-- MATH
+ $10^{-11}\;\;[farad]/[meter]$
+ -->
+<IMG
+ WIDTH="177" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img171.png"
+ ALT="$10^{-11}\;\;[farad]/[meter]$">, the speed is
+  <!-- MATH
+ $\mu=1/\sqrt{LC}$
+ -->
+<IMG
+ WIDTH="95" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img172.png"
+ ALT="$\mu=1/\sqrt{LC}$"> is of the order <IMG
+ WIDTH="59" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img173.png"
+ ALT="$3\times 10^8$"> <!-- MATH
+ $[meter]/[second]$
+ -->
+<IMG
+ WIDTH="130" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img174.png"
+ ALT="$[meter]/[second]$">.
+
+<P>
+</LI>
+</UL>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html39"
+  HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html37"
+  HREF="transmission_line.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html31"
+  HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html40"
+  HREF="node4.html">Examples</A>
+<B> Up:</B> <A NAME="tex2html38"
+  HREF="transmission_line.html">transmission_line</A>
+<B> Previous:</B> <A NAME="tex2html32"
+  HREF="node2.html">Reflection and termination</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Ruye Wang
+2016-05-20
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,261 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>E84 Lab 1: Design of a Multimeter</TITLE>
+<META NAME="description" CONTENT="E84 Lab 1: Design of a Multimeter">
+<META NAME="keywords" CONTENT="lab1">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="lab1.css">
+
+<LINK REL="next" HREF="node2.html">
+<LINK REL="previous" HREF="lab1.html">
+<LINK REL="up" HREF="lab1.html">
+<LINK REL="next" HREF="node2.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html18"
+  HREF="node2.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html16"
+  HREF="lab1.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html10"
+  HREF="lab1.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html19"
+  HREF="node2.html">About this document ...</A>
+<B> Up:</B> <A NAME="tex2html17"
+  HREF="lab1.html">lab1</A>
+<B> Previous:</B> <A NAME="tex2html11"
+  HREF="lab1.html">lab1</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00010000000000000000">
+E84 Lab 1: Design of a Multimeter</A>
+</H1>
+
+<P>
+The schematic diagram of a multimeter is shown in the figure below:
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../MultimeterA2.gif"
+ ALT="MultimeterA2.gif">
+
+<P>
+
+<UL>
+<LI>Pick up the hardware of the multimeter kit from the stock room,
+    including all the components (resistors, potentiometer, meter head, 
+    rotary switch, batteries, etc.). 
+
+<P>
+</LI>
+<LI>Study the diagram above carefully to understand how the meter 
+    measures the voltages, currents and resistances at each of the positions 
+    of the rotary switch. The rectangular shape to the left of the meter 
+    head (a circle with an arrow in it) represents two parallel diodes 
+    with opposite polarity for the protection of the meter head. You don't
+    need to worry about this. 
+
+<P>
+</LI>
+<LI>The part marked by 10KBVR is a potentiometer, a resistor of 10
+    <IMG
+ WIDTH="35" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.png"
+ ALT="$K\Omega$"> but with an additional terminal which is a piece of metal 
+    that can slide along the resistor, so that the resistance between the 
+    3rd terminal and any of the other two is variable between 0 and 10 
+    <IMG
+ WIDTH="35" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.png"
+ ALT="$K\Omega$">. See
+    <A NAME="tex2html1"
+  HREF="http://en.wikipedia.org/wiki/Potentiometer">here</A>
+for more detailed explanation. This potentiometer is needed to calibrate
+    the Ohmmeter. Specifically, before taking the measurement of a resistance,
+    the potentiometer needs to be adjusted so that the needle points to 
+    zero on the resistance scale when the two leads of the multimeter touch
+    each other for zero resistance.
+
+<P>
+</LI>
+<LI>Understand how the rotary switch works. It is represented by the 
+    18 circles on top of the diagram and the two layers of rectangular shapes
+    on the bottom. At each of the 18 positions, the corresponding circle on 
+    top is connected to both of the rectangles, while all remaining circles 
+    are not connected to anything. If you still have difficulty understanding 
+    this, it should be most helpful if you take a look at the physical parts 
+    and the printed circuit board (PCB) in the kit.
+
+<P>
+</LI>
+<LI>Find the resistance for each of the 13 resistors with their values 
+    erased.
+
+<P>
+</LI>
+<LI>Turn in your design on paper with all the resistance values before
+    the first deadline. 
+
+<P>
+</LI>
+<LI>Assemble the multimeter in the lab, verify every single position 
+    to see if the meter works as expected.
+
+<P>
+</LI>
+</UL>
+
+<P>
+<B>Hints</B> 
+
+<P>
+Following these steps:
+
+<P>
+
+<UL>
+<LI>Study the meter head assembly circuitry and find out the needed voltage 
+  across the meter in series with the <IMG
+ WIDTH="51" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$190\; \Omega$"> resistor for the current 
+  through the meter to be <IMG
+ WIDTH="54" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="$43 \;\mu A$">, needed for a full scale display. Then 
+  find the currents through the two parallel branches with the resistances of 
+  <IMG
+ WIDTH="53" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img4.png"
+ ALT="$32\; k\Omega$"> and <!-- MATH
+ $10+18=28\;k\Omega$
+ -->
+<IMG
+ WIDTH="138" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$10+18=28\;k\Omega$">. Next find the total current needed 
+  by this meter assembly composed of all three parallel branches for a 
+  full-scale meter display. This current can be used through out the calculation 
+  in the following steps.
+
+<P>
+</LI>
+<LI>Find the resistances needed to measure the currents and voltages at all
+  scales.
+
+<P>
+</LI>
+<LI>Find out what values are needed for the upper and lower resistances of the 
+  potentiometer during the calibration of the ohmmeter, i.e. when the two leads
+  of the meter are directly connected (short circuit with zero resistance) for a 
+  full-scale display.
+
+<P>
+</LI>
+<LI>Find the resistances needed to measure an unknown resistor value at all
+  four scales. Note that the middle value of the resistance measurement is 20, 
+  200, 20k, or 200k <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$\Omega$"> for each of the scales, and the corresponding 
+  current through the meter assembly should be half of the current needed for 
+  a full scale display.
+
+<P>
+</LI>
+</UL>
+
+<P>
+<B>How to find the polarity of a diode? (not necessarily trivial!)</B>
+
+<P>
+When the voltage at the anode (labeled by a triangle) of a diode is higher
+than that of the cathode, the diode has a very low resistance (close to a short
+circuit, called forward biased). If the polarity is reversed, the resistance 
+of the diode becomes very high (close to an open circuit, called reverse biased).
+The polarity of the diode can therefore be found by checking its resistance 
+using a multimeter.
+
+<P>
+However, we need to know which lead of the multimeter (when used as an ohmmeter) 
+is positive and which is negative. In most analog multimeters, such as the one 
+you are building, the positive lead (marked by +) is connected to the negative 
+end of the internal battery, while the other lead (marked by -, or COM for common)
+is connected to positive end of the battery. So if the measured resistance of the 
+diode is low, the end connected to the COM lead of the multimeter is the anode
+(triangle).
+
+<P>
+However, the polarities of digital multimeters may be the opposite, i.e., the 
+lead marked by + may be connected to the positive end of the internal battery.
+In this case, the polarity of the diode can be determined in the opposite way
+compared to the method above using an analog multimeter. 
+
+<P>
+Moreover, some digital multimeters have a particular position for diode measurement. 
+
+<P>
+Read <A NAME="tex2html2"
+  HREF="http://www.allaboutcircuits.com/vol_3/chpt_3/2.html">this page</A>
+for more detailed discussions.
+
+<P>
+<B>How to solder?</B> 
+
+<P>
+If you have never done soldering before, you should find 
+<A NAME="tex2html3"
+  HREF="http://fourier.eng.hmc.edu/e84/labs/N0SS_SolderNotesV6.pdf">this</A>
+and <A NAME="tex2html4"
+  HREF="http://fourier.eng.hmc.edu/e84/labs/soldering_rev3.pdf">this</A>
+useful.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html18"
+  HREF="node2.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html16"
+  HREF="lab1.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html10"
+  HREF="lab1.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html19"
+  HREF="node2.html">About this document ...</A>
+<B> Up:</B> <A NAME="tex2html17"
+  HREF="lab1.html">lab1</A>
+<B> Previous:</B> <A NAME="tex2html11"
+  HREF="lab1.html">lab1</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Ruye Wang
+2014-09-02
+</ADDRESS>
+</BODY>
+</HTML>

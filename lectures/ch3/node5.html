@@ -1,0 +1,259 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>First Order Systems</TITLE>
+<META NAME="description" CONTENT="First Order Systems">
+<META NAME="keywords" CONTENT="ch3">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="ch3.css">
+
+<LINK REL="next" HREF="node10.html">
+<LINK REL="previous" HREF="node4.html">
+<LINK REL="next" HREF="node6.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node6.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node4.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node6.html">Homogeneous Solution</A>
+<B> Up:</B> <A
+ HREF="node1.html">Chapter 3: AC Circuit</A>
+<B> Previous:</B> <A
+ HREF="node4.html">Impedance and Generalized Ohm's</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION00014000000000000000">
+First Order Systems</A>
+</H2>
+
+<P>
+If we need to find out the transient response of an AC circuit to a certain 
+input applied at time moment <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img219.svg"
+ ALT="$t=0$"></SPAN>, such as a unit step input 
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+u(t)=\left\{\begin{array}{ll}0&t<0\\1&t\ge 0\end{array}\right.
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img220.svg"
+ ALT="$\displaystyle u(t)=\left\{\begin{array}{ll}0&amp;t&lt;0\\ 1&amp;t\ge 0\end{array}\right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">62</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+or a constant voltage source which is connected to the circuit through a
+switch which is closed at time moment <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img219.svg"
+ ALT="$t=0$"></SPAN>, then the phasor method discussed
+above is no longer sufficient. Now the DE describing the circuit will have 
+to be solved to obtain the complete solution including both the homogeneous 
+(transient) solution as well as the particular (steady state) solution. 
+
+<P>
+As a simple example, the RC circuit shown below is composed of a resistor
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img112.svg"
+ ALT="$R$"></SPAN> and capacitor <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img104.svg"
+ ALT="$C$"></SPAN> in series with an external voltage input <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img88.svg"
+ ALT="$v(t)$"></SPAN>, which 
+is turned on at <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img219.svg"
+ ALT="$t=0$"></SPAN>, either by a switch or a step voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img88.svg"
+ ALT="$v(t)$"></SPAN>. We also
+assume the initial condition that the voltage across <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img104.svg"
+ ALT="$C$"></SPAN> is <!-- MATH
+ $v_C(0)=V_0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img221.svg"
+ ALT="$v_C(0)=V_0$"></SPAN> at
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img219.svg"
+ ALT="$t=0$"></SPAN>. Any of the variables <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img222.svg"
+ ALT="$v_R(t)$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img194.svg"
+ ALT="$v_C(t)$"></SPAN>, and <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img21.svg"
+ ALT="$i(t)$"></SPAN> can be considered 
+as the circuit's response to this input.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/RL_RCcircuit.png"
+ ALT="RL_RCcircuit.png">
+
+<P>
+
+<UL>
+<LI>The RC circuit can be described by the KVL:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_R(t)+v_C(t)=R\;i(t)+v_C(t)=RC\frac{d}{dt} v_c(t)+v_c(t)
+    =\tau \frac{d}{dt} v_C(t)+v_C(t)=v(t)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.11ex; vertical-align: -1.71ex; " SRC="img223.svg"
+ ALT="$\displaystyle v_R(t)+v_C(t)=R\;i(t)+v_C(t)=RC\frac{d}{dt} v_c(t)+v_c(t)
+=\tau \frac{d}{dt} v_C(t)+v_C(t)=v(t)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">63</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+where <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img224.svg"
+ ALT="$\tau=RC$"></SPAN> is the time constant of the system with the dimension of time:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+[RC]=\frac{[V]}{[I]}\frac{[Q]}{[V]}=\frac{[Q]}{[I]}=[T]
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img225.svg"
+ ALT="$\displaystyle [RC]=\frac{[V]}{[I]}\frac{[Q]}{[V]}=\frac{[Q]}{[I]}=[T]$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">64</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>Similarly, for the RL circuit we have:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_R(t)+v_L(t)=R\; i(t)+L\frac{d}{dt} i(t)=v(t)\;\;\;\;\mbox{or}\;\;\;\;\;
+    \tau \frac{d}{dt} i(t)+i(t)=\frac{v(t)}{R}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.11ex; vertical-align: -1.71ex; " SRC="img226.svg"
+ ALT="$\displaystyle v_R(t)+v_L(t)=R\; i(t)+L\frac{d}{dt} i(t)=v(t)\;\;\;\;$">or<IMG STYLE="height: 5.34ex; vertical-align: -1.71ex; " SRC="img227.svg"
+ ALT="$\displaystyle \;\;\;\;\;
+\tau \frac{d}{dt} i(t)+i(t)=\frac{v(t)}{R}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">65</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+where <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img228.svg"
+ ALT="$\tau=L/R$"></SPAN> is the time constant with the dimension of time:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\frac{[L]}{[R]}=\frac{[V][T]}{[I]}\frac{1}{[R]}=\frac{[R][T]}{[R]}=[T]
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img229.svg"
+ ALT="$\displaystyle \frac{[L]}{[R]}=\frac{[V][T]}{[I]}\frac{1}{[R]}=\frac{[R][T]}{[R]}=[T]$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">66</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+</UL>
+In both cases, the polarity of <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img230.svg"
+ ALT="$v_R$"></SPAN> is positive on top, and the polarities of
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img231.svg"
+ ALT="$v_C$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img230.svg"
+ ALT="$v_R$"></SPAN> are positive on the left.
+
+<P>
+In general, a first-order linear system with input <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img85.svg"
+ ALT="$x(t)$"></SPAN> and output
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img232.svg"
+ ALT="$y(t)$"></SPAN> can be described by a first-order linear-constant coefficient 
+differential equation (LCCDE) in the canonic form:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\tau\frac{d}{dt}y(t)+y(t)=x(t)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.11ex; vertical-align: -1.71ex; " SRC="img233.svg"
+ ALT="$\displaystyle \tau\frac{d}{dt}y(t)+y(t)=x(t)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">67</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+in terms of a single parameter, the <EM>time constant</EM> <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img234.svg"
+ ALT="$\tau$"></SPAN>.
+
+<P>
+While DC circuit analysis is carried out by solving <EM>algebraic</EM> 
+equations, the analysis of AC circuits composed of capacitors, inductors 
+as well as resistors will require solving differential equations. The 
+solution of a DE represents the response (or output) of the circuit to 
+both the <EM>external input</EM> and the <EM>initial state</EM>, and is composed 
+of two parts:
+
+<UL>
+<LI><EM>Homogeneous solution</EM> representing the <EM>natural response</EM> or
+  <EM>transient response</EM> caused by the initial condition,
+</LI>
+<LI><EM>Particular solutions</EM> representing the <EM>forced response</EM> or
+  <EM>steady state response</EM> caused by the external input.
+</LI>
+</UL> 
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A ID="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><A ID="tex2html78"
+  HREF="node6.html">Homogeneous Solution</A>
+<LI><A ID="tex2html79"
+  HREF="node7.html">Particular Solution</A>
+<LI><A ID="tex2html80"
+  HREF="node8.html">Complete Response I - Constant Input</A>
+<LI><A ID="tex2html81"
+  HREF="node9.html">Complete Response II - Sinusoidal Input</A>
+</UL>
+<!--End of Table of Child-Links-->
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node6.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node4.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node6.html">Homogeneous Solution</A>
+<B> Up:</B> <A
+ HREF="node1.html">Chapter 3: AC Circuit</A>
+<B> Previous:</B> <A
+ HREF="node4.html">Impedance and Generalized Ohm's</A></DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

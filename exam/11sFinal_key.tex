@@ -1,0 +1,47 @@
+\documentstyle[11pt]{article}
+\usepackage{html}
+\begin{document}
+\begin{center}
+{\Large \bf  Final Exam ---- E84, Spring, 2011}
+\end{center}
+
+\begin{enumerate}
+\item Consider the transistor circuit shown in the figure below.
+  Assume $\beta=100$ and $V_{BE}=0.7\;V$. 
+
+  \htmladdimg{../final11fig1.gif}
+
+  \begin{enumerate}
+  \item Let $V_{CC}=12\;V$, $R_C=2k\Omega$. Find $R_B$ so that the DC
+    operating point is in the middle of the load line.
+
+    {\bf Key:} $V_{CC}/R_C=12/2=6\,mA$, $I_C=3\,mA$, $V_C=6\,V$,
+    $I_B=I_C/\beta=0.03\,mA$, $R_B=(V_C-V_{BE})/I_B=5.3/0.03=176.7\,k\Omega$.
+  \item Let $V_{CC}=16\,V$, $R_B=200\,k\Omega$. Find $R_C$ so that the
+    DC operating point is in the middle of the load line.
+
+    {\bf Key:} $V_C=8\,V$, $I_B=(V_C-V_{BE})/R_B=7.3/200=0.039\,mA$,
+    $I_C=\beta I_B=3.9\,mA$, $R_C=8/3.9=2.05\,k\Omega$.
+
+  \end{enumerate}
+
+\item The OpAmp shown in the figure below has two sets of input:
+  $n$ inputs $v_1,\ldots,v_m$ to the $v^-$ side and $m$ inputs $u_1,\ldots,u_n$
+  to the $v^+$ side. All resistors in the circuit have the same resistance $R$.
+  Find the output voltage $v_o$ as a function of the $m+n$ inputs 
+  $v_1,\ldots,v_m,u_1,\ldots,u_n$. 
+
+  \htmladdimg{../final11fig2.gif}
+
+  {\bf Key:} Let $v^-=v^+=v$. Applying KCL to $v^-$ we get:
+  \[ \sum_{k=1}^m \frac{v_k-v}{R}=\frac{v-v_o}{R};\;\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;
+  \sum_{k=1}^m v_k-(m+1) v=-v_o \]
+  Applying KCL to $v^+$ we get:
+  \[ \sum_{k=1}^n \frac{u_k-v}{R}=\frac{v}{R};\;\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;
+  v=\frac{1}{n+1} \sum_{k=1}^n u_k \]
+  Plugging $v$ into the first equation we get:
+  \[ v_o=\frac{m+1}{n+1} \sum_{k=1}^n u_k-\sum_{k=1}^m v_k  \]
+
+\end{enumerate}
+
+\end{document}

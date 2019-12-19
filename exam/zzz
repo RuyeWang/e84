@@ -1,0 +1,88 @@
+\documentstyle[11pt]{article}
+\usepackage{html}
+\begin{document}
+\begin{center}
+{\Large \bf  E84 Midterm Exam 2 (Spring 2009)}
+\end{center}
+
+\section*{E84 Midterm Exam 2}
+
+{\bf Instructions}
+\begin{itemize}
+\item In class, open notes, feel free to use a calculator, but not any software 
+  package such as Multisim. 
+\item PRINT your name and mark question numbers clearly on top of each page.
+  Indicate the total number of pages submitted.
+\item When solving a problem, list all the steps. In each step, indicate
+  concisely what you are doing in English, then show the calculation 
+  and the result of for the step. Box the final answer.
+\item A final answer, even if correct, without evidence of the steps leading
+  to it will receive ZERO credit.
+\end{itemize}
+
+\begin{itemize}
+
+\item {\bf Problem 1. (50 pts)}
+
+In the circuit shown in the figure below, $R_1=R_2=15\,k\Omega$, $R_3=30\,k\Omega$,
+$C=50\,\mu F$, and the input voltage is $V=40$ V. The switch is closed at $t=0$.
+Assume the circuit was at steady state before $t=0$. Find currents $i_1(t)$, $i_2(t)$
+and $i_3(t)$, together with $i_c(t)$ as the complete responses of the circuit for $t>0$.
+Make sure the signs of these currents are consistent with the assumed directions as 
+shown in the figure.
+
+\htmladdimg{../mdtm2_09sa.gif}
+
+{\bf Solution:} 
+\begin{itemize}
+  \item Find voltage across $C$ at $t=0^-$: (0 pts)
+    \[ v_c(0^-)=v_c(0^+)=40\frac{30}{15+15+30}=20\;V \]
+  \item Find initial current $i_c(0^+)$ through $C$: (5 pts)
+    \[ i_c(0^+)=-\frac{v_c(0^+)}{R_2 || R_3}=-\frac{20}{15 || 30}=-2\; mA \]
+  \item The steady state current through $C$ is $i_c(\infty)=0$. (5 pts)
+  \item Find time constant: (5 pts)
+    \[ \tau=R_{eq}C=(R_2||R_3)C=(15||30)\times 10^3\times 50\times 10^{-6}=0.5\;s \]
+  \item The current through $C$ as the complete response: (5 pts)
+    \[ i_c(t)=i_c(\infty)+[i_c(0^+)-i_c(\infty)] e^{-t/tau}=-2 e^{-2t}\;mA \]
+
+  \item Find current through $R_1$ for $t>0$: $i_1(t)=40/15=8/3=2.67\;mA$. (5 pts)
+
+  \item Find initial current $i_2(0^+)$ through $R_2$: (5 pts)
+    \[ i_2(0^+)=-\frac{v_c(0^+)}{R_2}=\frac{20}{15}=-\frac{4}{3}\;mA \]
+  \item The steady state current through $R_2$ is $i_2(\infty)=0$. (5 pts)
+  \item The current through $R_2$ as the complete response: (5 pts)
+    \[ i_2(t)=i_2(\infty)+[i_2(0^+)-i_2(\infty)] e^{-t/tau}=-4/3 \; e^{-2t}\;mA \]
+
+  \item Find initial current $i_3(0^+)$ through $R_3$: (5 pts)
+    \[ i_3(0^+)=\frac{v_c(0^+)}{R_3}=\frac{20}{30}=\frac{2}{3}\;mA \]
+  \item The steady state current through $R_3$ is $i_3(\infty)=0$. (5 pts)
+  \item The current through $R_3$ as the complete response: (5 pts)
+    \[ i_3(t)=i_3(\infty)+[i_3(0^+)-i_3(\infty)] e^{-t/tau}=2/3 \; e^{-2t}\;mA \]
+\end{itemize}
+
+\item {\bf Problem 2. (50 pts)}
+
+Find the current $i(t)$ through the $5\Omega$ resistor in the circuit shown in the 
+figure below. Here the voltage source is $v_0(t)=10\sqrt{2}\cos 2t$ and the current
+source is $i_0(t)=2\sqrt{2}\cos(3t+45^\circ)$. 
+%(Hint: as the circuit is composed of all linear components, superposition principle applies.)
+
+\htmladdimg{../mdtm2_09sb.gif}
+
+{\bf Solution:}
+\begin{itemize}
+\item Phasor representation of the voltage source: $\dot{V}=10\angle 0^\circ$ V.
+\item Find current through $R$ due to voltage source:
+  \[ \dot{I}_1=\frac{\dot{V}}{j2/3+(j2||-j0.5)+5}=\frac{10}{j2/3-j2/3+5}=2\;A \]
+\item Phasor representation of the voltage source: $\dot{I}=2\angle 45^\circ$ A.
+\item Find current through $R$ due to current source:
+  \[ \dot{I}_2=\dot{I}\frac{j1+j3||(-j1/3)}{5+j1+j3||(-j1/3)}
+  =2\angle 45^\circ \times \frac{j5/8}{5+j5/8}=0.25\angle 127.87^\circ\;A \]
+\item The total phasor current is
+  \[ I(t)=I_1(t)+I_2(t)=2+0.25\angle 127.87^\circ  \]
+\item Convert to time function:
+  \[ i(t)=2\sqrt{2}\cos 2t+0.25\sqrt{2}\cos(3t+127.87^\circ)\;A \]
+\end{itemize}
+
+\end{itemize}
+\end{document}

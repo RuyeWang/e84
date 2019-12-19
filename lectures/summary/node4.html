@@ -1,0 +1,260 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>AC circuit analysis</TITLE>
+<META NAME="description" CONTENT="AC circuit analysis">
+<META NAME="keywords" CONTENT="summary">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="summary.css">
+
+<LINK REL="next" HREF="node5.html">
+<LINK REL="previous" HREF="node3.html">
+<LINK REL="up" HREF="summary.html">
+<LINK REL="next" HREF="node5.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html48"
+  HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html46"
+  HREF="summary.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html40"
+  HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html49"
+  HREF="node5.html">Semiconductor devices</A>
+<B> Up:</B> <A NAME="tex2html47"
+  HREF="summary.html">summary</A>
+<B> Previous:</B> <A NAME="tex2html41"
+  HREF="node3.html">DC circuit analysis</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00040000000000000000">
+AC circuit analysis</A>
+</H1>
+
+<P>
+
+<UL>
+<LI>Phasor representation of sinusoidal voltage and current:
+  <!-- MATH
+ $\dot{V}=V_{rms} \angle \phi$
+ -->
+<IMG
+ WIDTH="103" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.png"
+ ALT="$\dot{V}=V_{rms} \angle \phi$">, <!-- MATH
+ $\dot{I}=I_{rms} \angle \phi$
+ -->
+<IMG
+ WIDTH="95" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.png"
+ ALT="$\dot{I}=I_{rms} \angle \phi$">.
+</LI>
+<LI>Impedance <IMG
+ WIDTH="68" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img23.png"
+ ALT="$Z_R=R$">, <IMG
+ WIDTH="86" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img24.png"
+ ALT="$Z_L=j\omega L$"> and <!-- MATH
+ $Z_C=1/j\omega C$
+ -->
+<IMG
+ WIDTH="109" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.png"
+ ALT="$Z_C=1/j\omega C$">,
+  <!-- MATH
+ $\dot{V}=Z\;\dot{I}$
+ -->
+<IMG
+ WIDTH="74" HEIGHT="22" ALIGN="BOTTOM" BORDER="0"
+ SRC="img26.png"
+ ALT="$\dot{V}=Z\;\dot{I}$">,   ``ELI the ICE man''
+</LI>
+<LI>Based on impedances and phasors, all AC circuits in steady 
+  state can be solved by the same methods used for DC circuit
+  analysis.
+</LI>
+<LI>First-order systems: RL with <IMG
+ WIDTH="76" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.png"
+ ALT="$\tau=L/R$"> and RC with <IMG
+ WIDTH="69" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img28.png"
+ ALT="$\tau=RC$">.
+  
+<UL>
+<LI>Particular solution <IMG
+ WIDTH="44" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img29.png"
+ ALT="$x_p(t)$"> (by phasor/impedance method)
+</LI>
+<LI>Homogeneous solution <IMG
+ WIDTH="45" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img30.png"
+ ALT="$x_h(t)$"> (by solving DE)
+</LI>
+<LI>Complete solution, the ``short-cut method'' based on 
+    (1) initial value <IMG
+ WIDTH="50" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img31.png"
+ ALT="$x(0^+)$">, (2) steady-state value <IMG
+ WIDTH="51" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.png"
+ ALT="$x_\infty(t)$">,
+    and (3) time constant <IMG
+ WIDTH="69" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img28.png"
+ ALT="$\tau=RC$"> or <IMG
+ WIDTH="76" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.png"
+ ALT="$\tau=L/R$">.
+</LI>
+<LI>Used as LP or HP filters.
+  
+</LI>
+</UL>
+</LI>
+<LI>Second-order systems: RLC in series, parallel, etc., with
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\omega_n=\frac{1}{\sqrt{LC}},\;\;\;\;\;\;
+  \zeta_S=\frac{R}{2}\sqrt{\frac{C}{L}},\;\;\;\;\;\;
+  \zeta_p=\frac{1}{2R}\sqrt{\frac{L}{C}}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="372" HEIGHT="57" BORDER="0"
+ SRC="img33.png"
+ ALT="\begin{displaymath}
+\omega_n=\frac{1}{\sqrt{LC}},\;\;\;\;\;\;
+\zeta_S=\frac{R}...
+...c{C}{L}},\;\;\;\;\;\;
+\zeta_p=\frac{1}{2R}\sqrt{\frac{L}{C}}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+  
+<UL>
+<LI>Particular solution <IMG
+ WIDTH="44" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img29.png"
+ ALT="$x_p(t)$"> (by phasor/impedance method)
+</LI>
+<LI>Complete solution, solving DE
+</LI>
+<LI>Used filters:
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+H(j\omega)=\frac{N(j\omega)}{D(j\omega)}
+    =\frac{N(j\omega)}{(j\omega)^2+2\zeta\omega_n j\omega+\omega_n^2}
+    =\frac{N(j\omega)}{(j\omega)^2+\Delta\omega j\omega+\omega_n^2}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="519" HEIGHT="52" BORDER="0"
+ SRC="img34.png"
+ ALT="\begin{displaymath}
+H(j\omega)=\frac{N(j\omega)}{D(j\omega)}
+=\frac{N(j\omega)...
+...frac{N(j\omega)}{(j\omega)^2+\Delta\omega j\omega+\omega_n^2}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Q=\frac{1}{2\zeta},\;\;\;\;\;
+    \Delta\omega=2\zeta\omega_n=\frac{\omega_n}{Q}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="237" HEIGHT="49" BORDER="0"
+ SRC="img35.png"
+ ALT="\begin{displaymath}
+Q=\frac{1}{2\zeta},\;\;\;\;\;
+\Delta\omega=2\zeta\omega_n=\frac{\omega_n}{Q}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\left\{\begin{array}{cc}
+    H(j\omega)=\omega_n^2/D(j\omega) & \mbox{LP}\\
+    H(j\omega)=2\zeta\omega_n j\omega/{D(j\omega) & \mbox{BP}\\
+    H(j\omega)=(j\omega)^2/D(j\omega) & \mbox{HP}
+    \end{array}\right.
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="261" HEIGHT="76" BORDER="0"
+ SRC="img36.png"
+ ALT="\begin{displaymath}
+\left\{\begin{array}{cc}
+H(j\omega)=\omega_n^2/D(j\omega) ...
+...omega)=(j\omega)^2/D(j\omega) &amp; \mbox{HP}
+\end{array}\right.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI>Power factor: <!-- MATH
+ $\lambda=\cos\phi$
+ -->
+<IMG
+ WIDTH="80" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img37.png"
+ ALT="$\lambda=\cos\phi$">
+
+<P>
+</LI>
+</UL>
+
+<P>
+</LI>
+</UL>
+<BR><HR>
+<ADDRESS>
+Ruye Wang
+2019-05-27
+</ADDRESS>
+</BODY>
+</HTML>

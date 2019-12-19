@@ -1,0 +1,521 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Source and Load</TITLE>
+<META NAME="description" CONTENT="Source and Load">
+<META NAME="keywords" CONTENT="ch1">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="ch1.css">
+
+<LINK REL="next" HREF="node9.html">
+<LINK REL="previous" HREF="node7.html">
+<LINK REL="next" HREF="node9.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node9.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node7.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node9.html">Review and Summary</A>
+<B> Up:</B> <A
+ HREF="node1.html">Chapter 1: Basic Quantities</A>
+<B> Previous:</B> <A
+ HREF="node7.html">Energy Sources</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION00017000000000000000">
+Source and Load</A>
+</H2>
+
+<P>
+It is often needed to concatenate two circuits in series (cascade),
+by connecting the output port of the first circuit, considered as 
+the <EM>source</EM>, to the input port of the second circuit, considered 
+as the <EM>load</EM>. Here are some examples: 
+
+<UL>
+<LI>The source is a voltage or current source, and the load is 
+  a resistor.
+</LI>
+<LI>The source is a sensor and the load is an amplifier.
+</LI>
+<LI>The source is signal (waveform) generator that produces various
+  waveforms (sinusoids, saw tooth, square wave, etc.), and the load is 
+  an oscilloscope to display such waveforms. 
+</LI>
+<LI>Two <EM>voltage amplifiers</EM> can be cascaded to achieve greater
+  amplification gain to amplify some weak signals.
+</LI>
+<LI>One or more filters can be cascaded to filter signals of 
+  different frequencies.
+</LI>
+</UL>
+
+<P>
+In general, an <EM>active circuit</EM> containing <EM>active components</EM>
+(e.g., transistors and operational amplifiers) as well as 
+<EM>passive components</EM> (e.g., <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img91.svg"
+ ALT="$R$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img97.svg"
+ ALT="$C$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img127.svg"
+ ALT="$L$"></SPAN>) can be modeled by an 
+<EM>input resistance</EM> <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img432.svg"
+ ALT="$R_{in}$"></SPAN> and a voltage source <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img433.svg"
+ ALT="$v_{out}$"></SPAN> in series 
+with an <EM>output resistance</EM> <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img434.svg"
+ ALT="$R_{out}$"></SPAN>, where <!-- MATH
+ $v_{out}=Av_{in}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img435.svg"
+ ALT="$v_{out}=Av_{in}$"></SPAN> is 
+proportional to the input voltage <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img436.svg"
+ ALT="$v_{in}$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img106.svg"
+ ALT="$A$"></SPAN> is the voltage gain. 
+When two such circuits are cascaded, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img434.svg"
+ ALT="$R_{out}$"></SPAN> of the first circuit is 
+the internal resistance of the source, and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img432.svg"
+ ALT="$R_{in}$"></SPAN> of the second circuit 
+is the resistance of the load.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/cascade.gif"
+ ALT="cascade.gif">
+
+<P>
+Consider the following three examples:
+
+<P>
+
+<UL>
+<LI><B>Maximize voltage delivery</B>
+
+<P>
+The output resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img434.svg"
+ ALT="$R_{out}$"></SPAN> of the course and the input resistance
+  <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img432.svg"
+ ALT="$R_{in}$"></SPAN> of the load form a voltage divider:
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/powermatch.gif"
+ ALT="powermatch.gif">
+
+<P>
+For the load to receive maximize voltage, we want 
+  
+<UL>
+<LI>the output (internal) resistance <!-- MATH
+ $R_0=R_{out}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img437.svg"
+ ALT="$R_0=R_{out}$"></SPAN> of the source 
+    circuit to be as small as possible, so that little voltage drop 
+    across it will be caused when the load circuit draws a large curren 
+    from the source even if its input (load) resistance <!-- MATH
+ $R_L=R_{in}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img438.svg"
+ ALT="$R_L=R_{in}$"></SPAN> is 
+    small.
+
+<P>
+</LI>
+<LI>the input (load) resistance <!-- MATH
+ $R_L=R_{in}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img438.svg"
+ ALT="$R_L=R_{in}$"></SPAN> of the load circuit to 
+    be as large as possible, so that it draws little current from the 
+    source, causing small internal voltage drop across its output 
+    resistance <!-- MATH
+ $R_0=R_{out}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img437.svg"
+ ALT="$R_0=R_{out}$"></SPAN>, even if it is large.
+  
+</LI>
+</UL>
+
+<P>
+</LI>
+<LI><B>Maximize power delivery</B>
+
+<P>
+Some times we need to maximize the power (instead of the voltage)
+  delivered from the source to the load. For example, the <EM>power 
+  amplifier</EM> of a stereo system needs to deliver high power to the 
+  speakers as the load. Given the internal resistance <!-- MATH
+ $R_0=R_{out}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img437.svg"
+ ALT="$R_0=R_{out}$"></SPAN> of 
+  the source and the load resistance <!-- MATH
+ $R_L=R_{in}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img438.svg"
+ ALT="$R_L=R_{in}$"></SPAN>, the power received 
+  by the load is:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+P_L=I^2 R_L=\left(\frac{V_0}{R_0+R_L}\right)^2 R_L
+    =V_0^2\frac{R_L}{(R_0+R_L)^2} 
+  
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.27ex; vertical-align: -2.32ex; " SRC="img439.svg"
+ ALT="$\displaystyle P_L=I^2 R_L=\left(\frac{V_0}{R_0+R_L}\right)^2 R_L
+=V_0^2\frac{R_L}{(R_0+R_L)^2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">121</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+  
+<UL>
+<LI>Given <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img152.svg"
+ ALT="$R_L$"></SPAN>, we can minimize <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img341.svg"
+ ALT="$R_0$"></SPAN> to maximize the delivered
+    power <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img440.svg"
+ ALT="$P_L$"></SPAN>:  
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+P_L=V_0^2\frac{R_L}{(R_0+R_L)^2}\stackrel{R_0\rightarrow 0}{\Longrightarrow}
+      \frac{V_0^2}{R_L}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.29ex; " SRC="img441.svg"
+ ALT="$\displaystyle P_L=V_0^2\frac{R_L}{(R_0+R_L)^2}\stackrel{R_0\rightarrow 0}{\Longrightarrow}
+\frac{V_0^2}{R_L}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">122</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>On the other hand, given <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img341.svg"
+ ALT="$R_0$"></SPAN>, we need to find the optimal value 
+    for <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img152.svg"
+ ALT="$R_L$"></SPAN> to maximize <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img440.svg"
+ ALT="$P_L$"></SPAN>, by solving the following equation:
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\frac{d}{dR_L} P_L(R_L)
+      =V_0^2\frac{(R_0+R_L)^2-2R_L(R_0+R_L)}{(R_0+R_L)^4}
+      =V_0^2\frac{R_0-R_L}{(R_0+R_L)^3}=0
+    
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.29ex; " SRC="img442.svg"
+ ALT="$\displaystyle \frac{d}{dR_L} P_L(R_L)
+=V_0^2\frac{(R_0+R_L)^2-2R_L(R_0+R_L)}{(R_0+R_L)^4}
+=V_0^2\frac{R_0-R_L}{(R_0+R_L)^3}=0$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">123</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+We see that only when <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img152.svg"
+ ALT="$R_L$"></SPAN> is equal to the internal resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img341.svg"
+ ALT="$R_0$"></SPAN>,
+    will it receive maximum power.
+  
+</LI>
+</UL>
+
+<P>
+The maximum power received by <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img443.svg"
+ ALT="$R_L=R_0$"></SPAN> is:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+P_L=\frac{V_0^2}{(R_0+R_L)^2} R_L\bigg|_{R_L=R_0}=\frac{V_0^2}{4R_0}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.27ex; vertical-align: -2.67ex; " SRC="img444.svg"
+ ALT="$\displaystyle P_L=\frac{V_0^2}{(R_0+R_L)^2} R_L\bigg\vert _{R_L=R_0}=\frac{V_0^2}{4R_0}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">124</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+the load current is 
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I=\frac{V_0}{R_0+R_L}=\frac{V_0}{2R_0}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img445.svg"
+ ALT="$\displaystyle I=\frac{V_0}{R_0+R_L}=\frac{V_0}{2R_0}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">125</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+and the total power delivered by the voltage source <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img274.svg"
+ ALT="$V_0$"></SPAN> is 
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+P_0=V_0 I=\frac{V_0^2}{2R_0}=2P_L
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.06ex; " SRC="img446.svg"
+ ALT="$\displaystyle P_0=V_0 I=\frac{V_0^2}{2R_0}=2P_L$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">126</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The internal resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img447.svg"
+ ALT="$R_0=R_L$"></SPAN> consumes the same amount of power 
+  as the load <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img443.svg"
+ ALT="$R_L=R_0$"></SPAN>. The figure below shows the power <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img440.svg"
+ ALT="$P_L$"></SPAN> consumed 
+  by the load resistor <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img448.svg"
+ ALT="$R_L=x$"></SPAN> when <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img449.svg"
+ ALT="$R_0=2$"></SPAN>. We see that if <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img152.svg"
+ ALT="$R_L$"></SPAN> is 
+  either smaller than or greater than <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img341.svg"
+ ALT="$R_0$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img440.svg"
+ ALT="$P_L$"></SPAN> is reduced.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/maxpower.gif"
+ ALT="maxpower.gif">
+
+<P>
+The efficiency of the circuit is defined as the ratio of the power 
+  delivered to the load <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img152.svg"
+ ALT="$R_L$"></SPAN> and the power generated by the source <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img450.svg"
+ ALT="$P_0$"></SPAN>:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\eta=\frac{P_L}{P_0}=\frac{I^2 R_L}{I^2 (R_0+R_L)}=\frac{R_L}{R_0+R_L}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.29ex; " SRC="img451.svg"
+ ALT="$\displaystyle \eta=\frac{P_L}{P_0}=\frac{I^2 R_L}{I^2 (R_0+R_L)}=\frac{R_L}{R_0+R_L}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">127</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+When <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img443.svg"
+ ALT="$R_L=R_0$"></SPAN> and the load receives maximal power, but the efficiency 
+  is only <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.25ex; " SRC="img452.svg"
+ ALT="$50\%$"></SPAN>. We can improve the efficiency by increasing <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img152.svg"
+ ALT="$R_L$"></SPAN> so 
+  that <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.57ex; " SRC="img453.svg"
+ ALT="$\eta$"></SPAN> approaches 1 when <!-- MATH
+ $R_L \gg R_0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img454.svg"
+ ALT="$R_L \gg R_0$"></SPAN>. But in this case the 
+  power received by the load is reduced. 
+
+<P>
+For example, if <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img455.svg"
+ ALT="$R_L=2R_0$"></SPAN>, the efficiency becomes:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\eta=\frac{R_L}{R_0+R_L}\bigg|_{R_L=2R_0}=\frac{2}{3}>\frac{1}{2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.27ex; vertical-align: -2.67ex; " SRC="img456.svg"
+ ALT="$\displaystyle \eta=\frac{R_L}{R_0+R_L}\bigg\vert _{R_L=2R_0}=\frac{2}{3}&gt;\frac{1}{2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">128</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+but the power received by the load is less than the maximum power:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+P_L=I^2R_L=\frac{V_0^2}{(R_0+R_L)^2}R_L=V_0^2\frac{2R_0}{(R_0+2R_0)^2}
+    =\frac{2V_0^2}{9R_0} < \frac{V_0^2}{4R_0}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.29ex; " SRC="img457.svg"
+ ALT="$\displaystyle P_L=I^2R_L=\frac{V_0^2}{(R_0+R_L)^2}R_L=V_0^2\frac{2R_0}{(R_0+2R_0)^2}
+=\frac{2V_0^2}{9R_0} &lt; \frac{V_0^2}{4R_0}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">129</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+In some applications with small power, efficiency can be sacrificed to 
+  maximize the load power. 
+
+<P>
+</LI>
+<LI><B>Minimize loss in power transmission line:</B> 
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/powerdelivery.gif"
+ ALT="powerdelivery.gif">
+
+<P>
+A power transmission line delivers power from power generation (a 
+  power plant) to power consumption (e.g., a city). The concern is no
+  longer delivering maximum power (as long as needed power is delivered),
+  but to achieve maximum efficiency in the sense that the power loss 
+  along the power transmission line is minimized.
+
+<P>
+We denote the resistance of the transmission line by <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img458.svg"
+ ALT="$R_T$"></SPAN> and the total 
+  load resistance of the power consumption by <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img152.svg"
+ ALT="$R_L$"></SPAN>. Also denote the voltage
+  on the consumer's side by <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img422.svg"
+ ALT="$V_L$"></SPAN>. We have
+  
+<UL>
+<LI>Power consumption by the load <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img152.svg"
+ ALT="$R_L$"></SPAN>: 
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+P_L=V_L I\;\;\;\;\;\; \mbox{i.e.}\;\;\;\;\;\;\; I=\frac{P_L}{V_L}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img459.svg"
+ ALT="$\displaystyle P_L=V_L I\;\;\;\;\;\;$">&nbsp; &nbsp;i.e.<IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img460.svg"
+ ALT="$\displaystyle \;\;\;\;\;\;\; I=\frac{P_L}{V_L}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">130</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>Power dissipation along the transmission line <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img458.svg"
+ ALT="$R_T$"></SPAN>: 
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+P_T=R_T I^2=R_T \;\left(\frac{P_L}{V_L}\right)^2=\frac{R_T\,P_L^2}{V_L^2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.50ex; vertical-align: -2.39ex; " SRC="img461.svg"
+ ALT="$\displaystyle P_T=R_T I^2=R_T \;\left(\frac{P_L}{V_L}\right)^2=\frac{R_T\,P_L^2}{V_L^2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">131</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+</UL>
+  As the transmission resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img458.svg"
+ ALT="$R_T$"></SPAN> is fixed (already minimized) and 
+  the power consumption <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img440.svg"
+ ALT="$P_L$"></SPAN> is to be guaranteed, to minimize the power
+  loss <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img462.svg"
+ ALT="$P_T$"></SPAN> along the transmission line we can only increase the voltage
+  <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img422.svg"
+ ALT="$V_L$"></SPAN>. For example, when the voltage is increased 10 times, the power 
+  loss will be reduced to 1/100. In practice, the voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img422.svg"
+ ALT="$V_L$"></SPAN> can be 
+  as high as a few hundred <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img463.svg"
+ ALT="$kV$"></SPAN> (69 kV, 115 kV, 230 kV, 500 kV, 765 kV).
+
+<P>
+</LI>
+</UL>
+
+<P>
+<B>Summary: </B> The circuits in the three examples above are essentially
+the same, i.e., they all have a voltage source <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img274.svg"
+ ALT="$V_0$"></SPAN> with an internal 
+resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img341.svg"
+ ALT="$R_0$"></SPAN> (or <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img458.svg"
+ ALT="$R_T$"></SPAN>), and a load resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img152.svg"
+ ALT="$R_L$"></SPAN>. However, the 
+circuit will be optimized differently according to different requirements:
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/source_load.gif"
+ ALT="source_load.gif">
+
+<P>
+
+<UL>
+<LI><B>Maximize voltage delivery (or minimize loading effect)</B>:
+  minimize output resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img341.svg"
+ ALT="$R_0$"></SPAN>, maximize input resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img152.svg"
+ ALT="$R_L$"></SPAN>.
+</LI>
+<LI><B>Maximize power delivery (<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.25ex; " SRC="img452.svg"
+ ALT="$50\%$"></SPAN> of total power): </B> 
+  match the output and input resistances <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img443.svg"
+ ALT="$R_L=R_0$"></SPAN> 
+</LI>
+<LI><B>Minimize power dissipation in transmission: </B> 
+  increase output voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img422.svg"
+ ALT="$V_L$"></SPAN>.
+</LI>
+</UL>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node9.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node7.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node9.html">Review and Summary</A>
+<B> Up:</B> <A
+ HREF="node1.html">Chapter 1: Basic Quantities</A>
+<B> Previous:</B> <A
+ HREF="node7.html">Energy Sources</A></DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

@@ -1,0 +1,3035 @@
+\batchmode
+\documentstyle[12pt]{article}
+
+\let\providecommand\newcommand
+\RequirePackage{ifthen}
+
+
+\usepackage{html}
+\textwidth 6.0in
+\topmargin -0.5in
+\oddsidemargin -0in
+\evensidemargin -0.5in
+
+
+
+
+
+
+\usepackage[]{inputenc}
+
+
+
+\makeatletter
+
+\makeatletter
+\count@=\the\catcode`\_ \catcode`\_=8 
+\newenvironment{tex2html_wrap}{}{}%
+\catcode`\<=12\catcode`\_=\count@
+\newcommand{\providedcommand}[1]{\expandafter\providecommand\csname #1\endcsname}%
+\newcommand{\renewedcommand}[1]{\expandafter\providecommand\csname #1\endcsname{}%
+  \expandafter\renewcommand\csname #1\endcsname}%
+\newcommand{\newedenvironment}[1]{\newenvironment{#1}{}{}\renewenvironment{#1}}%
+\let\newedcommand\renewedcommand
+\let\renewedenvironment\newedenvironment
+\makeatother
+\let\mathon=$
+\let\mathoff=$
+\ifx\AtBeginDocument\undefined \newcommand{\AtBeginDocument}[1]{}\fi
+\newbox\sizebox
+\setlength{\hoffset}{0pt}\setlength{\voffset}{0pt}
+\addtolength{\textheight}{\footskip}\setlength{\footskip}{0pt}
+\addtolength{\textheight}{\topmargin}\setlength{\topmargin}{0pt}
+\addtolength{\textheight}{\headheight}\setlength{\headheight}{0pt}
+\addtolength{\textheight}{\headsep}\setlength{\headsep}{0pt}
+\setlength{\textwidth}{349pt}
+\newwrite\lthtmlwrite
+\makeatletter
+\let\realnormalsize=\normalsize
+\global\topskip=2sp
+\def\preveqno{}\let\real@float=\@float \let\realend@float=\end@float
+\def\@float{\let\@savefreelist\@freelist\real@float}
+\def\liih@math{\ifmmode$\else\bad@math\fi}
+\def\end@float{\realend@float\global\let\@freelist\@savefreelist}
+\let\real@dbflt=\@dbflt \let\end@dblfloat=\end@float
+\let\@largefloatcheck=\relax
+\let\if@boxedmulticols=\iftrue
+\def\@dbflt{\let\@savefreelist\@freelist\real@dbflt}
+\def\adjustnormalsize{\def\normalsize{\mathsurround=0pt \realnormalsize
+ \parindent=0pt\abovedisplayskip=0pt\belowdisplayskip=0pt}%
+ \def\phantompar{\csname par\endcsname}\normalsize}%
+\def\lthtmltypeout#1{{\let\protect\string \immediate\write\lthtmlwrite{#1}}}%
+\newcommand\lthtmlhboxmathA{\adjustnormalsize\setbox\sizebox=\hbox\bgroup\kern.05em }%
+\newcommand\lthtmlhboxmathB{\adjustnormalsize\setbox\sizebox=\hbox to\hsize\bgroup\hfill }%
+\newcommand\lthtmlvboxmathA{\adjustnormalsize\setbox\sizebox=\vbox\bgroup %
+ \let\ifinner=\iffalse \let\)\liih@math }%
+\newcommand\lthtmlboxmathZ{\@next\next\@currlist{}{\def\next{\voidb@x}}%
+ \expandafter\box\next\egroup}%
+\newcommand\lthtmlmathtype[1]{\gdef\lthtmlmathenv{#1}}%
+\newcommand\lthtmllogmath{\dimen0\ht\sizebox \advance\dimen0\dp\sizebox
+  \ifdim\dimen0>.95\vsize
+   \lthtmltypeout{%
+*** image for \lthtmlmathenv\space is too tall at \the\dimen0, reducing to .95 vsize ***}%
+   \ht\sizebox.95\vsize \dp\sizebox\z@ \fi
+  \lthtmltypeout{l2hSize %
+:\lthtmlmathenv:\the\ht\sizebox::\the\dp\sizebox::\the\wd\sizebox.\preveqno}}%
+\newcommand\lthtmlfigureA[1]{\let\@savefreelist\@freelist
+       \lthtmlmathtype{#1}\lthtmlvboxmathA}%
+\newcommand\lthtmlpictureA{\bgroup\catcode`\_=8 \lthtmlpictureB}%
+\newcommand\lthtmlpictureB[1]{\lthtmlmathtype{#1}\egroup
+       \let\@savefreelist\@freelist \lthtmlhboxmathB}%
+\newcommand\lthtmlpictureZ[1]{\hfill\lthtmlfigureZ}%
+\newcommand\lthtmlfigureZ{\lthtmlboxmathZ\lthtmllogmath\copy\sizebox
+       \global\let\@freelist\@savefreelist}%
+\newcommand\lthtmldisplayA{\bgroup\catcode`\_=8 \lthtmldisplayAi}%
+\newcommand\lthtmldisplayAi[1]{\lthtmlmathtype{#1}\egroup\lthtmlvboxmathA}%
+\newcommand\lthtmldisplayB[1]{\edef\preveqno{(\theequation)}%
+  \lthtmldisplayA{#1}\let\@eqnnum\relax}%
+\newcommand\lthtmldisplayZ{\lthtmlboxmathZ\lthtmllogmath\lthtmlsetmath}%
+\newcommand\lthtmlinlinemathA{\bgroup\catcode`\_=8 \lthtmlinlinemathB}
+\newcommand\lthtmlinlinemathB[1]{\lthtmlmathtype{#1}\egroup\lthtmlhboxmathA
+  \vrule height1.5ex width0pt }%
+\newcommand\lthtmlinlineA{\bgroup\catcode`\_=8 \lthtmlinlineB}%
+\newcommand\lthtmlinlineB[1]{\lthtmlmathtype{#1}\egroup\lthtmlhboxmathA}%
+\newcommand\lthtmlinlineZ{\egroup\expandafter\ifdim\dp\sizebox>0pt %
+  \expandafter\centerinlinemath\fi\lthtmllogmath\lthtmlsetinline}
+\newcommand\lthtmlinlinemathZ{\egroup\expandafter\ifdim\dp\sizebox>0pt %
+  \expandafter\centerinlinemath\fi\lthtmllogmath\lthtmlsetmath}
+\newcommand\lthtmlindisplaymathZ{\egroup %
+  \centerinlinemath\lthtmllogmath\lthtmlsetmath}
+\def\lthtmlsetinline{\hbox{\vrule width.1em \vtop{\vbox{%
+  \kern.1em\copy\sizebox}\ifdim\dp\sizebox>0pt\kern.1em\else\kern.3pt\fi
+  \ifdim\hsize>\wd\sizebox \hrule depth1pt\fi}}}
+\def\lthtmlsetmath{\hbox{\vrule width.1em\kern-.05em\vtop{\vbox{%
+  \kern.1em\kern0.8 pt\hbox{\hglue.17em\copy\sizebox\hglue0.8 pt}}\kern.3pt%
+  \ifdim\dp\sizebox>0pt\kern.1em\fi \kern0.8 pt%
+  \ifdim\hsize>\wd\sizebox \hrule depth1pt\fi}}}
+\def\centerinlinemath{%
+  \dimen1=\ifdim\ht\sizebox<\dp\sizebox \dp\sizebox\else\ht\sizebox\fi
+  \advance\dimen1by.5pt \vrule width0pt height\dimen1 depth\dimen1 
+ \dp\sizebox=\dimen1\ht\sizebox=\dimen1\relax}
+
+\def\lthtmlcheckvsize{\ifdim\ht\sizebox<\vsize 
+  \ifdim\wd\sizebox<\hsize\expandafter\hfill\fi \expandafter\vfill
+  \else\expandafter\vss\fi}%
+\providecommand{\selectlanguage}[1]{}%
+\makeatletter \tracingstats = 1 
+
+
+\begin{document}
+\pagestyle{empty}\thispagestyle{empty}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength hsize=\the\hsize}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength vsize=\the\vsize}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength hoffset=\the\hoffset}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength voffset=\the\voffset}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength topmargin=\the\topmargin}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength topskip=\the\topskip}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength headheight=\the\headheight}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength headsep=\the\headsep}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength parskip=\the\parskip}\lthtmltypeout{}%
+\lthtmltypeout{latex2htmlLength oddsidemargin=\the\oddsidemargin}\lthtmltypeout{}%
+\makeatletter
+\if@twoside\lthtmltypeout{latex2htmlLength evensidemargin=\the\evensidemargin}%
+\else\lthtmltypeout{latex2htmlLength evensidemargin=\the\oddsidemargin}\fi%
+\lthtmltypeout{}%
+\makeatother
+\setcounter{page}{1}
+\onecolumn
+
+% !!! IMAGES START HERE !!!
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1694}%
+$I_1,I_2,I_3$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1696}%
+$V_{ab}, V_{bd}, V_{cb}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1698}%
+$l$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1708}%
+$I_1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1710}%
+$I_2$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1712}%
+$I_a$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1714}%
+$I_b$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1420}%
+\begin{displaymath} \sum V_{abda} =0=-32+2I_a+8(I_a-I_b) \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1421}%
+\begin{displaymath} \sum V_{bcdb} =0=8(I_b-I_a)+4I_b+20  \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1422}%
+\begin{displaymath}
+    \left\{ \begin{array}{rrrr} 10I_a&-8I_b&=&32 \\-8I_a &+12I_b&=&-20
+    \end{array} \right. 
+    \;\;\;\;\;\mbox{i.e.}\;\;\;\;\;
+    \left\{ \begin{array}{rrrr} 5I_a&-4I_b&=&16 \\-2I_a &+3I_b&=&-5
+    \end{array} \right. 
+    \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1716}%
+$I_a=I_1=4$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1718}%
+$I_b=-I_2=1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1720}%
+$I_3=I_a-I_b=3$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1423}%
+\begin{displaymath} 
+    \sum V_{abcda}=0=-32+2(I_a+I_c)+4(I_b+I_c)+20 
+    \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1726}%
+$I_a=4$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1728}%
+$I_b=1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1730}%
+$I_c=0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1734}%
+$I_c$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1424}%
+\begin{displaymath} \sum V_{abda} =0=-32+2(I_a+I_c)+8I_a   \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1425}%
+\begin{displaymath} \sum V_{abcda}=0=-32+2(I_a+I_c)+4I_c+20=0  \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1426}%
+\begin{displaymath}
+    \left\{ \begin{array}{rrrr} 10I_a&+2I_c&=&32 \\2I_a &+6I_c&=&12
+    \end{array} \right. \;\;\;\;\;\mbox{i.e.,}\;\;\;\;\;\;
+    \left\{ \begin{array}{rrrr} 5I_a&+I_c&=&16 \\I_a &+3I_c&=&6
+    \end{array} \right. 
+    \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1736}%
+$I_a=3$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1738}%
+$I_c=1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1740}%
+$I_1=I_a+I_c=4$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1742}%
+$I_2=I_c=1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1744}%
+$n$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1746}%
+$n-1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1756}%
+$b$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1758}%
+$d$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1760}%
+$a$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1762}%
+$c$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1766}%
+$V_b=V_{bd}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1768}%
+$v$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1427}%
+\begin{displaymath}
+  \sum_i I_i=0=I_1+I_2-I_3	
+  \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1428}%
+\begin{displaymath}
+  I_1=\frac{V_a-V_b}{R_{ab}}=\frac{32-V_b}{2},\;\;\;\;
+  I_2=\frac{V_c-V_b}{R_{cb}}=\frac{20-V_b}{4},\;\;\;\;
+  I_3=\frac{V_b}{R_{bd}}=\frac{V_b-0}{8}  
+  \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1776}%
+$I_3$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1778}%
+$V_b=24$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1780}%
+$\sum_i I_i=0=-I_1+I_2-I_3$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1786}%
+$V$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1792}%
+$I_j$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1796}%
+$R_k$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1429}%
+\begin{displaymath} 
+  \sum_i \frac{V-V_i}{R_i}-\sum_j I_j+\sum_k \frac{V}{R_k}=0 
+  \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1430}%
+\begin{displaymath} 
+  V=\frac{\sum_i V_i/R_i+\sum_j I_j}{\sum_i 1/R_i+\sum_k 1/R_k}=\frac{\sum I}{\sum G} 
+  \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1802}%
+$G=1/R$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1431}%
+\begin{displaymath} \begin{array}{l}
+    \mbox{loop 1:}\;\;\;\;\;-V_{s1}+R_1I_a+R_3(I_a-I_b)+R_4(I_a-I_c)+V_{s4}=0 \\
+    \mbox{loop 2:}\;\;\;\;\;R_2I_b+V_{s2}+R_5(I_b-I_c)+R_3(I_b-I_a)=0 \\
+    \mbox{loop 3:}\;\;\;\;\;-V_{s4}+R_4(I_c-I_a)+R_5(I_c-I_b)+R_6I_c-V_{s6}=0 
+  \end{array} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1432}%
+\begin{displaymath} \begin{array}{l}
+    \mbox{node a:}\;\;\;\;\;(V_a-V_b-V_{s1})/R_1+(V_a-V_{s2})/R_2+(V_a-V_c)/R_3=0 \\
+    \mbox{node b:}\;\;\;\;\;(V_b-V_a+V_{s1})/R_1+(V_b-V_c+V_{s4})/R_4+(V_b-V_{s6})/R_6=0 \\
+    \mbox{node c:}\;\;\;\;\;(V_c-V_b-V_{s4})/R_4+(V_c-V_a)/R_3+V_c/R_5=0 
+  \end{array} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1810}%
+$I=0.5 A$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1812}%
+$V=6 V$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1814}%
+$R_1=3\Omega$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1816}%
+$R_2=8\Omega$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1818}%
+$R_3=6\Omega$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1820}%
+$R_4=4\Omega$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1433}%
+\begin{displaymath} I_1=I=0.5A \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1434}%
+\begin{displaymath} 
+\left\{ \begin{array}{l} R_2(I_2-I_1)+R_3(I_2-I_3)-V=0 \\
+  R_1(I_3-I_1)+R_4I_3+R_3(I_3-I_2)=0 \end{array} \right. 
+\;\;\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;\;\;
+\left\{ \begin{array}{l}
+  14 I_2-6 I_3=10 \\-6 I_2+13 I_3=1.5 \end{array} \right. 
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1828}%
+$I_2=0.952 A$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1830}%
+$I_3=0.555 A$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1832}%
+$V_3=-6V$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1834}%
+$V_2=R_2(I_1-I_2)=8(0.5-0.952)=-3.616V$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1836}%
+$V_1=V_3+R_4 I_3=-3.78 V$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1838}%
+$V_1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1840}%
+$V_2$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1842}%
+$V_3=V=-6V$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1435}%
+\begin{displaymath} 
+\left\{ \begin{array}{l}
+  (V_1-V_3)/R_4+(V_1-V_2)/R_1=I \\
+  (V_2-V_1)/R_1+(V_2-V_3)/R_3+V_2/R_2=0 \end{array} \right. 
+  \;\;\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;\;\;
+  \left\{ \begin{array}{l}
+  7V_1-4V_2=-12 \\
+  -8V_1+15V_2=-24 \end{array} \right. \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1848}%
+$V_1=-3.78$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1850}%
+$V_2=-3.616$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1852}%
+$V_1=12 V$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1854}%
+$V_2=6 V$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1864}%
+$R_1=100\Omega$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1866}%
+$R_2=5\Omega$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1868}%
+$R_3=200\Omega$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1870}%
+$R_4=50\Omega$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1872}%
+$V=50V$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1874}%
+$I=0.2A$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1876}%
+$x$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1878}%
+$y$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1880}%
+$y=F(x)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1436}%
+\begin{displaymath}	F(ax)=aF(x) \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1437}%
+\begin{displaymath} F(x_1+x_2)=F(x_1)+F(x_2)	\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1438}%
+\begin{displaymath}	F(ax_1+bx_2)=aF(x_1)+bF(x_2)	\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1882}%
+$F$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1884}%
+$x_1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1886}%
+$x_2$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1888}%
+$F(x_1)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1890}%
+$F(x_2)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1892}%
+$V^2/R$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1894}%
+$I^2R$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1439}%
+\begin{displaymath}	I_{12}=\frac{aV_1+bV_2}{R}=a\frac{V_1}{R}+b\frac{V_2}{R}=aI_1+bI_2 \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1896}%
+$I_1=V_1/R$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1900}%
+$I_2=V_2/R$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1440}%
+\begin{displaymath}	V=R(aI_1+bI_2)=aI_1R+bI_2R=aV_1+bV_2 \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1904}%
+$V_1=I_1R$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1908}%
+$V_2=I_2R$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1441}%
+\begin{displaymath}
+P_{12}=\frac{(V_1+V_2)^2}{R}\ne\frac{V_1^2}{R}+\frac{V_2^2}{R}=P_1+P_2,
+\;\;\;\;\;\;\;
+P_{12}=R(I_1+I_2)^2 \ne RI_1^2+RI_2^2=P_1+P_2	
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1442}%
+\begin{displaymath} I'_1=\frac{32}{2+8 || 4}=\frac{48}{7},\;\;\;I'_2=-I'_1\frac{8}{8+4}=-\frac{32}{7},
+   \;\;\;I'_3=I'_1\frac{4}{8+4}=\frac{16}{7} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1443}%
+\begin{displaymath} I''_2=\frac{20}{4+8 || 2}=\frac{25}{7},\;\;\;I''_1=-I''_2\frac{8}{2+8}=-\frac{20}{7},
+   \;\;\;I''_3=I''_2\frac{2}{8+2}=\frac{5}{7} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1444}%
+\begin{displaymath} I_1=I'_1+I''_1=\frac{48}{7}-\frac{20}{7}=4,\;\;\;\;
+   I_2=I''_2+I'_2=\frac{25}{7}-\frac{32}{7}=-1,\;\;\;\;
+   I_3=I'_3+I''_3=\frac{16}{7}+\frac{5}{7}=3 \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1914}%
+$I$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1918}%
+$I_0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1445}%
+\begin{displaymath} I_0+I_1+I_2=I_0+\frac{V-V_0}{R_1}+\frac{V}{R_2}=0,\;\;\;\;\mbox{i.e.,}\;\;\;\;
+I_0R_1R_2+R_2(V-V_0)+R_1V=0 \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1446}%
+\begin{displaymath} V=\frac{R_2V_0-I_0R_1R_2}{R_1+R_2}
+  =V_0\frac{R_2}{R_1+R_2}-I_0\frac{R_1R_2}{R_1+R_2} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1447}%
+\begin{displaymath} I=I_2=\frac{V}{R_2}=\frac{V_0}{R_1+R_2}-I_0\frac{R_1}{R_1+R_2} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1926}%
+$V'$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1928}%
+$I'$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1448}%
+\begin{displaymath} I'=\frac{V_0}{R_1+R_2},\;\;\;\;V'=I'R_2=V_0\frac{R_2}{R_1+R_2} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1930}%
+$V''$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1932}%
+$I''$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1449}%
+\begin{displaymath} I''=-I_0\frac{R_1}{R_1+R_2},\;\;\;\;V''=-I''R_2=-I_0\frac{R_1R_2}{R_1+R_2} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1450}%
+\begin{displaymath} I=I'+I''=\frac{V_0-I_0R_1}{R_1+R_2},\;\;\;\;
+  V=V'+V''=R_2I=(V_0-I_0R_1)\frac{R_2}{R_1+R_2}	\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1938}%
+$V_T$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1940}%
+$R_T$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1950}%
+$R_L$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1952}%
+$(V_T, R_T)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1964}%
+$I=V/R_L$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1970}%
+$V'=V_{oc}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1972}%
+$V''=-R_0I$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1974}%
+$R_0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1976}%
+$V=V'+V''=V_{oc}-R_0I$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1982}%
+$V_T=V_{oc}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1984}%
+$R_T=R_0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1986}%
+$I_N$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1988}%
+$R_N$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2000}%
+$V=IR_L$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2006}%
+$I'=I_{sc}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2008}%
+$I''=-V/R_0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2012}%
+$I=I'+I''=I_{sc}-V/R_0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2018}%
+$I_N=I_{sc}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2020}%
+$R_N=R_0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2026}%
+$I_N=I_{sc}=V_{os}/R_T$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2028}%
+$R_N=R_T$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2036}%
+$|\triangle V/\triangle I|=R_0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2040}%
+$\triangle V/\triangle I=R_L$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2052}%
+$(V_1, I_1)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2054}%
+$R_1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2056}%
+$(V_2, I_2)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2058}%
+$R_2$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1451}%
+\begin{displaymath} R_0=-\frac{\triangle V}{\triangle I}=-\frac{V_1-V_2}{I_1-I_2} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2060}%
+$V_0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1452}%
+\begin{displaymath} I_1=\frac{V_0}{R_0+R_1},\;\;\;\;V_1=V_0\;\frac{R_1}{R_0+R_1},\;\;\;\;
+   I_2=\frac{V_0}{R_0+R_2},\;\;\;\;V_2=V_0\;\frac{R_2}{R_0+R_2} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1453}%
+\begin{displaymath} 
+\triangle I=I_1-I_2=V_0\;\left(\frac{1}{R_0+R_1}-\frac{1}{R_0+R_2}\right),
+\;\;\;   \triangle V=V_1-V_2=V_0\;\left(\frac{R_1}{R_0+R_1}-\frac{R_2}{R_0+R_2}\right)
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1454}%
+\begin{displaymath} -\frac{\triangle V}{\triangle I}=-\frac{V_1-V_2}{I_1-I_2}=R_0 \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2074}%
+$R_1=0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1455}%
+\begin{displaymath} I_1=I_{sc}=V_0/R_0,\;\;\;\;\;\; V_1=0 \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2076}%
+$R_2=\infty$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1456}%
+\begin{displaymath} V_2=V_{oc}=V_0,\;\;\;\;\;\;\;I_2=0 \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2078}%
+$\triangle V=V_1-V_2=-V_0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2080}%
+$\triangle I=V_1-V_2=V_0/R_0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1457}%
+\begin{displaymath} R_0=-\frac{\triangle V}{\triangle I}=\frac{V_{oc}}{I_{sc}} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2082}%
+$V_T=V_{oc}=V_{ab}=V_0-I_0R_1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2084}%
+$R_T=R_1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2086}%
+$I_N=I_{sc}=I_{ab}=V_0/R_1-I_0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2088}%
+$R_N=R_1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1458}%
+\begin{displaymath} I_N=V_T/R_T=V_0/R_1-I_0	\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1459}%
+\begin{displaymath} V_T=I_N R_N=V_0-I_0R_1	\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2098}%
+$\Delta$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2102}%
+$Y$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2108}%
+$R'_{ab}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1460}%
+\begin{displaymath} \left\{ \begin{array}{rr}
+	R'_{ab}=R_a+R_b=R_{ab}//(R_{ac}+R_{bc})	\\
+	R'_{ac}=R_a+R_c=R_{ac}//(R_{ab}+R_{bc}) \\
+	R'_{bc}=R_b+R_c=R_{bc}//(R_{ab}+R_{ac}) \end{array} \right. \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2118}%
+$R_{ab}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2120}%
+$R_{ac}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2122}%
+$R_{bc}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2126}%
+$R_a$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2128}%
+$R_b$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2130}%
+$R_c$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1461}%
+\begin{displaymath} \left\{ \begin{array}{rr}
+      R_a=R_{ab}R_{ac}/(R_{ab}+R_{ac}+R_{bc}) \\
+      R_b=R_{ab}R_{bc}/(R_{ab}+R_{ac}+R_{bc}) \\
+      R_c=R_{ac}R_{bc}/(R_{ab}+R_{ac}+R_{bc}) \\
+    \end{array} \right. \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1462}%
+\begin{displaymath} \left\{ \begin{array}{rr}
+      R_{ab}=R_a+R_b+R_aR_b/R_c	\\
+      R_{ac}=R_a+R_c+R_aR_c/R_b	\\
+      R_{bc}=R_b+R_c+R_bR_c/R_a	\end{array} \right. \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2158}%
+$Z_1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2162}%
+$Z_3$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2164}%
+$Z_4$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1463}%
+\begin{displaymath} \left\{ \begin{array}{l}
+  Y_1=Z_1Z_3/(Z_1+Z_2+Z_3) \\
+  Y_2=Z_2Z_3/(Z_1+Z_2+Z_3) \\
+  Y_3=Z_1Z_2/(Z_1+Z_2+Z_3)+Z_4 \\
+\end{array} \right. \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2168}%
+$Z_2$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1464}%
+\begin{displaymath} \left\{ \begin{array}{l}
+  X_1=Z_1+Z_4+Z_1Z_4/Z_2 \\
+  X_2=Z_2+Z_4+Z_2Z_4/Z_1 \\
+  X_3=(Z_1+Z_2+Z_1Z_2/Z_4) || Z_3 \\
+\end{array} \right. \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2188}%
+$V_0=225 V$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2190}%
+$R_0=1\Omega$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2192}%
+$R_1=40\Omega$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2194}%
+$R_2=36\Omega$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2196}%
+$R_3=50\Omega$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2198}%
+$R_4=55\Omega$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2200}%
+$R_5=10\Omega$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2210}%
+$I_4$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2212}%
+$I_5$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2214}%
+$V_0=18V$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2216}%
+$R_1=R_2=3\Omega$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2220}%
+$R_4=1.5\Omega$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2224}%
+$R_5$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2226}%
+$1\Omega$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2228}%
+$2\Omega$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2230}%
+$3\Omega$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2236}%
+$\Delta-Y$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2240}%
+$R_5=2\Omega$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1465}%
+\begin{displaymath} 
+R_c=\frac{R_1R_2}{R_1+R_2+R_5}=\frac{9}{8},\;\;\;\;
+R_a=\frac{R_1R_5}{R_1+R_2+R_5}=\frac{3}{4},\;\;\;\;
+R_b=\frac{R_2R_5}{R_1+R_2+R_5}=\frac{3}{4}
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1466}%
+\begin{displaymath}
+R_{total}=R_c+(R_a+R_3) \;||\; (R_b+R_4)=\frac{45}{16}	
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1467}%
+\begin{displaymath}
+I_0=\frac{V_0}{R_{total}}=\frac{18}{45/16}=\frac{32}{5}
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2258}%
+$R_3$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2260}%
+$R_4$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1468}%
+\begin{displaymath} 
+I_a=I_0\;\frac{R_b+R_4}{(R_a+R_3)+(R_b+R_4)}=\frac{8}{5} 
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1469}%
+\begin{displaymath} 
+I_b=I_0\;\frac{R_a+R_3}{(R_a+R_3)+(R_b+R_4)}=\frac{24}{5}
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1470}%
+\begin{displaymath}
+V_a=I_a \times R_3=\frac{8 }{5} \times 6=\frac{48}{5},\;\;\;\;\;
+V_b=I_b \times R_4=\frac{24}{5} \times 1.5=\frac{36}{5}	
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1471}%
+\begin{displaymath}
+I=\frac{V_a-V_b}{R_5}=\frac{12}{5}\times \frac{1}{2}=1.2
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2270}%
+$R_5=1\Omega$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2272}%
+$R_5=3\Omega$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2276}%
+$I=0.5$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1472}%
+\begin{displaymath}	
+V_T=V_{oc}=V_0\frac{R_3}{R_1+R_3}-V_0\frac{R_4}{R_2+R_4}
+=18 \left(\frac{6}{9}-\frac{1.5}{4.5}\right)=6V 
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1473}%
+\begin{displaymath} 
+R_T=R_1\,||\,R_3+R_2\,||\,R_4
+=\frac{3\times 6}{3+6}+\frac{3\times 1.5}{3+1.5}=3\Omega 
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2300}%
+$R_5=1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2302}%
+$I=6/(3+1)=1.5$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2304}%
+$R_5=2$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2306}%
+$I=6/(3+2)=1.2$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2308}%
+$R_5=3$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2310}%
+$I=6/(3+3)=1.0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2314}%
+$R_5=V_T/I-R_T=6/0.5-3=9$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1474}%
+\begin{displaymath}
+V_1=72V,\;\;\;\;V_2=80V,\;\;\;\;R_1=R_3=1.5\Omega,\;\;\;\;R_2=3\Omega,
+\;\;\;\;R_4=2.5\Omega
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2316}%
+$I_L$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2318}%
+$R_L=1.5\Omega$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2320}%
+$R_i$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2322}%
+$I_i$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2326}%
+$V_a$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2328}%
+$V_b$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2330}%
+$I'_L$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2332}%
+$V_1=72$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2334}%
+$I''_L$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2336}%
+$V_2=80$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2338}%
+$I_L=I'_L+I''_L$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2342}%
+$I'_L=8$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2344}%
+$R_3=1.5$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2346}%
+$R_4=2.5$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2348}%
+$I_3=5$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2350}%
+$I_4=3$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2352}%
+$V_b=I_3R_3=I_4R_4=5\times 1.5=3\times 2.5=7.5$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2354}%
+$V_a=R_L I'_L+V_b=1.5\times 8+7.5=19.5$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2356}%
+$R_2=3$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2358}%
+$I_2=V_a/R_2=19.5/3=6.5$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2362}%
+$I_1=I_2+I'_L=6.5+8=14.5$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2364}%
+$V'_1=R_1\times I_1+V_a=1.5\times 14.5+19.5=41.25$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2368}%
+$V_1/V'_1=72/41.25=96/55$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2370}%
+$I'_L=8 \times 96/55$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2374}%
+$I''_L=3$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2376}%
+$R_1=1.5$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2380}%
+$I_1=2$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2382}%
+$I_2=1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2384}%
+$V_a=R_1I_1=R_2I_2=1.5\times 2+3\times 1=3$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2386}%
+$V_b=R_L I''_L+V_a=1.5\times 3+3=7.5$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2390}%
+$I_3=V_b/R_3=7.5/1.5=5$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2394}%
+$I_4=I_3+I''_L=5+3=8$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2396}%
+$V'_2=R_4\times I_4+V_b=2.5\times 8+7.5=27.5$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2400}%
+$V_2/V'_2=80/27.5=32/11$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2402}%
+$I''_L=3\times 32/11=96/11$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1475}%
+\begin{displaymath}	I_L=I'_L-I''_L=\frac{96\times 8}{55}-\frac{96}{11}=\frac{288}{55} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2404}%
+$R$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2406}%
+$V_{ab}=V_a-V_b$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2410}%
+$I_L=V_{ab}/(R+R_L)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2412}%
+$V_a=V_1\times R_2/(R_1+R_2)=72\times 3/(1.5+3)=48$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2414}%
+$V_b=V_2\times R_3/(R_3+R_4)=80\times 1.5/(1.5+2.5)=30$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2416}%
+$V_T=V_{ab}=V_a-V_b=48-30=18$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2418}%
+$R_T=R_1 || R_2 + R_3 || R_4=3||1.5+2.5||1.5=7.75/4$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1476}%
+\begin{displaymath} I_L=\frac{V_{ab}}{R+R_L}=\frac{18}{1.5+7.75/4}=\frac{288}{55} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2436}%
+$\dot{V}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2438}%
+$\dot{I}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1477}%
+\begin{displaymath} \left\{ \begin{array}{l} V_1=Z_{11}I_1+Z_{12}I_2 \\
+    V_2=Z_{21}I_1+Z_{22}I_2 \end{array} \right.\;\;\;\;\;
+  \left[ \begin{array}{l} V_1 \\V_2\end{array} \right]=
+  \left[ \begin{array}{ll} Z_{11} & Z_{12}\\Z_{21} & Z_{22}\end{array}\right]
+  \left[ \begin{array}{l} I_1 \\I_2\end{array} \right]
+  ={\bf Z}\left[ \begin{array}{l} I_1 \\I_2\end{array} \right] \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2452}%
+$Z_{11}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2454}%
+$Z_{12}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2456}%
+$Z_{21}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2458}%
+$Z_{22}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2472}%
+$Z_{12}=V_1/I_2$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2474}%
+${\bf Z}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1478}%
+\begin{displaymath} \left\{ \begin{array}{l} I_1=Y_{11}V_1+Y_{12}V_2 \\
+    I_2=Y_{21}V_1+Y_{22}V_2 \end{array} \right.\;\;\;\;\;
+  \left[ \begin{array}{l} I_1 \\I_2\end{array} \right]=
+  \left[ \begin{array}{ll} Y_{11} & Y_{12}\\Y_{21} & Y_{22}\end{array}\right]
+  \left[ \begin{array}{l} V_1 \\V_2\end{array} \right]
+  ={\bf Y}\left[ \begin{array}{l} V_1 \\V_2\end{array} \right]  \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2484}%
+$Y_{11}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2486}%
+$Y_{12}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2488}%
+$Y_{21}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2490}%
+$Y_{22}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2496}%
+${\bf Y}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1479}%
+\begin{displaymath}\left\{ \begin{array}{l} 
+    V_1=A_{11}V_2+A_{12}(-I_2) \\
+    I_1=A_{21}V_2+A_{22}(-I_2) \end{array} \right.\;\;\;\;\;
+  \left[ \begin{array}{l} V_1 \\I_1\end{array} \right]=
+  \left[ \begin{array}{ll} A_{11} & A_{12}\\A_{21} & A_{22}\end{array}\right]
+  \left[ \begin{array}{r} V_2 \\-I_2\end{array} \right]
+  ={\bf A}\left[ \begin{array}{r} V_2 \\-I_2\end{array} \right]  \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2506}%
+$A_{11}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2508}%
+$A_{22}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2510}%
+$A_{12}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2512}%
+$A_{21}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1480}%
+\begin{displaymath}\left\{ \begin{array}{l} 
+    V_1=H_{11}I_1+H_{12}V_2 \\
+    I_2=H_{21}I_1+H_{22}V_2 \end{array} \right.\;\;\;\;\;
+  \left[ \begin{array}{l} V_1 \\I_2\end{array} \right]=
+  \left[ \begin{array}{ll} H_{11} & H_{12}\\H_{21} & H_{22}\end{array}\right]
+  \left[ \begin{array}{l} I_1 \\V_2\end{array} \right]
+  ={\bf H}\left[ \begin{array}{l} I_1 \\V_2\end{array} \right]  \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2524}%
+$H_{12}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2526}%
+$H_{21}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2528}%
+$H_{11}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2530}%
+$H_{22}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2532}%
+$z=f(x,y)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2538}%
+$\triangle x$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2540}%
+$\triangle y$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1481}%
+\begin{displaymath} \triangle z=\triangle f(x,y)=\frac{\partial f}{\partial x}\triangle x +
+                    \frac{\partial f}{\partial y}\triangle y  \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1482}%
+\begin{displaymath} \frac{\partial f}{\partial x}=\lim_{\triangle x\rightarrow 0}
+   \frac{\triangle f}{\triangle x}\bigg|_{\triangle y=0}
+   \;\;\;\;\;\;\;\;
+   \frac{\partial f}{\partial y}=\lim_{\triangle y\rightarrow 0}
+   \frac{\triangle f}{\triangle y}\bigg|_{\triangle x=0}
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1483}%
+\begin{displaymath}	Z_{11}=\frac{V_1}{I_1}\bigg|_{I_2=0},\;\;\;\;
+	Z_{12}=\frac{V_1}{I_2}\bigg|_{I_1=0},\;\;\;\;
+	Z_{21}=\frac{V_2}{I_1}\bigg|_{I_2=0},\;\;\;\;
+	Z_{22}=\frac{V_2}{I_2}\bigg|_{I_1=0}
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1484}%
+\begin{displaymath}	Y_{11}=\frac{I_1}{V_1}\bigg|_{V_2=0},\;\;\;\;
+	Y_{12}=\frac{I_1}{V_2}\bigg|_{V_1=0},\;\;\;\;
+	Y_{21}=\frac{I_2}{V_1}\bigg|_{V_2=0},\;\;\;\;
+	Y_{22}=\frac{I_2}{V_2}\bigg|_{Y_1=0},\;\;\;\;
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1485}%
+\begin{displaymath}	A_{11}=\frac{V_1}{V_2}\bigg|_{I_2=0},\;\;\;\;
+	A_{12}=\frac{V_1}{I_2}\bigg|_{V_2=0},\;\;\;\;
+	A_{21}=\frac{I_1}{V_2}\bigg|_{I_2=0},\;\;\;\;
+	A_{22}=\frac{I_1}{I_2}\bigg|_{V_2=0}
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1486}%
+\begin{displaymath}	H_{11}=\frac{V_1}{I_1}\bigg|_{V_2=0},\;\;\;\;
+	H_{12}=\frac{V_1}{V_2}\bigg|_{I_1=0},\;\;\;\;
+	H_{21}=\frac{I_2}{I_1}\bigg|_{V_2=0},\;\;\;\;
+	H_{22}=\frac{I_2}{V_2}\bigg|_{I_1=0}
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1487}%
+\begin{displaymath}	{\bf V}=[V_1, V_2]^T,\;\;\;\;\;\;{\bf I}=[I_1, I_2]^T	\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1488}%
+\begin{displaymath} {\bf V}={\bf Z} {\bf I},\;\;\;\;\;\;{\bf I}={\bf Y} {\bf V},\;\;\;\;
+	{\bf Y}={\bf Z}^{-1}		\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1489}%
+\begin{displaymath} \left\{ \begin{array}{l} V_1=Z_{11}I_1+Z_{12}I_2 \\
+	V_2=Z_{21}I_1+Z_{22}I_2 \end{array} \right.
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2550}%
+$I_2=0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1490}%
+\begin{displaymath} Z_{11}=V_1/I_1=j\omega L+1/j\omega C,\;\;\;\;\;Z_{21}=V_2/I_1=1/j\omega C \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2552}%
+$I_1=0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1491}%
+\begin{displaymath} Z_{22}=V_2/I_2=1/j\omega C,\;\;\;\;\;\;Z_{12}=V_1/I_2=1/j\omega C \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2554}%
+$Z$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1492}%
+\begin{displaymath} \left[\begin{array}{cc}Y_{11}&Y_{12}\\Y_{21}&Y_{22}\end{array}\right]
+  =\left[\begin{array}{cc}Z_{11}&Z_{12}\\Z_{21}&Z_{22}\end{array}\right]^{-1}
+  =\left[\begin{array}{cc}j\omega L+1/j\omega C & 1/j\omega C\\
+	1/j\omega C & 1/j\omega \end{array}\right]^{-1}
+  =\left[\begin{array}{cc}1/j\omega L & -1/j\omega L\\
+	-1/j\omega L & j\omega C+1/j\omega L\end{array}\right] \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1493}%
+\begin{displaymath}	 \left[ \begin{array}{rr} a & b \\c & d \end{array} \right]^{-1}
+=\frac{1}{ad-bc}\left[ \begin{array}{rr} d & -b \\-c & a \end{array} \right]
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2556}%
+${\bf Z}={\bf Z}_1+{\bf Z}_2$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2558}%
+${\bf Y}={\bf Y}_1+{\bf Y}_2$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2560}%
+${\bf A}={\bf A}_1 \cdot {\bf A}_2$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1494}%
+\begin{displaymath} {\bf Z}=\left[\begin{array}{ll} Z_{11} & Z_{12} \\
+	Z_{21} & Z_{22} \end{array}\right]
+	=\left[\begin{array}{rr} 4\Omega & j3\Omega \\
+	j3\Omega & 2\Omega \end{array}\right]	\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2562}%
+$V_0=3\angle 0^\circ$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2564}%
+$Z_0=5\Omega$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2566}%
+$R_L=4\Omega$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1495}%
+\begin{displaymath} \left\{ \begin{array}{l} V_1=Z_{11}I_1+Z_{12}I_2= 4I_1+j3I_2 \\
+	V_2=Z_{21}I_1+Z_{22}I_2=j3I_1+ 2I_2 \end{array} \right.	\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1496}%
+\begin{displaymath} \left\{ \begin{array}{l} V_1=V_0-Z_0 I_1=3-5I_1 \\
+	V_2=-Z_L I_2=-4 I_2 \end{array} \right.	\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1497}%
+\begin{displaymath} \left\{ \begin{array}{l} 9I_1+j3I_2=3 \\j3I_1+6I_2=0 \end{array} \right. \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1498}%
+\begin{displaymath}	I_1=\frac{2}{7},\;\;\;\;\;I_2=-\frac{j}{7} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1499}%
+\begin{displaymath}	V_1=\frac{11}{7},\;\;\;\;\;V_2=\frac{j4}{7} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2588}%
+$Z_T=V_2/I_2$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2592}%
+$V_0=0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1501}%
+\begin{displaymath} V_1=V_0-I_1 Z_0=0-5I_1	\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1502}%
+\begin{displaymath} 4I_1+j3I_2=-5I_1,\;\;\;\;\mbox{i.e.}\;\;\;\;I_1=-\frac{j}{3} I_2	\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1503}%
+\begin{displaymath} V_2=j3I_1+2I_2=I_2+2I_2=3I_2 \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1504}%
+\begin{displaymath} Z_T=\frac{V_2}{I_2}=3	\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1505}%
+\begin{displaymath} \left\{ \begin{array}{l} V_1=Z_{11}I_1=4I_1 \\
+      V_2=Z_{21}I_1=j3 I_1 \end{array} \right. \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1506}%
+\begin{displaymath}	I_1=\frac{V_0-V_1}{Z_0}=\frac{3-4I_1}{5}	\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2610}%
+$I_1=1/3$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2612}%
+$V_T=V_2$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1507}%
+\begin{displaymath}	V_2=Z_{21}I_1=j3 \frac{1}{3}=j	\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1508}%
+\begin{displaymath} V_2=\frac{V_T}{Z_T+Z_L}\;Z_L=\frac{j}{3+4}\;4=\frac{j4}{7} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1509}%
+\begin{displaymath} I_2=-\frac{V_2}{Z_L}=-\frac{j4}{7}\;\frac{1}{4}=-\frac{j}{7} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2618}%
+$\dot{I}_2$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1510}%
+\begin{displaymath} \dot{I}_2=\frac{V}{Z_1+Z_2 Z_3/(Z_2+Z_3)}\;\frac{Z_3}{Z_2+Z_3}
+=V \frac{Z_3}{Z_1Z_2+Z_1Z_3+Z_2Z_3} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1511}%
+\begin{displaymath} \dot{I}_1=\frac{V}{Z_2+Z_1 Z_3/(Z_1+Z_3)}\frac{Z_3}{Z_1+Z_3}
+=V \frac{Z_3}{Z_1Z_2+Z_1Z_3+Z_2Z_3} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2620}%
+$\dot{I}_1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2636}%
+$\Pi$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1512}%
+\begin{displaymath}	\left\{ \begin{array}{l} V_1=(Z_1+Z_3)I_1+Z_3I_2=Z_{11}I_1+Z_{12}I_2 \\
+      V_2=Z_3I_1+(Z_2+Z_3)I_2=Z_{21}I_1+Z_{22}I_2  \end{array} \right. \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1513}%
+\begin{displaymath} Z_{11}=Z_1+Z_3,\;\;\;\;\;Z_{22}=Z_2+Z_3,\;\;\;\;\;Z_{12}=Z_{21}=Z_3	\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1514}%
+\begin{displaymath} Z_1=Z_{11}-Z_{12},\;\;\;\;Z_2=Z_{22}-Z_{21},\;\;\;\;Z_3=Z_{12}=Z_{21} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1515}%
+\begin{displaymath} \left\{ \begin{array}{l} 
+      I_1=Y_1V_1+Y_3(V_1-V_2)=(Y_1+Y_3)V_1-Y_3V_2=Y_{11}V_1+Y_{12}V_2 \\
+      I_2=Y_3(V_2-V_1)+Y_2V_2=-Y_3V_1+(Y_2+Y_3)V_2=Y_{21}V_1+Y_{22}V_2 \end{array} \right. \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1516}%
+\begin{displaymath} Y_{11}=Y_1+Y_3,\;\;\;\;\;Y_{22}=Y_2+Y_3,\;\;\;\;\;Y_{12}=Y_{21}=-Y_3	\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2648}%
+$Y_1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2650}%
+$Y_2$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2652}%
+$Y_3$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1517}%
+\begin{displaymath} Y_1=Y_{11}+Y_{12},\;\;\;\;Y_2=Y_{22}+Y_{21},\;\;\;\;Y_3=-Y_{12}=-Y_{21} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2656}%
+$Z_1=j5$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2658}%
+$Z_2=-j5$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2660}%
+$Z_3=1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1518}%
+\begin{displaymath}  Z_{11}=Z_1+Z_3=1+j5,\;\;\;\;Z_{22}=Z_2+Z_3=1-j5,\;\;\;\;Z_{12}=Z_{21}=Z_3=1 \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1519}%
+\begin{displaymath}	\left[ \begin{array}{l} V_1 \\V_2\end{array} \right]=
+	\left[ \begin{array}{cc} Z_{11} & Z_{12} \\Z_{21} & Z_{22} \end{array} \right]
+	\left[ \begin{array}{l} I_1 \\I_2\end{array} \right]
+=	\left[ \begin{array}{cc} 1+j5 & 1 \\1 & 1-j5 \end{array} \right]
+	\left[ \begin{array}{l} I_1 \\I_2\end{array} \right]
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1520}%
+\begin{displaymath}	\left[ \begin{array}{l} I_1 \\I_2\end{array} \right]=
+	\left[ \begin{array}{cc} 1+j5 & 1 \\1 & 1-j5 \end{array} \right]^{-1}
+	\left[ \begin{array}{l} V_1 \\V_2\end{array} \right]
+=\frac{1}{25}
+	\left[ \begin{array}{cc} 1-j5 & -1 \\-1 & 1+j5 \end{array} \right]
+	\left[ \begin{array}{l} V_1 \\V_2\end{array} \right]
+=	\left[ \begin{array}{cc} Y_{11} & Y_{12} \\Y_{21} & Y_{22} \end{array} \right]
+	\left[ \begin{array}{l} V_1 \\V_2\end{array} \right]
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1521}%
+\begin{displaymath} Y_1=Y_{11}+Y_{12}=-j/5,\;\;\;\;Z_2=Y_{22}+Y_{21}=j/5,\;\;\;\;
+	Y_3=-Y_{21}=-Y_{12}=1/25 \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1522}%
+\begin{displaymath} Z_1=1/Y_1=5j,\;\;\;\;Z_2=1/Y_2=-j5,\;\;\;\;Z_3=1/Y_3=25	\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2664}%
+$R_0=10\Omega$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2666}%
+$R_L=5\Omega$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2668}%
+$n=n_1/n_2=2$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1523}%
+\begin{displaymath}	\left\{ \begin{array}{l} 
+	V_1=10\;I_1+2\;V_2 \\I_2-V_2/5=-2\;I_1 \end{array} \right. \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1524}%
+\begin{displaymath}	V_2=10\;I_1+5\;I_2	\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1525}%
+\begin{displaymath}	V_1=30\;I_1+10\;I_2	\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1526}%
+\begin{displaymath}	\left[ \begin{array}{l} V_1 \\V_2 \end{array} \right]=
+	\left[ \begin{array}{rr} Z_{11} & Z_{12} \\Z_{21} & Z_{22} \end{array} \right]
+	\left[ \begin{array}{l} I_1 \\I_2 \end{array} \right]
+=	\left[ \begin{array}{rr} 30 & 10 \\10 & 5 \end{array} \right]
+	\left[ \begin{array}{l} I_1 \\I_2 \end{array} \right]
+\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2670}%
+$Z_{12}=Z_{21}=10$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1527}%
+\begin{displaymath}	\left\{ \begin{array}{l} 
+	I_1=(V_1-2\;V_2)/10 \\I_2=-2\;I_1+V_2/5 \end{array} \right. \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1528}%
+\begin{displaymath}	I_1=V_1/10-V_2/5	\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1529}%
+\begin{displaymath}	I_2=-V_1/5+2V_2/5+V_2/5=-V_1/5+3V_2/5	\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1530}%
+\begin{displaymath}	\left[ \begin{array}{l} I_1 \\I_2 \end{array} \right]=
+	\left[ \begin{array}{rr} Y_{11} & Y_{12} \\Y_{21} & Y_{22} \end{array} \right]
+	\left[ \begin{array}{l} V_1 \\V_2 \end{array} \right]
+=	\left[ \begin{array}{rr} 1/10 & -1/5 \\-1/5 & 3/5 \end{array} \right]
+	\left[ \begin{array}{l} V_1 \\V_2 \end{array} \right] \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2672}%
+${\bf Z}^{-1}={\bf Y}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1531}%
+\begin{displaymath} {\bf Z}^{-1}=\left[ \begin{array}{rr} 30 & 10 \\10 & 5 \end{array} \right]^{-1}
+	=\frac{1}{50}\left[ \begin{array}{rr} 5 & -10 \\-10 & 30 \end{array} \right]
+	=\left[ \begin{array}{rr} 1/10 & -1/5 \\-1/5 & 3/5 \end{array} \right]
+	={\bf Y}	\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2674}%
+$A$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2676}%
+$v_{out}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2678}%
+$v_{in}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2680}%
+$v_{out}=A v_{in}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2682}%
+$A>1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2684}%
+$r_{in}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2688}%
+$r_{in}=\infty$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2690}%
+$r_{out}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1532}%
+\begin{displaymath} v_{in}=i_s (R_s \,||\, r_{in})=i_s \frac{R_s r_{in}}{R_s+r_{in}} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1533}%
+\begin{displaymath} v_{out}=A v_{in} \frac{R_L}{R_L+r_{out}}=
+A i_s \frac{R_s r_{in}}{R_s+r_{in}} \frac{R_L}{R_L+r_{out}} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2696}%
+$r_{out}=0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2698}%
+$v_{out}=A i_s R_s$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1534}%
+\begin{displaymath} v_{in}=v_s \frac{r_{in}}{R_s+r_{in}} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1535}%
+\begin{displaymath} v_{out}=A v_{in} \frac{R_L}{R_L+r_{out}}
+=A v_s \frac{r_{in}}{R_s+r_{in}} \frac{R_L}{R_L+r_{out}} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2700}%
+$G_V$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2702}%
+$G_I$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2704}%
+$G_P$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1536}%
+\begin{displaymath} G_V=\frac{v_{out}}{v_s}=A\frac{r_{in}}{R_s+r_{in}} \frac{R_L}{R_L+r_{out}} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2712}%
+$v_{out}=A v_s$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2714}%
+$G_V=A$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1537}%
+\begin{displaymath} G_I=\frac{i_{out}}{i_{in}}=\frac{A v_{in}/(r_{out}+R_L)}{v_s/(R_s+r_{in})}
+=\frac{A v_s r_{in}/(R_s+r_{in})(r_{out}+R_L)}{v_s/(R_s+r_{in})}
+=\frac{A r_{in}}{r_{out}+R_L} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2722}%
+$G_I=\infty$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1538}%
+\begin{displaymath} G_P=\frac{v_{out}^2/R_L}{v_{in}^2/r_{in}}=G_V^2 \frac{r_{in}}{R_L} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2726}%
+$R_{in}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1539}%
+\begin{displaymath} R_{in}=\frac{\mbox{ideal voltage source $v_s$\  applied to the input port}}{\mbox{input current $i_{in}$\  through the input port}} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2740}%
+$R_{out}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2742}%
+$v_T$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1540}%
+\begin{displaymath} R_{out}=R_T=\frac{\mbox{open-circuit voltage ($v_{oc}=v_T$)}}{\mbox{short-circuit current ($i_{sc}=v_T/R_T$)}} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2750}%
+$v_s$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2752}%
+$R_s$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2758}%
+$A_{oc}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2760}%
+$v_{oc}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2762}%
+$R_L=\infty$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1541}%
+\begin{displaymath} A_{oc}=\frac{\mbox{open-circuit voltage ($v_{oc}$)}}{\mbox{ideal voltage source ($v_s=v_{AB}$)}}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2776}%
+$R_s=0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2782}%
+$R_s\ne 0$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2784}%
+$v_{AB}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2802}%
+$R_{in}=R_1+r_{in}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2806}%
+$v_{oc}=v_T R_2/(r_{out}+R_2)$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2808}%
+$i_{sc}=v_T/r_{out}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1542}%
+\begin{displaymath} R_{out}=\frac{v_{oc}}{i_{sc}}=\frac{r_{out}R_2}{r_{out}+R_2}=r_{out}\,||\,R_2 \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2812}%
+$R_{out}=R_2\,||\, r_{out}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2814}%
+$V_{CD}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2816}%
+$V_{AB}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4338}%
+$\displaystyle v_{in}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4339}%
+$\textstyle =$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4340}%
+$\displaystyle V_{AB}\frac{r_{in}}{R_1+r_{in}}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4341}%
+$\displaystyle V_{CD}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4343}%
+$\displaystyle A v_{in} \frac{R_2}{r_{out}+R_2}=A V_{AB}\frac{r_{in}}{R_1+r_{in}} 
+    \frac{R_2}{r_{out}+R_2}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4344}%
+$\displaystyle A_{oc}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay4346}%
+$\displaystyle \frac{V_{CD}}{V_{AB}}=\frac{A R_2 r_{in}}{(R_1+r_{in})(r_{out}+R_2)}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2840}%
+$v_1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1543}%
+\begin{displaymath} v_{in}=v_s \frac{r_{in}}{R_1+r_{in}},\;\;\;\;\;
+  v_1=v_s \frac{R_1}{R_1+r_{in}} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1544}%
+\begin{displaymath} v_{oc}=v_1+A v_{in}=v_s \frac{R_1}{R_1+r_{in}}+Av_s\frac{r_{in}}{R_1+r_{in}}
+  =v_s \frac{R_1+A r_{in}}{R_1+r_{in}}  \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1545}%
+\begin{displaymath} A_{oc}=\frac{v_{oc}}{v_s}=\frac{R_1+A r_{in}}{R_1+r_{in}}<A  \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2846}%
+$A_{oc}=A$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2848}%
+$i_{sc}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1546}%
+\begin{displaymath} v_s=(R_s+R_1+r_{in})i_{in}-R_1 i_{sc} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1547}%
+\begin{displaymath} A v_{in}=A r_{in} i_{in}=(r_{out}+R_1) i_{sc}-R_1 i_{in} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2854}%
+$i_{in}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1548}%
+\begin{displaymath} i_{sc}=v_s \frac{Ar_{in}+R_1}{(1-A)R_1 r_{in} +r_{out}(R_s+r_{in}+R_1)
+    +R_sR_1} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1549}%
+\begin{displaymath} v_{oc}=Ar_{in}i_{in}+R_1i_{in}=(Ar_{in}+R_1)\frac{v_s}{R_s+r_{in}+R_1} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1550}%
+\begin{displaymath} R_{out}=\frac{v_{oc}}{i_{sc}}
+  =\frac{(1-A)r_{in}R_1+r_{out}(R_s+r_{in}+R_1)+R_sR_1}{R_s+r_{in}+R_1}
+  =r_{out}+\frac{(1-A) r_{in}R_1 +R_sR_1}{R_1+r_{in}+R_s}\end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1551}%
+\begin{displaymath}
+  R_{out}\stackrel{R_s=0}{\Longrightarrow} r_{out}-(A-1) r_{in}\,||\,R_1 < r_{out} 
+  \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2868}%
+$R_{out}=r_{out}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2874}%
+$R_{in}=v_s/i_{in}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1552}%
+\begin{displaymath} v_s=(r_{in}+R_1) i_{in}-R_1 i_{out} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1553}%
+\begin{displaymath} A v_{in}=Ar_{in}i_{in}=(r_{out}+R_L+R_1)i_{out}-R_1i_{in} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2880}%
+$i_{out}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1554}%
+\begin{displaymath} i_{in}=v_s \frac{R_1+R_L+r_{out}}{(R_L+r_{out})(R_1+r_{in})+(1-A)R_1r_{in}}
+  \stackrel{R_L\rightarrow \infty}{\Longrightarrow} \frac{v_s}{r_{in}+R_1} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1555}%
+\begin{displaymath} R_{in}=\frac{v_s}{i_{in}}=\frac{(R_L+r_{out})(R_1+r_{in})+(1-A)R_1r_{in}}{R_1+R_L+r_{out}}
+  \stackrel{R_L\rightarrow \infty}{\Longrightarrow} R_1+r_{in}>r_{in} \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2892}%
+$R_{in}=r_{in}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmldisplayA{displaymath1556}%
+\begin{displaymath} v_s\uparrow \rightarrow i_{in}, v_{out}\uparrow \rightarrow v_1\uparrow 
+\rightarrow i_{in}, v_{out}\downarrow \end{displaymath}%
+\lthtmldisplayZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2918}%
+$A_1$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2920}%
+$r_{i1}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2922}%
+$r_{o1}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2924}%
+$A_2$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2926}%
+$r_{i2}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2928}%
+$r_{o2}$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2936}%
+$G_p$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2956}%
+$v_s=1.5V$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2958}%
+$R_s=5 k\Omega$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2960}%
+$v_{in}=1.25 V$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2962}%
+$R_1=150 \Omega$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2964}%
+$R_2=200 \Omega$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2966}%
+$v_1=18.75V$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline2968}%
+$v_2=20$%
+\lthtmlinlinemathZ
+\lthtmlcheckvsize\clearpage}
+
+
+\end{document}

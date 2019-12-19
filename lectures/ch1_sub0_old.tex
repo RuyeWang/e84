@@ -1,0 +1,26 @@
+\documentstyle[12pt]{article}
+\usepackage{html}
+
+\begin{document}
+
+{\bf Problem:} A sinusoidal current with a frequency of 60 Hz reaches
+a positive maximum of 20A at $t=2 \; ms$. Give the expression of this
+current as a function of time $i(t)$.
+
+{\bf Solution:}
+
+We have $A=20$, $f=60\;Hz$, $T=1/f=1/60=0.0167\;second$, 
+$\omega=2\pi f=6.28\times 60=377\;rad/s$. As cosine function 
+$\cos(\alpha)$ reaches maximum when $\alpha=0$ (or $\pm \pi, \pm 2\pi, 
+\cdots$), the phase angle $\phi$ should satisfy $\omega t+\phi=0$ 
+where $\omega=377$ and $t=2\times 10^{-3}$, i.e.,
+\[	\phi=-\omega t=-377 \times 2 \times 10^{-3}=-0.754\; rad 
+	=-0.754\times 360^\circ /2\pi=-43.2^\circ	\]
+The current is
+\[	i(t)=20\;\cos(377 t-43.2^\circ)	\]
+Alternatively, the phase angle $\phi$ can be found as shown below:
+\[	\frac{t}{T}=\frac{0.002}{0.0167}=\frac{\phi}{360^\circ} \]
+Solving this we get $\phi=43.2^\circ$, same as above.
+
+\end{document}
+

@@ -1,0 +1,349 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>ch2_sub4</TITLE>
+<META NAME="description" CONTENT="ch2_sub4">
+<META NAME="keywords" CONTENT="ch2_sub4">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="ch2_sub4.css">
+
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/sw/share/lib/latex2html/icons/next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/sw/share/lib/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/sw/share/lib/latex2html/icons/prev_g.png">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+  HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+Find all node voltages in the circuit with respect to the bottom node as
+ground, where <IMG
+ WIDTH="87" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$R_1=100\Omega$">, <IMG
+ WIDTH="69" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.png"
+ ALT="$R_2=5\Omega$">, <IMG
+ WIDTH="87" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="$R_3=200\Omega$">, <IMG
+ WIDTH="78" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$R_4=50\Omega$">, 
+<IMG
+ WIDTH="73" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.png"
+ ALT="$V=50V$">, <IMG
+ WIDTH="72" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$I=0.2A$">.  Use both node voltage and loop current methods.
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../figures/problembase1.gif"
+ ALT="problembase1.gif">
+  <IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../figures/problembase1a.gif"
+ ALT="problembase1a.gif">
+
+<P>
+<B>Solution:</B> 
+  
+<UL>
+<LI><B>Node voltage:</B> Let the bottom node be ground and other node
+      voltages be <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.png"
+ ALT="$V_1$"> (left), <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.png"
+ ALT="$V_2$"> (middle) and <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.png"
+ ALT="$V_3$"> (right).
+      <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\begin{array}{ll}
+	\mbox{left node:} & V_1/200+(V_1-V_2)/5+(V_1-V_3)/100=0 \\
+	\mbox{right node:} & (V_3-V_1)/100+V_3/50+(V_2-V_1)/5+0.2=0 \\
+	\mbox{voltage source:} & V_3=V_2+V=V_2+50 \end{array}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="483" HEIGHT="72" BORDER="0"
+ SRC="img10.png"
+ ALT="\begin{displaymath}\begin{array}{ll}
+\mbox{left node:} &amp; V_1/200+(V_1-V_2)/5+(V...
+...2=0 \\
+\mbox{voltage source:} &amp; V_3=V_2+V=V_2+50 \end{array} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Solving this we get:
+      <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V_1=-45.23,\;\;\;\;\;V_2=-48.69,\;\;\;\;V_3=1.31
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="318" HEIGHT="30" BORDER="0"
+ SRC="img11.png"
+ ALT="\begin{displaymath}V_1=-45.23,\;\;\;\;\;V_2=-48.69,\;\;\;\;V_3=1.31 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Alternatively, use the figure on the right and assume between the current 
+      and voltage sources is grounded <IMG
+ WIDTH="54" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.png"
+ ALT="$V_2=0$">, then <IMG
+ WIDTH="77" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.png"
+ ALT="$V_3=50V$">, and denote previous 
+      ground by <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.png"
+ ALT="$V_0$">. We have
+      <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\begin{array}{ll}
+	\mbox{middle node $V_1$:} & V_1/5+(V_1-V_0)/200+(V_1-50)/100=0 \\
+	\mbox{bottom node $V_0$:} & (V_0-V_1)/200+(V_0-50)/50=0.2 \end{array}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="461" HEIGHT="50" BORDER="0"
+ SRC="img15.png"
+ ALT="\begin{displaymath}\begin{array}{ll}
+\mbox{middle node $V_1$:} &amp; V_1/5+(V_1-V_0...
+...ottom node $V_0$:} &amp; (V_0-V_1)/200+(V_0-50)/50=0.2 \end{array} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Solving this we get: 
+      <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V_1=3.46,\;\;\;\;\;V_0=48.7,\;\;\;\;V_3=50,\;\;\;\;V_2=0
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="337" HEIGHT="30" BORDER="0"
+ SRC="img16.png"
+ ALT="\begin{displaymath}V_1=3.46,\;\;\;\;\;V_0=48.7,\;\;\;\;V_3=50,\;\;\;\;V_2=0 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Treating <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.png"
+ ALT="$V_0$"> as ground, we get the same result as before:
+      <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V_1=-45.2,\;\;\;\;\;V_0=0,\;\;\;\;V_3=1.3,\;\;\;\;V_2=-48.7
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="370" HEIGHT="30" BORDER="0"
+ SRC="img17.png"
+ ALT="\begin{displaymath}V_1=-45.2,\;\;\;\;\;V_0=0,\;\;\;\;V_3=1.3,\;\;\;\;V_2=-48.7 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+We see that the second method is easier.
+
+<P>
+</LI>
+<LI><B>Loop current:</B> Let the loop currents be <IMG
+ WIDTH="20" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.png"
+ ALT="$I_a$"> (top), <IMG
+ WIDTH="18" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.png"
+ ALT="$I_b$"> (left)
+      and <IMG
+ WIDTH="18" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.png"
+ ALT="$I_c$"> (right).
+      <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\begin{array}{ll}
+	\mbox{top loop:}\;\;\;\;\;\;& 100I_a+50+5(I_a-I_b)=0 \\
+	\mbox{current source:}\;\;\;\;\;\;& I_b-I_c=I=0.2 \\
+	\mbox{bottom loop:}\;\;\;\;\;\;& 200I_b+5(I_b-I_a)-50+50I_c=0 \end{array}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="416" HEIGHT="72" BORDER="0"
+ SRC="img21.png"
+ ALT="\begin{displaymath}\begin{array}{ll}
+\mbox{top loop:}\;\;\;\;\;\;&amp; 100I_a+50+5(...
+...m loop:}\;\;\;\;\;\;&amp; 200I_b+5(I_b-I_a)-50+50I_c=0 \end{array} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Solving this we get:
+      <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+I_a=-0.465,\;\;\;\;\;I_b=0.226.\;\;\;\;\;\;I_c=0.026
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="312" HEIGHT="30" BORDER="0"
+ SRC="img22.png"
+ ALT="\begin{displaymath}I_a=-0.465,\;\;\;\;\;I_b=0.226.\;\;\;\;\;\;I_c=0.026 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Alternatively, use the figure on the right and assume loop currents <IMG
+ WIDTH="20" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.png"
+ ALT="$I_a$"> 
+      through voltage source <IMG
+ WIDTH="18" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img23.png"
+ ALT="$V$">, <IMG
+ WIDTH="77" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img24.png"
+ ALT="$I_b=-0.2$"> through current source and <IMG
+ WIDTH="18" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.png"
+ ALT="$I_c$"> through
+      <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.png"
+ ALT="$R_4$">. We have
+      <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\begin{array}{ll}
+	\mbox{top loop:  }\;\;\;\;\;\;\;&100(I_a-I_c)+5(I_a+0.2)=50 \\
+	\mbox{right loop:}\;\;\;\;\;\;\;&100(I_c-I_a)+50I_c+200(I_c+0.2)=0 \end{array}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="424" HEIGHT="50" BORDER="0"
+ SRC="img26.png"
+ ALT="\begin{displaymath}\begin{array}{ll}
+\mbox{top loop: }\;\;\;\;\;\;\;&amp;100(I_a-I_...
+...:}\;\;\;\;\;\;\;&amp;100(I_c-I_a)+50I_c+200(I_c+0.2)=0 \end{array} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Solving this we get:
+      <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+I_a=0.49,\;\;\;I_b=-0.2,\;\;\;I_c=0.026
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="264" HEIGHT="30" BORDER="0"
+ SRC="img27.png"
+ ALT="\begin{displaymath}I_a=0.49,\;\;\;I_b=-0.2,\;\;\;I_c=0.026 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Current through <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img28.png"
+ ALT="$R_1$"> is <!-- MATH
+ $I_c-I_a=-0.464$
+ -->
+<IMG
+ WIDTH="132" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img29.png"
+ ALT="$I_c-I_a=-0.464$">, current through <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img30.png"
+ ALT="$R_3$"> is
+      <IMG
+ WIDTH="125" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img31.png"
+ ALT="$I_c+0.2=0.226$">, same as before.
+
+<P>
+We see that the second method is easier.
+  
+</LI>
+</UL>
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html3"
+  HREF="node1.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/sw/share/lib/latex2html/icons/next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/sw/share/lib/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/sw/share/lib/latex2html/icons/prev_g.png">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+  HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Ruye Wang
+2008-09-17
+</ADDRESS>
+</BODY>
+</HTML>

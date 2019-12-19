@@ -1,0 +1,261 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>hw5</TITLE>
+<META NAME="description" CONTENT="hw5">
+<META NAME="keywords" CONTENT="hw5">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="hw5.css">
+
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/sw/share/lib/latex2html/icons/next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/sw/share/lib/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/sw/share/lib/latex2html/icons/prev_g.png">   
+<BR>
+<B> Next:</B> <A NAME="tex2html3"
+  HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<DIV ALIGN="CENTER">
+<FONT SIZE="+2"><B>E84 Home Work 5</B></FONT>
+
+</DIV>
+
+<OL>
+<LI>The resistance <IMG
+ WIDTH="18" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.png"
+ ALT="$R$"> of a circuit is a real value which can be measured
+by a multimeter. However, the impedance <IMG
+ WIDTH="18" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$Z$"> of a component in the circuit is 
+complex which cannot be measured directly. Instead, one can use an oscilloscope 
+to find sinusoidal voltage <IMG
+ WIDTH="33" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="$v(t)$"> across and current <IMG
+ WIDTH="30" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$i(t)$"> through the component,
+and then obtain the impedance as the ratio between the complex representations of 
+the voltage and current. Suppose we find:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v(t)=12 cos(1000t-30^\circ),\;\;\;\; i(t)=6\;cos(1000t+15^\circ)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="407" HEIGHT="31" BORDER="0"
+ SRC="img5.png"
+ ALT="\begin{displaymath}v(t)=12 cos(1000t-30^\circ),\;\;\;\; i(t)=6\;cos(1000t+15^\circ) \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Find the impedance (both resistance and reactance) and the admittance (both
+conductance and susceptance) of the circuit.
+
+<P>
+</LI>
+<LI>A voltage <!-- MATH
+ $v(t)=120\sqrt{2} cos(1000t+90^\circ) V$
+ -->
+<IMG
+ WIDTH="245" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.png"
+ ALT="$v(t)=120\sqrt{2} cos(1000t+90^\circ) V$"> (volt) is applied to 
+a resistor <IMG
+ WIDTH="71" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.png"
+ ALT="$R=15\Omega$">, a capacitor <IMG
+ WIDTH="96" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.png"
+ ALT="$C=83.3\mu F$"> and an inductor <IMG
+ WIDTH="93" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$L=30\; mH$"> 
+connected in parallel. Find the over all steady state current <IMG
+ WIDTH="127" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.png"
+ ALT="$i=i_R+i_C+i_L$"> 
+by phasor method.
+
+<P>
+</LI>
+<LI>A voltage <!-- MATH
+ $v(t)=12\sqrt{2} \cos 5000 t$
+ -->
+<IMG
+ WIDTH="167" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.png"
+ ALT="$v(t)=12\sqrt{2} \cos 5000 t$"> (volt V) is applied to a circuit
+composed of two branches in parallel. One branch has a capacitor <IMG
+ WIDTH="83" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.png"
+ ALT="$C=10\mu F$">,
+while the other has a resistor <IMG
+ WIDTH="71" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img13.png"
+ ALT="$R=20\Omega$"> and an inductor <IMG
+ WIDTH="79" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img14.png"
+ ALT="$L=3 mH$"> in series.
+Using phasor method, find the impedances <IMG
+ WIDTH="28" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.png"
+ ALT="$Z_C$"> and <IMG
+ WIDTH="37" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.png"
+ ALT="$Z_{RL}$"> of the two branches,
+and then the overall combined impedance <IMG
+ WIDTH="33" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$Z_{all}$"> of the circuit. Then find
+the steady state current <IMG
+ WIDTH="30" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$i(t)$"> through the circuit.
+
+<P>
+</LI>
+<LI>Solve the problem above again but this time use the admittances 
+<IMG
+ WIDTH="89" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.png"
+ ALT="$Y_C=1/Z_C$">, <!-- MATH
+ $Y_{RL}=1/Z_{RL}$
+ -->
+<IMG
+ WIDTH="107" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.png"
+ ALT="$Y_{RL}=1/Z_{RL}$">, <!-- MATH
+ $Y_{all}=1/Z_{all}$
+ -->
+<IMG
+ WIDTH="99" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.png"
+ ALT="$Y_{all}=1/Z_{all}$"> (instead of the
+impedances <IMG
+ WIDTH="28" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.png"
+ ALT="$Z_C$">, <IMG
+ WIDTH="37" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.png"
+ ALT="$Z_{RL}$">, <IMG
+ WIDTH="33" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$Z_{all}$">). Recall that Ohm's law becomes
+<!-- MATH
+ $\dot{I}=\dot{V}/Z=\dot{V}Y$
+ -->
+<IMG
+ WIDTH="123" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.png"
+ ALT="$\dot{I}=\dot{V}/Z=\dot{V}Y$">. (Make sure all impedances you found in 
+previous problem are correct before you find the admittances as their 
+reciprocals.)
+
+<P>
+</LI>
+<LI>Find the output voltage <IMG
+ WIDTH="53" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.png"
+ ALT="$v_{out}(t)$"> across the right most branch
+containing <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img23.png"
+ ALT="$R_2$"> and <IMG
+ WIDTH="18" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img24.png"
+ ALT="$C$">, when <IMG
+ WIDTH="48" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img25.png"
+ ALT="$\omega=0$"> and <!-- MATH
+ $\omega\rightarrow \infty$
+ -->
+<IMG
+ WIDTH="60" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img26.png"
+ ALT="$\omega\rightarrow \infty$"> 
+and the input <!-- MATH
+ $v_{in}(t)=V=10\;cos(\omega t)$
+ -->
+<IMG
+ WIDTH="185" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.png"
+ ALT="$v_{in}(t)=V=10\;cos(\omega t)$">, assuming <IMG
+ WIDTH="87" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img28.png"
+ ALT="$R_1=100\Omega$">, 
+<IMG
+ WIDTH="87" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img29.png"
+ ALT="$R_2=100\Omega$">, <IMG
+ WIDTH="83" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.png"
+ ALT="$C=10\mu F$"> and <IMG
+ WIDTH="93" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img30.png"
+ ALT="$L=10\;mH$">.
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../hw6a.gif"
+ ALT="hw6a.gif">
+
+<P>
+</LI>
+</OL>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html4"
+  HREF="node1.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/sw/share/lib/latex2html/icons/next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/sw/share/lib/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/sw/share/lib/latex2html/icons/prev_g.png">   
+<BR>
+<B> Next:</B> <A NAME="tex2html3"
+  HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Ruye Wang
+2006-02-18
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,321 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Homogeneous Solution</TITLE>
+<META NAME="description" CONTENT="Homogeneous Solution">
+<META NAME="keywords" CONTENT="ch3">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="ch3.css">
+
+<LINK REL="next" HREF="node7.html">
+<LINK REL="previous" HREF="node5.html">
+<LINK REL="next" HREF="node7.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node7.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node5.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node5.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node7.html">Particular Solution</A>
+<B> Up:</B> <A
+ HREF="node5.html">First Order Systems</A>
+<B> Previous:</B> <A
+ HREF="node5.html">First Order Systems</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H3><A ID="SECTION00014100000000000000">
+Homogeneous Solution</A>
+</H3>
+
+<P>
+Consider an RC circuit consisted of a resistor and a capacitor in series 
+connected to an AC voltage source <!-- MATH
+ $v_s(t)=\cos(\omega t)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img235.svg"
+ ALT="$v_s(t)=\cos(\omega t)$"></SPAN>, find the voltage
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img194.svg"
+ ALT="$v_C(t)$"></SPAN> across <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img104.svg"
+ ALT="$C$"></SPAN>. The governing DE describing the circuit can be obtained 
+based on KVL:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\tau\frac{d}{dt}v_C(t)+v_C(t)=v_s(t)
+  =\left\{\begin{array}{c}0\\1\\\cos(\omega t)\end{array}\right.
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 8.59ex; vertical-align: -3.72ex; " SRC="img236.svg"
+ ALT="$\displaystyle \tau\frac{d}{dt}v_C(t)+v_C(t)=v_s(t)
+=\left\{\begin{array}{c}0\\ 1\\ \cos(\omega t)\end{array}\right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">68</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+When the external input is zero <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img237.svg"
+ ALT="$v_s(t)=0$"></SPAN>, the DE is homogeneous (zero 
+on the right-hand side):
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\tau\frac{d}{dt}v_C(t)+v_C(t)=0,\;\;\;\;\;v_C(0)=V_0
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.11ex; vertical-align: -1.71ex; " SRC="img238.svg"
+ ALT="$\displaystyle \tau\frac{d}{dt}v_C(t)+v_C(t)=0,\;\;\;\;\;v_C(0)=V_0$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">69</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The non-trivial solution of this homogeneous equation is due to some 
+non-zero initial value, the voltage <!-- MATH
+ $v_C(0)=V_0\ne 0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img239.svg"
+ ALT="$v_C(0)=V_0\ne 0$"></SPAN> across the capacitor
+before <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img219.svg"
+ ALT="$t=0$"></SPAN>. The homogeneous solution needs to be a function whose 
+derivative takes the same form as the function itself, an exponential
+function:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_C(t)=A e^{st},\;\;\;\;\mbox{and}\;\;\;\;\;\;\;\frac{d}{dt}v_C(t)=s A e^{st}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img240.svg"
+ ALT="$\displaystyle v_C(t)=A e^{st},\;\;\;\;$">and<IMG STYLE="height: 5.11ex; vertical-align: -1.71ex; " SRC="img241.svg"
+ ALT="$\displaystyle \;\;\;\;\;\;\;\frac{d}{dt}v_C(t)=s A e^{st}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">70</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Substituting them into the DE, we get
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\tau sA e^{st} + Ae^{st}=(\tau s+1) Ae^{st}=0
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img242.svg"
+ ALT="$\displaystyle \tau sA e^{st} + Ae^{st}=(\tau s+1) Ae^{st}=0$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">71</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+As we are not interested in the trivial solution <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.12ex; " SRC="img243.svg"
+ ALT="$Ae^{st}=0$"></SPAN>, we must 
+have
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\tau s+1=0,\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;\;s=-\frac{1}{\tau}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img244.svg"
+ ALT="$\displaystyle \tau s+1=0,\;\;\;\;\;$">i.e.<IMG STYLE="height: 4.88ex; vertical-align: -1.71ex; " SRC="img245.svg"
+ ALT="$\displaystyle \;\;\;\;\;\;s=-\frac{1}{\tau}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">72</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Now we get <!-- MATH
+ $v_C(t)=Ae^{-t/\tau}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img246.svg"
+ ALT="$v_C(t)=Ae^{-t/\tau}$"></SPAN> for <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.43ex; " SRC="img247.svg"
+ ALT="$t\ge 0$"></SPAN>. The constant coefficient 
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img9.svg"
+ ALT="$A$"></SPAN> can be obtained by the initial condition <!-- MATH
+ $v_C(0)=V_0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img221.svg"
+ ALT="$v_C(0)=V_0$"></SPAN>:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_C(0)=A e^{-t/\tau}\bigg|_{t=0}=A e^{0}=V_0,
+\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;A=V_0
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.44ex; " SRC="img248.svg"
+ ALT="$\displaystyle v_C(0)=A e^{-t/\tau}\bigg\vert _{t=0}=A e^{0}=V_0,
+\;\;\;\;\;$">i.e.<IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img249.svg"
+ ALT="$\displaystyle \;\;\;\;\;A=V_0$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">73</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Now the homogeneous solution is found to be
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_C(t)=V_0 e^{-t/\tau}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img250.svg"
+ ALT="$\displaystyle v_C(t)=V_0 e^{-t/\tau}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">74</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+which decays to zero as <!-- MATH
+ $t\rightarrow\infty$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img251.svg"
+ ALT="$t\rightarrow\infty$"></SPAN>:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\lim_{t\rightarrow\infty} V_0 e^{-t/\tau}=0
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.18ex; vertical-align: -1.74ex; " SRC="img252.svg"
+ ALT="$\displaystyle \lim_{t\rightarrow\infty} V_0 e^{-t/\tau}=0$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">75</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The same result can also be obtained by the
+<A ID="tex2html4"
+  HREF="../ch3_sub0/index.html">Laplace transform method</A>.
+
+<P>
+The current through <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img112.svg"
+ ALT="$R$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img104.svg"
+ ALT="$C$"></SPAN> is
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+i(t)=C\frac{d}{dt}\;v_C(t)=C\frac{d}{dt}\left(V_0 e^{-t/\tau}\right)
+  =-V_0 \frac{C}{\tau} e^{-t/\tau}=-\frac{V_0}{R} e^{-t/\tau}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.11ex; vertical-align: -1.71ex; " SRC="img253.svg"
+ ALT="$\displaystyle i(t)=C\frac{d}{dt}\;v_C(t)=C\frac{d}{dt}\left(V_0 e^{-t/\tau}\right)
+=-V_0 \frac{C}{\tau} e^{-t/\tau}=-\frac{V_0}{R} e^{-t/\tau}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">76</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The voltage across <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img112.svg"
+ ALT="$R$"></SPAN> is 
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_R(t)=i(t)R=-V_0 e^{-t/\tau}=-v_C(t)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img254.svg"
+ ALT="$\displaystyle v_R(t)=i(t)R=-V_0 e^{-t/\tau}=-v_C(t)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">77</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+This result can be verified by KVL: <!-- MATH
+ $v_C(t)+v_R(t)=v_s(t)=0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img255.svg"
+ ALT="$v_C(t)+v_R(t)=v_s(t)=0$"></SPAN>.
+
+<P>
+The time constant <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img234.svg"
+ ALT="$\tau$"></SPAN> can be identified on the time plot of the general
+first order response <!-- MATH
+ $v(t)=V_0 e^{-t/\tau}=e^{-t\tau}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img256.svg"
+ ALT="$v(t)=V_0 e^{-t/\tau}=e^{-t\tau}$"></SPAN> with <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img257.svg"
+ ALT="$V_0=1$"></SPAN>. Specifically
+consider the derivative of <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img88.svg"
+ ALT="$v(t)$"></SPAN> evaluated at <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img219.svg"
+ ALT="$t=0$"></SPAN>:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\frac{d}{dt}v(t)\big|_{t=0}=-\frac{1}{\tau}e^{-t/\tau}\bigg|_{t=0}=-\frac{1}{\tau}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.44ex; " SRC="img258.svg"
+ ALT="$\displaystyle \frac{d}{dt}v(t)\big\vert _{t=0}=-\frac{1}{\tau}e^{-t/\tau}\bigg\vert _{t=0}=-\frac{1}{\tau}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">78</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+This is the slope of the tangent line of <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img88.svg"
+ ALT="$v(t)$"></SPAN> at <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img219.svg"
+ ALT="$t=0$"></SPAN>, and <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img234.svg"
+ ALT="$\tau$"></SPAN> is its
+intersection with the horizontal axis.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/FirstOrderTau1.png"
+ ALT="FirstOrderTau1.png">
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node7.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node5.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node5.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node7.html">Particular Solution</A>
+<B> Up:</B> <A
+ HREF="node5.html">First Order Systems</A>
+<B> Previous:</B> <A
+ HREF="node5.html">First Order Systems</A></DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

@@ -1,0 +1,125 @@
+\documentclass[12pt]{article}
+\usepackage{html}
+\begin{document}
+\begin{center}
+{\Large \bf  Midterm Exam 1 ---- E84, Spring 2015}
+\end{center}
+
+\section*{E84 Midterm Exam}
+
+{\bf Instructions}
+\begin{itemize}
+\item Take home, no computer or any electronic device can be used.
+\item Mark your start and end times. Don't spend more than 3 hours.
+\item Mark your name and question number clearly on top of each page.
+	Indicate the total number of pages submitted.
+\item When solving a problem, list all the steps. In each step, describe 
+	concisely what you are doing in English, then show the calculation 
+	and the result of the step. A final answer, even if correct, without 
+	evidence of the steps leading to the answer will not receive credit.
+\end{itemize}
+
+\begin{enumerate}
+
+\item {\bf Problem 1 (25\%)} 
+
+In the circuit below, $R_1=1k$, $R_2=2k$, $R_3=3k$, $V=1\,V$, and $I=10\,mA$.
+Find $V_1$, $V_2$, $V_3$, $I_1$, and $I_2$ with their polarity or direction
+as labeled.
+
+\htmladdimg{../midterm2015Sa.png}
+
+{\bf Solution}
+
+$V_1=0V$, $V_2=5V$, $V_3=6V$, $I_1=-3\,mA$, and $I_2=-2\,mA$.
+
+
+\item {\bf Problem 2 (25\%)} 
+
+Find the Thevenin model (equivalent circuit) for each of the following 6
+circuits, with the two open terminals on the right treated as the output
+port. In all circuits, $R_1=R_2=5\,k\Omega$, $V_0=6V$, $I_0=0.2A$, $I_1=0.2\,mA$,
+$I_2=0.4\,mA$, $V_1=4V$, $V_2=6V$ (when applicable).
+
+Match each of the 6 circuits, numbered from 1 to 6, to one of the following
+Thevenin models in terms of $V_T$ and $R_T$:
+\begin{itemize}
+\item $R_T=10k$, $V_T=7V$, for circuit $\underline{\hspace{1cm}}$
+\item $R_T=10k$, $V_T=3V$, for circuit $\underline{\hspace{1cm}}$
+\item $R_T=2.5k$, $V_T=5V$, for circuit $\underline{\hspace{1cm}}$
+\item $R_T=2.5k$, $V_T=3.5V$, for circuit $\underline{\hspace{1cm}}$
+\item $R_T=5k$, $V_T=1V$, for circuit $\underline{\hspace{1cm}}$
+\item $R_T=2.5k$, $V_T=3V$, for circuit $\underline{\hspace{1cm}}$
+\end{itemize}
+
+\htmladdimg{../../lectures/figures/TheveninExs.png}
+
+{\bf Solution}
+\begin{itemize}
+\item circuit 1:
+  \[
+  V_T=V_0\frac{R_2}{R_1+R_2}=3V,\;\;\;\;\;\;R_T=R_1||R_2=2.5k 
+  \]
+\item circuit 2:
+  \[
+  V_T=I_0R_2=1V,\;\;\;\;\;\;\;\;R_T=R_2=5k
+  \]
+\item circuit 3:
+  \[
+  V_T=I_0\frac{R_1R_2}{R_1+R_2}+V_0\frac{R_2}{R_1+R_2}=3.5,\;\;\;\;\;\;\;
+  R_T=R_1||R_2=2.5
+  \]
+\item circuit 4:
+  \[
+  V_T=V_1\frac{R_2}{R_1+R_2}+V_2\frac{R_1}{R_1+R_2}=5V,\;\;\;\;\;\;\;
+  R_T=R_1||R_2=2.5k
+  \]
+\item circuit 5:
+  \[
+  V_T=I_1R_1+I_2R_2=3V,\;\;\;\;\;\;\;R_T=R_1+R_2=10k
+  \]
+\item circuit 6:
+  \[
+  V_T=I_0R_2+V_0=7V,\;\;\;\;\;\;R_T=R_1+R_2=10k
+  \]
+\end{itemize}
+
+\item {\bf Problem 3 (25\%)}
+
+  Sketch an op-amp circuit that accepts input $a(t)$, $b(t)$, and
+  $c(t)$ and computes $y(t)=3\,a(t)+2\,b(t)-4\,c(t)$ as the output.
+
+\item {\bf Problem 4 (25\%)}
+
+  If $x(t)=5\,\cos(2\pi 60 t)$, sketch $y(t)$ as a function of time from
+  the following circuit. Assume that the ON voltage of the diode is 0.7\,V.
+
+  \htmladdimg{../FullRectify1.png}
+
+\end{enumerate}
+
+\end{document}
+
+
+\item {\bf Evaluations:} Please evaluate my teaching effectiveness in terms 
+of the following (circle one of the numbers, 1 for poor, 7 for excellent):
+
+\begin{itemize}
+\item {\bf Lectures (pace, clarity, style, etc.):}
+
+\framebox[0.5in]{1}\framebox[0.5in]{2}\framebox[0.5in]{3}\framebox[0.5in]{4}\framebox[0.5in]{5}\framebox[0.5in]{6}\framebox[0.5in]{7}
+
+\item {\bf Individual help/Office hours (approachability, helpfulness, effectiveness, etc.):}
+
+\framebox[0.5in]{1}\framebox[0.5in]{2}\framebox[0.5in]{3}\framebox[0.5in]{4}\framebox[0.5in]{5}\framebox[0.5in]{6}\framebox[0.5in]{7}
+
+\item {\bf Assignments, labs and tests (amount, difficulty, etc.)}
+
+\framebox[0.5in]{1}\framebox[0.5in]{2}\framebox[0.5in]{3}\framebox[0.5in]{4}\framebox[0.5in]{5}\framebox[0.5in]{6}\framebox[0.5in]{7}
+
+\item {\bf Overall teaching effectiveness of E84:} 
+
+\framebox[0.5in]{1}\framebox[0.5in]{2}\framebox[0.5in]{3}\framebox[0.5in]{4}\framebox[0.5in]{5}\framebox[0.5in]{6}\framebox[0.5in]{7}
+
+\end{itemize}
+

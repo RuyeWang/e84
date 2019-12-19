@@ -1,0 +1,449 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Sinusoidal Functions</TITLE>
+<META NAME="description" CONTENT="Sinusoidal Functions">
+<META NAME="keywords" CONTENT="ch3">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="ch3.css">
+
+<LINK REL="next" HREF="node3.html">
+<LINK REL="previous" HREF="node1.html">
+<LINK REL="next" HREF="node3.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node3.html">Phasor Representation of Sinusoidal</A>
+<B> Up:</B> <A
+ HREF="node1.html">Chapter 3: AC Circuit</A>
+<B> Previous:</B> <A
+ HREF="node1.html">Chapter 3: AC Circuit</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION00011000000000000000">
+Sinusoidal Functions</A>
+</H2>
+
+<P>
+Sinusoidal variables are of special importance in electrical and 
+electronic systems, not only because they occur frequently in such 
+systems, but also because any periodical signal can be represented 
+as a linear combination of a set of sinusoidal signals of different 
+frequencies, amplitudes, and phase angles (Fourier transform theory).
+
+<P>
+A sinusoidal variable (voltage or current) can be written as
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+x(t)=A\;\cos(\omega t + \phi),\;\;\;\mbox{or}\;\;\;
+  x(t)=A\;\sin(\omega t+\phi+\pi/2)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img7.svg"
+ ALT="$\displaystyle x(t)=A\;\cos(\omega t + \phi),\;\;\;$">or<IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img8.svg"
+ ALT="$\displaystyle \;\;\;
+x(t)=A\;\sin(\omega t+\phi+\pi/2)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">3</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The three parameters <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img9.svg"
+ ALT="$A$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img10.svg"
+ ALT="$\omega$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img11.svg"
+ ALT="$\phi$"></SPAN> represent three 
+important elements:
+
+<UL>
+<LI><EM><SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img9.svg"
+ ALT="$A$"></SPAN>: amplitude or peak value</EM>
+</LI>
+<LI><EM><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img11.svg"
+ ALT="$\phi$"></SPAN>: phase angle <!-- MATH
+ $0 \le \phi \le 2\pi$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img12.svg"
+ ALT="$0 \le \phi \le 2\pi$"></SPAN> in radians or
+	<!-- MATH
+ $0^\circ \le \phi \le 360^\circ$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img13.svg"
+ ALT="$0^\circ \le \phi \le 360^\circ$"></SPAN> in degrees.</EM>
+</LI>
+<LI><EM><!-- MATH
+ $\omega=2\pi f=2\pi/T$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img14.svg"
+ ALT="$\omega=2\pi f=2\pi/T$"></SPAN>: angular frequency in radians per 
+  second</EM>, where <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img15.svg"
+ ALT="$f=1/T$"></SPAN> is the frequency measured by cycles per
+  second (in Hertz, Hz), and <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img16.svg"
+ ALT="$T$"></SPAN> is cycle time or period (in second).
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\omega=2\pi f=2\pi/T,\;\;\;\;f=1/T=\omega/2\pi,\;\;\;T=1/f=2\pi/\omega
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img17.svg"
+ ALT="$\displaystyle \omega=2\pi f=2\pi/T,\;\;\;\;f=1/T=\omega/2\pi,\;\;\;T=1/f=2\pi/\omega$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">4</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+</UL>
+
+<P>
+Sinusoidal functions are closely related to complex exponentials due
+to Euler's formula:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left\{ \begin{array}{l}
+    e^{ j\theta}=\cos\theta+j\,\sin\theta\\
+    e^{-j\theta}=\cos\theta-j\,\sin\theta \end{array} \right.
+  \;\;\;\;\;\;
+  \left\{ \begin{array}{l}
+    \cos\theta=(e^{j\theta}+e^{-j\theta})/2\\
+    \sin\theta=(e^{j\theta}-e^{-j\theta})/2j
+  \end{array} \right.  
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.34ex; " SRC="img18.svg"
+ ALT="$\displaystyle \left\{ \begin{array}{l}
+e^{ j\theta}=\cos\theta+j\,\sin\theta\\ ...
+...e^{-j\theta})/2\\
+\sin\theta=(e^{j\theta}-e^{-j\theta})/2j
+\end{array} \right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">5</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+As exponential functions can be much more conveniently manipulated 
+than sinusoidal functions, a sinusoidal function is often considered
+as the real or imaginary part of the corresponding complex variable:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+A\;\cos(\omega t+\phi)=Re[A\;e^{j\omega t+\phi}],\;\;\;\;
+  A\;\sin(\omega t+\phi)=Im[A\;e^{j\omega t+\phi}]
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img19.svg"
+ ALT="$\displaystyle A\;\cos(\omega t+\phi)=Re[A\;e^{j\omega t+\phi}],\;\;\;\;
+A\;\sin(\omega t+\phi)=Im[A\;e^{j\omega t+\phi}]$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">6</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+<B>Example:</B> (Homework)
+
+<P>
+A sinusoidal current with a frequency of 60 Hz reaches a positive
+maximum of 20A at <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img20.svg"
+ ALT="$t=2 \; ms$"></SPAN>. Give the expression of this current 
+as a function of time <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img21.svg"
+ ALT="$i(t)$"></SPAN>.
+
+<P>
+<A ID="tex2html1"
+  HREF="../ch1_sub0/index.html">Answer</A>
+<P>
+<B>Average Value</B> 
+
+<P>
+The average of a time varying current <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img21.svg"
+ ALT="$i(t)$"></SPAN> is the steady or DC 
+(direct current) value of current <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img22.svg"
+ ALT="$I_{av}$"></SPAN> that in period <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img16.svg"
+ ALT="$T$"></SPAN> would 
+transfer the same charge <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img23.svg"
+ ALT="$Q$"></SPAN>:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_{av}T=Q=\int_0^T i(t) dt,\;\;\;\;\mbox{i.e.}\;\;\;\;
+  I_{av}=\frac{1}{T}\int_0^T i(t) dt
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.23ex; " SRC="img24.svg"
+ ALT="$\displaystyle I_{av}T=Q=\int_0^T i(t) dt,\;\;\;\;$">i.e.<IMG STYLE="height: 6.04ex; vertical-align: -2.23ex; " SRC="img25.svg"
+ ALT="$\displaystyle \;\;\;\;
+I_{av}=\frac{1}{T}\int_0^T i(t) dt$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">7</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Similarly, the average voltage is defined as:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_{av}=\frac{1}{T}\int_0^T v(t) dt
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.23ex; " SRC="img26.svg"
+ ALT="$\displaystyle V_{av}=\frac{1}{T}\int_0^T v(t) dt$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">8</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+If the current/voltage is periodic, i.e., it repeats itself every 
+time cycle <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img16.svg"
+ ALT="$T$"></SPAN>, then <!-- MATH
+ $i(t)=i(t+T)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img27.svg"
+ ALT="$i(t)=i(t+T)$"></SPAN> and <!-- MATH
+ $v(t)=v(t+T)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img28.svg"
+ ALT="$v(t)=v(t+T)$"></SPAN>. The reciprocal 
+of <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img16.svg"
+ ALT="$T$"></SPAN> is called the <EM>fundamental frequency</EM>. In particular, for 
+a sinusoidal current 
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+i(t)=I_p\,\sin(\omega t)=I_p\,\sin(2\pi ft)=I_P\,\sin(2\pi t/T)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.78ex; " SRC="img29.svg"
+ ALT="$\displaystyle i(t)=I_p\,\sin(\omega t)=I_p\,\sin(2\pi ft)=I_P\,\sin(2\pi t/T)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">9</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+the average over the complete cycle <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img30.svg"
+ ALT="$T=1/f$"></SPAN> is always zero (the charge
+transferred during the first half is the opposite to that transferred
+in the second). However, we can consider the half-cycle average over 
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img31.svg"
+ ALT="$T/2$"></SPAN>:
+<BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+I_{av}&=&\frac{1}{T/2}\int_0^{T/2} i(t)\; dt
+  =\frac{2}{T}\int_0^{T/2} \;I_P\,\sin(2\pi t/T)\;dt
+  =-\frac{2}{T}\frac{TI_P}{2\pi} \cos(2\pi t/T)\bigg|_0^{T/2}
+  \nonumber \\
+  &=& \frac{1}{\pi}\left[\cos(0)-\cos(\pi)\right]I_P
+  =\frac{2}{\pi}I_P\;=0.637\,I_P
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img32.svg"
+ ALT="$\displaystyle I_{av}$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 6.74ex; vertical-align: -2.44ex; " SRC="img34.svg"
+ ALT="$\displaystyle \frac{1}{T/2}\int_0^{T/2} i(t)\; dt
+=\frac{2}{T}\int_0^{T/2} \;I_...
+...(2\pi t/T)\;dt
+=-\frac{2}{T}\frac{TI_P}{2\pi} \cos(2\pi t/T)\bigg\vert _0^{T/2}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 4.88ex; vertical-align: -1.71ex; " SRC="img35.svg"
+ ALT="$\displaystyle \frac{1}{\pi}\left[\cos(0)-\cos(\pi)\right]I_P
+=\frac{2}{\pi}I_P\;=0.637\,I_P$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">10</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+
+<P>
+<B>Effective or RMS Value</B>
+
+<P>
+The effective value of a time-varying current <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img21.svg"
+ ALT="$i(t)$"></SPAN> or voltage is the 
+constant value of current <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img36.svg"
+ ALT="$I_{rms}$"></SPAN> or voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img37.svg"
+ ALT="$V_{rms}$"></SPAN> that in period <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img16.svg"
+ ALT="$T$"></SPAN> 
+would transfer the same amount of energy:
+<BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+W=\int_0^T p(t) dt&=&R\int_0^T i^2(t) dt
+  =R I^2_{rms}T
+  \nonumber \\
+  &=&\frac{1}{R}\int_0^T v^2(t) dt=\frac{1}{R}V^2_{rms}T
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 6.04ex; vertical-align: -2.23ex; " SRC="img38.svg"
+ ALT="$\displaystyle W=\int_0^T p(t) dt$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 6.04ex; vertical-align: -2.23ex; " SRC="img39.svg"
+ ALT="$\displaystyle R\int_0^T i^2(t) dt
+=R I^2_{rms}T$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 6.04ex; vertical-align: -2.23ex; " SRC="img40.svg"
+ ALT="$\displaystyle \frac{1}{R}\int_0^T v^2(t) dt=\frac{1}{R}V^2_{rms}T$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">11</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+
+i.e.,
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_{rms}=\sqrt{\frac{1}{T}\int_0^T i^2(t) dt},\;\;\;\;\;\;\;\mbox{or}\;\;\;\;\;\;
+  V_{rms}=\sqrt{\frac{1}{T}\int_0^T v^2(t) dt}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 7.43ex; vertical-align: -2.59ex; " SRC="img41.svg"
+ ALT="$\displaystyle I_{rms}=\sqrt{\frac{1}{T}\int_0^T i^2(t) dt},\;\;\;\;\;\;\;$">or<IMG STYLE="height: 7.43ex; vertical-align: -2.59ex; " SRC="img42.svg"
+ ALT="$\displaystyle \;\;\;\;\;\;
+V_{rms}=\sqrt{\frac{1}{T}\int_0^T v^2(t) dt}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">12</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+As <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img36.svg"
+ ALT="$I_{rms}$"></SPAN> or <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img37.svg"
+ ALT="$V_{rms}$"></SPAN> is the &ldquo;square root of the mean of the squared value&rdquo;,
+it is also called the <EM>root-mean-square (rms)</EM> current or voltage.
+
+<P>
+For a sinusoidal variable <!-- MATH
+ $i(t)=I_p\,\cos(\omega t)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.78ex; " SRC="img43.svg"
+ ALT="$i(t)=I_p\,\cos(\omega t)$"></SPAN>, we have
+(<!-- MATH
+ $\cos^2\alpha=[1+\cos(2\alpha)]/2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img44.svg"
+ ALT="$\cos^2\alpha=[1+\cos(2\alpha)]/2$"></SPAN>) 
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I^2_{rms} = \frac{1}{T}\int_0^T i^2(t) dt
+  = \frac{I^2_p}{T}\int_0^T \cos^2(2\pi t/T) dt
+  = \frac{I^2_p}{2T}\int_0^T [1+\cos(4\pi t/T)]\; dt=\frac{I^2_p}{2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.23ex; " SRC="img45.svg"
+ ALT="$\displaystyle I^2_{rms} = \frac{1}{T}\int_0^T i^2(t) dt
+= \frac{I^2_p}{T}\int_0...
+...2\pi t/T) dt
+= \frac{I^2_p}{2T}\int_0^T [1+\cos(4\pi t/T)]\; dt=\frac{I^2_p}{2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">13</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+i.e.,
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_{rms}=\frac{I_p}{\sqrt{2}}=I_p\;0.707
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.28ex; " SRC="img46.svg"
+ ALT="$\displaystyle I_{rms}=\frac{I_p}{\sqrt{2}}=I_p\;0.707$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">14</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Similarly, for <!-- MATH
+ $v(t)=V_p\,\cos(\omega t)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.78ex; " SRC="img47.svg"
+ ALT="$v(t)=V_p\,\cos(\omega t)$"></SPAN>, we also have 
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_{rms}=\frac{1}{\sqrt{2}}=V_p\;0.707
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.28ex; " SRC="img48.svg"
+ ALT="$\displaystyle V_{rms}=\frac{1}{\sqrt{2}}=V_p\;0.707$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">15</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node3.html">Phasor Representation of Sinusoidal</A>
+<B> Up:</B> <A
+ HREF="node1.html">Chapter 3: AC Circuit</A>
+<B> Previous:</B> <A
+ HREF="node1.html">Chapter 3: AC Circuit</A></DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

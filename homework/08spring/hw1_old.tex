@@ -1,0 +1,276 @@
+\documentstyle[11pt]{article}
+\usepackage{html}
+\begin{document}
+\begin{center}
+{\Large \bf E84 Homework 1}
+\end{center}
+\begin{enumerate}
+
+\item Given the basic relationship between the voltage across and
+  current through each of the three types of components $R$, $C$,
+  and $L$,
+  \begin{tabular}{l|cc}
+    Resistor $R$ & $i=v/R=Gv$ & $v=Ri=i/G$ \\
+    Inductor $L$ & $i=\int v\,dt/L$ & $v=L\;di/dt$ \\
+    Capacitor $C$ & $i=C\,dv/dt$ & $v=\int i\,dt/C$ \\
+  \end{tabular}
+  \begin{itemize}
+  \item derive the expression for the equivalent resistance $R_s$
+    of $n$ resistors $R_1,\cdots,R_n$ combined in series. Then derive 
+    the expression for the equivalent resistance $R_p$ of the $n$ 
+    resistors combined in parallel.
+  \item Repeat the above for $n$ capacitors $C_1,\cdots,C_n$.
+  \item Repeat the above for $n$ capacitors $L_1,\cdots,L_n$.
+  \end{itemize}
+
+%\item The electron gun of a cathode-ray tube (CRT) generates a beam
+%  of electrons which is accelerated by a potential difference of
+%  20,000 V over a distance of 4 cm. Find 
+%\begin{enumerate}
+%\item the strength of the electric field, and
+%\item the power supplied to a beam of $50\times 10^{15}$ electrons
+%  in one second.
+%\end{enumerate}
+
+\item (a) If two light bulbs both labeled as 110V and 40W in series are
+connected to a socket outlet of 190V, what is the power consumption of 
+each of the bulbs?
+
+% R=V^2/W=110^2/40, V'=190/2=95, 
+% W'=V'^2/R=W (V'/V)^2=40 (95/110)^2=40x0.746=29.83
+
+(b) Replace one of the two bulbs by another bulb labeled as 110V 15W, and
+find the power consumption of each of the bulbs. What will happen to each
+of the two bulbs? (Note that when the power consumption by a bulb is larger
+than the specified wattage, it will be burned out!)
+
+% V=110, V'=190, R1=V^2/W1=110^2/40, R2=V^2/W2=110^2/15, 
+% I=V'/R=V'/(R1+R2), W1'=I^2 R1=8.89, W2'=I^2 R2=23.67>15,  burned out!
+
+\item Measurement of a physical process by the measuring instruments may 
+  be tricky due to the inevitable interfere on the process caused by the 
+  instruments, such as their non-ideal internal resistance. The figure
+  below shows two possible configurations for the measurement of the voltage
+  across and the current through the load. 
+
+  \htmladdimg{../hw1b.gif}
+
+  \begin{enumerate}
+  \item What are required of the ammeter and the voltmeter in terms of their
+    internal resistance to minimize their influences on the measurements? 
+
+    % The ammeter should have minimum (ideally 0) impedance while the voltmeter
+    % should have maximum (ideally infinity) impedance. 
+
+  \item How would the ammeter and the voltmeter affect the measurement of the
+    current and the voltage in either of the configurations (a and b)?
+  \end{enumerate}
+
+  % In (a) the voltmeter will by-pass some current so that the actual current
+  % through the load is smaller than the reading of the ammeter. In (b) the
+  % ammeter will cause some voltage drop and the actual voltage across the 
+  % load is lower than the reading of the voltmeter. 
+
+\item Use Kirchhoff's voltage and current laws to find voltage $V_{BD}$ and 
+  resistance $R_2$ in the circuit shown below:
+
+\htmladdimg{../hw1c.gif}
+
+(Note: The direction of a current and the polarity of a voltage source can
+be assumed arbitrarily. To determined the actual direction and polarity, the
+sign of the values also should be considered. For example, a current labeled 
+in left-to-right direction with a negative value is actually flowing 
+right-to-left.)
+
+% apply KCL to node B: 2+(-6)+I2=0, I2=-4, 
+% apply KCL to node C: -4+1-I3=0, I3=-3;
+% apply KCL to node D: 5-3+I4=0, I4=-2;
+% apply KVL to loop ABCD: 10+2x1+(-4)xR2+6+(-3)x1-(-2)x5=0, R2=6.25
+% apply KVL to loop BDA: V_{BD}+2x5+10+2x1=0, V_{BD}=-22V, or
+% apply KVL to loop BDC: V_{BD}-(-3)x1-6-(-4x6.25)=0, V_{BD}=-22V
+
+% \item Assume in the circuits in the figure, the voltage source is $V_0=2V$,
+%	the current source is $I_0=1A$, and the resistor is $R=3\Omega$.
+%	For both (a) and (b).
+%
+%\htmladdimg{../hw1d.gif}
+
+%Find:
+%\begin{enumerate}
+%\item the current going through each of the three elements
+
+% (a) I=1A going thru all 3 elements 
+% (b) 1A thru current source, 2/3A thru R, 1/3 thru voltage source.
+
+% \item the voltage across each of the three elements
+
+% (a) 2V across voltage source, 3V across R, 5V across current source
+% (b) 2V across all 3 elements.
+
+%\item which of the power sources is delivering power and how much? which is 
+%	receiving power and how much? How much power is dissipated by the
+%	resistor $R$?
+
+% (a) current source delivers 5W, R dissipates 3W, voltage source receives 2W
+% (b) current source delivers 2W, R dissipates 4/3W, voltage source receives 2/3W
+% When receiving power, the voltage source is being charged.
+%\end{enumerate}
+
+%\item A current flowing in an initially uncharged 1-$\mu$F capacitor is shown
+%  in the figure as a function of time. Find and plot the voltage across the 
+%  capacitor produced by this current.
+
+%\htmladdimg{../hw1a.gif}
+
+
+\item Find the equivalent resistance between the two terminals before and
+after the switch is closed. (Note, the two diagonal branches are NOT
+connected to each other in the middle.)
+
+\htmladdimg{../hw2e.gif}
+
+\item Find the equivalent resistance $R_{eq}$ between the two terminals
+in the figure, where $R_0=3\Omega$, $R_1=4\Omega$, $R_2=2\Omega$, $R_3=2\Omega$, 
+$R_4=1\Omega$. What is $R_{eq}$ if $R_0=5\Omega$?
+
+(Hint: apply a test voltage $V_{test}$ across the terminals and the 
+equivalent resistance can be found to be $R_{eq}=V_{test}/I_{test}$.
+The circuit can be solved by applying KCL to $V_1$ and $V_2$.)
+
+\htmladdimg{../hw1f.gif}
+
+%{\bf Solution:}
+%\[ \frac{v_1-v_{test}}{4}+\frac{v_1-0}{2}+\frac{v_1-v_2}{3}=0 \]
+%\[ \frac{v_2-v_{test}}{2}+\frac{v_2-0}{1}+\frac{v_2-v_1}{3}=0 \]
+%solving these we get $v_1=v_2=v_{test}/3$. Then apply KCL to the
+%positive terminal to get
+%\[ i_{test}+\frac{v_1-v_{test}}{4}+\frac{v_2-v_{test}}{2}=0 \]
+%solving to get
+%\[R_{eq}=\frac{v_{test}}{i_{test}}=2 \Omega \]
+%Note that in this case $v_1=v_2$, independent of the value of $R_0$.
+
+%Alternatively, based on delta-Y conversion (to be considered later), the 
+%triangle (delta) formed by $R_0$, $R1$, and $R_2$ can be coonverted to a Y 
+%configuration with $R'_0=8/9$ (top), $R'_1=4/3$ (left), and $R'_2=2/3$. Then
+%we have $R'_1+R_3=10/3$ and $R'_2+R_4=5/3$. Their parallel combination is 
+%$10/3 || 5/3=10/9$, in series with $R'_0=8/9$, i.e., the total resistance
+%Tnis $R_{eq}=10/9+8/9=2$. However, this approach does not reveal the fact that 
+%$R_0$ can take any value without changing $R_{eq}$.
+
+%\item The homework problem on \htmladdnormallink{this page}{http://fourier.eng.hmc.edu/e84/lectures/ch1/node6.html}.
+
+\item Design a multimeter that can measure both DC and AC voltage, DC current,
+  and resistance with different scales. Specifically, you are given an analog 
+  meter $A$ with a needle display, which reaches full scale when a DC current 
+  of $I=100\;\mu A=10^{-4}\;A$ goes through it. The internal resistance of the
+  meter is 10 Ohms. In addition, you need some multi-position rotary switches 
+  to select different scales for each of the three types of measurements, and 
+  resistors with any values needed in your design.
+
+  \begin{itemize}
+    \item DC Voltage measurement: DC voltages in these ranges can be measured
+      0-2.5, 0-10, 0-50, and 0-250 (all in volts). Use a 4-position rotary switch
+      to select one of the four ranges as shown in the figure below. For example, 
+      when the range of 0-10 is selected, the needle display will reach full scale 
+      when the voltage being measured is 10 V. The circuit is shown below. Determine 
+      all resistances labeled.
+
+      \htmladdimg{../multimeterV.gif}
+
+%      {\bf Solution:} $R_1=25\;K\Omega$, $R_2=75\;K\Omega$, $R_3=400\;K\Omega$
+%      and $R_4=2\;M\Omega$.
+    \item AC Voltage measurement: To measure an AC voltage (in terms of its
+      RMS value), it first needs to be converted into a DC voltage. This can 
+      be achieved by a 
+      \htmladdnormallink{diode}{../../../lectures/ch4/node2.html}
+      which only allows the current to pass in one
+      direction (along the arrow) but not the other. This process is called
+      rectification. 
+
+      \htmladdimg{../../../lectures/figures/halfwaverectifier.gif}
+
+      The diode will also cause a voltage drop of 0.7 volt 
+      along the direction. The actual reading of the meter reflects the 
+      \htmladdnormallink{average value}{../averagevalue/node1.html}
+      of the rectified current. Find the resistance $R$ so 
+      that when the incoming AC voltage is $V=10$ volt (RMS), the meter shows 
+      a full scale display.
+
+      \htmladdimg{../multimeterACV.gif}
+
+%      {\bf Solution:} The peak value of voltage is $10\times \sqrt{2}=14.14$,
+%      which is reduced (due to voltage drop of the diode) to $14.14-0.7=13.44$.
+%      The average value of the rectified voltage is $13.44/\pi=4.28$. For the
+%      meter to have a full scale display, the current need to be
+%      \[ 10^{-4}=\frac{4.28}{R},\;\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;\;R=42.8\,k\Omega \]
+%      The internal resistance of $10\,\Omega$ can be neglected.
+
+    \item DC current measurement: measure currents in these ranges (all in mA):
+      0-0.5, 0-2.5, 0-10, 0-50. Use a 4-position rotary switch to select one 
+      of the four ranges as shown in the figure below. For example, when the 
+      range of 0-10 is selected, the needle display will reach full scale when 
+      a 10 mA current is measured. Determine all resistances labeled. Use
+      $R_0=1\;K\Omega$.
+
+      \htmladdimg{../multimeterA1a.gif}
+
+%      {\bf Solution:} Voltage across input is $V=0.1\;mA\times 1\;K\Omega=100\;mV$.
+%      Therefore 
+%      \[ R_1=100/(0.5-0.1)=250\;\Omega \]
+%      \[ R_2=100/(2.5-0.1)=41.67\;\Omega \]
+%      \[ R_1=100/(10-0.1)=10.1\;\Omega \]
+%      \[ R_1=100/(50-0.1)=2\;\Omega \]
+
+    \item Resistance measurement: The circuit for resistance measurement is
+      provided as shown below, where $V_1=1.5V$. Determine the values for the 
+      resistors labeled as $R_0$, $R_1$, $R_{10}$, $R_{100}$ and $R_{1000}$ 
+      and $V_2$ so that the needle display of the meter is full scale 
+      ($I=100\;\mu A$) when the resistor $R=0$ being measured (between the 
+      two leads labeled + and -) is zero, or half scale ($I=50\;\mu A$) when 
+      the value of $R$ and the position of he two synchronized rotary switches
+      are given in each of the four case shown in the table:
+
+      \begin{tabular}{l|llll} \hline
+	positions  & $\times 1$ & $\times 10$ & $\times 100$ & $\times 1K$ \\
+	$R$ values & 20$\Omega$ & 200$\Omega$ & 2000$\Omega$ & 20 $K\Omega$ 
+      \end{tabular}
+
+      \htmladdimg{../multimeterR.gif}
+
+%      {\bf Solution:}
+%
+%      \begin{itemize}
+%	\item First determine $R_0$: when $R=0$, we get 
+%	  $R_0=1.5V/0.1\;mA=15\;K\Omega$.
+%	\item When $R=20\;\Omega$, the current through meter $A$ should be:
+%	  \begin{eqnarray}
+%	    I&=&\frac{V_1}{R+R_1||R_0}\frac{R_1}{R_1+R_0}
+%	  =\frac{V_1}{R+\frac{R_1R_0}{R_1+R_0}}\frac{R_1}{R_1+R_0}
+%	  =V_1\frac{R_1}{RR_1+RR_0+R_1R_0} 	  \nonumber \\
+%	  &=&5\times 10^{-4}\;A 
+%	  \nonumber
+%	  \end{eqnarray}
+%	  Given $V_1=1.5V$, $R_0=15K$ and $R=20\Omega$, we can solve this 
+%	  equation to get 
+%	  \[ R_1=\frac{R_0RI}{V_1-I(R+R_0)}=20\Omega \]
+%	\item When $R=200\;\Omega$, solving the above equation we get 
+%	  $R_{10}=202.7\Omega$.
+%	\item When $R=2\;K\Omega$, solving the above equation we get 
+%	  $R_{10}=2307.7\Omega$.
+%	\item When $R=20\;K\Omega$, we need to determine $V_2$ and 
+%	  $R_{1k}$ so that $I=5\items 10^{-5} A$, and also when $R=0$, 
+%	  $I=10^{-4}A$. $R_{1k}$ and $V_1+V_2$ can be found by solving
+%	  these equations:
+%	  \[ \left\{ \begin{array}{l}
+%	    (V_1+V_2)/(R_{1k}+R_0)=10^{-4}A \\
+%	    (V_1+V_2)/(R+R_{1k}+R_0)=5\times 10^{-5}A
+%	  \end{array}\right. \]
+%	  Solving we get $V_1+V_2=2V$, $R_{1k}+R_0=20\;K\Omega$, i.e.,
+%	  $R_{1k}=5K\Omega$, $V_2=0.5V$
+%      \end{itemize}
+     
+  \end{itemize}
+
+\end{enumerate}
+\end{document}
+

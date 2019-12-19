@@ -1,0 +1,67 @@
+\documentstyle[12pt]{article}
+\usepackage{html}
+
+\begin{document}
+
+\begin{itemize}
+
+\item {\bf Example 0:}
+
+  \htmladdimg{../figures/sourcemeter.gif}
+
+  The voltage measured by a voltmeter is (voltage divider):
+  \[ V=V_s \frac{R_v}{R_s+R_v} \]
+  It is desireable for $R_v$ to be as large as possible (ideally infinity) so 
+  that it draws little current from the source (causing little voltage drop 
+  across the internal resistance $R_s$), for the measureed voltage to be 
+  close to the true open-circuit voltage $V_{oc}$, i.e., the source $V_s$. 
+
+  The current measured by an ammeter is:
+  \[ I=\frac{V_s}{R_s+R_a} \]
+  It is desireable for $R_a$ to be as small as possible (ideally zero)
+  so that the measured current is close to true short-circuit current 
+  $I_{sc}=V_s/R_s$.
+
+  When $R_v<\infty$ and $R_a>0$, the true $V_s$ and $R_s$ can be found by
+  solving these equations:
+  \[ \left\{ \begin{array}{l}
+     V=V_s R_v/(R_s+R_v) \\I=V_s/(R_s+R_a) \end{array} \right. 
+  \;\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;\;
+  \left\{ \begin{array}{l}
+    R_vV_s-VR_s=VR_v \\ V_s-IR_s=I R_a \end{array} \right. \]
+  solving these we get:
+  \[ \left\{ \begin{array}{l}
+    V_s=IV(R_v-R_a)/(IR_v-V) \\
+    R_s=(V-IR_a)R_v/(IR_v-V)
+  \end{array} \right. \]
+
+  Given the specific values, we get
+  \[ I=\frac{R_s}{R_s+R_a}=\frac{6V}{300\Omega}=0.02A \]
+  \[ V=V_s \frac{R_v}{R_s+R_v}=6V \frac{10,000}{10,000+100}=5.94 V \]
+  From these measurement, the true $R_s$ and $V_s$ can be obtained as:
+  \[ V_s=\frac{IV(R_v-R_a)}{IR_v-V}
+  =\frac{5.94\times 0.02(10,000-200)}{0.02\times 10,000-5.94}=100 \]
+  \[ R_s=\frac{(V-IR_a)R_v}{IR_v-V} 
+  =\frac{(5.94-0.02\tiimes 200)\times 10,000}{0.02\times 10,000-5.94}=6 \]
+  Method verified.
+
+\begin{comment}
+\item {\bf Example 1:}
+
+  The load voltage is related to the voltage source by
+  \[ V_L=V_s \frac{R_L}{R_L+R_s} \]
+  i.e., 
+  \[ R_L V_s-V_L R_s = V_L R_L \]
+  Using the values of $R_L$ and $V_L$ of the two experiments, we get
+  \[ \left\{ \begin{array}{l} 
+    1000 V_s-9.09 R_s = 9,090 \\
+    2000 V_s-9.52 R_s =19,040 \end{array} \right. \]
+  Solving these two equations we get
+  \[ \left\{ \begin{array}{l} 
+    R_s=100\Omega \\ V_s=10 V \end{array} \right. \]
+\end{comment}
+
+\end{itemize}
+
+\end{document}
+

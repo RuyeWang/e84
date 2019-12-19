@@ -1,0 +1,80 @@
+\documentstyle[11pt]{article}
+\usepackage{html}
+\begin{document}
+\begin{center}
+{\Large \bf  Midterm Exam 2 ---- E84, Fall, 2004}
+\end{center}
+
+\begin{itemize}
+\item Take home, open everything except discussion.
+\item Mark your start and end times. Don't spend more than 3 hours.
+\item Due Wednesday in class.
+\item Mark your name and question number clearly on top of each page.
+	Indicate the total number of pages submitted.
+\item When solving a problem, list all the steps. In each step, describe 
+	what you are doing in English, then show the calculation and the 
+	result of the step. A final answer, even if correct, without 
+	evidence of the steps leading to the answer will not receive credit.
+\end{itemize}
+
+\begin{enumerate}
+
+\item {\bf Problem 1. (33 points)} 
+
+The circuit shown below takes one input $v_0(t)$ and generates two outputs 
+$v_1(t)$ and $v_2(t)$. Assume the innput is a sinusoidal voltage 
+$v_0(t)=sin(\omega t)$, Find the gain $g_i$ and phase shift $\phi_i$ of 
+each of the two ports ($i=1,2$) in terms of $\tau=RC$ and $\omega$. Here the 
+gain is defined as 
+\[ g_i=|v_i(t)|/|v_0(t)|,\;\;\;\;\;(i=1,2) \]
+and phase shift $\phi_i$ is defined as angular difference between the output
+and the input: $\phi_i=\angle \dot{V}_i-\angle \dot{V}_0$.
+Sketch $g_1$ and $g_2$ as functions of frequency $\omega$.
+
+This ciruit is used as an effort to separate the two frequency components 
+in the input $v_0(t)=sin(50 t)+cos(150 t)$. Assume $R=1K\Omega$, find the 
+capacitance $C$ so that the cross-over frequency between $v_1(t)$ and 
+$v_2(t)$ is in the middle between the two frequency components in the input. 
+
+Give the expression of $v_1(t)$ and $v_2(t)$ as two functions of time.
+
+\htmladdimg{../midterm2a.gif}
+
+{\bf Solution:} 
+\[	g_1=\frac{1/j\omega C}{R+1/j\omega C}=\frac{1}{1+j\omega \tau},\;\;\;\;
+g_2=\frac{R}{R+1/j\omega C}=\frac{j\omega \tau}{1+j\omega \tau} \]
+\[	|g_1|=\frac{1}{\sqrt{1+(\omega \tau)^2}},\;\;\;\;
+	\phi_1=-tan^{-1}(\omega \tau),\;\;\;\;
+	|g_2|=\frac{\omega \tau}{\sqrt{1+(\omega \tau)^2}},\;\;\;
+	\phi_1=\frac{\pi}{2}-tan^{-1}(\omega \tau) \]
+At the cross-over frequency between the two outputs their gains are equal 
+(both reduced to half-power point), i.e., $\omega \tau=1$, and 
+$|g_1|=|g_2|=1/\sqrt{2}$. The middle freqnecy is $\omega_c=(50+150)/2=100$,
+then $\tau=RC=1/\omega_c=0.01$, and $C=\tau/R=0.01/1000=10\;\mu F$.
+
+For frequency $\omega=50$, 
+\[ |g_1|=\frac{1}{\sqrt{1+(\omega \tau)^2}}=\frac{1}{\sqrt{1+0.5^2}}=0.89,\;\;\;\;
+|g_2|=\frac{\omega \tau}{\sqrt{1+(\omega \tau)^2}}=\frac{0.5}{\sqrt{1+0.5^2}}=0.45 \]
+\[ \phi_1=-\tan^{-1}(50\times 0.01)=-26.5^\circ,\;\;\;\;
+   \phi_2=90^\circ-\tan^{-1}(50\times 0.01)=90^\circ-26.5^\circ=73.5^\circ \]
+
+For frequency $\omega=150$, 
+\[ |g_1|=\frac{1}{\sqrt{1+(\omega \tau)^2}}=\frac{1}{\sqrt{1+1.5^2}}=0.55,\;\;\;\;
+|g_2|=\frac{\omega \tau}{\sqrt{1+(\omega \tau)^2}}=\frac{1.5}{\sqrt{1+1.5^2}}=0.83 \]
+\[ \phi_1=-\tan^{-1}(150\times 0.01)=-56.3^\circ,\;\;\;\;
+   \phi_2=90^\circ-\tan^{-1}(150\times 0.01)=90^\circ-56.3^\circ=33.7^\circ \]
+
+\[ v_1(t)=0.89\; sin(50 t-26.5^\circ)+0.55\;sin(150 t-56.3^\circ) \]
+\[ v_2(t)=0.45\; sin(50 t+73.5^\circ)+0.83\;sin(150 t+33.7^\circ) \]
+
+
+\item The circuit in the figure shows a voltage source $V_0$ and $R_0$ and an
+amplification circuit modeled by as a two-port network. Assume the two-port is
+represented by a Z-model ${\bf Z}$ ($Z_{11}, Z_{12}, Z_{21}, Z_{22}$). Find 
+the expression for the load impedance $Z_L$ in terms of $R_0$ as well as the
+four Z-parameters, for it to get maximum power from the voltage source.
+
+\end{enumerate}
+
+\end{document}
+

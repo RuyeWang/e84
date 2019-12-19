@@ -1,0 +1,1300 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>AC equivalent circuits</TITLE>
+<META NAME="description" CONTENT="AC equivalent circuits">
+<META NAME="keywords" CONTENT="ch4">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="ch4.css">
+
+<LINK REL="next" HREF="node9.html">
+<LINK REL="previous" HREF="node7.html">
+<LINK REL="next" HREF="node9.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node9.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="ch4.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node7.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node9.html">Emitter Follower</A>
+<B> Up:</B> <A
+ HREF="ch4.html">ch4</A>
+<B> Previous:</B> <A
+ HREF="node7.html">Small-Signal Model and H</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A ID="SECTION00080000000000000000">
+AC equivalent circuits</A>
+</H1>
+
+<P>
+As discussed before, the voltage a circuit receives from a source 
+depends on its input impedance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img355.svg"
+ ALT="$R_{in}$"></SPAN> as well as the internal 
+impedance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img356.svg"
+ ALT="$R_s$"></SPAN> of the source, while the voltage it delivers depends
+on its output impedance <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img357.svg"
+ ALT="$r_{out}$"></SPAN> as well as the load impedance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img358.svg"
+ ALT="$R_L$"></SPAN>.
+It is therefore important to consider these input and output impedances
+of an amplification circuit as well as its voltage gain.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/AmplifierSourceLoad.gif"
+ ALT="AmplifierSourceLoad.gif">
+
+<P>
+In the first figure, everything inside the red box, including the 
+amplifier as well as <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img359.svg"
+ ALT="$V_S$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img356.svg"
+ ALT="$R_s$"></SPAN>, is treated as the source, while 
+everything inside the blue box, including the amplifier as well as <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img358.svg"
+ ALT="$R_L$"></SPAN>,
+is treated as the load. Given the amplifier as well as the source <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img359.svg"
+ ALT="$V_S$"></SPAN> 
+and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img356.svg"
+ ALT="$R_s$"></SPAN>, and the load <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img358.svg"
+ ALT="$R_L$"></SPAN>, we need to find the following three
+parameters so that the red and blue boxes in the first figure can be
+modeled by the corresponding boxes in the second figure:
+
+<P>
+
+<UL>
+<LI>Input impedance <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img360.svg"
+ ALT="$r_{in}$"></SPAN>
+</LI>
+<LI>Output impedance <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img357.svg"
+ ALT="$r_{out}$"></SPAN> 
+</LI>
+<LI>voltage gain <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img361.svg"
+ ALT="$A$"></SPAN>
+</LI>
+</UL>
+
+<P>
+Consider the typical transistor AC amplification circuit below:
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/ACamplification1.gif"
+ ALT="ACamplification1.gif">
+
+<P>
+If the capacitances of the coupling capacitors and the emitter by-pass 
+capacitor are large enough with respect to the frequency of the AC signal 
+in the circuit is high enough, these capacitors can all be approximated as 
+short circuit. Moreover, note that the AC voltage of the voltage supply
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img171.svg"
+ ALT="$V_{CC}$"></SPAN> is zero, it can be treated the same as the ground. Now the AC
+behavior of the transistor amplification circuit can be modeled by the 
+following small signal equivalent circuit:
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/ACamplification2a.gif"
+ ALT="ACamplification2a.gif">
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/ACamplifierModel.gif"
+ ALT="ACamplifierModel.gif">
+
+<P>
+As shown above, this AC small signal equivalent circuit can be modeled 
+by as an active circuit containing three components:
+
+<P>
+
+<UL>
+<LI><B>AC Input Impedance:</B> 
+
+<P>
+For AC signals, the input of the amplification circuit is shown below, 
+  where <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img356.svg"
+ ALT="$R_s$"></SPAN> is the internal resistance of the signal source, and the 
+  input impedance of the circuit is the three resistances <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img249.svg"
+ ALT="$R_1$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img250.svg"
+ ALT="$R_2$"></SPAN> and 
+  <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img350.svg"
+ ALT="$r_{be}$"></SPAN> in parallel:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+r_{in}=R_1||R_2||r_{be}
+  =\left(\frac{1}{R_1}+\frac{1}{R_2}+\frac{1}{r_{be}}\right)^{-1}
+  =\frac{R_1 R_2 r_{be}}{R_1R_2+R_1r_{be}+R_2r_{be}}\approx r_{be}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.27ex; vertical-align: -2.32ex; " SRC="img362.svg"
+ ALT="$\displaystyle r_{in}=R_1\vert\vert R_2\vert\vert r_{be}
+=\left(\frac{1}{R_1}+\f...
+...}}\right)^{-1}
+=\frac{R_1 R_2 r_{be}}{R_1R_2+R_1r_{be}+R_2r_{be}}\approx r_{be}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">66</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The approximation is due to the fact that typically <!-- MATH
+ $R_1,\;R_2\gg r_{be}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img363.svg"
+ ALT="$R_1,\;R_2\gg r_{be}$"></SPAN>.
+</LI>
+<LI><B>AC Output Impedance:</B> 
+
+<P>
+This is simply the resistance of the resistor <!-- MATH
+ $r_{out}=R_C$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img364.svg"
+ ALT="$r_{out}=R_C$"></SPAN>.
+
+<P>
+</LI>
+<LI><B>AC Voltage Gain:</B> 
+
+<P>
+Given the AC input voltage <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img365.svg"
+ ALT="$v_{in}$"></SPAN>, the base voltage and current are
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_b \approx v_{in}\;\frac{r_{be}}{r_{be}+R_s},\;\;\;\;\;\;\;\;\;\;
+  i_b=\frac{v_b}{r_{be}}\approx \frac{v_{in}}{r_{be}+R_s}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.88ex; vertical-align: -2.06ex; " SRC="img366.svg"
+ ALT="$\displaystyle v_b \approx v_{in}\;\frac{r_{be}}{r_{be}+R_s},\;\;\;\;\;\;\;\;\;\;
+i_b=\frac{v_b}{r_{be}}\approx \frac{v_{in}}{r_{be}+R_s}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">67</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The collector current is <!-- MATH
+ $i_c=\beta i_b$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img367.svg"
+ ALT="$i_c=\beta i_b$"></SPAN> and collect voltage is
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_{out}=v_c\approx -i_c\;(R_C||R_L) = -\beta\;i_b\;(R_C||R_L)
+  =-\beta \frac{v_{in}}{r_{be}+R_s} (R_C||R_L)
+  
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.88ex; vertical-align: -2.06ex; " SRC="img368.svg"
+ ALT="$\displaystyle v_{out}=v_c\approx -i_c\;(R_C\vert\vert R_L) = -\beta\;i_b\;(R_C\vert\vert R_L)
+=-\beta \frac{v_{in}}{r_{be}+R_s} (R_C\vert\vert R_L)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">68</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Here the negative sign indicates the fact that <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img200.svg"
+ ALT="$v_c$"></SPAN> is <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img197.svg"
+ ALT="$180^\circ$"></SPAN> out of
+  phase with <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img369.svg"
+ ALT="$v_b$"></SPAN>.
+The voltage gain is:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+A=\frac{v_{out}}{v_{in}}=\frac{v_c}{v_{in}}
+  \approx -\beta \frac{R_C||R_L}{r_{be}+R_s}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.06ex; " SRC="img370.svg"
+ ALT="$\displaystyle A=\frac{v_{out}}{v_{in}}=\frac{v_c}{v_{in}}
+\approx -\beta \frac{R_C\vert\vert R_L}{r_{be}+R_s}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">69</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+If 
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+R_s\ll r_{in}=R_1||R_2||r_{be} \approx r_{be},\;\;\;\;\;R_L\gg r_{out}=R_C
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img371.svg"
+ ALT="$\displaystyle R_s\ll r_{in}=R_1\vert\vert R_2\vert\vert r_{be} \approx r_{be},\;\;\;\;\;R_L\gg r_{out}=R_C$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">70</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+then the gain can be approximated as
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+A=\frac{v_{out}}{v_{in}}\approx -\beta \frac{R_C}{r_{be}}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img372.svg"
+ ALT="$\displaystyle A=\frac{v_{out}}{v_{in}}\approx -\beta \frac{R_C}{r_{be}}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">71</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+To achieve higher gain <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img361.svg"
+ ALT="$A$"></SPAN>, we want to have smaller <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img350.svg"
+ ALT="$r_{be}$"></SPAN> and 
+  greater <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img173.svg"
+ ALT="$R_C$"></SPAN>. However, this also means the input resistance
+  <!-- MATH
+ $r_{in}\approx r_{be}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.46ex; " SRC="img373.svg"
+ ALT="$r_{in}\approx r_{be}$"></SPAN> is small and the output resistance 
+  <!-- MATH
+ $r_{out}\approx R_C$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img374.svg"
+ ALT="$r_{out}\approx R_C$"></SPAN> is large, neither is desirable.
+
+<P>
+Note that <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img350.svg"
+ ALT="$r_{be}$"></SPAN> is not constant. As shown 
+  <A ID="tex2html12"
+  HREF="../ch4/node2.html">before</A>, 
+
+<!-- MATH
+ $r_{be}\approx \eta\;V_T/I_B$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img375.svg"
+ ALT="$r_{be}\approx \eta\;V_T/I_B$"></SPAN> of the base-emitter PN-junction is 
+  approximately inversely proportional to <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img79.svg"
+ ALT="$I_B$"></SPAN>.
+
+<P>
+Also note that <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img173.svg"
+ ALT="$R_C$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img79.svg"
+ ALT="$I_B$"></SPAN> affects the DC operating point.
+  Distortion may be caused if <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img173.svg"
+ ALT="$R_C$"></SPAN> or <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img79.svg"
+ ALT="$I_B$"></SPAN> is set properly.
+
+<P>
+</LI>
+</UL>
+
+<P>
+<B>Example 1:</B> 
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/DCACloadlineEx.gif"
+ ALT="DCACloadlineEx.gif">
+
+<P>
+<!-- MATH
+ $V_{CC}=12V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img132.svg"
+ ALT="$V_{CC}=12V$"></SPAN>, <!-- MATH
+ $R_B=300\,k\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img376.svg"
+ ALT="$R_B=300\,k\Omega$"></SPAN>, <!-- MATH
+ $R_C=R_L=4\,k\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img377.svg"
+ ALT="$R_C=R_L=4\,k\Omega$"></SPAN>, and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img176.svg"
+ ALT="$\beta=40$"></SPAN>. 
+We further assume <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img378.svg"
+ ALT="$R_s=0$"></SPAN>, and the capacitances are large enough so 
+that they can be considered as short circuit for AC signals.
+
+<P>
+
+<UL>
+<LI>Find base current:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_B=\frac{V_{CC}-V_{BE}}{R_B} \approx \frac{V_{CC}}{R_B}=\frac{12}{300\times 10^3}
+  =40\times 10^{-6}\; A=40\;\mu A
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img379.svg"
+ ALT="$\displaystyle I_B=\frac{V_{CC}-V_{BE}}{R_B} \approx \frac{V_{CC}}{R_B}=\frac{12}{300\times 10^3}
+=40\times 10^{-6}\; A=40\;\mu A$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">72</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+<LI>Find DC load line determined by the following two points:
+  <BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+I_C=0, && V_{CE}=12V
+    \nonumber\\
+    V_{CE}=0, && I_C=\frac{V_{CC}}{R_C}=\frac{12\;V}{4\times 10^3\;\Omega}
+    =3\times 10^{-3}A=3 \;mA
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img380.svg"
+ ALT="$\displaystyle I_C=0,$"></TD>
+<TD>&nbsp;</TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img381.svg"
+ ALT="$\displaystyle V_{CE}=12V$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img382.svg"
+ ALT="$\displaystyle V_{CE}=0,$"></TD>
+<TD>&nbsp;</TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img383.svg"
+ ALT="$\displaystyle I_C=\frac{V_{CC}}{R_C}=\frac{12\;V}{4\times 10^3\;\Omega}
+=3\times 10^{-3}A=3 \;mA$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">73</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+
+<P>
+</LI>
+<LI>Find DC operating point <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img345.svg"
+ ALT="$Q$"></SPAN>: 
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_C=\beta I_B=40\times 40\;\mu A=1.6\;mA,\;\;\;\;\;\;\;
+  V_{CE}=V_{CC}-R_CI_C=12-4\times 1.6=5.6\;V
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img384.svg"
+ ALT="$\displaystyle I_C=\beta I_B=40\times 40\;\mu A=1.6\;mA,\;\;\;\;\;\;\;
+V_{CE}=V_{CC}-R_CI_C=12-4\times 1.6=5.6\;V$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">74</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+<LI>Find AC load line: 
+
+<P>
+The AC load is <!-- MATH
+ $R'_L=R_C||R_L=2\;k\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.76ex; " SRC="img385.svg"
+ ALT="$R'_L=R_C\vert\vert R_L=2\;k\Omega$"></SPAN>. The AC load line is a 
+  straight line passing the DC operating point with slope <!-- MATH
+ $1/R'_L=1/2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.76ex; " SRC="img386.svg"
+ ALT="$1/R'_L=1/2$"></SPAN>.
+  The intersections of the AC load line with <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img93.svg"
+ ALT="$V_{CE}$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img80.svg"
+ ALT="$I_C$"></SPAN> axes can 
+  be found by
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\frac{1.5}{V_{AC0}-6}=\frac{1}{2}\;\;\;\;\Longrightarrow V_{AC0}=8.8\,V
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img387.svg"
+ ALT="$\displaystyle \frac{1.5}{V_{AC0}-6}=\frac{1}{2}\;\;\;\;\Longrightarrow V_{AC0}=8.8\,V$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">75</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\frac{I_{AC0}-1.5}{6}=\frac{1}{2}\;\;\;\;\Longrightarrow I_{AC0}=4.4\;mA
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.11ex; vertical-align: -1.71ex; " SRC="img388.svg"
+ ALT="$\displaystyle \frac{I_{AC0}-1.5}{6}=\frac{1}{2}\;\;\;\;\Longrightarrow I_{AC0}=4.4\;mA$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">76</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>Find input voltage and current:
+
+<P>
+Assume AC input voltage is <!-- MATH
+ $v_{in}=20\;\sin\;\omega t\;mV$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img389.svg"
+ ALT="$v_{in}=20\;\sin\;\omega t\;mV$"></SPAN> and 
+  <!-- MATH
+ $V_{BE}=0.6V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img390.svg"
+ ALT="$V_{BE}=0.6V$"></SPAN>, the overall base voltage is
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_{be}(t)=V_{BE}+v_{in}=(0.6+0.02\;\sin\;\omega t)\;V
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img391.svg"
+ ALT="$\displaystyle v_{be}(t)=V_{BE}+v_{in}=(0.6+0.02\;\sin\;\omega t)\;V$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">77</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+and the corresponding base current can be found graphically from the 
+  input characteristics to be 
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+i_b(t)=I_B+i_{in}=(40+20\;\sin\;\omega t)\;\mu A
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img392.svg"
+ ALT="$\displaystyle i_b(t)=I_B+i_{in}=(40+20\;\sin\;\omega t)\;\mu A$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">78</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+between 20 and 60 <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img393.svg"
+ ALT="$\mu A$"></SPAN>. 
+</LI>
+<LI>Find <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img350.svg"
+ ALT="$r_{be}$"></SPAN>
+
+<P>
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+r_{be}=\frac{\Delta v_{be}}{\Delta i_b} =\frac{20\,mV}{20\,\mu A}=1\;k\Omega
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.16ex; " SRC="img394.svg"
+ ALT="$\displaystyle r_{be}=\frac{\Delta v_{be}}{\Delta i_b} =\frac{20\,mV}{20\,\mu A}=1\;k\Omega$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">79</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+<LI>Find AC output voltage: 
+
+<P>
+The output current is
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+i_c(t)=\beta\; i_b(t)=40\times(40+20\sin\omega t)\;\mu A
+  =(1.6+ 0.8 \;\sin\omega t)\,mA
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img395.svg"
+ ALT="$\displaystyle i_c(t)=\beta\; i_b(t)=40\times(40+20\sin\omega t)\;\mu A
+=(1.6+ 0.8 \;\sin\omega t)\,mA$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">80</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The output voltage is
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_c(t)=V_{AC0}-R'_L\;i_c(t)=8.8-2\times(1.6+0.8\;\sin\omega t)
+  =(5.6-1.6 \;sin\;\omega t)\;V=v_{out}(t)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img396.svg"
+ ALT="$\displaystyle v_c(t)=V_{AC0}-R'_L\;i_c(t)=8.8-2\times(1.6+0.8\;\sin\omega t)
+=(5.6-1.6 \;sin\;\omega t)\;V=v_{out}(t)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">81</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+<LI>Find the AC voltage gain:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+A_v=\frac{|v_{out}|}{|v_{in}|}=\frac{1.6}{0.02}=80
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img397.svg"
+ ALT="$\displaystyle A_v=\frac{\vert v_{out}\vert}{\vert v_{in}\vert}=\frac{1.6}{0.02}=80$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">82</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+</UL>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/DCACloadline.gif"
+ ALT="DCACloadline.gif">
+<IMG STYLE=""
+ SRC="../figures/transistorBJTexample1c.gif"
+ ALT="transistorBJTexample1c.gif">
+
+<P>
+The circuit above can also be analyzed using the small-signal model. 
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/DCACloadlineExModel.gif"
+ ALT="DCACloadlineExModel.gif">
+
+<P>
+Same as before, <!-- MATH
+ $r_{be}=1 \,k\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img398.svg"
+ ALT="$r_{be}=1 \,k\Omega$"></SPAN>, and we have the following DC variables:
+<BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+I_B&=&(V_{CC}-V_{BE})/R_B \approx V_{CC}/R_B=40 \;\mu A
+  \nonumber \\
+  I_C&=&\beta\;I_B=40\times 40\;\mu A=1.6\;mA	
+  \nonumber \\
+  V_{CE}&=&V_{CC}-R_C I_C=12-1.6\times 4=5.6\;V	
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img89.svg"
+ ALT="$\displaystyle I_B$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img87.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img399.svg"
+ ALT="$\displaystyle (V_{CC}-V_{BE})/R_B \approx V_{CC}/R_B=40 \;\mu A$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img86.svg"
+ ALT="$\displaystyle I_C$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img87.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img400.svg"
+ ALT="$\displaystyle \beta\;I_B=40\times 40\;\mu A=1.6\;mA$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img148.svg"
+ ALT="$\displaystyle V_{CE}$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img87.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img401.svg"
+ ALT="$\displaystyle V_{CC}-R_C I_C=12-1.6\times 4=5.6\;V$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">83</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+
+The AC variables:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+i_b=v_{in}/r_{be}, \;\;\;\;v_c=-i_c\; (R_C||R_L)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img402.svg"
+ ALT="$\displaystyle i_b=v_{in}/r_{be}, \;\;\;\;v_c=-i_c\; (R_C\vert\vert R_L)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">84</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The voltage gain is:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+A_v=\frac{v_c}{v_{in}}=-\frac{\beta\; i_b\;(R_C||R_L)}{r_{be}\,i_b}
+=-\frac{\beta\,(R_C||R_L)}{r_{be}}
+=-\frac{(40\times 2)\;k\Omega}{1\;k\Omega}=-80
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.06ex; " SRC="img403.svg"
+ ALT="$\displaystyle A_v=\frac{v_c}{v_{in}}=-\frac{\beta\; i_b\;(R_C\vert\vert R_L)}{r...
+...ta\,(R_C\vert\vert R_L)}{r_{be}}
+=-\frac{(40\times 2)\;k\Omega}{1\;k\Omega}=-80$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">85</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The input resistance is <!-- MATH
+ $r_{in}=R_B||r_{be}\approx r_{be}=1\,k\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img404.svg"
+ ALT="$r_{in}=R_B\vert\vert r_{be}\approx r_{be}=1\,k\Omega$"></SPAN>,
+the output resistance is <!-- MATH
+ $r_{out}=R_C=4\;k\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img405.svg"
+ ALT="$r_{out}=R_C=4\;k\Omega$"></SPAN>.
+
+<P>
+<B>Example 2:</B>
+
+<P>
+Consider the circuit below with its AC small-signal model:
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/Example5.gif"
+ ALT="Example5.gif">
+<IMG STYLE="" SRC="../figures/Example5a.png"
+ ALT="Example5a.png">
+
+<P>
+We can find the voltage gain, the input and output resistances when 
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img406.svg"
+ ALT="$R_S=0$"></SPAN> and <!-- MATH
+ $R_L=\infty$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img407.svg"
+ ALT="$R_L=\infty$"></SPAN> (<!-- MATH
+ $v_{in}=v_b,\;\;v_{out}=v_c$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.57ex; " SRC="img408.svg"
+ ALT="$v_{in}=v_b,\;\;v_{out}=v_c$"></SPAN>).
+
+<UL>
+<LI>AC voltage gain:
+
+<P>
+Apply KVL to the collector to get
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\frac{v_c-v_s}{R_B}+\beta i_b+\frac{v_c}{R_C}
+  =\frac{v_c-v_s}{R_B}+\beta \,\frac{v_s}{r_{be}}+\frac{v_c}{R_C}=0
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.11ex; vertical-align: -2.06ex; " SRC="img409.svg"
+ ALT="$\displaystyle \frac{v_c-v_s}{R_B}+\beta i_b+\frac{v_c}{R_C}
+=\frac{v_c-v_s}{R_B}+\beta \,\frac{v_s}{r_{be}}+\frac{v_c}{R_C}=0$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">86</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+i.e.,
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_C\left(\frac{1}{R_B}+\frac{1}{R_C}\right)
+  =v_s\left(\frac{1}{R_B}-\beta\frac{1}{r_{be}}\right)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img410.svg"
+ ALT="$\displaystyle v_C\left(\frac{1}{R_B}+\frac{1}{R_C}\right)
+=v_s\left(\frac{1}{R_B}-\beta\frac{1}{r_{be}}\right)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">87</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Solving this we get <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img200.svg"
+ ALT="$v_c$"></SPAN> and then find the AC voltage gain:
+  <BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+A&=&\frac{v_{out}}{v_{in}}=\frac{v_c}{v_s}
+  =\frac{1/R_B-\beta/r_{be}}{1/R_B+1/R_C}=\frac{R_C(r_{be}-\beta R_B)}{(R_B+R_C)r_{be}}
+  \approx-\beta \,\frac{R_C R_B}{(R_B+R_C)r_{be}}
+  \nonumber\\
+  &=&-\beta \frac{R_B||R_C}{r_{be}}=-\beta\frac{R_C}{r_{be}}\frac{R_B}{R_B+R_C}
+  \stackrel{R_B\rightarrow\infty}{\Longrightarrow}-\beta\frac{R_C}{r_{be}}
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img411.svg"
+ ALT="$\displaystyle A$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img87.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img412.svg"
+ ALT="$\displaystyle \frac{v_{out}}{v_{in}}=\frac{v_c}{v_s}
+=\frac{1/R_B-\beta/r_{be}}...
+...e}-\beta R_B)}{(R_B+R_C)r_{be}}
+\approx-\beta \,\frac{R_C R_B}{(R_B+R_C)r_{be}}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img87.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 5.57ex; vertical-align: -2.06ex; " SRC="img413.svg"
+ ALT="$\displaystyle -\beta \frac{R_B\vert\vert R_C}{r_{be}}=-\beta\frac{R_C}{r_{be}}\...
+...B+R_C}
+\stackrel{R_B\rightarrow\infty}{\Longrightarrow}-\beta\frac{R_C}{r_{be}}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">88</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+
+  where the approximation is due to the fact that <!-- MATH
+ $r_{be}\ll \beta R_B$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img414.svg"
+ ALT="$r_{be}\ll \beta R_B$"></SPAN>.
+  We see that when <!-- MATH
+ $R_B\rightarrow\infty$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img415.svg"
+ ALT="$R_B\rightarrow\infty$"></SPAN>, i.e., there is not negative
+  feedback, the gain becomes the same as the result before without feedback.
+
+<P>
+</LI>
+<LI>AC input resistance:
+
+<P>
+The input resistance is the parallel combination of <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img350.svg"
+ ALT="$r_{be}$"></SPAN> and
+  <SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.72ex; " SRC="img416.svg"
+ ALT="$r'_{in}$"></SPAN>, the resistence of the circuit to the right of the base. 
+  First, we realize that <!-- MATH
+ $i_b=v_b/r_{be}=v_s/r_{be}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img417.svg"
+ ALT="$i_b=v_b/r_{be}=v_s/r_{be}$"></SPAN>, and convert the
+  current source <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img418.svg"
+ ALT="$\beta i_b$"></SPAN> in parallel with <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img173.svg"
+ ALT="$R_C$"></SPAN> to a voltage source
+  <!-- MATH
+ $\beta i_bR_C$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img419.svg"
+ ALT="$\beta i_bR_C$"></SPAN> in series with <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img173.svg"
+ ALT="$R_C$"></SPAN>, and then get the current into the
+  circuit as:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+i=\frac{v_b-(-R_C\beta i_b)}{R_B+R_C}=\frac{v_b+R_C \beta v_b/r_{be}}{R_B+R_C}
+  =v_b \frac{1+R_C \beta /r_{be}}{R_B+R_C}
+  \approx v_b \frac{\beta R_C /r_{be}}{R_B+R_C}
+  
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.06ex; " SRC="img420.svg"
+ ALT="$\displaystyle i=\frac{v_b-(-R_C\beta i_b)}{R_B+R_C}=\frac{v_b+R_C \beta v_b/r_{...
+...rac{1+R_C \beta /r_{be}}{R_B+R_C}
+\approx v_b \frac{\beta R_C /r_{be}}{R_B+R_C}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">89</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+where the approximation is due to the fact that <!-- MATH
+ $r_{be}\ll \beta R_C$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img421.svg"
+ ALT="$r_{be}\ll \beta R_C$"></SPAN>. 
+  The resistance can then be found as
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+r'_{in}=\frac{v_b}{i}
+  =\frac{R_B+R_C}{\beta R_C /r_{be}}=\frac{R_B+R_C}{\beta R_C}\,r_{be}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img422.svg"
+ ALT="$\displaystyle r'_{in}=\frac{v_b}{i}
+=\frac{R_B+R_C}{\beta R_C /r_{be}}=\frac{R_B+R_C}{\beta R_C}\,r_{be}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">90</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+and the total input resistance is:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+r_{in}=r_{be}||r'_{in}=r_{be}\frac{1}{1+\beta R_C/(R_B+R_C)}
+  =r_{be}\frac{R_B+R_C}{R_B+(\beta+1) R_C}
+  =\left\{\begin{array}{ll} r_{be} & R_B\rightarrow\infty\\
+  r_{be}/\beta & R_B\rightarrow 0\end{array}\right.
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img423.svg"
+ ALT="$\displaystyle r_{in}=r_{be}\vert\vert r'_{in}=r_{be}\frac{1}{1+\beta R_C/(R_B+R...
+...be} &amp; R_B\rightarrow\infty\\
+r_{be}/\beta &amp; R_B\rightarrow 0\end{array}\right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">91</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>AC output resistance:
+
+<P>
+
+<UL>
+<LI>Open-circuit voltage with <!-- MATH
+ $R_L=\infty$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img407.svg"
+ ALT="$R_L=\infty$"></SPAN> is simply
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_{oc}=A v_b=-\beta\frac{R_C}{r_{be}}\frac{1}{1+R_C/R_B}\,v_b
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img424.svg"
+ ALT="$\displaystyle v_{oc}=A v_b=-\beta\frac{R_C}{r_{be}}\frac{1}{1+R_C/R_B}\,v_b$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">92</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+<LI>Short-circuit current with <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img425.svg"
+ ALT="$R_L=0$"></SPAN>:
+    Short-circuit current by <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img369.svg"
+ ALT="$v_b$"></SPAN> alone is <!-- MATH
+ $i'=v_b/R_B$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img426.svg"
+ ALT="$i'=v_b/R_B$"></SPAN>,
+    Short-circuit current by current source <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img418.svg"
+ ALT="$\beta i_b$"></SPAN> alone is
+    <!-- MATH
+ $i''=-\beta i_b=-\beta v_b/r_{be}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img427.svg"
+ ALT="$i''=-\beta i_b=-\beta v_b/r_{be}$"></SPAN>. The total short-circuit current is
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+i_{sc}=i'+i''=v_b\left(\frac{1}{R_B}-\frac{\beta}{r_{be}}\right)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img428.svg"
+ ALT="$\displaystyle i_{sc}=i'+i''=v_b\left(\frac{1}{R_B}-\frac{\beta}{r_{be}}\right)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">93</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>Output resistance:
+    <BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+r_{out}&=&\frac{v_{oc}}{i_{sc}}=\frac{-\beta\frac{R_C}{r_{be}}\frac{1}{1+R_C/R_B}}
+    {1/R_B-\beta/r_{be}}
+    =\frac{-\beta\frac{R_C}{r_{be}}\frac{1}{1+R_C/R_B}}{\frac{r_{be}-\beta R_B}{R_B r_{be}}}
+    \nonumber\\
+    &\approx& \frac{-\beta\frac{R_C}{r_{be}}\frac{R_B}{R_B+R_C}}{\frac{-\beta R_B}{R_B r_{be}}}
+    =\frac{R_C R_B}{R_C+R_B}=R_C||R_B\stackrel{R_B\rightarrow\infty}{\Longrightarrow}R_C
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img429.svg"
+ ALT="$\displaystyle r_{out}$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img87.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 7.43ex; vertical-align: -3.07ex; " SRC="img430.svg"
+ ALT="$\displaystyle \frac{v_{oc}}{i_{sc}}=\frac{-\beta\frac{R_C}{r_{be}}\frac{1}{1+R_...
+...beta\frac{R_C}{r_{be}}\frac{1}{1+R_C/R_B}}{\frac{r_{be}-\beta R_B}{R_B r_{be}}}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img282.svg"
+ ALT="$\displaystyle \approx$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 7.20ex; vertical-align: -3.07ex; " SRC="img431.svg"
+ ALT="$\displaystyle \frac{-\beta\frac{R_C}{r_{be}}\frac{R_B}{R_B+R_C}}{\frac{-\beta R...
+...}{R_C+R_B}=R_C\vert\vert R_B\stackrel{R_B\rightarrow\infty}{\Longrightarrow}R_C$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">94</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+
+<P>
+</LI>
+</UL>
+
+<P>
+</LI>
+</UL>
+
+<P>
+<B>Example 3:</B>
+
+<P>
+Consider both the DC operating point and its AC small signal model of the
+circuit below:
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/Example6.png"
+ ALT="Example6.png">
+
+<P>
+Apply KVL to get
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_{CC}-V_{BE}=I_B R_B+(\beta+1)I_BR_E,\;\;\;\;\;
+I_B=\frac{V_{CC}-V_{BE}}{R_B+(\beta+1)R_E}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img432.svg"
+ ALT="$\displaystyle V_{CC}-V_{BE}=I_B R_B+(\beta+1)I_BR_E,\;\;\;\;\;
+I_B=\frac{V_{CC}-V_{BE}}{R_B+(\beta+1)R_E}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">95</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+and
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_C=\beta I_B=\beta\,\frac{V_{CC}-V_{BE}}{R_B+(\beta+1)R_E},\;\;\;\;\;
+V_{CE}\approx V_{CC}-I_C(R_C+R_E)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img433.svg"
+ ALT="$\displaystyle I_C=\beta I_B=\beta\,\frac{V_{CC}-V_{BE}}{R_B+(\beta+1)R_E},\;\;\;\;\;
+V_{CE}\approx V_{CC}-I_C(R_C+R_E)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">96</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+We assume <!-- MATH
+ $V_{CC}=12V,\;R_E=0.1\,k\Omega,\;\beta=100$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img434.svg"
+ ALT="$V_{CC}=12V,\;R_E=0.1\,k\Omega,\;\beta=100$"></SPAN>, and consider the
+following for the DC operating point to be in the middle of the linear 
+region:
+
+<UL>
+<LI>Given <!-- MATH
+ $R_C=1.9\,k\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img435.svg"
+ ALT="$R_C=1.9\,k\Omega$"></SPAN>, we need to find <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img172.svg"
+ ALT="$R_B$"></SPAN>:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_E=\frac{V_{CC}-V_{CE}}{R_C+R_E}=\frac{6}{0.1+1.9}=3\,mA,\;\;\;\;
+  I_B=\frac{I_C}{\beta}=0.03\,mA
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.16ex; " SRC="img436.svg"
+ ALT="$\displaystyle I_E=\frac{V_{CC}-V_{CE}}{R_C+R_E}=\frac{6}{0.1+1.9}=3\,mA,\;\;\;\;
+I_B=\frac{I_C}{\beta}=0.03\,mA$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">97</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+But 
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+R_B+(\beta+1)R_E=\frac{V_{CC}-V_{BE}}{I_B}=\frac{12-0.7}{0.03}=377\,k\Omega
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img437.svg"
+ ALT="$\displaystyle R_B+(\beta+1)R_E=\frac{V_{CC}-V_{BE}}{I_B}=\frac{12-0.7}{0.03}=377\,k\Omega$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">98</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+R_B=377-100\times 0.1=367\,k\Omega
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img438.svg"
+ ALT="$\displaystyle R_B=377-100\times 0.1=367\,k\Omega$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">99</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>Alternatively, given <!-- MATH
+ $R_B=250\,k\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img439.svg"
+ ALT="$R_B=250\,k\Omega$"></SPAN>, we can find <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img173.svg"
+ ALT="$R_C$"></SPAN>:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_B=\frac{V_{CC}-V_{BE}}{R_B+\beta R_E}
+  =\frac{12-0.7}{250+100\times 0.1}=\frac{11.3}{260}=0.044
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.16ex; " SRC="img440.svg"
+ ALT="$\displaystyle I_B=\frac{V_{CC}-V_{BE}}{R_B+\beta R_E}
+=\frac{12-0.7}{250+100\times 0.1}=\frac{11.3}{260}=0.044$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">100</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\frac{V_{CC}-V_{CE}}{R_C+R_E}=\frac{6}{0.1+R_C}=I_C=\beta I_B=4.4\,mA
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img441.svg"
+ ALT="$\displaystyle \frac{V_{CC}-V_{CE}}{R_C+R_E}=\frac{6}{0.1+R_C}=I_C=\beta I_B=4.4\,mA$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">101</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Solving to get <!-- MATH
+ $R_C=1.26\,k\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img442.svg"
+ ALT="$R_C=1.26\,k\Omega$"></SPAN>.
+</LI>
+</UL>
+
+<P>
+Next consider the AC equivalent circuit based on small-signal model of the
+transistor in the dashed line box:
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/Example6a.png"
+ ALT="Example6a.png">
+
+<P>
+As <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img172.svg"
+ ALT="$R_B$"></SPAN> is significantly greater than all resistors in the circuit, it can
+be ignored in the AC analysis. Apply KCL to the emitter to get
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+i_b+\beta i_b=(\beta+1)i_b=\frac{v_e}{R_E}=\frac{v_{in}-r_{be}i_b}{R_E}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img443.svg"
+ ALT="$\displaystyle i_b+\beta i_b=(\beta+1)i_b=\frac{v_e}{R_E}=\frac{v_{in}-r_{be}i_b}{R_E}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">102</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Solving for <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img342.svg"
+ ALT="$i_b$"></SPAN>:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+i_b=\frac{v_{in}}{r_{be}+(\beta+1)R_E}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.11ex; vertical-align: -2.29ex; " SRC="img444.svg"
+ ALT="$\displaystyle i_b=\frac{v_{in}}{r_{be}+(\beta+1)R_E}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">103</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<UL>
+<LI>AC input resistance:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+r_{in}=\frac{v_{in}}{i_{in}}=\frac{v_{in}}{i_b}=r_{be}+(\beta+1)R_E
+  \approx \beta R_E
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.88ex; vertical-align: -2.06ex; " SRC="img445.svg"
+ ALT="$\displaystyle r_{in}=\frac{v_{in}}{i_{in}}=\frac{v_{in}}{i_b}=r_{be}+(\beta+1)R_E
+\approx \beta R_E$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">104</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>AC voltage gain:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+A=\frac{v_{out}}{v_{in}}=-\frac{\beta i_b (R_C||R_L)}{v_{in}}
+  =-\frac{\beta\,(R_C||R_L)}{v_{in}}\,\frac{v_{in}}{r_{be}+(\beta+1)R_E}
+  =-\frac{\beta\,R_C||R_L}{r_{be}+(\beta+1)R_E}
+  \approx -\frac{R_C||R_L}{R_E}
+  
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img446.svg"
+ ALT="$\displaystyle A=\frac{v_{out}}{v_{in}}=-\frac{\beta i_b (R_C\vert\vert R_L)}{v_...
+...,R_C\vert\vert R_L}{r_{be}+(\beta+1)R_E}
+\approx -\frac{R_C\vert\vert R_L}{R_E}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">105</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>AC output resistance:
+  
+<UL>
+<LI>Open-circuit voltage (<!-- MATH
+ $R_L=\infty$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img407.svg"
+ ALT="$R_L=\infty$"></SPAN>):
+    <!-- MATH
+ $v_{oc}=-\beta i_b R_C$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img447.svg"
+ ALT="$v_{oc}=-\beta i_b R_C$"></SPAN>
+</LI>
+<LI>Short-ciruit current (<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img425.svg"
+ ALT="$R_L=0$"></SPAN>):
+    <!-- MATH
+ $i_{sc}=-\beta i_b$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img448.svg"
+ ALT="$i_{sc}=-\beta i_b$"></SPAN>
+</LI>
+<LI>Output resistance:
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+r_{out}=\frac{v_{oc}}{i_{sc}}=R_C
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.88ex; vertical-align: -2.06ex; " SRC="img449.svg"
+ ALT="$\displaystyle r_{out}=\frac{v_{oc}}{i_{sc}}=R_C$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">106</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+</UL>
+</LI>
+</UL>
+In conclusion, the negative feedback introduced by <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img247.svg"
+ ALT="$R_E$"></SPAN> increases the 
+input resistance, and stabalizes the DC operating point as well as the 
+AC voltage gain.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node9.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="ch4.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node7.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node9.html">Emitter Follower</A>
+<B> Up:</B> <A
+ HREF="ch4.html">ch4</A>
+<B> Previous:</B> <A
+ HREF="node7.html">Small-Signal Model and H</A></DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

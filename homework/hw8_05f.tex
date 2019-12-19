@@ -1,0 +1,325 @@
+\documentstyle[12pt]{article}
+\usepackage{html}
+\begin{document}
+\vskip 1in
+\begin{center}
+{\Large \bf E85 Home Work 8 (05 Fall)}
+\end{center}
+
+\begin{enumerate}
+
+\item Consider the following MIPS code segment. Assume each instruction contains four 
+bytes and the number in front of some of the instructions represent their addresses in 
+the main memory. 
+
+Comment on the function of each instruction labeled with a number sign $\#$, and show 
+the contents of (0) \$ra=\$31, (1) the program counter PC, (2) the stack pointer SP, and
+(3) the top item of the stack in memory during the following moments (assuming before 
+subroutine 1 is called [\$ra]=0, [sp]=6000, M[6000]=0):
+\begin{itemize}
+    \item After Main calls Sub1;
+    \item After Sub1 calls Sub2;
+    \item After Sub2 returns to Sub1;
+    \item After Sub1 returns to Main;
+\end{itemize}
+
+\[ \begin{tabular}{lll}
+2000	& $ \cdots $	& \# Main \\
+        & $ \cdots $	& \\
+2100	& jal Sub1	& \# \\
+2104	& $ \cdots $	& \\
+	& $ \cdots $	& \\
+        &---------------& \\
+3000	& $ \cdots $	& \# Sub1 \\
+	& $ \cdots $	& \\
+	& add \$sp, \$sp, \$t8	& \# \\
+	& sw  \$ra, 0(\$sp)	& \# \\
+3200	& jal Sub2		& \# \\
+3204	& lw  \$ra, 0(\$sp)	& \# \\
+	& sub \$sp, \$sp, \$t8	& \# \\
+	& $ \cdots $	& \\
+	& $ \cdots $	& \\
+	& jr \$ra	& \# \\
+        &---------------& \\
+4000	& $ \cdots $	& \# Sub2 \\
+	& $ \cdots $	& \\
+	& jr \$ra	& \# \\
+\end{tabular} \]
+
+{\bf Solution:} 
+  \begin{itemize}
+    \item After Main calls Sub1: \$ra=2104, PC=3000, SP=6000, M[6000]=0
+    \item After Sub1 calls Sub2: \$ra=3204, PC=4000, SP=6004, M[6004]=2104
+    \item After Sub2 returns to Sub1: \$ra=2104, PC=3204, SP=6000, M[6000]=0
+    \item After Sub1 returns to Main: \$ra=2104, PC=2104, SP=6000, M[6000]=0
+  \end{itemize}
+\end{itemize}
+
+
+\item Represent $x=26.25$ and $y=-43.75$ in the 32-bit IEEE 754 format, with 
+  implied 1 for the significand (mantissa) and a bias of 127 for the exponent.
+
+{\bf Solution:} $26.25=(1.101001)_2\times 2^4$; $43.75=(1.0101111)_2\times 2^5$; 
+$S_x=0$, $S_y=1$, $E_x=(127+4)_{10}=(10000011)_2$, $E_y=(127+5)_{10}=10000100_2$,
+$M_X=1010010\cdots 0$, $M_y=01011110\cdots 0$.
+
+\item Carry out $z=x+y=26.25+(-43.75)$ by following the steps discussed in class:
+  \begin{itemize}
+    \item align exponents and set $E_z$;
+    \item right shift significand correponding to the smaller exponent;
+    \item carry out addition (recover implied 1, represent both significands in 
+      signed 2's complement with an extra sign bit, add the significands);
+    \item set $S_z$ according to the sign bit of the result above;
+    \item set $M_z$ as magnitude of the result above, then normalize;
+    \item give final 32-bit IEEE 754 representation of $z=x+y$
+  \end{itemize}  
+
+{\bf Solution:} $26.25=(1.101001)_2\times 2^4$; $43.75=(1.0101111)_2\times 2^5$; 
+\begin{itemize}
+\item align exponents: since $E_y>E_x$, we let $E_Z=E_y=10000100$.
+\item right shift $M_x$: $M_x=00.11010010\cdots 0$ (with a sign bit added).
+\item find 2's-complement of $M_y=01.01011110\cdots 0$: $\overline{M_y}=10.10100010\cdots 0$
+\item carry out addition: $M_x+\overline{M_y}=00.11010010\cdots 0+10.10100010\cdots 0
+  =11.0111010\cdots 0$
+\item set $S_z=1$ due to the sign bit of 1;
+\item find $M_z=00.1000110\cdots 0$, and normalize $z$ by left shifting $M_z$ by 
+  1 bit: $M_z=1.000110$;
+\item adjust exponent $E_z=10000101$;
+\item final $z$: $1 10000101 000110\cdots 0$, representing:
+  $z=-1.000110\times 2^4=-17.5_{10}$
+\end{itemize}
+
+\end{enumerate}
+
+\end{document}
+
+
+\item There are times when we want to add a collection of numbers together.
+	Two methods can be used to add four 4-bit numbers (A,B,E,F) using 
+	1-bit full adders, as shown in the figure. The first one uses
+	traditional method of ripple carry, and the second one, the 
+	carry-save adder, only uses ripple carry at the very last step.
+
+	\htmladdimg{../f4.56.gif}
+
+	For each method, find the number of gate delays needed to generate 
+	each one of the outputs from $s_0$ to $s_5$. As discussed in class, 
+	once the three inputs $x_i$, $y_i$ and $c_i$ are available, it 
+	takes 2 gate delays for a full adder to generate the carry out 
+	$c_{i+1}=x_iy_i+x_ic_i+y_ic_i$, and 3 gate delays to generate the 
+	sum $s_i=x'_iy'_ic_i+x'_iy_ic'_i+x_iy'_ic'_i+x_iy_ic_i$. (Hint: it 
+	is important to identify the ``bottle neck'' or the critical path, 
+	i.e., the slowest path for generating each output.)
+
+	How many gate delays does the second method save, compared with the
+	first method?
+
+\item Carry out $27 \times 22$ using the 
+	\htmladdnormallink{circuit shown in class}{../../lectures/figures/multiplication_hardware.gif}
+        For simplicity, assume each register has 6 bits (instead 16 or 32 bits as in 
+        reality).
+\item Carry out $17 \div 5$ using the 
+	\htmladdnormallink{circuit shown in class}{../../lectures/figures/division_hardware.gif}
+	and the restoring algorithm. Assume each register has 6 bits.
+
+\item Do the same division $17 \div 5$ using non-restoring algorithm and the
+	circuit shown in class. Assume each register has 6 bits.
+
+\item Use Booth's method for signed binary multiplications to do $-22 \times (-14)$. 
+        Assume you are doing this using the hardware including registers A, Q,
+        M and the adder, etc., just the same way as I demonstrated 
+        $22 \times (-34)$ in class.
+
+\item Use Booth's method for signed binary multiplications to do $-22 \times (-14)$. 
+        Assume you are doing this using the hardware including registers A, Q,
+        M and the adder, etc., just the same way as I demonstrated 
+        $22 \times (-34)$ in class.
+
+\item To represent floating point values, a 16-bit register is divided into
+        3 fields: 1 sign bit, 4 exponent bits and 11 significand bits. The implied 
+        base is 8 and all the representations are normalized. Answer the following 
+        questions:
+        \begin{enumerate}
+           \item what does ``normalization'' mean in this format?
+           \item find the range of all values representable in this format. 
+           \item find the smallest positive value representable in this format.
+           \item find the total number of values representable.
+           \item find the smallest and largest gaps between two neighboring values
+                representable by this format.
+        \end{enumerate}
+
+\item The significand field of a floating-point representation has a fixed number of
+        bits, say, n bits. However, to retain maximum accuracy, all extra bits (called
+        guard bits) are kept during arithmetic operations until the final result is 
+        obtained and then truncated at the very end of the operation. For example, 
+        extra bits are kept in multiplication to get the product which has 2n bits:
+
+        \[      0.b_{-1}b_{-2} \cdots b_{-n}b_{-n-1} \cdots b_{-2n}     \]
+
+        The n least significant bits (LSB) ($b_{-n-1} \cdots b_{-2n}$) are the guard
+        bits. There are three way to truncate this 2n-bit result into an n-bit one:
+        \begin{enumerate}
+        \item Chopping: simply drop the n guard bits;
+        \item Von Neumann Rounding: if at least one of the n guard bits is
+                1, the LSB of the retained bits ($b_{-n}$) is set to 1, no 
+                matter  what value it has originally.
+        \item Rounding: 
+                \begin{itemize}
+                \item If the highest guard bit ($b_{-n-1}$) is 0, drop all 
+                        guard bits;
+                \item If the highest guard bit is 1 and the rest guard bits 
+                        are not all 0, add 1 to the LSB of the retained bits 
+                        ($b_{-n}$);
+                \item If the highest guard bit is 1 and the rest guard bits
+                        are all 0 (a tie), then drop all guard bits if 
+                        $b_{-n}=0$, or add 1 to $b_{-n}$ if $b_{-n}=1$:
+                \end{itemize}
+
+        \end{enumerate}
+        The error caused by truncation is defined as: 
+        \[ error = value\;before\;truncation-value\;after\;truncation   \]
+        This error may be either positive or negative. 
+
+        Find the range of errors (most negative error and the most positive
+        error) in terms of n for all three ways of truncation.
+
+        Truncate the following 6-bit numbers to 3-bit numbers using all 
+        three methods: 
+        \vskip 0.2in
+        \begin{tabular}{c|c|c|c} \hline
+                        & chopping      & V.N. rounding & rounding \\ \hline
+         0.101010       &               &               &          \\
+         0.110110       &               &               &          \\
+         0.101100       &               &               &          \\ \hline
+        \end{tabular}
+        \vskip 0.2in
+                
+
+\item   In the following block diagram (same as used in class) shows the hardware 
+        needed for floating point addition and subtraction, the actual operation
+        is specified by a 1-bit control signal $\overline{ADD}/SUB$ to the control
+        unit (0 for addition, 1 for subtraction). However, the actual operation taking
+        place in $ALU_M$ is controlled by another signal $\overline{A}/S$ (0 for addition,
+        1 for subtraction) generated by the control unit based on $\overline{ADD}/SUB$
+        and some other signals it receives. Give the logic design of that part of the 
+        control unit which takes relevant inputs and generates $\overline{A}/S$. No need
+        to draw the gate level circuits. Rename $\overline{ADD}/SUB$ and $\overline{A}/S$
+        as $O_{int}$ and $O_{out}$, respectively, for easy reference.
+
+        \htmladdimg{../hw5.gif}
+
+\newpage
+\item   The hardware shown in previous problem is to be used for the following floating
+        point operations. Assume all operands are represented by 8-bit registers with 1 
+        bit for the sign, 3 bits for the exponent, and 4 bits for the significand. The
+        implied base is 2 and a bias of 4 is used for the exponent. (No implied 1. is
+        assumed in this case.) Now in this 8-bit format, carry out the following additions
+        and subtractions in the steps discussed in class (also in handouts). The result of
+        the previous problem is helpful here. Also pay attention to how to correctly set
+        $S_c$, the sign of the result, which is not always the same as the sign bit of 
+        $ALU_M$ (identify such cases). 
+
+        \begin{enumerate}
+        \item   $1.0+0.5=1.0-(-0.5)$
+        \item   $-1.0-0.5=-1.0+(-0.5)$
+        \item   $1.0-0.5=1.0+(-0.5)$
+        \item   $0.5-1.0=0.5+(-1.0)$
+        \item   $-1.0+0.5=-1.0-(-0.5)$
+        \item   $-0.5+1.0=-0.5-(-1.0)$
+        \end{enumerate}
+        {\bf Hint:} When the $ALU_M$ operates on the significands $M_A$ and $M_B$
+        (positive fractions), they need to be in signed 2's complement format which 
+        requires a sign bit to the left of the decimal point. This extra bit is 
+        assumed to be available inside $ALU_M$. 
+
+\item   The control unit in the block diagram above for floating point addition and 
+        subtraction is also responsible for generating $S_c$, the sign of the result, 
+        which is not always the same as the sign generated by the $ALU_M$, as can be
+        seen in the prevous problem. Now give the logic design of that part of the 
+        control unit which takes relevant inputs and generates $S_c$ (no need to draw 
+        the gate level schematic.)
+
+        Hint 1: You may find the results of problem 5 useful.
+
+        Hint 2: The sign bit of $ALU_M$ is obviously needed (name it {\em sign}) in
+        addition to those variables used to generate the control signal $\overline{A}/S$
+        in problem 4, 
+
+\end{enumerate}
+
+\end{document}
+
+
+\item Use Booth's method to do the following binary multiplications. 
+        Assume you are doing this using the hardware including registers A, Q,
+        M and the adder, etc., just the same way as I demonstrated 
+        $22 \times (-14)$ in class.
+        \begin{enumerate}
+        \item $22 \times 14 $
+        \item $(-22) \times (-14)$
+        \end{enumerate}
+
+
+
+\item As discussed in class, a simple check for overflow (and underflow) 
+during addition is to see if the CarryIn to the MSB is not the same as the
+CarryOut of the MSB. Prove that this check is valid in general in all 6 (why 6?) 
+possible combinations of the signs of the two operands A and B, as well as the 
+result A+B, as listed below. All you need is to check for each case to confirm 
+that the result will have the wrong sign if and only if CarryIn and CarryOut of
+the MSB are different. (This is an easy proof as you simply exhaust all the 
+possible cases.)
+\[
+\vskip 0.2in
+\begin{tabular}{c|c|c}  \hline
+        Operand A       & Operand B     & Result A+B \\ \hline
+        $\geq 0$        & $\geq 0$      & $\geq 0$              \\ \hline
+        $\geq 0$        & $\geq 0$      & $< 0$                 \\ \hline
+        $\geq 0$        & $< 0$         & $\geq 0$              \\ \hline
+        $\geq 0$        & $< 0$         & $< 0$                 \\ \hline
+        $< 0$           & $< 0$         & $\geq 0$              \\ \hline
+        $< 0$           & $< 0$         & $< 0$                 \\ \hline
+\end{tabular}
+\vskip 0.2in
+\]
+\item 
+\begin{enumerate}
+\item In class we defined $G_0$ and $P_0$ and derived $c_4=G_0+P_0\;c_0$ for 
+        the first 4-bit block $B_0$ (containing $b_0,\;b_1,\;b_2,\;b_3$). Now 
+        define the $G$ and $P$ for blocks $B_i\;(i=1,2,3)$ and derive $c_8$,
+        $c_{12}$ and $c_{16}$ as functions of these $G's$ and $P's$ and $c_0$.
+
+\item   Now you are ready to build a two-level carry
+        lookahead adder. Show your design just as what we did for the one-level
+        carry lookahead adder (the drawing at the bottom of the paper titled
+        ``Carry-lookahead adder'').
+\end{enumerate}
+
+\item 
+\begin{enumerate}
+\item We mentioned in class that carry-lookahead adder can perform addition
+        in constant time (independent of number of bits in the operands). 
+        Ideally (assuming the logic gates can have unlimited inputs) how much 
+        time does an addition need in terms of number of gate-delays? 
+	% 1+2+3=6
+\item Assume, due to the physical constraints, each logic gate can have at
+        most 5 inputs so that only a 4-bit addition can be carried out by a
+        carry-lookahead adder. An n-bit addition can be carried out by a
+        set of concatenated 4-bit lookahead adders with ripple inter-adder 
+        carries, as illustrated on the web notes). Now the time for an n-bit 
+	addition is no longer independent of the number of bits n. Find the 
+	number of gate delays for an addition as a function of the number of 
+	bits n.
+        % 1+2(n/4)+3=n/2+4
+\item To speed up, a 2nd-level carry-lookahead logic can be added. However,
+        The adder is still subject to the limitation of at most 5 inputs for 
+	a logic gate, i.e., we can only put four 4-bit carry-lookahead adders 
+        together to form a 16-bit block with 2nd-level carry-lookahead logic,
+        and use ripple carry between two such blocks. Find the number of gate
+        delays for such a two-level carry-lookahead adder as a function of
+        number of bits n (e.g., n=32, 48, 64, etc.). 
+	% 1+2+2(n/16)+3=n/8+6
+\item Any idea how to speed up the 2-level carry lookahead adder for a 64-bit
+        adder? How many gate delays does your design need for the addition?
+        % 3-level carry-lookahead adder, 1+2+2+2+3=10 (n/32+8=2+8) gate delays
+\end{enumerate}

@@ -1,0 +1,31 @@
+\documentstyle[12pt]{article}
+\usepackage{html}
+
+\begin{document}
+
+  \htmladdimg{../figures/voltageamplifierex7a.gif}
+
+  First consider the voltage $v_{in}$ of the input port:
+  \[ v_{in}=v_s \frac{R_{in}}{R_s+R_{in}}
+  =1.5 \frac{R_{in}}{5 k\Omega +R_{in}}=1.25 V \]
+  Solving this equation for $R_{in}$, we get $R_{in}=25 k\Omega$
+
+  Next consider the voltage of the output port:
+  \[ v_{out}=A v_{in} \frac{R_L}{R_L+R_{out}} \]
+  i.e., 
+  \[ R_L A v_{in}-v_{out} R_{out} = v_{out} R_L \]
+  Using the values of $R_L$ and $V_L$ of the two experiments, we get
+  \[ \left\{ \begin{array}{l} 
+    150 Av_{in}-18.75 R_{out} = 2812.5 \\
+    200 Av_{in}-20.00 R_{out} = 4000 \end{array} \right. \]
+  Solving these two equations we get
+  \[ \left\{ \begin{array}{l} 
+    R_{out}=50 \Omega \\ Av_{in}=25 V \end{array} \right. \]
+  But we know $v_{in}=1.25 V$, we get $A=20$.  
+
+\end{document}
+
+
+
+
+

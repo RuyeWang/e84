@@ -1,0 +1,240 @@
+\documentstyle[12pt]{article}
+\usepackage{html}
+\textwidth 6.0in
+\topmargin -0.5in
+\oddsidemargin -0in
+\evensidemargin -0.5in
+% \usepackage{graphics}  
+\begin{document}
+
+\section*{Chapter 5: Operational Amplifiers (Op-amps)}
+
+{\bf Circuit Schematic}
+
+\htmladdimg{../figures/opamp741.gif}
+
+{\bf Operation:}	
+\[	v_{out}=A v_{in}=A (v^+ - v^-)	\]
+
+Although the schematic of an Op-amp looks complicated, its 
+analysis can be simplified by the following approximation:
+\begin{itemize}
+\item The voltage gain $A$ is huge ($10^5 \sim 10^9$) and could be considered
+	infinity, i.e., for finite output $v_{out}$, the input is
+	close to zero $v_{in}=v^+ - v^-=0$ or $v^+=v^-$;
+\item The input impedance is huge ($10^6\sim 10^{12} \;\Omega$ depending
+	on whether BJT or FET is used), approximated as infinity 
+	$z_{in}\rightarrow \infty$;
+\item The op-amp draws little current from its source 
+	($10^{-9}\sim10^{-12}\;A$), approximated as $i^+=i^-=0$;
+\item The output impedance is small (50 $\Omega$), approximated as 
+	zero $z_{out}=0$, i.e., the output $v_{out}$ is not affected
+	by the load $R_L$ (so long as it is much greater than 50 $\Omega$).
+\item The bandwidth is large ($1 \sim 20MHz$), approximated as infinity.
+\end{itemize}
+
+\htmladdimg{../figures/opam1.gif}
+
+\begin{itemize}
+\item {\bf Inverter}
+
+\htmladdimg{../figures/opam2.gif}
+
+As the input current is negligible, i.e., $i=i_1+i_2 \approx 0$, we have
+\[
+	i_1+i_2= \frac{v^- -v_1}{R_1}+\frac{v^- -v_o}{R_f}=0
+\]
+but also since
+\[	v^- \approx v^+ = 0	\]
+we have
+\[	\frac{v_o}{v_1}=-\frac{R_f}{R_1}	\]
+In particular, if $R_f=R_1$, we have
+\[	v_o=-v_1	\]
+
+In general, $R_1$ and $R_2$ in the inverter can be replaced by two networks
+$Z_1$ and $Z_2$ containing resistors and capacitors and the analysis of the
+circuit can be carried out easily in Laplace domain:
+\[	H(s)=\frac{V_o}{V_i}=-\frac{Z_2(s)}{Z_1(s)}	\]
+This is a convenient way to design filters of various frequency 
+characteristics.
+\htmladdimg{../figures/opam11.gif}
+
+\item {\bf Summer-inverter}
+
+\htmladdimg{../figures/opam3.gif}
+
+As the input current $i$ is negligible, we have
+\[ i=\sum_{j=1}^n \frac{v^--v_j}{R_j}+\frac{v^--v_o}{R_f} \approx 0	\]
+and we also know
+\[	v^- \approx v^+= 0 \]
+we have
+\[
+	v_o=-R_f \sum_{j=1}^n \frac{v_j}{R_j} = - \sum_{j=1}^n k_j v_j \]
+where $k_j \stackrel{\triangle}{=}R_f/R_j$ ($j=1,2,\cdots,n$) are the $n$ 
+coefficients.
+
+\item {\bf Summer with different signs}
+
+\htmladdimg{../figures/opam5.gif}
+
+Define $v$ as
+\[	v\stackrel{\triangle}{=}v^+ \approx v^- \]
+and note
+\[	i_1 \approx 0 \;\;\;\;\mbox{   }\;\;\; i_2 \approx 0	\]
+we have these simultaneous equations
+\[
+\left\{ \begin{array}{ll} 
+	(v-v_1)/R_1+(v-v_o)/R_f=0 & (a) \\
+	(v-v_2)/R_2+(v-v_3)/R_3=0 & (b) 
+	\end{array} \right.
+\]
+We solve (b) for $v$ to get
+\[	v=\frac{R_2}{R_2+R_3} v_3 + \frac{R_3}{R_2+R_3}v_2	\]
+and substitute it into (a) to get
+\[
+v_o=(\frac{R_f}{R_1}+1)[\frac{R_2}{R_2+R_3} v_3+\frac{R_3}{R_2+R_3} v_2]-\frac{R_f}{R_1}v_1
+=-k_1v_1+k_2v_2+k_3v_3	
+\]
+where
+\[ \left\{ \begin{array}{l} k_1=\frac{R_f}{R_1}	\\ 
+	k_2=(\frac{R_f}{R_1}+1)\frac{R_3}{R_2+R_3} \\
+	k_3=(\frac{R_f}{R_1}+1)\frac{R_2}{R_2+R_3} \end{array} \right.
+\]
+\htmladdimg{../figures/opam6.gif}
+
+\item {\bf Difference amplifier}
+
+\htmladdimg{../figures/opam10.gif}
+As the input currents are zero, currents flowing through $R_1$ and $R_2$
+are equal for both sides, i.e.,
+\[	\frac{V_1-V^-}{R_1}=\frac{V^--V_o}{R_2},\;\;\;\;\;\;
+	\frac{V_2-V^+}{R_1}=\frac{V^+-0}{R_2}		\]
+Assumeing $V_1=V_2$ and subtracting the second equation from the first, 
+we get:
+\[	\frac{V_1-V_2}{R_1}=\frac{-V_o}{R_2},\;\;\;\;
+	V_o=-\frac{R_2}{R_1}\;(V_1-V_2)=\frac{R_2}{R_1}\;(V_2-V_1)	\]
+
+\item {\bf A/D converter}
+
+Without feedback, the output of an op-amp is $V_o=A(V^--^+)$. As $A$ is
+large, $V_o$ is usually saturated, equal to approximately either the 
+positive or the negative power supply, depending on whether or not $V^+$ 
+is greater than $V^-$. These two possible outputs, positive and negative,
+can be treated as ``1'' and ``0'' of the binary system. The figure shows
+an A/D converter built by three op-amps to measure voltage $V_i$ from 0 to 
+3 volts with resolution 1 V.
+
+\htmladdimg{../figures/opam12.gif}
+
+Due to the voltage dividor, the input voltages to the three opamps are, 
+respectively, 2.5V, 1.5V and 0.5V. The output of these opamps are listed
+below for each of the voltages:
+
+\begin{tabular}{c|cccc}\hline \\
+Voltage (volts) & 0 	& 1	& 2	& 3	\\
+Opamps Outputs	& 000	& 001	& 011	& 111	\\
+Binary Representation	& 00	& 01	& 10	& 11	\\ \hline
+\end{tabular}
+A digital logic circuit is then needed to convert the 3-bit output
+of the op-amps to the two-bit binary representation.
+
+\item {\bf First order system --- integrator and differentiator}
+
+\htmladdimg{../figures/opam4.gif}
+
+In time domain, as $v^-=v^+=0$ and $i_R+i_C=0$, we have
+\[	i_R=-i_C \Longrightarrow \frac{v_i}{R}=-C\frac{d v_C}{dt}
+	=-C\frac{d v_o}{dt}	\]
+i.e.,
+\[	v_o=v_C=-\frac{1}{\tau} \int v_i dt+v_C(0)	\]
+where $v_C(0)$ is the initial voltage across $C$ and 
+$\tau\stackrel{\Triangle}{=}RC$. In Laplas domain, following the result
+similar for the inverter, we have
+\[
+H(s)=\frac{V_o(s)}{V_i(s)}=-\frac{Z_C(s)}{Z_R(s)}=-\frac{1}{RCs}
+	=-\frac{1}{\tau s}	\]
+If we swap the resistor and the capacitor, we get
+\[	V_C=V_R \Longrightarrow C\frac{d V_i}{dt}=\frac{-V_o}{R}	\]
+i.e.,
+\[	V_o=-RC \frac{d V_i}{dt}=-\tau \frac{d V_i}{dt}	\]
+in Laplas domain,
+\[
+	H(s)=\frac{V_o(s)}{V_i(s)}=-\frac{Z_R(s)}{Z_C(s)}=-RCs=-\tau s	\]
+
+\item {\bf Higher order systems}
+
+Higher than first order systems can be built with multiple integrators, as shown here for
+a third order system:
+
+\htmladdimg{../figures/opam7.gif}
+
+From the diagram, we can get
+\[
+\left\{ \begin{array}{l}
+	y_3=y_2/s \Longrightarrow y_2=y_3s	\\
+	y_2=y_1/s \Longrightarrow y_1=y_2s=y_3s^2	\\
+	y_1=y_0/s \Longrightarrow y_0=y_1s=y_3s^3	
+\end{array} \right.
+\]
+But we also have
+\[	y_0=x-(k_1y_1+k_2y_2+k_3y_3)	\]
+i.e., 
+\[	x=y_0+k_1y_1+k_2y_2+k_3y_3=(s^3+k_1s^2+k_2s+k_3) y_3	\]
+we get the transfer function
+\[
+	H(s)=\frac{y_3}{x}=\frac{1}{s^3+k_1s^2+k_2s+k_3}
+\]
+
+
+\item {\bf Second order system by 2 integrators}
+
+\htmladdimg{../figures/opam8.gif}
+
+From the diagram, we can get
+\[
+\left\{ \begin{array}{ll}
+	y_2=-c_2y_1/s  \Longrightarrow  y_1=-sy_2/c_2 \\
+	y_1=-c_1y_0/s  \Longrightarrow y_0=-sy_1/c_1=s^2y_2/c_1c_2 \\
+	y_0=k_0 x+k_1y_1+k_2y_2 
+	\end{array} \right.
+\]
+substituting the first two equations into the last one, we get
+\[	\frac{s^2}{c_1c_2} y_2=k_0x+k_1(-\frac{s}{c_2})y_2+k_2y_2 \]
+from which we obtain the transfer function as
+\[
+H(s)=\frac{y_2}{x}=\frac{k_o}{\frac{s^2}{c_1c_2}+\frac{s}{c_2}s-k_2}
+	=\frac{k_oc_1c_2}{s^2+k_1c_1s-c_1c_2k_2}
+\]
+which is a second order system. In particular, if $c_1=c_2=c$, we have
+\[
+	H(s)=k_0\frac{c^2}{s^2+c k_1s-k_2c^2}
+\]
+Comparing this with the canonical 2nd order system transfer function
+\[
+	H(s)=\frac{\omega_n^2}{s^2+2\zeta \omega_n s+\omega_n^2}
+\]
+we see that we can let $c=\omega_n$ and $k_1=2\zeta$. Moreover, $k_2<0$, 
+i.e., the feedback from the output should be negative. $k_0$ is a constant
+scaler which can take any value.
+	
+\htmladdimg{../figures/opam9.gif}
+\end{itemize}
+
+\end{document}
+
+
+	
+
+	
+
+
+
+
+
+
+
+
+
+
+
+

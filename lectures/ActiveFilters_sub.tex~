@@ -1,0 +1,47 @@
+\documentstyle[12pt]{article}
+\usepackage{html}
+% \usepackage{graphics}  
+\begin{document}
+
+\subsection{The Sallen-Key filters}
+
+\begin{itemize}
+\item {\bf Second order low-pass filter}
+  
+  If we let $Z_1=R_1$, $Z_2=R_2$, $Z_3=1/j\omega C_1$, $Z_4=1/j\omega C_2$, 
+  the FRF becomes:
+
+  \begin{eqnarray}
+    H&=&\frac{1/(j\omega)^2C_1C_2}
+    {R_1R_2+(R_1+R_2)/j\omega C_1+1/(j\omega)^2C_1C_2}
+    \nonumber \\
+    &=&\frac{1/R_1R_2C_1C_2}{(j\omega)^2+j\omega(R_1+R_2)/R_1R_2C_1+1/R_1R_2C_1C_2}
+    \nonumber \\
+    &=&\frac{1/R_1R_2C_1C_2}{(j\omega)^2+j\omega/R_pC_1+1/R_1R_2C_1C_2}
+    \nonumber \\
+    &=&\frac{\omega_n^2}{(j\omega)^2+2\zeta\omega_n\;j\omega+\omega_n^2} 
+    =\frac{\omega_n^2}{(j\omega)^2+\omega_n/Q \;j\omega+\omega_n^2}
+    =\frac{\omega_n^2}{(j\omega)^2+\Delta\omega\;j\omega+\omega_n^2} 
+    \nonumber
+  \end{eqnarray}
+
+\item {\bf Second order high-pass filter}
+    
+  If we let $Z_1=1/j\omega C_1$, $Z_2=1/j\omega C_2$, $Z_3=R_1$, $Z_4=R_2$, 
+  the FRF becomes:
+  \begin{eqnarray}
+    H&=&\frac{R_1R_2}
+    {1/(j\omega)^2C_1C_2+R_1(1/j\omega C_1+1/j\omega C_2)+R_1R_2}
+    \nonumber \\
+    &=&\frac{(j\omega)^2}{1/R_1R_2C_1C_2+j\omega\;(C_1+C_2)/C_1C_2R_2+(j\omega)^2}
+    \nonumber \\
+    &=&\frac{(j\omega)^2}{(j\omega)^2+j\omega\;/C_sR_2+1/R_1R_2C_1C_2}
+    \nonumber \\
+    &=&\frac{(j\omega)^2}{(j\omega)^2+2\zeta\omega_n\;j\omega+\omega_n^2} 
+    =\frac{(j\omega)^2}{(j\omega)^2+\omega_n/Q \;j\omega+\omega_n^2} 
+    =\frac{(j\omega_n)^2}{(j\omega)^2+\Delta\omega\;j\omega+\omega_n^2}
+    \nonumber
+  \end{eqnarray}
+\end{itemize}
+
+\end{document}

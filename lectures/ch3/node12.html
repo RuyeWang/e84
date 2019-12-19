@@ -1,0 +1,654 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Homogeneous Solution</TITLE>
+<META NAME="description" CONTENT="Homogeneous Solution">
+<META NAME="keywords" CONTENT="ch3">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="ch3.css">
+
+<LINK REL="next" HREF="node13.html">
+<LINK REL="previous" HREF="node11.html">
+<LINK REL="next" HREF="node13.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node13.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node10.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node11.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node13.html">Complete Solution with Step</A>
+<B> Up:</B> <A
+ HREF="node10.html">Second Order Systems</A>
+<B> Previous:</B> <A
+ HREF="node11.html">Particular Solution and Resonance</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H3><A ID="SECTION00015200000000000000">
+Homogeneous Solution</A>
+</H3>
+
+<P>
+The homogeneous solution of the 2nd order DE can be found
+by solving the homogeneous equation:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+y''(t)+2\zeta\omega_n y'(t)+\omega_n^2 y(t)=x(t)=0
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img580.svg"
+ ALT="$\displaystyle y''(t)+2\zeta\omega_n y'(t)+\omega_n^2 y(t)=x(t)=0$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">204</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+where the right hand side of the DE for the input <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img581.svg"
+ ALT="$x(t)=0$"></SPAN> is 
+zero. Substituting the assumed solution <!-- MATH
+ $y(t)=Ae^{st}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img582.svg"
+ ALT="$y(t)=Ae^{st}$"></SPAN> and its 
+derivatives <!-- MATH
+ $\dot{y}(t)=s Ae^{st},\;y''(t)=s^2 Ae^{st}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img583.svg"
+ ALT="$\dot{y}(t)=s Ae^{st},\;y''(t)=s^2 Ae^{st}$"></SPAN> into
+the DE we get
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+(s^2+2\zeta\omega_n s+\omega_n^2)Ae^{st}=0
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img584.svg"
+ ALT="$\displaystyle (s^2+2\zeta\omega_n s+\omega_n^2)Ae^{st}=0$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">205</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+As we are not interested in a trivial solution, <!-- MATH
+ $Ae^{st}\ne 0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.57ex; " SRC="img585.svg"
+ ALT="$Ae^{st}\ne 0$"></SPAN>, and
+we get an algebraic equation
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+s^2+2\zeta\omega_n s+\omega_n^2=0
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.69ex; " SRC="img586.svg"
+ ALT="$\displaystyle s^2+2\zeta\omega_n s+\omega_n^2=0$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">206</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Solving this quadratic equation we get its two roots, the two 
+eigenvalues of <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img587.svg"
+ ALT="${\bf A}$"></SPAN>:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+s_{1,2}=\left\{\begin{array}{ll}
+  \left(-\zeta\pm\sqrt{\zeta^2-1}\right)\omega_n&|\zeta|> 1\\
+  -\zeta\omega_n=\pm\omega_n & |\zeta|=1\\
+  \left(-\zeta\pm j\sqrt{1-\zeta^2}\right)\omega_n=\omega_n e^{\mp j\phi}
+  &|\zeta|< 1\end{array}\right.
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 11.38ex; vertical-align: -5.11ex; " SRC="img588.svg"
+ ALT="$\displaystyle s_{1,2}=\left\{\begin{array}{ll}
+\left(-\zeta\pm\sqrt{\zeta^2-1}\...
+...^2}\right)\omega_n=\omega_n e^{\mp j\phi}
+&amp;\vert\zeta\vert&lt; 1\end{array}\right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">207</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+where
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\phi=\tan^{-1}\left(\frac{\sqrt{1-\zeta^2}}{\zeta}\right)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 7.20ex; vertical-align: -3.02ex; " SRC="img589.svg"
+ ALT="$\displaystyle \phi=\tan^{-1}\left(\frac{\sqrt{1-\zeta^2}}{\zeta}\right)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">208</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+<IMG STYLE=""
+ SRC="../figures/zetaphi.png"
+ ALT="zetaphi.png">
+
+<P>
+These two roots <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.78ex; " SRC="img590.svg"
+ ALT="$s_{1,2}$"></SPAN> are either two real numbers or a pair 
+complex conjugate numbers, depending on whether its discriminant 
+is greater and smaller then 0:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\Delta=(2\zeta\omega_n)^2-4\omega_n^2=4\omega_n^2(\zeta^2-1)
+  \left\{\begin{array}{ll}\ge 0 & |\zeta|\ge 1\\< 0 & |\zeta|< 1\end{array}\right.
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img591.svg"
+ ALT="$\displaystyle \Delta=(2\zeta\omega_n)^2-4\omega_n^2=4\omega_n^2(\zeta^2-1)
+\lef...
+...y}{ll}\ge 0 &amp; \vert\zeta\vert\ge 1\\ &lt; 0 &amp; \vert\zeta\vert&lt; 1\end{array}\right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">209</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+<IMG STYLE=""
+ SRC="../rootlocus2nd1.gif"
+ ALT="rootlocus2nd1.gif">
+
+<P>
+For a constant <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img488.svg"
+ ALT="$\omega_n$"></SPAN> and a variable <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img487.svg"
+ ALT="$\zeta$"></SPAN> that changes 
+from <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.31ex; " SRC="img592.svg"
+ ALT="$-\infty$"></SPAN> to <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img593.svg"
+ ALT="$\infty$"></SPAN>, the two roots <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img594.svg"
+ ALT="$s_1$"></SPAN> (red) and <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img595.svg"
+ ALT="$s_2$"></SPAN> 
+(blue) can be represented as the root locus on the complex plane.
+
+<P>
+In particular, for the RCL circuit with all <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img112.svg"
+ ALT="$R$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img104.svg"
+ ALT="$C$"></SPAN>, and <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img105.svg"
+ ALT="$L$"></SPAN> values 
+non-negative, we have <!-- MATH
+ $\zeta\ge 0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img596.svg"
+ ALT="$\zeta\ge 0$"></SPAN>, i.e., we only need to consider the 
+root locus on the left side of the complex plain.
+
+<P>
+Given the two roots <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img594.svg"
+ ALT="$s_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img595.svg"
+ ALT="$s_2$"></SPAN>, we can write the homogeneous 
+solution as
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+y_h(t)=C_1 e^{s_1t}+C_2 e^{s_2t}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img597.svg"
+ ALT="$\displaystyle y_h(t)=C_1 e^{s_1t}+C_2 e^{s_2t}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">210</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+where the two coefficients <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img598.svg"
+ ALT="$C_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img599.svg"
+ ALT="$C_2$"></SPAN> can be found based on the 
+two initial conditions <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img600.svg"
+ ALT="$y(0)$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img601.svg"
+ ALT="$y'(0)$"></SPAN>. If we assume <!-- MATH
+ $\dot{y}(0)=0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img602.svg"
+ ALT="$\dot{y}(0)=0$"></SPAN> 
+but <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img603.svg"
+ ALT="$y(0)=y_0$"></SPAN>, then we get
+<BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+y(0)&=&y_h(t)\bigg|_{t=0}=C_1+C_2=y_0
+  \nonumber \\
+  \dot{y}(0)&=&\dot{y}_h(t)\bigg|_{t=0}=s_1C_1+s_2C_2=0 
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img604.svg"
+ ALT="$\displaystyle y(0)$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 6.04ex; vertical-align: -2.44ex; " SRC="img605.svg"
+ ALT="$\displaystyle y_h(t)\bigg\vert _{t=0}=C_1+C_2=y_0$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img606.svg"
+ ALT="$\displaystyle \dot{y}(0)$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 6.04ex; vertical-align: -2.44ex; " SRC="img607.svg"
+ ALT="$\displaystyle \dot{y}_h(t)\bigg\vert _{t=0}=s_1C_1+s_2C_2=0$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">211</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+
+Solving these we get
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+C_1=\frac{s_2}{s_2-s_1} y_0,\;\;\;\;\;\;\;\;C_2=\frac{s_1}{s_1-s_2} y_0
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.88ex; vertical-align: -2.06ex; " SRC="img608.svg"
+ ALT="$\displaystyle C_1=\frac{s_2}{s_2-s_1} y_0,\;\;\;\;\;\;\;\;C_2=\frac{s_1}{s_1-s_2} y_0$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">212</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+and the homogeneous solution becomes:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+y_h(t)=y_0 \left[ \frac{s_2 e^{s_1t}}{s_2-s_1}-\frac{s_1 e^{s_2t}}{s_2-s_1} \right]
+  =\frac{y_0}{s_2-s_1} (s_2 e^{s_1t}-s_1 e^{s_2t})
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.32ex; " SRC="img609.svg"
+ ALT="$\displaystyle y_h(t)=y_0 \left[ \frac{s_2 e^{s_1t}}{s_2-s_1}-\frac{s_1 e^{s_2t}}{s_2-s_1} \right]
+=\frac{y_0}{s_2-s_1} (s_2 e^{s_1t}-s_1 e^{s_2t})$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">213</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Alternatively, the 2nd-order LCCODE in canonical form given above can 
+also be solved if it is coverted into a 1st-order ODE system, as
+shown <A ID="tex2html8"
+  HREF="../ch3_sub3/index.html">here</A>.
+
+<P>
+The solution takes different forms depending on the value of the damping 
+coefficient <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img487.svg"
+ ALT="$\zeta$"></SPAN>.
+
+<UL>
+<LI><B>Over-damped system (<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img610.svg"
+ ALT="$\zeta&gt;1$"></SPAN>)</B>
+  <BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+y_h(t)&=&y_0 \left[ \frac{s_2 e^{s_1t}}{s_2-s_1}+\frac{s_1 e^{s_2t}}{s_1-s_2} \right]
+    \nonumber \\
+    &=&y_0\left[\frac{-\zeta+\sqrt{\zeta^2-1}}{2\sqrt{\zeta^2-1}}e^{(-\zeta-\sqrt{\zeta^2-1})\omega_nt}
+      -\frac{-\zeta-\sqrt{\zeta^2-1}}{2\sqrt{\zeta^2-1}}e^{(-\zeta+\sqrt{\zeta^2-1})\omega_nt}\right]
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img611.svg"
+ ALT="$\displaystyle y_h(t)$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 6.04ex; vertical-align: -2.32ex; " SRC="img612.svg"
+ ALT="$\displaystyle y_0 \left[ \frac{s_2 e^{s_1t}}{s_2-s_1}+\frac{s_1 e^{s_2t}}{s_1-s_2} \right]$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 7.20ex; vertical-align: -3.02ex; " SRC="img613.svg"
+ ALT="$\displaystyle y_0\left[\frac{-\zeta+\sqrt{\zeta^2-1}}{2\sqrt{\zeta^2-1}}e^{(-\z...
+...qrt{\zeta^2-1}}{2\sqrt{\zeta^2-1}}e^{(-\zeta+\sqrt{\zeta^2-1})\omega_nt}\right]$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">214</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+
+  This is a sum of two exponentially decaying terms, without any overshoot 
+  or oscillation. Note that when <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img219.svg"
+ ALT="$t=0$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.57ex; " SRC="img614.svg"
+ ALT="$y_h=y_0$"></SPAN>. 
+
+<P>
+</LI>
+<LI><B>Critically damped system (<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img615.svg"
+ ALT="$\zeta=1$"></SPAN>)</B>
+
+<P>
+Now we have
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+s_1=s_2=-\omega_n=s
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.46ex; " SRC="img616.svg"
+ ALT="$\displaystyle s_1=s_2=-\omega_n=s$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">215</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+and the homogeneous solution takes following form:
+  <BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+y_h(t)&=&C_1 e^{st}+C_2 t e^{st}=C_1 e^{-\omega_nt}+C_2 t e^{-\omega_nt}
+    \nonumber \\
+    \dot{y}_h(t)&=&\frac{d}{dt}[C_1 e^{st}+C_2 t e^{st}]=C_1se^{st}+C_2(e^{st}+ste^{st})  
+  
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img611.svg"
+ ALT="$\displaystyle y_h(t)$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 2.55ex; vertical-align: -0.46ex; " SRC="img617.svg"
+ ALT="$\displaystyle C_1 e^{st}+C_2 t e^{st}=C_1 e^{-\omega_nt}+C_2 t e^{-\omega_nt}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img618.svg"
+ ALT="$\displaystyle \dot{y}_h(t)$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 5.11ex; vertical-align: -1.71ex; " SRC="img619.svg"
+ ALT="$\displaystyle \frac{d}{dt}[C_1 e^{st}+C_2 t e^{st}]=C_1se^{st}+C_2(e^{st}+ste^{st})$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">216</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+
+  Applying the initial conditions to this response we get
+  <BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+y(0)&=&C_1=y_0  \nonumber \\
+    \dot{y}(0)&=&s C_1+C_2=0
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img604.svg"
+ ALT="$\displaystyle y(0)$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img620.svg"
+ ALT="$\displaystyle C_1=y_0$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img606.svg"
+ ALT="$\displaystyle \dot{y}(0)$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img621.svg"
+ ALT="$\displaystyle s C_1+C_2=0$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">217</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+
+  Solving this we get 
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+C_1=y_0, \;\;\;\;\;\;\;C_2=y_0
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img622.svg"
+ ALT="$\displaystyle C_1=y_0, \;\;\;\;\;\;\;C_2=y_0$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">218</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+and the response is
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+y_h(t)=C_1 e^{st}+C_2 t e^{st}=y_0\left[ e^{-\omega_nt}+\omega_n t e^{-\omega_nt}\right]
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.93ex; " SRC="img623.svg"
+ ALT="$\displaystyle y_h(t)=C_1 e^{st}+C_2 t e^{st}=y_0\left[ e^{-\omega_nt}+\omega_n t e^{-\omega_nt}\right]$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">219</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Again, there is no overshoot or oscillation.
+</LI>
+<LI><B>Under-damped system (<!-- MATH
+ $0 \le \zeta < 1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img624.svg"
+ ALT="$0 \le \zeta &lt; 1$"></SPAN>)</B>
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+s_{1,2}=(-\zeta\pm j \sqrt{1-\zeta^2})\omega_n=-\zeta\omega_n\pm j\omega_d,
+    \;\;\;\;\mbox{and}\;\;\;\;
+    s_1-s_2=2j\omega_d
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.25ex; vertical-align: -0.78ex; " SRC="img625.svg"
+ ALT="$\displaystyle s_{1,2}=(-\zeta\pm j \sqrt{1-\zeta^2})\omega_n=-\zeta\omega_n\pm j\omega_d,
+\;\;\;\;$">and<IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img626.svg"
+ ALT="$\displaystyle \;\;\;\;
+s_1-s_2=2j\omega_d$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">220</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+where <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img627.svg"
+ ALT="$\omega_d$"></SPAN> is the <EM>damped natural frequency</EM> defined as:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\omega_d=\omega_n\sqrt{1-\zeta^2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.25ex; vertical-align: -0.66ex; " SRC="img628.svg"
+ ALT="$\displaystyle \omega_d=\omega_n\sqrt{1-\zeta^2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">221</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The response is
+  <BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+y_h(t)&=&y_0 \left[ \frac{s_2 e^{s_1t}}{s_2-s_1}+\frac{s_1 e^{s_2t}}{s_1-s_2} \right]
+    \nonumber \\
+    &=&y_0\left[ \frac{(-\zeta-j\sqrt{1-\zeta^2})\omega_n}{-2j\omega_n\sqrt{1-\zeta^2}} e^{(-\zeta\omega_n+j\omega_d)t}
+                +\frac{(-\zeta+j\sqrt{1-\zeta^2})\omega_n}{-2j\omega_n\sqrt{1-\zeta^2}} e^{(-\zeta\omega_n-j\omega_d)t} \right]
+    \nonumber \\
+    &=&y_0\frac{e^{-\zeta\omega_nt}}{\sqrt{1-\zeta^2}} \left(\frac{e^{j\phi}e^{j\omega_dt}-e^{-j\phi}e^{-j\omega_dt}}{2j}\right)
+    =y_0\frac{e^{-\zeta\omega_nt}}{\sqrt{1-\zeta^2}} \sin(\omega_dt+\phi)
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img611.svg"
+ ALT="$\displaystyle y_h(t)$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 6.04ex; vertical-align: -2.32ex; " SRC="img612.svg"
+ ALT="$\displaystyle y_0 \left[ \frac{s_2 e^{s_1t}}{s_2-s_1}+\frac{s_1 e^{s_2t}}{s_1-s_2} \right]$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 7.20ex; vertical-align: -3.02ex; " SRC="img629.svg"
+ ALT="$\displaystyle y_0\left[ \frac{(-\zeta-j\sqrt{1-\zeta^2})\omega_n}{-2j\omega_n\s...
+...)\omega_n}{-2j\omega_n\sqrt{1-\zeta^2}} e^{(-\zeta\omega_n-j\omega_d)t} \right]$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 6.50ex; vertical-align: -2.74ex; " SRC="img630.svg"
+ ALT="$\displaystyle y_0\frac{e^{-\zeta\omega_nt}}{\sqrt{1-\zeta^2}} \left(\frac{e^{j\...
+...j}\right)
+=y_0\frac{e^{-\zeta\omega_nt}}{\sqrt{1-\zeta^2}} \sin(\omega_dt+\phi)$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">222</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+
+  Here we have defined:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\phi=\tan^{-1}\left( \frac{\sqrt{1-\zeta^2}}{\zeta} \right),\;\;\;\;\;
+    \zeta+j\sqrt{1-\zeta^2}=e^{j\phi},\;\;\;\;\;\zeta-j\sqrt{1-\zeta^2}=e^{-j\phi}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 7.20ex; vertical-align: -3.02ex; " SRC="img631.svg"
+ ALT="$\displaystyle \phi=\tan^{-1}\left( \frac{\sqrt{1-\zeta^2}}{\zeta} \right),\;\;\...
+...
+\zeta+j\sqrt{1-\zeta^2}=e^{j\phi},\;\;\;\;\;\zeta-j\sqrt{1-\zeta^2}=e^{-j\phi}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">223</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI><B>Undamped system (<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img632.svg"
+ ALT="$\zeta =0$"></SPAN>)</B>
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+s_1=j\omega_n,\;\;\;\;\;\;s_2=-j\omega_n
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img633.svg"
+ ALT="$\displaystyle s_1=j\omega_n,\;\;\;\;\;\;s_2=-j\omega_n$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">224</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+y_h(t)=y_0 \left[ \frac{s_2 e^{s_1t}}{s_2-s_1}+\frac{s_1 e^{s_2t}}{s_1-s_2} \right]
+    =y_0\left(\frac{e^{j\omega_n}+e^{-j\omega_n}}{2}\right)=y_0\cos(\omega_nt)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.32ex; " SRC="img634.svg"
+ ALT="$\displaystyle y_h(t)=y_0 \left[ \frac{s_2 e^{s_1t}}{s_2-s_1}+\frac{s_1 e^{s_2t}...
+...ght]
+=y_0\left(\frac{e^{j\omega_n}+e^{-j\omega_n}}{2}\right)=y_0\cos(\omega_nt)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">225</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+This result can also be obtained from the previous case:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\lim_{\zeta\leftarrow 0} \left(y_0\frac{e^{-\zeta\omega_nt}}{\sqrt{1-\zeta^2}} \sin(\omega_dt+\phi) \right)
+    =y_0\sin(\omega_nt+\frac{\pi}{2})=y_0\cos(\omega_nt)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 7.20ex; vertical-align: -3.02ex; " SRC="img635.svg"
+ ALT="$\displaystyle \lim_{\zeta\leftarrow 0} \left(y_0\frac{e^{-\zeta\omega_nt}}{\sqr...
+...in(\omega_dt+\phi) \right)
+=y_0\sin(\omega_nt+\frac{\pi}{2})=y_0\cos(\omega_nt)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">226</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+</UL>
+
+<P>
+The homogeneous responses of these four cases are plotted below. Note that in all cases,
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img603.svg"
+ ALT="$y(0)=y_0$"></SPAN> and <!-- MATH
+ $\dot{y}(0)=0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img602.svg"
+ ALT="$\dot{y}(0)=0$"></SPAN>.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/SecondOrder0.png"
+ ALT="SecondOrder0.png">
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node13.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node10.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node11.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node13.html">Complete Solution with Step</A>
+<B> Up:</B> <A
+ HREF="node10.html">Second Order Systems</A>
+<B> Previous:</B> <A
+ HREF="node11.html">Particular Solution and Resonance</A></DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

@@ -1,0 +1,548 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Bode Plots of first and Second Order Systems</TITLE>
+<META NAME="description" CONTENT="Bode Plots of first and Second Order Systems">
+<META NAME="keywords" CONTENT="ActiveFilters">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="ActiveFilters.css">
+
+<LINK REL="previous" HREF="node13.html">
+<LINK REL="next" HREF="node15.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node15.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node8.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node13.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node15.html">About this document ...</A>
+<B> Up:</B> <A
+ HREF="node8.html">Appendix</A>
+<B> Previous:</B> <A
+ HREF="node13.html">Bode Plots of Components</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION00026000000000000000">
+Bode Plots of first and Second Order Systems</A>
+</H2>
+<B>First order circuits</B>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/RC.gif"
+ ALT="RC.gif">
+
+<P>
+
+<UL>
+<LI>Voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img473.svg"
+ ALT="$V_C$"></SPAN> across C is treated as output. According to voltage
+  divider rule, we have:
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+H_C(j\omega)=\frac{V_C}{V_{in}}=\frac{Z_C}{Z_R+Z_C}
+    =\frac{1/j\omega C}{R+1/j\omega C}
+    =\frac{1}{j\omega RC+1}=\frac{1}{j\omega \tau+1} 
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img474.svg"
+ ALT="$\displaystyle H_C(j\omega)=\frac{V_C}{V_{in}}=\frac{Z_C}{Z_R+Z_C}
+=\frac{1/j\omega C}{R+1/j\omega C}
+=\frac{1}{j\omega RC+1}=\frac{1}{j\omega \tau+1} $"> 
+
+(<SPAN CLASS="arabic">170</SPAN>)
+</DIV>
+where <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img165.svg"
+ ALT="$\tau=RC$"></SPAN>.
+</LI>
+<LI>Voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img475.svg"
+ ALT="$V_R$"></SPAN> across R is treated as output:
+  
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+H_R(j\omega)=\frac{V_R}{V_{in}}=\frac{Z_R}{Z_R+Z_C}
+    =\frac{R}{R+1/j\omega C}=\frac{j\omega RC}{j\omega RC+1}
+    =\frac{j\omega \tau}{j\omega \tau+1} 
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img476.svg"
+ ALT="$\displaystyle H_R(j\omega)=\frac{V_R}{V_{in}}=\frac{Z_R}{Z_R+Z_C}
+=\frac{R}{R+...
+...mega C}=\frac{j\omega RC}{j\omega RC+1}
+=\frac{j\omega \tau}{j\omega \tau+1} $"> 
+
+(<SPAN CLASS="arabic">171</SPAN>)
+</DIV>
+</LI>
+</UL>
+As <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img477.svg"
+ ALT="$H_R(j\omega)$"></SPAN> can be written as:
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+H_R(j\omega)= \frac{1}{j\omega \tau+1} j\omega \tau
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.34ex; vertical-align: -2.16ex; " SRC="img478.svg"
+ ALT="$\displaystyle H_R(j\omega)= \frac{1}{j\omega \tau+1} j\omega \tau $"> 
+
+(<SPAN CLASS="arabic">172</SPAN>)
+</DIV>
+The first term is just <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img479.svg"
+ ALT="$H_C(j\omega)$"></SPAN>. Now the log-magnitude is:
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+Lm\;H_R(j\omega)
+=20\log_{10} \left| \frac{1}{j\omega \tau+1}\right|+20\log_{10} \left| j\omega \tau \right|
+=Lm\; H_C(j\omega) +20\log_{10} (\omega\tau) 
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img480.svg"
+ ALT="$\displaystyle Lm\;H_R(j\omega)
+=20\log_{10} \left\vert \frac{1}{j\omega \tau+1}...
+...ft\vert j\omega \tau \right\vert
+=Lm\; H_C(j\omega) +20\log_{10} (\omega\tau) $"> 
+
+(<SPAN CLASS="arabic">173</SPAN>)
+</DIV>
+The first term is the same as <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img479.svg"
+ ALT="$H_C(j\omega)$"></SPAN> and the second plot is a straight line
+with slope of 20 dB/dec. at <!-- MATH
+ $\omega=\omega_c=1/\tau$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img481.svg"
+ ALT="$\omega=\omega_c=1/\tau$"></SPAN>, the first term is -3 dB and the  
+second is 0 dB.  The phase plot is:
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+\angle H_R(j\omega)=\angle \left(\frac{1}{j\omega \tau+1}\right)+\angle j\omega \tau
+=\angle H_C(j\omega)+\frac{\pi}{2} 
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img482.svg"
+ ALT="$\displaystyle \angle H_R(j\omega)=\angle \left(\frac{1}{j\omega \tau+1}\right)+\angle j\omega \tau
+=\angle H_C(j\omega)+\frac{\pi}{2} $"> 
+
+(<SPAN CLASS="arabic">174</SPAN>)
+</DIV>
+In the plots below, <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img483.svg"
+ ALT="$\tau=0.01$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.46ex; " SRC="img484.svg"
+ ALT="$\omega_C=100$"></SPAN> rad/sec.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/bodeplot1storder1.gif"
+ ALT="bodeplot1storder1.gif">
+
+<P>
+Define <!-- MATH
+ $\omega_c=1/\tau=1/RC$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img292.svg"
+ ALT="$\omega_c=1/\tau=1/RC$"></SPAN> as the cut-off frequency, then when <!-- MATH
+ $\omega=\omega_c$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img485.svg"
+ ALT="$\omega=\omega_c$"></SPAN>, 
+we have <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img406.svg"
+ ALT="$\omega\tau=1$"></SPAN>, and <!-- MATH
+ $|H_R(j\omega)|=|H_C(j\omega)|=1/\sqrt{2}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img486.svg"
+ ALT="$\vert H_R(j\omega)\vert=\vert H_C(j\omega)\vert=1/\sqrt{2}$"></SPAN>, i.e., <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img190.svg"
+ ALT="$\omega_c$"></SPAN>
+is the half-power point, where <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img203.svg"
+ ALT="$\vert H(j\omega)\vert$"></SPAN> is -3 dB.
+
+<P>
+<B>Second order circuits</B>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/RCL.gif"
+ ALT="RCL.gif">
+
+<P>
+
+<UL>
+<LI>Voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img473.svg"
+ ALT="$V_C$"></SPAN> across C is treated as output:
+  <BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+H_C(j\omega)&=&\frac{V_C}{V_{in}}=\frac{Z_C}{Z_L+Z_R+Z_C}
+    =\frac{1/j\omega C}{j\omega L+R+1/j\omega C}
+    =\frac{1}{(j\omega)^2 LC+j\omega RC+1}
+    \nonumber \\
+    &=&\frac{1/LC}{(j\omega)^2 +j\omega R/L+1/LC}
+    =\frac{\omega_n^2}{(j\omega)^2 +2\zeta\omega_n j\omega+\omega^2_n}
+    =\frac{1}{(1-\frac{\omega^2}{\omega_n^2})+j2\zeta\frac{\omega}{\omega_n}}
+  
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img487.svg"
+ ALT="$\displaystyle H_C(j\omega)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img2.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img488.svg"
+ ALT="$\displaystyle \frac{V_C}{V_{in}}=\frac{Z_C}{Z_L+Z_R+Z_C}
+=\frac{1/j\omega C}{j\omega L+R+1/j\omega C}
+=\frac{1}{(j\omega)^2 LC+j\omega RC+1}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img2.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 6.97ex; vertical-align: -3.25ex; " SRC="img489.svg"
+ ALT="$\displaystyle \frac{1/LC}{(j\omega)^2 +j\omega R/L+1/LC}
+=\frac{\omega_n^2}{(j\...
+...^2_n}
+=\frac{1}{(1-\frac{\omega^2}{\omega_n^2})+j2\zeta\frac{\omega}{\omega_n}}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">175</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+where 
+  
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+\omega_n=\frac{1}{\sqrt{LC}},\;\;\;\;\zeta=\frac{R}{2}\sqrt{\frac{C}{L}}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 6.27ex; vertical-align: -2.28ex; " SRC="img490.svg"
+ ALT="$\displaystyle \omega_n=\frac{1}{\sqrt{LC}},\;\;\;\;\zeta=\frac{R}{2}\sqrt{\frac{C}{L}} $"> 
+
+(<SPAN CLASS="arabic">176</SPAN>)
+</DIV>
+The magnitude is
+  
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+|H_C(j\omega)|
+  =\frac{1}{\sqrt{(1-\frac{\omega^2}{\omega_n^2})^2+4\zeta^2 \frac{\omega^2}{\omega_n^2}}}
+  =\frac{1}{\sqrt{(1-u)^2+4\zeta^2 u}}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 7.43ex; vertical-align: -4.13ex; " SRC="img491.svg"
+ ALT="$\displaystyle \vert H_C(j\omega)\vert
+=\frac{1}{\sqrt{(1-\frac{\omega^2}{\omeg...
+...2+4\zeta^2 \frac{\omega^2}{\omega_n^2}}}
+=\frac{1}{\sqrt{(1-u)^2+4\zeta^2 u}} $"> 
+
+(<SPAN CLASS="arabic">177</SPAN>)
+</DIV>
+where <!-- MATH
+ $u=(\omega/\omega_n)^2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img461.svg"
+ ALT="$u=(\omega/\omega_n)^2$"></SPAN>. When <!-- MATH
+ $u=\omega/\omega_n=1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img492.svg"
+ ALT="$u=\omega/\omega_n=1$"></SPAN> or <!-- MATH
+ $\omega=\omega_n$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img463.svg"
+ ALT="$\omega=\omega_n$"></SPAN>, we have
+  
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+| H(j\omega_n) |=\frac{1}{2\zeta}=Q
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.34ex; vertical-align: -2.16ex; " SRC="img464.svg"
+ ALT="$\displaystyle \vert H(j\omega_n) \vert=\frac{1}{2\zeta}=Q $"> 
+
+(<SPAN CLASS="arabic">178</SPAN>)
+</DIV>
+</LI>
+<LI>Voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img475.svg"
+ ALT="$V_R$"></SPAN> across R is treated as output:
+  <BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+H_R(j\omega)&=&\frac{V_R}{V_{in}}=\frac{Z_R}{Z_L+Z_R+Z_C}
+    =\frac{R}{j\omega L+R+1/j\omega C}
+    =\frac{j\omega RC}{(j\omega)^2 LC+j\omega RC+1}
+    \nonumber \\
+    &=&\frac{j\omega R/L}{(j\omega)^2 +j\omega R/L+1/LC}
+    =\frac{2\zeta\omega_nj\omega}{(j\omega)^2 +2\zeta\omega_n j\omega+\omega^2_n}
+    =H_C(j\omega) \;2\zeta \omega_n\;j \omega 
+  
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img493.svg"
+ ALT="$\displaystyle H_R(j\omega)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img2.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img494.svg"
+ ALT="$\displaystyle \frac{V_R}{V_{in}}=\frac{Z_R}{Z_L+Z_R+Z_C}
+=\frac{R}{j\omega L+R+1/j\omega C}
+=\frac{j\omega RC}{(j\omega)^2 LC+j\omega RC+1}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img2.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img495.svg"
+ ALT="$\displaystyle \frac{j\omega R/L}{(j\omega)^2 +j\omega R/L+1/LC}
+=\frac{2\zeta\o...
+...2 +2\zeta\omega_n j\omega+\omega^2_n}
+=H_C(j\omega) \;2\zeta \omega_n\;j \omega$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">179</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Now we have:
+  
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+Lm\;H_R(j\omega)=Lm\; H_C(j\omega)+Lm\;(2\zeta\omega_n\;j\omega),\;\;\;\;
+  \angle H_R(j\omega)=\angle H_C(j\omega)+\angle(2\zeta\omega_n\;j\omega)
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img496.svg"
+ ALT="$\displaystyle Lm\;H_R(j\omega)=Lm\; H_C(j\omega)+Lm\;(2\zeta\omega_n\;j\omega),\;\;\;\;
+\angle H_R(j\omega)=\angle H_C(j\omega)+\angle(2\zeta\omega_n\;j\omega) $"> 
+
+(<SPAN CLASS="arabic">180</SPAN>)
+</DIV>
+The log-magnitude of the second factor is a straight line with slope 20 dB/dec,
+  and at <!-- MATH
+ $\omega=\omega_n$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img463.svg"
+ ALT="$\omega=\omega_n$"></SPAN>, its value is <!-- MATH
+ $20\log_{10} 2\zeta\omega_n^2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.69ex; " SRC="img497.svg"
+ ALT="$20\log_{10} 2\zeta\omega_n^2$"></SPAN>. The phase is 
+  <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img498.svg"
+ ALT="$90^\circ$"></SPAN> for all <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img382.svg"
+ ALT="$\omega$"></SPAN>.
+
+<P>
+The denominator can be written as <!-- MATH
+ $R+j(\omega L-1/\omega C)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img499.svg"
+ ALT="$R+j(\omega L-1/\omega C)$"></SPAN>, which is minimized
+  when the imaginary part is zero, i.e, <!-- MATH
+ $j\omega L=1/j\omega C$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img500.svg"
+ ALT="$j\omega L=1/j\omega C$"></SPAN>. In other words, when 
+  <!-- MATH
+ $\omega=\omega_n=1/\sqrt{LC}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img501.svg"
+ ALT="$\omega=\omega_n=1/\sqrt{LC}$"></SPAN>, <!-- MATH
+ $|H_R(j\omega)|$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img502.svg"
+ ALT="$\vert H_R(j\omega)\vert$"></SPAN> reaches its peak value.
+</LI>
+<LI>Voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img503.svg"
+ ALT="$V_L$"></SPAN> across L is treated as output:
+  <BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+H_L(j\omega)&=&\frac{V_L}{V_{in}}=\frac{Z_L}{Z_L+Z_R+Z_C}
+    =\frac{j\omega L}{j\omega L+R+1/j\omega C}
+    =\frac{(j\omega)^2 LC}{(j\omega)^2 LC+j\omega RC+1}
+    \nonumber \\
+    &=&\frac{(j\omega)^2}{(j\omega)^2 +j\omega R/L+1/LC}
+    =\frac{(j\omega)^2}{(j\omega)^2 +2\zeta\omega_n j\omega+\omega^2_n}
+    =H_C(j\omega) \;(j\omega_n)^2
+  
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img504.svg"
+ ALT="$\displaystyle H_L(j\omega)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img2.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 6.04ex; vertical-align: -2.29ex; " SRC="img505.svg"
+ ALT="$\displaystyle \frac{V_L}{V_{in}}=\frac{Z_L}{Z_L+Z_R+Z_C}
+=\frac{j\omega L}{j\omega L+R+1/j\omega C}
+=\frac{(j\omega)^2 LC}{(j\omega)^2 LC+j\omega RC+1}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img2.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 6.04ex; vertical-align: -2.29ex; " SRC="img506.svg"
+ ALT="$\displaystyle \frac{(j\omega)^2}{(j\omega)^2 +j\omega R/L+1/LC}
+=\frac{(j\omega)^2}{(j\omega)^2 +2\zeta\omega_n j\omega+\omega^2_n}
+=H_C(j\omega) \;(j\omega_n)^2$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">181</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Now we have:
+  
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+Lm\;H_L(j\omega)=Lm\; H_C(j\omega)+Lm\;(j\omega)^2,\;\;\;\;
+  \angle H_L(j\omega)=\angle H_C(j\omega)+\angle (j\omega)^2
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img507.svg"
+ ALT="$\displaystyle Lm\;H_L(j\omega)=Lm\; H_C(j\omega)+Lm\;(j\omega)^2,\;\;\;\;
+\angle H_L(j\omega)=\angle H_C(j\omega)+\angle (j\omega)^2 $"> 
+
+(<SPAN CLASS="arabic">182</SPAN>)
+</DIV>
+The log-magnitude of the second factor is a straight line with slope 40 dB/dec,
+  and at <!-- MATH
+ $\omega=\omega_n$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img463.svg"
+ ALT="$\omega=\omega_n$"></SPAN>, it's value is <!-- MATH
+ $20\log_{10} \omega_n^2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.69ex; " SRC="img508.svg"
+ ALT="$20\log_{10} \omega_n^2$"></SPAN>. The phase is
+  <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img23.svg"
+ ALT="$180^\circ$"></SPAN> for all <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img382.svg"
+ ALT="$\omega$"></SPAN>.
+</LI>
+</UL>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/bodeplot2ndorderline.gif"
+ ALT="bodeplot2ndorderline.gif">
+
+<P>
+In the following plots, <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.46ex; " SRC="img509.svg"
+ ALT="$\omega_n=100$"></SPAN> rad/sec and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img510.svg"
+ ALT="$\zeta=0.05$"></SPAN>.
+At <!-- MATH
+ $\omega=\omega_n$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img463.svg"
+ ALT="$\omega=\omega_n$"></SPAN>, <!-- MATH
+ $20\log_{10} (2\zeta\omega_n^2)=20\log_{10} 1000=60$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img511.svg"
+ ALT="$20\log_{10} (2\zeta\omega_n^2)=20\log_{10} 1000=60$"></SPAN> dB, and
+<!-- MATH
+ $20\log_{10}(\omega_n^2)=20\log_{10} 10,000=80$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img512.svg"
+ ALT="$20\log_{10}(\omega_n^2)=20\log_{10} 10,000=80$"></SPAN> dB.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/bodeplot2ndorder.gif"
+ ALT="bodeplot2ndorder.gif">
+
+<P>
+<B>Example, a Band-pass filter:</B>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/opamp4b.gif"
+ ALT="opamp4b.gif">
+
+<P>
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+H(j\omega)=-\frac{Z_2(j\omega)}{Z_1(j\omega)}
+=-\frac{R_2||1/j\omega C_2}{R_1+1/j\omega C_1}
+=-\frac{R_2/(1+j\omega R_2C_2)}{(1+j\omega R_1C_1)/j\omega C_1}
+=-\frac{j\omega \tau_3}{(1+j\omega \tau_1)(1+j\omega \tau_2)}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img513.svg"
+ ALT="$\displaystyle H(j\omega)=-\frac{Z_2(j\omega)}{Z_1(j\omega)}
+=-\frac{R_2\vert\ve...
+..._1)/j\omega C_1}
+=-\frac{j\omega \tau_3}{(1+j\omega \tau_1)(1+j\omega \tau_2)} $"> 
+
+(<SPAN CLASS="arabic">183</SPAN>)
+</DIV>
+where <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img514.svg"
+ ALT="$\tau_1=R_1C_1$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img515.svg"
+ ALT="$\tau_2=R_2C_2$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img516.svg"
+ ALT="$\tau_3=R_2C_1$"></SPAN>.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node15.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node8.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node13.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node15.html">About this document ...</A>
+<B> Up:</B> <A
+ HREF="node8.html">Appendix</A>
+<B> Previous:</B> <A
+ HREF="node13.html">Bode Plots of Components</A></DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

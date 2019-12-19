@@ -1,0 +1,245 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>hw12a</TITLE>
+<META NAME="description" CONTENT="hw12a">
+<META NAME="keywords" CONTENT="hw12a">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="hw12a.css">
+
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html5"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev_g.png">   
+<BR>
+<B> Next:</B> <A NAME="tex2html6"
+  HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<DIV ALIGN="CENTER">
+<FONT SIZE="+2"><B>E84 Home Work</B></FONT>
+
+</DIV>
+
+<OL>
+
+<OL>
+<LI><B>Algebraic summer:</B>
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../../../lectures/figures/opamp5a.gif"
+ ALT="opamp5a.gif">
+
+<P>
+Express the output voltage <IMG
+ WIDTH="33" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$v_{out}$"> as a weighted sum of the four
+  input voltages <!-- MATH
+ $v_1,\cdots,v_4$
+ -->
+<IMG
+ WIDTH="75" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.png"
+ ALT="$v_1,\cdots,v_4$">:
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_{out}=\sum_{i=1}^4 k_i v_i
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="105" HEIGHT="58" BORDER="0"
+ SRC="img3.png"
+ ALT="\begin{displaymath}
+v_{out}=\sum_{i=1}^4 k_i v_i
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Find the four coefficients (may be either positive or negative).
+
+<P>
+Hint: Define <!-- MATH
+ $V=V^+ \approx V^-$
+ -->
+<IMG
+ WIDTH="115" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img4.png"
+ ALT="$V=V^+ \approx V^- $">, and apply KCL to <IMG
+ WIDTH="30" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.png"
+ ALT="$V^-$"> and <IMG
+ WIDTH="30" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$V^+$"> 
+  to get two equations. Solve one of them for <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.png"
+ ALT="$V$">, substitute it into 
+  the other equation, and then write <IMG
+ WIDTH="33" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$v_{out}$"> as a function of all 
+  four input voltages.
+
+<P>
+<A NAME="tex2html1"
+  HREF="../../../lectures/opamp_sub/opamp_sub.html"><B>Solution</B></A>
+<P>
+</LI>
+<LI><B>Exponential and logarithmic amplifiers:</B>
+
+<P>
+<IMG
+ WIDTH="649" HEIGHT="196" ALIGN="BOTTOM" BORDER="0"
+ SRC="../../../lectures/figures/ExpLogAmplifier.png"
+ ALT="ExpLogAmplifier.png">
+
+<P>
+Show that the output voltages <IMG
+ WIDTH="33" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$v_{out}$"> of the exponential amplifier 
+  (left) and logarithmic amplifier (right) are approximately an exponential
+  and logarithmic function of the input voltage <IMG
+ WIDTH="26" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.png"
+ ALT="$v_{in}$">, respectively:
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_{out}\approx C \;\exp(v_{in}/a),\;\;\;\;\;\; v_{out}\approx D\; \ln (v_{in}/b)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="329" HEIGHT="31" BORDER="0"
+ SRC="img9.png"
+ ALT="\begin{displaymath}
+v_{out}\approx C \;\exp(v_{in}/a),\;\;\;\;\;\; v_{out}\approx D\; \ln (v_{in}/b)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Derive these relationships and determine the coefficients <IMG
+ WIDTH="44" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.png"
+ ALT="$C,\;D$"> and 
+  <IMG
+ WIDTH="29" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.png"
+ ALT="$a, b$">.
+
+<P>
+Hint: recall the relationship between the current through and voltage 
+  across a diode and use the virtual ground assumption.
+
+<P>
+<A NAME="tex2html2"
+  HREF="../../../lectures/opamp_sub/node3.html"><B>Solution</B></A>
+<P>
+</LI>
+<LI><B>The Howland current source:</B>
+
+<P>
+The circuit generates a constant current through the load, independent
+  of the load resistance <IMG
+ WIDTH="27" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.png"
+ ALT="$R_L$"> of the load. Give the expression of this 
+  current <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.png"
+ ALT="$I_L$"> through <IMG
+ WIDTH="27" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.png"
+ ALT="$R_L$"> as a function of the inputs <IMG
+ WIDTH="30" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$V^+$"> and <IMG
+ WIDTH="30" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.png"
+ ALT="$V^-$"> 
+  and the resistances in the circuit, and show it is independent of <IMG
+ WIDTH="27" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.png"
+ ALT="$R_L$">.
+  Assume <!-- MATH
+ $R_2/R_1=R_4/R_3$
+ -->
+<IMG
+ WIDTH="128" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.png"
+ ALT="$R_2/R_1=R_4/R_3$">.
+
+<P>
+<IMG
+ WIDTH="302" HEIGHT="257" ALIGN="BOTTOM" BORDER="0"
+ SRC="../../../lectures/figures/HowlandCurrentSource.png"
+ ALT="HowlandCurrentSource.png">
+
+<P>
+<A NAME="tex2html3"
+  HREF="../../../lectures/opamp_sub/node3.html"><B>Solution</B></A>
+<P>
+</LI>
+</OL>
+
+<P>
+</LI>
+</OL>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html7"
+  HREF="node1.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html5"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev_g.png">   
+<BR>
+<B> Next:</B> <A NAME="tex2html6"
+  HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Ruye Wang
+2016-05-06
+</ADDRESS>
+</BODY>
+</HTML>

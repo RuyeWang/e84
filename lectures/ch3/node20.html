@@ -1,0 +1,738 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Real and Reactive Power and Power Factor</TITLE>
+<META NAME="description" CONTENT="Real and Reactive Power and Power Factor">
+<META NAME="keywords" CONTENT="ch3">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="ch3.css">
+
+<LINK REL="next" HREF="node21.html">
+<LINK REL="previous" HREF="node16.html">
+<LINK REL="next" HREF="node21.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node21.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node19.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node21.html">Load/Source Matching for Maximum</A>
+<B> Up:</B> <A
+ HREF="node1.html">Chapter 3: AC Circuit</A>
+<B> Previous:</B> <A
+ HREF="node19.html">Radio/TV Broadcasting and the</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION00018000000000000000">
+Real and Reactive Power and Power Factor</A>
+</H2>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/powerfactor.gif"
+ ALT="powerfactor.gif">
+
+<P>
+All loads of a power plant can be modeled by a two-terminal network of
+passive elements (resistors, inductors, capacitors, without any energy 
+sources) with a total complex impedance 
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Z=R+jX=|Z|e^{j\angle Z}=|Z|e^{j\phi},\;\;\;\;\;\;\;
+  \left\{\begin{array}{ll}|Z|=\sqrt{R^2+X^2}\\\angle Z=\phi=\tan^{-1}(X/R)>0
+  \end{array}\right.
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.41ex; " SRC="img1009.svg"
+ ALT="$\displaystyle Z=R+jX=\vert Z\vert e^{j\angle Z}=\vert Z\vert e^{j\phi},\;\;\;\;...
+...\vert Z\vert=\sqrt{R^2+X^2}\\ \angle Z=\phi=\tan^{-1}(X/R)&gt;0
+\end{array}\right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">376</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+As the loads are typically inductive (e.g., electric motors, transformers), 
+i.e., <!-- MATH
+ $X=\omega L>0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.21ex; " SRC="img1010.svg"
+ ALT="$X=\omega L&gt;0$"></SPAN>, the phase angle <!-- MATH
+ $\phi=\angle Z$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img1011.svg"
+ ALT="$\phi=\angle Z$"></SPAN> of the impedance is 
+positive. We are concerned with the energy consumption (by <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img112.svg"
+ ALT="$R$"></SPAN>) and 
+storage (in <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img105.svg"
+ ALT="$L$"></SPAN>) in the load. Let the input voltage to the load network 
+be:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v(t)=\sqrt{2}V_{rms} \cos(\omega t),\;\;\;\;\dot{V}=\sqrt{2}V_{rms}\angle 0
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.25ex; vertical-align: -0.70ex; " SRC="img1012.svg"
+ ALT="$\displaystyle v(t)=\sqrt{2}V_{rms} \cos(\omega t),\;\;\;\;\dot{V}=\sqrt{2}V_{rms}\angle 0$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">377</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+then the current through the power transmission line and load can be found:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\dot{I}=\frac{\dot{V}}{Z}=\frac{\sqrt{2}V_{rms}}{|Z|\angle \phi}
+  =\sqrt{2}I_{rms}\angle(-\phi),\;\;\;\;i(t)=\sqrt{2}I_{rms} \cos(\omega t-\phi)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.27ex; vertical-align: -2.29ex; " SRC="img1013.svg"
+ ALT="$\displaystyle \dot{I}=\frac{\dot{V}}{Z}=\frac{\sqrt{2}V_{rms}}{\vert Z\vert\ang...
+...
+=\sqrt{2}I_{rms}\angle(-\phi),\;\;\;\;i(t)=\sqrt{2}I_{rms} \cos(\omega t-\phi)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">378</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+where <!-- MATH
+ $I_{rms}=V_{rms}/|Z|$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1014.svg"
+ ALT="$I_{rms}=V_{rms}/\vert Z\vert$"></SPAN> is the RMS or effective value of the current.
+Note that the current is lagging the voltage by an angle <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img11.svg"
+ ALT="$\phi$"></SPAN>.
+
+<P>
+Consider the <EM>instantaneous power</EM> of the load defined as the product
+of the voltage and current:
+<BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+p_{in}(t) &=&
+  v(t)\;i(t)=\sqrt{2}V_{rms}\cos(\omega t)\;\sqrt{2}I_{rms}\cos(\omega t-\phi)
+  \nonumber \\
+  &=&2V_{rms}I_{rms}\;\cos(\omega t)\;[\cos(\omega t)\cos\phi
+    +\sin(\omega t)\sin\phi ]
+  \nonumber \\
+  &=&V_{rms}I_{rms} \left[\cos\phi\, \left(2\cos^2(\omega t)\right)
+  +\sin\phi\,\left(2\cos(\omega t)\sin(\omega t)\right) \right] 
+  \nonumber \\
+  &=&V_{rms}I_{rms} \;\left[ \cos\phi\; p(t) + \sin\phi\; q(t) \right] 
+  \nonumber \\
+  &=& S \;\left[\cos\phi\; p(t) + \sin\phi\; q(t) \right] 	
+  =P\; p(t)+Q\; q(t)
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1015.svg"
+ ALT="$\displaystyle p_{in}(t)$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 3.25ex; vertical-align: -0.70ex; " SRC="img1016.svg"
+ ALT="$\displaystyle v(t)\;i(t)=\sqrt{2}V_{rms}\cos(\omega t)\;\sqrt{2}I_{rms}\cos(\omega t-\phi)$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1017.svg"
+ ALT="$\displaystyle 2V_{rms}I_{rms}\;\cos(\omega t)\;[\cos(\omega t)\cos\phi
++\sin(\omega t)\sin\phi ]$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 3.25ex; vertical-align: -0.93ex; " SRC="img1018.svg"
+ ALT="$\displaystyle V_{rms}I_{rms} \left[\cos\phi\, \left(2\cos^2(\omega t)\right)
++\sin\phi\,\left(2\cos(\omega t)\sin(\omega t)\right) \right]$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1019.svg"
+ ALT="$\displaystyle V_{rms}I_{rms} \;\left[ \cos\phi\; p(t) + \sin\phi\; q(t) \right]$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1020.svg"
+ ALT="$\displaystyle S \;\left[\cos\phi\; p(t) + \sin\phi\; q(t) \right]
+=P\; p(t)+Q\; q(t)$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">379</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+
+where we have defined:
+
+<UL>
+<LI><EM>Apparent Power</EM> (in volt-amperes): <!-- MATH
+ $S=V_{rms}I_{rms}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1021.svg"
+ ALT="$S=V_{rms}I_{rms}$"></SPAN>
+</LI>
+<LI><EM>Real power</EM> (in Watts): <!-- MATH
+ $P=S\cos\phi$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img1022.svg"
+ ALT="$P=S\cos\phi$"></SPAN> as the 
+</LI>
+<LI><EM>Reactive power</EM> (in <EM>volt-ampere reactive or 
+  <EM>VAR</EM></EM>): <!-- MATH
+ $Q=S\sin\phi$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img1023.svg"
+ ALT="$Q=S\sin\phi$"></SPAN>
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+p(t)=2\cos^2(\omega t)=1+\cos 2\omega t,\;\;\;\;\;\;
+    q(t)=2\cos(\omega t)\sin(\omega t)=\sin 2\omega t
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img1024.svg"
+ ALT="$\displaystyle p(t)=2\cos^2(\omega t)=1+\cos 2\omega t,\;\;\;\;\;\;
+q(t)=2\cos(\omega t)\sin(\omega t)=\sin 2\omega t$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">380</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+</UL>
+Note that
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\frac{1}{T}\int_T p(t)dt=\frac{1}{T}\int_T [1+cos(2\omega t)] dt=1
+  \;\;\;\;\;\;
+  \frac{1}{T}\int_T q(t)dt=\frac{1}{T}\int_T \sin(2\omega t) dt=0	
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.23ex; " SRC="img1025.svg"
+ ALT="$\displaystyle \frac{1}{T}\int_T p(t)dt=\frac{1}{T}\int_T [1+cos(2\omega t)] dt=1
+\;\;\;\;\;\;
+\frac{1}{T}\int_T q(t)dt=\frac{1}{T}\int_T \sin(2\omega t) dt=0$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">381</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+i.e., <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1026.svg"
+ ALT="$p(t)$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1027.svg"
+ ALT="$q(t)$"></SPAN> represent respectively the real and reactive 
+power. 
+
+<P>
+The plots below show that the instantaneous power <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1028.svg"
+ ALT="$p_{in}(t)$"></SPAN> can be 
+represented as either a product of <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img88.svg"
+ ALT="$v(t)$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img21.svg"
+ ALT="$i(t)$"></SPAN>, or a weighted 
+sum of the real power <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1026.svg"
+ ALT="$p(t)$"></SPAN> and reactive power <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1027.svg"
+ ALT="$q(t)$"></SPAN>.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/instantaneouspower0.gif"
+ ALT="instantaneouspower0.gif">
+
+<P>
+Consider the <EM>average power</EM> over one period <!-- MATH
+ $T=2\pi/\omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1029.svg"
+ ALT="$T=2\pi/\omega$"></SPAN>:
+<BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+P_{average}&=&\frac{1}{T}\int_T p_{in}(t)dt
+  =\frac{1}{T}\int_T  \left[P\; p(t) + Q\; q(t) \right] dt
+  \nonumber \\
+  &=&S\cos\phi\;\frac{1}{T}\int_T p(t)dt+S\sin\phi\;\frac{1}{T}\int_T q(t)dt
+  \nonumber \\
+  &=&P\;1+Q\;0=P
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.55ex; vertical-align: -0.78ex; " SRC="img1030.svg"
+ ALT="$\displaystyle P_{average}$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 5.57ex; vertical-align: -2.23ex; " SRC="img1031.svg"
+ ALT="$\displaystyle \frac{1}{T}\int_T p_{in}(t)dt
+=\frac{1}{T}\int_T \left[P\; p(t) + Q\; q(t) \right] dt$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 5.57ex; vertical-align: -2.23ex; " SRC="img1032.svg"
+ ALT="$\displaystyle S\cos\phi\;\frac{1}{T}\int_T p(t)dt+S\sin\phi\;\frac{1}{T}\int_T q(t)dt$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img1033.svg"
+ ALT="$\displaystyle P\;1+Q\;0=P$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">382</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+
+We see that
+
+<UL>
+<LI>The real power <!-- MATH
+ $P=S\cos\phi$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img1022.svg"
+ ALT="$P=S\cos\phi$"></SPAN> represents the average power dissipation 
+  by the load over one period <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img16.svg"
+ ALT="$T$"></SPAN>;
+</LI>
+<LI>The reactive power <!-- MATH
+ $Q=S\sin\phi$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img1023.svg"
+ ALT="$Q=S\sin\phi$"></SPAN> is not consumed but converted back 
+  and forth between the energy source and the energy storing (inductive)
+  elements in the load.
+</LI>
+</UL>
+
+<P>
+The apparent power <!-- MATH
+ $S=V_{rms}I_{rms}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1021.svg"
+ ALT="$S=V_{rms}I_{rms}$"></SPAN> can be considered as the magnitude of 
+a complex product of <!-- MATH
+ $\dot{V}=V_{rms}\angle 0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.46ex; " SRC="img1034.svg"
+ ALT="$\dot{V}=V_{rms}\angle 0$"></SPAN> and 
+<!-- MATH
+ $\overline{\dot{I}}=\overline{I_{rms}\angle(-\phi)}=I_{rms}\angle\phi$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.48ex; vertical-align: -0.70ex; " SRC="img1035.svg"
+ ALT="$\overline{\dot{I}}=\overline{I_{rms}\angle(-\phi)}=I_{rms}\angle\phi$"></SPAN>:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\dot{V}\overline{\dot{I}}=V_{rms}\angle 0\; I_{rms}\angle \phi=V_{rms}I_{rms}\angle \phi
+  =S(\cos\phi+j\;\sin\phi)=P+jQ
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.48ex; vertical-align: -0.70ex; " SRC="img1036.svg"
+ ALT="$\displaystyle \dot{V}\overline{\dot{I}}=V_{rms}\angle 0\; I_{rms}\angle \phi=V_{rms}I_{rms}\angle \phi
+=S(\cos\phi+j\;\sin\phi)=P+jQ$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">383</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+On the other hand, as <!-- MATH
+ $\dot{V}=Z\dot{I}=(R+jX)\dot{I}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img1037.svg"
+ ALT="$\dot{V}=Z\dot{I}=(R+jX)\dot{I}$"></SPAN>, the above can 
+also be written as:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\dot{V}\overline{\dot{I}}=Z\dot{I}\overline{\dot{I}}
+  =(R+jX)\dot{I}\overline{\dot{I}}=RI^2_{rms}+jX I^2_{rms}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.48ex; vertical-align: -0.70ex; " SRC="img1038.svg"
+ ALT="$\displaystyle \dot{V}\overline{\dot{I}}=Z\dot{I}\overline{\dot{I}}
+=(R+jX)\dot{I}\overline{\dot{I}}=RI^2_{rms}+jX I^2_{rms}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">384</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Comparing the two expressions of <!-- MATH
+ $\dot{V}\overline{\dot{I}}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.12ex; " SRC="img1039.svg"
+ ALT="$\dot{V}\overline{\dot{I}}$"></SPAN> above, we get:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left\{ \begin{array}{l}P=I^2_{rms}R=S\;\cos\phi \\
+    Q=I^2_{rms}X=S\;\sin\phi \end{array} \right.
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img1040.svg"
+ ALT="$\displaystyle \left\{ \begin{array}{l}P=I^2_{rms}R=S\;\cos\phi \\
+Q=I^2_{rms}X=S\;\sin\phi \end{array} \right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">385</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+We see that the real power <!-- MATH
+ $P=I^2_{rms}R$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.69ex; " SRC="img1041.svg"
+ ALT="$P=I^2_{rms}R$"></SPAN> is dissipated by the resistive
+component <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img112.svg"
+ ALT="$R$"></SPAN> of the load, while the reactive power <!-- MATH
+ $Q=I^2_{rms}X$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.69ex; " SRC="img1042.svg"
+ ALT="$Q=I^2_{rms}X$"></SPAN> is stored 
+in and released from the reactive component <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img105.svg"
+ ALT="$L$"></SPAN> of the load. 
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/ComplexPower.png"
+ ALT="ComplexPower.png">
+
+<P>
+<B>Improvement of Power Factor</B>
+
+<P>
+The <EM>Power factor</EM> is defined as
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\lambda\stackrel{\triangle}{=}\cos \phi < 1
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.48ex; vertical-align: -0.57ex; " SRC="img1043.svg"
+ ALT="$\displaystyle \lambda\stackrel{\triangle}{=}\cos \phi &lt; 1$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">386</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+It is desirable to maximize the power factor <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img1044.svg"
+ ALT="$\lambda$"></SPAN> by reducing <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img11.svg"
+ ALT="$\phi$"></SPAN>,
+for higher efficiency of the power transmission system, i.e., to deliver 
+the real power <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img1045.svg"
+ ALT="$P$"></SPAN> to the load with minimum reactive power <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img23.svg"
+ ALT="$Q$"></SPAN> (thereby 
+minimum current and power dissipation along the transmission line).
+
+<P>
+To do so, we can include a 
+<A ID="tex2html19"
+  HREF="https://www.google.com/search?q=shunt+capacitor&amp;rlz=1C5CHFA_enUS505US508&amp;espv=2&amp;biw=921&amp;bih=969&amp;source=lnms&amp;tbm=isch&amp;sa=X&amp;ei=3RlRVMK1DJCCoQTvtYKIBg&amp;ved=0CAcQ_AUoAg&amp;dpr=1.5"><EM>shunt capacitor</EM></A>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img104.svg"
+ ALT="$C$"></SPAN> to cancel the inductive effect in the system, thereby reducing <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img11.svg"
+ ALT="$\phi$"></SPAN> 
+and increasing <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img1044.svg"
+ ALT="$\lambda$"></SPAN>. 
+
+<P>
+The most straight forward way is to add the shunt capacitor 
+<!-- MATH
+ $C=1/\omega L$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1046.svg"
+ ALT="$C=1/\omega L$"></SPAN> in series with the inductive load, so that the 
+inductive reactance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img1047.svg"
+ ALT="$j\omega L$"></SPAN> is completely canceled by the 
+capacitive reactance <!-- MATH
+ $1/j\omega C=-j\omega L$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1048.svg"
+ ALT="$1/j\omega C=-j\omega L$"></SPAN>.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/ShuntCapacitor0.png"
+ ALT="ShuntCapacitor0.png">
+
+<P>
+However, we also note that at resonance, the voltages across <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img105.svg"
+ ALT="$L$"></SPAN> and 
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img104.svg"
+ ALT="$C$"></SPAN> are <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img23.svg"
+ ALT="$Q$"></SPAN> times the voltage across <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img112.svg"
+ ALT="$R$"></SPAN>, which is the same as the 
+source voltage (see <A ID="tex2html20"
+  HREF="node11.html">this page</A>):
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\dot{V}_L=jQ\dot{V}_R,\;\;\;\;\;\dot{V}_C=-jQ\dot{V}_R
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.57ex; " SRC="img1049.svg"
+ ALT="$\displaystyle \dot{V}_L=jQ\dot{V}_R,\;\;\;\;\;\dot{V}_C=-jQ\dot{V}_R$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">387</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+the voltage across the inductive load <!-- MATH
+ $R+j\omega L$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img1050.svg"
+ ALT="$R+j\omega L$"></SPAN> becomes 
+<!-- MATH
+ $\dot{V}_{RL}=\dot{V}_L+\dot{V}_R=jQ\dot{V}+\dot{V}=(1+jQ)\dot{V}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img1051.svg"
+ ALT="$\dot{V}_{RL}=\dot{V}_L+\dot{V}_R=jQ\dot{V}+\dot{V}=(1+jQ)\dot{V}$"></SPAN>, 
+which could be much higher than the expected source voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.12ex; " SRC="img512.svg"
+ ALT="$\dot{V}$"></SPAN> 
+(without capacitor <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img104.svg"
+ ALT="$C$"></SPAN>) if <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img23.svg"
+ ALT="$Q$"></SPAN> is large. Consequently, improper 
+operation of the load or even damage may result.
+
+<P>
+The right way to compensate for the inductive impedance of the circuit
+is to include the shunt capacitor <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img104.svg"
+ ALT="$C$"></SPAN> in parallel to the inductive load 
+so that it still gets the expected voltage.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/ShuntCapacitor1.png"
+ ALT="ShuntCapacitor1.png">
+
+<P>
+Now the overall load becomes 
+<BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+Z_{total}&=&Z_{RL}||Z_C=(R+j\omega L)\; || \;(1/j\omega C)
+  \nonumber\\
+  &=&\frac{(R+j\omega L)/j\omega C}{(R+j\omega L)+1/j\omega C}
+  =\frac{R+j\omega L}{j\omega CR-\omega^2 LC+1}
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1052.svg"
+ ALT="$\displaystyle Z_{total}$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1053.svg"
+ ALT="$\displaystyle Z_{RL}\vert\vert Z_C=(R+j\omega L)\; \vert\vert \;(1/j\omega C)$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img1054.svg"
+ ALT="$\displaystyle \frac{(R+j\omega L)/j\omega C}{(R+j\omega L)+1/j\omega C}
+=\frac{R+j\omega L}{j\omega CR-\omega^2 LC+1}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">388</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+
+We need to find the capacitance <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img104.svg"
+ ALT="$C$"></SPAN> so that the new phase angle 
+<!-- MATH
+ $\phi=\angle Z_{total}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img1055.svg"
+ ALT="$\phi=\angle Z_{total}$"></SPAN> is zero, i.e., the phases of the numerator 
+and denominator need are the same:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\tan^{-1}\left(\frac{\omega L}{R}\right)
+  =\tan^{-1}\left(\frac{\omega RC}{1-\omega^2 LC}\right),
+  \;\;\;\;\;\mbox{i.e.}\;\;\;\;\;\;
+  \frac{\omega L}{R}=\frac{\omega RC}{1-\omega^2 LC}
+  \;\;\;\;\;\mbox{i.e.}\;\;\;\;\;\;
+  L-\omega^2 L^2C=R^2C
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img1056.svg"
+ ALT="$\displaystyle \tan^{-1}\left(\frac{\omega L}{R}\right)
+=\tan^{-1}\left(\frac{\omega RC}{1-\omega^2 LC}\right),
+\;\;\;\;\;$">i.e.<IMG STYLE="height: 5.34ex; vertical-align: -1.90ex; " SRC="img1057.svg"
+ ALT="$\displaystyle \;\;\;\;\;\;
+\frac{\omega L}{R}=\frac{\omega RC}{1-\omega^2 LC}
+\;\;\;\;\;$">i.e.<IMG STYLE="height: 2.55ex; vertical-align: -0.31ex; " SRC="img1058.svg"
+ ALT="$\displaystyle \;\;\;\;\;\;
+L-\omega^2 L^2C=R^2C$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">389</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Solving this equation for <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img104.svg"
+ ALT="$C$"></SPAN> we get:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+C_p=\frac{L}{R^2+\omega^2 L^2}
+  =\frac{1}{R^2/L+\omega^2 L}<\frac{1}{\omega^2L}=C_s
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img1059.svg"
+ ALT="$\displaystyle C_p=\frac{L}{R^2+\omega^2 L^2}
+=\frac{1}{R^2/L+\omega^2 L}&lt;\frac{1}{\omega^2L}=C_s$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">390</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Now the voltage across the inductive load is still the same as the voltage
+source as expected, and another benefit is that the required capacitance <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.78ex; " SRC="img1060.svg"
+ ALT="$C_p$"></SPAN>
+is smaller than the capacitance <!-- MATH
+ $C_s=1/\omega^2 L$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img1061.svg"
+ ALT="$C_s=1/\omega^2 L$"></SPAN> required for the series 
+approach.
+
+<P>
+<A ID="tex2html21"
+  HREF="https://www.captech.com.au/solution/power-factor-correction/">Power factor correction</A>
+<P>
+<A ID="tex2html22"
+  HREF="https://www.google.com/search?q=shunt+capacitor&amp;rlz=1C5CHFA_enUS505US508&amp;source=lnms&amp;tbm=isch&amp;sa=X&amp;ved=0ahUKEwiS0YPWorTeAhWIFTQIHYKIBbwQ_AUIDygC&amp;biw=729&amp;bih=844">Shunt capacitors</A>
+<P>
+To reduce the cost of a large capacitance needed for the phase angle of 
+the load to be reduced to zero <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img1062.svg"
+ ALT="$\phi=0$"></SPAN> so that <!-- MATH
+ $\lambda=\cos\phi=1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img1063.svg"
+ ALT="$\lambda=\cos\phi=1$"></SPAN>, it 
+is acceptable for the improved power factor to be less than 1, e.g., 0.95. 
+In this case, the phase angle of the load is
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\phi=\angle Z'=\tan^{-1}\left(\frac{\omega L}{R}\right)-\tan^{-1}\left(\frac{\omega RC}{1-\omega^2 LC}\right)=\cos^{-1}\; 0.95=18.2^\circ
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img1064.svg"
+ ALT="$\displaystyle \phi=\angle Z'=\tan^{-1}\left(\frac{\omega L}{R}\right)-\tan^{-1}\left(\frac{\omega RC}{1-\omega^2 LC}\right)=\cos^{-1}\; 0.95=18.2^\circ$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">391</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Solving this equation for <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img104.svg"
+ ALT="$C$"></SPAN> we get the required capacitance. As now we have
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\tan^{-1}\left(\frac{\omega L}{R}\right)>\tan^{-1}\left(\frac{\omega RC}{1-\omega^2 LC}\right)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img1065.svg"
+ ALT="$\displaystyle \tan^{-1}\left(\frac{\omega L}{R}\right)&gt;\tan^{-1}\left(\frac{\omega RC}{1-\omega^2 LC}\right)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">392</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+i.e.,
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\frac{\omega L}{R}>\frac{\omega RC}{1-\omega^2 LC}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -1.90ex; " SRC="img1066.svg"
+ ALT="$\displaystyle \frac{\omega L}{R}&gt;\frac{\omega RC}{1-\omega^2 LC}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">393</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+we get an even smaller capacitance which is more practically implementable:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+C<\frac{L}{R^2+\omega^2 L^2}=\frac{1}{R^2/L+\omega^2L}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img1067.svg"
+ ALT="$\displaystyle C&lt;\frac{L}{R^2+\omega^2 L^2}=\frac{1}{R^2/L+\omega^2L}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">394</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node21.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node19.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node21.html">Load/Source Matching for Maximum</A>
+<B> Up:</B> <A
+ HREF="node1.html">Chapter 3: AC Circuit</A>
+<B> Previous:</B> <A
+ HREF="node19.html">Radio/TV Broadcasting and the</A></DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

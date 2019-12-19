@@ -1,0 +1,531 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Test Problems (don't click until you start taking the test)</TITLE>
+<META NAME="description" CONTENT="Test Problems (don't click until you start taking the test)">
+<META NAME="keywords" CONTENT="midterm2_19s_key">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="midterm2_19s_key.css">
+
+<LINK REL="next" HREF="node3.html">
+<LINK REL="previous" HREF="node1.html">
+<LINK REL="next" HREF="node3.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="midterm2_19s_key.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node3.html">About this document ...</A>
+<B> Up:</B> <A
+ HREF="midterm2_19s_key.html">midterm2_19s_key</A>
+<B> Previous:</B> <A
+ HREF="node1.html">Instructions</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A ID="SECTION00020000000000000000">
+Test Problems (don't click until you start taking the test)</A>
+</H1>
+
+<P>
+
+<OL>
+<LI><B>(33 points)</B> 
+  A crystal oscillator is an electronic oscillator circuit that uses
+  the mechanical resonance of a vibrating crystal of piezoelectric material
+  to create an electrical signal with a precise frequency. The crystal can
+  be modeled by the RLC circuit shown in the figure. We assume <SPAN CLASS="MATH"><IMG STYLE="height: 178.60ex; vertical-align: -0.11ex; " SRC="img1.svg"
+ ALT="$R$"></SPAN> can be
+  approximated to be zero.
+  
+<UL>
+<LI>Find the parallel resonant frequency <SPAN CLASS="MATH"><IMG STYLE="height: 178.60ex; vertical-align: -0.78ex; " SRC="img2.svg"
+ ALT="$\omega_p$"></SPAN> at which the 
+      impedance of the model is maximized.    
+</LI>
+<LI>Find the series resonant frequency <SPAN CLASS="MATH"><IMG STYLE="height: 178.60ex; vertical-align: -0.45ex; " SRC="img3.svg"
+ ALT="$\omega_s$"></SPAN> at which the 
+      impedance of the model is minimized.
+  
+</LI>
+</UL>
+
+<P>
+<IMG STYLE=""
+ SRC="../../lectures/figures/Problems0.png"
+ ALT="Problems0.png">
+
+<P>
+<B>Solution</B> The total admittance is
+  <BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+Y(\omega)&=&\frac{1}{j\omega L+1/j\omega C}+j\omega C_0
+    =\frac{j\omega C}{1-\omega^2LC}+j\omega C_0
+    =\frac{j\omega C+j\omega C_0(1-\omega^2LC)}{1-\omega^2LC}
+    \nonumber
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG STYLE="height: 178.60ex; vertical-align: -0.69ex; " SRC="img4.svg"
+ ALT="$\displaystyle Y(\omega)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 178.60ex; vertical-align: -0.11ex; " SRC="img5.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 178.60ex; vertical-align: -2.28ex; " SRC="img6.svg"
+ ALT="$\displaystyle \frac{1}{j\omega L+1/j\omega C}+j\omega C_0
+=\frac{j\omega C}{1-\omega^2LC}+j\omega C_0
+=\frac{j\omega C+j\omega C_0(1-\omega^2LC)}{1-\omega^2LC}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+  
+<UL>
+<LI>The magnitude of <SPAN CLASS="MATH"><IMG STYLE="height: 178.60ex; vertical-align: -0.69ex; " SRC="img7.svg"
+ ALT="$Y(\omega)$"></SPAN> is minimized to zero if
+      <BR><P></P>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{displaymath}
+j\omega C+j\omega C_0(1-\omega^2LC)=0
+\end{displaymath}
+ -->
+
+<IMG STYLE=""
+ SRC="img8.svg"
+ ALT="\begin{displaymath}
+j\omega C+j\omega C_0(1-\omega^2LC)=0
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+i.e.,
+      <BR><P></P>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{displaymath}
+\omega^2=\frac{C+C_0}{L(CC_0)},\;\;\;\;\;\mbox{or}
+      \;\;\;\;\omega=\frac{1}{\sqrt{LC_p}}
+\end{displaymath}
+ -->
+
+<IMG STYLE=""
+ SRC="img9.svg"
+ ALT="\begin{displaymath}
+\omega^2=\frac{C+C_0}{L(CC_0)},\;\;\;\;\;\mbox{or}
+\;\;\;\;\omega=\frac{1}{\sqrt{LC_p}}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where 
+      <BR><P></P>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{displaymath}
+C_p=C||C_0=\frac{CC_0}{C+C_0}
+\end{displaymath}
+ -->
+
+<IMG STYLE=""
+ SRC="img10.svg"
+ ALT="\begin{displaymath}
+C_p=C\vert\vert C_0=\frac{CC_0}{C+C_0}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+This is the parallel resonant frequency.
+</LI>
+<LI>The magnitude of <SPAN CLASS="MATH"><IMG STYLE="height: 178.60ex; vertical-align: -0.69ex; " SRC="img7.svg"
+ ALT="$Y(\omega)$"></SPAN> is maximized to infinity if
+      <!-- MATH
+ $\omega=1/\sqrt{LC}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 178.60ex; vertical-align: -0.69ex; " SRC="img11.svg"
+ ALT="$\omega=1/\sqrt{LC}$"></SPAN> and the denominator becomes zero. This is
+      the series resonant frequency.
+  
+</LI>
+</UL>
+
+<P>
+</LI>
+<LI><B>(33 points)</B> 
+  In the circuit below, the filter composed of <SPAN CLASS="MATH"><IMG STYLE="height: 178.60ex; vertical-align: -0.11ex; " SRC="img12.svg"
+ ALT="$L$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 178.60ex; vertical-align: -0.45ex; " SRC="img13.svg"
+ ALT="$C_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 178.60ex; vertical-align: -0.45ex; " SRC="img14.svg"
+ ALT="$C_2$"></SPAN>
+  between the source <SPAN CLASS="MATH"><IMG STYLE="height: 178.60ex; vertical-align: -0.69ex; " SRC="img15.svg"
+ ALT="$v(t)$"></SPAN> and the load <SPAN CLASS="MATH"><IMG STYLE="height: 178.60ex; vertical-align: -0.47ex; " SRC="img16.svg"
+ ALT="$R_L=100\Omega$"></SPAN> is to pass the 
+  fundamental frequency <SPAN CLASS="MATH"><IMG STYLE="height: 178.60ex; vertical-align: -0.45ex; " SRC="img17.svg"
+ ALT="$\omega_0=1000$"></SPAN> without attenuation but completely 
+  block the 2nd harmonic <!-- MATH
+ $2\omega_0=2000$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 178.60ex; vertical-align: -0.45ex; " SRC="img18.svg"
+ ALT="$2\omega_0=2000$"></SPAN>. Given <SPAN CLASS="MATH"><IMG STYLE="height: 178.60ex; vertical-align: -0.11ex; " SRC="img19.svg"
+ ALT="$L=25\,mH$"></SPAN>, find <SPAN CLASS="MATH"><IMG STYLE="height: 178.60ex; vertical-align: -0.45ex; " SRC="img13.svg"
+ ALT="$C_1$"></SPAN>
+  and <SPAN CLASS="MATH"><IMG STYLE="height: 178.60ex; vertical-align: -0.45ex; " SRC="img14.svg"
+ ALT="$C_2$"></SPAN>.
+
+<P>
+<IMG STYLE=""
+ SRC="../../lectures/figures/Problems2.png"
+ ALT="Problems2.png">
+
+<P>
+<B>Solution</B> Find the total impedance of the filter branch:
+  <BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+Z(\omega)&=&\frac{j\omega L/j\omega C_1}{j\omega L+1/j\omega C_1}+\frac{1}{j\omega C_2}
+    =\frac{j\omega L}{1-\omega^2LC_1}-\frac{j}{\omega C_2}
+    \nonumber\\
+    &=&j\frac{\omega^2LC_2+\omega^2LC_1-1}{(1-\omega^2LC_1)\omega C_2}
+    =j\frac{\omega^2L(C_1+C_2)-1}{(1-\omega^2LC_1)\omega C_2}
+    \nonumber
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG STYLE="height: 178.60ex; vertical-align: -0.69ex; " SRC="img20.svg"
+ ALT="$\displaystyle Z(\omega)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 178.60ex; vertical-align: -0.11ex; " SRC="img5.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 178.60ex; vertical-align: -2.28ex; " SRC="img21.svg"
+ ALT="$\displaystyle \frac{j\omega L/j\omega C_1}{j\omega L+1/j\omega C_1}+\frac{1}{j\omega C_2}
+=\frac{j\omega L}{1-\omega^2LC_1}-\frac{j}{\omega C_2}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 178.60ex; vertical-align: -0.11ex; " SRC="img5.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 178.60ex; vertical-align: -2.28ex; " SRC="img22.svg"
+ ALT="$\displaystyle j\frac{\omega^2LC_2+\omega^2LC_1-1}{(1-\omega^2LC_1)\omega C_2}
+=j\frac{\omega^2L(C_1+C_2)-1}{(1-\omega^2LC_1)\omega C_2}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+When the denominator is zero, i.e., <!-- MATH
+ $\omega^2=1/LC_1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 178.60ex; vertical-align: -0.69ex; " SRC="img23.svg"
+ ALT="$\omega^2=1/LC_1$"></SPAN>, we get 
+  <!-- MATH
+ $|Z(\omega)|=\infty$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 178.60ex; vertical-align: -0.69ex; " SRC="img24.svg"
+ ALT="$\vert Z(\omega)\vert=\infty$"></SPAN>, the filter is an open circuit. Therefore, to 
+  completely block <!-- MATH
+ $2\omega_0=2000$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 178.60ex; vertical-align: -0.45ex; " SRC="img18.svg"
+ ALT="$2\omega_0=2000$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 178.60ex; vertical-align: -0.45ex; " SRC="img13.svg"
+ ALT="$C_1$"></SPAN> needs to satisfy:
+  <BR><P></P>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{displaymath}
+\frac{1}{\sqrt{LC_1}}=2\times 10^3,\;\;\;\;\mbox{i.e.,}\;\;\;\;
+  C_1=\frac{1}{4\times 10^6 \times 25\times 10^-3}=10^{-5}\,F=10\,\mu F
+\end{displaymath}
+ -->
+
+<IMG STYLE=""
+ SRC="img25.svg"
+ ALT="\begin{displaymath}
+\frac{1}{\sqrt{LC_1}}=2\times 10^3,\;\;\;\;\mbox{i.e.,}\;\;...
+...c{1}{4\times 10^6 \times 25\times 10^-3}=10^{-5}\,F=10\,\mu F
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+When the numerator is zero, i.e., <!-- MATH
+ $\omega^2L(C_1+C_2)=1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 178.60ex; vertical-align: -0.69ex; " SRC="img26.svg"
+ ALT="$\omega^2L(C_1+C_2)=1$"></SPAN>,  <SPAN CLASS="MATH"><IMG STYLE="height: 178.60ex; vertical-align: -0.69ex; " SRC="img27.svg"
+ ALT="$\vert Z(\omega)\vert=0$"></SPAN>,
+  the filter is a short circuit. Therefore, to pass <SPAN CLASS="MATH"><IMG STYLE="height: 178.60ex; vertical-align: -0.45ex; " SRC="img17.svg"
+ ALT="$\omega_0=1000$"></SPAN> without
+  attenuation, <SPAN CLASS="MATH"><IMG STYLE="height: 178.60ex; vertical-align: -0.45ex; " SRC="img28.svg"
+ ALT="$C_1+C_2$"></SPAN> needs to satisfy
+  <BR><P></P>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{displaymath}
+C_1+C_2=\frac{1}{\omega_0^2L}=\frac{1}{10^6\times 25\times 10^{-3}}=40\times 10^{-6}=40\,\mu F
+\end{displaymath}
+ -->
+
+<IMG STYLE=""
+ SRC="img29.svg"
+ ALT="\begin{displaymath}
+C_1+C_2=\frac{1}{\omega_0^2L}=\frac{1}{10^6\times 25\times 10^{-3}}=40\times 10^{-6}=40\,\mu F
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+i.e.,
+  <BR><P></P>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{displaymath}
+C_2=40\,\mu F-C_1=40\,\mu F-10\,\mj F=30\,\mu F
+\end{displaymath}
+ -->
+
+<IMG STYLE=""
+ SRC="img30.svg"
+ ALT="\begin{displaymath}
+C_2=40\,\mu F-C_1=40\,\mu F-10\,\mj F=30\,\mu F
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+</LI>
+<LI><B>(34 points)</B> 
+  In the circuit below, <SPAN CLASS="MATH"><IMG STYLE="height: 178.60ex; vertical-align: -0.45ex; " SRC="img31.svg"
+ ALT="$R_1=3\Omega$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 178.60ex; vertical-align: -0.45ex; " SRC="img32.svg"
+ ALT="$R_2=6\Omega$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 178.60ex; vertical-align: -0.45ex; " SRC="img33.svg"
+ ALT="$R_3=2\Omega$"></SPAN>, 
+  <SPAN CLASS="MATH"><IMG STYLE="height: 178.60ex; vertical-align: -0.11ex; " SRC="img34.svg"
+ ALT="$L=0.5\,H$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 178.60ex; vertical-align: -0.45ex; " SRC="img35.svg"
+ ALT="$V_1=6V$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 178.60ex; vertical-align: -0.45ex; " SRC="img36.svg"
+ ALT="$V_2=3V$"></SPAN>. The circuit is in steady state when 
+  <SPAN CLASS="MATH"><IMG STYLE="height: 178.60ex; vertical-align: -0.20ex; " SRC="img37.svg"
+ ALT="$t&lt;0$"></SPAN>. Find current <SPAN CLASS="MATH"><IMG STYLE="height: 178.60ex; vertical-align: -0.69ex; " SRC="img38.svg"
+ ALT="$i_3(t)$"></SPAN> through <SPAN CLASS="MATH"><IMG STYLE="height: 178.60ex; vertical-align: -0.45ex; " SRC="img39.svg"
+ ALT="$R_3$"></SPAN> when switch is closed at
+  <SPAN CLASS="MATH"><IMG STYLE="height: 178.60ex; vertical-align: -0.11ex; " SRC="img40.svg"
+ ALT="$t=0$"></SPAN>.
+
+<P>
+<IMG STYLE=""
+ SRC="../../lectures/figures/Problems7.png"
+ ALT="Problems7.png">
+
+<P>
+<B>Solution:</B> Current through <SPAN CLASS="MATH"><IMG STYLE="height: 178.60ex; vertical-align: -0.11ex; " SRC="img12.svg"
+ ALT="$L$"></SPAN> at <SPAN CLASS="MATH"><IMG STYLE="height: 178.60ex; vertical-align: -0.11ex; " SRC="img40.svg"
+ ALT="$t=0$"></SPAN> is
+  <BR><P></P>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{displaymath}
+i_L(0^-)=i_L(0^+)=3/6=0.5\,A
+\end{displaymath}
+ -->
+
+<IMG STYLE=""
+ SRC="img41.svg"
+ ALT="\begin{displaymath}
+i_L(0^-)=i_L(0^+)=3/6=0.5\,A
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+We have <!-- MATH
+ $\tau=L/(R_1||R_2||R_3)=0.5/(3||6||2)=0.5\,s$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 178.60ex; vertical-align: -0.69ex; " SRC="img42.svg"
+ ALT="$\tau=L/(R_1\vert\vert R_2\vert\vert R_3)=0.5/(3\vert\vert 6\vert\vert 2)=0.5\,s$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 178.60ex; vertical-align: -0.69ex; " SRC="img43.svg"
+ ALT="$i_3(\infty)=0$"></SPAN>.
+  To find <SPAN CLASS="MATH"><IMG STYLE="height: 178.60ex; vertical-align: -0.69ex; " SRC="img44.svg"
+ ALT="$i_3(0^+)$"></SPAN> after the switch is closed at <SPAN CLASS="MATH"><IMG STYLE="height: 178.60ex; vertical-align: -0.11ex; " SRC="img40.svg"
+ ALT="$t=0$"></SPAN>, we use 
+  superposition
+  
+<UL>
+<LI><SPAN CLASS="MATH"><IMG STYLE="height: 178.60ex; vertical-align: -0.45ex; " SRC="img35.svg"
+ ALT="$V_1=6V$"></SPAN> alone: Total current through <SPAN CLASS="MATH"><IMG STYLE="height: 178.60ex; vertical-align: -0.45ex; " SRC="img45.svg"
+ ALT="$V_1$"></SPAN>:
+    <BR><P></P>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{displaymath}
+\frac{V_1}{R_1+R_2||R_3}=\frac{6}{3+1.5}=\frac{4}{3}
+\end{displaymath}
+ -->
+
+<IMG STYLE=""
+ SRC="img46.svg"
+ ALT="\begin{displaymath}
+\frac{V_1}{R_1+R_2\vert\vert R_3}=\frac{6}{3+1.5}=\frac{4}{3}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+By current divider:
+    <BR><P></P>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{displaymath}
+i'_3(0^+)=\frac{4}{3}\;\frac{2}{2+6}=\frac{4\times 6}{3\times 8}=1\;\;\;\;\;\mbox{(down)}
+\end{displaymath}
+ -->
+
+<IMG STYLE=""
+ SRC="img47.svg"
+ ALT="\begin{displaymath}
+i'_3(0^+)=\frac{4}{3}\;\frac{2}{2+6}=\frac{4\times 6}{3\times 8}=1\;\;\;\;\;\mbox{(down)}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI><SPAN CLASS="MATH"><IMG STYLE="height: 178.60ex; vertical-align: -0.45ex; " SRC="img48.svg"
+ ALT="$V_2$"></SPAN> alone: 
+    <BR><P></P>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{displaymath}
+i''_3(0^+)=\frac{V_2}{R_1||R_2+R_3}=\frac{3}{2+2}=\frac{3}{4}=0.75\;\;\;\;\;\mbox{(down)}
+\end{displaymath}
+ -->
+
+<IMG STYLE=""
+ SRC="img49.svg"
+ ALT="\begin{displaymath}
+i''_3(0^+)=\frac{V_2}{R_1\vert\vert R_2+R_3}=\frac{3}{2+2}=\frac{3}{4}=0.75\;\;\;\;\;\mbox{(down)}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI><SPAN CLASS="MATH"><IMG STYLE="height: 178.60ex; vertical-align: -0.69ex; " SRC="img50.svg"
+ ALT="$i_L(0^+)$"></SPAN> alone:
+    <BR><P></P>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{displaymath}
+i'''_3(0^+)=i_L(0^+)\frac{R_1||R_2}{R_3+R_1||R_2}=0.5\frac{2}{2+2}=0.25\;\;\;\;\;\mbox{(up)}
+\end{displaymath}
+ -->
+
+<IMG STYLE=""
+ SRC="img51.svg"
+ ALT="\begin{displaymath}
+i'''_3(0^+)=i_L(0^+)\frac{R_1\vert\vert R_2}{R_3+R_1\vert\vert R_2}=0.5\frac{2}{2+2}=0.25\;\;\;\;\;\mbox{(up)}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+</UL>
+  <BR><P></P>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{displaymath}
+i_3(0^+)=i'_3(0^+)+i''_3(0^+)+i'''_3(0^+)=1+0.75-0.25=1.5\,A
+\end{displaymath}
+ -->
+
+<IMG STYLE=""
+ SRC="img52.svg"
+ ALT="\begin{displaymath}
+i_3(0^+)=i'_3(0^+)+i''_3(0^+)+i'''_3(0^+)=1+0.75-0.25=1.5\,A
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+  <BR><P></P>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{displaymath}
+i_3(t)=0-(1.5-0)e^{-t/\tau}=1.5e^{-2t}\,A
+\end{displaymath}
+ -->
+
+<IMG STYLE=""
+ SRC="img53.svg"
+ ALT="\begin{displaymath}
+i_3(t)=0-(1.5-0)e^{-t/\tau}=1.5e^{-2t}\,A
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+Alternative method: <SPAN CLASS="MATH"><IMG STYLE="height: 178.60ex; vertical-align: -0.69ex; " SRC="img54.svg"
+ ALT="$i_L(0)=0.5\,A$"></SPAN>, applying KCL to the middle point a:
+  <BR><P></P>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{displaymath}
+\frac{V_a}{R_3}+\frac{V_a-V_1-V_2}{R_1}+\frac{V_a-V_2}{R_2}+i_L
+  =\frac{V_a}{2}+\frac{V_a-9}{3}+\frac{V_a-3}{6}+0.5=0
+\end{displaymath}
+ -->
+
+<IMG STYLE=""
+ SRC="img55.svg"
+ ALT="\begin{displaymath}
+\frac{V_a}{R_3}+\frac{V_a-V_1-V_2}{R_1}+\frac{V_a-V_2}{R_2}+i_L
+=\frac{V_a}{2}+\frac{V_a-9}{3}+\frac{V_a-3}{6}+0.5=0
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Solving this we get <SPAN CLASS="MATH"><IMG STYLE="height: 178.60ex; vertical-align: -0.45ex; " SRC="img56.svg"
+ ALT="$V_a=3\,V$"></SPAN>, and <!-- MATH
+ $i_3(0^+)=V_a/R_3=3/2=1.5\,A$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 178.60ex; vertical-align: -0.69ex; " SRC="img57.svg"
+ ALT="$i_3(0^+)=V_a/R_3=3/2=1.5\,A$"></SPAN>, same
+  as above.
+
+<P>
+</LI>
+</OL>
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="midterm2_19s_key.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node3.html">About this document ...</A>
+<B> Up:</B> <A
+ HREF="midterm2_19s_key.html">midterm2_19s_key</A>
+<B> Previous:</B> <A
+ HREF="node1.html">Instructions</A></DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

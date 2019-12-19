@@ -1,0 +1,283 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>ch1_sub1</TITLE>
+<META NAME="description" CONTENT="ch1_sub1">
+<META NAME="keywords" CONTENT="ch1_sub1">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="ch1_sub1.css">
+
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev_g.png">   
+<BR>
+<B> Next:</B> <A NAME="tex2html3"
+  HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+
+<UL>
+<LI><B>Example 0:</B>
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../figures/sourcemeter.gif"
+ ALT="sourcemeter.gif">
+
+<P>
+The voltage measured by a voltmeter is (voltage divider):
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V=V_s \frac{R_v}{R_s+R_v}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="126" HEIGHT="49" BORDER="0"
+ SRC="img1.png"
+ ALT="\begin{displaymath}V=V_s \frac{R_v}{R_s+R_v} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+It is desireable for <IMG
+ WIDTH="27" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.png"
+ ALT="$R_v$"> to be as large as possible (ideally infinity) so 
+  that it draws little current from the source (causing little voltage drop 
+  across the internal resistance <IMG
+ WIDTH="26" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="$R_s$">), for the measureed voltage to be 
+  close to the true open-circuit voltage <IMG
+ WIDTH="29" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$V_{oc}$">, i.e., the source <IMG
+ WIDTH="22" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$V_s$">. 
+
+<P>
+The current measured by an ammeter is:
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+I=\frac{V_s}{R_s+R_a}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="103" HEIGHT="49" BORDER="0"
+ SRC="img6.png"
+ ALT="\begin{displaymath}I=\frac{V_s}{R_s+R_a} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+It is desireable for <IMG
+ WIDTH="27" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.png"
+ ALT="$R_a$"> to be as small as possible (ideally zero)
+  so that the measured current is close to true short-circuit current 
+  <!-- MATH
+ $I_{sc}=V_s/R_s$
+ -->
+<IMG
+ WIDTH="99" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.png"
+ ALT="$I_{sc}=V_s/R_s$">.
+
+<P>
+When <IMG
+ WIDTH="71" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.png"
+ ALT="$R_v&lt;\infty$"> and <IMG
+ WIDTH="61" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.png"
+ ALT="$R_a&gt;0$">, the true <IMG
+ WIDTH="22" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$V_s$"> and <IMG
+ WIDTH="26" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="$R_s$"> can be found by
+  solving these equations:
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\left\{ \begin{array}{l}
+     V=V_s R_v/(R_s+R_v) \\I=V_s/(R_s+R_a) \end{array} \right. 
+  \;\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;\;
+  \left\{ \begin{array}{l}
+    R_vV_s-VR_s=VR_v \\V_s-IR_s=I R_a \end{array} \right.
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="475" HEIGHT="55" BORDER="0"
+ SRC="img11.png"
+ ALT="\begin{displaymath}\left\{ \begin{array}{l}
+V=V_s R_v/(R_s+R_v) \\ I=V_s/(R_s+R...
+...ay}{l}
+R_vV_s-VR_s=VR_v \\ V_s-IR_s=I R_a \end{array} \right. \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+solving these we get:
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\left\{ \begin{array}{l}
+    V_s=IV(R_v-R_a)/(IR_v-V) \\
+    R_s=(V-IR_a)R_v/(IR_v-V)
+  \end{array} \right.
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="265" HEIGHT="55" BORDER="0"
+ SRC="img12.png"
+ ALT="\begin{displaymath}\left\{ \begin{array}{l}
+V_s=IV(R_v-R_a)/(IR_v-V) \\
+R_s=(V-IR_a)R_v/(IR_v-V)
+\end{array} \right. \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+Given the specific values, we get
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+I=\frac{R_s}{R_s+R_a}=\frac{6V}{300\Omega}=0.02A
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="248" HEIGHT="49" BORDER="0"
+ SRC="img13.png"
+ ALT="\begin{displaymath}I=\frac{R_s}{R_s+R_a}=\frac{6V}{300\Omega}=0.02A \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V=V_s \frac{R_v}{R_s+R_v}=6V \frac{10,000}{10,000+100}=5.94 V
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="360" HEIGHT="50" BORDER="0"
+ SRC="img14.png"
+ ALT="\begin{displaymath}V=V_s \frac{R_v}{R_s+R_v}=6V \frac{10,000}{10,000+100}=5.94 V \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+From these measurement, the true <IMG
+ WIDTH="26" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="$R_s$"> and <IMG
+ WIDTH="22" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$V_s$"> can be obtained as:
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V_s=\frac{IV(R_v-R_a)}{IR_v-V}
+  =\frac{5.94\times 0.02(10,000-200)}{0.02\times 10,000-5.94}=100
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="446" HEIGHT="51" BORDER="0"
+ SRC="img15.png"
+ ALT="\begin{displaymath}V_s=\frac{IV(R_v-R_a)}{IR_v-V}
+=\frac{5.94\times 0.02(10,000-200)}{0.02\times 10,000-5.94}=100 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+R_s=\frac{(V-IR_a)R_v}{IR_v-V} 
+  =\frac{(5.94-0.02\tiimes 200)\times 10,000}{0.02\times 10,000-5.94}=6
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="430" HEIGHT="51" BORDER="0"
+ SRC="img16.png"
+ ALT="\begin{displaymath}R_s=\frac{(V-IR_a)R_v}{IR_v-V}
+=\frac{(5.94-0.02\tiimes 200)\times 10,000}{0.02\times 10,000-5.94}=6 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Method verified.
+
+<P>
+</LI>
+</UL>
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html4"
+  HREF="node1.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev_g.png">   
+<BR>
+<B> Next:</B> <A NAME="tex2html3"
+  HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Ruye Wang
+2015-09-07
+</ADDRESS>
+</BODY>
+</HTML>

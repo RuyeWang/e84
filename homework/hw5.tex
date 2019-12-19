@@ -1,0 +1,177 @@
+\documentstyle[11pt]{article}
+\usepackage{html}
+\begin{document}
+\begin{center}
+{\Large \bf E84 Home Work 5}
+\end{center}
+\begin{enumerate}
+
+\item The resistance $R$ of a circuit is a real value which can be measured
+by a multimeter. However, the impedance $Z$ is complex which cannot be 
+measured directly. Instead, one can use an oscilloscope to find sinusoidal 
+voltage $v(t)$ across and current $i(t)$ through the circuit, and the obtain
+the impedance as the ratio between the complex representations of the voltage
+and current. Suppose we find:
+\[ v(t)=12 cos(1000t-30^\circ),\;\;\;\; i(t)=6\;cos(1000t+15^\circ) \]
+Find the impedance (both resistance and reactance) and the admittance (both
+conductance and susceptance) of the circuit.
+
+% Represent voltage and current in complex forms:
+% $v(t)=Re[12e^{j(1000 t-30^\circ)}],\;\;\;\;i(t)=Re[6e^{j(1000 t+15^\circ)}]$
+% $Z=2e^{-j45^\circ}=2\angle{-45^\circ}=\sqrt{2}-j\sqrt{2}$
+% $R=\sqrt{2},\;\;\;\;X=-\sqrt{2}$.
+% $Y=1/Z=G+jB=G+jB$, $G=R/(R^2+X^2)=\sqrt{2}/4$, $B=-X/\sqrt{R^2+X^2}=\sqrt{2}/4$
+
+\item A voltage $v(t)=120\sqrt{2} cos(1000t+90^\circ) V$ (volt) is applied to 
+a resistor $R=15\Omega$, a capacitor $C=83.3\mu F$ and an inductor $L=30\; mH$ 
+connected in parallel. Find the over all steady state current $i=i_R+i_C+i_L$ 
+by phasor method.
+
+%  Express input voltage as a phasor $\dot{V}=120\angle{90^\circ}$.  
+% Then $\dot{I}_R=\dot{V}/R=120\angle{90^\circ}/15=0+j8 A$
+%  $\dot{I}_C=\dot{V}/Z_C=j\omega C\dot{V}=(0.00833\angle 90^\circ)(120\angle{90^\circ})
+%  	=10\angle 180^\circ=-10+j0 A$
+%  $\dot{I}_L=\dot{V}/Z_L=\dot{V}/j\omega L=(120\angle 90^\circ)/(30\angle{90^\circ})
+%  	=4+j0 A$.
+%  By KCL, we have $\dot{I}=\dot{I}_R+\dot{I}_C+\dot{I}_L=(0-10+4)+j(8+0+0)
+%  	=-6+j8=10\angle{127^\circ} A$
+%  $i(t)=10\sqrt{2}\;cos(1000t+127^\circ) A$
+
+\item A voltage $v(t)=12\sqrt{2} \cos 5000 t$ (volt V) is applied to a circuit
+composed of two branches in parallel. One branch has a capacitor $C=10\mu F$,
+while the other has a resistor $R=20\Omega$ and an inductor $L=3 mH$ in series.
+Using phasor method, find the impedances $Z_C$ and $Z_{RL}$ of the two branches,
+and then the overall combined impedance $Z_{all}$ of the circuit. Then find
+the steady state current $i(t)$ through the circuit.
+
+%  $Z_R=R=20+j0=20\angle 0^\circ \Omega$, $Z_L=j\omega L=j5000\times 0.003
+%  =15\angle 90^\circ \Omega$, $Z_C=1/j\omega C=-j/5000 \times 10^{-5}=-j20
+%  =20\angle -90^\circ \Omega$
+%  $Z_{RL}=Z_R+Z_L=20+j15=25\angle 37^\circ \Omega$
+%  $Z_{all}=Z_C//Z_{RL}=Z_C Z_{RL}/(Z_C+Z_{RL})=25\angle 37^\circ \; 
+%  20\angle -90^\circ/(20+j15-j20)=500\angle -53^\circ/20.6\angle -14^\circ
+%  =24.3\angle -39^\circ=18.9-j15.3 \Omega $
+%  $\dot{I}=\dot{V}{Z}=12\angle 0^\circ/24.3\angle -39^\circ=0.49\angle 39^\circ A$
+%  $i(t)=0.49\sqrt{2} cos(5000t+39^\circ) A$
+
+\item Solve the problem above again but this time use the admittances 
+$Y_C=1/Z_C$, $Y_{RL}=1/Z_{RL}$, $Y_{all}=1/Z_{all}$ (instead of the
+impedances $Z_C$, $Z_{RL}$, $Z_{all}$). Recall that Ohm's law becomes
+$\dot{I}=\dot{V}/Z=\dot{V}Y$. (Make sure all impedances you found in 
+previous problem are correct before you find the admittances as their 
+reciprocals.)
+
+% $Y_C=1/Z_C=1/20\angle{0^\circ}=0.05\angle{90^\circ}=0+j0.05\;S$
+% $Y_{RL}=1/Z_{RL}=1/25\angle{37^\circ}=0.04\angle{-37^\circ}=0.032-j0.024\;S$
+% $Y_{all}=Y_C+Y_{RL}=0+j0.05 + 0.032-j0.024=0.032+j0.026=0.04\angle{39^\circ}$
+% $I_C=Y_C V=0.05\angle{90^\circ} \times 12\angle{0^\circ}=0.6\angle{90^\circ}A$
+% $I_{RL}=Y_{RL} V=0.04\angle{-37^\circ} \times 12\angle{0^\circ}=0.48\angle{-37^\circ}A$
+% $I=I_C+I_{RL}=0+j0.6+0.384-j0.288=0.384+j0.312=0.49\angle{39^\circ}$
+% Alternatively,
+% $I=Y_{all}V=0.041\angle{39^\circ} \times 12\angle{0^\circ}=0.49\angle{39^\circ}$
+
+
+
+\item Find the output voltage $v_{out}(t)$ across the right most branch
+containing $R_2$ and $C$, when $\omega=0$ and $\omega\rightarrow \infty$ 
+and the input $v_{in}(t)=V=10\;cos(\omega t)$, assuming $R_1=100\Omega$, 
+$R_2=100\Omega$, $C=10\mu F$ and $L=10\;mH$.
+
+\htmladdimg{../hw6a.gif}
+
+% {\bf Solution}
+% 
+% When $\omega=0$, the inductor is short circuit, and the capacitor is
+% open circuit, $v_{out}(t)=v_{in}(t)$.
+% When $\omega=0$, the inductor is open circuit, and the capacitor is
+% short circuit, $v_{out}(t)=v_{in}(t)/2=5\;cos(\omega_0 t)$.
+
+\end{enumerate}
+\end{document}
+
+
+\item In the circuit below, $V_s=6V$, $R_1=6\Omega$, $R_2=3\Omega$,
+$L=0.5H$, $I_s=2A$. Assume before the switch is closed at $t=0$, the
+system is already stablized. Find current $i_L(t)$ through $L$ and 
+voltage $v_{R_1}$ across $R_1$.
+
+\htmladdimg{../hw5a.gif}
+% 
+% {\bf Solution:}
+% 
+% $i(0)=V_s/R_1=6/6=1A$, $i(\infty)=V_s/R_1+I_s=1+2=3A$
+%  Find equivalent resistance (when both energy sources are turned off
+%  $R=R_1 || R_2=3\times 6/(3+6)=2$, $\tau=L/R=0.5/2=0.25\;sec.$
+%  Final solution:
+%  $i_L(t)=3+(1-3)e^{-t/0.25}=3-2 e^{-4t} \; (A)$
+%  Find $v_{R_1}$: apply KVL to the loop of $V_s$, $R_1$ and $L$, get
+%  \[ L\frac{di_L}{dt}+v_{R_1}=V_s	\]
+%  \[ v_{R_1}=V_s-L di_L/dt=6-0.5 \frac{d(3-2 e^{-4t})}{dt}=6-4e^{-4t}	\]
+
+\item In the circuit below, $V_s=12V$, $R_1=5\Omega$, $R_2=20\Omega$,
+$R_3=6\Omega$, $C_1=10\mu F$, $C_2=30\mu F$. Assume before the switch 
+is closed at $t=0$, the system is already stablized. Find voltages
+$v_1(t)$ and $v_2(t)$ across capacitors $C_1$ and $C_2$, respectively.
+(Hint, $C_1$ and $C_2$ are two capacitors in series with an equivalent
+capacitance is $C=C_1 C_2/(C_1+C_2)$. $C_1$ and $C_2$ have share the same
+time constant $\tau=RC$.)
+
+\htmladdimg{../hw5b.gif}
+
+% {\bf Solution:}
+% 
+%  \[ v_1(0)=v_2(0)=0	\]
+%  \[ v_1(\infty)+v_2(\infty)=V_s \frac{R_2}{R_1+R_2}
+%  	=12 \frac{20}{5+20}=9.6V	\]
+%  As voltage across capacitor is inversely proportional to $C$, we have
+%  \[	\frac{v_1(\infty)}{v_2(\infty)}=\frac{C_2}{C_1}=3	\]
+%  i.e., $v_1(\infty)=3v_2(\infty)$, and we get $v_1(\infty)=7.2V$,
+%  $v_2(\infty)=2.4V$.
+%  Find equivalent resistance: 
+%  \[ R=R_3+\frac{R_1 R_2}{R_1+R_2}=6+\frac{5\times 20}{5+20}=10\Omega \]
+%  Find equivalent capacitance: $C_1 C_2/(C_1+C_2)=30\times 10/(30+10)=7.5$. 
+%  Find time constant: $\tau=RC=10\times 7.5\times 10^{-6}=7.5\times 10^{-5}$.
+%  Find $v_1(t)$ and $v_2(t)$:
+%  $v_1(t)=7.2(1-e^{-t/(7.5\times 10^{-5})})$
+%  $v_2(t)=2.4(1-e^{-t/(7.5\times 10^{-5})})$
+
+\item An RCL parallel circuit containing $R=20\Omega$, $L=400 \mu H$,
+$C=1 \mu F$ is driven by a current source $I=50 \mu A$ with variable 
+frequency. Find resonant frequency, the quality factor, and the voltage
+across and the currents through each of the three components at resonance.
+
+% {\bf Solution:}
+% 
+%  \[ \omega_0=\frac{1}{\sqrt{LC}}=\frac{1}{\sqrt{10^{-6}\times 400 \times 10^{-6}}}
+%  	=\frac{1}{20 \times 10^{-6}}=5 \times 10^4	\]
+%  \[ Q=\frac{1}{G}\sqrt{\frac{C}{L}}=R\sqrt{\frac{C}{L}}
+%  =20\sqrt{\frac{10^{-6}}{400\times 10^{-6}}}=1	\]
+%  $v=i\times R=50 \mu A \times 20 \Omega=1 mV$, $i_R=50 \mu A$,
+%  $i_L=i_C=Q i_R=50 \mu A$.
+ 
+ 
+\item An RCL series circuit is driven by a voltage source $V=10V$ of
+frequency $\omega=10^4 \;rad/sec.$. The variable capacitor $C$ is
+adjusted so the the maximual current of $100\;mA$ is achieved. The
+voltage across this capacitor is $600V$. Find the values for $R$, $L$,
+$C$ and the quality factor $Q$.
+
+% {\bf Solution:}
+% 
+%  At resonance, $v_L=-v_C=-600V$. $R=V/I=10V/0.1A=100\Omega$, $v_R=V=10V$.
+%  $Q=600/10=60$.  
+%  \[ \frac{1}{R}\sqrt{\frac{L}{C}}=Q=60	\]
+%  \[ \frac{1}{\sqrt{LC}}=\omega_0=10000 \]
+%  Solve for $L$ and $C$: $L=0.6H$, $C=10^{-7}/6 F$
+
+\end{enumerate}
+\end{document}
+
+\item In the parallel resonant circuit shown in the figure, $L=0.25\;mH$,
+$R=25\Omega$, $C=85\;pF$. Find resonant frequency, and the impedance at r
+esonance.
+
+\htmladdimg{../hw5c.gif}
+
+\[	Y=\frac{1}{R+j\omega L}+j\omega C=	\]
+

@@ -1,0 +1,176 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Wien bridge</TITLE>
+<META NAME="description" CONTENT="Wien bridge">
+<META NAME="keywords" CONTENT="wien">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="wien.css">
+
+<LINK REL="next" HREF="node3.html">
+<LINK REL="previous" HREF="node1.html">
+<LINK REL="up" HREF="wien.html">
+<LINK REL="next" HREF="node3.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html27"
+  HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html25"
+  HREF="wien.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html19"
+  HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html28"
+  HREF="node3.html">Wien bridge oscillator</A>
+<B> Up:</B> <A NAME="tex2html26"
+  HREF="wien.html">wien</A>
+<B> Previous:</B> <A NAME="tex2html20"
+  HREF="node1.html">Twin-T filter</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00002000000000000000">
+Wien bridge</A>
+</H2>
+
+<P>
+The Wien bridge is a particular type of the Wheatstone bridge of which
+two of the four arms are composed of a capacitor as well as a resistor
+in parallel and series:
+
+<P>
+For this bridge to balance, the ratios of the left and right branches
+should be the same:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\frac{R_3}{R_4}=\frac{R_2+1/j\omega C_2}{R_1||1/j\omega C_1}
+=\frac{j\omega R_1C_1+1}{R_1}\;
+\frac{j\omega R_2C_2+1}{j\omega C_2}
+=\frac{1-\omega^2R_1R_2C_1C_2+j\omega(R_1C_1+R_2C_2)}{j\omega R_1C_2}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="721" HEIGHT="53" BORDER="0"
+ SRC="img78.png"
+ ALT="\begin{displaymath}
+\frac{R_3}{R_4}=\frac{R_2+1/j\omega C_2}{R_1\vert\vert 1/j\o...
+...1-\omega^2R_1R_2C_1C_2+j\omega(R_1C_1+R_2C_2)}{j\omega R_1C_2}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+For the ratio on the right-hand side to be the same as that on the
+left-hand side, it needs to be real, i.e.,
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+1-\omega^2R_1R_2C_1C_2=0,\;\;\;\;\;\mbox{i.e.,}\;\;\;\;\;
+\omega=\frac{1}{\sqrt{R_1R_2C_1C_2}}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="403" HEIGHT="49" BORDER="0"
+ SRC="img79.png"
+ ALT="\begin{displaymath}
+1-\omega^2R_1R_2C_1C_2=0,\;\;\;\;\;\mbox{i.e.,}\;\;\;\;\;
+\omega=\frac{1}{\sqrt{R_1R_2C_1C_2}}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+and the equation above becomes
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\frac{R_3}{R_4}=\frac{R_1C_1+R_2C_2}{R_1C_2}=\frac{C_1}{C_2}+\frac{R_2}{R_1}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="258" HEIGHT="49" BORDER="0"
+ SRC="img80.png"
+ ALT="\begin{displaymath}
+\frac{R_3}{R_4}=\frac{R_1C_1+R_2C_2}{R_1C_2}=\frac{C_1}{C_2}+\frac{R_2}{R_1}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+In particular, if <IMG
+ WIDTH="113" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img81.png"
+ ALT="$R_1=R_2=R$"> and <IMG
+ WIDTH="111" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img82.png"
+ ALT="$C_1=C_2=C$">, we have:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\omega=\frac{1}{\sqrt{R_1R_2C_1C_2}}=\frac{1}{RC}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="199" HEIGHT="49" BORDER="0"
+ SRC="img83.png"
+ ALT="\begin{displaymath}
+\omega=\frac{1}{\sqrt{R_1R_2C_1C_2}}=\frac{1}{RC}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+and
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\frac{R_3}{R_4}=\frac{C_1}{C_2}+\frac{R_2}{R_1}=1+1=2,
+\;\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;R_4=2R_3
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="392" HEIGHT="49" BORDER="0"
+ SRC="img84.png"
+ ALT="\begin{displaymath}
+\frac{R_3}{R_4}=\frac{C_1}{C_2}+\frac{R_2}{R_1}=1+1=2,
+\;\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;R_4=2R_3
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+<BR><HR>
+<ADDRESS>
+Ruye Wang
+2015-11-29
+</ADDRESS>
+</BODY>
+</HTML>

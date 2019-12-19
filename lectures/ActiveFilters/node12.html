@@ -1,0 +1,266 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Bode Plots</TITLE>
+<META NAME="description" CONTENT="Bode Plots">
+<META NAME="keywords" CONTENT="ActiveFilters">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="ActiveFilters.css">
+
+<LINK REL="next" HREF="node13.html">
+<LINK REL="previous" HREF="node11.html">
+<LINK REL="next" HREF="node13.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node13.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node8.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node11.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node13.html">Bode Plots of Components</A>
+<B> Up:</B> <A
+ HREF="node8.html">Appendix</A>
+<B> Previous:</B> <A
+ HREF="node11.html">Decibel (dB)</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION00024000000000000000">
+Bode Plots</A>
+</H2>
+
+<P>
+The Bode plot is named after 
+<A ID="tex2html9"
+  HREF="http://en.wikipedia.org/wiki/Hendrik_Wade_Bode">Hendrik Wade Bode (1905 - 1982)</A>, an American engineer and scientist, of Dutch ancestry,
+a pioneer of modern control theory and electronic telecommunications. 
+
+<P>
+The <B>frequency response function (FRF)</B> is a complex function of the 
+frequency <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img376.svg"
+ ALT="$\omega=2\pi f$"></SPAN> that describes the response of a system to input of
+different frequencies:
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+H(j\omega)=|H(j\omega)|e^{j\angle H(j\omega)}=|H(j\omega)| \angle H(j\omega)
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img377.svg"
+ ALT="$\displaystyle H(j\omega)=\vert H(j\omega)\vert e^{j\angle H(j\omega)}=\vert H(j\omega)\vert \angle H(j\omega) $"> 
+
+(<SPAN CLASS="arabic">134</SPAN>)
+</DIV>
+
+<P>
+The <B>Bode plot</B> presents both the magnitude <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img203.svg"
+ ALT="$\vert H(j\omega)\vert$"></SPAN> and phase 
+angle <!-- MATH
+ $\angle H(j\omega)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img378.svg"
+ ALT="$\angle H(j\omega)$"></SPAN> of <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img120.svg"
+ ALT="$H(j\omega)$"></SPAN> as functions of frequency in 
+logarithmic scale. (Zero frequency is at <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.31ex; " SRC="img379.svg"
+ ALT="$-\infty$"></SPAN> as <!-- MATH
+ $10^{-\infty}=0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.12ex; " SRC="img380.svg"
+ ALT="$10^{-\infty}=0$"></SPAN>.)
+Moreover, the magnitude <!-- MATH
+ $| H(j\omega) |$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img203.svg"
+ ALT="$\vert H(j\omega)\vert$"></SPAN> is also represented in logarithmic
+scale in decibel (dB), and is called log magnitude.
+A Bode plot is composed of two parts:
+
+<UL>
+<LI>The log magnitude (Lm) of <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img203.svg"
+ ALT="$\vert H(j\omega)\vert$"></SPAN> with unit decibel (dB):
+  
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+Lm\; H(j\omega)=20 \;log_{10} |H(j\omega)|\;dB
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img381.svg"
+ ALT="$\displaystyle Lm\; H(j\omega)=20 \;log_{10} \vert H(j\omega)\vert\;dB $"> 
+
+(<SPAN CLASS="arabic">135</SPAN>)
+</DIV>
+</LI>
+<LI>The phase plot <!-- MATH
+ $\angle H(j\omega)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img378.svg"
+ ALT="$\angle H(j\omega)$"></SPAN> with either in radian or degree.
+</LI>
+</UL>
+The logarithmic scale of the frequency is composed of several &ldquo;decades&rdquo; each 
+for a range of frequencies from <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img382.svg"
+ ALT="$\omega$"></SPAN> to <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img383.svg"
+ ALT="$10 \omega$"></SPAN>, independent of the 
+specific frequency <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img382.svg"
+ ALT="$\omega$"></SPAN>.
+
+<P>
+Bede plots have the following advantages:
+
+<UL>
+<LI>Due to the logarithmic scale in frequency, large frequency range of 
+    several orders of magnitude can be represented;
+
+<P>
+</LI>
+<LI>Convenient straight line asymptotes can be used to approximate the plots;
+
+<P>
+</LI>
+<LI>The behavior of the system in terms of the magnitude, even
+    approaching zero, can be clearly described.
+
+<P>
+</LI>
+<LI>Due to the logarithmic scale of the magnitude of the FRF, multiplications 
+    and divisions of FRFs can be represented as addition and subtractions in the 
+    plot (while the phases are always added/subtracted):
+    
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+\left\{ \begin{array}{ll}
+      Lm(H_1H_2)=Lm\;H_1+Lm\;H_2,&\;\;\;\;\angle (H_1H_2)=\angle H_1+\angle H_2\\
+      Lm(H_1/H_2)=Lm\;H_1-Lm\;H_2,&\;\;\;\;\angle (H_1/H_2)=\angle H_1-\angle H_2\\
+      Lm \;H^n=n\;Lm \;H,&\;\;\;\;\angle H^n=n\;\angle H \\
+      Lm (1/H)=-Lm\;H,&\;\;\;\;\angle (1/H)=-\angle H \end{array} \right.
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 11.38ex; vertical-align: -5.11ex; " SRC="img384.svg"
+ ALT="$\displaystyle \left\{ \begin{array}{ll}
+Lm(H_1H_2)=Lm\;H_1+Lm\;H_2,&amp;\;\;\;\;\a...
+...gle H \\
+Lm (1/H)=-Lm\;H,&amp;\;\;\;\;\angle (1/H)=-\angle H \end{array} \right. $"> 
+
+(<SPAN CLASS="arabic">136</SPAN>)
+</DIV>
+</LI>
+</UL>
+
+<P>
+All FRFs of interest in this course can be considered as a combination of 
+some components or building blocks, including:
+
+<UL>
+<LI>Constant gain <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img385.svg"
+ ALT="$k$"></SPAN>;
+</LI>
+<LI>Integral/derivative factors <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img386.svg"
+ ALT="$(j\omega)$"></SPAN>
+</LI>
+<LI>Delay factor: <!-- MATH
+ $e^{\pm j\omega \tau}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.12ex; " SRC="img387.svg"
+ ALT="$e^{\pm j\omega \tau}$"></SPAN>;
+</LI>
+<LI>First-order factor <!-- MATH
+ $(1+j\omega\tau)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img388.svg"
+ ALT="$(1+j\omega\tau)$"></SPAN>;
+</LI>
+<LI>Second-order factor 
+    <!-- MATH
+ $(j\omega)^2+2\zeta\omega_n\omega j+\omega_n^2
+    =(\omega_n^2-\omega^2)+j\,2\zeta\omega_n$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img389.svg"
+ ALT="$(j\omega)^2+2\zeta\omega_n\omega j+\omega_n^2
+=(\omega_n^2-\omega^2)+j\,2\zeta\omega_n$"></SPAN>
+</LI>
+</UL>
+Given the Bode plot of any building block <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img120.svg"
+ ALT="$H(j\omega)$"></SPAN>, we can obtain the plots
+of any combination of them.
+
+<P>
+We will first consider each of such components at a time, and then consider 
+their combinations. In particular, we will study the first order system:
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+H(j\omega)=\frac{N(j\omega)}{1+j\omega \tau}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.57ex; vertical-align: -2.16ex; " SRC="img390.svg"
+ ALT="$\displaystyle H(j\omega)=\frac{N(j\omega)}{1+j\omega \tau} $"> 
+
+(<SPAN CLASS="arabic">137</SPAN>)
+</DIV>
+and the second order system:
+
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+H(j\omega)=\frac{N(j\omega)}{(j\omega)^2+2\zeta\omega_n j\omega +\omega_n^2}
+=\frac{N(j\omega)}{(\omega_n^2-\omega^2)+j\;(2\zeta\omega_n \omega) }
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img391.svg"
+ ALT="$\displaystyle H(j\omega)=\frac{N(j\omega)}{(j\omega)^2+2\zeta\omega_n j\omega +\omega_n^2}
+=\frac{N(j\omega)}{(\omega_n^2-\omega^2)+j\;(2\zeta\omega_n \omega) }$"> 
+
+(<SPAN CLASS="arabic">138</SPAN>)
+</DIV>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node13.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node8.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node11.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node13.html">Bode Plots of Components</A>
+<B> Up:</B> <A
+ HREF="node8.html">Appendix</A>
+<B> Previous:</B> <A
+ HREF="node11.html">Decibel (dB)</A></DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

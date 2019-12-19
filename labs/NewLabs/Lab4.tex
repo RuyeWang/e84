@@ -1,0 +1,326 @@
+\documentstyle[12pt]{article}
+\usepackage{html}
+\textwidth 6.0in
+\topmargin -0.5in
+\oddsidemargin -0in
+\evensidemargin -0.5in
+% \usepackage{graphics}  
+\begin{document}
+
+{\bf \Large E84 Lab 4: Design, Build, and Test a Multimeter}
+
+In this lab you are to use either of the two multimeter kits (AMK200 and
+M1250) available in the stockroom to build a multimeter. The lab contains 
+the following two  parts:
+\begin{itemize}
+\item {\bf Part I: The warm-up problems}
+
+\begin{enumerate}
+\item Measurement of a physical process by instruments may be tricky 
+  due to the 
+  \htmladdnormallink{inevitable interfere}}{http://en.wikipedia.org/wiki/Observer_effect_(physics)}
+  on the process being caused by the instruments (remember what you learned 
+  in quantum mechanics?). The figure below shows two possible configurations 
+  for the measurement of the voltage across and the current through the load. 
+
+  \htmladdimg{../hw1b.gif}
+
+  What are required of the ammeter and the voltmeter to minimize their
+  influences on the measurements? 
+
+  % The ammeter should have minimum (ideally 0) impedance while the voltmeter
+  % should have maximum (ideally infinity) impedance. 
+
+  How would the ammeter and the voltmeter affect the measurement of the
+  current and the voltage in either of the configurations (a and b)?
+
+  % In (a) the voltmeter will by-pass some current so that the actual current
+  % through the load is smaller than the reading of the ammeter. In (b) the
+  % ammeter will cause some voltage drop and the actual voltage across the load
+  % is lower than the reading of the voltmeter. 
+
+\item Design a multimeter that can measure both DC and AC voltage, DC current,
+  and resistance with different scales. Specifically, you are given an analog 
+  meter $A$ with a needle display, which reaches full scale when a DC current 
+  of $I=100\;\mu A=10^{-4}\;A$ goes through it. The internal resistance of the
+  meter is 10 Ohms. In addition, you need some multi-position rotary switches 
+  to select different scales for each of the three types of measurements, and 
+  resistors with any values needed in your design.
+
+  \begin{itemize}
+  \item DC Voltage measurement: DC voltages in these ranges can be measured
+    0-2.5, 0-10, 0-50, and 0-250 (all in volts). Use a 4-position rotary switch
+    to select one of the four ranges as shown in the figure below. For example, 
+    when the range of 0-10 is selected, the needle display will reach full scale 
+    when the voltage being measured is 10 V. The circuit is shown below. Determine 
+    all resistances labeled.
+
+    \htmladdimg{../multimeterV.gif}
+
+    %      {\bf Solutionn:} $R_1=25\;K\Omega$, $R_2=75\;K\Omega$, $R_3=400\;K\Omega$
+    %      and $R_4=2\;M\Omega$.
+  \item AC Voltage measurement: To measure an AC voltage (in terms of its
+    RMS value), it first needs to be converted into a DC voltage. This can 
+    be achieved by a diode which only allows the current to pass in one
+    direction (along the arrow) but not the other. This process is called
+    rectification. The diode will also cause a voltage drop of 0.7 volt 
+    along the direction. The actual reading of the meter reflects the 
+    average value of the rectified current, as show in the figure below.
+
+    Find the resistance $R$ so that when the incoming AC voltage is $V=10$ 
+    volt (RMS), the meter shows a full scale display.
+
+    \htmladdimg{../HalfWaveRectifier4.png}
+
+    \htmladdimg{../multimeterACV.gif}
+
+
+%      {\bf Solution:} The peak value of voltage is $10\times \sqrt{2}=14.14$,
+%      which is reduced (due to voltage drop of the diode) to $14.14-0.7=13.44$.
+%      The average value of the rectified voltage is $13.44/\pi=4.28$. For the
+%      meter to have a full scale display, the current need to be
+%      \[ 10^{-4}=\frac{4.28}{R},\;\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;\;R=42.8\,k\Omega \]
+%      The internal resistance of $10\,\Omega$ can be neglected.
+
+  \item DC current measurement: measure currents in these ranges (all in mA):
+    0-0.5, 0-2.5, 0-10, 0-50. Use a 4-position rotary switch to select one 
+    of the four ranges as shown in the figure below. For example, when the 
+    range of 0-10 is selected, the needle display will reach full scale when 
+    a 10 mA current is measured. Determine all resistances labeled. Use
+    $R_0=1\;K\Omega$.
+
+    \htmladdimg{../multimeterA1a.gif}
+
+%      {\bf Solution:} Voltage across input is $V=0.1\;mA\times 1\;K\Omega=100\;mV$.
+%      Therefore 
+%      \[ R_1=100/(0.5-0.1)=250\;\Omega \]
+%      \[ R_2=100/(2.5-0.1)=41.67\;\Omega \]
+%      \[ R_1=100/(10-0.1)=10.1\;\Omega \]
+%      \[ R_1=100/(50-0.1)=2\;\Omega \]
+
+  \item Resistance measurement: The circuit for resistance measurement is
+    provided as shown below, where $V_1=1.5V$. Determine the values for the 
+    resistors labeled as $R_0$, $R_1$, $R_{10}$, $R_{100}$ and $R_{1000}$ 
+    and $V_2$ so that the needle display of the meter is full scale 
+    ($I=100\;\mu A$) when the resistor $R=0$ being measured (between the 
+    two leads labeled + and -) is zero, or half scale ($I=50\;\mu A$) when 
+    the value of $R$ and the position of he two synchronized rotary switches
+    are given in each of the four case shown in the table:
+
+    \begin{tabular}{l|llll} \hline
+      positions  & $\times 1$ & $\times 10$ & $\times 100$ & $\times 1K$ \\
+      $R$ values & 20$\Omega$ & 200$\Omega$ & 2000$\Omega$ & 20 $K\Omega$ 
+    \end{tabular}
+
+    \htmladdimg{../multimeterR.gif}
+
+%      {\bf Solution:}
+%
+%      \begin{itemize}
+%	\item First determine $R_0$: when $R=0$, we get 
+%	  $R_0=1.5V/0.1\;mA=15\;K\Omega$.
+%	\item When $R=20\;\Omega$, the current through meter $A$ should be:
+%	  \begin{eqnarray}
+%	    I&=&\frac{V_1}{R+R_1||R_0}\frac{R_1}{R_1+R_0}
+%	  =\frac{V_1}{R+\frac{R_1R_0}{R_1+R_0}}\frac{R_1}{R_1+R_0}
+%	  =V_1\frac{R_1}{RR_1+RR_0+R_1R_0} 	  \nonumber \\
+%	  &=&5\times 10^{-4}\;A 
+%	  \nonumber
+%	  \end{eqnarray}
+%	  Given $V_1=1.5V$, $R_0=15K$ and $R=20\Omega$, we can solve this 
+%	  equation to get 
+%	  \[ R_1=\frac{R_0RI}{V_1-I(R+R_0)}=20\Omega \]
+%	\item When $R=200\;\Omega$, solving the above equation we get 
+%	  $R_{10}=202.7\Omega$.
+%	\item When $R=2\;K\Omega$, solving the above equation we get 
+%	  $R_{10}=2307.7\Omega$.
+%	\item When $R=20\;K\Omega$, we need to determine $V_2$ and 
+%	  $R_{1k}$ so that $I=5\items 10^{-5} A$, and also when $R=0$, 
+%	  $I=10^{-4}A$. $R_{1k}$ and $V_1+V_2$ can be found by solving
+%	  these equations:
+%	  \[ \left\{ \begin{array}{l}
+%	    (V_1+V_2)/(R_{1k}+R_0)=10^{-4}A \\
+%	    (V_1+V_2)/(R+R_{1k}+R_0)=5\times 10^{-5}A
+%	  \end{array}\right. \]
+%	  Solving we get $V_1+V_2=2V$, $R_{1k}+R_0=20\;K\Omega$, i.e.,
+%	  $R_{1k}=5K\Omega$, $V_2=0.5V$
+%      \end{itemize}
+     
+  \end{itemize}
+
+\end{enumerate}
+
+
+\item {\bf Part II: Design, build, and test the multimeter}
+
+  You can use either of the two different multimeter models available in the 
+  stockroom. They are very similar to each other, in terms of their circuits, 
+  and the degree of difficulty to build. In this part, you need to understand 
+  how the DC voltage and current are measured, and come up with the values of
+  the resistors used for measuring DC voltage and current. (You are NOT required
+  to do any calculation for the AC voltage or resistance measurement.)
+
+  It will be considered as an honor code violation if you copy the values of 
+  these resistors from the schematics of these multimeters which you may be 
+  able to find on the Internet. Show your own derivation and keep at least 2
+  digits after the decimal point in the values of the resistors.
+  
+
+  \begin{itemize}
+  \item \htmladdnormallink{AMK-200}{http://fourier.eng.hmc.edu/e84/labs/AMK200/node1.html}
+
+    Find the values of the resistors used for DC voltage and current measurements
+    (values not shown in the diagram).
+
+  \item \htmladdnormallink{M1250}{http://fourier.eng.hmc.edu/e84/labs/M1250/node1.html}
+
+    Find the values of $R_1$ through $R_6$ for DC voltage measurement,
+    and the values of $R_{10}$, $R_{11}$, and $R_{12}$ for DC current measurement.
+  \end{itemize}
+  
+  Then, build and test the multimeter, which you can keep and use in the future!
+  Make sure it works correctly for all measurements.
+
+\end{itemize}
+
+
+
+\section*{E84 Lab 1: Design of a Multimeter}
+
+%{\bf Design on paper due 2/27 Monday in class}
+
+%{\bf Final project due by 3/5 Monday in lab}
+
+
+The schematic diagram of a multimeter is shown in the figure below:
+\htmladdimg{../MultimeterA2.gif}
+
+\begin{itemize}
+  \item Pick up the hardware of the multimeter kit from the stock room,
+    including all the components (resistors, potentiometer, meter head, 
+    rotary switch, batteries, etc.). 
+
+  \item Study the diagram above carefully to understand how the meter 
+    measures the voltages, currents and resistances at each of the positions 
+    of the rotary switch. The rectangular shape to the left of the meter 
+    head (a circle with an arrow in it) represents two parallel diodes 
+    with opposite polarity for the protection of the meter head. You don't
+    need to worry about this. 
+
+  \item The part marked by 10KBVR is a potentiometer, a resistor of 10
+    $K\Omega$ but with an additional terminal which is a piece of metal 
+    that can slide along the resistor, so that the resistance between the 
+    3rd terminal and any of the other two is variable between 0 and 10 
+    $K\Omega$. See
+    \htmladdnormallink{here}{http://en.wikipedia.org/wiki/Potentiometer}
+    for more detailed explanation. This potentiometer is needed to calibrate
+    the Ohmmeter. Specifically, before taking the measurement of a resistance,
+    the potentiometer needs to be adjusted so that the needle points to 
+    zero on the resistance scale when the two leads of the multimeter touch
+    each other for zero resistance.
+    
+  \item Understand how the rotary switch works. It is represented by the 
+    18 circles on top of the diagram and the two layers of rectangular shapes
+    on the bottom. At each of the 18 positions, the corresponding circle on 
+    top is connected to both of the rectangles, while all remaining circles 
+    are not connected to anything. If you still have difficulty understanding 
+    this, it should be most helpful if you take a look at the physical parts 
+    and the printed circuit board (PCB) in the kit.
+
+%  \item The diagram provided above contain some errors. One major error is
+%    in the circuit for DC current measurement (top-left corner), where the 
+%    three resistors for 250 mA (1 Ohm), 25 mA and 2.5 mA should all be in 
+%    parallel, instead of in series as shown in the diagram. You can verify 
+%    this by looking at the actual PCB. The second error has to do with the
+%    rotary switch. The rectangle of the lower right corner of the diagram
+%    should be farther extended to the left as it is needed for all three
+%    resistance measurement scales of x1, x10 and x1k Ohms. In general,
+%    whenever in doubt, take a look at the physical parts of the hardware.
+
+  \item Find the resistance for each of the 13 resistors with their values 
+    erased.
+
+  \item Turn in your design on paper with all the resistance values before
+    the first deadline. 
+%    After the deadline the solution key and the complete diagram will be 
+%    available \htmladdnormallink{here}{../solution1/index.html}
+
+  \item Assemble the multimeter in the lab, verify every single position 
+    to see if the meter works as expected.
+    
+\end{itemize}
+
+{\bf Hints} 
+
+Following these steps:
+
+\begin{itemize}
+\item Study the meter head assembly circuitry and find out the needed voltage 
+  across the meter in series with the $190\; \Omega$ resistor for the current 
+  through the meter to be $43 \;\mu A$, needed for a full scale display. Then 
+  find the currents through the two parallel branches with the resistances of 
+  $32\; k\Omega$ and $10+18=28\;k\Omega$. Next find the total current needed 
+  by this meter assembly composed of all three parallel branches for a 
+  full-scale meter display. This current can be used through out the calculation 
+  in the following steps.
+
+\item Find the resistances needed to measure the currents and voltages at all
+  scales.
+
+\item Find out what values are needed for the upper and lower resistances of the 
+  potentiometer during the calibration of the ohmmeter, i.e. when the two leads
+  of the meter are directly connected (short circuit with zero resistance) for a 
+  full-scale display.
+
+\item Find the resistances needed to measure an unknown resistor value at all
+  four scales. Note that the middle value of the resistance measurement is 20, 
+  200, 20k, or 200k $\Omega$ for each of the scales, and the corresponding 
+  current through the meter assembly should be half of the current needed for 
+  a full scale display.
+
+\end{itemize}
+
+
+
+
+{\bf How to find the polarity of a diode? (not necessarily trivial!)}
+
+When the voltage at the anode (labeled by a triangle) of a diode is higher
+than that of the cathode, the diode has a very low resistance (close to a short
+circuit, called forward biased). If the polarity is reversed, the resistance 
+of the diode becomes very high (close to an open circuit, called reverse biased).
+The polarity of the diode can therefore be found by checking its resistance 
+using a multimeter.
+
+However, we need to know which lead of the multimeter (when used as an ohmmeter) 
+is positive and which is negative. In most analog multimeters, such as the one 
+you are building, the positive lead (marked by +) is connected to the negative 
+end of the internal battery, while the other lead (marked by -, or COM for common)
+is connected to positive end of the battery. So if the measured resistance of the 
+diode is low, the end connected to the COM lead of the multimeter is the anode
+(triangle).
+
+However, the polarities of digital multimeters may be the opposite, i.e., the 
+lead marked by + may be connected to the positive end of the internal battery.
+In this case, the polarity of the diode can be determined in the opposite way
+compared to the method above using an analog multimeter. 
+
+Moreover, some digital multimeters have a particular position for diode measurement. 
+
+Read \htmladdnormallink{this page}{http://www.allaboutcircuits.com/vol_3/chpt_3/2.html}
+for more detailed discussions.
+
+{\bf How to solder?} 
+
+If you have never done soldering before, you should find 
+\htmladdnormallink{this}{http://fourier.eng.hmc.edu/e84/labs/N0SS_SolderNotesV6.pdf}
+and \htmladdnormallink{this}{http://fourier.eng.hmc.edu/e84/labs/soldering_rev3.pdf}
+useful.
+
+\end{document}
+
+
+	
+
+	
+

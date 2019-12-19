@@ -1,0 +1,47 @@
+\documentstyle[12pt]{article}
+\usepackage{html}
+\textwidth 6.0in
+\topmargin -0.5in
+\oddsidemargin -0in
+\evensidemargin -0.5in
+% \usepackage{graphics}  
+\begin{document}
+
+{\bf \large E84 Calendar (tentative, subject to minor changes)}
+
+\begin{tabular}{l|l|l}\hline
+  & {\bf Day} & {\bf Subjects} \\ \hline
+1 & Wednesday (1/22) & Introduction and overview, basic elements and laws \\
+2 & Monday (1/27) & Energy Sources \\
+3 & Wednesday (1/29) & Issues of source and load \\
+4 & Monday (2/3) & Solving Circuits by KCL and KVL \\
+5 & Wednesday (2/5) & Network theorems \\
+6 & Monday (2/10) & Network analysis \\
+7 & Wednesday (2/12) & Two-port networks  \\
+8 & Monday (2/17) & Active circuit analysis \\
+9 & Wednesday (2/19) & Midterm 1 \\
+10& Monday (2/24) & Input and output impedance \\
+11& Wednesday (2/26) & Sinusoidal variables and phasors \\
+12& Monday (3/3) & AC Circuit analysis  \\
+13& Wednesday (2/5) & Complete response \\
+14& Monday (3/10) & Series resonance \\
+15& Wednesday (3/12) & Parallel resonance \\
+  & (3/17 -- 3/21) & Spring Break! \\
+16& Monday (3/24) & Power factor \\
+%17& Wednesday (3/26) & Transmission line 1 \\
+%18& Monday (3/31) & Transmission line 2 \\
+17& Wednesday (3/26) & Semiconductor materials \\
+18& Monday (3/31) & Diodes \\
+19& Wednesday (4/2) & Midterm 2 \\
+20& Monday (4/7) & Bipolar junction transistors \\ 
+21& Wednesday (4/9) & Field-effect transistors \\
+22& Monday (4/14) & CB and CE transistor circuits \\
+23& Wednesday (4/16) & Small signal models \\  
+24& Monday (4/21) & DC biasing \\ 
+25& Wednesday (4/23) & Emitter follower \\
+26& Monday (4/28) & Operational amplifiers \\
+27& Wednesday (4/30) & Op-Amp circuits \\
+\end{tabular}
+
+\end{document}
+

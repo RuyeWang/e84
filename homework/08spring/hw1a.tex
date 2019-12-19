@@ -1,0 +1,144 @@
+\documentstyle[11pt]{article}
+\usepackage{html}
+\begin{document}
+\begin{center}
+{\Large \bf E84 Homework 1}
+\end{center}
+\begin{enumerate}
+
+\item Given the basic relationship between the voltage across and
+  current through each of the three types of components $R$, $C$,
+  and $L$,
+  \begin{tabular}{l|cc}
+    Resistor $R$ & $i=v/R=Gv$ & $v=Ri=i/G$ \\
+    Inductor $L$ & $i=\int v\,dt/L$ & $v=L\;di/dt$ \\
+    Capacitor $C$ & $i=C\,dv/dt$ & $v=\int i\,dt/C$ \\
+  \end{tabular}
+  \begin{itemize}
+  \item derive the expression for the equivalent resistance $R_s$
+    of $n$ resistors $R_1,\cdots,R_n$ combined in series. Then derive 
+    the expression for the equivalent resistance $R_p$ of the $n$ 
+    resistors combined in parallel.
+  \item Repeat the above for $n$ capacitors $C_1,\cdots,C_n$.
+  \item Repeat the above for $n$ capacitors $L_1,\cdots,L_n$.
+  \end{itemize}
+
+\item (a) If two light bulbs both labeled as 110V and 40W in series are
+connected to a socket outlet of 190V, what is the power consumption of 
+each of the bulbs?
+
+(b) Replace one of the two bulbs by another bulb labeled as 110V 15W, and
+find the power consumption of each of the bulbs. What will happen to each
+of the two bulbs? (Note that when the power consumption by a bulb is larger
+than the specified wattage, it will be burned out!)
+
+\item Measurement of a physical process by instruments may be tricky due 
+  to the inevitable interfere on the process being caused by the instruments
+  (remember what you learned in quantum mechanics?). The figure below shows 
+  two possible configurations for the measurement of the voltage across and 
+  the current through the load. 
+
+  \htmladdimg{../hw1b.gif}
+
+\begin{enumerate}
+\item What are required of the ammeter and the voltmeter to minimize their
+	influences on the measurements? 
+
+\item How would the ammeter and the voltmeter affect the measurement of the
+	current and the voltage in either of the configurations (a and b)?
+\end{enumerate}
+
+\item Use Kirchhoff's voltage and current laws to find voltage $V_{BD}$ and resistance 
+$R_2$ in the circuit shown below:
+
+\htmladdimg{../hw1c.gif}
+
+(Note: The direction of a current and the polarity of a voltage source can
+be assumed arbitrarily. To determined the actual direction and polarity, the
+sign of the values also should be considered. For example, a current labeled 
+in left-to-right direction with a negative value is actually flowing 
+right-to-left.)
+
+\item Find the equivalent resistance between the two terminals before and
+after the switch is closed. (Note, the two diagonal branches are NOT
+connected to each other in the middle.)
+
+\htmladdimg{../hw2e.gif}
+
+\item Find the equivalent resistance $R_{eq}$ between the two terminals
+in the figure, where $R_0=3\Omega$, $R_1=4\Omega$, $R_2=2\Omega$, $R_3=2\Omega$, 
+$R_4=1\Omega$. What is $R_{eq}$ if $R_0=5\Omega$?
+
+(Hint: apply a test voltage $V_{test}$ across the terminals and the 
+equivalent resistance can be found to be $R_{eq}=V_{test}/I_{test}$.
+The circuit can be solved by applying KCL to $V_1$ and $V_2$.)
+
+\htmladdimg{../hw1f.gif}
+
+\item Design a multimeter that can measure both DC and AC voltage, DC current,
+  and resistance with different scales. Specifically, you are given an analog 
+  meter $A$ with a needle display, which reaches full scale when a DC current 
+  of $I=100\;\mu A=10^{-4}\;A$ goes through it. The internal resistance of the
+  meter is 10 Ohms. In addition, you need some multi-position rotary switches 
+  to select different scales for each of the three types of measurements, and 
+  resistors with any values needed in your design.
+
+  \begin{itemize}
+    \item DC Voltage measurement: DC voltages in these ranges can be measured
+      0-2.5, 0-10, 0-50, and 0-250 (all in volts). Use a 4-position rotary switch
+      to select one of the four ranges as shown in the figure below. For example, 
+      when the range of 0-10 is selected, the needle display will reach full scale 
+      when the voltage being measured is 10 V. The circuit is shown below. Determine 
+      all resistances labeled.
+
+      \htmladdimg{../multimeterV.gif}
+
+    \item AC Voltage measurement: To measure an AC voltage (in terms of its
+      RMS value), it first needs to be converted into a DC voltage. This can 
+      be achieved by a 
+      \htmladdnormallink{diode}{../../../lectures/ch4/node2.html}
+      which only allows the current to pass in one
+      direction (along the arrow) but not the other. This process is called
+      rectification. 
+
+      \htmladdimg{../../../lectures/figures/halfwaverectifier.gif}
+
+      The diode will also cause a voltage drop of 0.7 volt 
+      along the direction. The actual reading of the meter reflects the 
+      \htmladdnormallink{average value}{../averagevalue/node1.html}
+      of the rectified current. Find the resistance $R$ so 
+      that when the incoming AC voltage is $V=10$ volt (RMS), the meter shows 
+      a full scale display.
+
+      \htmladdimg{../multimeterACV.gif}
+
+    \item DC current measurement: measure currents in these ranges (all in mA):
+      0-0.5, 0-2.5, 0-10, 0-50. Use a 4-position rotary switch to select one 
+      of the four ranges as shown in the figure below. For example, when the 
+      range of 0-10 is selected, the needle display will reach full scale when 
+      a 10 mA current is measured. Determine all resistances labeled. Use
+      $R_0=1\;K\Omega$.
+
+      \htmladdimg{../multimeterA1a.gif}
+
+    \item Resistance measurement: The circuit for resistance measurement is
+      provided as shown below, where $V_1=1.5V$. Determine the values for the 
+      resistors labeled as $R_0$, $R_1$, $R_{10}$, $R_{100}$ and $R_{1000}$ 
+      and $V_2$ so that the needle display of the meter is full scale 
+      ($I=100\;\mu A$) when the resistor $R=0$ being measured (between the 
+      two leads labeled + and -) is zero, or half scale ($I=50\;\mu A$) when 
+      the value of $R$ and the position of he two synchronized rotary switches
+      are given in each of the four case shown in the table:
+
+      \begin{tabular}{l|llll} \hline
+	positions  & $\times 1$ & $\times 10$ & $\times 100$ & $\times 1K$ \\
+	$R$ values & 20$\Omega$ & 200$\Omega$ & 2000$\Omega$ & 20 $K\Omega$ 
+      \end{tabular}
+
+      \htmladdimg{../multimeterR.gif}
+
+  \end{itemize}
+
+\end{enumerate}
+\end{document}
+

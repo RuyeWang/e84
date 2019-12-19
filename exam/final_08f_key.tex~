@@ -1,0 +1,140 @@
+\documentstyle[11pt]{article}
+\usepackage{html}
+\begin{document}
+\begin{center}
+{\Large \bf  Midterm Exam 3 ---- E84, Fall 2008}
+\end{center}
+
+\begin{itemize}
+\item Due 5pm Tuesday 5/13.
+\item Take home, open everything except discussion.
+\item Mark your start and end times. Don't spend more than 3 hours.
+\item Mark your name and question number clearly on top of each page.
+	Indicate the total number of pages submitted.
+\item When solving a problem, list all the steps. In each step, describe 
+	what you are doing in English, then show the calculation and the 
+	result of the step. A final answer, even if correct, without 
+	evidence of the steps leading to the answer will not receive credit.
+\end{itemize}
+
+\begin{enumerate}
+
+\item {\bf Problem 1. (33 points)} 
+
+
+An inductive load is connected to a AC voltage source of 220 Volts (RMS)
+and 50 Hz. It is known that the average power is 1.1 kW and the power
+factor is $\lambda=0.5$. If the power factor is to be improved to 0.866 
+by including a capacitor in paralle with the load, what is the its
+capacitance?
+
+\htmladdimg{../final08fa.gif}
+
+{\bf Solution:}
+Given the power factor $\lambda=\cos\phi=0.5$, the phase angle of the inductive
+impedance is $\phi=\cos^{-1}0.5=60^\circ$. Also, given the average power
+\[ P_{av}=VI\cos\phi =VI \lambda \]
+we can get the current:
+\[ I=\frac{P}{V\lambda}=\frac{1100}{220\times 0.5}=10\;A \]
+The impedance is therefore
+\[ Z_{RL}=R+j\omega L=|Z| e^{j\angle Z}=\sqrt{R^2+(\omega L)^2}\angle 60^\circ \]
+As
+\[ |Z|=\frac{V}{I}=\frac{220}{10}=22 \]
+we have
+\[ \left\{ \begin{array}{l}
+  |Z|^2=R^2+(\omega L)^2=22^2=484 \\
+  \frac{\omega L}{R}=\tan 60^\circ=\sqrt{3} \end{array} \right. \]
+Solving these equations we get
+\[ R=11\Omega,\;\;\;\;\;\omega L=11\sqrt{3}\;\Omega \]
+With a capacitor in parallel with the inductive load $R+j\omega L$, the total
+impedance becomes:
+\[ Z_{RCL}=\frac{1}{j\omega C} || (R+j\omega L)
+=\frac{(R+j\omega L)/j\omega C}{(R+j\omega L)+1/j\omega C}
+=\frac{R+j\omega L}{(1-\omega^2LC)+j\omega RC} \]
+In order to satisfy the required power factor $\lambda=\cos \phi=0.866$, 
+the phase angle of the total impedance $Z_{RCL}$ has to be 
+$\phi=\cos^{-1} 0.866=30^\circ$, i.e., 
+\[ \angle N-\angle D=30^\circ \]
+where $\angle N$ is the phase of the numerator $R+j\omega L$, known to be
+$60^\circ$, therefore the angle of the denominator has to be $30^\circ$ as
+well:
+\[ \angle [(1-\omega^2LC)+j\omega RC]
+=\tan^{-1}\frac{\omega RC}{1-\omega^2 LC}=30^\circ \]
+i.e.,
+\[ \frac{\omega RC}{1-\omega^2 LC}=30^\circ =\tan 30^\circ =\frac{1}{\sqrt{3}} \]
+But as $\omega L=\sqrt{3} R=\sqrt{3} 11$, the above becomes
+\[ \sqrt{3}\omega RC=1-\sqrt{3}\omega RC \]
+solving this we get
+\[ C=\frac{1}{2\times314\times 11\sqrt{3}}=83.6\;\mu F \]
+
+\item {\bf Problem 2. (33 points)} 
+
+Find the DC operating point $(I_C, V_{CE})$ of the transistor circuit 
+given below, where $R_1=100K\Omega$, $R_2=300K\Omega$, $R_C=R_E=2K\Omega$, 
+$V_{CC}=12V$, and $\beta=100$. If you find the DC operating point is not 
+in the middle of the linear region of the output characteristic plot, 
+modify $R_2$ so that the DC operating point is in the middle of the linear
+region (to maximize the dynamic range of the AC output).
+
+\htmladdimg{../../lectures/figures/transistorbiasingb.gif}
+
+ {\bf Solution:} 
+ 
+ Find the load line: 
+ When $I_C=0$, $V_{CE}=V_{CC}=12V$, when $V_{CE}=0$, $I_C=V_{CC}/(R_C+R_E)=3mA$
+ 
+ \[ R_{B}=\frac{R_1 R_2}{R_1+R_2}=75K,\;\;\;V_{BB}=12\frac{R_2}{R_1+R_2}=9V \]
+ \[ I_B=\frac{V_{BB}-V_{BE}}{R_B+(\beta+1)R_E}=\frac{9-0.7}{75+202}=30\mu A \]
+ \[ I_C=\beta I_B=3 mA, \;\;\;\;V_{CE}=V_{CC}-(R_C+R_E)I_C=0V \]
+ The DC operating point is in saturation region.
+ 
+ Now we modify $R_2$ to move Q-point to the middel point where $I_C=1.5mA$.
+ \[ V_{BB}=12R_2/(100+R_2),\;\;\;\;R_B=100R_2/(100+R_2) \]
+ We then plug these into 
+ \[ I_C=\beta \frac{V_{BB}-V_{BE}}{(\beta+1) R_E+R_B}=1.5 \]
+ and solve it for $R_2$ to get $R_2=55K$.
+
+
+\item {\bf Problem 3. (34 points)} 
+
+The circuit shown below is called Darlington transistor amplifier which is
+composed of two transistors $T_1$ and $T_2$ with their collectors connected 
+and the emitter of $T_1$ connected to the base of $T_2$. Assume $V_{CC}=20V$ 
+and both transistors have $\beta=50$. 
+\begin{enumerate}
+\item Give the expressions of $I_{C1}$, $I_{E1}=I_{B2}$, $I_{C2}$, $I_{E2}$
+  all in terms of $\beta$ and $I_{B1}$.
+\item Given $R_C=1 k\Omega$, find $R_B$ so that the DC operating point $Q$
+  is in the middle of the linear region of the output V-I characteristic plot.
+\item Given $R_B= 4.6 M\Omega$ and the same $R_C$ as before, find the proper 
+DC voltage $V_{cc}$ so that the Q point is in the middle of the linear region.
+\end{enumerate}
+For simplicity, assume for both transistors $v_{be}=0.7V$.
+
+\htmladdimg{../midterm3g.gif}
+
+{\bf Solution:}
+
+\begin{enumerate}
+\item $I_{C1}=\beta I_{B1}$, $I_{E1}=I_{B2}=(\beta+1) I_{B1}$, 
+  $I_{C2}=\beta I_{B2}=\beta (\beta+1) I_{B1}$, 
+  $I_{E2}=(\beta+1) I_{B2}=(\beta+1)^2 I_{B1}=(\beta^2+2\beta+1)I_{B1}$, 
+
+\item In order for $V_C=V_{CC}-R_C (I_{C1}+I_{C2})=10V$, we need to have
+  $I_{C1}+I_{C2}=\beta I_{B1}+\beta (\beta+1) I_{B1}=2500 I_{B1}=10 mA$, i.e.,
+  $I_{B1}=10 mA/2600=3.8 \mu A$. 
+
+  $R_B=(V_{CC}-2V_{be})/I_{B1}=18.6/3.8=4.89 M\Omega$
+\item 
+  \[ \beta I_{B1}+\beta (\beta+1) I_{B1}
+  =(2\beta+\beta^2)\;\frac{V_{cc}-1.4}{4.6\times 10^6}
+  =2600\;\frac{V_{cc}-1.4}{4.6\times 10^6}=\frac{1}{2}\frac{V_{cc}}{10^3} \]
+  Solving this we get
+  \[ V_{cc}=12\;V \]
+
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}
+

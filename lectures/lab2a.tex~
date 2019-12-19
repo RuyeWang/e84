@@ -1,0 +1,137 @@
+\documentstyle[12pt]{article}
+\usepackage{html}
+% \usepackage{graphics}  
+\begin{document}
+
+{\Large \bf E84 Lab 2: Construction of a Radio Receiver}
+
+{\bf Final construction due 5 pm, last day of class, paper submission due one week earlier}
+
+Pick up the hardware of the radio receiver kit from the stock room,
+including all the components and the construction manual.
+
+\section{Part 1: Transistor Circuits}
+
+\subsection{Transistor Testing}
+
+Different types of transistors are used in the 
+\htmladdnormallink{AM/FM radio receiver kit}{../amfm108TK.pdf}
+of this lab, including five
+\htmladdnormallink{2N3904}{http://www.fairchildsemi.com/ds/2N/2N3904.pdf}
+transistors (also available in our stock room). Use the 
+\htmladdnormallink{Type 575 semiconductor curve tracer}{http://en.wikipedia.org/wiki/Semiconductor_curve_tracer}
+in the electronic lab to test these transistors in common emitter mode. 
+Specifically, observe both the input and output characteristic plots.
+
+{\bf Important note:} To make sure not to burn your transistor, 
+(a) study the datasheet of the transistor to determine the leads for E, B and C,
+(b) do not apply $V_{CC}$ voltage higher than 30 V.
+
+{\bf Recommended control knob initial settings:}
+\begin{itemize}
+\item {\bf Display control} (top-right)
+  \begin{itemize}
+  \item Vertical axis (for $I_B$ or $I_C$): 1 mA/Div
+  \item Horizontal axis ($V_{BE}$ or ``base voltage''): 0.1 or 0.5 V/Div
+  \item Horizontal axis ($V_{CE}$ or ``collector voltage''): 2 V/Div
+  \end{itemize}
+\item {\bf Collector voltage} (lower-left)
+  \begin{itemize}
+  \item Peak voltage range: x1 (be careful to use x10 as maximum voltage is 200 V)
+  \item Polarity: + for npn transistors
+  \item Peak Volt ($V_{CC}$): 10 to 20 Volts
+  \item Dissipation limiting resistor ($R_C$): 1 k$\Omega$
+  \end{itemize}
+\item {\bf Base voltage} (lower-right)
+  \begin{itemize}
+  \item Repetitive/Single scan: repetitive
+  \item Steps/family: 12
+  \item Polarity: +
+  \item Steps/Sec: 240
+  \item Series resistor ($R_B$):
+  \item Step selection: $0.005 mA = 5 \mu A$
+  \end{itemize}
+\end{itemize}
+
+\subsection{Transistor Circuit Construction}
+
+Design and build the following basic transistor voltage amplifier shown 
+in the figure below. (Use $V_{CC}\le 20\;V$.) Test the circuit by a signal 
+generator and an oscilloscope. ($R_S$ in the diagram is the output 
+rersistance of the signal generator.) Display both input and output signals 
+(sinusoidal) on the screen (use both channels). Observe the following:
+\begin{itemize}
+\item DC operating point (should be in the middle of the linear range)
+\item Voltage amplification
+\item Polarity inversion
+\item The upper and lower peak clipping (by increasing the amplitude of 
+  the input sinusoid).
+\end{itemize}
+
+\htmladdimg{../../lectures/figures/ACamplification1.gif}
+
+{\bf Submission:}
+
+\begin{itemize}
+\item The sketch or photo of both the input and output characteristic plots 
+  observed on the screen of the semiconductor curve tracer with the following
+  labeling (with reasonable and meaningful increment):
+  \begin{itemize}
+  \item The voltage (horizontal axis) $V_{BE}$ or $V_{CE}$
+  \item The current (vertical axis) $I_B$ or $I_C$
+  \item For the output plot, each one of the 12 $I_B$ values in the family
+  \end{itemize}
+\item Determine the value $\beta=I_C/I_B$ (also referred to as the 
+  ``forward transfer current ratio'' and denoted by $h_f$ or $h_{FE}$ on
+  the \htmladdnormallink{2N3904 datasheet}{http://www.fairchildsemi.com/ds/2N/2N3904.pdf}
+  (see \htmladdnormallink{class notes}{http://fourier.eng.hmc.edu/e84/lectures/ch4/node7.html})
+  from the output plot for each of the 5 transistors.
+\item Determine $V_{BE}$ from the input plot when $I_B$ is within the range of
+  0.01 to 0.1 mA, correspondingly $I_C$ is in the range of $0.01\;\beta$ to 
+  $0.1\;\beta$.
+\item Describe how the load line changes in the output plot when (a) $R_C$ 
+  increases/decreases, and (b) $V_{CC}$ increases/decreases.
+\item Determine the voltage gain of the transistor ampilfier. Submit the sketch
+  or photo of the oscilloscpoe showing both input and output at the same time.
+\end{itemize}
+
+\section{Part 2: Understanding the circuit}
+
+Read and understand these topics all related to this radio receiver lab. You are
+encouraged to search the Internet to find additional (possibly more thorough) 
+descriptions of the topics.
+
+\begin{itemize}
+\item \htmladdnormallink{Radio Receiver}{http://en.wikipedia.org/wiki/Receiver_(radio)}
+\item \htmladdnormallink{Superheterodyne Receiver}{http://en.wikipedia.org/wiki/Superheterodyne_receiver}
+\item \htmladdnormallink{Frequency Mixer}{http://en.wikipedia.org/wiki/Frequency_mixer}
+\item \htmladdnormallink{AM/FM demodulation}{http://www.electronics-tutorials.com/receivers/fm-radio-receivers2.htm}
+\item \htmladdnormallink{Foster-Seeley}{http://en.wikipedia.org/wiki/Foster-Seeley_discriminator}
+\item \htmladdnormallink{ratio FM detector}{http://www.radio-electronics.com/info/receivers/fm_demod/ratio-foster-seeley-fm-detector-discriminator.php}
+\item \htmladdnormallink{Rectification}{http://en.wikipedia.org/wiki/Rectifier}
+\item \htmladdnormallink{Amplifier}{http://en.wikipedia.org/wiki/Class_C_amplifier#Class_C}
+\item \htmladdnormallink{Push-Pull Amplifier}{http://en.wikipedia.org/wiki/Push-pull_output}
+\end{itemize}
+
+{\bf Submission:}
+
+Write a short paragraph to explain the principle of each of the following three 
+topics in your own words. Make sure you explain the goal as well as the method. 
+Be concise and to the point. Use no more than one single sided page.
+
+\begin{itemize}
+\item Superheterodyne receiver
+\item AM demodulation
+\item FM demodulation
+\end{itemize}
+
+\section{Part 3: Construction of the radio receiver}
+
+
+\end{document}
+
+
+	
+
+	
+

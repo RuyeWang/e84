@@ -1,0 +1,608 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Responses to Impulse Train</TITLE>
+<META NAME="description" CONTENT="Responses to Impulse Train">
+<META NAME="keywords" CONTENT="ch3">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="ch3.css">
+
+<LINK REL="previous" HREF="node13.html">
+<LINK REL="next" HREF="node15.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node15.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node10.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node13.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node15.html">Solving RLC Circuits by</A>
+<B> Up:</B> <A
+ HREF="node10.html">Second Order Systems</A>
+<B> Previous:</B> <A
+ HREF="node13.html">Complete Solution with Step</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H3><A ID="SECTION00015400000000000000">
+Responses to Impulse Train</A>
+</H3>
+
+<P>
+<B>Example 1</B>
+
+<P>
+Consider the steady state response of a first order RC circuit with the
+parameter <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img234.svg"
+ ALT="$\tau$"></SPAN> to a square impulse train of period <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img16.svg"
+ ALT="$T$"></SPAN>:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+x(t+T)=x(t)=\left\{ \begin{array}{cl}1&0<t<T_0\\0&T_0<t<T\end{array}\right.
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img731.svg"
+ ALT="$\displaystyle x(t+T)=x(t)=\left\{ \begin{array}{cl}1&amp;0&lt;t&lt;T_0\\ 0&amp;T_0&lt;t&lt;T\end{array}\right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">260</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+where <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img732.svg"
+ ALT="$T_0$"></SPAN> is the on-time and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img733.svg"
+ ALT="$T_1=T-T_0$"></SPAN> is off-time of the impulse train.
+Consider the response <!-- MATH
+ $y(t)=v_C(t)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img665.svg"
+ ALT="$y(t)=v_C(t)$"></SPAN> during both the on and off periods:
+
+<UL>
+<LI>The on-time response can be found based on the assumed initial condition 
+  <!-- MATH
+ $y(t)\big|_{t=0}=V_0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.25ex; vertical-align: -1.05ex; " SRC="img734.svg"
+ ALT="$y(t)\big\vert _{t=0}=V_0$"></SPAN>:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+y(t)=1+(V_0-1)e^{-t/\tau},\;\;\;\;\;\;\;\;(0<t<T_0)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img735.svg"
+ ALT="$\displaystyle y(t)=1+(V_0-1)e^{-t/\tau},\;\;\;\;\;\;\;\;(0&lt;t&lt;T_0)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">261</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+In particular, <!-- MATH
+ $y(t)\big|_{t=T_0}=y(T_0)=1+(V_0-1)e^{-T_0/\tau}=V_1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.48ex; vertical-align: -1.28ex; " SRC="img736.svg"
+ ALT="$y(t)\big\vert _{t=T_0}=y(T_0)=1+(V_0-1)e^{-T_0/\tau}=V_1$"></SPAN> 
+</LI>
+<LI>The off-time response can be found based on the initial condition
+  <!-- MATH
+ $y(T_0)=V_1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img737.svg"
+ ALT="$y(T_0)=V_1$"></SPAN> to be
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+y(t)=0+(V_1-0)e^{-(t-T_0)/\tau}=V_1 e^{-(t-T_0)/\tau},\;\;\;\;\;\;(T_0<t<T)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img738.svg"
+ ALT="$\displaystyle y(t)=0+(V_1-0)e^{-(t-T_0)/\tau}=V_1 e^{-(t-T_0)/\tau},\;\;\;\;\;\;(T_0&lt;t&lt;T)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">262</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+In particular, <!-- MATH
+ $y(T)=y(0)=V_1 e^{-(T-T_0)/\tau}=V_1 e^{-T_1/\tau}=V_0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img739.svg"
+ ALT="$y(T)=y(0)=V_1 e^{-(T-T_0)/\tau}=V_1 e^{-T_1/\tau}=V_0$"></SPAN>
+</LI>
+</UL>
+The two voltages <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img329.svg"
+ ALT="$V_0$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img740.svg"
+ ALT="$V_1$"></SPAN> can then be found by solving these two 
+simultaneous equations:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left\{\begin{array}{l} V_0=V_1 e^{-T_1/\tau}\\V_1=1+(V_0-1)e^{-T_0/\tau}\end{array}\right.
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.43ex; " SRC="img741.svg"
+ ALT="$\displaystyle \left\{\begin{array}{l} V_0=V_1 e^{-T_1/\tau}\\ V_1=1+(V_0-1)e^{-T_0/\tau}\end{array}\right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">263</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Substituting the first equation into the second one we can find <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img740.svg"
+ ALT="$V_1$"></SPAN> and then
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img329.svg"
+ ALT="$V_0$"></SPAN>:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_1=\frac{1-e^{-T_0/\tau}}{1-e^{-T/\tau}},\;\;\;\;\;\;\;\;
+  V_0=\frac{e^{-T_1/\tau}-e^{-T/\tau}}{1-e^{-T/\tau}}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -1.94ex; " SRC="img742.svg"
+ ALT="$\displaystyle V_1=\frac{1-e^{-T_0/\tau}}{1-e^{-T/\tau}},\;\;\;\;\;\;\;\;
+V_0=\frac{e^{-T_1/\tau}-e^{-T/\tau}}{1-e^{-T/\tau}}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">264</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Consider some special cases:
+
+<UL>
+<LI>When <!-- MATH
+ $T_0\gg\tau$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img743.svg"
+ ALT="$T_0\gg\tau$"></SPAN> and <!-- MATH
+ $T_1\gg\tau$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img744.svg"
+ ALT="$T_1\gg\tau$"></SPAN>, all exponential terms become zero 
+  and we have <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img452.svg"
+ ALT="$V_0=0$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img745.svg"
+ ALT="$V_1=1$"></SPAN>, i.e., the capacitor is fully charged and
+  then fully discharged.
+</LI>
+<LI>When <!-- MATH
+ $T_0\ll\tau$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img746.svg"
+ ALT="$T_0\ll\tau$"></SPAN> and <!-- MATH
+ $T_1\ll\tau$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img747.svg"
+ ALT="$T_1\ll\tau$"></SPAN>, all exponential terms can be 
+  approximated by <!-- MATH
+ $e^{-x}\approx 1-x$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.31ex; " SRC="img748.svg"
+ ALT="$e^{-x}\approx 1-x$"></SPAN>, and we have:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_1=\frac{1-e^{-T_0/\tau}}{1-e^{-T/\tau}}\approx\frac{T_0}{T},  \;\;\;\;\;\;\;\;
+    V_0=\frac{e^{-T_1/\tau}-e^{-T/\tau}}{1-e^{-T/\tau}}\approx\frac{T-T_1}{T}=\frac{T_0}{T}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -1.94ex; " SRC="img749.svg"
+ ALT="$\displaystyle V_1=\frac{1-e^{-T_0/\tau}}{1-e^{-T/\tau}}\approx\frac{T_0}{T}, \;...
+...c{e^{-T_1/\tau}-e^{-T/\tau}}{1-e^{-T/\tau}}\approx\frac{T-T_1}{T}=\frac{T_0}{T}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">265</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+which is the average value of the impulse train.
+
+<P>
+</LI>
+<LI>when <!-- MATH
+ $T_0=T_1=T/2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img750.svg"
+ ALT="$T_0=T_1=T/2$"></SPAN>, we have
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+1-e^{-T/\tau}=(1+e^{-T_0/\tau})(1-e^{-T_0/\tau})
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img751.svg"
+ ALT="$\displaystyle 1-e^{-T/\tau}=(1+e^{-T_0/\tau})(1-e^{-T_0/\tau})$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">266</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+and
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_1=\frac{1-e^{-T_0/\tau}}{1-e^{-T/\tau}}=\frac{1}{1+e^{-T_0/\tau}},
+    \;\;\;\;\;\;\;\;
+    V_0=\frac{e^{-T_1/\tau}-e^{-T/\tau}}{1-e^{-T/\tau}}=\frac{e^{-T_0/\tau}}{1+e^{-T_0/\tau}},
+    \;\;\;\;\;\;V_0+V_1=1
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -1.94ex; " SRC="img752.svg"
+ ALT="$\displaystyle V_1=\frac{1-e^{-T_0/\tau}}{1-e^{-T/\tau}}=\frac{1}{1+e^{-T_0/\tau...
+...u}}{1-e^{-T/\tau}}=\frac{e^{-T_0/\tau}}{1+e^{-T_0/\tau}},
+\;\;\;\;\;\;V_0+V_1=1$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">267</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+</UL>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/ImpulsetrainResponse1a.gif"
+ ALT="ImpulsetrainResponse1a.gif">
+
+<P>
+Here <!-- MATH
+ $T_0=T_1=T/2=1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img753.svg"
+ ALT="$T_0=T_1=T/2=1$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img754.svg"
+ ALT="$\tau=0.5$"></SPAN>.
+
+<P>
+<B>Example 2</B> 
+
+<P>
+Consider the steady state response of an undamped second order system with
+parameters <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img632.svg"
+ ALT="$\zeta =0$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img488.svg"
+ ALT="$\omega_n$"></SPAN> to a symmetric square impulse train of
+period <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img755.svg"
+ ALT="$2T_0$"></SPAN>:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+x(t+2T_0)=x(t)=\left\{ \begin{array}{cl}1&0<t<T_0\\0&T_0<t<2T_0\end{array}\right.
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img756.svg"
+ ALT="$\displaystyle x(t+2T_0)=x(t)=\left\{ \begin{array}{cl}1&amp;0&lt;t&lt;T_0\\ 0&amp;T_0&lt;t&lt;2T_0\end{array}\right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">268</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+where <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img732.svg"
+ ALT="$T_0$"></SPAN> is both the on and off-time of the impulse train, which can also
+be written as:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+x(t)=u(t)-u(t-T_0)+u(t-2T_0)-u(t-3T_0)+u(t-4T_0)- \cdots
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img757.svg"
+ ALT="$\displaystyle x(t)=u(t)-u(t-T_0)+u(t-2T_0)-u(t-3T_0)+u(t-4T_0)- \cdots$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">269</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The response of the 2nd order system can be obtained based on its step
+response <!-- MATH
+ $y(t)=1-\cos(\omega_nt)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img758.svg"
+ ALT="$y(t)=1-\cos(\omega_nt)$"></SPAN> (with some constant coefficient which 
+is neglected):
+
+<UL>
+<LI><P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+y(t)=1-\cos\omega_nt,\;\;\;\;\;\;\;\;\;\;\;\;\;\;(0<t<T_0)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img759.svg"
+ ALT="$\displaystyle y(t)=1-\cos\omega_nt,\;\;\;\;\;\;\;\;\;\;\;\;\;\;(0&lt;t&lt;T_0)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">270</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI><P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+y(t)=(1-\cos\omega_nt)-(1-\cos\omega_n(t-T_0))
+    =-\cos\omega_nt+\cos\omega_n(t-T_0),\;\;\;\;\;\;\;\;\;\;\;\;\;\;(T_0<t<2T_0)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img760.svg"
+ ALT="$\displaystyle y(t)=(1-\cos\omega_nt)-(1-\cos\omega_n(t-T_0))
+=-\cos\omega_nt+\cos\omega_n(t-T_0),\;\;\;\;\;\;\;\;\;\;\;\;\;\;(T_0&lt;t&lt;2T_0)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">271</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>
+<BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+y(t)&=&(1-\cos\omega_nt)-(1-\cos\omega_n(t-T_0))+(1-\cos\omega_n(t-2T_0))
+    \nonumber \\
+    &=&1-\cos\omega_n(t-2T_0)+\cos\omega_n(t-T_0)-\cos\omega_nt,
+    \;\;\;\;\;\;\;\;\;\;\;\;\;\;(2T_0<t<3T_0)
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img653.svg"
+ ALT="$\displaystyle y(t)$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img761.svg"
+ ALT="$\displaystyle (1-\cos\omega_nt)-(1-\cos\omega_n(t-T_0))+(1-\cos\omega_n(t-2T_0))$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img762.svg"
+ ALT="$\displaystyle 1-\cos\omega_n(t-2T_0)+\cos\omega_n(t-T_0)-\cos\omega_nt,
+\;\;\;\;\;\;\;\;\;\;\;\;\;\;(2T_0&lt;t&lt;3T_0)$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">272</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+
+</LI>
+<LI>
+<BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+y(t)&=&(1-\cos\omega_nt)-(1-\cos\omega_n(t-T_0))+(1-\cos\omega_n(t-2T_0))
+    -(1-\cos\omega_nt(t-3T_0))
+    \nonumber \\
+    &=&-\cos\omega_nt+\cos\omega_n(t-T_0)-\cos\omega_n(t-2T_0)+\cos\omega_n(t-3T_0),
+    \;\;\;\;\;\;\;\;\;\;\;\;\;\;(3T_0<t<4T_0)
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img653.svg"
+ ALT="$\displaystyle y(t)$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img763.svg"
+ ALT="$\displaystyle (1-\cos\omega_nt)-(1-\cos\omega_n(t-T_0))+(1-\cos\omega_n(t-2T_0))
+-(1-\cos\omega_nt(t-3T_0))$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img764.svg"
+ ALT="$\displaystyle -\cos\omega_nt+\cos\omega_n(t-T_0)-\cos\omega_n(t-2T_0)+\cos\omega_n(t-3T_0),
+\;\;\;\;\;\;\;\;\;\;\;\;\;\;(3T_0&lt;t&lt;4T_0)$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">273</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+</LI>
+</UL>
+
+<P>
+We now consider two special cases:
+
+<UL>
+<LI>If <!-- MATH
+ $T_0=T=2\pi/\omega_n$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img765.svg"
+ ALT="$T_0=T=2\pi/\omega_n$"></SPAN> is the same as the natural period of
+  the 2nd order system, then <!-- MATH
+ $\cos\omega_n(t-kT_0)=\cos\omega_nt$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img766.svg"
+ ALT="$\cos\omega_n(t-kT_0)=\cos\omega_nt$"></SPAN> and we have
+  the following for all integer <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img767.svg"
+ ALT="$k$"></SPAN>:
+  
+<UL>
+<LI><P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+y(t)=1-\cos\omega_nt,\;\;\;\;\;\;\;2kT_0<t<(2k+1)T_0
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img768.svg"
+ ALT="$\displaystyle y(t)=1-\cos\omega_nt,\;\;\;\;\;\;\;2kT_0&lt;t&lt;(2k+1)T_0$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">274</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI><P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+y(t)=0,\;\;\;\;\;\;\;\;\;\;\;\;(2k-1)T_0<t<2kT_0
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img769.svg"
+ ALT="$\displaystyle y(t)=0,\;\;\;\;\;\;\;\;\;\;\;\;(2k-1)T_0&lt;t&lt;2kT_0$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">275</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+</UL>
+  We see that as <!-- MATH
+ $t\rightarrow\infty$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img251.svg"
+ ALT="$t\rightarrow\infty$"></SPAN>, more terms will be included in 
+  <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img232.svg"
+ ALT="$y(t)$"></SPAN>, which is zero when an even number of terms are included, but
+  <!-- MATH
+ $1-\cos(\omega_nt)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img770.svg"
+ ALT="$1-\cos(\omega_nt)$"></SPAN> when an odd number of terms are included.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/ImpulsetrainResponse2a.gif"
+ ALT="ImpulsetrainResponse2a.gif">
+
+<P>
+</LI>
+<LI>If <!-- MATH
+ $T_0=T/2=\pi/\omega_n$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img771.svg"
+ ALT="$T_0=T/2=\pi/\omega_n$"></SPAN>, the period <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img755.svg"
+ ALT="$2T_0$"></SPAN> of the impulse train is 
+  the same as the natural period <!-- MATH
+ $T=2\pi/\omega_n$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img772.svg"
+ ALT="$T=2\pi/\omega_n$"></SPAN> of the 2nd system, 
+  
+<UL>
+<LI><P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+y(t)=1-\cos\omega_nt,\;\;\;\;\;\;\;\;\;\;\;\;\;\;(0<t<T_0)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img759.svg"
+ ALT="$\displaystyle y(t)=1-\cos\omega_nt,\;\;\;\;\;\;\;\;\;\;\;\;\;\;(0&lt;t&lt;T_0)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">276</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI><P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+y(t)=\cos\omega_n(t-T/2)-\cos\omega_nt=-2\cos\omega_nt,
+      \;\;\;\;\;\;\;\;\;\;\;\;\;\;(T_0<t<2T_0)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img773.svg"
+ ALT="$\displaystyle y(t)=\cos\omega_n(t-T/2)-\cos\omega_nt=-2\cos\omega_nt,
+\;\;\;\;\;\;\;\;\;\;\;\;\;\;(T_0&lt;t&lt;2T_0)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">277</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI><P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+y(t)=1-\cos\omega_n(t-T)+\cos\omega_n(t-T/2)-\cos\omega_nt
+      =1-3\cos\omega_nt,\;\;\;\;\;\;\;\;\;\;\;\;\;\;(2T_0<t<3T_0)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img774.svg"
+ ALT="$\displaystyle y(t)=1-\cos\omega_n(t-T)+\cos\omega_n(t-T/2)-\cos\omega_nt
+=1-3\cos\omega_nt,\;\;\;\;\;\;\;\;\;\;\;\;\;\;(2T_0&lt;t&lt;3T_0)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">278</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI><P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+y(t)=\cos\omega_n(t-T/2)-\cos\omega_nt+\cos\omega_n(t-3T/2)-\cos\omega_n(t-T)=-4\cos\omega_nt,\;\;\;\;\;\;\;\;\;\;\;\;\;\;(3T_0<t<4T_0)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img775.svg"
+ ALT="$\displaystyle y(t)=\cos\omega_n(t-T/2)-\cos\omega_nt+\cos\omega_n(t-3T/2)-\cos\omega_n(t-T)=-4\cos\omega_nt,\;\;\;\;\;\;\;\;\;\;\;\;\;\;(3T_0&lt;t&lt;4T_0)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">279</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+</UL>
+  This is a sinusoid growing linearly.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/ImpulsetrainResponse2b.gif"
+ ALT="ImpulsetrainResponse2b.gif">
+
+<P>
+</LI>
+</UL>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node15.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node10.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node13.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node15.html">Solving RLC Circuits by</A>
+<B> Up:</B> <A
+ HREF="node10.html">Second Order Systems</A>
+<B> Previous:</B> <A
+ HREF="node13.html">Complete Solution with Step</A></DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

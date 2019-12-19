@@ -1,0 +1,27 @@
+\documentstyle[12pt]{article}
+\usepackage{html}
+\begin{document}
+
+\htmladdimg{../figures/powerdeliveryexample.gif}
+
+The current source provides $I_0=1A$ current through the left branch 
+(upward), while the voltage source provides $V_0=2V$ across all three
+components. The current through $R$ is $2V/3\Omega=2/3A$ (downward), 
+the current through the voltage source is $I_v=1-2/3=1/3A$. 
+
+When the polarity of $V_0$ is reversed, the current through $R$ is 
+$I_R=2V/3\Omega=2/3\,A$ (upward), the current through the volage 
+source is $I_0+I_R=1+2/3=5/3\,A$ (downward), and 
+\begin{itemize}
+\item Power dissipated by $R$: $RI_R^2=3\times (2/3)^2=4/3\;W$.
+\item Power delivered by voltage source: $V_0I=2\times (1+2/3)=2\times 5/3=10/3 W$
+\item Power received by current source: $I_0V_0=1A\times 2V=2W=6/3\;W$
+\end{itemize}
+\[ \frac{4}{3}+\frac{6}{3}=\frac{10}{3} \]
+
+
+
+\end{itemize}
+
+\end{document}
+

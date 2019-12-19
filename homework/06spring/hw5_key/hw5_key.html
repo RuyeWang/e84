@@ -1,0 +1,595 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>hw5_key</TITLE>
+<META NAME="description" CONTENT="hw5_key">
+<META NAME="keywords" CONTENT="hw5_key">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="hw5_key.css">
+
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/sw/share/lib/latex2html/icons/next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/sw/share/lib/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/sw/share/lib/latex2html/icons/prev_g.png">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+  HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<DIV ALIGN="CENTER">
+<FONT SIZE="+2"><B>E84 Home Work 5 (Key)</B></FONT>
+
+</DIV>
+
+<OL>
+<LI>The figure below shows a two-dimensional network of infinite number 
+of 1<IMG
+ WIDTH="17" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.png"
+ ALT="$\Omega$"> resistors forming a grid extending to infinity in all four 
+directions. Find the resistance between any two neighboring nodes, e.g., 
+nodes a and b.
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../resistornetwork.gif"
+ ALT="resistornetwork.gif">
+
+<P>
+<B>Hint:</B> Add two 1A current sources to the two nodes, as shown in the 
+figure, and use superposition theorem to find the current <IMG
+ WIDTH="24" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.png"
+ ALT="$i_{ab}$"> from 
+a to b, and thereby the voltage drop between a and b. Note that as the
+network is infinite, the four branches of each node are totally symmetric
+and therefore the currents through them are identical. The resistance 
+between these nodes can be found by Ohm's law.
+
+<P>
+<B>Solution:</B>
+We use superposition principle to consider one 1A current source at a time.
+As the four branches at each node are totally identical, each branch will
+have a current of 1/4 A, according to KCL. When both current sources are
+considered, the current from a to b will be 1/2 A. But as the resistance
+is 1<IMG
+ WIDTH="17" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.png"
+ ALT="$\Omega$">, the voltage drop is 1/2 V. To find the equivalent resistance
+between nodes a and b without anything else, realize that the current going
+from a to b through the equivalent resistance is 1 A due to the current 
+sources, and the voltage drop between a and b is 1/2 V, indicating the 
+resistance between a and b is 1/2 <IMG
+ WIDTH="17" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.png"
+ ALT="$\Omega$">.
+
+<P>
+</LI>
+<LI>Convert the one-port circuit below to an equivalent Thevenin voltage
+source, find <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="$V_T$"> and <IMG
+ WIDTH="28" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$R_T$">. Find the voltage <IMG
+ WIDTH="18" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.png"
+ ALT="$V$"> and current <IMG
+ WIDTH="13" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$I$"> associated
+with a load resistor with resistance <!-- MATH
+ $R_L=1\Omega, 2\Omega, 3\Omega$
+ -->
+<IMG
+ WIDTH="130" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.png"
+ ALT="$R_L=1\Omega, 2\Omega, 3\Omega$">.
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../theveninsource.gif"
+ ALT="theveninsource.gif">
+
+<P>
+<B>Solution:</B>
+
+<P>
+First find open-circuit voltage <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="$V_T$">:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V_T=4V+2A \times 2\Omega = 8V
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="198" HEIGHT="29" BORDER="0"
+ SRC="img8.png"
+ ALT="\begin{displaymath}V_T=4V+2A \times 2\Omega = 8V \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Second find equivalent resistance when voltage source is short circuit
+and current source is open circuit
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+R_T=2+3=5\Omega
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="130" HEIGHT="29" BORDER="0"
+ SRC="img9.png"
+ ALT="\begin{displaymath}R_T=2+3=5\Omega \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The voltage and current associated with <!-- MATH
+ $R_L=1\Omega, 2\Omega, 3\Omega$
+ -->
+<IMG
+ WIDTH="130" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.png"
+ ALT="$R_L=1\Omega, 2\Omega, 3\Omega$"> are, 
+respectively, 
+<!-- MATH
+ $I=8V/(5+1)\Omega=4/3A, V=IR_L=4/3V$
+ -->
+<IMG
+ WIDTH="334" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.png"
+ ALT="$I=8V/(5+1)\Omega=4/3A, V=IR_L=4/3V$">, 
+<!-- MATH
+ $I=8V/(5+2)\Omega=8/7A, V=IR_L=16/7V$
+ -->
+<IMG
+ WIDTH="343" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.png"
+ ALT="$I=8V/(5+2)\Omega=8/7A, V=IR_L=16/7V$">, 
+<!-- MATH
+ $I=8V/(5+3)\Omega=1A, V=IR_L=3V$
+ -->
+<IMG
+ WIDTH="299" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.png"
+ ALT="$I=8V/(5+3)\Omega=1A, V=IR_L=3V$">.
+
+<P>
+</LI>
+<LI>Convert the one-port circuit below to an equivalent Norton current
+source, find <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.png"
+ ALT="$I_N$"> and <IMG
+ WIDTH="30" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.png"
+ ALT="$R_N$">. Find the voltage <IMG
+ WIDTH="18" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.png"
+ ALT="$V$"> and current <IMG
+ WIDTH="13" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$I$"> associated
+with a load resistor with resistance <!-- MATH
+ $R_L=1\Omega, 2\Omega, 3\Omega$
+ -->
+<IMG
+ WIDTH="130" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.png"
+ ALT="$R_L=1\Omega, 2\Omega, 3\Omega$">.
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../nortonsource.gif"
+ ALT="nortonsource.gif">
+
+<P>
+<B>Solution:</B>
+
+<P>
+First find short-circuit current <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.png"
+ ALT="$I_N$"> by superposition theorem:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+I_N=\frac{10V}{10\Omega}-\frac{12V}{10//15 \Omega}=-1A
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="227" HEIGHT="47" BORDER="0"
+ SRC="img15.png"
+ ALT="\begin{displaymath}I_N=\frac{10V}{10\Omega}-\frac{12V}{10//15 \Omega}=-1A \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Second find equivalent resistance when both voltage sources are shorted:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+R_N=10//15=6\Omega
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="146" HEIGHT="31" BORDER="0"
+ SRC="img16.png"
+ ALT="\begin{displaymath}R_N=10//15=6\Omega \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The voltage and current associated with <!-- MATH
+ $R_L=1\Omega, 2\Omega, 3\Omega$
+ -->
+<IMG
+ WIDTH="130" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.png"
+ ALT="$R_L=1\Omega, 2\Omega, 3\Omega$"> are, 
+respectively, 
+<!-- MATH
+ $V=-1A\times(6//1)=-6/7V, I=-1A 6/(6+1)=-6/7A$
+ -->
+<IMG
+ WIDTH="442" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$V=-1A\times(6//1)=-6/7V, I=-1A 6/(6+1)=-6/7A$">,
+<!-- MATH
+ $V=-1A\times(6//2)=-12/8=-3/2V, I=-1A 6/(6+2)=-3/4A$
+ -->
+<IMG
+ WIDTH="513" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.png"
+ ALT="$V=-1A\times(6//2)=-12/8=-3/2V, I=-1A 6/(6+2)=-3/4A$">,
+<!-- MATH
+ $V=-1A\times(6//3)=-2V, I=-1A 6/(6+3)=-2/3A$
+ -->
+<IMG
+ WIDTH="424" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.png"
+ ALT="$V=-1A\times(6//3)=-2V, I=-1A 6/(6+3)=-2/3A$">.
+
+<P>
+</LI>
+<LI>In the circuit below, each of the six branches has a <IMG
+ WIDTH="26" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img20.png"
+ ALT="$1\Omega$">
+resistor and a voltage source of unknow voltage and polarity. The current
+from points a to b is known to be <IMG
+ WIDTH="71" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.png"
+ ALT="$I_{ab}=1A$">. If the resistor between 
+points a and b is changed from <IMG
+ WIDTH="26" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img20.png"
+ ALT="$1\Omega$"> to <IMG
+ WIDTH="26" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img22.png"
+ ALT="$3\Omega$">, what is the current
+<IMG
+ WIDTH="26" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img23.png"
+ ALT="$I_{ab}$">?
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../trianglenetwork.gif"
+ ALT="trianglenetwork.gif">
+
+<P>
+<B>Solution:</B>
+
+<P>
+Treat the resistor between points a and b as the load, and use Thevenin's 
+theorem. To find the equivalent resistance, we short all voltage sources
+and the remaining resistors form a balanced bridge (no current through the
+resistor on the lower left branch) and the resistance between points a and
+b is <!-- MATH
+ $(1+1)//(1+1)=1\Omega$
+ -->
+<IMG
+ WIDTH="171" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img24.png"
+ ALT="$(1+1)//(1+1)=1\Omega$">. Alternatively, we can convert one of the two
+triangles to Y of three <IMG
+ WIDTH="43" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.png"
+ ALT="$ 1/3 \Omega$">, and find the total resistance to be 
+<!-- MATH
+ $1/3+(1+1/3)//(1+1/3)=1/3+2/3=1$
+ -->
+<IMG
+ WIDTH="337" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img26.png"
+ ALT="$1/3+(1+1/3)//(1+1/3)=1/3+2/3=1$">. As the current through resistor between a
+and b is <IMG
+ WIDTH="26" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.png"
+ ALT="$1A$">, which implies the open-circuit voltage is <!-- MATH
+ $V_T=1A (1+1)
+\Omega=2V$
+ -->
+<IMG
+ WIDTH="181" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img28.png"
+ ALT="$V_T=1A (1+1)
+\Omega=2V$">. When the resistance between a and b is <IMG
+ WIDTH="26" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img22.png"
+ ALT="$3\Omega$">, the current 
+becomes <!-- MATH
+ $I=2V/(1+3)\Omega=0.5A$
+ -->
+<IMG
+ WIDTH="190" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img29.png"
+ ALT="$I=2V/(1+3)\Omega=0.5A$">.
+
+<P>
+</LI>
+<LI>Find the currents (<IMG
+ WIDTH="20" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img30.png"
+ ALT="$I_1$"> through <IMG
+ WIDTH="20" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img31.png"
+ ALT="$I_5$">) flowing through each of the 
+five resistors (<IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.png"
+ ALT="$R_1$"> through <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img33.png"
+ ALT="$R_5$"> in the circuit below (same as shown in
+class), where <IMG
+ WIDTH="77" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.png"
+ ALT="$V_0=18V$">, <!-- MATH
+ $R_1=R_2=3\Omega$
+ -->
+<IMG
+ WIDTH="114" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img35.png"
+ ALT="$R_1=R_2=3\Omega$">, <IMG
+ WIDTH="70" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img36.png"
+ ALT="$R_3=5\Omega$">, <IMG
+ WIDTH="83" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img37.png"
+ ALT="$R_4=1.5\Omega$">
+and <IMG
+ WIDTH="70" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img38.png"
+ ALT="$R_5=2\Omega$">. (Hint: convert delta formed by by <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.png"
+ ALT="$R_1$">, <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img39.png"
+ ALT="$R_2$"> and <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img33.png"
+ ALT="$R_5$">
+to a Y composed of <IMG
+ WIDTH="26" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img40.png"
+ ALT="$R_a$">, <IMG
+ WIDTH="24" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img41.png"
+ ALT="$R_b$"> and <IMG
+ WIDTH="24" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img42.png"
+ ALT="$R_c$">, where <IMG
+ WIDTH="12" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img43.png"
+ ALT="$c$"> is the positive 
+terminal of voltage source, find <IMG
+ WIDTH="23" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img44.png"
+ ALT="$V_a$"> and <IMG
+ WIDTH="21" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img45.png"
+ ALT="$V_b$"> and then all the currents.)
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../bridgeproblem.gif"
+ ALT="bridgeproblem.gif">
+
+<P>
+<B>Solution:</B>
+
+<UL>
+<LI>(1) Convert the delta formed by <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.png"
+ ALT="$R_1$">, <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img39.png"
+ ALT="$R_2$"> and <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img33.png"
+ ALT="$R_5$"> to a Y: 
+	<IMG
+ WIDTH="118" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img46.png"
+ ALT="$R_a=R_b=3/4$">, <IMG
+ WIDTH="74" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img47.png"
+ ALT="$R_c=9/8$">
+</LI>
+<LI>(2) Find overall load resistance of voltage source:
+	<!-- MATH
+ $R_{total}=R_c+(R_a+R_3)||(R_b+R_4)=9/8+(23/4)||(9/4)=351/128$
+ -->
+<IMG
+ WIDTH="525" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img48.png"
+ ALT="$R_{total}=R_c+(R_a+R_3)\vert\vert(R_b+R_4)=9/8+(23/4)\vert\vert(9/4)=351/128$">
+</LI>
+<LI>(3) Find current through voltage source: 
+	<!-- MATH
+ $I_{total}=V_0/R_{total}=18/(351/128)=256/39$
+ -->
+<IMG
+ WIDTH="331" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img49.png"
+ ALT="$I_{total}=V_0/R_{total}=18/(351/128)=256/39$">
+</LI>
+<LI>(4) Find currents through two branches by current dividor:
+	<!-- MATH
+ $I_a=I_3=(256/39)(9/4)/(9/4+23/4)=24/13$
+ -->
+<IMG
+ WIDTH="359" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img50.png"
+ ALT="$I_a=I_3=(256/39)(9/4)/(9/4+23/4)=24/13$">, 
+	<!-- MATH
+ $I_b=I_4=(256/39)(23/4)/(9/4+23/4)=184/39$
+ -->
+<IMG
+ WIDTH="375" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img51.png"
+ ALT="$I_b=I_4=(256/39)(23/4)/(9/4+23/4)=184/39$">
+</LI>
+<LI>(5) Find voltages <IMG
+ WIDTH="23" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img44.png"
+ ALT="$V_a$"> and <IMG
+ WIDTH="21" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img45.png"
+ ALT="$V_b$"> with respect to negative terminal of
+  voltage source treated as ground: <!-- MATH
+ $V_a=R_3 I_a=120/13$
+ -->
+<IMG
+ WIDTH="158" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img52.png"
+ ALT="$V_a=R_3 I_a=120/13$">, <!-- MATH
+ $V_b=R_4 I_b=92/13$
+ -->
+<IMG
+ WIDTH="146" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img53.png"
+ ALT="$V_b=R_4 I_b=92/13$">
+</LI>
+<LI>(6) Find currents through <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.png"
+ ALT="$R_1$">, <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img39.png"
+ ALT="$R_2$"> and <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img33.png"
+ ALT="$R_5$">:
+	<!-- MATH
+ $I_1=(18-120/13)/3=38/13$
+ -->
+<IMG
+ WIDTH="232" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img54.png"
+ ALT="$I_1=(18-120/13)/3=38/13$">, <!-- MATH
+ $I_2=(18-92/13)/3=142/39$
+ -->
+<IMG
+ WIDTH="232" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img55.png"
+ ALT="$I_2=(18-92/13)/3=142/39$">, 
+	<!-- MATH
+ $I_5=(V_a-V_b)/R_5=14/13$
+ -->
+<IMG
+ WIDTH="209" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img56.png"
+ ALT="$I_5=(V_a-V_b)/R_5=14/13$">
+</LI>
+<LI>(7) Verify: <!-- MATH
+ $I_1+I_2=I_{total}=256/39$
+ -->
+<IMG
+ WIDTH="191" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img57.png"
+ ALT="$I_1+I_2=I_{total}=256/39$">, <!-- MATH
+ $I_1-I_5=I_3=24/13$
+ -->
+<IMG
+ WIDTH="161" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img58.png"
+ ALT="$I_1-I_5=I_3=24/13$">,
+	<!-- MATH
+ $I_2+I_5=I_4=184/39$
+ -->
+<IMG
+ WIDTH="170" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$I_2+I_5=I_4=184/39$">.
+</LI>
+</UL>
+
+<P>
+</LI>
+</OL>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html3"
+  HREF="node1.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/sw/share/lib/latex2html/icons/next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/sw/share/lib/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/sw/share/lib/latex2html/icons/prev_g.png">   
+<BR>
+<B> Next:</B> <A NAME="tex2html2"
+  HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Ruye Wang
+2006-02-18
+</ADDRESS>
+</BODY>
+</HTML>

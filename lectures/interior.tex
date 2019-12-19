@@ -1,0 +1,252 @@
+\documentstyle[12pt]{article}
+%\documentclass{article}
+\usepackage{amssymb}
+\usepackage{html,makeidx}
+\begin{document}
+
+
+\subsection*{Interior Point Methods}
+
+We first consider using the {\em central path} method to solve 
+the following inequality constrained optimization problem:
+\begin{equation}
+  \begin{array}{ll}
+    \mbox{minimize}  &  f_0({\bf x})\\
+    \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\\
+    \mbox{subject to:} & f_j({\bf x})\le 0,\;\;\;\;(j=1,\cdots,n)
+  \end{array}
+\end{equation}
+The $n$ inequalty constraints can be expressed in vector form as
+${\bf f}({\bf x})\le{\bf 0}$ where ${\bf f}=[f_1,\cdots,f_n]^T$. 
+The Lagrangian of the problem is
+\[
+L({\bf x},{\bf\lambda})=f_0({\bf x})-\sum_{j=1}^n\lambda_jf_j({\bf x})
+\]
+and the KKT conditions for ${\bf x}^*$ and ${\bf\lambda}^*$ to be 
+solution of this problem are:
+\begin{eqnarray}
+  &&\bigtriangledown f_0({\bf x}^*)+\sum_{j=1}^n
+  \lambda_j\bigtriangledown f_j({\bf x}^*)=0
+  \nonumber\\
+  &&f_j({\bf x}^*)\le 0,\;\;\;\;\lambda^*_j\ge 0,\;\;\;\;
+  \lambda^*_j f_j({\bf x}^*)=0,\;\;\;\;(j=1,\cdots,n)
+\end{eqnarray}
+
+We can use the central path method to find the solution ${\bf x}^*$. 
+To do so, we first introduce an indicator function:
+\[
+I_-(u)=\left\{\begin{array}{ll}0 & u\le 0\\\infty& u>0\end{array}
+\right.
+\]
+and then convert the original optimization problem into another 
+optimization problem with a new objective function but no constraints:
+\begin{equation}
+  \mbox{minimize} \;\;\;\;\; f_0({\bf x})+\sum_{j=1}^nI_-(f_j({\bf x}))
+\end{equation}
+Here the indicator function can be considered as a penalty for each
+constraint $f_j({\bf x})\le 0$ if it is violated. However, as such a
+penalty function is not smooth and therefore not differentiable, it 
+is approximated by the following function which approaches $I_-(u)$
+when a parameter $t$ approaches zero:
+\[
+-\frac{1}{t}\ln(-u)\stackrel{t\rightarrow \infty}{\Longrightarrow}I_-(u)
+\]
+Now the objective function becomes:
+\[
+f_0({\bf x})-\frac{1}{t}\sum_{j=1}^n \ln(-f_j({\bf x}))
+=f_0({\bf x})+\frac{1}{t}\phi({\bf x})
+\]
+where $\phi({\bf x})$, called the {\em logarithmic barrier function}, is
+defined as:
+\[
+\phi({\bf x})=-\sum_{j=1}^n \ln(-f_j({\bf x}))
+\]
+which is smooth and differentiable. The solution ${\bf x}^*$ that
+minimizes the new objective function should satisfy 
+\[
+\bigtriangledown \left[ f_0({\bf x})-\frac{1}{t}\sum_{j=1}^n \ln(-f_j({\bf x})) \right]
+=\bigtriangledown f_0({\bf x})-\frac{1}{t}\sum_{j=1}^n \frac{1}{f_j({\bf x})}
+\bigtriangledown f_j({\bf x})={\bf 0}
+\]
+We further define $\lambda_j$ as a function of $t$ as well as $f_j({\bf x})$:
+\[
+\lambda_j=-\frac{1}{t f_j({\bf x})},\;\;\;\;(j=1,\cdots,n)
+\]
+or in matrix form
+\[
+{\bf 1}+t\,{\bf F}({\bf x}){\bf\lambda}={\bf 0}
+\]
+where ${\bf\lambda}=[\lambda_1,\cdots,\lambda_N]^T$ and 
+${\bf F}({\bf x})=diag(f_1({\bf x},\cdots,f_n({\bf x}))$, then the above 
+becomes
+\[
+\bigtriangledown f_0({\bf x})+\sum_{j=1}^n \lambda_j\bigtriangledown f_j({\bf x})
+={\bf g}_{f_0}({\bf x})+{\bf J}_{\bf f}^T({\bf x}){\bf\lambda}={\bf 0}
+\]
+where ${\bf J}_{\bf f}({\bf x})$ is the Jacobian matrix of the constraint
+function ${\bf f}({\bf x})$:
+\[
+{\bf J}_{\bf f}({\bf x})=  \left[\begin{array}{ccc}
+      \partial f_1/\partial x_1&\cdots&\partial f_1/\partial x_N\\
+      \vdots & \ddots & \vdots\\
+      \partial f_M/\partial x_1&\cdots&\partial f_M/\partial x_N\end{array}\right]
+\]
+The corresponding dual Lagranian is:
+\[
+L_d({\bf x},{\bf\lambda})=f_0({\bf x})+\sum_{j=1}^n\lambda_jf_j({\bf x})
+\]
+and the solution ${\bf x}^*,\;{\bf\lambda}^*$ that minimizes 
+$L_d({\bf x},{\bf\lambda})$ can be found by solving the above two equations 
+of both varialbes ${\bf x}$ and ${\bf\lambda}$:
+\[
+\left\{\begin{array}{l}
+{\bf g}_{f_0}({\bf x})+{\bf J}_{\bf f}^T({\bf x}){\bf\lambda}={\bf 0}\\
+{\bf 1}/t+{\bf F}({\bf x}){\bf\lambda}={\bf 0}\end{array}\right.
+\]
+using the \htmladdnormallink{Newton-Raphson method}{../ch2/node7.html}.
+Specifically, in each step of the iteration, we find the increments 
+$\delta{\bf x}$ and $\delta{\bf\lambda}$ by solving the following linear
+equation system:
+\[
+\left[\begin{array}{cc}{\bf H}_{f_0}({\bf x}) & {\bf J}_{\bf f}^T({\bf x})\\
+    {\bf J}_{\bf f}({\bf x}) & {\bf F}({\bf x})\end{array}\right]
+\left[\begin{array}{c}\delta{\bf x}\\\delta{\bf\lambda}\end{array}\right]
+=-\left[\begin{array}{c}{\bf g}_{f_0}({\bf x})+{\bf J}_{\bf f}^T({\bf x}){\bf\lambda}&
+{\bf 1}/t+{\bf F}({\bf x}){\bf\lambda}\end{array}\right]
+\]
+where the 2 by 2 block matrix on the left is the Jacobian of the function 
+combining the two functions above, with respect to both variables ${\bf x}$ and 
+${\bf\lambda}$. We then update the two variables to get ${\bf x}+\delta{\bf x}$
+and ${\bf\lambda}+\delta{\bf\lambda}$ based on their previous values ${\bf x}$
+and ${\bf\lambda}$. The iteration will approach the solutions ${\bf x}^*(t)$
+and ${\bf\lambda}^*(t)$ (both are functions of parameter $t$) that minimize
+the dual Lagrangian $L_d({\bf x},{\bf\lambda})$ corresponding to the specific
+$t$:
+\[
+L_d({\bf x}^*,{\bf\lambda}^*)=f_0({\bf x}^*)+\sum_{j=1}^n\lambda_jf_j({\bf x}^*)
+=f_0({\bf x}^*)-\sum_{j=1}^n\frac{f_j({\bf x}^*)}{t\,f_j({\bf x}^*)}
+=f_0({\bf x}^*)-\frac{n}{t}<f_0({\bf x}^*)
+\]
+The difference $f_0({\bf x}^*)-L_d({\bf x}^*,{\bf\lambda}^*)=p^*-d^*=n/t$
+is the duality gap which approaches zero when $t\rightarrow\infty$. Also,
+the solution ${\bf x}^*$ and ${\bf\lambda}^*$ satisfies the KKT conditions:
+\begin{eqnarray}
+  &&\bigtriangledown f_0({\bf x}^*)
+  +\sum_{j=1}^n\lambda_j\bigtriangledown f_j({\bf x}^*)=0
+  \nonumber\\
+  &&f_j({\bf x}^*)\le 0,\;\;\;\;\lambda^*_j\ge 0,\;\;\;\;
+  -\lambda_j f_j({\bf x}^*)=1/t,\;\;\;\;(j=1,\cdots,n)
+\end{eqnarray}
+which become the same as the KKT conditions for the original problem when 
+$t\rightarrow\infty$. 
+
+The given inequality-constrained optimization problem can now be be solved
+by the central path method. It starts from an initial point ${\bf x}_0$
+inside the feasible region with an initial $t=t_0$, and approaches the 
+solution on the boundary iteratively. In each iteration (outer), the value
+of the parameter $t$ is increased from the prevous value, and the best 
+solution ${\bf x}^*(t)$ corresponding to this $t$ is obtained through the 
+iteration (inner) of the Newton-Raphson's method. Eventually, when 
+$t\rightarrow\infty$, ${\bf x}^*(t)$ approaches some point on the boundary,
+at which $f_0({\bf x})$ is minimized subject to the inequality constraints.
+
+
+\subsection*{Interior Point Methods for LP}
+
+
+\begin{equation}
+  \begin{array}{ll}
+    \mbox{minimize}  &  {\bf c}^T{\bf x}\\
+    \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\\
+    \mbox{subject to:} & {\bf Ax}-{\bf b}={\bf 0},\;\;\;\;{\bf x}\ge{\bf 0}
+  \end{array}
+\end{equation}
+The Lagrangian is
+\[
+L({\bf x},{\bf\lambda})={\bf c}^T{\bf x}-{\bf\lambda}^T({\bf Ax}-{\bf b})
+-{\bf\mu}^T{\bf x}
+\]
+and we can set
+\[
+\bigtriangledown_{\bf x} L({\bf x},{\bf\lambda})
+={\bf c}-{\bf A}^T{\bf\lambda}-{\bf\mu}={\bf 0}
+\]
+and get the KKT conditions:
+\[
+\left\{\begin{array}{ll}
+{\bf A}^T{\bf\lambda}+{\bf\mu}-{\bf c}={\bf 0}&
+\;\;\;\;\;\;\;\mbox{(stationarity)}\\
+{\bf Ax}-{\bf b}={\bf 0},\;\;\;\;{\bf x}\ge{\bf 0}&
+\;\;\;\;\;\;\mbox{(primal feasibility)}\\
+{\bf\mu}\ge{\bf 0}&\;\;\;\;\;\;\mbox{(dual feasibility)}\\
+x_j\mu_j=0\;\;\;\;(j=1,\cdots,n)\;\;\;\;\mbox{or}\;\;\;\;\;
+{\bf X}{\bf M}{\bf 1}={\bf 0}&\;\;\;\;\;\;\mbox{(complementarity)}
+\end{array}\right.
+\]
+where we have defined
+\[
+{\bf 1}=[1,\cdots,1]^T,\;\;\;\;\;{\bf X}=diag(x_1,\cdots,x_n),
+\;\;\;\;\;\;{\bf M}=diag(\mu_1,\cdots,\mu_n)
+\]
+
+We now introduce the logarithmic barrier function to replace the
+inequality constraint ${\bf x}\ge{\bf 0}$, the new Lagrangian is:
+\[
+L({\bf x},{\bf\lambda})={\bf c}^T{\bf x}-\frac{1}{t}\sum_{j=1}^n\ln x_j
+-{\bf\lambda}^T({\bf Ax}-{\bf b})
+\]
+Here the constrant ${\bf x}\ge{\bf 0}$ is no longer needed due 
+to the logarithmic term. To maximize this Lagrangian, we set
+its gradient to zero and get
+\[
+\bigtriangledown_{\bf x} L({\bf x},{\bf\lambda})
+={\bf c}-\frac{1}{t}\sum_{j=1}^n\frac{1}{x_j}-{\bf A}^T{\bf\lambda}
+={\bf c}-{\bf X}^{-1}{\bf 1}/t-{\bf A}^T{\bf\lambda}={\bf 0}
+={\bf c}-{\bf\mu}-{\bf A}^T{\bf\lambda}={\bf 0}
+\]
+where we have defined
+\[
+{\bf \mu}={\bf X}^{-1}{\bf 1}/t,\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;
+{\bf X}{\bf\mu}={\bf X}{\bf M}{\bf 1}={\bf 1}/t
+\]
+Combine these equations together we get
+\[
+\left\{\begin{array}{ll}
+{\bf A}^T{\bf\lambda}+{\bf\mu}-{\bf c}={\bf 0} & \mbox{(stationarity)}\\
+{\bf Ax}-{\bf b}={\bf 0} &\mbox{(primal feasibility)}\\
+{\bf XM1}-{\bf 1}/t={\bf 0} & \mbox{(dual feasibility)}
+\end{array}\right.
+\]
+\end{eqnarray}
+Also, as ${\bf x}\ge{\bf 0}$ and $t>0$, we have ${\bf\mu}\ge{\bf 0}$.
+We note that these equations are very similar to the KKT conditions
+listed above, except the last condition, which becomes the same if
+$t\rightarrow\infty$.
+
+To find the optimal solution in terms of ${\bf\lambda}^*$ and ${\bf\mu}^*$,
+as well as ${\bf x}^*$ that which satisfy the KKT conditions for the
+optimization, we solve the set of nonlinear equations above by 
+Newton-Raphson's method. Specifically, we first combine the three 
+functions into a single function of all three variables 
+${\bf f}({\bf x}$,${\bf\lambda},{\bf\mu})$, and find its Jacobian 
+${\bf J}_{\bf f}$, and then find the Newton direction $\delta{\bf x}_0$,
+$\delta{\bf\lambda}$ and $\delta{\bf\mu}$, which can be obtained by
+solving the linear system:
+\[
+{\bf J}_{\bf f} =-{\bf f}
+\]
+
+\[
+{\bf f}({\bf x},{\bf\lambda},{\bf\mu})=\left[\begin{array}{l}
+{\bf A}^T{\bf\lambda}+{\bf\mu}-{\bf c}\\{\bf Ax}-{\bf b}\\
+{\bf XM1}-{\bf 1}/t\end{array}\right],
+\;\;\;\;\;\;\;
+{\bf J}_{\bf f}=\left[\begin{array}{ccc}
+{\bf 0} & {\bf A}^T & {\bf I}\\{\bf A} & {\bf 0} & {\bf 0}\\
+{\bf M} & {\bf 0} & {\bf X}\end{array}\right]
+\]
+
+an initial guess ${\bf x}_0,\;{\bf\lambda}_0,\;
+{\bf\mu}_0$ 
+
+\end{document}

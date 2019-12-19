@@ -1,0 +1,884 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Series and Parallel Resonance</TITLE>
+<META NAME="description" CONTENT="Series and Parallel Resonance">
+<META NAME="keywords" CONTENT="ccc">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="ccc.css">
+
+<LINK REL="next" HREF="node10.html">
+<LINK REL="previous" HREF="node8.html">
+<LINK REL="up" HREF="node1.html">
+<LINK REL="next" HREF="node10.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html126"
+  HREF="node10.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html124"
+  HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html118"
+  HREF="node8.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html127"
+  HREF="node10.html">Quality Factor, Peak Frequency</A>
+<B> Up:</B> <A NAME="tex2html125"
+  HREF="node1.html">Chapter 3: AC Circuit</A>
+<B> Previous:</B> <A NAME="tex2html119"
+  HREF="node8.html">Responses to Impulse Train</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00018000000000000000">
+Series and Parallel Resonance</A>
+</H2>
+
+<P>
+<B>Series Resonance</B> 
+
+<P>
+Consider an RCL series circuit consists of a resistor <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.png"
+ ALT="$R$">, an inductor <IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img77.png"
+ ALT="$L$">, 
+and a capacitor <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img76.png"
+ ALT="$C$"> connected in series to a voltage source. The overall 
+impedance of the three elements is
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Z=R+j\omega L+\frac{1}{j\omega C}=R+j\left(\omega L-\frac{1}{\omega C}\right)
+=|Z|e^{j\angle Z}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="435" HEIGHT="49" BORDER="0"
+ SRC="img529.png"
+ ALT="\begin{displaymath}
+Z=R+j\omega L+\frac{1}{j\omega C}=R+j\left(\omega L-\frac{1}{\omega C}\right)
+=\vert Z\vert e^{j\angle Z}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+|Z|=\sqrt{R^2+\left(\omega L-\frac{1}{\omega C}\right)^2},\;\;\;\;
+\angle Z=tan^{-1} \left(\frac{\omega L-1/\omega C}{R}\right)
+=\left\{ \begin{array}{rl} -90^\circ & \omega=0 \\
+90^\circ & \omega \rightarrow \infty \end{array} \right.
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="634" HEIGHT="59" BORDER="0"
+ SRC="img530.png"
+ ALT="\begin{displaymath}
+\vert Z\vert=\sqrt{R^2+\left(\omega L-\frac{1}{\omega C}\rig...
+... \\
+90^\circ &amp; \omega \rightarrow \infty \end{array} \right.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../figures/impedanceRCL1.gif"
+ ALT="impedanceRCL1.gif">
+
+<P>
+In particular the <B>resonant frequency</B> is defined as
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\omega_0\stackrel{\triangle}{=}\frac{1}{\sqrt{LC}}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="90" HEIGHT="49" BORDER="0"
+ SRC="img531.png"
+ ALT="\begin{displaymath}\omega_0\stackrel{\triangle}{=}\frac{1}{\sqrt{LC}} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+When <!-- MATH
+ $\omega=\omega_0$
+ -->
+<IMG
+ WIDTH="61" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img532.png"
+ ALT="$\omega=\omega_0$">, the impedances of the capacitor and the inductor 
+have the same magnitude but opposite phase:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Z_L=j\omega_0L=j\sqrt{\frac{L}{C}},\;\;\;\;\;\;
+Z_C=\frac{1}{j\omega_0C}=-j\sqrt{\frac{L}{C}}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="375" HEIGHT="56" BORDER="0"
+ SRC="img533.png"
+ ALT="\begin{displaymath}Z_L=j\omega_0L=j\sqrt{\frac{L}{C}},\;\;\;\;\;\;
+Z_C=\frac{1}{j\omega_0C}=-j\sqrt{\frac{L}{C}} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+and they add up to zero <IMG
+ WIDTH="109" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img534.png"
+ ALT="$ Z_L+Z_C=0$">. Now the total impedance is minimized:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Z=Z_R+Z_C+Z_L=Z_R=R
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="244" HEIGHT="31" BORDER="0"
+ SRC="img535.png"
+ ALT="\begin{displaymath}Z=Z_R+Z_C+Z_L=Z_R=R \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+and the current <!-- MATH
+ $\dot{I}=\dot{V}/Z=\dot{V}/R$
+ -->
+<IMG
+ WIDTH="141" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img536.png"
+ ALT="$\dot{I}=\dot{V}/Z=\dot{V}/R$"> is maximized. The current <IMG
+ WIDTH="14" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img537.png"
+ ALT="$\dot{I}
+$"> and voltage <IMG
+ WIDTH="20" HEIGHT="22" ALIGN="BOTTOM" BORDER="0"
+ SRC="img538.png"
+ ALT="$\dot{V}$"> are in phase. 
+
+<P>
+The <B>quality factor</B> of this RCL 2nd order system is defined as the ratio 
+of the magnitude of the inductor/capacitor impedance at the resonant frequency 
+<!-- MATH
+ $\omega=\omega_0=1/\sqrt{LC}$
+ -->
+<IMG
+ WIDTH="149" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img539.png"
+ ALT="$\omega=\omega_0=1/\sqrt{LC}$"> and the resistance:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Q\stackrel{\triangle}{=}\frac{|Z_L|}{R}=\frac{|Z_C|}{R}
+=\frac{\omega_0L}{R}=\frac{1}{\omega_0CR}
+=\frac{1}{R}\sqrt{\frac{L}{C}}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="357" HEIGHT="55" BORDER="0"
+ SRC="img540.png"
+ ALT="\begin{displaymath}
+Q\stackrel{\triangle}{=}\frac{\vert Z_L\vert}{R}=\frac{\vert...
+...ga_0L}{R}=\frac{1}{\omega_0CR}
+=\frac{1}{R}\sqrt{\frac{L}{C}}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+When <!-- MATH
+ $\omega=\omega_0$
+ -->
+<IMG
+ WIDTH="61" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img532.png"
+ ALT="$\omega=\omega_0$">, the voltages across each of the three components are:
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\dot{V}_R=\dot{I} Z_R =\dot{I} R=\dot{V},\;\;\;\;\mbox{i.e.}\;\;\;\;
+  \dot{I}=\frac{\dot{V}}{R}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="297" HEIGHT="50" BORDER="0"
+ SRC="img541.png"
+ ALT="\begin{displaymath}\dot{V}_R=\dot{I} Z_R =\dot{I} R=\dot{V},\;\;\;\;\mbox{i.e.}\;\;\;\;
+\dot{I}=\frac{\dot{V}}{R} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\dot{V}_L=\dot{I} Z_L=\frac{\dot{V}}{R}j\omega_0 L=jQ\dot{V}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="226" HEIGHT="50" BORDER="0"
+ SRC="img542.png"
+ ALT="\begin{displaymath}\dot{V}_L=\dot{I} Z_L=\frac{\dot{V}}{R}j\omega_0 L=jQ\dot{V} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\dot{V}_C=\dot{I} Z_C=\frac{\dot{V}}{R}\frac{1}{j\omega_0 C}
+  =-jQ\dot{V}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="249" HEIGHT="54" BORDER="0"
+ SRC="img543.png"
+ ALT="\begin{displaymath}\dot{V}_C=\dot{I} Z_C=\frac{\dot{V}}{R}\frac{1}{j\omega_0 C}
+=-jQ\dot{V} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The magnitudes of <IMG
+ WIDTH="26" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img204.png"
+ ALT="$\dot{V}_L$"> and <IMG
+ WIDTH="27" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img203.png"
+ ALT="$\dot{V}_C$"> are <IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img544.png"
+ ALT="$Q$"> times larger than that 
+of <!-- MATH
+ $\dot{V}_R=\dot{V}$
+ -->
+<IMG
+ WIDTH="67" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img545.png"
+ ALT="$\dot{V}_R=\dot{V}$">, which is equal to the source voltage <IMG
+ WIDTH="20" HEIGHT="22" ALIGN="BOTTOM" BORDER="0"
+ SRC="img538.png"
+ ALT="$\dot{V}$">. But as 
+<IMG
+ WIDTH="26" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img204.png"
+ ALT="$\dot{V}_L$"> and <IMG
+ WIDTH="27" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img203.png"
+ ALT="$\dot{V}_C$"> are in opposite polarity (<IMG
+ WIDTH="40" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img349.png"
+ ALT="$180^\circ$"> out of phase), 
+they cancel each other.
+
+<P>
+The RCL series circuit is a band-pass filter with the passing band centered
+around the resonant frequency <!-- MATH
+ $\omega_0=1/\sqrt{CL}$
+ -->
+<IMG
+ WIDTH="111" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img546.png"
+ ALT="$\omega_0=1/\sqrt{CL}$">. The bandwidth is determined
+by the quality factor <IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img544.png"
+ ALT="$Q$">. The larger <IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img544.png"
+ ALT="$Q$">, the narrower the bandwidth. 
+
+<P>
+The impedance <IMG
+ WIDTH="162" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img547.png"
+ ALT="$Z=Z_R+R_L+Z_C$"> as a function of <IMG
+ WIDTH="17" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img40.png"
+ ALT="$\omega$"> is shown below:
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../figures/omega0c.gif"
+ ALT="omega0c.gif">
+
+<P>
+and the admittances <IMG
+ WIDTH="77" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img113.png"
+ ALT="$Y=1/Z$"> for different <IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img544.png"
+ ALT="$Q$"> (<IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.png"
+ ALT="$R$">) and <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img76.png"
+ ALT="$C$"> are shown below:
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../figures/omega0b.gif"
+ ALT="omega0b.gif">
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../figures/omega0a.gif"
+ ALT="omega0a.gif">
+
+<P>
+The bandpass effect can be intuitively explained. When <IMG
+ WIDTH="17" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img40.png"
+ ALT="$\omega$"> is high,
+the inductor's impedance <IMG
+ WIDTH="30" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img548.png"
+ ALT="$\omega L$"> is high, and when <IMG
+ WIDTH="17" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img40.png"
+ ALT="$\omega$"> is low,
+the capacitor's impedance <IMG
+ WIDTH="50" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img549.png"
+ ALT="$1/\omega C$"> is high. When <!-- MATH
+ $\omega=\omega_0$
+ -->
+<IMG
+ WIDTH="61" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img532.png"
+ ALT="$\omega=\omega_0$">
+the overall impedance is the smallest. If the input is a voltage source 
+<IMG
+ WIDTH="36" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img207.png"
+ ALT="$v(t)$">, the current through the circuit will reach a maximum value when 
+<!-- MATH
+ $\omega=\omega_0$
+ -->
+<IMG
+ WIDTH="61" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img532.png"
+ ALT="$\omega=\omega_0$">.
+
+<P>
+<B>Example: </B> In a series RLC circuit, <IMG
+ WIDTH="67" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img550.png"
+ ALT="$R=5\Omega$">, <IMG
+ WIDTH="90" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img551.png"
+ ALT="$L=4\;mH$"> and
+<IMG
+ WIDTH="100" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img552.png"
+ ALT="$C=0.1\;\mu F$">. The resonant frequency <IMG
+ WIDTH="24" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img553.png"
+ ALT="$\omega_0$"> can be found to be
+<!-- MATH
+ $\omega_0=1/\sqrt{LC}=1/\sqrt{4\times 10^{-3}\times 10^{-7}}=5\times 10^4$
+ -->
+<IMG
+ WIDTH="384" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img554.png"
+ ALT="$\omega_0=1/\sqrt{LC}=1/\sqrt{4\times 10^{-3}\times 10^{-7}}=5\times 10^4$">.
+The quality factor is
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Q=\frac{\omega_0L}{R}=\frac{(5\times 10^4)\times (4\times 10^{-3})}{5}
+	=40
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="328" HEIGHT="48" BORDER="0"
+ SRC="img555.png"
+ ALT="\begin{displaymath}Q=\frac{\omega_0L}{R}=\frac{(5\times 10^4)\times (4\times 10^{-3})}{5}
+=40 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+or
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Q=\frac{1}{\omega_0CR}=\frac{1}{(5\times 10^4)\times 10^{-7}\times 5}
+	=40
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="330" HEIGHT="50" BORDER="0"
+ SRC="img556.png"
+ ALT="\begin{displaymath}Q=\frac{1}{\omega_0CR}=\frac{1}{(5\times 10^4)\times 10^{-7}\times 5}
+=40 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+If the input voltage is <IMG
+ WIDTH="100" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img557.png"
+ ALT="$V_{rms}=10V$"> at the resonant frequency, the current
+is <!-- MATH
+ $I=V/R=10/5=2 A$
+ -->
+<IMG
+ WIDTH="187" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img558.png"
+ ALT="$I=V/R=10/5=2 A$">, and the voltages across each of the elements are:
+
+<UL>
+<LI><!-- MATH
+ $\dot{V}_R=R\dot{I}=V=10V$
+ -->
+<IMG
+ WIDTH="175" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img559.png"
+ ALT="$\dot{V}_R=R\dot{I}=V=10V$">
+</LI>
+<LI><!-- MATH
+ $\dot{V}_L=j\omega L \dot{I}=j5\times 10^4\times 4\times 10^{-3} \times 2=j400V$
+ -->
+<IMG
+ WIDTH="390" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img560.png"
+ ALT="$\dot{V}_L=j\omega L \dot{I}=j5\times 10^4\times 4\times 10^{-3} \times 2=j400V$">
+</LI>
+<LI><!-- MATH
+ $\dot{V}_C=\dot{I}/j\omega_0C=-j2/(5\times 10^4\times 0.1\times 10^{-6})=-j400V$
+ -->
+<IMG
+ WIDTH="454" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img561.png"
+ ALT="$\dot{V}_C=\dot{I}/j\omega_0C=-j2/(5\times 10^4\times 0.1\times 10^{-6})=-j400V$">
+</LI>
+</UL>
+Or, more conveniently, the amplitudes of <IMG
+ WIDTH="26" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img204.png"
+ ALT="$\dot{V}_L$"> and <IMG
+ WIDTH="27" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img203.png"
+ ALT="$\dot{V}_C$"> can be 
+found by <!-- MATH
+ $|V_L|=|V_C|=QV=40\times 10V=400V$
+ -->
+<IMG
+ WIDTH="318" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img562.png"
+ ALT="$\vert V_L\vert=\vert V_C\vert=QV=40\times 10V=400V$">. Note that although input voltage is <IMG
+ WIDTH="38" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img563.png"
+ ALT="$10V$">,
+the voltage across L and C (<IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img544.png"
+ ALT="$Q$"> times the input) could be very high (but
+they are in opposite phase and therefore cancel each other).
+
+<P>
+<B>Parallel Resonance:</B> A GCL parallel circuit consists of a resistor 
+<IMG
+ WIDTH="78" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img564.png"
+ ALT="$R=1/G$">, an inductor <IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img77.png"
+ ALT="$L$"> and a capacitor <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img76.png"
+ ALT="$C$"> connected in parallel to an
+input current.
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../figures/impedanceRCL2.gif"
+ ALT="impedanceRCL2.gif">
+
+<P>
+In this case, it is much easier to consider the conductance of the 
+admittance <IMG
+ WIDTH="77" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img113.png"
+ ALT="$Y=1/Z$"> of each of the element. The overall admittance of
+the three elements in parallel is
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Y=G+j\omega C+\frac{1}{j\omega L}=G+j\left(\omega C-\frac{1}{\omega L}\right)
+	=|Y|e^{j\angle Y}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="439" HEIGHT="49" BORDER="0"
+ SRC="img565.png"
+ ALT="\begin{displaymath}Y=G+j\omega C+\frac{1}{j\omega L}=G+j\left(\omega C-\frac{1}{\omega L}\right)
+=\vert Y\vert e^{j\angle Y} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+|Y|=\sqrt{G^2+\left(\omega C-\frac{1}{\omega L}\right)^2},\;\;\;\;
+   \angle Y=tan^{-1} \left(\frac{\omega C-1/\omega L}{G}\right)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="470" HEIGHT="59" BORDER="0"
+ SRC="img566.png"
+ ALT="\begin{displaymath}\vert Y\vert=\sqrt{G^2+\left(\omega C-\frac{1}{\omega L}\righ...
+...
+\angle Y=tan^{-1} \left(\frac{\omega C-1/\omega L}{G}\right) \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+In particular when <IMG
+ WIDTH="17" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img40.png"
+ ALT="$\omega$"> is at the <B>resonant frequency</B>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\omega=\omega_0\stackrel{\triangle}{=}\frac{1}{\sqrt{LC}}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="128" HEIGHT="49" BORDER="0"
+ SRC="img567.png"
+ ALT="\begin{displaymath}\omega=\omega_0\stackrel{\triangle}{=}\frac{1}{\sqrt{LC}} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+we have
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Y_R+Y_C+Y_L=G+j\omega C+\frac{1}{j\omega L}
+=G+j\left(\omega C-\frac{1}{\omega L}\right)
+=G+j\left(\sqrt{\frac{C}{L}}-\sqrt{\frac{C}{L}}\right)=G
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="633" HEIGHT="64" BORDER="0"
+ SRC="img568.png"
+ ALT="\begin{displaymath}Y_R+Y_C+Y_L=G+j\omega C+\frac{1}{j\omega L}
+=G+j\left(\omega ...
+...ight)
+=G+j\left(\sqrt{\frac{C}{L}}-\sqrt{\frac{C}{L}}\right)=G \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+the effects of <IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img77.png"
+ ALT="$L$"> and <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img76.png"
+ ALT="$C$"> cancel each other, and the complex admittance
+<IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img116.png"
+ ALT="$Y$"> becomes real and its magnitude reaches the minimum
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+|Y|=\sqrt{G^2+\left(\omega_0 C-\frac{1}{\omega_0 L}\right)^2}=G,
+\;\;\;\;\;\;\;\;\;\;	
+\angle{Y}=\tan^{-1}\left(\frac{0}{G}\right)=0
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="511" HEIGHT="55" BORDER="0"
+ SRC="img569.png"
+ ALT="\begin{displaymath}\vert Y\vert=\sqrt{G^2+\left(\omega_0 C-\frac{1}{\omega_0 L}\...
+...;\;\;\;\;\;\;\;
+\angle{Y}=\tan^{-1}\left(\frac{0}{G}\right)=0 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+and the current <IMG
+ WIDTH="14" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img537.png"
+ ALT="$\dot{I}
+$"> reaches a minimum value <!-- MATH
+ $\dot{I}=\dot{V}G$
+ -->
+<IMG
+ WIDTH="69" HEIGHT="22" ALIGN="BOTTOM" BORDER="0"
+ SRC="img570.png"
+ ALT="$\dot{I}=\dot{V}G$">.
+In particular, if the resistor does not exist, i.e., <IMG
+ WIDTH="63" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img571.png"
+ ALT="$R=\infty$"> and
+<IMG
+ WIDTH="54" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img572.png"
+ ALT="$G=0$">, then the admittance <IMG
+ WIDTH="54" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img573.png"
+ ALT="$Y=0$"> and <IMG
+ WIDTH="63" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img574.png"
+ ALT="$Z=\infty$">.
+
+<P>
+The <B>Quality Factor</B> <IMG
+ WIDTH="27" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img575.png"
+ ALT="$Q_p$"> of the parallel resonance circuit is defined
+as the ratio of the magnitude of the inductor/capacitor susceptance and 
+the conductance:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Q_p\stackrel{\triangle}{=}\frac{\omega_0C}{G}=\frac{1/\omega_0L}{G}
+=\frac{1}{\omega_0LG}=\frac{1}{G}\sqrt{\frac{C}{L}}
+=R\sqrt{\frac{C}{L}}=\frac{1}{Q_s}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="441" HEIGHT="56" BORDER="0"
+ SRC="img576.png"
+ ALT="\begin{displaymath}Q_p\stackrel{\triangle}{=}\frac{\omega_0C}{G}=\frac{1/\omega_...
+...rac{1}{G}\sqrt{\frac{C}{L}}
+=R\sqrt{\frac{C}{L}}=\frac{1}{Q_s} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Note that <IMG
+ WIDTH="27" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img575.png"
+ ALT="$Q_p$"> of the parallel RCL circuit is the reciprocal of <IMG
+ WIDTH="26" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img577.png"
+ ALT="$Q_s$"> of
+the series RCL circuit. The currents through each of the three components 
+are:
+
+<UL>
+<LI>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\dot{I}_R=\dot{V} G=\dot{I}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="110" HEIGHT="31" BORDER="0"
+ SRC="img578.png"
+ ALT="\begin{displaymath}\dot{I}_R=\dot{V} G=\dot{I} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\dot{I}_C=\dot{V} Y_C=\dot{V}j\omega_0 C|_{\omega_0=1/\sqrt{LC}}
+	=j \frac{\dot{I}}{G}\sqrt{\frac{C}{L}}=jQ\dot{I}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="387" HEIGHT="55" BORDER="0"
+ SRC="img579.png"
+ ALT="\begin{displaymath}\dot{I}_C=\dot{V} Y_C=\dot{V}j\omega_0 C\vert _{\omega_0=1/\sqrt{LC}}
+=j \frac{\dot{I}}{G}\sqrt{\frac{C}{L}}=jQ\dot{I} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\dot{I}_L=\dot{V} Y_L=\dot{V}\frac{1}{j\omega_0 L}|_{\omega_0
+  =1/\sqrt{LC}}=-j \frac{\dot{I}}{G}\sqrt{\frac{C}{L}}=-jQ\dot{I}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="416" HEIGHT="56" BORDER="0"
+ SRC="img580.png"
+ ALT="\begin{displaymath}\dot{I}_L=\dot{V} Y_L=\dot{V}\frac{1}{j\omega_0 L}\vert _{\om...
+...1/\sqrt{LC}}=-j \frac{\dot{I}}{G}\sqrt{\frac{C}{L}}=-jQ\dot{I} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+</UL>
+The magnitude of the current <IMG
+ WIDTH="23" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img581.png"
+ ALT="$I_L$"> through <IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img77.png"
+ ALT="$L$"> and <IMG
+ WIDTH="24" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img582.png"
+ ALT="$I_C$"> through <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img76.png"
+ ALT="$C$"> are
+<IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img544.png"
+ ALT="$Q$"> times larger than the current <IMG
+ WIDTH="27" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img202.png"
+ ALT="$\dot{V}_R$"> through <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.png"
+ ALT="$R$"> which is the 
+same as the current source <IMG
+ WIDTH="14" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img537.png"
+ ALT="$\dot{I}
+$">). But as <IMG
+ WIDTH="23" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img581.png"
+ ALT="$I_L$"> and <IMG
+ WIDTH="24" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img582.png"
+ ALT="$I_C$"> are in
+opposite direction, they form a loop current through <IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img77.png"
+ ALT="$L$"> and <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img76.png"
+ ALT="$C$"> with
+no effect to the rest of the circuit.
+
+<P>
+The parallel RCL circuit behaves like a bandstop filter which can be 
+intuitively understood. When <IMG
+ WIDTH="17" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img40.png"
+ ALT="$\omega$"> is high, the capacitor's impedance 
+<IMG
+ WIDTH="50" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img549.png"
+ ALT="$1/\omega C$"> is low, and when <IMG
+ WIDTH="17" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img40.png"
+ ALT="$\omega$"> is low, the inductor's impedance 
+<IMG
+ WIDTH="30" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img548.png"
+ ALT="$\omega L$"> is low. When <!-- MATH
+ $\omega=\omega_0$
+ -->
+<IMG
+ WIDTH="61" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img532.png"
+ ALT="$\omega=\omega_0$"> the overall impedance is the
+largest. However, if the input is a current source, the voltage across 
+the elements <!-- MATH
+ $\dot{V}=\dot{I}Z=\dot{I}/Y$
+ -->
+<IMG
+ WIDTH="129" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img583.png"
+ ALT="$\dot{V}=\dot{I}Z=\dot{I}/Y$"> will reach a maximum value
+when <!-- MATH
+ $\omega=\omega_0$
+ -->
+<IMG
+ WIDTH="61" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img532.png"
+ ALT="$\omega=\omega_0$">.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html126"
+  HREF="node10.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html124"
+  HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html118"
+  HREF="node8.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html127"
+  HREF="node10.html">Quality Factor, Peak Frequency</A>
+<B> Up:</B> <A NAME="tex2html125"
+  HREF="node1.html">Chapter 3: AC Circuit</A>
+<B> Previous:</B> <A NAME="tex2html119"
+  HREF="node8.html">Responses to Impulse Train</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Ruye Wang
+2014-10-05
+</ADDRESS>
+</BODY>
+</HTML>

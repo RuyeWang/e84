@@ -1,0 +1,1048 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Analysis of Op-Amp Circuits</TITLE>
+<META NAME="description" CONTENT="Analysis of Op-Amp Circuits">
+<META NAME="keywords" CONTENT="opamp">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="opamp.css">
+
+<LINK REL="next" HREF="node4.html">
+<LINK REL="previous" HREF="node2.html">
+<LINK REL="next" HREF="node4.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node4.html">Single-Supply Op Amps and</A>
+<B> Up:</B> <A
+ HREF="node1.html">Chapter 5: Operational Amplifiers</A>
+<B> Previous:</B> <A
+ HREF="node2.html">Operational Amplifier</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION00012000000000000000">
+Analysis of Op-Amp Circuits</A>
+</H2>
+
+<P>
+The full analysis of the op-amp circuits as shown in the three examples
+above may not be necessary if only the voltage gain is of interest. This 
+is based on the assumptions that <!-- MATH
+ $V_{out}=A(V^+-V^-)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img107.svg"
+ ALT="$V_{out}=A(V^+-V^-)$"></SPAN> is in the range 
+between the positive and negative voltage supplies (e.g., <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.31ex; " SRC="img108.svg"
+ ALT="$\pm 15\,V$"></SPAN>, 
+the <EM>rails</EM>) and <!-- MATH
+ $A\rightarrow\infty$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img109.svg"
+ ALT="$A\rightarrow\infty$"></SPAN>, we can assume 
+<!-- MATH
+ $V^+-V^-=V_{out}/A\rightarrow 0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img110.svg"
+ ALT="$V^+-V^-=V_{out}/A\rightarrow 0$"></SPAN>, i.e., <!-- MATH
+ $V^-\approx V^+$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.12ex; " SRC="img111.svg"
+ ALT="$V^-\approx V^+$"></SPAN>. If one of the 
+two inputs is grounded, the other one is also approximately grounded,
+called <EM>virtually grounded</EM>. If none of the two inputs is grounded, 
+their voltages can still be assumed to be virtually the same. Based on 
+this assumption, the analysis of all op-amp circuits is significantly
+simplified. However, note that if the input and output resistances of 
+the op-amp circuits are of interest as well, the full analysis shown 
+previously is necessary.
+
+<P>
+Now consider the following typical op-amp circuits:
+
+<P>
+
+<UL>
+<LI><B>Voltage follower (buffer)</B>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/voltagefollowermodel1.gif"
+ ALT="voltagefollowermodel1.gif">
+
+<P>
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_{out}=V^-\approx V^+=V_{in}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.46ex; " SRC="img112.svg"
+ ALT="$\displaystyle V_{out}=V^-\approx V^+=V_{in}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">32</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+As the output <!-- MATH
+ $V_{out}=V_{in}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img113.svg"
+ ALT="$V_{out}=V_{in}$"></SPAN> is the same as the input, why can't we replace this
+op-amp circuit by a piece of wire?
+
+<P>
+</LI>
+<LI><B>Inverter</B>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/opam2.gif"
+ ALT="opam2.gif">
+
+<P>
+As <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img4.svg"
+ ALT="$r_{in}$"></SPAN> is very large, the current into the op-amp is negligible, and
+<!-- MATH
+ $V^-\approx V^+=0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.12ex; " SRC="img114.svg"
+ ALT="$V^-\approx V^+=0$"></SPAN>. Applying KCL to the node of <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.12ex; " SRC="img115.svg"
+ ALT="$V^-$"></SPAN>, we have
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\frac{V_{in}}{R_1}+\frac{V_{out}}{R_f}=0,\;\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;\;
+  V_{out}=-\frac{R_f}{R_1}V_{in}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.37ex; " SRC="img116.svg"
+ ALT="$\displaystyle \frac{V_{in}}{R_1}+\frac{V_{out}}{R_f}=0,\;\;\;\;\;\;$">i.e.<IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img117.svg"
+ ALT="$\displaystyle \;\;\;\;\;\;
+V_{out}=-\frac{R_f}{R_1}V_{in}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">33</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+In general, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img118.svg"
+ ALT="$R_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img119.svg"
+ ALT="$R_2$"></SPAN> of the inverter can be replaced by two networks (with
+impedances <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img120.svg"
+ ALT="$Z_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img121.svg"
+ ALT="$Z_2$"></SPAN> respectively) containing resistors and capacitors and
+the analysis of the circuit can be carried out easily in frequency domain:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+H(j\omega)=\frac{V_{out}(j\omega)}{V_{in}(j\omega)}=-\frac{Z_2(j\omega)}{Z_1(j\omega)}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img122.svg"
+ ALT="$\displaystyle H(j\omega)=\frac{V_{out}(j\omega)}{V_{in}(j\omega)}=-\frac{Z_2(j\omega)}{Z_1(j\omega)}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">34</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+This is a convenient way to design filters of various frequency characteristics.
+
+<P>
+</LI>
+<LI><B>Non-Inverting Amplifier</B>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/NonInverterOpAmp.gif"
+ ALT="NonInverterOpAmp.gif">
+
+<P>
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_{in}=V^+\approx V^-=V_{out}\frac{R_1}{R_1+R_f},\;\;\;\;\mbox{i.e.}
+    \;\;\;\;\;\;
+    V_{out}=\left(\frac{R_1+R_f}{R_1}\right)V_{in}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.37ex; " SRC="img123.svg"
+ ALT="$\displaystyle V_{in}=V^+\approx V^-=V_{out}\frac{R_1}{R_1+R_f},\;\;\;\;$">i.e.<IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img124.svg"
+ ALT="$\displaystyle \;\;\;\;\;\;
+V_{out}=\left(\frac{R_1+R_f}{R_1}\right)V_{in}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">35</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+<LI><B>Summer-inverter</B>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/opam3.gif"
+ ALT="opam3.gif">
+
+<P>
+Apply KCL to <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.12ex; " SRC="img115.svg"
+ ALT="$V^-$"></SPAN>:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\sum_{k=1}^n \frac{V_k}{R_k}+\frac{V_{out}}{R_f}=0,\;\;\;\;\;\;\;
+    \mbox{i.e.}\;\;\;\;\;\;\;V_{out}=-R_f \sum_{k=1}^n \frac{V_k}{R_k}
+    =- \sum_{k=1}^n \frac{R_f}{R_k} \;V_k
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 7.20ex; vertical-align: -3.14ex; " SRC="img125.svg"
+ ALT="$\displaystyle \sum_{k=1}^n \frac{V_k}{R_k}+\frac{V_{out}}{R_f}=0,\;\;\;\;\;\;\;$">&nbsp; &nbsp;i.e.<IMG STYLE="height: 7.20ex; vertical-align: -3.14ex; " SRC="img126.svg"
+ ALT="$\displaystyle \;\;\;\;\;\;\;V_{out}=-R_f \sum_{k=1}^n \frac{V_k}{R_k}
+=- \sum_{k=1}^n \frac{R_f}{R_k} \;V_k$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">36</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+<LI><B>Algebraic summer (inputs of different signs)</B>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/opamp5a.gif"
+ ALT="opamp5a.gif">
+
+<P>
+It can be shown that (see <A ID="tex2html8"
+  HREF="../opamp_sub/opamp_sub.html">here</A>)
+
+the output is some algebraic sum of the inputs with both positive and
+  negative coefficients:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_{out}=-\frac{R_f}{R_1}V_1-\frac{R_f}{R_2}V_2
+    +\left(\frac{R_f}{R_1}+\frac{R_f}{R_2}+1\right)
+    \left(\frac{R_4}{R_3+R_4} V_3+\frac{R_3}{R_3+R_4} v_4\right)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img127.svg"
+ ALT="$\displaystyle V_{out}=-\frac{R_f}{R_1}V_1-\frac{R_f}{R_2}V_2
++\left(\frac{R_f}{...
+...R_f}{R_2}+1\right)
+\left(\frac{R_4}{R_3+R_4} V_3+\frac{R_3}{R_3+R_4} v_4\right)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">37</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+<LI><B>Differential amplifier</B>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/opamp10.gif"
+ ALT="opamp10.gif">
+
+<P>
+We note that the differential amplifier is similar to an inverting
+  amplifier but with an additional input to the non-inverting side.
+  We first define <!-- MATH
+ $V=V^-\approx V^+$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.12ex; " SRC="img128.svg"
+ ALT="$V=V^-\approx V^+$"></SPAN>, and then apply KCL to both <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.12ex; " SRC="img115.svg"
+ ALT="$V^-$"></SPAN> 
+  and <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.12ex; " SRC="img129.svg"
+ ALT="$V^+$"></SPAN> to get:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\frac{V_1-V}{R_1}+\frac{V_{out}-V}{R_2}=0,\;\;\;\;\mbox{i.e.}\;\;\;\;
+    V_{out}=-\frac{R_2}{R_1}V_1+\left(1+\frac{R_2}{R_1}\right) V
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img130.svg"
+ ALT="$\displaystyle \frac{V_1-V}{R_1}+\frac{V_{out}-V}{R_2}=0,\;\;\;\;$">i.e.<IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img131.svg"
+ ALT="$\displaystyle \;\;\;\;
+V_{out}=-\frac{R_2}{R_1}V_1+\left(1+\frac{R_2}{R_1}\right) V$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">38</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+and
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V\approx V^+=\frac{R_4}{R_3+R_4}V_2
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img132.svg"
+ ALT="$\displaystyle V\approx V^+=\frac{R_4}{R_3+R_4}V_2$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">39</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Substituting the second to the first we get:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_{out}=-\frac{R_2}{R_1}V_1+\left(\frac{R_1+R_2}{R_1}\right)\frac{R_4}{R_3+R_4}V_2
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img133.svg"
+ ALT="$\displaystyle V_{out}=-\frac{R_2}{R_1}V_1+\left(\frac{R_1+R_2}{R_1}\right)\frac{R_4}{R_3+R_4}V_2$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">40</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+If one of the two inputs, connected to a constant reference voltage 
+  <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.78ex; " SRC="img134.svg"
+ ALT="$V_{ref}$"></SPAN> treated as a reference voltage, then the differential amplifier
+  can also be used as a level shifter. 
+  
+<UL>
+<LI>if <!-- MATH
+ $V_2=V_{ref}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.78ex; " SRC="img135.svg"
+ ALT="$V_2=V_{ref}$"></SPAN>, the output is a inversely scaled version of <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img136.svg"
+ ALT="$V_1$"></SPAN> 
+    positively shifted by a constant value <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.78ex; " SRC="img137.svg"
+ ALT="$V_{shift}$"></SPAN>:
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_{out}=-\frac{R_2}{R_1}V_1+V_{shift},
+      \;\;\;\;\;\;\mbox{where}\;\;\;\;\;\;\;
+      V_{shift}=\left(\frac{R_1+R_2}{R_1}\right)\frac{R_4}{R_3+R_4}V_{ref}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img138.svg"
+ ALT="$\displaystyle V_{out}=-\frac{R_2}{R_1}V_1+V_{shift},
+\;\;\;\;\;\;$">where<IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img139.svg"
+ ALT="$\displaystyle \;\;\;\;\;\;\;
+V_{shift}=\left(\frac{R_1+R_2}{R_1}\right)\frac{R_4}{R_3+R_4}V_{ref}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">41</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>if <!-- MATH
+ $V_1=V_{ref}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.78ex; " SRC="img140.svg"
+ ALT="$V_1=V_{ref}$"></SPAN>, the output is a scaled version of <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img141.svg"
+ ALT="$V_2$"></SPAN> 
+    negatively shifted by <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.78ex; " SRC="img137.svg"
+ ALT="$V_{shift}$"></SPAN>:
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_{out}=\left(\frac{R_1+R_2}{R_1}\right)\frac{R_4}{R_3+R_4}V_2
+      -V_{shift}
+      \;\;\;\;\;\;\mbox{where}\;\;\;\;\;\;\;
+      V_{shift}=\frac{R_2}{R_1}V_{ref}
+    
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img142.svg"
+ ALT="$\displaystyle V_{out}=\left(\frac{R_1+R_2}{R_1}\right)\frac{R_4}{R_3+R_4}V_2
+-V_{shift}
+\;\;\;\;\;\;$">where<IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img143.svg"
+ ALT="$\displaystyle \;\;\;\;\;\;\;
+V_{shift}=\frac{R_2}{R_1}V_{ref}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">42</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+</UL>
+
+<P>
+We further consider some special cases:
+  
+<UL>
+<LI>If <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img144.svg"
+ ALT="$R_1=R_3$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img145.svg"
+ ALT="$R_2=R_4$"></SPAN>, then we get
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_{out}=-\frac{R_2}{R_1}V_1+\left(\frac{R_1+R_2}{R_1}\right)\frac{R_4}{R_3+R_4}V_2
+      =\frac{R_2}{R_1}\;(V_2-V_1)	
+    
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img146.svg"
+ ALT="$\displaystyle V_{out}=-\frac{R_2}{R_1}V_1+\left(\frac{R_1+R_2}{R_1}\right)\frac{R_4}{R_3+R_4}V_2
+=\frac{R_2}{R_1}\;(V_2-V_1)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">43</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>If <!-- MATH
+ $R_4=\infty$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img147.svg"
+ ALT="$R_4=\infty$"></SPAN> (open circuit, and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img148.svg"
+ ALT="$R_3$"></SPAN> can be any value), then <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img149.svg"
+ ALT="$V=V_2$"></SPAN>,
+    and the circuit is a combination of inverter and a non-inverter amplifiers:
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_{out}=-\frac{R_2}{R_1}V_1+\left(1+\frac{R_2}{R_1}\right)V_2
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img150.svg"
+ ALT="$\displaystyle V_{out}=-\frac{R_2}{R_1}V_1+\left(1+\frac{R_2}{R_1}\right)V_2$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">44</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>If <!-- MATH
+ $R_1=R_4=\infty$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img151.svg"
+ ALT="$R_1=R_4=\infty$"></SPAN>, then <!-- MATH
+ $V_{out}=V_2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img152.svg"
+ ALT="$V_{out}=V_2$"></SPAN>, the circuit becomes the 
+    follower:
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_{out}=-\frac{R_2}{R_1}V_1+\left(\frac{R_1+R_2}{R_1}\right)\frac{R_4}{R_3+R_4}V_2
+      =V_2
+    
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img153.svg"
+ ALT="$\displaystyle V_{out}=-\frac{R_2}{R_1}V_1+\left(\frac{R_1+R_2}{R_1}\right)\frac{R_4}{R_3+R_4}V_2
+=V_2$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">45</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>If <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img154.svg"
+ ALT="$R_4=0$"></SPAN> and <!-- MATH
+ $R_3=\infty$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img155.svg"
+ ALT="$R_3=\infty$"></SPAN>, then the circuit becomes the inverter:
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_{out}=-\frac{R_2}{R_1}V_1+\left(\frac{R_1+R_2}{R_1}\right)\frac{R_4}{R_3+R_4}V_2
+      =-\frac{R_2}{R_1} V_1
+    
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img156.svg"
+ ALT="$\displaystyle V_{out}=-\frac{R_2}{R_1}V_1+\left(\frac{R_1+R_2}{R_1}\right)\frac{R_4}{R_3+R_4}V_2
+=-\frac{R_2}{R_1} V_1$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">46</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>If <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img157.svg"
+ ALT="$R_3=0$"></SPAN>, <!-- MATH
+ $R_4=\infty$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img147.svg"
+ ALT="$R_4=\infty$"></SPAN>, and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img158.svg"
+ ALT="$V_1=0$"></SPAN>, then the circuit becomes the 
+    non-inverter:
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_{out}=-\frac{R_2}{R_1}V_1+\left(\frac{R_1+R_2}{R_1}\right)\frac{R_4}{R_3+R_4}V_2
+      =\left(1+\frac{R_2}{R_1}\right)V_2 
+    
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img159.svg"
+ ALT="$\displaystyle V_{out}=-\frac{R_2}{R_1}V_1+\left(\frac{R_1+R_2}{R_1}\right)\frac{R_4}{R_3+R_4}V_2
+=\left(1+\frac{R_2}{R_1}\right)V_2$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">47</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+</UL>
+
+<P>
+It is likely that both inputs are subjected to some common noise
+  <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img160.svg"
+ ALT="$n(t)$"></SPAN> (e.g., the interference of 60Hz power supply):
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V'_1=V_1+n, \;\;\;\;\;V'_2=V_2+n
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.69ex; " SRC="img161.svg"
+ ALT="$\displaystyle V'_1=V_1+n, \;\;\;\;\;V'_2=V_2+n$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">48</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+In this case the output is 
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_{out}=\frac{R_2}{R_1}\;(V'_2-V'_1)=\frac{R_2}{R_1}\;(V_2-V_1)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img162.svg"
+ ALT="$\displaystyle V_{out}=\frac{R_2}{R_1}\;(V'_2-V'_1)=\frac{R_2}{R_1}\;(V_2-V_1)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">49</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+not affected by the common noise at all, i.e., the differential amplifier 
+  can suppress <EM>common-mode signal</EM> (e.g., the noise signal <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img160.svg"
+ ALT="$n(t)$"></SPAN>)
+  while amplify the <EM>differential-mode signal</EM> (e.g., <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img136.svg"
+ ALT="$V_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img141.svg"
+ ALT="$V_2$"></SPAN>).
+
+<P>
+</LI>
+<LI><B>Instrumentation Amplifier</B>
+
+<P>
+The main drawback of the differential amplifier is that its input 
+  impedance (<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img163.svg"
+ ALT="$R_3+R_4$"></SPAN>) may not be high enough if the output impedance 
+  of the source is high. To overcome this problem, two non-inverting
+  amplifiers with high input resistance are used each for one of the
+  two inputs to the differential amplifier. The resulting circuit is 
+  called the instrumentation amplifier.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/InstrumentationOpAmp.gif"
+ ALT="InstrumentationOpAmp.gif">
+
+<P>
+Recall that the output resistance of a non-inverting amplifier is 
+  very low, its output voltage will not affected by the load circuit, 
+  here the differential amplifier whose its input resistance (<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img118.svg"
+ ALT="$R_1$"></SPAN> 
+  and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img148.svg"
+ ALT="$R_3$"></SPAN>) is not very high. Therefore the outputs of the two 
+  non-inverters in the first stage of the instrumentation amplifier 
+  are:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V'_1=V_1\left(1+\frac{R_f}{R_1}\right),\;\;\;\;\;\;\;\;\;
+    V'_2=V_2\left(1+\frac{R_f}{R_1}\right)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img164.svg"
+ ALT="$\displaystyle V'_1=V_1\left(1+\frac{R_f}{R_1}\right),\;\;\;\;\;\;\;\;\;
+V'_2=V_2\left(1+\frac{R_f}{R_1}\right)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">50</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The output voltage of the differential amplifier is:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_{out}=\frac{R_4}{R_3}(V'_2-V'_1)
+    =\frac{R_4}{R_3}\left(1+\frac{R_f}{R_1}\right)(V_2-V_1)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img165.svg"
+ ALT="$\displaystyle V_{out}=\frac{R_4}{R_3}(V'_2-V'_1)
+=\frac{R_4}{R_3}\left(1+\frac{R_f}{R_1}\right)(V_2-V_1)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">51</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The two resistors <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img118.svg"
+ ALT="$R_1$"></SPAN> can be combined to become <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img166.svg"
+ ALT="$R_0=2R_1$"></SPAN>,
+  i.e., <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img167.svg"
+ ALT="$R_1=R_0/2$"></SPAN>, then the output can be written as:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_{out}=\frac{R_4}{R_3}\left(1+\frac{2R_f}{R_0}\right)(V_2-V_1)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img168.svg"
+ ALT="$\displaystyle V_{out}=\frac{R_4}{R_3}\left(1+\frac{2R_f}{R_0}\right)(V_2-V_1)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">52</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+Alternatively, we consider the current going from <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.69ex; " SRC="img169.svg"
+ ALT="$V'_1$"></SPAN> to <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.69ex; " SRC="img170.svg"
+ ALT="$V'_2$"></SPAN>
+  through <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.78ex; " SRC="img171.svg"
+ ALT="$R_f$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img118.svg"
+ ALT="$R_1$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img118.svg"
+ ALT="$R_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.78ex; " SRC="img171.svg"
+ ALT="$R_f$"></SPAN>:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\frac{V'_1-V_1}{R_f}=\frac{V_1-V_0}{R_1}=\frac{V_0-V_2}{R_1}
+    =\frac{V_2-V'_2}{R_f}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.37ex; " SRC="img172.svg"
+ ALT="$\displaystyle \frac{V'_1-V_1}{R_f}=\frac{V_1-V_0}{R_1}=\frac{V_0-V_2}{R_1}
+=\frac{V_2-V'_2}{R_f}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">53</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+From the equation of the first two terms we get:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V'_1=\left(1+\frac{R_f}{R_1}\right)V_1-\frac{R_f}{R_1}V_0
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img173.svg"
+ ALT="$\displaystyle V'_1=\left(1+\frac{R_f}{R_1}\right)V_1-\frac{R_f}{R_1}V_0$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">54</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+From the equation of the second two terms we get:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V'_2=\left(1+\frac{R_f}{R_1}\right)V_2-\frac{R_f}{R_1}V_0
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img174.svg"
+ ALT="$\displaystyle V'_2=\left(1+\frac{R_f}{R_1}\right)V_2-\frac{R_f}{R_1}V_0$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">55</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Using the equation of the differential amplifier above, we get the
+  same result as above:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_{out}=\frac{R_4}{R_3}(V'_2-V'_1)
+    =\frac{R_4}{R_3}\left(1+\frac{R_f}{R_1}\right)(V_2-V_1)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img165.svg"
+ ALT="$\displaystyle V_{out}=\frac{R_4}{R_3}(V'_2-V'_1)
+=\frac{R_4}{R_3}\left(1+\frac{R_f}{R_1}\right)(V_2-V_1)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">56</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+In the instrumentation circuit 
+  <A ID="tex2html9"
+  HREF="http://www.analog.com/media/en/technical-documentation/data-sheets/AD623.pdf">AD623</A>,
+
+<!-- MATH
+ $R_3=R_4=R_f=50\,k\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.78ex; " SRC="img175.svg"
+ ALT="$R_3=R_4=R_f=50\,k\Omega$"></SPAN>, <!-- MATH
+ $R_1=\infty$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img176.svg"
+ ALT="$R_1=\infty$"></SPAN> (open-circuit), i.e., the 
+  circuit has a unit voltage gain. However, if an external resistor 
+  <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img177.svg"
+ ALT="$R_G$"></SPAN> (<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img178.svg"
+ ALT="$2R_1$"></SPAN>) is connected to the circuit, the gain can be greater 
+  up to 1000.
+
+<P>
+</LI>
+<LI><B>Square Wave converter</B>
+
+<P>
+Without feedback, the output of an op-amp is <!-- MATH
+ $V_{out}=A(V^+-V^-)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img107.svg"
+ ALT="$V_{out}=A(V^+-V^-)$"></SPAN>. As <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img16.svg"
+ ALT="$A$"></SPAN> is
+  large, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img10.svg"
+ ALT="$V_{out}$"></SPAN> is saturated, equal to either the positive or the negative
+  voltage supply, depending on whether or not <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.12ex; " SRC="img129.svg"
+ ALT="$V^+$"></SPAN> is greater than <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.12ex; " SRC="img115.svg"
+ ALT="$V^-$"></SPAN>. 
+  When an input of any waveform is compared with a reference voltage, the
+  output is a square wave:
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/SquareConverter1.png"
+ ALT="SquareConverter1.png">
+  <IMG STYLE=""
+ SRC="../figures/SquareConverter2.png"
+ ALT="SquareConverter2.png">
+
+<P>
+</LI>
+<LI><B>A/D converter</B>
+
+<P>
+These two possible outputs, positive and negative, can be treated as &ldquo;1&rdquo; 
+  and &ldquo;0&rdquo; of the binary system. The figure shows an A/D converter built by
+  three op-amps to measure voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img179.svg"
+ ALT="$V_{in}$"></SPAN> from 0 to 3 volts with resolution 
+  1 V.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/opam12.gif"
+ ALT="opam12.gif">
+
+<P>
+Due to the voltage divider, the input voltages to the three op-amps are, 
+  respectively, 2.5V, 1.5V and 0.5V. The output of these op-amps are listed
+  below for each of the input voltage levels. A digital logic circuit (a
+  decoder) can convert the 3-bit output of the op-amps to the 2-bit binary 
+  representation.
+
+<P>
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\begin{array}{c||c|c|c|c}\hline
+      \mbox{Input voltage}        & 0 	& 1	& 2	& 3	\\\hline
+      \mbox{Op-amps Outputs}	& 000	& 001	& 011	& 111	\\\hline
+      \mbox{Binary Representation}	& 00	& 01	& 10	& 11	\\\hline
+    \end{array}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE=""
+ SRC="img180.svg"
+ ALT="\begin{displaymath}\begin{array}{c\vert\vert c\vert c\vert c\vert c}\hline
+\mbox...
+...inary Representation} &amp; 00 &amp; 01 &amp; 10 &amp; 11 \\ \hline
+\end{array}\end{displaymath}"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">57</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+<LI><B>Integrator and differentiator</B>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/opamp4.gif"
+ ALT="opamp4.gif">
+
+<P>
+<B>Integrator</B>
+
+<P>
+In time domain, as <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.12ex; " SRC="img181.svg"
+ ALT="$v^-=v^+=0$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img182.svg"
+ ALT="$i_R+i_C=0$"></SPAN>, we have (KCL)
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+i_R+i_C=\frac{v_i}{R}+C\frac{d v_{out}}{dt}=0,
+    \;\;\;\; \mbox{i.e.,}\;\;\;\;v_{out}=-\frac{1}{\tau} \int v_i dt
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.11ex; vertical-align: -1.71ex; " SRC="img183.svg"
+ ALT="$\displaystyle i_R+i_C=\frac{v_i}{R}+C\frac{d v_{out}}{dt}=0,
+\;\;\;\;$">&nbsp; &nbsp;i.e.,<IMG STYLE="height: 5.57ex; vertical-align: -2.12ex; " SRC="img184.svg"
+ ALT="$\displaystyle \;\;\;\;v_{out}=-\frac{1}{\tau} \int v_i dt$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">58</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+where <!-- MATH
+ $\tau \stackrel{\triangle}{=}RC$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.12ex; " SRC="img185.svg"
+ ALT="$\tau \stackrel{\triangle}{=}RC$"></SPAN>. In frequency domain, we have:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+H(j\omega)=-\frac{Z_2(j\omega)}{Z_1(j\omega)}=-\frac{1/j\omega C}{R}
+    =-\frac{1}{j\omega RC}=-\frac{1}{j\omega \tau}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img186.svg"
+ ALT="$\displaystyle H(j\omega)=-\frac{Z_2(j\omega)}{Z_1(j\omega)}=-\frac{1/j\omega C}{R}
+=-\frac{1}{j\omega RC}=-\frac{1}{j\omega \tau}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">59</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+<B>Differentiator</B>
+
+<P>
+If we swap the resistor and the capacitor, we get in time domain:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+i_R+i_C=\frac{v_{out}}{R}+C\frac{d v_i}{dt}=0,\;\;\;\;
+    \mbox{i.e.,}\;\;\;\;v_{out}=-RC \frac{d v_i}{dt}=-\tau \frac{d v_i}{dt}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.11ex; vertical-align: -1.71ex; " SRC="img187.svg"
+ ALT="$\displaystyle i_R+i_C=\frac{v_{out}}{R}+C\frac{d v_i}{dt}=0,\;\;\;\;$">&nbsp; &nbsp;i.e.,<IMG STYLE="height: 5.11ex; vertical-align: -1.71ex; " SRC="img188.svg"
+ ALT="$\displaystyle \;\;\;\;v_{out}=-RC \frac{d v_i}{dt}=-\tau \frac{d v_i}{dt}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">60</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+In frequency domain, we have:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+H(j\omega)=-\frac{Z_2(j\omega)}{Z_1(j\omega)}=-\frac{R}{1/j\omega C}
+    =-j\omega \tau
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img189.svg"
+ ALT="$\displaystyle H(j\omega)=-\frac{Z_2(j\omega)}{Z_1(j\omega)}=-\frac{R}{1/j\omega C}
+=-j\omega \tau$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">61</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+<LI><B>PID controller</B>
+
+<P>
+A proportional-integral-derivative (PID) controller can be implemented
+  as shown. The output of the circuit is a linear combination of the
+  signal together with its integral and derivative:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_{out}(t)=c_p v_{in}(t)+c_i \int v_{in}(t) dt +c_d\frac{d\,v_{in}}{dt}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.12ex; " SRC="img190.svg"
+ ALT="$\displaystyle v_{out}(t)=c_p v_{in}(t)+c_i \int v_{in}(t) dt +c_d\frac{d\,v_{in}}{dt}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">62</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/OpAmpPID.png"
+ ALT="OpAmpPID.png">
+
+<P>
+</LI>
+<LI><B>Howland Current Source</B>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/HowlandCurrentSource.png"
+ ALT="HowlandCurrentSource.png">
+
+<P>
+Assuming <!-- MATH
+ $R_2/R_1=R_4/R_3$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img191.svg"
+ ALT="$R_2/R_1=R_4/R_3$"></SPAN>, we can show that the output current
+  through the load <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img11.svg"
+ ALT="$R_L$"></SPAN> is a constant determined by the input
+  voltages <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.12ex; " SRC="img115.svg"
+ ALT="$V^-$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.12ex; " SRC="img129.svg"
+ ALT="$V^+$"></SPAN>, as well as the circuit parameters
+  (see <A ID="tex2html10"
+  HREF="../HowlandCurrentSource/index.html">here</A>):
+
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_L=\frac{V^+-V^-}{R_3}=\frac{V}{R_L}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.06ex; " SRC="img192.svg"
+ ALT="$\displaystyle I_L=\frac{V^+-V^-}{R_3}=\frac{V}{R_L}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">63</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+<LI><B>Logarithmic and Exponential Amplifiers</B>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/ExpLogAmplifier.png"
+ ALT="ExpLogAmplifier.png">
+
+<P>
+Based on the relationship between the current through and voltage 
+  across a diode and the virtual ground assumption, we can show 
+  that the output voltage of the exponential amplifier (left) is
+  approximately an exponential function of the input voltage, and 
+  the output voltage of the logarithmic amplifier (right) is 
+  approximately a logarithmic function of the input voltage:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_{out}\approx C \;\exp(v_{in}/a),\;\;\;\;\;\; v_{out}= D\; \ln (v_{in}/b)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img193.svg"
+ ALT="$\displaystyle v_{out}\approx C \;\exp(v_{in}/a),\;\;\;\;\;\; v_{out}= D\; \ln (v_{in}/b)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">64</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+  (Homework: Derive this relationship and determine the coefficients 
+  <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img194.svg"
+ ALT="$C,\;D$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img195.svg"
+ ALT="$a,\,b$"></SPAN>.)
+
+<P>
+</LI>
+</UL>
+
+<P>
+Many op-amp circuits practically used can be found <A ID="tex2html11"
+  HREF="http://web.mit.edu/6.101/www/reference/op_amps_everyone.pdf">here</A>.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node4.html">Single-Supply Op Amps and</A>
+<B> Up:</B> <A
+ HREF="node1.html">Chapter 5: Operational Amplifiers</A>
+<B> Previous:</B> <A
+ HREF="node2.html">Operational Amplifier</A></DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

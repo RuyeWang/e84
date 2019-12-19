@@ -1,0 +1,128 @@
+\documentstyle[11pt]{article}
+\usepackage{html}
+\begin{document}
+\begin{center}
+{\Large \bf  Midterm Exam (summer 2014)}
+\end{center}
+
+\begin{enumerate}
+
+\item ({\bf 33 points}) 
+  Find the current $I_L$ through and volage $V_L$ across the load resistor
+  $R_L$ in the circuit, where $V_1=12V$, $V_2=20V$, $I=6A$, 
+  $R_1=R_2=R_3=R_L=2\Omega$. If it is desired for $R_L$ to dissipate maximum 
+  amount of energy, what value should $R_L$ take?
+
+  \htmladdimg{../newexam2.png}
+
+  {\bf Solution:} Use Thevinen's theorem. 
+  \begin{itemize}
+  \item Find $V_{Th}$. Convert $V_1$ and $R_1$ to an equivalent current source
+    of $12V/2\Omega=2A$ in parallel with $R_1$. Convert $V_2$ and $R_2$ to
+    an equivalent current source of $20V/2\Omega=10A$ in parallel with $R_2$
+    Then the three currents in parallel can be combined into a single current
+    source of $6+6+10=22A$ in parallel with a single resistance 
+    $R_{Th}=R_1||R_2|R_3=2/3\Omega$, $V_{Th}=V_{OC}=22\times 2/3=44/3V$.
+  \item Find $I_L$ and $V_L$:
+    \[
+    I_L=\frac{V_{Th}}{R_{Th}+R_L}=\frac{44/3}{2/3+2}=\frac{11}{2}=5.5,
+    \;\;\;\;\;\;
+    V_L=I_L\times R_L=11
+    \]    
+  \item For $R_L$ to consume maximum energy, $R_L=R_{Th}=2/3\Omega$.
+  \end{itemize}
+
+\item ({\bf 33 points}) 
+  In the AC circuit shown below, $R=5\Omega$, $L=3\;mH$, $C=250\mu F$, and 
+  $v_C(t)=14.14\cos(\omega t)$ with angular frequency $\omega=1000\,rad/sec.$.
+  Find 
+  \begin{itemize}
+  \item currents $i_R(t)$, $i_C(t)$, and $i(t)$
+  \item voltages $v_s(t)$ and $v_L(t)$
+  \end{itemize}
+  
+  \htmladdimg{../newexam1.png}
+
+
+  {\bf Solution:} 
+
+  \[
+  Z_C=\frac{1}{j\omega C}=-4j=4e^{-j\pi/2},\;\;\;\;
+  Z_L=j\omega L=j\,1000\times 0.003=j3=3e^{j\pi/2}\;\;\;\;
+  Z_{RC}=\frac{Z_RZ_C}{Z_R+Z_C}=\frac{20 e^{-j\pi/2}}{5-4j}
+  \]
+  
+
+  $\dot{V}_C=10\angle 0$
+  \[ 
+  \dot{I}_R=\frac{\dot{V}_C}{R}=\frac{10}{5}=2,\;\;\;\;\;
+  i_R(t)=2\sqrt{2}\cos(1000t)
+  \]
+
+  \[ 
+  \dot{I}_C=\frac{\dot{V}_C}{Z_C}=10\items(j1000\times 250\times 10^{-6})
+  =j2.5,  \;\;\;\;\;
+  i_C(t)=2.5\sqrt{2}\cos(1000t+\pi/2)
+  \]
+  
+  \[
+  \dot{I}=\dot{I}_R+\dot{I}_C=2+j2.5=3.2\angle 0.896,\;\;\;\;
+  i(t)=3.2\sqrt{2}\cos(1000 t+0.896)  
+  \]
+  
+  \[
+  \dot{V}_L=\dot{I}\times j\omega L
+  =3.2\angle 0.896 \times (j1000\times 3\times 10^{-3})
+  =9.6\angle 2.47,\;\;\;\;
+  v_L(t)=9.6\sqrt{2}\cos(1000t+2.47)
+  \]
+  \[ 
+  \dot{V}_S=\dot{V}_L+\dot{V}_C=9.6\angle 2.47+10\angle 0
+  =6.5\angle 1.177,\;\;\;\;\;
+  v_s(t)=6.5\sqrt{2}\cos(1000t+1.177)
+  \]
+  
+\item ({\bf 34 points}) 
+  In the circuit shown below, $V=1V$, $I=1A$, $R_1=R_2=2\Omega$,
+  $C=0.5\mu F$, $L=1H$. The switches $S_1$ and $S_2$ are switched from 
+  right to left at $t=0$. The system has reached steady state by $t=0$.
+
+  \htmladdimg{../newexam3.png}
+
+  \begin{itemize}
+  \item Apply KCL to the top node to set up a first order DE in terms
+    of voltage $v_C(t)$ across $C$. Find $v_C(t)$ for $t>0$ by the short-cut
+    method in terms of $v_C(0)$, $v_C(\infty)$, and $\tau=RC$.
+  \item Apply KCL to the bottom node to set up a first order DE in terms
+    of current $i_L(t)$ through $L$. Find $i_L(t)$ for $t>0$ by the short-cut
+    method in terms of $i_L(0)$, $i_L(\infty)$, and $\tau=L/R$.
+  \item 
+    Find $v_{out}(t)=v_C(t)+v_L(t)$ for $t>0$.
+  \end{itemize}
+
+
+  {\bf Solution:} 
+  \begin{itemize}
+  \item 
+    \[ 
+    C\frac{dv_C(t)}{dt}+\frac{v_C(t)}{2}=2,\;\;\;\;\;\;
+    \frac{L}{2}\frac{di_L(t)}{dt}+i_L(t)=2
+    \]
+  \item $V_C(0)=1V$, $V_C(\infty)=4V$, $\tau_C=RC=2\times 0.5=1\;sec.$
+    \[ 
+    v_C(t)=v_C(\infty)+[v_C(0)-v_C(\infty)]e^{-t/\tau}=4+(1-4)e^{-t}
+    \]
+  \item $i_L(0)=1A$, $i_L(\infty)=2A$, $\tau_C=L/R=1/2=0.5\;sec.$
+    \[ 
+    i_L(t)=i_L(\infty)+[i_L(0)-i_L(\infty)]e^{-t/\tau}=2+(1-2)e^{-2t}=2-e^{-2t}
+    \]
+    \[
+    v_L(t)=L\frac{di_L(t)}{dt}=2e^{-2t}
+    \]
+  \item
+    \[
+    v_{out}(t)=v_C(t)+v_L(t)=4-3e^{-t}+2e^{-2t}
+    \]
+  \end{itemize}
+
+\end{enumerate}

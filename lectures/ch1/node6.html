@@ -1,0 +1,901 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Kirchhoff's Laws</TITLE>
+<META NAME="description" CONTENT="Kirchhoff's Laws">
+<META NAME="keywords" CONTENT="ch1">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="ch1.css">
+
+<LINK REL="next" HREF="node7.html">
+<LINK REL="previous" HREF="node5.html">
+<LINK REL="next" HREF="node7.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node7.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node5.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node7.html">Energy Sources</A>
+<B> Up:</B> <A
+ HREF="node1.html">Chapter 1: Basic Quantities</A>
+<B> Previous:</B> <A
+ HREF="node5.html">Examples: Mechanical and Electrical</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION00015000000000000000">
+Kirchhoff's Laws</A>
+</H2>
+
+<P>
+Here are some terminologies for electric circuits:
+
+<UL>
+<LI><EM>Node:</EM> a point where three or more current-carrying elements 
+  (branches) are connected;
+</LI>
+<LI><EM>Branch:</EM> a path connecting two nodes along which there is 
+  one or more elements in series; 
+</LI>
+<LI><EM>Loop:</EM> a sequence of multiple paths that form a closed loop.
+</LI>
+</UL>
+
+<P>
+In a circuit diagram, both the direction of a current through, and the
+polarity of a voltage across an element can be arbitrarily labeled. 
+The actual direction and polarity will be determined by the sign of 
+the specific values obtained after the circuit is solved. For example, 
+a current labeled in the left-to-right direction with a negative value
+is actually flowing in the right-to-left direction.
+
+<P>
+<B>Kirchhoff's Laws</B>
+
+<UL>
+<LI><B>Kirchhoff current Law (KCL)</B> 
+
+<P>
+The algebraic sum of the currents into a node is zero:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\sum_k I_k=0
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -3.14ex; " SRC="img269.svg"
+ ALT="$\displaystyle \sum_k I_k=0$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">73</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+due to the principle of conservation of electric charge (electric
+  charge can not be created or destroyed in the circuit).  
+
+<P>
+Here we can assume the directions of all currents through the elements
+  are either into or out of the node.
+
+<P>
+</LI>
+<LI><B>Kirchhoff voltage Law (KVL)</B> 
+
+<P>
+The algebraic sum of all voltage drops around a loop is zero:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\sum_k w_k=\sum_k V_k Q=0,\;\;\;\;\;  \sum_k V_k=0
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -3.14ex; " SRC="img270.svg"
+ ALT="$\displaystyle \sum_k w_k=\sum_k V_k Q=0,\;\;\;\;\; \sum_k V_k=0$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">74</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+due to the principle of conservation of energy (energy can not be
+  created or destroyed in the circuit).
+
+<P>
+Here we can assume the polarities of all voltages across the elements
+  are from high (+) to low (-), while going around the loop in either 
+  clockwise or counter-clockwise direction.
+</LI>
+</UL>
+
+<P>
+<B>Example 1:</B>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/Kirchhoff.png"
+ ALT="Kirchhoff.png">
+
+<P>
+Assume currents flowing into the node are positive and those leaving the 
+node negative, the KCL states: <!-- MATH
+ $4+5-3-4-2=0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.31ex; " SRC="img271.svg"
+ ALT="$4+5-3-4-2=0$"></SPAN>. 
+
+<P>
+Assume the current flows around the loop in clockwise direction, the KVL
+states: <!-- MATH
+ $-12+3+4+5=0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.31ex; " SRC="img272.svg"
+ ALT="$-12+3+4+5=0$"></SPAN>. 
+
+<P>
+<B>Example 2:</B>  Given the circuit below, find <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img273.svg"
+ ALT="$V_2$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img274.svg"
+ ALT="$V_0$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img275.svg"
+ ALT="$I_2$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img276.svg"
+ ALT="$R_1$"></SPAN>
+and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img277.svg"
+ ALT="$R_2$"></SPAN>.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/Kirchhoff1.gif"
+ ALT="Kirchhoff1.gif">
+
+<P>
+According to Ohm's law, we have <!-- MATH
+ $I_2=3/2=1.5A$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img278.svg"
+ ALT="$I_2=3/2=1.5A$"></SPAN>.  
+
+<P>
+Apply KVL to the loop on the right to get:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_2-5+3=0,\;\;\;\;\;\; V_2=2V
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img279.svg"
+ ALT="$\displaystyle V_2-5+3=0,\;\;\;\;\;\; V_2=2V$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">75</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+According to Ohm's law, we have <!-- MATH
+ $R_2=V_2/I_2=2V/1.5A=1.33\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img280.svg"
+ ALT="$R_2=V_2/I_2=2V/1.5A=1.33\Omega$"></SPAN>.
+
+<P>
+Apply KCL to the middle node on top to get:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+2-I_1-I_2=2-I_1-1.5=0,\;\;\;\;\;I_1=0.5A
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img281.svg"
+ ALT="$\displaystyle 2-I_1-I_2=2-I_1-1.5=0,\;\;\;\;\;I_1=0.5A$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">76</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+Again by Ohm's law, we get <!-- MATH
+ $R_1=5V/0.5A=10\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img282.svg"
+ ALT="$R_1=5V/0.5A=10\Omega$"></SPAN>. 
+
+<P>
+Apply KVL to the loop on the left to get:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+3\times 2 +5-V_0=0,\;\;\;\;\;\;V_0=11V
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img283.svg"
+ ALT="$\displaystyle 3\times 2 +5-V_0=0,\;\;\;\;\;\;V_0=11V$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">77</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+<B>The series and parallel combinations of circuit components</B>
+
+<P>
+
+<UL>
+<LI><B>Resistors in series:</B> 
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/resistorseries.gif"
+ ALT="resistorseries.gif">
+
+<P>
+According to KVL, the sum of voltages across 
+  the resistors is equal to the input voltage:
+  <BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+V=V_1+\cdots+V_n&=&IR_1+\cdots+IR_n=I(R_1+\cdots+R_n)=IR_s
+    \nonumber \\
+    &=&\frac{I}{G_1}+\cdots+\frac{I}{G_n}
+    =I\left(\frac{1}{G_1}+\cdots+\frac{1}{G_n}\right)=\frac{I}{G_s}
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img284.svg"
+ ALT="$\displaystyle V=V_1+\cdots+V_n$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img188.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img285.svg"
+ ALT="$\displaystyle IR_1+\cdots+IR_n=I(R_1+\cdots+R_n)=IR_s$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img188.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img286.svg"
+ ALT="$\displaystyle \frac{I}{G_1}+\cdots+\frac{I}{G_n}
+=I\left(\frac{1}{G_1}+\cdots+\frac{1}{G_n}\right)=\frac{I}{G_s}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">78</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+
+  where
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+R_s=\frac{V}{I}=R_1+\cdots+R_n
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.11ex; vertical-align: -1.71ex; " SRC="img287.svg"
+ ALT="$\displaystyle R_s=\frac{V}{I}=R_1+\cdots+R_n$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">79</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+and
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+G_s=\frac{1}{R_s}=\frac{I}{V}=\frac{1}{1/G_1+\cdots+1/G_n}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img288.svg"
+ ALT="$\displaystyle G_s=\frac{1}{R_s}=\frac{I}{V}=\frac{1}{1/G_1+\cdots+1/G_n}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">80</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+<LI><B>Voltage divider:</B>
+
+<P>
+According to Ohm's law, the voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img289.svg"
+ ALT="$V_k$"></SPAN> across the kth resistor <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img290.svg"
+ ALT="$R_k$"></SPAN> can be 
+  found to be:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_k=IR_k=\frac{V}{R_s}R_k=V\frac{R_k}{R_1+R_2+\cdots+R_n}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img291.svg"
+ ALT="$\displaystyle V_k=IR_k=\frac{V}{R_s}R_k=V\frac{R_k}{R_1+R_2+\cdots+R_n}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">81</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+In particular if <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img292.svg"
+ ALT="$n=2$"></SPAN>, we have
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_1=V\frac{R_1}{R_1+R_2},\;\;\;\;\;\;\;\;V_2=V\frac{R_2}{R_1+R_2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img293.svg"
+ ALT="$\displaystyle V_1=V\frac{R_1}{R_1+R_2},\;\;\;\;\;\;\;\;V_2=V\frac{R_2}{R_1+R_2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">82</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+<LI><B>Resistors in parallel:</B> 
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/resistorparallel.gif"
+ ALT="resistorparallel.gif">
+
+<P>
+According to KCL, the sum of currents through the resistors is equal to 
+  the input current:
+  <BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+I=I_1+\cdots+I_n&=&\frac{V}{R_1}+\cdots+\frac{V}{R_n}
+    =V\left(\frac{1}{R_1}+\cdots+\frac{1}{R_n}\right)=\frac{V}{R_p}
+    \nonumber \\
+    &=&VG_1+\cdots+VG_n=V(G_1+\cdots+G_n)=VG_p
+  
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img294.svg"
+ ALT="$\displaystyle I=I_1+\cdots+I_n$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img188.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 6.04ex; vertical-align: -2.37ex; " SRC="img295.svg"
+ ALT="$\displaystyle \frac{V}{R_1}+\cdots+\frac{V}{R_n}
+=V\left(\frac{1}{R_1}+\cdots+\frac{1}{R_n}\right)=\frac{V}{R_p}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img188.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 2.79ex; vertical-align: -0.78ex; " SRC="img296.svg"
+ ALT="$\displaystyle VG_1+\cdots+VG_n=V(G_1+\cdots+G_n)=VG_p$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">83</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+
+  where
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+R_p=\frac{V}{I}=\frac{1}{1/R_1+\cdots+1/R_n}=R_1||R_2||\cdots||R_n
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img297.svg"
+ ALT="$\displaystyle R_p=\frac{V}{I}=\frac{1}{1/R_1+\cdots+1/R_n}=R_1\vert\vert R_2\vert\vert\cdots\vert\vert R_n$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">84</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+and
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+G_p=\frac{1}{R_p}=\frac{I}{V}=G_1+\cdots+G_n=\frac{1}{R_p}
+    =\frac{1}{R_1}+\cdots+\frac{1}{R_n}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.37ex; " SRC="img298.svg"
+ ALT="$\displaystyle G_p=\frac{1}{R_p}=\frac{I}{V}=G_1+\cdots+G_n=\frac{1}{R_p}
+=\frac{1}{R_1}+\cdots+\frac{1}{R_n}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">85</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+In particular, when <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img292.svg"
+ ALT="$n=2$"></SPAN>, 
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+R_p=R_1||R_2=\frac{1}{1/R_1+1/R_2}=\frac{R_1\;R_2}{R_1+R_2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img299.svg"
+ ALT="$\displaystyle R_p=R_1\vert\vert R_2=\frac{1}{1/R_1+1/R_2}=\frac{R_1\;R_2}{R_1+R_2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">86</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+<LI><B>Current divider:</B>
+
+<P>
+According to Ohm's law, the current <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img300.svg"
+ ALT="$I_k$"></SPAN> through the kth resistor <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img290.svg"
+ ALT="$R_k$"></SPAN> can be 
+  found to be:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_k=\frac{V}{R_k}=\frac{IR_p}{R_k}=I\frac{1/R_k}{1/R_1+1/R_2+\cdots+1/R_n}
+    =I\frac{G_k}{G_1+G_2+\cdots+G_n}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img301.svg"
+ ALT="$\displaystyle I_k=\frac{V}{R_k}=\frac{IR_p}{R_k}=I\frac{1/R_k}{1/R_1+1/R_2+\cdots+1/R_n}
+=I\frac{G_k}{G_1+G_2+\cdots+G_n}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">87</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+In particular if <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img292.svg"
+ ALT="$n=2$"></SPAN>, we have
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_1=I\frac{G_1}{G_1+G_2}=I\frac{1/R_1}{1/R_1+1/R_2}
+    =I\frac{R_2}{R_1+R_2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img302.svg"
+ ALT="$\displaystyle I_1=I\frac{G_1}{G_1+G_2}=I\frac{1/R_1}{1/R_1+1/R_2}
+=I\frac{R_2}{R_1+R_2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">88</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_2=I\frac{G_2}{G_1+G_2}=I\frac{1/R_2}{1/R_1+1/R_2}
+    =I\frac{R_1}{R_1+R_2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img303.svg"
+ ALT="$\displaystyle I_2=I\frac{G_2}{G_1+G_2}=I\frac{1/R_2}{1/R_1+1/R_2}
+=I\frac{R_1}{R_1+R_2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">89</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+<LI><B>Inductors in series:</B> According to KVL, the sum of voltages across 
+  the inductors is equal to the input voltage:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v=v_1+v_2+\cdots+v_n=L_1\frac{di}{dt}+\cdots+L_n\frac{di}{dt}
+    =(L_1+L_2+\cdots+L_n)\frac{di}{dt}=L_s\frac{di}{dt}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.11ex; vertical-align: -1.71ex; " SRC="img304.svg"
+ ALT="$\displaystyle v=v_1+v_2+\cdots+v_n=L_1\frac{di}{dt}+\cdots+L_n\frac{di}{dt}
+=(L_1+L_2+\cdots+L_n)\frac{di}{dt}=L_s\frac{di}{dt}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">90</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+i.e.,
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+L_s=L_1+L_2+\cdots+L_n
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img305.svg"
+ ALT="$\displaystyle L_s=L_1+L_2+\cdots+L_n$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">91</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+<LI><B>Inductors in parallel:</B> According to KCL, the sum of currents through 
+  the inductors is equal to the input current:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+i=i_1+i_2+\cdots+i_n
+    =\frac{1}{L_1}\int v\; dt+\cdots+\frac{1}{L_n}\int v\; dt
+    =\left(\frac{1}{L_1}+\cdots+\frac{1}{L_n}\right)\int v\; dt
+    =\frac{1}{L_p}\int v\; dt	 
+  
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.37ex; " SRC="img306.svg"
+ ALT="$\displaystyle i=i_1+i_2+\cdots+i_n
+=\frac{1}{L_1}\int v\; dt+\cdots+\frac{1}{L_...
+...(\frac{1}{L_1}+\cdots+\frac{1}{L_n}\right)\int v\; dt
+=\frac{1}{L_p}\int v\; dt$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">92</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+we get
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\frac{1}{L_p}=\frac{1}{L_1}+\cdots+\frac{1}{L_n}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.37ex; " SRC="img307.svg"
+ ALT="$\displaystyle \frac{1}{L_p}=\frac{1}{L_1}+\cdots+\frac{1}{L_n}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">93</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+<LI><B>Capacitors in parallel:</B> According to KCL, the sum of currents through 
+  the resistors is equal to the input current:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+i=i_1+i_2+\cdots+i_n=C_1\frac{dv}{dt}+\cdots+C_n\frac{dv}{dt}
+    =(C_1+C_2+\cdots+C_n)\frac{dv}{dt} =C_p\frac{dv}{dt}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.11ex; vertical-align: -1.71ex; " SRC="img308.svg"
+ ALT="$\displaystyle i=i_1+i_2+\cdots+i_n=C_1\frac{dv}{dt}+\cdots+C_n\frac{dv}{dt}
+=(C_1+C_2+\cdots+C_n)\frac{dv}{dt} =C_p\frac{dv}{dt}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">94</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+i.e.,
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+C_p=C_1+C_2+\cdots+C_n
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.78ex; " SRC="img309.svg"
+ ALT="$\displaystyle C_p=C_1+C_2+\cdots+C_n$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">95</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+<LI><B>Capacitors in series:</B> According to KVL, the sum of voltages across 
+  the capacitors is equal to the input voltage:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v=v_1+v_2+\cdots+v_n
+    =\frac{1}{C_1}\int i\;dt+\cdots+\frac{1}{C_n}\int i\;dt
+    =\left(\frac{1}{C_1}+\cdots+\frac{1}{C_n}\right)\int i\;dt
+    =\frac{1}{C_s}\int i\;dt 	
+  
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img310.svg"
+ ALT="$\displaystyle v=v_1+v_2+\cdots+v_n
+=\frac{1}{C_1}\int i\;dt+\cdots+\frac{1}{C_n...
+...ft(\frac{1}{C_1}+\cdots+\frac{1}{C_n}\right)\int i\;dt
+=\frac{1}{C_s}\int i\;dt$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">96</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+i.e.,
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\frac{1}{C_s}=\frac{1}{C_1}+\cdots+\frac{1}{C_n}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img311.svg"
+ ALT="$\displaystyle \frac{1}{C_s}=\frac{1}{C_1}+\cdots+\frac{1}{C_n}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">97</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+</UL>
+
+<P>
+<TABLE class="PAD  BORDER" style="">
+<TR><TD CLASS="CENTER">&nbsp;</TD>
+<TD CLASS="CENTER">Resistor <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img91.svg"
+ ALT="$R$"></SPAN></TD>
+<TD CLASS="CENTER">Inductor <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img127.svg"
+ ALT="$L$"></SPAN></TD>
+<TD CLASS="CENTER">Capacitor <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img97.svg"
+ ALT="$C$"></SPAN></TD>
+</TR>
+<TR><TD CLASS="CENTER">Governing Equation</TD>
+<TD CLASS="CENTER"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img312.svg"
+ ALT="$v=Ri=i/G$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img313.svg"
+ ALT="$i=v/R=Gv$"></SPAN></TD>
+<TD CLASS="CENTER"><!-- MATH
+ $v=L\;di/dt$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img314.svg"
+ ALT="$v=L\;di/dt$"></SPAN>, <!-- MATH
+ $i=\int v\; dt/L$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.83ex; " SRC="img315.svg"
+ ALT="$i=\int v\; dt/L$"></SPAN></TD>
+<TD CLASS="CENTER"><!-- MATH
+ $v=\int i\;dt/C$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.83ex; " SRC="img316.svg"
+ ALT="$v=\int i\;dt/C$"></SPAN>, <!-- MATH
+ $i=C\;dv/dt$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img317.svg"
+ ALT="$i=C\;dv/dt$"></SPAN></TD>
+</TR>
+<TR><TD CLASS="CENTER">Series connection</TD>
+<TD CLASS="CENTER"><!-- MATH
+ $R_s=R_1+R_2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img318.svg"
+ ALT="$R_s=R_1+R_2$"></SPAN>, <!-- MATH
+ $1/G_s=1/G_1+1/G_2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img319.svg"
+ ALT="$1/G_s=1/G_1+1/G_2$"></SPAN></TD>
+<TD CLASS="CENTER"><!-- MATH
+ $L_s=L_1+L_2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img320.svg"
+ ALT="$L_s=L_1+L_2$"></SPAN></TD>
+<TD CLASS="CENTER"><!-- MATH
+ $1/C_s=1/C_1+1/C_2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img321.svg"
+ ALT="$1/C_s=1/C_1+1/C_2$"></SPAN></TD>
+</TR>
+<TR><TD CLASS="CENTER">Parallel connection</TD>
+<TD CLASS="CENTER"><!-- MATH
+ $1/R_p=1/R_1+1/R_2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.78ex; " SRC="img322.svg"
+ ALT="$1/R_p=1/R_1+1/R_2$"></SPAN>, <!-- MATH
+ $G_p=G_1+G_2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.78ex; " SRC="img323.svg"
+ ALT="$G_p=G_1+G_2$"></SPAN></TD>
+<TD CLASS="CENTER"><!-- MATH
+ $1/L_p=1/L_1+1/L_2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.78ex; " SRC="img324.svg"
+ ALT="$1/L_p=1/L_1+1/L_2$"></SPAN></TD>
+<TD CLASS="CENTER"><!-- MATH
+ $C_p=C_1+C_2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.78ex; " SRC="img325.svg"
+ ALT="$C_p=C_1+C_2$"></SPAN></TD>
+</TR>
+</TABLE>
+
+<P>
+<B>Example 3</B> Consider the following six circuits as either current
+or voltage dividers.
+
+<P>
+<IMG STYLE="" SRC="../figures/RCLPS.png"
+ ALT="RCLPS.png">
+
+<P>
+
+<UL>
+<LI>For each of the three parallel circuits, find <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img326.svg"
+ ALT="$i_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img327.svg"
+ ALT="$i_2$"></SPAN> in
+  terms of the given current <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img88.svg"
+ ALT="$i$"></SPAN> and the resistances, capacitances, or
+  inductances.
+
+<UL>
+<LI>Resistor circuit:
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+i_1=\frac{R_2}{R_1+R_2}i,\;\;\;i_2=\frac{R_1}{R_1+R_2}i
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img328.svg"
+ ALT="$\displaystyle i_1=\frac{R_2}{R_1+R_2}i,\;\;\;i_2=\frac{R_1}{R_1+R_2}i$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">98</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>Capacitor circuit:
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+i_1=\frac{C_1}{C_1+C_2}i,\;\;\;i_2=\frac{C_2}{C_1+C_2}i
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img329.svg"
+ ALT="$\displaystyle i_1=\frac{C_1}{C_1+C_2}i,\;\;\;i_2=\frac{C_2}{C_1+C_2}i$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">99</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>Inductor circuit:
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+i_1=\frac{L_2}{L_1+L_2}i,\;\;\;i_2=\frac{L_1}{L_1+L_2}i
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img330.svg"
+ ALT="$\displaystyle i_1=\frac{L_2}{L_1+L_2}i,\;\;\;i_2=\frac{L_1}{L_1+L_2}i$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">100</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+</UL>
+</LI>
+<LI>For each of the three series circuits, find <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img36.svg"
+ ALT="$v_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img37.svg"
+ ALT="$v_2$"></SPAN> in
+  terms of the given voltage <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img89.svg"
+ ALT="$v$"></SPAN> and the resistances, capacitances, or 
+  inductances.
+  
+<UL>
+<LI>Resistor circuit:
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_1=\frac{R_1}{R_1+R_2}v,\;\;\;v_2=\frac{R_2}{R_1+R_2}v
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img331.svg"
+ ALT="$\displaystyle v_1=\frac{R_1}{R_1+R_2}v,\;\;\;v_2=\frac{R_2}{R_1+R_2}v$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">101</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>Capacitor circuit:
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_1=\frac{C_2}{C_1+C_2}v,\;\;\;v_2=\frac{C_1}{C_1+C_2}v
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img332.svg"
+ ALT="$\displaystyle v_1=\frac{C_2}{C_1+C_2}v,\;\;\;v_2=\frac{C_1}{C_1+C_2}v$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">102</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>Inductor circuit:
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_1=\frac{L_1}{L_1+L_2}v,\;\;\;v_2=\frac{L_2}{L_1+L_2}v
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img333.svg"
+ ALT="$\displaystyle v_1=\frac{L_1}{L_1+L_2}v,\;\;\;v_2=\frac{L_2}{L_1+L_2}v$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">103</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+</UL>
+
+<P>
+</LI>
+</UL>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node7.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node5.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node7.html">Energy Sources</A>
+<B> Up:</B> <A
+ HREF="node1.html">Chapter 1: Basic Quantities</A>
+<B> Previous:</B> <A
+ HREF="node5.html">Examples: Mechanical and Electrical</A></DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

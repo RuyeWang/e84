@@ -1,0 +1,1189 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>E84 Lab 1: Multimeter</TITLE>
+<META NAME="description" CONTENT="E84 Lab 1: Multimeter">
+<META NAME="keywords" CONTENT="M1250_solution">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="M1250_solution.css">
+
+<LINK REL="next" HREF="node2.html">
+<LINK REL="previous" HREF="M1250_solution.html">
+<LINK REL="up" HREF="M1250_solution.html">
+<LINK REL="next" HREF="node2.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html15"
+  HREF="node2.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html13"
+  HREF="M1250_solution.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html7"
+  HREF="M1250_solution.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html16"
+  HREF="node2.html">About this document ...</A>
+<B> Up:</B> <A NAME="tex2html14"
+  HREF="M1250_solution.html">M1250_solution</A>
+<B> Previous:</B> <A NAME="tex2html8"
+  HREF="M1250_solution.html">M1250_solution</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00010000000000000000">
+E84 Lab 1: Multimeter</A>
+</H1>
+
+<P>
+
+<UL>
+<LI>Study the schematic diagram of a multimeter shown in the figure
+    below carefully to understand how the multimeter measures both DC and
+    AC voltages, DC currents, and resistances at each of the positions of 
+    the rotary switch. 
+
+<P>
+</LI>
+<LI>R24 is a potentiometer, a resistor of <IMG
+ WIDTH="59" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.png"
+ ALT="$10\;K\Omega$"> but with an 
+    additional terminal which is a piece of metal that can slide along the
+    resistor, so that the resistance between the 3rd terminal and any of 
+    the other two is variable between 0 and 10 <IMG
+ WIDTH="35" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$K\Omega$">. See
+    <A NAME="tex2html1"
+  HREF="http://en.wikipedia.org/wiki/Potentiometer">here</A>
+for more detailed explanation. This potentiometer is needed to calibrate
+    the Ohmmeter. Specifically, before taking the measurement of a resistance,
+    the potentiometer needs to be adjusted so that the needle points to 
+    zero on the resistance scale when the two leads of the multimeter touch
+    each other for zero resistance.
+
+<P>
+</LI>
+<LI>Understand how the rotary switch works. It is represented by the 
+    24 circles on top of the diagram and the two layers of rectangular shapes
+    above. At each of the positions, the corresponding circle is connected to
+    both of the rectangles, while all remaining circles are not connected to
+    anything. If you still have difficulty understanding this, it should be
+    most helpful if you take a look at the physical parts and the printed 
+    circuit board (PCB) in the kit.
+
+<P>
+</LI>
+<LI>Do all parts specified below. Turn in your answer on paper with all 
+    the resistance values before the first deadline. 
+
+<P>
+</LI>
+<LI>Assemble the multimeter in the lab, verify every single position 
+    to see if the meter works as expected.
+
+<P>
+</LI>
+</UL>
+
+<P>
+<IMG
+ WIDTH="1416" HEIGHT="778" ALIGN="BOTTOM" BORDER="0"
+ SRC="../M1250Schematic1a.png"
+ ALT="M1250Schematic1a.png">
+
+<P>
+
+<OL>
+<LI><B>Meterhead assembly:</B>
+
+<P>
+
+<UL>
+<LI>When a voltage of <IMG
+ WIDTH="49" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.png"
+ ALT="$0.1\;V$"> or a current of <IMG
+ WIDTH="54" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$50\;\mu A$"> is applied to 
+    the position marked ``<IMG
+ WIDTH="95" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$0.1V/50\mu A$">'', the meter shows a full scale display.
+    Find the total resistance of the internal circuitry in the multimeter at this
+    position. This information is necessary for understanding the DC voltage and
+    current measurement.
+
+<P>
+<B>Solution:</B> <!-- MATH
+ $R_M=0.1\;V/50\;\mu A=2\;k\Omega$
+ -->
+<IMG
+ WIDTH="223" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.png"
+ ALT="$R_M=0.1\;V/50\;\mu A=2\;k\Omega$">
+
+<P>
+</LI>
+<LI>Find the needed voltage and current for a full scale display of the meter
+    head assembly (the meter head in series with <!-- MATH
+ $R8=680\;\Omega$
+ -->
+<IMG
+ WIDTH="100" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.png"
+ ALT="$R8=680\;\Omega$">, in parallel 
+    with both <!-- MATH
+ $R26=31\;k\Omega$
+ -->
+<IMG
+ WIDTH="111" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img8.png"
+ ALT="$R26=31\;k\Omega$"> and <!-- MATH
+ $R24+R25=10k+18k=28\;k\Omega$
+ -->
+<IMG
+ WIDTH="273" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.png"
+ ALT="$R24+R25=10k+18k=28\;k\Omega$">, excluding
+    <!-- MATH
+ $R7=240\;\Omega$
+ -->
+<IMG
+ WIDTH="100" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img10.png"
+ ALT="$R7=240\;\Omega$">). 
+
+<P>
+Also find the over all resistance <IMG
+ WIDTH="34" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.png"
+ ALT="$R_M$"> of the meter head assembly. This 
+    information is necessary for understanding the AC voltage and resistance 
+    measurement.
+
+<P>
+<B>Solution:</B> 
+
+<P>
+The meter-head assembly excluding <IMG
+ WIDTH="81" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.png"
+ ALT="$R7=240$"> is <!-- MATH
+ $2000-240=1760\;\Omega=1.76\;k\Omega$
+ -->
+<IMG
+ WIDTH="262" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.png"
+ ALT="$2000-240=1760\;\Omega=1.76\;k\Omega$">.
+
+<P>
+As a current <IMG
+ WIDTH="122" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.png"
+ ALT="$I_M=0.05\;mA$"> is needed for a full scale display, the 
+    corresponding voltage across the meter-head assembly is 
+    <!-- MATH
+ $V_M=I_M R_M=1.76\times 0.05=0.088\;V$
+ -->
+<IMG
+ WIDTH="312" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.png"
+ ALT="$V_M=I_M R_M=1.76\times 0.05=0.088\;V$">. 
+
+<P>
+</LI>
+<LI>Find the resistance <IMG
+ WIDTH="31" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.png"
+ ALT="$R_m$"> of the meter-head in series with R8 (excluding R31 
+    and R24 + R25).
+
+<P>
+<B>Solution:</B>
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\frac{1}{28}+\frac{1}{31}+\frac{1}{R_m}=\frac{1}{1.76},
+    \;\;\;\;\;\;  R_m=2.0\;k\Omega
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="327" HEIGHT="48" BORDER="0"
+ SRC="img17.png"
+ ALT="\begin{displaymath}
+\frac{1}{28}+\frac{1}{31}+\frac{1}{R_m}=\frac{1}{1.76},
+\;\;\;\;\;\; R_m=2.0\;k\Omega
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The current through the meter head for full scale is:
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+0.088\,V/2\,k\Omega=0.044\,mA=44\,\mu A
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="278" HEIGHT="33" BORDER="0"
+ SRC="img18.png"
+ ALT="\begin{displaymath}
+0.088 V/2 k\Omega=0.044 mA=44 \mu A
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The current through <!-- MATH
+ $R26=31\,k\Omega$
+ -->
+<IMG
+ WIDTH="108" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img19.png"
+ ALT="$R26=31 k\Omega$"> is
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+0.088\,V/31\,k\Omega=0.0028\,mA=2.8\,\mu A
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="302" HEIGHT="33" BORDER="0"
+ SRC="img20.png"
+ ALT="\begin{displaymath}
+0.088 V/31 k\Omega=0.0028 mA=2.8 \mu A
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+</LI>
+</UL>
+
+<P>
+</LI>
+<LI><B>DC Voltage measurement</B>
+
+<P>
+Find the values of R1 through R6 for the 6 scales of DC voltage measurement
+  so that these resistors will indeed allow a full display with <IMG
+ WIDTH="100" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.png"
+ ALT="$I_m=50\;\mu A$"> 
+  at the marked DC voltage for each of the 6 position. Note that <!-- MATH
+ $R13=3\;k\Omega$
+ -->
+<IMG
+ WIDTH="101" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img22.png"
+ ALT="$R13=3\;k\Omega$"> 
+  is in series with <!-- MATH
+ $R7=240\;\Omega$
+ -->
+<IMG
+ WIDTH="100" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img10.png"
+ ALT="$R7=240\;\Omega$"> and the meter-head assembly with total 
+  resistance <!-- MATH
+ $R13+R7+R_M=5\;k\Omega$
+ -->
+<IMG
+ WIDTH="200" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img23.png"
+ ALT="$R13+R7+R_M=5\;k\Omega$">. 
+
+<P>
+<B>Solution:</B>
+
+<P>
+As shown in Figure 4, the circuit for each scale of the DC voltage measurement 
+  is a voltage divider with an internal resistance for the meter-head:
+  
+<UL>
+<LI>0.5V
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+0.5\;\frac{5}{R6+5}=0.25,\;\;\;\;\;\;\;R6=5\;k\Omega
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="280" HEIGHT="47" BORDER="0"
+ SRC="img24.png"
+ ALT="\begin{displaymath}
+0.5\;\frac{5}{R6+5}=0.25,\;\;\;\;\;\;\;R6=5\;k\Omega
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI>2.5V
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+2.5\;\frac{5}{R5+R6+5}=0.25,\;\;\;\;\;\;\;R5=40\;k\Omega
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="335" HEIGHT="47" BORDER="0"
+ SRC="img25.png"
+ ALT="\begin{displaymath}
+2.5\;\frac{5}{R5+R6+5}=0.25,\;\;\;\;\;\;\;R5=40\;k\Omega
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI>10V
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+10\;\frac{5}{R4+R5+R6+5}=0.25,\;\;\;\;\;\;\;R4=150\;k\Omega
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="386" HEIGHT="47" BORDER="0"
+ SRC="img26.png"
+ ALT="\begin{displaymath}
+10\;\frac{5}{R4+R5+R6+5}=0.25,\;\;\;\;\;\;\;R4=150\;k\Omega
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI>50V
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+50\;\frac{5}{R3+R4+R5+R6+5}=0.25,\;\;\;\;\;\;\;R3=800\;k\Omega
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="432" HEIGHT="47" BORDER="0"
+ SRC="img27.png"
+ ALT="\begin{displaymath}
+50\;\frac{5}{R3+R4+R5+R6+5}=0.25,\;\;\;\;\;\;\;R3=800\;k\Omega
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI>250V
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+250\;\frac{5}{R2+R3+R4+R5+R6+5}=0.25,\;\;\;\;\;\;\;R2=4\;M\Omega
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="480" HEIGHT="47" BORDER="0"
+ SRC="img28.png"
+ ALT="\begin{displaymath}
+250\;\frac{5}{R2+R3+R4+R5+R6+5}=0.25,\;\;\;\;\;\;\;R2=4\;M\Omega
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI>1000V
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+1000\;\frac{5}{R1+R2+R3+R4+R5+R6+5}=0.25,\;\;\;\;\;\;\;R1=15\;M\Omega
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="546" HEIGHT="47" BORDER="0"
+ SRC="img29.png"
+ ALT="\begin{displaymath}
+1000\;\frac{5}{R1+R2+R3+R4+R5+R6+5}=0.25,\;\;\;\;\;\;\;R1=15\;M\Omega
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+</UL>
+
+<P>
+</LI>
+<LI><B>AC Voltage measurement</B>
+
+<P>
+Based on the given values of R14 through R17 for AC voltage measurement
+  (Figure 5) find the total resistance <IMG
+ WIDTH="45" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img30.png"
+ ALT="$R_{DM}$"> of the meter-head assembly 
+  in series with the diode D1. Further, find the resistance <IMG
+ WIDTH="31" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img31.png"
+ ALT="$R_D$"> and 
+  voltage drop <IMG
+ WIDTH="28" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.png"
+ ALT="$V_D$"> of the diode D1 when the meter-head has a full scale 
+  display. 
+
+<P>
+Find the values of R14 through R17 so that they will indeed allow the 
+  meter-head to have a full scale display (with an average DC current of 
+  <IMG
+ WIDTH="100" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.png"
+ ALT="$I_m=50\;\mu A$"> going through the meter-head), when the AC voltages of
+  10V, 50V, 250V and 1000V (RMS values) are applied to the corresponding 
+  scale positions.
+
+<P>
+<B>Solution:</B>
+
+<P>
+Pick any two of the four scales, e.g., 10V and 50V, and get
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+10\;\frac{R_{AV}}{R17+R_{AV}}=50\;\frac{R_{AV}}{R17+R16+R_{AV}}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="318" HEIGHT="49" BORDER="0"
+ SRC="img33.png"
+ ALT="\begin{displaymath}
+10\;\frac{R_{AV}}{R17+R_{AV}}=50\;\frac{R_{AV}}{R17+R16+R_{AV}}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+i.e.,
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+10\;\frac{R_{AV}}{83.3+R_{AV}}=50\;\frac{R_{AV}}{443.3+R_{AV}}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="272" HEIGHT="49" BORDER="0"
+ SRC="img34.png"
+ ALT="\begin{displaymath}
+10\;\frac{R_{AV}}{83.3+R_{AV}}=50\;\frac{R_{AV}}{443.3+R_{AV}}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Solving for <IMG
+ WIDTH="41" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img35.png"
+ ALT="$R_{AV}$"> we get <!-- MATH
+ $R_{AV}=6.7\;k\Omega$
+ -->
+<IMG
+ WIDTH="119" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img36.png"
+ ALT="$R_{AV}=6.7\;k\Omega$">. Alternatively, we can 
+  pick another pair of 250V and 1000V, and get
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+250\;\frac{R_{AV}}{R17+R16+R15+R_{AV}}=1000\;\frac{R_{AV}}{R17+R16+R15+R14+R_{AV}},
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="577" HEIGHT="49" BORDER="0"
+ SRC="img37.png"
+ ALT="\begin{displaymath}
+250\;\frac{R_{AV}}{R17+R16+R15+R_{AV}}=1000\;\frac{R_{AV}}{R17+R16+R15+R14+R_{AV}},
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+i.e.,
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+250\;\frac{R_{AV}}{2243.3+R_{AV}}=1000\;\frac{R_{AV}}{8993.3+R_{AV}}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="328" HEIGHT="49" BORDER="0"
+ SRC="img38.png"
+ ALT="\begin{displaymath}
+250\;\frac{R_{AV}}{2243.3+R_{AV}}=1000\;\frac{R_{AV}}{8993.3+R_{AV}}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Solving for <IMG
+ WIDTH="41" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img35.png"
+ ALT="$R_{AV}$"> we again get <!-- MATH
+ $R_{AV}=6.7\;k\Omega$
+ -->
+<IMG
+ WIDTH="119" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img36.png"
+ ALT="$R_{AV}=6.7\;k\Omega$">. 
+
+<P>
+As we know <!-- MATH
+ $R_M=1.76\;k\Omega$
+ -->
+<IMG
+ WIDTH="121" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img39.png"
+ ALT="$R_M=1.76\;k\Omega$">, the resistance of D1 must be 
+  <!-- MATH
+ $R_D=6.7-1.76=4.94\;k\Omega$
+ -->
+<IMG
+ WIDTH="224" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img40.png"
+ ALT="$R_D=6.7-1.76=4.94\;k\Omega$">. Correspondingly, at the full display with
+  <IMG
+ WIDTH="100" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.png"
+ ALT="$I_m=50\;\mu A$">, the voltages across D1 is
+  <!-- MATH
+ $V_D=I_m R_D=0.05\times 4.94=0.247\;V$
+ -->
+<IMG
+ WIDTH="303" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img41.png"
+ ALT="$V_D=I_m R_D=0.05\times 4.94=0.247\;V$">. As <IMG
+ WIDTH="116" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img42.png"
+ ALT="$V_m=0.088\;V$">, the total
+  voltage across the meter-head and D1 is <!-- MATH
+ $V_D+V_m=0.335\;V$
+ -->
+<IMG
+ WIDTH="162" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img43.png"
+ ALT="$V_D+V_m=0.335\;V$">.
+
+<P>
+Any AC voltage to be measured needs to be rectified (half-wave) and then
+  converted to the average DC value. When the AC voltage is <IMG
+ WIDTH="34" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img44.png"
+ ALT="$1\;V$">, its
+  peak value is <!-- MATH
+ $V_p=\sqrt{2}=1.4142\;V$
+ -->
+<IMG
+ WIDTH="171" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img45.png"
+ ALT="$V_p=\sqrt{2}=1.4142\;V$">, the average DC value after
+  half-wave rectification is 
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V_{AV}=\sqrt{2}\times \frac{2}{\pi}\times\frac{1}{2}
+  =\frac{\sqrt{2}}{\pi}\approx\frac{1.4142}{3.1416}=0.4502\;V
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="390" HEIGHT="50" BORDER="0"
+ SRC="img46.png"
+ ALT="\begin{displaymath}
+V_{AV}=\sqrt{2}\times \frac{2}{\pi}\times\frac{1}{2}
+=\frac{\sqrt{2}}{\pi}\approx\frac{1.4142}{3.1416}=0.4502\;V
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+We can show that in each of the four AC voltage scales, the meter-head
+  has a full scale display:
+  
+<UL>
+<LI>10V
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+I_m=\frac{10\times 0.4502}{6.7+R_{17}}=\frac{4.5}{90}=0.05\;mA
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="291" HEIGHT="48" BORDER="0"
+ SRC="img47.png"
+ ALT="\begin{displaymath}
+I_m=\frac{10\times 0.4502}{6.7+R_{17}}=\frac{4.5}{90}=0.05\;mA
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Solving this we get <!-- MATH
+ $R_{17}=83.3\,k\Omega$
+ -->
+<IMG
+ WIDTH="118" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img48.png"
+ ALT="$R_{17}=83.3 k\Omega$">
+</LI>
+<LI>50V
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+I_m=\frac{50\times 0.4502}{6.7+83.3+R_{16}}=\frac{22.51}{450}=0.05\;mA
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="347" HEIGHT="48" BORDER="0"
+ SRC="img49.png"
+ ALT="\begin{displaymath}
+I_m=\frac{50\times 0.4502}{6.7+83.3+R_{16}}=\frac{22.51}{450}=0.05\;mA
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Solving this we get <!-- MATH
+ $R_{16}=360\,k\Omega$
+ -->
+<IMG
+ WIDTH="113" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img50.png"
+ ALT="$R_{16}=360 k\Omega$">
+</LI>
+<LI>250V
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+I_m=\frac{250\times 0.4502}{6.7+83.3+360+R_{15}}=\frac{112.55}{2250}=0.05\;mA
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="408" HEIGHT="48" BORDER="0"
+ SRC="img51.png"
+ ALT="\begin{displaymath}
+I_m=\frac{250\times 0.4502}{6.7+83.3+360+R_{15}}=\frac{112.55}{2250}=0.05\;mA
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Solving this we get <!-- MATH
+ $R_{15}=1800\,k\Omega$
+ -->
+<IMG
+ WIDTH="123" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img52.png"
+ ALT="$R_{15}=1800 k\Omega$">
+</LI>
+<LI>1000V
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+I_m=\frac{1000\times 0.4502}{6.7+83.3+360+1800+R_{14}}=\frac{450}{9000}=0.05\;mA
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="453" HEIGHT="48" BORDER="0"
+ SRC="img53.png"
+ ALT="\begin{displaymath}
+I_m=\frac{1000\times 0.4502}{6.7+83.3+360+1800+R_{14}}=\frac{450}{9000}=0.05\;mA
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Solving this we get <!-- MATH
+ $R_{14}=6750\,k\Omega$
+ -->
+<IMG
+ WIDTH="123" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img54.png"
+ ALT="$R_{14}=6750 k\Omega$">
+</LI>
+</UL>
+
+<P>
+</LI>
+<LI><B>DC current measurement</B>
+
+<P>
+The circuit shown in Figure 6 has some major mistake! Correct it.
+
+<P>
+Find the values of R12 and R11 so that the meter-head will have a full
+  scale display (with an current of <IMG
+ WIDTH="100" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.png"
+ ALT="$I_m=50\;\mu A$">), when the DC currents 
+  of 2.5 mA and 25 mA are applied to the corresponding scale positions.  
+
+<P>
+Use the given values of R9=0.97 <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img55.png"
+ ALT="$\Omega$"> and R10=0.04 <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img55.png"
+ ALT="$\Omega$"> (not very 
+  accurate!), find current <IMG
+ WIDTH="25" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img56.png"
+ ALT="$I_m$"> through the meter-head when the applied DC 
+  current is 10 A. For this current to be exactly <IMG
+ WIDTH="73" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img57.png"
+ ALT="$0.05\;mA$">, what value 
+  should R10 take?
+
+<P>
+<B>Solution:</B>
+
+<P>
+The circuit for each scale of the DC current measurement is a current divider
+  with an internal resistance for the meter-head:
+
+<P>
+
+<UL>
+<LI>2.5 mA
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+I_m=2.5\;\frac{R12}{R12+5000}=0.05,\;\;\;\;\;\;\;R12=102
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="363" HEIGHT="47" BORDER="0"
+ SRC="img58.png"
+ ALT="\begin{displaymath}
+I_m=2.5\;\frac{R12}{R12+5000}=0.05,\;\;\;\;\;\;\;R12=102
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI>25 mA
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+I_m=25\;\frac{R11}{R11+5000}=0.05,\;\;\;\;\;\;\;R11=10
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="348" HEIGHT="47" BORDER="0"
+ SRC="img59.png"
+ ALT="\begin{displaymath}
+I_m=25\;\frac{R11}{R11+5000}=0.05,\;\;\;\;\;\;\;R11=10
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI>250 mA
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+I_m=250\;\frac{R9+R10}{R9+R10+5000}=0.05,\;\;\;\;\;\;\;\;\;R9+R10=1
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="452" HEIGHT="47" BORDER="0"
+ SRC="img60.png"
+ ALT="\begin{displaymath}
+I_m=250\;\frac{R9+R10}{R9+R10+5000}=0.05,\;\;\;\;\;\;\;\;\;R9+R10=1
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+</UL>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+I_m=10000\;\frac{R10}{5000+0.97+R10}=0.05\;mA,\;\;\;\;\;
+  R10=0.025\;\Omega
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="500" HEIGHT="47" BORDER="0"
+ SRC="img61.png"
+ ALT="\begin{displaymath}
+I_m=10000\;\frac{R10}{5000+0.97+R10}=0.05\;mA,\;\;\;\;\;
+R10=0.025\;\Omega
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+</LI>
+<LI><B>Resistance measurement</B>
+
+<P>
+
+<UL>
+<LI>Before taking the measurement of a given external resistance <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img62.png"
+ ALT="$R$">, 
+    the multimeter needs to be calibrated by adjusting R24 (assume the bottom 
+    part is x and the top part is 10-x), so that the meter-head shows a full 
+    scale display, when <IMG
+ WIDTH="53" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img63.png"
+ ALT="$R=0$"> (with the two leads short circuited). Determine 
+    the value of this x. 
+
+<P>
+</LI>
+<LI>Find the value of R19 for the scale of the <!-- MATH
+ $\times 1\;k\Omega$
+ -->
+<IMG
+ WIDTH="58" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img64.png"
+ ALT="$\times 1\;k\Omega$">
+    resistance measurement, so that when an external resistance <IMG
+ WIDTH="92" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img65.png"
+ ALT="$R=20\;k\Omega$">
+    being measured, the display of the meter is exactly halfway (in the middle),
+    i.e., the current through the meter is <IMG
+ WIDTH="54" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img66.png"
+ ALT="$25\;\mu A$">.
+
+<P>
+</LI>
+</UL>
+
+<P>
+<B>Solution:</B>
+
+<P>
+
+<UL>
+<LI>Calibration:
+
+<P>
+The resistance of the meter-head <IMG
+ WIDTH="31" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.png"
+ ALT="$R_m$"> in parallel with R26 is:
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+R_m||R26=2||31=1.88\;k\Omega
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="220" HEIGHT="33" BORDER="0"
+ SRC="img67.png"
+ ALT="\begin{displaymath}
+R_m\vert\vert R26=2\vert\vert 31=1.88\;k\Omega
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+When <IMG
+ WIDTH="53" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img63.png"
+ ALT="$R=0$">, the total load of the 3V battery is 
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+R_t=44+(18+x)||(10-x+1.88)=44+\frac{(18+x)(11.88-x)}{(18+x)+(11.88-x)}
+    =\frac{1528.5-6.12\;x-x^2}{29.88}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="689" HEIGHT="53" BORDER="0"
+ SRC="img68.png"
+ ALT="\begin{displaymath}
+R_t=44+(18+x)\vert\vert(10-x+1.88)=44+\frac{(18+x)(11.88-x)}{(18+x)+(11.88-x)}
+=\frac{1528.5-6.12\;x-x^2}{29.88}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The total current through the 3V battery is:
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+I_t=\frac{3V}{R_t}=\frac{3\times 29.88}{1528.5-6.12\;x-x^2}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="260" HEIGHT="49" BORDER="0"
+ SRC="img69.png"
+ ALT="\begin{displaymath}
+I_t=\frac{3V}{R_t}=\frac{3\times 29.88}{1528.5-6.12\;x-x^2}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The current through the meter in parallel with R26 needs to be 0.05 <IMG
+ WIDTH="30" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img70.png"
+ ALT="$\mu A$">:
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+I_m=I_t\;\frac{18+x}{29.88}
+    =\frac{3\times 29.88}{1528.5-6.12\;x-x^2}\;\frac{18+x}{29.88}
+    =\frac{3(18+x)}{1528.5-6.12\;x-x^2}=0.044+0.0028=0.047
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="774" HEIGHT="49" BORDER="0"
+ SRC="img71.png"
+ ALT="\begin{displaymath}
+I_m=I_t\;\frac{18+x}{29.88}
+=\frac{3\times 29.88}{1528.5-6...
+...9.88}
+=\frac{3(18+x)}{1528.5-6.12\;x-x^2}=0.044+0.0028=0.047
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Solving for a positive value of <IMG
+ WIDTH="15" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img72.png"
+ ALT="$x$"> we get <IMG
+ WIDTH="79" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img73.png"
+ ALT="$x=5\;k\Omega$">. Now we have
+    <IMG
+ WIDTH="101" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img74.png"
+ ALT="$18+x=23$">, <IMG
+ WIDTH="92" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img75.png"
+ ALT="$10-x=5$">. 
+
+<P>
+The total resistance is
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+R_t=\frac{1528.5-6.12\;x-x^2}{29.88}=49\;k\Omega
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="286" HEIGHT="48" BORDER="0"
+ SRC="img76.png"
+ ALT="\begin{displaymath}
+R_t=\frac{1528.5-6.12\;x-x^2}{29.88}=49\;k\Omega
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+and the total current is
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+I_t=\frac{3}{R_t}=\frac{3}{49}=0.061
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="176" HEIGHT="48" BORDER="0"
+ SRC="img77.png"
+ ALT="\begin{displaymath}
+I_t=\frac{3}{R_t}=\frac{3}{49}=0.061
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+<IMG
+ WIDTH="418" HEIGHT="433" ALIGN="BOTTOM" BORDER="0"
+ SRC="../multimeter2b.png"
+ ALT="multimeter2b.png">
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\times 1\;k\Omega$
+ -->
+<IMG
+ WIDTH="58" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img64.png"
+ ALT="$\times 1\;k\Omega$"> scale, <IMG
+ WIDTH="92" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img65.png"
+ ALT="$R=20\;k\Omega$">
+
+<P>
+The total current through the battery is
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\frac{3}{R+R19||R_t}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="101" HEIGHT="50" BORDER="0"
+ SRC="img78.png"
+ ALT="\begin{displaymath}
+\frac{3}{R+R19\vert\vert R_t}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The current through <!-- MATH
+ $R23=44\;k\Omega$
+ -->
+<IMG
+ WIDTH="111" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img79.png"
+ ALT="$R23=44\;k\Omega$"> (current divider) need to be <IMG
+ WIDTH="37" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img80.png"
+ ALT="$I_t/2$"> 
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\frac{3}{R+R19||R_t}\;\frac{R19}{R19+R_t}=\frac{I_t}{2}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="229" HEIGHT="51" BORDER="0"
+ SRC="img81.png"
+ ALT="\begin{displaymath}
+\frac{3}{R+R19\vert\vert R_t}\;\frac{R19}{R19+R_t}=\frac{I_t}{2}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Substituting <IMG
+ WIDTH="92" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img65.png"
+ ALT="$R=20\;k\Omega$">, <!-- MATH
+ $R_t=49\;k\Omega$
+ -->
+<IMG
+ WIDTH="97" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img82.png"
+ ALT="$R_t=49\;k\Omega$"> and <IMG
+ WIDTH="122" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img83.png"
+ ALT="$I_t=0.061\;mA$">, 
+    and solving for <IMG
+ WIDTH="38" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img84.png"
+ ALT="$R19$"> we get <!-- MATH
+ $R19=33.4\approx 34\;k\Omega$
+ -->
+<IMG
+ WIDTH="169" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img85.png"
+ ALT="$R19=33.4\approx 34\;k\Omega$">.    
+
+<P>
+</LI>
+</UL>
+</LI>
+</OL>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html15"
+  HREF="node2.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html13"
+  HREF="M1250_solution.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html7"
+  HREF="M1250_solution.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html16"
+  HREF="node2.html">About this document ...</A>
+<B> Up:</B> <A NAME="tex2html14"
+  HREF="M1250_solution.html">M1250_solution</A>
+<B> Previous:</B> <A NAME="tex2html8"
+  HREF="M1250_solution.html">M1250_solution</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Ruye Wang
+2016-06-26
+</ADDRESS>
+</BODY>
+</HTML>

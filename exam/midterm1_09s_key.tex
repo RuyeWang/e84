@@ -1,0 +1,118 @@
+\documentstyle[11pt]{article}
+\usepackage{html}
+\begin{document}
+\begin{center}
+{\Large \bf  E84 Midterm Exam 1 (Fall 2008)}
+\end{center}
+
+\section*{E84 Midterm Exam 1}
+
+{\bf Instructions}
+\begin{itemize}
+\item In class, open notes, feel free to use a calculator, but not any software package 
+  such as Multisim. 
+\item Mark your name and question number clearly on top of each page.
+  Indicate the total number of pages submitted.
+\item When solving a problem, list all the steps. In each step, indicate
+  concisely what you are doing in English, then show the calculation 
+  and the result of for the step. {\bf Box the final answer}.
+\item  A final answer, even if correct, without evidence of the steps
+  leading to it will receive ZERO credit.
+\end{itemize}
+
+\begin{enumerate}
+
+\item {\bf Problem 1. (40 pts)}
+
+  Find the equivalent resistance $R_{ab}$ between points a and b. (The diagonal
+  wires are not connected to each other.)
+
+  \htmladdimg{../midterm1_09sb.gif}
+
+  {\bf Solution}
+
+  The circuit can be converted into two parallel branches between a and b
+  each composed of two resistors with 20 $\Omega$ and 60 $\Omega$ in series,
+  and two parallel branches between the two middle points each composed of 
+  two 20 $\Omega$ resistors in series and two 60 $\Omega$ resistors in
+  series, respectively. This is a balanced bridge with no current through
+  the middle branches, i.e., $R_{ab}=40\Omega$
+
+\item {\bf Problem 2. (60 pts)}
+
+  Find all six currents labeled as $I_1$ through $I_6$ in the figure, where
+  $R1=4\Omega$, $R2=4\Omega$, $R3=2\Omega$, and $R4=2\Omega$.
+
+  \htmladdimg{../midterm1_09sa.gif}
+
+  {\bf Solution:}
+  $I_2=20A$.
+  KVL around outer loop:
+  \[ 110+100-4I_1-90=0,\;\;\;\;\Rightarrow I_1=30A \]
+  \[ I_3=I_1-I_2=10A \]
+  Also  we have
+  \[ R_3I_4+R_4I_5=2(I_4+I_5)=110 V,\;\;\;\;\Rightarrow I_4+I_5=55 \]
+  and
+  \[ I_5-I_4=20 \]
+  Solving these we get $I_5=37.5A$ and $I_4=17.5A$.
+  Finally $I_6=I_5+I_3=37.5+10=47.5$.
+
+\item {\bf Problem 3. (35 points)}
+
+  Find voltage $V$ and current $I$ as labeled in the following figure:
+
+  \htmladdimg{../midterm1_09sc.gif}
+
+  where $R_1=5\Omega$, $R_2=1\Omega$, $R_3=6\Omega$, $R_4=6\Omega$.
+
+  {\bf Solution:}
+
+  {\bf Method 0, voltage/current source conversion:}
+  \begin{itemize}
+  \item Convert current source 9A and $R_2$ into a voltage source of $9\times 5=45V$
+    in series with $R_1=5$. 
+  \item Combine $R_1=5$ in series with $R_2=1$ to get $R'=6$ still in series with 
+    $V'=45V$. 
+  \item Convert this voltage source back to a current source with $I'=45/6$ in 
+    parallel with $R'=6$. 
+  \item Convert the other voltage source into a current source with $I''=24/6$ in
+    parallel with $R''=6$.
+  \item Combine the two parallel current sources to get $I'''=I'+I''=(45+24)/6=23/2$
+    in parallel with $R'''=R'||R''=3$.
+  \item Use current division to find load current $I=I'''/3=23/6$.
+  \item Find load voltage $V=IR_4=23$.
+  \end{itemize}
+
+  {\bf Method 1, superposition:}
+    \begin{itemize}
+    \item Turn voltage source off:
+      \[ I'=9\times\frac{5}{5+(1+6||6)}\frac{1}{2}=2.5A \]
+      \[ V'=6I'=15 V \]
+    \item Turn current source off:
+      \[ I''=\frac{24}{6+(6||6)}\frac{1}{2}=4/3\;A \]
+      \[ V''=6I''=8V \]
+  \end{itemize}
+  The total voltage and current are therefore $V=V''+V''=15+8=23V$,
+  $I=I'+I''=23/6A$.
+
+  {\bf Method 2, Thevenin's theorem:}
+  
+  \[ R_T=6||6=3 \]
+  $V_T$ due to 24V:
+  \[ V'_T=24-24 \frac{6}{12}=12V \]
+  $V_T$ due to 9A:
+  \[ V''_T=9\frac{5}{5+7}\times 6=22.5 \]
+  Thererfore
+  \[ V_T=V'_T+V''_T=34.5 \]
+  Reconnecting load $R_4=6$, we get
+  \[ V=V_T \frac{6}{6+3}=34.5\times 2/3=23 V \]
+  and
+  \[ I=V/R_4=23/6 \]
+
+\end{itemize}
+
+\end{document}
+
+
+
+

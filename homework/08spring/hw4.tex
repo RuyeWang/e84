@@ -1,0 +1,145 @@
+\documentstyle[11pt]{article}
+\usepackage{html}
+\begin{document}
+\begin{center}
+{\Large \bf E84 Homework 4}
+\end{center}
+\begin{enumerate}
+
+\begin{enumerate}
+
+\item In the voltage divider circuit below, $V_0=20V$, $R_1=R_2=500\Omega$. 
+Use Thevenin's theorem to find the current through and voltage across the 
+load resistor $R_L$ when it is $100\Omega$, $200\Omega$, $300\Omega$, 
+respectively.
+
+\htmladdimg{../voltagedivider.gif}
+
+% $R_T=250$, $V_T=10V$
+% When $R_L=100$, $I_L=V_T/(R_T+R_L)=1/35$, $V_L=I_L R_L=20/7$
+% When $R_L=200$, $I_L=V_T/(R_T+R_L)=1/45$, $V_L=I_L R_L=40/9$
+% When $R_L=300$, $I_L=V_T/(R_T+R_L)=1/55$, $V_L=I_L R_L=60/11$
+
+\item Using Thevenin's theorem to determine the current in the $3\Omega$ 
+resistor of the following figure.
+
+\htmladdimg{../hw2c.gif}
+
+% move two voltage sources to left, and 3-$\Omega$ resistor to the right as load
+% find equivalent voltage Vo and internal resistance and Ro:
+% current going clockwise around the loop (without load): (30-24)/(6+12)=1/3
+% voltages across 6 ohm resistor and 12 ohm resistor are -2V and 4V, Vo=30-2=24+4=28V
+% Ro=6//12=4ohm, current through load resistor is 28/(4+3)=7A
+
+\item Find voltage across and the current through the 10-$\Omega$ resistor.
+
+\htmladdimg{../hw2d.gif}
+
+% use superposition principle. When 24V is acting alone with 1A open, 
+% parallel resistors 15 and 10 become 15//10=6, V'ab=24 x 6/(6+6)=12V
+% I'=12/10=1.2A. When 1A is acting alone with 24V closed, parallel resistors
+% 6 and 15 become 90/21, I''=10/(10+90/21)=3/10=0.3 A, V''ab=I'' x 10=3V
+% overall V=V'+V''=12+3=15, I=I'+I''=1.2+0.3=1.5A
+
+
+\item 
+
+Find all currents in the diagram in which V=120V, $R_1=2\Omega$, $R_2=20\Omega$. 
+{\bf Hint:} it is very hard to solve the problem by finding the currents in the
+order of $I_1$, $I_3$, $I_5$, as computing the resistances of the resistor 
+network is tedious. However, it is much more straight forward to find the 
+currents in the order of $I_5$, $I_3$, $I_1$, if you assume $I_5$ is known, e.g.,
+$I_5=1A$. However, the voltage for the voltage source obtained based on this 
+assumption is of course not as given (120V). In this case, the linearity property
+$F(ax+by)=aF(x)+bF(y)$ can be applied. In particular, given $y=F(x)$, then 
+$ay=F(ax)=aF(x)$. Use this relationship to find the actual values of the 
+currents.
+
+\htmladdimg{../hw2b.gif}
+
+% use node c as reference (ground), assume $I_5=1$, then $V_b=(20+2)=22V$
+% $I_4=22/20=1.1A$, $I_3=I_4+I_5=1.1+1=2.1A$, $V_a=2.1\times 2+V_b=4.2+22=26.2V$
+% $I_2=V_a/20=26.2/20=1.31A$, $I_1=I_2+I_3=1.31+2.1=3.41A$, 
+% $V_0=I_1\times 2+V_a=2\times 3.41+26.2=33.02$.
+% But the given voltage source is 120V, all currents should be scaled up by
+% a factor $120/33.02=3.634$, $I_1=12.39$, $I_2=4.76$, $I_3=7.63$, $I_4=4.00$,
+% $I_5=3.63$
+
+\item In the circuit below, $R_1=1\Omega$, $V_2=2V$, $R_3=1\Omega$, $R_4=3\Omega$
+$I_5=5A$, $V_6=2V$, and $R_6=1\Omega$. Find
+\begin{enumerate}
+\item current through voltage source $V_2$. 
+\item current through resistor $R_3$
+\end{enumerate}
+(Hint: consider superposition theorem.)
+
+\htmladdimg{../hw3a.gif}
+
+% consider each of the three sources alone:
+% V2 alone (I5 open, V6 short): I'  =V2/[R1+R3//(R3+R6)]=2/(1+1//4)=2/(1+4/5)=10/9 (left)
+% V6 alone (I5 open, V2 short): I'' =0.5 x V6/(R6+R4+R1//R3)=1/(1+3+0.5)=1/4.5=2/9 (left)
+% I5 alone (V2, V6 both short): 
+% current thru R6: I5xR4/[R4+(R6+R1//R3)]=5x3/4.5=10/3
+% current thru R4: I5x(R6+R1//R3)/[R4+(R6+R1//R3)]=5x1.5/4.5=5/3
+% current thru R1 is (half of that thru R6): 5/3
+% I'''=current thru R4 + current thru R1=5/3+5/3=10/3 (right)
+% current thru V2: I'+I''+I'''=10/9+2/9-10/3=-2 (left) or 2 (right)
+
+% currents thru R3 due to V2 and V6 respectively are the same as that thru V2
+% currents thru R3 due to I5 is (half of current thru R6 above): 5/3 (left)
+% total current thru R3: 10/9+2/9+5/3=3 (left) 
+
+% The sum of two currents is equal to I5: 2+3=5
+
+\item In the circuit below, 
+  $R_1=1\Omega$, $R_2=2\Omega$, $R_3=3\Omega$, $R_4=4\Omega$, $R_5=5\Omega$, 
+  $V_1=4V$, $V_2=5V$. Find voltage $V$ across and current $I$ through the
+  load resistor $R_3$ by converting the rest of the circuit into a
+\begin{itemize}
+  \item Thevenin's voltage source $V_T$ with $R_T$
+  \item Norton's current source $I_N$ with $R_N$
+\end{itemize}
+Verify your results by converting the current source into a voltage source
+(or vise versa). Then find voltage $V$ and current $I$ associated with load
+$R_3$.
+
+\htmladdimg{../hw3b.gif}
+
+\end{enumerate}
+\end{document}
+
+\item The circuit in the figure below has a voltage source $V_0=20V$ and a current 
+source $I_0=3A$, and four resistors $R_1=20\Omega$, $R_2=10\Omega$, $R_3=30\Omega$ 
+and $R_4=10\Omega$. Find the voltage across $R_4$ and the power dissipated by it.
+
+\htmladdimg{../hw2a.gif}
+
+%If voltage source acts alone (current source open), according to voltage divider,
+%V'_4=V0 R4/(R2+R2) = 10V, power consumption is W'=V^2/R=10^2/10=10W
+%If current source acts alone (voltage source short), according to current divider
+%V''_4=(I0 R2/(R22+R4) R4=[3x10/(10+10)x10=15V, power consumption is W''=V^2/R=15^2/10=22.5W
+%Total V_4=V'_4+V''_4=10+15=25V, total power W=25^2/10=62.5W not equal to 10+22.5=32.5
+
+
+
+
+\item In the circuit below, $V_0=18V$, $R_1=R_2-3\Omega$, $R_3=6\Omega$,
+$R_4=1.5\Omega$. Find the value of current $I$ when $R_5$ is $1\Omega$,
+$1\Omega$, and $1\Omega$. Moreover, find the value for $R_5$ for the
+desired current $I=0.5A$.
+
+{\bf Hint:} Single out $R_5$ as the load of a network composed of all other
+resistors $R_1$, $R_2$, $R_3$, $R_4$ and the voltage source $V_0=18V$, then
+apply Thevenin's theorem to find the open-circuit voltage $V_T$ in series
+with the internal resistance $R_T$.
+
+% the open-circuit voltage $V_T=V_{ab}$ is the difference between nodes 
+% a and b: V_{oc}=V_0 R_3/(R_1+R_3)-V_0 R_4/(R_2+R_4)=18(6/9-1.5/4.5)=6V
+% the internal resistance between nodes a and b (with V_0 short circuit)
+% is R_1//R_3+R_2//R_4=3x6/9+3x1.5/4.5=3. 
+% R_5=1, I=6/(3+1)=1.5, R_5=2, I=6/(3+2)=1.2, R_5=3, I=6/(3+3)=1,
+% I=0.5, R_5=V_T/I-R_T=6/0.5-3=9
+
+
+
+\htmladdimg{../hw2i.gif}

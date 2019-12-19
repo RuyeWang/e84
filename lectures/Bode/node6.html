@@ -1,0 +1,696 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Bode Plots of first and Second Order Systems</TITLE>
+<META NAME="description" CONTENT="Bode Plots of first and Second Order Systems">
+<META NAME="keywords" CONTENT="Bode">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="Bode.css">
+
+<LINK REL="next" HREF="node7.html">
+<LINK REL="previous" HREF="node5.html">
+<LINK REL="up" HREF="Bode.html">
+<LINK REL="next" HREF="node7.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html70"
+  HREF="node7.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html68"
+  HREF="Bode.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html62"
+  HREF="node5.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html71"
+  HREF="node7.html">About this document ...</A>
+<B> Up:</B> <A NAME="tex2html69"
+  HREF="Bode.html">Bode</A>
+<B> Previous:</B> <A NAME="tex2html63"
+  HREF="node5.html">Bode Plots of Components</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00060000000000000000">
+Bode Plots of first and Second Order Systems</A>
+</H1>
+<B>First order circuits</B>
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../figures/RC.gif"
+ ALT="RC.gif">
+
+<P>
+
+<UL>
+<LI>Voltage <IMG
+ WIDTH="27" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img159.png"
+ ALT="$V_C$"> across C is treated as output. According to voltage
+  divider rule, we have:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+H_C(j\omega)=\frac{V_C}{V_{in}}=\frac{Z_C}{Z_R+Z_C}
+    =\frac{1/j\omega C}{R+1/j\omega C} 
+    =\frac{1}{j\omega RC+1}=\frac{1}{j\omega \tau+1}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="539" HEIGHT="52" BORDER="0"
+ SRC="img160.png"
+ ALT="\begin{displaymath}H_C(j\omega)=\frac{V_C}{V_{in}}=\frac{Z_C}{Z_R+Z_C}
+=\frac{1...
+.../j\omega C}
+=\frac{1}{j\omega RC+1}=\frac{1}{j\omega \tau+1} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where <IMG
+ WIDTH="69" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img161.png"
+ ALT="$\tau=RC$">.
+</LI>
+<LI>Voltage <IMG
+ WIDTH="26" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img162.png"
+ ALT="$V_R$"> across R is treated as output:
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+H_R(j\omega)=\frac{V_R}{V_{in}}=\frac{Z_R}{Z_R+Z_C}
+    =\frac{R}{R+1/j\omega C}=\frac{j\omega RC}{j\omega RC+1} 
+    =\frac{j\omega \tau}{j\omega \tau+1}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="538" HEIGHT="51" BORDER="0"
+ SRC="img163.png"
+ ALT="\begin{displaymath}H_R(j\omega)=\frac{V_R}{V_{in}}=\frac{Z_R}{Z_R+Z_C}
+=\frac{R...
+...omega RC}{j\omega RC+1}
+=\frac{j\omega \tau}{j\omega \tau+1} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+</UL>
+As <IMG
+ WIDTH="67" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img164.png"
+ ALT="$H_R(j\omega)$"> can be written as:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+H_R(j\omega)= \frac{1}{j\omega \tau+1} j\omega \tau
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="186" HEIGHT="49" BORDER="0"
+ SRC="img165.png"
+ ALT="\begin{displaymath}H_R(j\omega)= \frac{1}{j\omega \tau+1} j\omega \tau \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The first term is just <IMG
+ WIDTH="67" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img166.png"
+ ALT="$H_C(j\omega)$">. Now the log-magnitude is:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Lm\;H_R(j\omega)
+=20\log_{10} \left| \frac{1}{j\omega \tau+1}\right|+20\log_{10} \left| j\omega \tau \right| 
+=Lm\; H_C(j\omega) +20\log_{10} (\omega\tau)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="615" HEIGHT="55" BORDER="0"
+ SRC="img167.png"
+ ALT="\begin{displaymath}Lm\;H_R(j\omega)
+=20\log_{10} \left\vert \frac{1}{j\omega \ta...
+...\tau \right\vert
+=Lm\; H_C(j\omega) +20\log_{10} (\omega\tau) \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The first term is the same as <IMG
+ WIDTH="67" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img166.png"
+ ALT="$H_C(j\omega)$"> and the second plot is a straight line
+with slope of 20 dB/dec. at <!-- MATH
+ $\omega=\omega_c=1/\tau$
+ -->
+<IMG
+ WIDTH="114" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img168.png"
+ ALT="$\omega=\omega_c=1/\tau$">, the first term is -3 dB and the  
+second is 0 dB.  The phase plot is:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\angle H_R(j\omega)=\angle \left(\frac{1}{j\omega \tau+1}\right)+\angle j\omega \tau  
+=\angle H_C(j\omega)+\frac{\pi}{2}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="402" HEIGHT="55" BORDER="0"
+ SRC="img169.png"
+ ALT="\begin{displaymath}\angle H_R(j\omega)=\angle \left(\frac{1}{j\omega \tau+1}\right)+\angle j\omega \tau
+=\angle H_C(j\omega)+\frac{\pi}{2} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+In the plots below, <IMG
+ WIDTH="73" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img170.png"
+ ALT="$\tau=0.01$">, <IMG
+ WIDTH="81" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img171.png"
+ ALT="$\omega_C=100$"> rad/sec.
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../figures/bodeplot1storder1.gif"
+ ALT="bodeplot1storder1.gif">
+
+<P>
+Define <!-- MATH
+ $\omega_c=1/\tau=1/RC$
+ -->
+<IMG
+ WIDTH="150" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img172.png"
+ ALT="$\omega_c=1/\tau=1/RC$"> as the cut-off frequency, then when <!-- MATH
+ $\omega=\omega_c$
+ -->
+<IMG
+ WIDTH="60" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img173.png"
+ ALT="$\omega=\omega_c$">, 
+we have <IMG
+ WIDTH="62" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img90.png"
+ ALT="$\omega\tau=1$">, and <!-- MATH
+ $|H_R(j\omega)|=|H_C(j\omega)|=1/\sqrt{2}$
+ -->
+<IMG
+ WIDTH="245" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img174.png"
+ ALT="$\vert H_R(j\omega)\vert=\vert H_C(j\omega)\vert=1/\sqrt{2}$">, i.e., <IMG
+ WIDTH="23" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img175.png"
+ ALT="$\omega_c$">
+is the half-power point, where <IMG
+ WIDTH="68" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img52.png"
+ ALT="$\vert H(j\omega)\vert$"> is -3 dB.
+
+<P>
+<B>Second order circuits</B>
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../figures/RCL.gif"
+ ALT="RCL.gif">
+
+<P>
+
+<UL>
+<LI>Voltage <IMG
+ WIDTH="27" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img159.png"
+ ALT="$V_C$"> across C is treated as output:
+  <BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+H_C(j\omega)&=&\frac{V_C}{V_{in}}=\frac{Z_C}{Z_L+Z_R+Z_C}
+    =\frac{1/j\omega C}{j\omega L+R+1/j\omega C}
+    =\frac{1}{(j\omega)^2 LC+j\omega RC+1}
+    \nonumber \\
+    &=&\frac{1/LC}{(j\omega)^2 +j\omega R/L+1/LC}
+    =\frac{\omega_n^2}{(j\omega)^2 +2\zeta\omega_n j\omega+\omega^2_n} 
+    =\frac{1}{(1-\frac{\omega^2}{\omega_n^2})+j2\zeta\frac{\omega}{\omega_n}}
+    \nonumber
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="67" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img176.png"
+ ALT="$\displaystyle H_C(j\omega)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img177.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="559" HEIGHT="63" ALIGN="MIDDLE" BORDER="0"
+ SRC="img178.png"
+ ALT="$\displaystyle \frac{V_C}{V_{in}}=\frac{Z_C}{Z_L+Z_R+Z_C}
+=\frac{1/j\omega C}{j\omega L+R+1/j\omega C}
+=\frac{1}{(j\omega)^2 LC+j\omega RC+1}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img177.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="565" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img179.png"
+ ALT="$\displaystyle \frac{1/LC}{(j\omega)^2 +j\omega R/L+1/LC}
+=\frac{\omega_n^2}{(j...
+..._n}
+=\frac{1}{(1-\frac{\omega^2}{\omega_n^2})+j2\zeta\frac{\omega}{\omega_n}}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+where 
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\omega_n=\frac{1}{\sqrt{LC}},\;\;\;\;\zeta=\frac{R}{2}\sqrt{\frac{C}{L}}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="210" HEIGHT="57" BORDER="0"
+ SRC="img180.png"
+ ALT="\begin{displaymath}\omega_n=\frac{1}{\sqrt{LC}},\;\;\;\;\zeta=\frac{R}{2}\sqrt{\frac{C}{L}} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The magnitude is
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+|H_C(j\omega)|
+  =\frac{1}{\sqrt{(1-\frac{\omega^2}{\omega_n^2})^2+4\zeta^2 \frac{\omega^2}{\omega_n^2}}}
+  =\frac{1}{\sqrt{(1-u)^2+4\zeta^2 u}}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="430" HEIGHT="59" BORDER="0"
+ SRC="img181.png"
+ ALT="\begin{displaymath}\vert H_C(j\omega)\vert
+=\frac{1}{\sqrt{(1-\frac{\omega^2}{\...
+...{\omega^2}{\omega_n^2}}}
+=\frac{1}{\sqrt{(1-u)^2+4\zeta^2 u}} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where <!-- MATH
+ $u=(\omega/\omega_n)^2$
+ -->
+<IMG
+ WIDTH="105" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img146.png"
+ ALT="$u=(\omega/\omega_n)^2$">. When <!-- MATH
+ $u=\omega/\omega_n=1$
+ -->
+<IMG
+ WIDTH="117" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img182.png"
+ ALT="$u=\omega/\omega_n=1$"> or <!-- MATH
+ $\omega=\omega_n$
+ -->
+<IMG
+ WIDTH="63" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img148.png"
+ ALT="$\omega=\omega_n$">, we have
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+| H(j\omega_n) |=\frac{1}{2\zeta}=Q
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="157" HEIGHT="49" BORDER="0"
+ SRC="img149.png"
+ ALT="\begin{displaymath}\vert H(j\omega_n) \vert=\frac{1}{2\zeta}=Q \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI>Voltage <IMG
+ WIDTH="26" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img162.png"
+ ALT="$V_R$"> across R is treated as output:
+  <BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+H_R(j\omega)&=&\frac{V_R}{V_{in}}=\frac{Z_R}{Z_L+Z_R+Z_C}
+    =\frac{R}{j\omega L+R+1/j\omega C}
+    =\frac{j\omega RC}{(j\omega)^2 LC+j\omega RC+1}
+    \nonumber \\
+    &=&\frac{j\omega R/L}{(j\omega)^2 +j\omega R/L+1/LC}
+    =\frac{2\zeta\omega_nj\omega}{(j\omega)^2 +2\zeta\omega_n j\omega+\omega^2_n} 
+    =H_C(j\omega) \;2\zeta \omega_n\;j \omega 
+    \nonumber
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="67" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img183.png"
+ ALT="$\displaystyle H_R(j\omega)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img177.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="558" HEIGHT="61" ALIGN="MIDDLE" BORDER="0"
+ SRC="img184.png"
+ ALT="$\displaystyle \frac{V_R}{V_{in}}=\frac{Z_R}{Z_L+Z_R+Z_C}
+=\frac{R}{j\omega L+R+1/j\omega C}
+=\frac{j\omega RC}{(j\omega)^2 LC+j\omega RC+1}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img177.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="558" HEIGHT="63" ALIGN="MIDDLE" BORDER="0"
+ SRC="img185.png"
+ ALT="$\displaystyle \frac{j\omega R/L}{(j\omega)^2 +j\omega R/L+1/LC}
+=\frac{2\zeta\...
+...+2\zeta\omega_n j\omega+\omega^2_n}
+=H_C(j\omega) \;2\zeta \omega_n\;j \omega$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Now we have:
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Lm\;H_R(j\omega)=Lm\; H_C(j\omega)+Lm\;(2\zeta\omega_n\;j\omega),\;\;\;\;
+  \angle H_R(j\omega)=\angle H_C(j\omega)+\angle(2\zeta\omega_n\;j\omega)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="652" HEIGHT="33" BORDER="0"
+ SRC="img186.png"
+ ALT="\begin{displaymath}Lm\;H_R(j\omega)=Lm\; H_C(j\omega)+Lm\;(2\zeta\omega_n\;j\ome...
+...R(j\omega)=\angle H_C(j\omega)+\angle(2\zeta\omega_n\;j\omega) \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The log-magnitude of the second factor is a straight line with slope 20 dB/dec,
+  and at <!-- MATH
+ $\omega=\omega_n$
+ -->
+<IMG
+ WIDTH="63" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img148.png"
+ ALT="$\omega=\omega_n$">, its value is <!-- MATH
+ $20\log_{10} 2\zeta\omega_n^2$
+ -->
+<IMG
+ WIDTH="108" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img187.png"
+ ALT="$20\log_{10} 2\zeta\omega_n^2$">. The phase is 
+  <IMG
+ WIDTH="31" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img188.png"
+ ALT="$90^\circ$"> for all <IMG
+ WIDTH="17" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img66.png"
+ ALT="$\omega$">.
+
+<P>
+The denominator can be written as <!-- MATH
+ $R+j(\omega L-1/\omega C)$
+ -->
+<IMG
+ WIDTH="159" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img189.png"
+ ALT="$R+j(\omega L-1/\omega C)$">, which is minimized
+  when the imaginary part is zero, i.e, <!-- MATH
+ $j\omega L=1/j\omega C$
+ -->
+<IMG
+ WIDTH="118" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img190.png"
+ ALT="$j\omega L=1/j\omega C$">. In other words, when 
+  <!-- MATH
+ $\omega=\omega_n=1/\sqrt{LC}$
+ -->
+<IMG
+ WIDTH="150" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img191.png"
+ ALT="$\omega=\omega_n=1/\sqrt{LC}$">, <!-- MATH
+ $|H_R(j\omega)|$
+ -->
+<IMG
+ WIDTH="77" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img192.png"
+ ALT="$\vert H_R(j\omega)\vert$"> reaches its peak value.
+</LI>
+<LI>Voltage <IMG
+ WIDTH="25" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img193.png"
+ ALT="$V_L$"> across L is treated as output:
+  <BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+H_L(j\omega)&=&\frac{V_L}{V_{in}}=\frac{Z_L}{Z_L+Z_R+Z_C}
+    =\frac{j\omega L}{j\omega L+R+1/j\omega C}
+    =\frac{(j\omega)^2 LC}{(j\omega)^2 LC+j\omega RC+1}
+    \nonumber \\
+    &=&\frac{(j\omega)^2}{(j\omega)^2 +j\omega R/L+1/LC}
+    =\frac{(j\omega)^2}{(j\omega)^2 +2\zeta\omega_n j\omega+\omega^2_n} 
+    =H_C(j\omega) \;(j\omega_n)^2
+    \nonumber
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="66" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img194.png"
+ ALT="$\displaystyle H_L(j\omega)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img177.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="559" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img195.png"
+ ALT="$\displaystyle \frac{V_L}{V_{in}}=\frac{Z_L}{Z_L+Z_R+Z_C}
+=\frac{j\omega L}{j\omega L+R+1/j\omega C}
+=\frac{(j\omega)^2 LC}{(j\omega)^2 LC+j\omega RC+1}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img177.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="546" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img196.png"
+ ALT="$\displaystyle \frac{(j\omega)^2}{(j\omega)^2 +j\omega R/L+1/LC}
+=\frac{(j\omeg...
+...(j\omega)^2 +2\zeta\omega_n j\omega+\omega^2_n}
+=H_C(j\omega) \;(j\omega_n)^2$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Now we have:
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Lm\;H_L(j\omega)=Lm\; H_C(j\omega)+Lm\;(j\omega)^2,\;\;\;\;
+  \angle H_L(j\omega)=\angle H_C(j\omega)+\angle (j\omega)^2
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="575" HEIGHT="33" BORDER="0"
+ SRC="img197.png"
+ ALT="\begin{displaymath}Lm\;H_L(j\omega)=Lm\; H_C(j\omega)+Lm\;(j\omega)^2,\;\;\;\;
+\angle H_L(j\omega)=\angle H_C(j\omega)+\angle (j\omega)^2 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The log-magnitude of the second factor is a straight line with slope 40 dB/dec,
+  and at <!-- MATH
+ $\omega=\omega_n$
+ -->
+<IMG
+ WIDTH="63" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img148.png"
+ ALT="$\omega=\omega_n$">, it's value is <!-- MATH
+ $20\log_{10} \omega_n^2$
+ -->
+<IMG
+ WIDTH="89" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img198.png"
+ ALT="$20\log_{10} \omega_n^2$">. The phase is
+  <IMG
+ WIDTH="40" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img199.png"
+ ALT="$180^\circ$"> for all <IMG
+ WIDTH="17" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img66.png"
+ ALT="$\omega$">.
+</LI>
+</UL>
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../figures/bodeplot2ndorderline.gif"
+ ALT="bodeplot2ndorderline.gif">
+
+<P>
+In the following plots, <IMG
+ WIDTH="78" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img200.png"
+ ALT="$\omega_n=100$"> rad/sec and <IMG
+ WIDTH="72" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img201.png"
+ ALT="$\zeta=0.05$">.
+At <!-- MATH
+ $\omega=\omega_n$
+ -->
+<IMG
+ WIDTH="63" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img148.png"
+ ALT="$\omega=\omega_n$">, <!-- MATH
+ $20\log_{10} (2\zeta\omega_n^2)=20\log_{10} 1000=60$
+ -->
+<IMG
+ WIDTH="289" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img202.png"
+ ALT="$20\log_{10} (2\zeta\omega_n^2)=20\log_{10} 1000=60$"> dB, and
+<!-- MATH
+ $20\log_{10}(\omega_n^2)=20\log_{10} 10,000=80$
+ -->
+<IMG
+ WIDTH="288" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img203.png"
+ ALT="$20\log_{10}(\omega_n^2)=20\log_{10} 10,000=80$"> dB.
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../figures/bodeplot2ndorder.gif"
+ ALT="bodeplot2ndorder.gif">
+
+<P>
+<B>Example, a Band-pass filter:</B>
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../figures/opamp4b.gif"
+ ALT="opamp4b.gif">
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+H(j\omega)=-\frac{Z_2(j\omega)}{Z_1(j\omega)}
+=-\frac{R_2||1/j\omega C_2}{R_1+1/j\omega C_1}
+=-\frac{R_2/(1+j\omega R_2C_2)}{(1+j\omega R_1C_1)/j\omega C_1}
+=-\frac{j\omega \tau_3}{(1+j\omega \tau_1)(1+j\omega \tau_2)}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="716" HEIGHT="52" BORDER="0"
+ SRC="img204.png"
+ ALT="\begin{displaymath}H(j\omega)=-\frac{Z_2(j\omega)}{Z_1(j\omega)}
+=-\frac{R_2\ver...
+...
+=-\frac{j\omega \tau_3}{(1+j\omega \tau_1)(1+j\omega \tau_2)} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where <IMG
+ WIDTH="88" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img205.png"
+ ALT="$\tau_1=R_1C_1$">, <IMG
+ WIDTH="88" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img206.png"
+ ALT="$\tau_2=R_2C_2$">, <IMG
+ WIDTH="88" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img207.png"
+ ALT="$\tau_3=R_2C_1$">.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html70"
+  HREF="node7.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html68"
+  HREF="Bode.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html62"
+  HREF="node5.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html71"
+  HREF="node7.html">About this document ...</A>
+<B> Up:</B> <A NAME="tex2html69"
+  HREF="Bode.html">Bode</A>
+<B> Previous:</B> <A NAME="tex2html63"
+  HREF="node5.html">Bode Plots of Components</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Ruye Wang
+2018-07-23
+</ADDRESS>
+</BODY>
+</HTML>

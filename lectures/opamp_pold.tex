@@ -1,0 +1,768 @@
+\documentstyle[12pt]{article}
+\usepackage{html}
+\textwidth 6.0in
+\topmargin -0.5in
+\oddsidemargin -0in
+\evensidemargin -0.5in
+% \usepackage{graphics}  
+\begin{document}
+
+\section*{Chapter 5: Operational Amplifiers (Op-amps)}
+
+\subsection*{Operational Amplifier}
+
+The circuit schematic of the typical 
+\htmladdnormallink{741 op-amp}{http://en.wikipedia.org/wiki/Operational_amplifier#Internal_circuitry_of_741_type_op-amp} is shown below:
+
+
+\htmladdimg{../figures/opamp741b.gif}
+
+A component-level diagram of the common 741 op-amp. Dotted lines outline: 
+\begin{itemize}
+\item \htmladdnormallink{current mirrors (red)}{http://en.wikipedia.org/wiki/Current_mirror}
+\item \htmladdnormallink{differential amplifier (blue)}{http://en.wikipedia.org/wiki/Differential_amplifier}
+\item \htmladdnormallink{class A gain stage (magenta)}{http://en.wikipedia.org/wiki/Electronic_amplifier#Class_A}
+\item voltage level shifter (green); 
+\item \htmladdnormallink{output stage (cyan)}{http://en.wikipedia.org/wiki/Electronic_amplifier#Class_B}
+\end{itemize}
+
+
+Like all op-amps, the circuit basically consists of three stages:
+\begin{itemize}
+\item {\bf Differential amplifier} with high input impedance that generates
+  a voltage signal, the amplified voltage difference $v^+-v^-$.
+\item {\bf Voltage amplifier} (class A amplification) with a high voltage gain 
+  to further amplify the voltage.
+\item {\bf Output amplifier} (class AB push-pull emitter follower) with low 
+  output impedance and high current driving capability.
+\end{itemize}
+The op-amp requires two voltage supplies $\pm V_{cc}$ of both polarities (typically 
+$V_{CC}=15$ V). 
+
+Although the Op-amp circuit may look complicated, its operation can be simply 
+modeled by a voltage amplifier with three parameters, as shown below:
+
+\htmladdimg{../figures/OpAmp0a.gif}
+
+\begin{itemize}
+\item Input resistance $r_{in}$, which is huge, typically in the range of 
+  $10^6\sim 10^{12}\,\Omega$, depending on the specific components used (e.g., 
+  BJT or FET).
+
+\item Output resistance $r_{out}$, which is very small, typically a few tens of
+  ohms, e.g., 75 $\Omega$.
+
+\item Open-circuit gain, based on both the inverting input $v^-$ and the non-inverting 
+  input $v^+$:
+  \[v_{internal}=A_d (v^+ - v^-)+A_c \frac{1}{2}(v^+ + v^-)\approx A_d (v^+ - v^-) \]
+  where $A_d$ is the differential-mode gain and $A_c$ is the common-mode gain.
+  It is desired that $A_d\rightarrow \infty$ and $A_c\rightarrow 0$, i.e., the 
+  output is only proportional to the difference $v^+-v^-$ between the two inputs. 
+  The common-mode rejection ratio (CMRR) is defined as the ratio between 
+  differential-mode gain and common-mode gain:
+  \[ CMRR=20\;\log_{10} \left(\frac{A_d}{A_c}\right)>100\;dB,
+  \;\;\;\;\;\;\;\;(A_d>10^5 A_c) \]
+  As $A_d$ is large, typically $A=A_d=10^5 \sim 10^9$, the output is approximately
+  \[ v_{out}=A(v^+-v^-) \]
+\end{itemize}
+
+Also, as the output $v_{out}=A(v^+-v^-)$ is in the range between $-V_{CC}$ and $V_{CC}$ 
+and $>10^5$ is large, $v^+-v^-=v_{out}/A$ is small (in the micro-volt range), i.e.,
+$v^-\approx v^+$. If, as in some Op-Amp circuits, $v^+=0$ is grounded, then 
+$v^-\approx v^+=0$ is very close to zero, i.e., it is almost the same as ground, or
+\htmladdnormallink{{\em virtual ground}}{http://en.wikipedia.org/wiki/Virtual_ground}.
+The analysis of various op-amp circuits can be much simplified by this virtual
+ground assumption.
+
+The output of an op-amp is $v_{out}=A(v^--v^+)$. As $A$ is large, $V_{out}$ is usually
+saturated, equal to either $V_{CC}$ or $-V_{CC}$, depending on whether or not $v^+$ 
+is greater than $v^-$. For $v_{out}$ to be meaningful, some kind of feedback is 
+introduced. In the following, we consider the following typical Op-Amp circuits 
+to show how to carry out circuit analysis.
+
+\begin{itemize}
+
+\item {\bf Voltage follower:} The input is connected to the positive input
+  while the output is directly connected to the negative input (100\%
+  negative feedback). The parameters of this circuit can be found by the
+  model shown in the figure.
+
+  \htmladdimg{../figures/voltagefollowermodel2.gif}
+
+  \begin{itemize}
+    \item {\bf Open-circuit voltage gain $A$:} Assume an ideal source voltage $v_s$ 
+      ($R_s=0$) is applied to the input of the circuit and the output port is open
+      circuit $R_L=\infty$. Then applying KVL to the loop, we get
+      \[ v_s=(r_{in}+r_{out})i_{in}+A(v^+-v^-)=(r_{in}+r_{out})i_{in}+Ar_{in}i_{in}
+      =[(A+1)r_{in}+r_{out}]i_{in} \]
+      Note that the internal voltage source is $A(v^+-v^-)=r_{in}i_{in}$. 
+      The output voltage is:
+      \[ v_{out}=Ar_{in}i_{in}+r_{out}i_{in}=(Ar_{in}+r_{out})i_{in} \]
+      and the open-circuit voltage gain is:
+      \[ G_{oc}=\frac{v_{out}}{v_s}=\frac{Ar_{in}+r_{out}}{(A+1)r_{in}+r_{out}} \]
+      Since $A>>1$, $G_{oc}\approx 1$ is approximately unity.
+    \item {\bf Input resistance $R_{in}$:} 
+      We now connect a load $R_L$ to the output port, while still keeping $R_S=0$ 
+      (as it is irrelevant to $R_{in}$). Applying KVL to the two loops we get:
+      \[ 
+      \left\{ \begin{array}{l}
+	v_s=(r_{in}+r_{out})i_{in}-r_{out}i_{out}+A r_{in}i_{in} \\
+	A r_{in}i_{in}=(r_{out}+R_L)i_{out}-r_{out}i_{in} \right. \end{array} 
+      \]
+      Solving these two equations for the loop currents $i_{in}$ and $i_{out}$ we get
+      \[ 
+      i_{in}=\frac{v_s}{(A+1)r_{in}+r_{out}(R_L-Ar_{in})/(R_L+r_{out})} 
+      \]
+      The input resistance can be found as the ratio of the input voltage and current:
+      \begin{eqnarray}
+	R_{in}&=&\frac{v_s}{i_{in}}
+	=(A+1)r_{in}+r_{out}\frac{R_L-Ar_{in}}{R_L+r_{out}} 
+	=\frac{(A+1)r_{in}(R_L+r_{out})}{R_L+r_{out}}+r_{out}\frac{R_L-Ar_{in}}{R_L+r_{out}} 
+	=r_{in}\frac{r_{out}+(A+1)R_L}{R_L+r_{out}}+\frac{R_L r_{out}}{R_L+r_{out}}	\nonumber \\
+	&=&r_{in}\frac{r_{out}+(A+1)R_L}{R_L+r_{out}}+R_L|| r_{out}      
+	\nonumber 
+      \end{eqnarray}
+      Note that $R_{in}$ is affected by the load $R_L$. As usually $r_{out}$ is very
+      small in comparison with all other resistances in the expression, it can be 
+      dropped and the above becomes approximately
+      \[ R_{in}\approx Ar_{in} \]
+    \item {\bf Output resistance $R_{out}$:} This is the ratio $R_{out}=v_{oc}/i_{sc}$
+      between the open-circuit voltage $v_{oc}$ and the short-circuit current $i_{sc}$.
+
+      \begin{itemize}
+      \item The open-circuit voltage $v_{oc}$ (with $R_L=\infty$ and $i_{out}=0$) 
+        can be found by applying KVL to the loop:
+        \[ 
+        v_s=(R_s+r_{in}+r_{out})i_{in}+Ar_{in}i_{in},\;\;\;\mbox{i.e.,}\;\;\;\;
+        i_{in}=\frac{v_s}{R_s+(A+1)r_{in}+r_{out}}      
+        \]
+        The voltage across the output port is
+        \[ 
+        v_{oc}=Ar_{in}i_{in}+r_{out}i_{in}
+        =v_s\frac{Ar_{in}+r_{out}}{R_s+(A+1)r_{in}+r_{out}} 
+        \]
+      \item The short-circuit current $i_{sc}=i_{out}$ ($R_L=0$) can be found
+        by applying KVL to the two loops:
+        \[ 
+        \left\{ \begin{array}{l}
+          v_s=(R_s+r_{out}+(A+1)r_{in})i_{in}-r_{out} i_{out} \\
+          Ar_{in}i_{in}=r_{out} i_{out}-r_{out} i_{in} \right. \end{array} 
+        \]
+        Solving these two equation for the two loop currents we get:
+        \[ 
+        i_{in}=\frac{v_s}{R_s+r_{in}},\;\;\;\;\;\;\;
+        i_{out}=i_{sc}=v_s\frac{Ar_{in}+r_{out}}{r_{out}(R_s+r_{in})} 
+        \]
+      \item Find the output resistance:
+        \[ 
+        R_{out}=\frac{v_{oc}}{i_{sc}}
+        =\frac{r_{out}(R_s+r_{in})}{R_s+(A+1)r_{in}+r_{out}} 
+        \]
+        Note that $R_{out}$ is affected by the internal resistance $R_s$ of the
+        source. As $R_s+r_{out}<<(A+1)r_{in}$ and $R_s<<r_{in}$, we have
+        \[ 
+        R_{out}\approx \frac{r_{out}}{A} 
+        \]
+      \end{itemize}
+
+  \end{itemize}
+  In summary, we see that the voltage follower has a unit voltage gain, but
+  much increased input resistance $R_{in}\approx A r_{in}$ (e.g., $10^{10}\Omega$)
+  and much reduced output resistance $R_{out}\approx r_{out}/A$ (e.g., $10^{-3} \Omega$).
+  In practice we could simply assume $R_{in}=\infty$ and $R_{out}=0$.
+
+  {\bf Example:} 
+
+  \htmladdimg{../figures/opampbuffer.gif}
+
+  The figure on the left shows a circuit represented by an ideal voltage
+  source $V_s$ in series with an internal resistance $R_s$ (Thevenin's
+  theorem), with a load $R_L$. The voltage delivered to the load by this
+  non-ideal source is
+  \[ v_{out}=v_s \frac{R_L}{R_L+R_s} \]
+  The output voltage across the load is only a fraction of the voltage due to 
+  the voltage drop across the internal resistance $R_s$. If it is desired for
+  the output voltage to be as close to the source as possible, the internal 
+  resistance $R_s$ has to be small while the load resistance $R_L$ has to be
+  large (lighter load). However, given $R_s$ and $R_L$, it is still possible
+  for the output voltage to be very close to the source if a voltage follower
+  is used as a buffer between the source and the load, as shown in the figure
+  on the right. The voltage follower is modeled by its input and output
+  resistances $R_{in}$ and $R_{out}$, as well as its voltage gain $G_{oc}$,
+  and the output voltage can be obtained after two levels of voltage dividers:
+  \[ v_{out}=G_{oc} v_{in} \frac{R_L}{R_{out}+R_L}=
+  G_{oc} v_s \frac{R_{in}}{R_s+R_{in}}   \frac{R_L}{R_{out}+R_L} \]
+  As $R_{in}$ is huge, $R_{in}/(R_s+R_{in})\approx 1$, also, as $R_{out}$
+  is very small, $R_L/(R_{out}+R_L) \approx 1$, and $G_{oc} \approx 1$,
+  therefore $v_{out} \approx v_s$, i.e., one hundred percent of the source
+  voltage is delivered to the load.  
+
+\item {\bf Inverting Amplifier}
+
+  \htmladdimg{../figures/inverteramplifiermodel2.gif}
+
+  As the analysis of the circuit using full model of the op-amp is very involved,
+  certain approximation is made the simplify the analysis.
+  \begin{itemize}
+    \item {\bf Open-circuit voltage gain:} 
+      We assume $r_{in}\rightarrow \infty$. We assume an ideal voltage source $v_s$ 
+      ($R_s=0$) applied to node $v^-=v_s$ ($v^+=0$), and find the input current to be:
+      \[ i_{in}=\frac{v_s-Av_{in}}{R_1+R_f+r_{out}}
+      =\frac{v_s+A(v_s-R_1 i_{in})}{R_1+R_f+r_{out}} \]
+      where $v_{in}=v^+-v^-=0-v^-=-(v_s-R_1 i_{in})$. Solving the equation above for 
+      $i_{in}$, we get:
+      \[ i_{in}=v_s \frac{A+1}{(A+1)R_1+R_f+r_{out}} \]
+      The output voltage can be found to be:
+      \[ v_{out}=v_s-(R_1+R_f) i_{in}
+      =v_s\left[1-\frac{(A+1)(R_1+R_f)}{(A+1)R_1+R_f+r_{out}}\right] 
+      =v_s\frac{r_{out}-AR_f}{(A+1)R_1+R_f+r_{out}} \] 
+      i.e., 
+      \[ G_{oc}=\frac{v_{out}}{v_s}=\frac{r_{out}-AR_f}{(A+1)R_1+R_f+r_{out}} 
+      \approx - \frac{R_f}{R_1} \]
+      The approximation is due to the fact that $r_{out}$ is very small and $A$
+      is very large. The same result can also be obtained under the virtual ground
+      assumption $v^-\approx v^+=0$, we can easily find $v_{out}$ by applying KCL at
+      the node of $v^-$:
+      \[ \frac{v_s}{R_1}+\frac{v_{out}}{R_f} = 0 \]
+      we get the same $G_{oc}=v_{out}/v_s=-R_f/R_1$.
+
+    \item {\bf Input resistance:} We assume an ideal voltage source $v_s$ ($R_s=0$) 
+      applied to the circuit, and find the input resistance $R_{in}$ as the ratio
+      of $v_s$ and the input current $i_{in}$. We first apply KCL to the node of $v^-$ 
+      to get
+      \[ \frac{v^--v_s}{R_1}+\frac{v^-}{r_{in}}+\frac{v^--(-Av^-)}{R_f+r_{out}}=0 \]
+      Solving for $v^-$ to get
+      \[ v^-=v_s\frac{r_{in}(R_f+r_{out})}{(R_1+r_{in})(R_f+r_{out})+(A+1)R_1r_{in}} \]
+      The input current is
+      \begin{eqnarray}
+	i_{in}&=&\frac{v_s-v^-}{R_1}=\frac{v_s}{R_1}\left[1-\frac{r_{in}(R_f+r_{out})}{(R_1+r_{in})(R_f+r_{out})+(A+1)R_1r_{in}}\right] 
+	\nonumber \\
+	&=&v_s\frac{R_f+r_{out}+(A+1)r_{in}}{(R_1+r_{in})(R_f+r_{out})+(A+1)R_1r_{in}} 
+	\nonumber \end{eqnarray}
+      Therefore
+      \[ R_{in}=\frac{v_s}{i_{in}}=\frac{[R_f+r_{out}+(A+1)R_1]r_{in}+R_1(R_f+r_{out})}{R_f+r_{out}+(A+1)r_{in}} \]
+      As $r_{out}$ is much smaller than all other resistances in the equation, it
+      can be dropped:
+      \[ R_{in}\approx \frac{v_s}{i_{in}}=\frac{[R_f+(A+1)R_1]r_{in}+R_1R_f}{R_f+(A+1)r_{in}} \]
+      Moreover, as $A>>1$, we have
+      \[ R_{in}\approx R_1 \]
+    \item {\bf Output resistance:} Here we assume $r_{in}\rightarrow \infty$ to 
+      simplify the analysis. We first find short-circuit output current by applying
+      KCL to the output node to get:
+      \[ i_{sc}=\frac{-A v^-}{r_{out}}+\frac{v^-}{R_f}
+      =v^-\frac{r_{out}-AR_f}{r_{out}R_f}     \]
+      but as $v^-=v_s R_f/(R_s+R_1+R_f)$, we have
+      \[ i_{sc}=v^-\frac{r_{out}-AR_f}{r_{out}R_f}  
+      =v_s\frac{R_f}{R_s+R_1+R_f} \frac{r_{out}-AR_f}{r_{out}R_f} 
+      =v_s\frac{r_{out}-AR_f}{(R_s+R_1+R_f)r_{out}}  \]
+      Next we find the open-circuit output voltage. Applying KCL to the node of $v^-$
+      we get
+      \[ \frac{v_s-v^-}{R_s+R_1}+\frac{(-Av^-)-v^-}{R_f+r_{out}}=0 \]
+      which can be solved for $v^-$
+      \[ v^-=v_s \frac{R_f+r_{out}}{(A+1)(R_s+R_1)+R_f+r_{out}} \]
+      The open-circuit output voltage can be found to be (voltage dividor)
+      \[ v_{oc}=[v^--(-Av^-)]\frac{r_{out}}{R_f+r_{out}}-Av^-=v^- \frac{r_{out}-AR_f}{R_f+r_{out}}
+      =v_s \frac{r_{out}-AR_f}{(A+1)(R_s+R_1)+R_f+r_{out}} \]
+      Now we get
+      \[ R_{out}=\frac{v_{oc}}{i_{sc}}
+      =\frac{(R_s+R_1+R_f)r_{out}}{(A+1)(R_s+R_1)+R_f+r_{out}}
+      \approx \frac{(R_s+R_1+R_f)r_{out}}{A(R_s+R_1)} \]
+      The approximation is due to the assumption that $A>>1$. In particular, 
+      if $R_s<<R_1$ and $R_S<<R_f$, we have
+      \[ R_{out}\approx \frac{R_1+R_f}{R_1} \frac{r_{out}}{A} \]
+  \end{itemize}
+
+\item {\bf Non-Inverting Amplifier} (Homework)
+
+  \htmladdimg{../figures/noninverteramplifier.gif}
+
+  Find the three parameters of this non-inverting amplifier: 
+  \begin{itemize}
+    \item input resistance $R_{in}$, 
+    \item output resistance $R_{out}$, 
+    \item open-circuit voltage gain $G_{oc}$. 
+  \end{itemize}
+  Assume $R_L=\infty$ in all three cases. Moreover, assume $r_{in}=\infty$
+  for $R_{out}$ and $G_{oc}$, and $r_{out}=0$ for $R_{in}$.
+  Note that when $R_f=0$, this non-inverting amplifier will become a voltage 
+  follower, in terms of all three parameters. Verify your results by checking 
+  if this is the case.
+
+  \htmladdnormallink{Answer}{../noninvertingopamp/index.html}
+
+\end{itemize}
+
+
+\subsection*{Op-Amp Circuits }
+
+%\htmladdimg{../figures/opam1.gif}
+
+To simplify the analysis of the Op-Amp circuits, we further make the following 
+assumptions:
+\begin{itemize}
+\item The huge input resistance $r_{in}$ can be treated as infinity 
+  $r_{in}\rightarrow \infty$.
+\item The input current drawn by an op-amp is samll ($10^{-9}\sim10^{-12}\;A$), and 
+  could be approximated to be zero $i^+=i^-=0$.
+\item The small output impedance $r_{out}$ can be treated as zero $r_{out}\approx 0$,
+  i.e., the output $v_{out}$ is not affected by the load $R_L$ (so long as it is
+  much greater than $r_{out}$).
+\item Based on the fact that $v^-\approx v^+$, we could assume $v^-=v^+$, i.e., 
+  the virtual ground assumption.
+\item The bandwidth is large ($1 \sim 20MHz$).
+\end{itemize}
+Based on these approximations, an Op-Amp can be further simplified as the modeled
+shown on the right of the figure below, based on which the analysis of op-amp 
+circuits can be much simplified, as shown in the following examples.
+
+\htmladdimg{../figures/OpAmp0.gif}
+
+\begin{itemize}
+\item {\bf Voltage follower (buffer)}
+
+\htmladdimg{../figures/voltagefollowermodel1.gif}
+
+\[ V_{out}=v^-\approx v^+=V_{in} \]
+As the output $V_{out}=V_{in}$ is the same as the input, why can't we replace this
+op-amp circuit by a piece of wire?
+
+\item {\bf Inverter}
+
+\htmladdimg{../figures/opam2.gif}
+
+Current into the op-amp is negligible, and $V^-\approx V^+=0$. Applying KCL to the 
+node of $v^-$, we have
+\[ \frac{V_{in}}{R_1}+\frac{V_{out}}{R_f}=0,\;\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;\;
+V_{out}=-\frac{R_f}{R_1}V_{in}	\]
+
+In general, $R_1$ and $R_2$ in the inverter can be replaced by two networks
+(with impedances $Z_1$ and $Z_2$ respectively) containing resistors and capacitors 
+and the analysis of the circuit can be carried out easily in frequency domain:
+\[
+H(j\omega)=\frac{V_{out}(j\omega)}{V_{in}(j\omega)}=-\frac{Z_2(j\omega)}{Z_1(j\omega)}
+\]
+This is a convenient way to design filters of various frequency characteristics.
+
+\htmladdimg{../figures/opam11.gif}
+
+
+\item {\bf Non-Inverting Amplifier}
+
+  \htmladdimg{../figures/NonInverterOpAmp.gif}
+
+  \[ V_{in}=V^+\approx V^-=V_{out}\frac{R_1}{R_1+R_f},\;\;\;\;\mbox{i.e.}
+  \;\;\;\;\;\;V_{out}=\frac{R_1+R_f}{R_1}V_{in}=\left(1+\frac{R_f}{R_1}\right) V_{in} \]
+
+\item {\bf Summer-inverter}
+
+  \htmladdimg{../figures/opam3.gif}
+
+  Apply KCL to $V^-$:
+  \[ \sum_{k=1}^n \frac{V_k}{R_k}+\frac{V_{out}}{R_f}=0,\;\;\;\;\;\;\;
+  \mbox{i.e.}\;\;\;\;\;\;\;V_{out}=-R_f \sum_{k=1}^n \frac{V_k}{R_k}
+  =- \sum_{k=1}^n \frac{R_f}{R_k} \;V_k  \]
+
+\item {\bf Differential amplifier}
+
+  \htmladdimg{../figures/opamp10.gif}
+
+  Define $V=V^-\approx V^+$, we get:
+  \[ \frac{V_1-V}{R_1}+\frac{V_{out}-V}{R_2}=0,\;\;\;\;\mbox{i.e.}\;\;\;\;
+  V_{out}=-\frac{R_2}{R_1}V_1+\left(1+\frac{R_2}{R_1}\right) V \]
+  But as
+  \[ V\approx V^+=\frac{R_4}{R_3+R_4}V_2 \]
+  therefore
+  \[ V_{out}=-\frac{R_2}{R_1}V_1+\left(1+\frac{R_2}{R_1}\right)\frac{R_4}{R_3+R_4}V_2 \]
+
+  Consider some special cases:
+  \begin{itemize}
+  \item If $R_1=R_3$ and $R_2=R_4$, we get
+    \[ V_{out}=\frac{R_2}{R_1}\;(V_2-V_1)	\]
+  \item If $R_4=\infty$ (open circuit, and $R_3$ can be any value), then $V=V_2$ and 
+    we get
+    \[ V_{out}=-\frac{R_2}{R_1}V_1+\left(1+\frac{R_2}{R_1}\right)V_2 \]
+    This is a combination of inverter and a non-inverter amplifiers.
+  \item If $R_1=R_4=\infty$, then $V_{out}=V_2$, this is the follower.
+  \item If $R_4=0$ ($R_3=\infty$), then we get the inverter
+    \[ V_{out}=-\frac{R_2}{R_1} \]
+  \item If $R_3=0$ ($R_4=\infty$) and $V_1=0$, we get the non-inverter:
+    \[ V_{out}=\left(1+\frac{R_2}{R_1}\right)V_2 \]
+  \end{itemize}
+
+  {\bf Note 1:} It is likely that both inputs are subjected to some common noise
+  $n(t)$ (such as interference of 60Hz power supply):
+  \[ V_1=v_1(t)+n(t), \;\;\;\;\;V_2=v_2(t)+n(t) \]
+  In this case the output is 
+  \[ V_{out}=\frac{R_2}{R_1}\;(V_2-V_1)=\frac{R_2}{R_1}\;(v_2(t)-v_1(t)) \]
+  not affected by the common noise at all, i.e., the differential amplifier 
+  can suppress {\em common-mode signal} (such as the noise signal $n(t)$)
+  while amplify the {\em differential-mode signal} (such as $v_1(t)$ and
+  $v_2(t)$).
+
+  {\bf Note 2:} If one of the two inputs, e.g., $V_2$ is connected to a constant
+  voltage treated as a reference $V_{ref}$, then the differential amplifier
+  can also be used as a level shifter. As
+  \[	\frac{V_1-V^-}{R_1}=\frac{V^--V_{out}}{R_2} \]
+  we get
+  \[ V_{out}=-\frac{R_2}{R_1}V_1-\left(1+\frac{R_2}{R_1}\right)V^- \]
+  But 
+  \[ V^-=V^+=V_{ref}\frac{R_4}{R_3+R_4} \]
+  we have
+  \[ V_{out}=-\frac{R_2}{R_1}V_1-V_{ref}\left(1+\frac{R_2}{R_1}\right)\frac{R_4}{R_3+R_4}
+  =-\frac{R_2}{R_1}V_1-V_{shift} \]
+  where 
+  \[ V_{shift}=V_{ref}\frac{R_4(R_1+R_2)}{R_1(R_3+R_4)} \]
+  In other words, the output is $-R_2/R_1$ times the input $V_1$, shifted 
+  by a constant value $V_{shift}$. This level-shifter circuit can be used 
+  to change the DC level of the signal (e.g., removal of DC component) as 
+  well as amplifying it.
+
+\item {\bf Instrumentation Amplifier}
+
+%\htmladdimg{../figures/instrumentamplifier.gif}
+
+  One drawback of the differential amplifier is that its input impedance
+  ($R_3+R_4$) may not be high enough if the output impedance of the previous
+  stage is not low enough. To overcome this problem, two non-inverters with
+  high input resistance can be used each for one of the two inputs to the
+  differential amplifier. The resulting circuit is shown below:
+
+  \htmladdimg{../figures/InstrumentationOpAmp.gif}
+
+  The analysis of this circuit is very simple. As the output impedance of the
+  non-inverter is low, the three op-amp circuit can be considered as three 
+  independent circuits. The outputs of the two non-inverters are:
+  \[ V'_1=V_1\left(1+\frac{R_f}{R_1}\right),\;\;\;\;\;\;\;\;\;
+  V'_2=V_2\left(1+\frac{R_f}{R_1}\right) \]
+  The output voltage of the differential amplifier is:
+  \[ V_{out}=\frac{R_4}{R_3}(V'_2-V'_1)=\frac{R_4}{R_3}\left(1+\frac{R_f}{R_1}\right)(V_2-V_1) \]
+  Of course the two resistors $R_1$ can be combined to become $R_0=2R_1$,
+  i.e., $R_1=R_0/2$, then the output can be written as:
+  \[ V_{out}=\frac{R_4}{R_3}\left(1+\frac{2R_f}{R_0}\right)(V_2-V_1) \]
+
+  Alternatively, we consider the current going from $V'_1$ to $V_'_2$:
+  \[ \frac{V'_1-V_1}{R_f}=\frac{V_1-V_0}{R_1}=\frac{V_0-V_2}{R_1}=\frac{V_2-V'_2}{R_f} \]
+  From the equation of the first two terms we get:
+  \[ V'_1=\left(1+\frac{R_f}{R_1}\right)V_1-\frac{R_f}{R_1}V_0 \]
+  From the equation of the second two terms we get:
+  \[ V'_2=\left(1+\frac{R_f}{R_1}\right)V_2-\frac{R_f}{R_1}V_0 \]
+  Using the equation of the differential amplifier above, we get the same result 
+  as above:
+  \[ V_{out}=\frac{R_4}{R_3}(V'_2-V'_1)=\frac{R_4}{R_3}\left(1+\frac{R_f}{R_1}\right)(V_2-V_1) \]
+
+%Express the output voltage $V_{out}$ as a function of both inputs $V_1$ and
+%$V_2$. Find the gain $A=V_{out}/(V_1-V_2)$.
+
+%{\bf Hint:} Analyze the three op-amps separately. Assume the voltage at
+%the middle point of $R_1$ is zero, i.e., the $v^-$ input of each of the
+%two op-amps is grounded through $R_2/2$.
+%\htmladdnormallink{Answer}{../instrumentamplifier/index.html}
+
+\item {\bf Algebraic summer (inputs of different signs)}
+
+  \htmladdimg{../figures/opamp5a.gif}
+
+  Define $V\stackrel{\triangle}{=}V^+ \approx V^- $. Apply KCL to $V^-$ and
+  $V^+$ we get:
+  \[ \frac{V_1-V}{R_1}+\frac{V_2-V}{R_2}+\frac{V_{out}-V}{R_f}=0,\;\;\;\;\;\;
+  \mbox{and}\;\;\;\;\;\;\;\;
+  \frac{V_3-V}{R_3}+\frac{V_4-V}{R_4}=0 \]
+  Solving the 2nd equation for $V$ we get:
+  \[	V=\frac{R_4}{R_3+R_4} V_3 + \frac{R_3}{R_3+R_4} V_4	\]
+  and substitute it into the first equation to get
+  \[
+  V_{out}=-\frac{R_f}{R_1}V_1-\frac{R_f}{R_2}V_2
+  +\left(\frac{R_f}{R_1}+\frac{R_f}{R_2}+1\right)
+  \left(\frac{R_4}{R_3+R_4} V_3+\frac{R_3}{R_3+R_4} v_4\right) \]
+  
+  \htmladdimg{../figures/opam6.gif}
+
+
+\item {\bf A/D converter}
+
+Without feedback, the output of an op-amp is $V_{out}=A(V^--^+)$. As $A$ is
+large, $V_{out}$ is saturated, equal to either the positive or the negative
+voltage supply, depending on whether or not $V^+$ is greater than $V^-$. 
+These two possible outputs, positive and negative, can be treated as ``1'' 
+and ``0'' of the binary system. The figure shows an A/D converter built by
+three op-amps to measure voltage $V_{in}$ from 0 to 3 volts with resolution 1 V.
+
+\htmladdimg{../figures/opam12.gif}
+
+Due to the voltage divider, the input voltages to the three op-amps are, 
+respectively, 2.5V, 1.5V and 0.5V. The output of these op-amps are listed
+below for each of the input voltage levels. A digital logic circuit is then
+needed to convert the 3-bit output of the op-amps to the two-bit binary 
+representation.
+
+\begin{tabular}{c|cccc}\hline \\
+Voltage (volts) & 0 	& 1	& 2	& 3	\\
+Op-amps Outputs	& 000	& 001	& 011	& 111	\\
+Binary Representation	& 00	& 01	& 10	& 11	\\ \hline
+\end{tabular}
+
+\end{itemize}
+\subsection*{Active Filters}
+
+\begin{itemize}
+
+\item {\bf First order systems I -- Integrator and differentiator}
+
+\htmladdimg{../figures/opamp4.gif}
+
+{\bf Integrator}
+
+In time domain, as $v^-=v^+=0$ and $i_R+i_C=0$, we have (KCL)
+\[ i_R+i_C=\frac{v_i}{R}+C\frac{d v_{out}}{dt}=0,
+\;\;\;\; \mbox{i.e.,}\;\;\;\;v_{out}=-\frac{1}{\tau} \int v_i dt	\]
+where $\tau \stackrel{\triangle}{=}RC$. In frequency domain, we have:
+\[ H(j\omega)=-\frac{Z_2(j\omega)}{Z_1(j\omega)}=-\frac{1/j\omega C}{R}
+=-\frac{1}{j\omega RC}=-\frac{1}{j\omega \tau}	\]
+
+{\bf Differentiator}
+
+If we swap the resistor and the capacitor, we get in time domain:
+\[ i_R+i_C=\frac{v_{out}}{R}+C\frac{d v_i}{dt}=0,\;\;\;\;
+\mbox{i.e.,}\;\;\;\;v_{out}=-RC \frac{d v_i}{dt}=-\tau \frac{d v_i}{dt}	\]
+In frequency domain, we have:
+\[ H(j\omega)=-\frac{Z_2(j\omega)}{Z_1(j\omega)}=-\frac{R}{1/j\omega C}
+  =-j\omega \tau \]
+
+\item {\bf First order systems II -- low-pass and high-pass filters}
+
+\htmladdimg{../figures/opamp4a.gif}
+
+{\bf Low-pass filter:}
+\[ 
+H(j\omega)=-\frac{Z_2(j\omega)}{Z_1(j\omega)}=-\frac{R_2\;||\;(1/j\omega C)}{R_1}
+=-\frac{R_2}{R_1}\frac{1}{1+j\omega R_2C}
+=-H(0)\frac{1}{1+j\omega \tau} 
+\]
+where $H(0)=R_2/R_1$, $\tau=R_2C$. The cut-off frequency is
+$\omega_c=1/\tau$ at which $|H(j\omega)|=H(0)/\sqrt{2}$. Now the
+FRF above can also be written as
+\[
+H(j\omega)=-H(0)\frac{1}{1+j\omega \tau} 
+=H(0)\frac{-\omega_c}{\omega_c+j\omega} 
+\]
+Intuitively, when frequency is high, $Z_2(j\omega)$ is small and the effect 
+of negative feedback is strong, therefore the output is low. As an example, 
+when $\tau=10^{-3}$, $\omega_c=1/\tau=10^3$, the Bode plots are shown below:
+
+\htmladdimg{../figures/BodeLP.gif}
+
+{\bf High-pass filter:}
+
+\[
+H(j\omega)=-\frac{Z_2(j\omega)}{Z_1(j\omega)}=-\frac{R_2}{R_1+1/j\omega C}
+=-\frac{R_2}{R_1}\frac{j\omega R_1C}{1+j\omega R_1C}
+=-H(0)\frac{j\omega \tau}{1+j\omega \tau} 
+=H(0)\frac{-j\omega}{\omega_c+j\omega} 
+\]
+where $H(0)=R_2/R_1$, $\tau=R_1C$. Intuitively, when frequency is low
+$Z_1(j\omega)$ is large and the signal is difficult to pass, therefore the 
+output is low.
+
+For example, when $\tau=10^{-6}$, $\omega_c=1/\tau=10^6$, the Bode plots are 
+shown below:
+
+\htmladdimg{../figures/BodeHP.gif}
+
+{\bf Band-pass filter:}
+
+\htmladdimg{../figures/opamp4b.gif}
+
+\[
+H(j\omega)=-\frac{Z_2(j\omega)}{Z_1(j\omega)}
+=-\frac{R_2||1/j\omega C_2}{R_1+1/j\omega C_1}
+=-\frac{R_2/(1+j\omega R_2C_2)}{(1+j\omega R_1C_1)/j\omega C_1}
+=-\frac{j\omega \tau_3}{(1+j\omega \tau_1)(1+j\omega \tau_2)} 
+\]
+where $\tau_1=R_1C_1$, $\tau_2=R_2C_2$, $\tau_3=R_2C_1$.
+
+For example, when $\tau_1=10^{-6}$, $\tau_2=10^{-8}$, $\tau_3=10^{-3}$, the Bode
+plots are shown below:
+
+\htmladdimg{../figures/BodeBP.gif}
+
+\item {\bf Higher order filters}
+
+The transition between the pass-band and stop-band of a first order 
+filter with cut-off frequency $\omega_c=1/\tau$ is characterized by the 
+rate of change of $|H(j\omega)|$ as frequency $\omega$ changes, i.e., 
+the slope of 20 dB/decade of frequency change. When $n$ such first order 
+filtered are connected in cascade, they form an nth order filter with 
+better selectivity represented by a slope of 20n dB/decade. 
+
+Consider a low-pass filter by a set of $n$ unit gain first-order LP 
+filters with FRF $H(j\omega)=-\omega_c/(\omega_c+j\omega)$:
+\[
+H(j\omega)=\left(\frac{-\omega_c}{\omega_c+j\omega} \right)^n
+\]
+The cut-off frequency of this nth order filter $\omega_{cn}$ can be
+found by solving the following equation
+\[
+\left|\frac{\omega_c}{\omega_c+j\omega}\right|^n=\frac{1}{\sqrt{2}}
+\]
+to get
+\[
+\omega_{cn}=\omega_c\sqrt{\sqrt[n]{2}-1}
+\]
+
+\item {\bf The Butterworth filters}
+
+The magnitude of the FRF of a LP Butterworth filter with cut-off frequency 
+$\omega_c$ is
+\[
+\left| H(j\omega)\right|=\frac{1}{\sqrt{1+(\omega/\omega_c)^{2n}}}
+\]
+When $\omega=\omega_c$, $|H(j\omega)|=1/\sqrt{2}$. Specially 
+\begin{itemize}
+\item $n=0$, $|H(j\omega)|=1$ is an all-pass filter
+\item $n=1$, the Butterworth filter is first-order low-pass filter:
+  \[
+  |H(j\omega)|=\frac{1}{\sqrt{1+(\omega/\omega_c)^2}}
+  =\frac{\omega_c}{\sqrt{\omega^2+\omega_c^2}}
+  =\left|\frac{\omega_c}{j\omega+\omega_c}\right|
+  \]
+\item $n=\infty$, the Butterworth filter becomes an ideal low-pass
+  filter:
+  \[
+  |H(j\omega)|=\frac{1}{\sqrt{1+(\omega/\omega_c)^\infty}}  
+  =\left\{\begin{array}{ll}1&\omega<\omega_c\\0&\omega>\omega_c\end{array}
+  \right.
+  \]
+\end{itemize}
+
+\htmladdimg{../figures/ButterworthPlots.png}
+
+\item {\bf Higher order systems}
+
+Higher than first order systems can be built with multiple integrators, 
+as shown here for a third order system:
+
+\htmladdimg{../figures/opam7.gif}
+
+From the diagram, we can get
+\[
+\left\{ \begin{array}{l}
+	Y_3(s)=Y_2(s)/s \Longrightarrow Y_2(s)=Y_3(s)s	\\
+	Y_2(s)=Y_1(s)/s \Longrightarrow Y_1(s)=Y_2(s)s=Y_3(s)s^2	\\
+	Y_1(s)=Y_0(s)/s \Longrightarrow Y_0(s)=Y_1(s)s=Y_3(s)s^3	
+\end{array} \right.
+\]
+But we also have
+\[	Y_0(s)=X(s)-(k_1Y_1(s)+k_2Y_2(s)+k_3Y_3(s))	\]
+i.e., 
+\[	X(s)=Y_0(s)+k_1Y_1(s)+k_2Y_2(s)+k_3Y_3(s)=(s^3+k_1s^2+k_2s+k_3) Y_3(s)	\]
+we get the transfer function
+\[
+	H(s)=\frac{Y_3(s)}{X(s)}=\frac{1}{s^3+k_1s^2+k_2s+k_3}
+\]
+
+
+\item {\bf Second order system by 2 integrators}
+
+\htmladdimg{../figures/opam8.gif}
+
+From the diagram, we can get
+\[
+\left\{ \begin{array}{ll}
+	Y_2(s)=-c_2Y_1(s)/s  \Longrightarrow  Y_1(s)=-sY_2(s)/c_2 \\
+	Y_1(s)=-c_1Y_0(s)/s  \Longrightarrow Y_0(s)=-sY_1(s)/c_1=s^2Y_2(s)/c_1c_2 \\
+	Y_0(s)=k_0 X(s)+k_1Y_1(s)+k_2Y_2(s) 
+	\end{array} \right.
+\]
+substituting the first two equations into the last one, we get
+\[	\frac{s^2}{c_1c_2} Y_2(s)=k_0X(s)+k_1(-\frac{s}{c_2})Y_2(s)+k_2Y_2(s) \]
+from which we obtain the transfer function as
+\[
+H(s)=\frac{Y_2(s)}{X(s)}=\frac{k_o}{\frac{s^2}{c_1c_2}+\frac{s}{c_2}s-k_2}
+	=\frac{k_oc_1c_2}{s^2+k_1c_1s-c_1c_2k_2}
+\]
+which is a second order system. In particular, if $c_1=c_2=c$, we have
+\[
+	H(s)=k_0\frac{c^2}{s^2+c k_1s-k_2c^2}
+\]
+Comparing this with the canonical 2nd order system transfer function
+\[
+	H(s)=\frac{\omega_n^2}{s^2+2\zeta \omega_n s+\omega_n^2}
+\]
+we see that we can let $c=\omega_n$ and $k_1=2\zeta$. Moreover, $k_2<0$, 
+i.e., the feedback from the output should be negative. $k_0$ is a constant
+scalar which can take any value.
+	
+%\htmladdimg{../figure/opam9.gif}
+
+\item {\bf Sallen-Key Topology}
+
+The 
+\htmladdnormallink{Sallen-Key topology}{http://en.wikipedia.org/wiki/Sallen–Key_topology}
+ is an electronic filter topology used to implement second-order active filters that 
+is particularly valued for its simplicity.
+
+\htmladdimg{../figures/SallenKey.gif}
+
+We represent the input and output in s-domain as $X(s)$ and $Y(s)$, respectively,
+and the voltage at node a as $W(s)$, and apply KCL to nodes a and b to get:
+\[ \frac{W(s)-Y(s)}{Z_3}+\frac{W(s)-Y(s)}{Z_2}+\frac{W(s)-X(s)}{Z_1}=0 \]
+\[ \frac{Y(s)-W(s)}{Z_2}+\frac{Y(s)}{Z_4}=0 \]
+Solving the second equation for $W(s)$ we get
+\[ W(s)=Y(s)\frac{Z_2+Z_4}{Z_4},\;\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;
+W(s)-Y(s)=Y(s)\frac{Z_2}{Z_4} \]
+Substituting this into the first equation we get
+\[   H(s)=\frac{Y(s)}{X(s)}=\frac{Z_3Z_4}{Z_1Z_2+Z_1Z_3+Z_2Z_3+Z_3Z_4} \]
+
+{\bf Example 1} 
+$Z_1=R_1$, $Z_2=R_2$, $Z_3=1/sC_1$, $Z_4=1/sC_2$, then we get a second order 
+low-pass filter:
+\begin{eqnarray}
+  H(s)&=&\frac{1/s^2C_1C_2}{R_1R_2+R_1/sC_1+R_2/sC_1+1/s^2C_1C_2}
+  =\frac{1/R_1C_1R_2C_2}{s^2+s(R_1+R_2)/R_1R_2C_1+1/R_1C_1R_2C_2}
+  \nonumber \\
+  &=&\frac{\omega_0^2}{s^2+2\zeta\omega_0\;s+\omega_0^2} 
+  =\frac{\omega_0^2}{s^2+\omega_0/Q \;s+\omega_0^2} 
+  \nonumber
+\end{eqnarray}
+where
+\[ \omega_0=\frac{1}{\sqrt{R_1R_2C_1C_2}},\;\;\;\;\;\;\;
+  2\zeta=\frac{1}{Q}=\frac{(R_1+R_2)C_2}{\sqrt{R_1R_2C_1C_2}},\;\;\;\;\;
+  Q=\frac{\sqrt{R_1R_2C_1C_2}}{(R_1+R_2)C_2} \]
+
+{\bf Example 2} 
+$Z_1=1/sC_1$, $Z_2=1/sC_2$, $Z_3=R_1$, $Z_4=R_2$, then we get a second order 
+high-pass filter:
+\begin{eqnarray}
+  H(s)&=&\frac{R_1R_2}{1/s^2C_1C_2+R_1/sC_1+R_1/sC_2+R_1R_2}
+  =\frac{s^2}{s^2+s\;(C_1+C_2)R_1/R_1R_2C_1C_2+1/R_1R_2C_1C_2}
+  \nonumber \\
+  &=&\frac{s^2}{s^2+2\zeta\omega_0\;s+\omega_0^2} 
+  =\frac{s^2}{s^2+\omega_0/Q \;s+\omega_0^2} 
+  \nonumber
+\end{eqnarray}
+where 
+\[ \omega_0=\frac{1}{\sqrt{R_1R_2C_1C_2}},\;\;\;\;\;\;\;
+  2\zeta=\frac{1}{Q}=\frac{(C_1+C_2)R_1}{\sqrt{R_1R_2C_1C_2}},\;\;\;\;\;\;
+  Q=\frac{\sqrt{R_1R_2C_1C_2}}{(C_1+C_2)R_1} \]
+
+
+\end{itemize}
+
+\end{document}
+
+
+	
+
+	
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,570 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Review of Complex Arithmetic</TITLE>
+<META NAME="description" CONTENT="Review of Complex Arithmetic">
+<META NAME="keywords" CONTENT="ch3">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="ch3.css">
+
+<LINK REL="previous" HREF="node22.html">
+<LINK REL="next" HREF="node24.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node24.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node22.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node24.html">Appendix</A>
+<B> Up:</B> <A
+ HREF="node1.html">Chapter 3: AC Circuit</A>
+<B> Previous:</B> <A
+ HREF="node22.html">Summary</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION000111000000000000000">
+Review of Complex Arithmetic</A>
+</H2> 
+
+<P>
+<B>Addition/Subtraction of Sinusoids:</B>
+
+<P>
+Consider the addition/subtraction of two sinusoids of the same frequency 
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img10.svg"
+ ALT="$\omega$"></SPAN>:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left\{ \begin{array}{l} x_1(t)=A_1\cos(\omega t+\phi_1)\\
+    x_2(t)=A_2\cos(\omega t+\phi_2) \end{array} \right.
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img1212.svg"
+ ALT="$\displaystyle \left\{ \begin{array}{l} x_1(t)=A_1\cos(\omega t+\phi_1)\\
+x_2(t)=A_2\cos(\omega t+\phi_2) \end{array} \right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">447</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+As the frequency of the sum is obviously the same as <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img10.svg"
+ ALT="$\omega$"></SPAN>, we can write
+the sum as:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+x(t)=x_1(t)+x_2(t)=A\cos(\omega t+\phi)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1213.svg"
+ ALT="$\displaystyle x(t)=x_1(t)+x_2(t)=A\cos(\omega t+\phi)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">448</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+and we need to find <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img9.svg"
+ ALT="$A$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img11.svg"
+ ALT="$\phi$"></SPAN> in terms of <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1214.svg"
+ ALT="$A_1$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img1215.svg"
+ ALT="$A_2$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img1216.svg"
+ ALT="$\phi_1$"></SPAN> and 
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img1217.svg"
+ ALT="$\phi_2$"></SPAN>.
+<BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+x(t)&=&x_1(t)+x_2(t)=A_1\cos(\omega t+\phi_1)+A_2\cos(\omega t+\phi_2)
+  \nonumber \\
+  &=&A_1\cos\omega t\cos\phi_1-A_1\sin\omega t\sin\phi_1
+  +A_2\cos\omega t\cos\phi_2-A_2\sin\omega t\sin\phi_2
+  \nonumber \\
+  &=&(A_1\cos\phi_1+A_2\cos\phi_2)\cos\omega t
+  -(A_1\sin\phi_1+A_2\sin\phi_2)\sin\omega t
+  \nonumber \\
+  &=&A\cos\phi\cos\omega t-A\sin\phi\sin\omega t
+  \nonumber \\
+  &=&A_r\cos\omega t-A_j\sin\omega t
+  \nonumber \\
+  &=&A \cos(\omega t+\phi)
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img72.svg"
+ ALT="$\displaystyle x(t)$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1218.svg"
+ ALT="$\displaystyle x_1(t)+x_2(t)=A_1\cos(\omega t+\phi_1)+A_2\cos(\omega t+\phi_2)$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img1219.svg"
+ ALT="$\displaystyle A_1\cos\omega t\cos\phi_1-A_1\sin\omega t\sin\phi_1
++A_2\cos\omega t\cos\phi_2-A_2\sin\omega t\sin\phi_2$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1220.svg"
+ ALT="$\displaystyle (A_1\cos\phi_1+A_2\cos\phi_2)\cos\omega t
+-(A_1\sin\phi_1+A_2\sin\phi_2)\sin\omega t$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img1221.svg"
+ ALT="$\displaystyle A\cos\phi\cos\omega t-A\sin\phi\sin\omega t$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 2.55ex; vertical-align: -0.78ex; " SRC="img1222.svg"
+ ALT="$\displaystyle A_r\cos\omega t-A_j\sin\omega t$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1223.svg"
+ ALT="$\displaystyle A \cos(\omega t+\phi)$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">449</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+
+where we have used the trigonometric identity 
+<!-- MATH
+ $\cos(\alpha+\beta)=\cos\alpha\cos\beta-\sin\alpha\sin\beta$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1224.svg"
+ ALT="$\cos(\alpha+\beta)=\cos\alpha\cos\beta-\sin\alpha\sin\beta$"></SPAN>
+and assumed
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left\{ \begin{array}{l} A_r=A\cos\phi =A_1 \cos\phi_1+A_2 \cos\phi_2\\
+    A_j=A\sin\phi =A_1\sin\phi_1+A_2\sin\phi_2\end{array} \right.
+    \;\;\;\;\;\mbox{and}\;\;\;\;\;
+    \left\{ \begin{array}{l} A=\sqrt{A^2_r+A^2_j}\\
+      \phi=\tan^{-1} (A_j/A_r) \end{array} \right. 
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img1225.svg"
+ ALT="$\displaystyle \left\{ \begin{array}{l} A_r=A\cos\phi =A_1 \cos\phi_1+A_2 \cos\phi_2\\
+A_j=A\sin\phi =A_1\sin\phi_1+A_2\sin\phi_2\end{array} \right.
+\;\;\;\;\;$">and<IMG STYLE="height: 7.43ex; vertical-align: -3.07ex; " SRC="img1226.svg"
+ ALT="$\displaystyle \;\;\;\;\;
+\left\{ \begin{array}{l} A=\sqrt{A^2_r+A^2_j}\\
+\phi=\tan^{-1} (A_j/A_r) \end{array} \right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">450</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Here <!-- MATH
+ $(A_r\,A_j)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.78ex; " SRC="img1227.svg"
+ ALT="$(A_r\,A_j)$"></SPAN> and <!-- MATH
+ $(A,\,\phi)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1228.svg"
+ ALT="$(A,\,\phi)$"></SPAN> are respectively the Cartesian and polar 
+representations of the same vector in the complex plane <!-- MATH
+ $A_r+j\;A_j=A e^{j\phi}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.78ex; " SRC="img1229.svg"
+ ALT="$A_r+j\;A_j=A e^{j\phi}$"></SPAN>.
+
+<P>
+Alternatively, using phasor representation, we get
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+A_1 e^{j\phi_1}+A_2 e^{j\psi}
+  =A_1\cos(\phi_1)+A_2\cos(\phi_2)+j [A_1\sin(\phi_1)+A_2\sin(\phi_2)]
+  =A_r+j\;A_j
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.78ex; " SRC="img1230.svg"
+ ALT="$\displaystyle A_1 e^{j\phi_1}+A_2 e^{j\psi}
+=A_1\cos(\phi_1)+A_2\cos(\phi_2)+j [A_1\sin(\phi_1)+A_2\sin(\phi_2)]
+=A_r+j\;A_j$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">451</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+which can be converted into a real function in time:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+x(t)=Re[ ( A_r+j\;A_j ) e^{j\omega t} ]
+  =Re\left[ \sqrt{A_r^2+A_j^2} e^{j\tan^{-1}(A_j/A_r)} e^{j\omega t}\right]
+  =A\,\cos(\omega t+\phi)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.65ex; vertical-align: -1.63ex; " SRC="img1231.svg"
+ ALT="$\displaystyle x(t)=Re[ ( A_r+j\;A_j ) e^{j\omega t} ]
+=Re\left[ \sqrt{A_r^2+A_j^2} e^{j\tan^{-1}(A_j/A_r)} e^{j\omega t}\right]
+=A\,\cos(\omega t+\phi)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">452</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+A complex number can be represented in two different formats in either
+the Euclidean and polar coordinate system:
+
+<UL>
+<LI><B>Euclidean representation:</B> 
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img1232.svg"
+ ALT="$z=x+jy$"></SPAN> where <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img1233.svg"
+ ALT="$x$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.57ex; " SRC="img1234.svg"
+ ALT="$y$"></SPAN> are the real (horizontal) and imaginary 
+  (vertical) part of complex variable <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img1235.svg"
+ ALT="$z$"></SPAN>, respectively.
+</LI>
+<LI><B>Polar representation:</B> 
+
+<P>
+<!-- MATH
+ $z = |z|\;e^{j\angle z}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img1236.svg"
+ ALT="$z = \vert z\vert\;e^{j\angle z}$"></SPAN>, or simply <!-- MATH
+ $z=|z|\;\angle z$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1237.svg"
+ ALT="$z=\vert z\vert\;\angle z$"></SPAN>, where <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1238.svg"
+ ALT="$\vert z\vert$"></SPAN> and
+  <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img1239.svg"
+ ALT="$\angle z$"></SPAN> are the magnitude and phase angle, respectively.
+</LI>
+</UL>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/complex_number.gif"
+ ALT="complex_number.gif">
+
+<P>
+The two representations can be converted from one to the other:
+
+<UL>
+<LI>From <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1240.svg"
+ ALT="$(x,y)$"></SPAN> to <!-- MATH
+ $(|z|,\angle z)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1241.svg"
+ ALT="$(\vert z\vert,\angle z)$"></SPAN>:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left\{ \begin{array}{ll} |z|=\sqrt{x^2+y^2} & \mbox{magnitude}\\
+      \angle z=tan^{-1} (y/x) & \mbox{phase angle}
+    \end{array} \right.
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.27ex; vertical-align: -2.46ex; " SRC="img1242.svg"
+ ALT="$\displaystyle \left\{ \begin{array}{ll} \vert z\vert=\sqrt{x^2+y^2} &amp; \mbox{magnitude}\\
+\angle z=tan^{-1} (y/x) &amp; \mbox{phase angle}
+\end{array} \right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">453</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>From <!-- MATH
+ $(|z|,\angle z)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1241.svg"
+ ALT="$(\vert z\vert,\angle z)$"></SPAN> to <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1240.svg"
+ ALT="$(x,y)$"></SPAN>:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+z=|z|\;e^{j\angle z}=|z|(\cos\angle z+j\;\sin\angle z)=x+jy
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img1243.svg"
+ ALT="$\displaystyle z=\vert z\vert\;e^{j\angle z}=\vert z\vert(\cos\angle z+j\;\sin\angle z)=x+jy$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">454</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+due to Euler identity, i.e.,
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left\{ \begin{array}{ll} x=|z|\;\cos\angle z & \mbox{real part}\\
+      y=|z|\;\sin\angle z & \mbox{imaginary part}
+    \end{array} \right.
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img1244.svg"
+ ALT="$\displaystyle \left\{ \begin{array}{ll} x=\vert z\vert\;\cos\angle z &amp; \mbox{re...
+...rt}\\
+y=\vert z\vert\;\sin\angle z &amp; \mbox{imaginary part}
+\end{array} \right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">455</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+</UL>
+
+<P>
+The arithmetic operations of two complex numbers <!-- MATH
+ $z=x+jy=|z|\;e^{j\angle z}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img1245.svg"
+ ALT="$z=x+jy=\vert z\vert\;e^{j\angle z}$"></SPAN> 
+and <!-- MATH
+ $w=u+jv=|w|\;e^{j\psi}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img1246.svg"
+ ALT="$w=u+jv=\vert w\vert\;e^{j\psi}$"></SPAN> are listed below:
+
+<UL>
+<LI><B>Add/Subtract:</B> 
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+z+w=(x+u)+j(y+v),\;\;\;\;z-w=(x-u)+j(y-v)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1247.svg"
+ ALT="$\displaystyle z+w=(x+u)+j(y+v),\;\;\;\;z-w=(x-u)+j(y-v)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">456</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+<LI><B>Multiply:</B>
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+z\;w=(x+jy)(u+jv)=(xu-yv)+j(xv+yu)=|z|\;|w|\;e^{j(\angle z+\angle w)}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img1248.svg"
+ ALT="$\displaystyle z\;w=(x+jy)(u+jv)=(xu-yv)+j(xv+yu)=\vert z\vert\;\vert w\vert\;e^{j(\angle z+\angle w)}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">457</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+<LI><B>Divide:</B>
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\frac{z}{w}=\frac{x+jy}{u+jv}=\frac{(x+jy)(u-jv)}{(u+jv)(u-jv)}
+    =\frac{(xu+yv)+j(yu-xv)}{u^2+v^2}
+    =\frac{|z|}{|w|}\;e^{j(\angle z-\angle w)}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img1249.svg"
+ ALT="$\displaystyle \frac{z}{w}=\frac{x+jy}{u+jv}=\frac{(x+jy)(u-jv)}{(u+jv)(u-jv)}
+=...
+...j(yu-xv)}{u^2+v^2}
+=\frac{\vert z\vert}{\vert w\vert}\;e^{j(\angle z-\angle w)}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">458</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+<LI><B>Rotation:</B>
+
+<P>
+When a complex number, a vector in complex plane, <!-- MATH
+ $z=|z|\;e^{j\angle z}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img1236.svg"
+ ALT="$z = \vert z\vert\;e^{j\angle z}$"></SPAN> is
+  multiplied by <!-- MATH
+ $e^{j\alpha}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.12ex; " SRC="img1250.svg"
+ ALT="$e^{j\alpha}$"></SPAN>, it becomes <!-- MATH
+ $z\;e^{j\angle z}=|z|\;e^{j(\angle z+\alpha)}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img1251.svg"
+ ALT="$z\;e^{j\angle z}=\vert z\vert\;e^{j(\angle z+\alpha)}$"></SPAN>, 
+  i.e., rotated by an angle of <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img1252.svg"
+ ALT="$\alpha$"></SPAN>. The rotation is counter-clock wise
+  if <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.21ex; " SRC="img1253.svg"
+ ALT="$\alpha&gt;0$"></SPAN>, but clock-wise if <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.21ex; " SRC="img1254.svg"
+ ALT="$\alpha&lt;0$"></SPAN>. When the rotating angle is a 
+  linear function of time <!-- MATH
+ $\alpha=\omega t$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img1255.svg"
+ ALT="$\alpha=\omega t$"></SPAN>, then vector
+  <!-- MATH
+ $z=|z|\;e^{j(\angle z+\omega t)}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img1256.svg"
+ ALT="$z=\vert z\vert\;e^{j(\angle z+\omega t)}$"></SPAN> becomes a rotating vector with angular frequency
+  <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img10.svg"
+ ALT="$\omega$"></SPAN>.
+
+<P>
+In particular, As <!-- MATH
+ $e^{j\pi/2}=j$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.57ex; " SRC="img1257.svg"
+ ALT="$e^{j\pi/2}=j$"></SPAN> and <!-- MATH
+ $e^{-j\pi/2}=-j$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.57ex; " SRC="img1258.svg"
+ ALT="$e^{-j\pi/2}=-j$"></SPAN>, they can be considered 
+  as <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img3.svg"
+ ALT="$90^\circ$"></SPAN> rotation factors. Any complex number multiplied by <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img1259.svg"
+ ALT="$j$"></SPAN> or <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img1260.svg"
+ ALT="$-j$"></SPAN> 
+  will be rotated counter clockwise or clockwise by 90 degrees.
+
+<P>
+</LI>
+<LI><B>Complex Conjugate:</B>
+
+<P>
+The complex conjugate of <!-- MATH
+ $z=x+jy=|z|e^{j\angle z}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img1261.svg"
+ ALT="$z=x+jy=\vert z\vert e^{j\angle z}$"></SPAN> is 
+  <!-- MATH
+ $z^*=x-jy=|z|e^{-j\angle z}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img1262.svg"
+ ALT="$z^*=x-jy=\vert z\vert e^{-j\angle z} $"></SPAN>. In general, <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img1263.svg"
+ ALT="$z^*$"></SPAN> can be obtained by
+  negating every <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img1259.svg"
+ ALT="$j$"></SPAN> in the expression of <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img1235.svg"
+ ALT="$z$"></SPAN> (replacing <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img1259.svg"
+ ALT="$j$"></SPAN> by <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img1260.svg"
+ ALT="$-j$"></SPAN>). 
+  The magnitude of a complex number <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img1232.svg"
+ ALT="$z=x+jy$"></SPAN> can be found by:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\sqrt{zz^*}=\sqrt{(x+jy)(x-jy)}=\sqrt{x^2+y^2}=|z|
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.25ex; vertical-align: -0.71ex; " SRC="img1264.svg"
+ ALT="$\displaystyle \sqrt{zz^*}=\sqrt{(x+jy)(x-jy)}=\sqrt{x^2+y^2}=\vert z\vert$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">459</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+<LI><B>Reciprocal:</B>
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+|z^{-1}|=\frac{1}{|z|}=\frac{1}{\sqrt{x^2+y^2}},\;\;\;\;
+    \angle\left(z^{-1}\right)=\angle\left(\frac{1}{z}\right)
+    =0-\angle{z}=-\angle z
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.27ex; vertical-align: -2.74ex; " SRC="img1265.svg"
+ ALT="$\displaystyle \vert z^{-1}\vert=\frac{1}{\vert z\vert}=\frac{1}{\sqrt{x^2+y^2}}...
+...\angle\left(z^{-1}\right)=\angle\left(\frac{1}{z}\right)
+=0-\angle{z}=-\angle z$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">460</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+</UL>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node24.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node22.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node24.html">Appendix</A>
+<B> Up:</B> <A
+ HREF="node1.html">Chapter 3: AC Circuit</A>
+<B> Previous:</B> <A
+ HREF="node22.html">Summary</A></DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

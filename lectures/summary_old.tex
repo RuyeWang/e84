@@ -1,0 +1,122 @@
+\documentstyle[12pt]{article}
+\usepackage{html}
+\textwidth 6.0in
+\topmargin -0.5in
+\oddsidemargin -0in
+\evensidemargin -0.5in
+% \usepackage{graphics}  
+\begin{document}
+
+\section*{Summary of First Half}
+
+\begin{itemize}
+
+\item \bf{Governing equations of R,C and L}
+  \[ v_R(t)=R\;i_R(t),\;\;\;\;i_R(t)=\frac{v_R(t)}{R} \]
+  \[ v_L(t)=L\frac{d}{dt} i_L(t) dt,\;\;\;\;i_L(t)=\frac{1}{L}\int i_L(t) dt\]
+  \[ v_C(t)=\frac{1}{C}\int i_C(t) dt,\;\;\;\;i_C(t)=C\frac{d}{dt} v_C(t) \]
+
+\item \bf{Series and parallel connections of basic components R, C, and L}
+\begin{itemize}
+\item Series:
+  \[ R=R_1+R_2,\;\;\;L=L_1+L_2,\;\;\;\frac{1}{C}=\frac{1}{C_1}+\frac{1}{C_2} \]
+\item Parallel: 
+  \[ \frac{1}{R}=\frac{1}{R_1}+\frac{1}{R_2},\;\;\;\frac{1}{L}=\frac{1}{L_1}+\frac{1}{L_2}\;\;\;\;C=C_1+C_2 \]
+
+\end{itemize}
+
+\item \bf{Basic circuit laws: Kirchhoff's laws (KVL, KCL), current and voltage 
+  dividers}
+  \begin{itemize}
+    \item KVL: around a loop: $\sum_k v_k=0$
+    \item KCL: at a node: $\sum_k i_k=0$
+    \item Voltage divider: two resistors in series:
+      \[V_1=V\; \frac{R_1}{R_1+R_2},\;\;\; V_2=V\; \frac{R_2}{R_1+R_2}\]
+    \item Current divider: two resistors in parallel:
+      \[I_1=I\; \frac{R_2}{R_1+R_2},\;\;\; I_2=V\; \frac{R_1}{R_1+R_2}\]
+  \end{itemize}
+
+\item \bf{Energy (voltage, current) sources and their conversions}
+  \begin{itemize}
+    \item Voltage source: $V_0$ and $R_0$ in series
+    \item Current source: $I_0$ and $R'_0$ in parallel
+    \item Conversion between voltage and current sources:
+      $R'_0=R_0,\;\;\;\;V_0=I_0 R_0$
+    \item Fnternal resistance:
+\[ R_0=\frac{\mbox{open-circuit voltage}}{\mbox{short-circuit current}}
+  =\frac{V_{oc}}{I_{sc}} \]      
+  \end{itemize}
+  
+\item \bf{Methods for solving circuits}
+  \begin{itemize}
+    \item branch current,  
+    \item loop current, 
+    \item node voltage, 
+  \end{itemize}
+
+\item \bf{Superposition principle}
+
+  Find network's response to each of the multiple energy sources, the 
+  overall response is their algebraic sum.
+
+\item \bf{Thevenin's and Norton's theorems}
+  \begin{itemize}
+    \item Thevenin's theorem: treat the component in question as the load
+      of a 1-port network with open-circuit voltage $V_T$ in series with
+      an equivalent internal resistance $R_T$.
+    \item Norton's theorem: treat the component in question as the load
+      of a 1-port network with short-circuit current $I_N$ in parallel with
+      an equivalent internal resistance $R_N$.
+  \end{itemize}
+
+\item \bf{Delta-Y conversions}
+\begin{itemize}
+\item $\Delta$ to $Y$ conversion:
+\[ \left\{ \begin{array}{rr}
+	R_a=R_{ab}R_{ac}/(R_{ab}+R_{ac}+R_{bc}) \\
+	R_b=R_{ab}R_{bc}/(R_{ab}+R_{ac}+R_{bc}) \\
+	R_c=R_{ac}R_{bc}/(R_{ab}+R_{ac}+R_{bc}) \end{array} \right. \]
+\item $Y$ to $\Delta$ conversion:
+\[ \left\{ \begin{array}{rr}
+	R_{ab}=R_a+R_b+R_aR_b/R_c	\\
+	R_{ac}=R_a+R_c+R_aR_c/R_b	\\
+	R_{bc}=R_b+R_c+R_bR_c/R_a	\end{array} \right. \]
+\end{itemize}
+
+\item \bf{Phasor representation of sinusoidal variables}
+\[ x(t)=X_p cos(\omega t+\phi)=Re[X_p e^{j(\omega t+\phi)}]
+   =Re[\dot{X} \sqrt{2}e^{j\omega t}] \]
+     with phasor $\dot{X}=X_{rms}\;e^{j\phi}=X_p/\sqrt{2}\;e^{j\phi}$.
+
+\item \bf{Impedance (resistance, reactance) and admittance (conductance, 
+  susceptance)}
+\[Z=R+jX,\;\;\;\;\;\mbox{impedance}=\mbox{resistance}+j\;\mbox{reactance} \]
+\[Y=G+jB,\;\;\;\;\;\mbox{admittance}=\mbox{conductance}+j\;\mbox{susceptance} \]
+\[ Y=\frac{1}{Z}=\frac{1}{R+jX}=\frac{R}{R^2+X^2}+j\;\frac{-X}{R^2+X^2}=G+jB \]
+
+\item \bf{Generalized Ohm's law, KCL and KVL}
+\[ \dot{V}=\dot{I} Z,\;\;\;\sum_k \dot{V}_k=0,\;\;\;\;\sum_k \dot{I}_k=0 \]
+
+\item \bf{Use phasor to solve AC circuits (complex calculations)}
+
+\item \bf{Complete responses}
+\begin{itemize}
+\item Complete response to DC input (3 elements $f(\infty)$, $f(0_+)$ and 
+  $\tau$) 
+\[ f(t)=f(\infty)+[f(0_+)-f(\infty)]\;e^{-t/\tau} \]
+
+\item Complete response to AC input (3 elements $f_\infty(t)$, $f(0_+)$ and 
+  $\tau$).
+\[ f(t)=f_\infty(t)+[f(0_+)-f_\infty(0)]\;e^{-t/\tau}	\]
+\item Superposition applicable when multi-source of different frequencies.
+\end{itemize}
+
+\end{itemize}
+
+\end{document}
+
+\item Series and parallel resonance. Resonant frequency, peak frequency,
+  bandwidth. Quality factor.
+
+\item Power factor 
+

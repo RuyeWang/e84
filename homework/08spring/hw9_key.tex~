@@ -1,0 +1,321 @@
+\documentstyle[11pt]{article}
+\usepackage{html}
+\begin{document}
+\begin{center}
+{\Large \bf E84 Home Work 9}
+\end{center}
+\begin{enumerate}
+
+\item The load of a voltage soruce of $v(t)=110\sqrt{2} \;\cos(2\pi 60\;t)$
+is shown in the figure, where $R_1=100\Omega$, $R_2=50\Omega$, $C=6.63\mu F$, 
+$L=0.53 H$. Is the load capacitive ($\phi=\tan^{-1}(X/R)<0$) or inductive 
+($\phi>0$)? Find the power factor, the apparent power, the real power and 
+the reactive power. 
+
+\htmladdimg{../hw6d.gif}
+
+  {\bf Solution:}
+ \[ Z_C=-\frac{j}{\omega C}=-\frac{j}{2\pi 60\times 6.63\times 10^{-6}}
+  	=-j400\Omega\]
+  \[Z_L=j\omega L=j 2\pi 60\times 0.53=j200\Omega,\;\;\;\; Z_{RL}=100+j200\]
+  
+  \[ Z_{CRL}=\frac{Z_C Z_{RL}}{Z_C+Z_{RL}}=\frac{(100+j200)(-j400)}{100+j200-j400}
+  	=\frac{800-j400}{1-j2}	\]
+  \[
+  Z_{total}=Z_{CRL}+R_2=\frac{800-j400}{1-j2}+50=370+j240=441\angle 33^\circ
+  \]
+  The load is inductive as $\phi>0$.
+  \[ \dot{I}=\frac{\dot{V}}{Z_{total}}=\frac{110}{441\angle 33^\circ}
+  	=0.25\angle -33^\circ	\]
+  power factor is $\lambda=cos (-33^\circ)=0.839$, 
+  the apparent power is $S=110\times 0.25=27.5 W$, 
+  the real power is $P=S \cos 33^\circ=27.5\times 0.84=23 W$
+  the reactive power is $Q=S \sin 33^\circ=27.5\times 0.54=15 W$
+
+
+\item To improve the power factor of the circuit above to 0.9, a shunt 
+capacitor is added. What should the capacitance $C$ be? What should $C$ be 
+if the power factor is required to be 1?
+
+\htmladdimg{../hw6c.gif}
+
+  {\bf Solution:}
+ 
+  Adding a shunt capacitor with impedance $1/j\omega C=-jX$ ($X=1/\omega C$), 
+  the overall load impedance is
+  \[	Z_{all}=-jX || Z_{total}=\frac{-jX(370+j240)}{-jX+(370+j240)}
+  	=\frac{240X-j370X}{370-j(X-240)}=|Z|\angle Z=|Z|\angle \phi	\]
+  For the power factor to be 0.9, this impedance need to have a phase angle 
+  $\phi=\cos^{-1} 0.9=25.84^\circ$, and we need to have:
+  \[	\tan^{-1}[\frac{-370X}{240X}]-\tan^{-1}[\frac{-(X-240)}{370}]=
+  	-57^\circ+\tan^{-1}[\frac{X-240}{370}]=25.84^\circ \]
+  \[	\tan^{-1}[\frac{X-240}{370}]=82.84^\circ, \;\;\;
+  \frac{X-240}{370}=\tan \;82.84^\circ=7.96, \;\;\; X=3185.4 \]
+  \[ \frac{1}{\omega C}=X=3185.4,\;\;\;\;C=\frac{1}{2\pi 60\times 3185.4}
+  =0.83 \mu F \]
+  For the power factor to be 1, we need to have
+  \[	\tan^{-1}[\frac{-370X}{240X}]-\tan^{-1}[\frac{-(X-240)}{370}]=
+  	-57^\circ+\tan^{-1}[\frac{X-240}{370}]=0^\circ \]
+  i.e., 
+  \[	\tan^{-1}[\frac{X-240}{370}]=57^\circ, \;\;\;
+  \frac{X-240}{370}=\tan \;57^\circ=1.54, \;\;\; X=810 \]
+  \[ \frac{1}{\omega C}=X=810,\;\;\;\;C=\frac{1}{2\pi 60\times 810}
+  =3.27 \mu F \]
+
+\item 
+In the circuit shown below, the voltage source $v(t)=100\;\sqrt{2}\;sin\;314t\;$ volts,
+and the effective values of the three currents $i$, $i_L$ and $i_C$ are the same. The
+total real energy comsumed by the circuit is 866 W. Find the values of $R$, $L$ and $C$.
+(Hint: represent all currents $i(t)$, $i_C(t)$, $i_L(t)$ and voltage $v(t)$ as phasors 
+$\dot{I}$, $\dot{I}_C$, $\dot{I}_L$, $\dot{V}$, and draw them as vectors to figure out
+how they are related.)
+
+
+\htmladdimg{../midterm2h.gif}
+
+{\bf Solution:}
+Let $\dot{V}=100\angle 0$ be the phasor representation of $v(t)$ so that 
+\[ v(t)=Im[\sqrt{2} \dot{V} e^{j\omega t}] =Im[\sqrt{2} \dot{V} e^{j314t}] \]
+where $\omega=2\pi f=314$, i.e., $f=50$ Hz. We have
+\[ \dot{I}_C=j\omega C \dot{V}=100\omega C \angle 90^\circ,
+\;\;\;\;\;\dot{I}_L=\frac{\dot{V}}{R+j\omega L}=\frac{100}{\sqrt{R^2+\omega^2 L^2}}\angle -\phi \]
+where $\phi=tan^{-1}(\omega L/R)$. Due to KCL, we hav
+\[ \dot{I}=\dot{I}_C+\dot{I}_L \]
+but also as given
+\[ |\dot{I}|=|\dot{I}_C|=|\dot{I}_L|=I \]
+we conclude that these three currents are equal in magnitude and $60^\circ$ apart in 
+phase angle, as shown below:
+\htmladdimg{../midterm2h1.gif}
+
+where $\dot{I}_C$ is $90^\circ$ ahead of $\dot{V}$, $\dot{I}$ is $\theta=30^\circ$
+ahead of $\dot{V}$, which in turn is $\phi=30^\circ$ ahead of $\dot{I}_L$. Therefore,
+\[ \dot{I}=I\angle \theta=I\angle 30^\circ,\;\;\;\;\;\dot{I}_L=I\angle \phi=I\angle -30^\circ,
+\;\;\;\;\;\dot{I}_C=I\angle 90^\circ  \]
+As the real power is 
+\[ P=866=V I \cos\phi =100 I \cos (-30^\circ)=86.6 I \]
+we get
+\[ I=10 A \]
+therefore we also get
+\[ P=866=RI^2=R 100,\;\;\;\;\;R=8.66 \Omega \]
+and
+\[ \dot{I}=10\angle 30^\circ,\;\;\;\;\dot{I}_L=10\angle -30^\circ,\;\;\;\dot{I}_C=10\angle 90^\circ  \]
+But from above
+\[ \dot{I}_C=100\omega C \angle 90^\circ=10\angle 90^\circ \]
+we get:
+\[ \omega C=0.1,\;\;\;\;C=0.1/314=3.18\times 10^{-4} \; F\]
+Since we also have:
+\[ \dot{I}_L=\frac{100}{\sqrt{R^2+\omega^2 L^2}}\angle -\phi=10\angle -30^\circ \]
+solving this we get
+\[ \omega L=5,\;\;\;\;\;\;L=5/\omega=5/314=0.0159\;H \]
+
+\item Read and understand the notes about two-port networks on 
+\htmladdnormallink{this page}{http://fourier.eng.hmc.edu/e84/lectures/ch2/node4.html}
+(before the title ``Principle of reciprocity'', which will not be covered), especially
+the two examples, and then you should be able to do the following three problems.
+
+Find the Z-model and Y-model of the circuit shown in the figures, by
+assuming one of the two known variables (currents or voltages) is zero at
+a time. Then verify your results by checking whether ${\bf Z}^{-1}={\bf Y}$.
+
+\htmladdimg{../networkCL.gif}
+
+  {\bf Solution:}
+
+  For the Z-model, 
+  \begin{itemize}
+  item Assume $I_2=0$ (open-circuit), then
+  	$Z_{11}=V_1/I_1=1/j\omega C$, $Z_{21}=V_2/I_1=1/j\omega C$
+  \item Assume $I_1=0$ (open-circuit), then
+  	$Z_{12}=V_1/I_2=1/j\omega C$, $Z_{22}=V_2/I_2=j\omega L+1/j\omega C$
+  \end{itemize}
+  For the Y-model, 
+  \begin{itemize}
+  \item Assume $V_2=0$ (short-circuit), then
+  	$Y_{11}=I_1/V_1=j\omega C+1/j\omega L$, $Y_{21}=I_2/V_1=1/j\omega L$
+  \item Assume $V_1=0$ (short-circuit), then
+  	$Y_{12}=I_1/V_2=1/j\omega L$, $Y_{22}=I_2/V_2=1/j\omega L$
+  \end{itemize}
+  {\bf verify:}
+  \[ {\bf Z}^{-1}=\left[ \begin{array}{rr} 1/j\omega C & 1/j\omega C \\
+  	1/j\omega C & j\omega L+1/j\omega C \end{array} \right]^{-1}
+  	=\frac{C}{L}\left[ \begin{array}{rr} j\omega L+1/j\omega C & -1/j\omega C \\
+  	-1/j\omega C & 1/j\omega C \end{array} \right]
+  	=\left[ \begin{array}{rr} j\omega C+1/j\omega L & -1/j\omega L \\
+  	-1/j\omega L & 1/j\omega L \end{array} \right]
+  \]
+
+
+\item The parameters of the Y-model of the two-port network are $Y_{11}=-4$, 
+$Y_{12}=3$, $Y_{21}=3$, and $Y_{22}=-2$. The voltage source is $V_0=5V$, 
+$Z_0=1\Omega$, $Z_L=j1\Omega$. Find variables $I_1$, $I_2$, $V_1$, $V_2$. 
+(Hint: refer to Method 1 in the example shown in the
+\htmladdnormallink{web notes}{http://fourier.eng.hmc.edu/e84/lectures/ch2/node4.html})
+
+\htmladdimg{../hw7c.gif}
+
+  {\bf Solution:} 
+  \begin{itemize}
+  \item Convert Y-model to Z-model:
+    \[ {\bf Z}={\bf Y}^{-1}=\left[ \begin{array}{rr}-4 & 3 \\ 3 & -2\end{array} \right]^{-1}
+    =\left[ \begin{array}{rr}2 & 3 \\ 3 & 4\end{array} \right] \]
+    \[ \left\{ \begin{array}{l} V_1=2I_1+3I_2 \\ V_2=3I_1+4I_2 \end{array} \right. \]
+  \item Setup additional equations:
+    \[ \left\{ \begin{array}{l} V_1=V_0-R_0I_1 \\ V_2=-Z_L I_2 \end{array} \right. \]
+  \item Find $I_1$ and $I_2$:
+    \[ \left\{ \begin{array}{l} 2I_1+3I_2=V_0-R_0I_1\\ 3I_1+4I_2=-Z_LI_2\end{array}\right. 
+      \;\;\;\;\;\mbox{i.e.}\;\;\;\;\;
+    \left\{ \begin{array}{l} (2+R_0)I_1+3I_2=V_0\\ 3I_1+(4+Z_L)I_2=0\end{array}\right. \]
+      These equations can be solved to get
+      \[ I_1=\frac{5(4+j)}{3(1+j)},\;\;\;\;\;\;I_2=-\frac{5}{1+j}\]
+  \item Find $V_1$, $V_2$:
+    \[ V_2=-I_2Z+L=\frac{j5}{1+j},\;\;\;\;\;\; V_1=-\frac{5(1-j2)}{3(1+j)} \]
+  \end{itemize}
+
+\item Repeat the previous problem but this time use Thevenin's theorem to find
+$V_2$ across load $R_L$. (Hint: refer to Method 2 in the example shown in the
+\htmladdnormallink{web notes}{http://fourier.eng.hmc.edu/e84/lectures/ch2/node4.html})
+
+  {\bf Solution:} 
+    \[ \left\{ \begin{array}{l} V_1=2I_1+3I_2 \\ V_2=3I_1+4I_2 \end{array} \right. \]
+    \[ \left\{ \begin{array}{l} V_1=V_0-R_0I_1 \\ V_2=-Z_L I_2 \end{array} \right. \]
+  First, find $Z_{Th}$ when the voltage souce is short circuit:
+  \begin{itemize}
+    \item Equating $V_1=V_0-R_0I_1=-I_1$ to $V_1=2I_1+3I_2$, we get
+      $ 2I_1+3I_2=-I_1$, i.e., $I_1=-I_2$.
+    \item Substituting $I_1=-I_2$ into $V_2=3I_1+4I_2$, we get $ V_2=I_2$, i.e.,
+      $Z_{Th}=V_2/I_2=1$.
+  \end{itemize}
+  Second, find $V_{Th}$ when the load is open circuit, i.e., $I_2=0$:
+  \begin{itemize}
+    \item Since $I_2=0$, the Z-model equations become $V_1=2I_1$, $V_2=3I_1$.
+    \item We also get $I_1=(V_0-V_1)/R_0=5-V_1=5-2I_1$, which can be solved to 
+      get $I_1=5/3$.
+    \item Then $V_{Th}=V_2=3I_1=5$.
+  \end{itemize}
+  Finally, we can find voltage across $R_L$ as
+  \[V_2=V_{Th}\;\frac{Z_L}{Z_{Th}+Z_L}=\frac{j5}{1+j} \]
+
+\end{enumerate}
+\end{document}
+
+\item The circuit shown in the figure contains a voltage source $V=10V$,
+two resistors $R_1=300\Omega$ and $R_2=200\Omega$, and a silicon diode.
+Find the voltage $V_D$ across and the current $I_D$ through the diode.
+Solve this problem in two different methods: (a) assume voltage $V_D=0.7$ 
+(as the diode is always forward biased), and (b) use the graphic approach
+to find the intersection of the load line and the diode equation:
+\[ I_D=I_0 ( e^{V_D/\eta V_T}-1 ) \]
+Sketch the plot of the two curves and estimate the solution $(I_D,V_D)$
+at their intersection. (Note that you can assume $I_0=10^{-10}$ and 
+$V_T=0.026V$ at room temperature 300K.)
+
+\htmladdimg{../hw8a.gif}
+
+% {\bf Solution:} 
+% Method 1: As the diode is forward biased, the voltage across it
+% is 0.7V, and the current through $R_2$ is $0.7V/200\Omega=3.5mA$, and
+% the current through $R_1$ is $(10-0.7)/300=31 mA$. The current through
+% the diode is therefore $I_D=31-3.5=27.5 mA$.
+% Method 2: set up the equation for $V_D$ and $I_D$:
+% \[ \frac{V_D}{R_2}+I_D=\frac{V-V_D}{R_1} \]
+% if $V_D=0$, $I_D=\frac{V}{R_1}=\frac{10}{300}=33.3 mA$
+% if $I_D=0$, $V_D=V\;\frac{R_2}{R_1+R_2}=10\frac{200}{300+200}=4V$
+% the intersection of the two curves is aprroximately the same as method 1.
+% \htmladdimg{../hw8aa.gif}
+
+\item The circuit shown in the figure contains a voltage source $V=10V$,
+three resistors $R_1=300\Omega$, $R_2=200\Omega$, and $R_3=100\Omega$, 
+and two silicon diode. Find the voltage across the two parallel branches.
+(Hint: assume $V_D=0.7$ when the diode is forward biased.)
+
+\htmladdimg{../hw8c.gif}
+
+% {\bf Solution:} As the diode is forward biased, the voltage across it
+% is 0.7V. Assume the voltage in question is $x$, then we have the following
+% equation:
+% \[	\frac{10-x}{300}=\frac{x-0.7}{200}+\frac{x-0.7}{100}	\]
+% which can be solved for $x$ to get the voltage to be $2.39V$.
+
+\end{enumerate}
+
+\end{document}
+
+\item The circuit shown in the figure is a converter (adaptor) based on
+a full-wave rectifier, which gets an AC voltage input of 115V 60 Hz, and
+produces a 12V DC output. The voltage variation or ripple of the output
+should not exceed 5\% when the load current is no more than 2A. Design 
+the converter in terms of the turn ratio of the transformer and the 
+value of the capacitor. 
+
+\htmladdimg{../hw8d.gif}
+
+\item The input voltage to the circuit in the following figure is
+$v(t)=10 \sin (\omega t)$. The two DC voltages are both 5V. Sketch the
+waveform of the output voltage $V_{out}$.
+
+\htmladdimg{../hw8e.gif}
+
+\item Assume each of the input voltages $V_1$ and $V_2$ takes one of
+two values, either 0V or 5V. Find the output voltage $V_{out}$ in the
+following combinations of three input:
+ 
+\begin{tabular}{c||c c c c}\hline\hline
+$V_1$ & 0V & 0V & 5V & 5V \\ \hline
+$V_1$ & 0V & 5V & 0V & 5V \\ \hline
+$V_{out}$ &   &   &   &   \\
+\end{tabular}
+
+\htmladdimg{../hw8f.gif}
+
+
+\end{enumerate}
+
+\end{document}
+
+
+\item Represent the two-port system shown in the figure as a T-model with
+$Z_1$, $Z_2$ and $Z_3$, and then a $\Pi$-model with $Y_1$, $Y_2$ and 
+$Y_3$. Also confirm the system is reciprocal. All resistors are 1 $\Omega$.
+
+\htmladdimg{../hw7b.gif}
+
+ {\bf Solution:}
+ \begin{itemize}
+ \item Convert the $Y$ containing three $1\Omega$ resistors in the circuit 
+ into a delta with three $1/3\Omega$ resistors.
+ \item Get the T-model of the system with $Z_1=Z_2=1/3$, $Z_3=4/3$.
+ \item Convert the T-model into a Z-network with
+ \[ Z_{11}=Z_1+Z_3=5/3,\;\;\;\;Z_{22}=Z_2+Z_3=5/3,
+ 	\;\;\;\;Z_{12}=Z_{21}=Z_3=4/3 \]
+ \item Find ${\bf Y}$:
+ \[ {\bf Y}={\bf Z}^{-1}=\frac{1}{3}\left[ \begin{array}{rr}
+ 	5 & 4 \\ 4 & 5 \end{array} \right]^{-1}
+ 	=\frac{1}{3}\left[ \begin{array}{rr} 5 & -4 \\ -4 & 5 \end{array} \right]
+ \]
+ 	with $Y_{11}=Y_{22}=5/3$, $Y_{12}=Y_{21}=-4/3$.
+ \item Convert the Y-model to a $\Pi$-network:
+ \[ Y_1=Y_{11}+Y_{12}=1/3,\;\;\;\;Y_2=Y_{22}+Y_{21}=1/3,\;\;\;\;Y_3=-Y_{12}=4/3 \]
+ \item The $\Pi$-model can be also expressed In terms of impedances:
+ \[ Z_1=3,\;\;\;\;Z_2=3,\;\;\;\;Z_3=4/3 \]
+ \end{itemize}
+ As both ${\bf Z}$ and ${\bf Y}$ are symmetric, the system is reciprocal.
+
+\item The figure below shows a voltage source $V$ and its load containing
+two resistors $R_C=3\Omega$, $R_L=2\Omega$ and an ideal transformer with 
+turn ratio $n=2$. Find the equivalent load resistance $R=V/I$.
+(Hint: find current $I_1$ and $I_4$ in terms of $R_C$, $R_L$, the turn 
+ratio $n$, as well as $V$, then find $I=I_1+I_4$ and $R=V/I$.)
+
+\htmladdimg{../hw7a.gif}
+
+ {\bf Solution:}
+ 
+ \begin{itemize}
+ \item Find $V_2=V/2$
+ \item Find $I_4=(V-V_2)/3=V/6$
+ \item Find $I_3=V_2/2=V_1/4$
+ \item Find $I_2=I_4-I_3=V(1/6-1/4)=-V/12$
+ \item Find $I_1=-I_2/2=V/24$
+ \item Find $I=I_1+I_4=V(1/24+1/6)=5V/24)$
+ \item Find $R=V/I=24/5=4.8\Omega$
+ \end{itemize}

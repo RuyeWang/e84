@@ -1,0 +1,1738 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>AC Circuit Analysis III (Complete Solution)</TITLE>
+<META NAME="description" CONTENT="AC Circuit Analysis III (Complete Solution)">
+<META NAME="keywords" CONTENT="ccc">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="ccc.css">
+
+<LINK REL="next" HREF="node7.html">
+<LINK REL="previous" HREF="node5.html">
+<LINK REL="up" HREF="node1.html">
+<LINK REL="next" HREF="node7.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html96"
+  HREF="node7.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html94"
+  HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html88"
+  HREF="node5.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html97"
+  HREF="node7.html">Second Order RCL Circuit</A>
+<B> Up:</B> <A NAME="tex2html95"
+  HREF="node1.html">Chapter 3: AC Circuit</A>
+<B> Previous:</B> <A NAME="tex2html89"
+  HREF="node5.html">AC Circuit Analysis II</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00015000000000000000">
+AC Circuit Analysis III (Complete Solution)</A>
+</H2>
+
+<P>
+The complete response of a linear system due to the external input as well
+as the initial condition can be found as the sum of the homogeneous and 
+particular solutions of the DE, which is no longer homogeneous, due to the
+non-zero right-hand side for the external input <IMG
+ WIDTH="70" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img235.png"
+ ALT="$v(t)\ne 0$"> applied to the 
+circuit:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_R(t)+v_C(t)=\tau\frac{d}{dt} v_c(t)+v_c(t)=v(t)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="314" HEIGHT="46" BORDER="0"
+ SRC="img236.png"
+ ALT="\begin{displaymath}
+v_R(t)+v_C(t)=\tau\frac{d}{dt} v_c(t)+v_c(t)=v(t)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+We want to solve the DE for <IMG
+ WIDTH="46" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img209.png"
+ ALT="$v_C(t)$"> as the circuit's complete response to the
+input <IMG
+ WIDTH="70" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img235.png"
+ ALT="$v(t)\ne 0$"> as well as the initial condition <!-- MATH
+ $v_C(0)=V_0\ne 0$
+ -->
+<IMG
+ WIDTH="127" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img237.png"
+ ALT="$v_C(0)=V_0\ne 0$">, after a 
+switch is closed at time moment <IMG
+ WIDTH="46" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img206.png"
+ ALT="$t=0$">. 
+
+<P>
+<B>Complete Solution 1: Constant Input</B>
+
+<P>
+<IMG
+ WIDTH="206" HEIGHT="157" ALIGN="BOTTOM" BORDER="0"
+ SRC="../figures/RCcircuit.png"
+ ALT="RCcircuit.png">
+
+<P>
+Consider the RC circuit shown above where the switch is closed at <IMG
+ WIDTH="46" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img206.png"
+ ALT="$t=0$">.
+We want to find the voltage <IMG
+ WIDTH="46" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img209.png"
+ ALT="$v_C(t)$"> across <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img76.png"
+ ALT="$C$"> (with assumed <IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img238.png"
+ ALT="$+$"> on left)
+and voltate <IMG
+ WIDTH="46" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img208.png"
+ ALT="$v_R(t)$"> across <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.png"
+ ALT="$R$"> (with assumed <IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img238.png"
+ ALT="$+$"> on top) at function of 
+time for <IMG
+ WIDTH="46" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img239.png"
+ ALT="$t&gt;0$">. 
+
+<P>
+First we consider a constant (DC) input <IMG
+ WIDTH="79" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img240.png"
+ ALT="$v(t)=V_s$"> applied to the circuit 
+at <IMG
+ WIDTH="46" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img206.png"
+ ALT="$t=0$">, i.e., a step input 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v(t)=V_s u(t) =\left\{ \begin{array}{ll}V_s & t\ge 0\\0 & t<0\end{array}\right.
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="227" HEIGHT="55" BORDER="0"
+ SRC="img241.png"
+ ALT="\begin{displaymath}
+v(t)=V_s u(t) =\left\{ \begin{array}{ll}V_s &amp; t\ge 0\\ 0 &amp; t&lt;0\end{array}\right.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The solution of this inhomogeneous DE is composed of two parts, 
+
+<UL>
+<LI><B>particular solution (forced response) </B>
+  <!-- MATH
+ $v'_C(t)=v_C(t)|_{t\rightarrow \infty}=V_s$
+ -->
+<IMG
+ WIDTH="194" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img242.png"
+ ALT="$v'_C(t)=v_C(t)\vert _{t\rightarrow \infty}=V_s$"> due to the DC input <IMG
+ WIDTH="23" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img243.png"
+ ALT="$V_s$">;
+</LI>
+<LI><B>homogeneous solution (natural response) </B>: 
+  <!-- MATH
+ $v''_C(t)=A e^{-t/\tau}$
+ -->
+<IMG
+ WIDTH="125" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img244.png"
+ ALT="$v''_C(t)=A e^{-t/\tau}$"> due to the initial condition <!-- MATH
+ $v_C(t)\big|_{t=0}=v_C(0)=V_0$
+ -->
+<IMG
+ WIDTH="188" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img245.png"
+ ALT="$v_C(t)\big\vert _{t=0}=v_C(0)=V_0$">.
+</LI>
+</UL>
+Therefore the overall solution is
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_C(t)=v'_C(t)+v''_C(t)=V_s+A e^{-t/\tau}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="291" HEIGHT="33" BORDER="0"
+ SRC="img246.png"
+ ALT="\begin{displaymath}
+v_C(t)=v'_C(t)+v''_C(t)=V_s+A e^{-t/\tau}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+From the initial condition <!-- MATH
+ $v_C(t)|_{t=0}=v_C(0)=V_0$
+ -->
+<IMG
+ WIDTH="188" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img247.png"
+ ALT="$v_C(t)\vert _{t=0}=v_C(0)=V_0$">, we have	
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_C(0)=V_0=v_C(t)|_{t=0}=V_s+Ae^{0}=V_s+A,
+\;\;\;\;\;\mbox{i.e.,}\;\;\;\;A=V_0-V_s
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="543" HEIGHT="33" BORDER="0"
+ SRC="img248.png"
+ ALT="\begin{displaymath}
+v_C(0)=V_0=v_C(t)\vert _{t=0}=V_s+Ae^{0}=V_s+A,
+\;\;\;\;\;\mbox{i.e.,}\;\;\;\;A=V_0-V_s
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+and the solution becomes
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_C(t)=V_s+A e^{-t/\tau}=V_s+(V_0-V_s) e^{-t/\tau}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="339" HEIGHT="33" BORDER="0"
+ SRC="img249.png"
+ ALT="\begin{displaymath}
+v_C(t)=V_s+A e^{-t/\tau}=V_s+(V_0-V_s) e^{-t/\tau}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+In particular, for zero initial condition <IMG
+ WIDTH="127" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img250.png"
+ ALT="$v_C(0)=V_0=0$">, the solution is
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_C(t)=V_s+(-V_s) e^{-t/\tau}=V_s(1-e^{-t/\tau})
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="322" HEIGHT="33" BORDER="0"
+ SRC="img251.png"
+ ALT="\begin{displaymath}
+v_C(t)=V_s+(-V_s) e^{-t/\tau}=V_s(1-e^{-t/\tau})
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The current through <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img76.png"
+ ALT="$C$"> is
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+i(t)=C\frac{d}{dt}\,v_C(t)=-\frac{C}{\tau}(V_0-V_s)e^{-t/\tau}
+=\frac{V_s-V_0}{R}e^{-t/\tau}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="431" HEIGHT="46" BORDER="0"
+ SRC="img252.png"
+ ALT="\begin{displaymath}
+i(t)=C\frac{d}{dt}\,v_C(t)=-\frac{C}{\tau}(V_0-V_s)e^{-t/\tau}
+=\frac{V_s-V_0}{R}e^{-t/\tau}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The voltage across <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.png"
+ ALT="$R$"> is
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_R(t)=R\; i(t)=(V_s-V_0) e^{-t/\tau}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="251" HEIGHT="33" BORDER="0"
+ SRC="img253.png"
+ ALT="\begin{displaymath}
+v_R(t)=R\; i(t)=(V_s-V_0) e^{-t/\tau}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+We can further verify that
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_C(t)+v_R(t)=V_s+(V_0-V_s) e^{-t/\tau}+(V_s-V_0) e^{-t/\tau} =V_s
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="464" HEIGHT="33" BORDER="0"
+ SRC="img254.png"
+ ALT="\begin{displaymath}
+v_C(t)+v_R(t)=V_s+(V_0-V_s) e^{-t/\tau}+(V_s-V_0) e^{-t/\tau} =V_s
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+The plots below show <IMG
+ WIDTH="46" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img209.png"
+ ALT="$v_C(t)$"> (red) and <IMG
+ WIDTH="46" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img208.png"
+ ALT="$v_R(t)$"> (green) under different
+initial conditions (purple) and inputs (blue).
+
+<P>
+In the first plot <IMG
+ WIDTH="58" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img255.png"
+ ALT="$V_0=2$"> and inputs <IMG
+ WIDTH="57" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img256.png"
+ ALT="$V_s=1$">
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../figures/first_order_response1.gif"
+ ALT="first_order_response1.gif">
+
+<P>
+In the second plot <IMG
+ WIDTH="58" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img257.png"
+ ALT="$V_0=1$"> and <IMG
+ WIDTH="57" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img258.png"
+ ALT="$V_s=2$">. 
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../figures/first_order_response2.gif"
+ ALT="first_order_response2.gif">
+
+<P>
+Note that at <IMG
+ WIDTH="46" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img206.png"
+ ALT="$t=0$">, <IMG
+ WIDTH="46" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img208.png"
+ ALT="$v_R(t)$"> goes through a discontinuous transition from 
+<IMG
+ WIDTH="81" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img259.png"
+ ALT="$v_R(t)=0$"> for <IMG
+ WIDTH="46" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img260.png"
+ ALT="$t&lt;0$"> to <!-- MATH
+ $v_R(t)=V_s-v_c(0)=V_s-V_0$
+ -->
+<IMG
+ WIDTH="237" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img261.png"
+ ALT="$v_R(t)=V_s-v_c(0)=V_s-V_0$"> for <IMG
+ WIDTH="57" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img262.png"
+ ALT="$t=0^+$">. Also note 
+that <IMG
+ WIDTH="46" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img208.png"
+ ALT="$v_R(t)$"> is a negative value if <!-- MATH
+ $v_C(0)=V_0>V_s$
+ -->
+<IMG
+ WIDTH="136" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img263.png"
+ ALT="$v_C(0)=V_0&gt;V_s$">, while the voltage 
+source <IMG
+ WIDTH="57" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img264.png"
+ ALT="$V_s&gt;0$"> is positive (both measured with respective to the bottom 
+wire treated as the ground). This is because right after the switch is 
+closed, the voltage on the left side of <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img76.png"
+ ALT="$C$"> drops from <IMG
+ WIDTH="73" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img265.png"
+ ALT="$V_0=2V$"> to <IMG
+ WIDTH="72" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img266.png"
+ ALT="$V_s=1V$">, 
+causing the voltage on its right side to also drop from <IMG
+ WIDTH="14" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img267.png"
+ ALT="$0$"> to <IMG
+ WIDTH="44" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img268.png"
+ ALT="$-1V$">, lower 
+than the ground level of <IMG
+ WIDTH="29" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img269.png"
+ ALT="$0V$">.
+
+<P>
+<B>A Shortcut Method:</B>
+
+<P>
+We can generalize the complete solution obtained above
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_C(t)=V_s+A e^{-t/\tau}=V_s+(V_0-V_s) e^{-t/\tau}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="339" HEIGHT="33" BORDER="0"
+ SRC="img249.png"
+ ALT="\begin{displaymath}
+v_C(t)=V_s+A e^{-t/\tau}=V_s+(V_0-V_s) e^{-t/\tau}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+to all first-order systems, i.e., their responses to a step input, a constant 
+input that is turned on at moment <IMG
+ WIDTH="46" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img206.png"
+ ALT="$t=0$">, always take the same form: 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+f(t)=f(\infty)+[f(0)-f(\infty)] e^{-t/\tau}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="276" HEIGHT="33" BORDER="0"
+ SRC="img270.png"
+ ALT="\begin{displaymath}
+f(t)=f(\infty)+[f(0)-f(\infty)] e^{-t/\tau}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+in terms of three essential components of the system's response:
+
+<OL>
+<LI><IMG
+ WIDTH="40" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img271.png"
+ ALT="$f(0)$">: the initial value;
+</LI>
+<LI><IMG
+ WIDTH="50" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img272.png"
+ ALT="$f(\infty)$">: the steady state response;
+</LI>
+<LI><IMG
+ WIDTH="15" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img217.png"
+ ALT="$\tau$">: the time constant of the system.
+</LI>
+</OL>
+Specifically here is how to find the three components:
+
+<UL>
+<LI>Find <IMG
+ WIDTH="50" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img272.png"
+ ALT="$f(\infty)$">: as discussed in previous section for steady state response.
+</LI>
+<LI>Find <IMG
+ WIDTH="40" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img271.png"
+ ALT="$f(0)$">: Denote the value of <IMG
+ WIDTH="37" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img273.png"
+ ALT="$f(t)$"> immediately before and after the 
+  moment <IMG
+ WIDTH="46" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img206.png"
+ ALT="$t=0$"> by <IMG
+ WIDTH="51" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img274.png"
+ ALT="$f(0_-)$"> and <IMG
+ WIDTH="51" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img275.png"
+ ALT="$f(0_+)$">, respectively. If <!-- MATH
+ $f(0_-)\ne f(0_+)$
+ -->
+<IMG
+ WIDTH="123" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img276.png"
+ ALT="$f(0_-)\ne f(0_+)$">, 
+  then use <IMG
+ WIDTH="51" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img275.png"
+ ALT="$f(0_+)$"> for <IMG
+ WIDTH="40" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img271.png"
+ ALT="$f(0)$">;
+</LI>
+<LI>Find <IMG
+ WIDTH="15" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img217.png"
+ ALT="$\tau$">: When there is only one resistor in the circuit, the time 
+  constant is <IMG
+ WIDTH="69" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img212.png"
+ ALT="$\tau=RC$"> or <IMG
+ WIDTH="76" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img215.png"
+ ALT="$\tau=L/R$">. When there are multiple resistors, the
+  time constant can be found by:
+  
+<UL>
+<LI>Remove <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img76.png"
+ ALT="$C$"> or <IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img77.png"
+ ALT="$L$"> so that the rest of the circuit (<IMG
+ WIDTH="46" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img239.png"
+ ALT="$t&gt;0$">) is a 
+    one port network.
+</LI>
+<LI>Find the equivalent resistance <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.png"
+ ALT="$R$"> of the network by turning off 
+    all energy sources (short-circuit for voltage source, open-circuit 
+    for current source).
+</LI>
+<LI>Find time constant <IMG
+ WIDTH="69" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img212.png"
+ ALT="$\tau=RC$"> or <IMG
+ WIDTH="76" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img215.png"
+ ALT="$\tau=L/R$">.
+  
+</LI>
+</UL>
+</LI>
+</UL>
+
+<P>
+In particular, note that
+
+<UL>
+<LI>when <IMG
+ WIDTH="46" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img206.png"
+ ALT="$t=0$">, <!-- MATH
+ $f(t)=f(\infty)+f(0)-f(\infty)=f(0)$
+ -->
+<IMG
+ WIDTH="294" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img277.png"
+ ALT="$f(t)=f(\infty)+f(0)-f(\infty)=f(0)$"> the initial condition;
+</LI>
+<LI>when <!-- MATH
+ $t\rightarrow \infty$
+ -->
+<IMG
+ WIDTH="60" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img278.png"
+ ALT="$t\rightarrow \infty$">, <!-- MATH
+ $f(t)=f(\infty)$
+ -->
+<IMG
+ WIDTH="107" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img279.png"
+ ALT="$f(t)=f(\infty)$"> the <EM>steady state response</EM>;
+</LI>
+<LI>when <!-- MATH
+ $0 < t < \infty$
+ -->
+<IMG
+ WIDTH="90" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img280.png"
+ ALT="$0 &lt; t &lt; \infty$">, the difference <!-- MATH
+ $f(0)-f(\infty)$
+ -->
+<IMG
+ WIDTH="108" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img281.png"
+ ALT="$f(0)-f(\infty)$"> between the initial 
+    and the steady state values of the response decays exponentially. This term is 
+    the <EM>transient response</EM> of the system.
+</LI>
+</UL>
+
+<P>
+<B>Note:</B> Neither the voltage across a capacitor <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img76.png"
+ ALT="$C$"> nor the current through an
+inductor <IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img77.png"
+ ALT="$L$"> can be changed instantaneously as it takes time for them to build up:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_C(t)=\frac{1}{C}\int i(t) dt,\;\;\;\;\;\;\;i(t)=C\frac{dv(t)}{dt}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="308" HEIGHT="47" BORDER="0"
+ SRC="img282.png"
+ ALT="\begin{displaymath}v_C(t)=\frac{1}{C}\int i(t) dt,\;\;\;\;\;\;\;i(t)=C\frac{dv(t)}{dt} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+i_C(t)=\frac{1}{L}\int v(t) dtt,\;\;\;\;\;\;\;v(t)=L\frac{di(t)}{dt}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="311" HEIGHT="47" BORDER="0"
+ SRC="img283.png"
+ ALT="\begin{displaymath}i_C(t)=\frac{1}{L}\int v(t) dtt,\;\;\;\;\;\;\;v(t)=L\frac{di(t)}{dt} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+<B>Example 1:</B>
+
+<P>
+Find <IMG
+ WIDTH="46" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img209.png"
+ ALT="$v_C(t)$"> (assumed polarity: positive at c and negative at d) after the 
+switch is closed at <IMG
+ WIDTH="46" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img206.png"
+ ALT="$t=0$">. Assume <IMG
+ WIDTH="82" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img284.png"
+ ALT="$V_0=10V$">, <!-- MATH
+ $R_1=R_2=2K\Omega$
+ -->
+<IMG
+ WIDTH="139" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img285.png"
+ ALT="$R_1=R_2=2K\Omega$">, <IMG
+ WIDTH="92" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img286.png"
+ ALT="$R_3=5K\Omega$">, 
+<IMG
+ WIDTH="94" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img287.png"
+ ALT="$C=0.5\mu F$">, and the circuit was in steady state at <IMG
+ WIDTH="46" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img206.png"
+ ALT="$t=0$">. 
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../figures/BridgeCapacitor.gng"
+ ALT="BridgeCapacitor.gng">
+
+<P>
+
+<UL>
+<LI>Find initial value <IMG
+ WIDTH="49" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img288.png"
+ ALT="$v_C(0)$">. As the circuit has been in 
+  steady state before <IMG
+ WIDTH="46" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img206.png"
+ ALT="$t=0$">, and voltage across a capacitor cannot not 
+  change instantaneously, we have <!-- MATH
+ $v_C(0_+)=v_C(0_-)$
+ -->
+<IMG
+ WIDTH="141" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img289.png"
+ ALT="$v_C(0_+)=v_C(0_-)$">:
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_C(0)=v_C(0_+)=-V_{R_1}=-V_0\frac{R_1}{R_1+R_2}=-V_0/2=-5V
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="464" HEIGHT="49" BORDER="0"
+ SRC="img290.png"
+ ALT="\begin{displaymath}v_C(0)=v_C(0_+)=-V_{R_1}=-V_0\frac{R_1}{R_1+R_2}=-V_0/2=-5V \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI>Find steady state value <IMG
+ WIDTH="59" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img291.png"
+ ALT="$v_C(\infty)$">:
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_C(\infty)=V_{R_2}=V_0\frac{R_2}{R_1+R_2}=V_0/2=5V
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="334" HEIGHT="49" BORDER="0"
+ SRC="img292.png"
+ ALT="\begin{displaymath}v_C(\infty)=V_{R_2}=V_0\frac{R_2}{R_1+R_2}=V_0/2=5V \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI>Find equivalent resistance <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.png"
+ ALT="$R$">:
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+R=R_1 || R_2=\frac{R_1 R_2}{R_1+R_2}=1\;k\Omega
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="252" HEIGHT="49" BORDER="0"
+ SRC="img293.png"
+ ALT="\begin{displaymath}R=R_1 \vert\vert R_2=\frac{R_1 R_2}{R_1+R_2}=1\;k\Omega \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI>Find time constant 
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\tau=RC=1000\times 0.5\times 10^{-6}=5\times 10^{-4}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="329" HEIGHT="30" BORDER="0"
+ SRC="img294.png"
+ ALT="\begin{displaymath}\tau=RC=1000\times 0.5\times 10^{-6}=5\times 10^{-4} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI>Find the complete response
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_C(t)=v_C(\infty)+[v_C(0)-v_C(\infty)]e^{-t/\tau}
+  =5+(-5-5) e^{-t/0.0005}=5-10 e^{-2000t}\;(V)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="633" HEIGHT="33" BORDER="0"
+ SRC="img295.png"
+ ALT="\begin{displaymath}v_C(t)=v_C(\infty)+[v_C(0)-v_C(\infty)]e^{-t/\tau}
+=5+(-5-5) e^{-t/0.0005}=5-10 e^{-2000t}\;(V) \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI>Find current <IMG
+ WIDTH="44" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img296.png"
+ ALT="$i_C(t)$"> through <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img76.png"
+ ALT="$C$">:
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+i_C(t)=C\frac{dv_C(t)}{dt}=C\frac{d}{dt}(5-10 e^{-t/\tau})
+	=\frac{10 e^{-t/\tau}}{R}=10 e^{-2000 t}\;(mA)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="531" HEIGHT="49" BORDER="0"
+ SRC="img297.png"
+ ALT="\begin{displaymath}i_C(t)=C\frac{dv_C(t)}{dt}=C\frac{d}{dt}(5-10 e^{-t/\tau})
+=\frac{10 e^{-t/\tau}}{R}=10 e^{-2000 t}\;(mA) \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI>Find voltages <IMG
+ WIDTH="43" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img298.png"
+ ALT="$v_1(t)$"> and <IMG
+ WIDTH="43" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img299.png"
+ ALT="$v_2(t)$"> across <IMG
+ WIDTH="26" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img300.png"
+ ALT="$R_1$"> and <IMG
+ WIDTH="26" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img301.png"
+ ALT="$R_2$">,
+  respectively:
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_2(t)=v_C(t)=5-10 e^{-2000t}\;(V)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="267" HEIGHT="33" BORDER="0"
+ SRC="img302.png"
+ ALT="\begin{displaymath}v_2(t)=v_C(t)=5-10 e^{-2000t}\;(V) \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_1(t)=V_0-v_C(t)=10-(5-10 e^{-2000t})=5+10 e^{-2000t}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="459" HEIGHT="33" BORDER="0"
+ SRC="img303.png"
+ ALT="\begin{displaymath}v_1(t)=V_0-v_C(t)=10-(5-10 e^{-2000t})=5+10 e^{-2000t} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI>Find currents <IMG
+ WIDTH="40" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img304.png"
+ ALT="$i_1(t)$"> and <IMG
+ WIDTH="40" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img305.png"
+ ALT="$i_2(t)$"> through <IMG
+ WIDTH="26" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img300.png"
+ ALT="$R_1$"> and <IMG
+ WIDTH="26" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img301.png"
+ ALT="$R_2$">, 
+  respectively:
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+i_1(t)=\frac{v_1(t)}{R_1}=2.5+5 e^{-2000t} \; (mA)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="284" HEIGHT="50" BORDER="0"
+ SRC="img306.png"
+ ALT="\begin{displaymath}i_1(t)=\frac{v_1(t)}{R_1}=2.5+5 e^{-2000t} \; (mA) \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+i_2(t)=\frac{v_C(t)}{R_2}=2.5-5 e^{-2000t}\; (mA)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="288" HEIGHT="50" BORDER="0"
+ SRC="img307.png"
+ ALT="\begin{displaymath}i_2(t)=\frac{v_C(t)}{R_2}=2.5-5 e^{-2000t}\; (mA) \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI>Verify current <IMG
+ WIDTH="44" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img296.png"
+ ALT="$i_C(t)$">:
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+i_C(t)=i_1(t)-i_2(t)=10 e^{-2000t} \; (mA)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="302" HEIGHT="33" BORDER="0"
+ SRC="img308.png"
+ ALT="\begin{displaymath}i_C(t)=i_1(t)-i_2(t)=10 e^{-2000t} \; (mA) \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+</UL>
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../figures/completeresponse.gif"
+ ALT="completeresponse.gif">
+
+<P>
+<B>Example 1a:</B>
+
+<P>
+In the same circuit above, find the voltages <IMG
+ WIDTH="43" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img298.png"
+ ALT="$v_1(t)$"> and <IMG
+ WIDTH="43" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img299.png"
+ ALT="$v_2(t)$"> 
+across and currents <IMG
+ WIDTH="40" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img304.png"
+ ALT="$i_1(t)$"> and <IMG
+ WIDTH="40" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img305.png"
+ ALT="$i_2(t)$"> through <IMG
+ WIDTH="26" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img300.png"
+ ALT="$R_1$"> and <IMG
+ WIDTH="26" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img301.png"
+ ALT="$R_2$">, 
+respectively.
+
+<UL>
+<LI>Find <!-- MATH
+ $v_1(\infty)=v_2(\infty)=5\;V$
+ -->
+<IMG
+ WIDTH="185" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img309.png"
+ ALT="$v_1(\infty)=v_2(\infty)=5\;V$">
+</LI>
+<LI>Find <IMG
+ WIDTH="56" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img310.png"
+ ALT="$v_1(0_+)$"> and <IMG
+ WIDTH="56" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img311.png"
+ ALT="$v_2(0_+)$">. Before <IMG
+ WIDTH="46" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img206.png"
+ ALT="$t=0$">, the circuit is in
+	steady state, i.e., <!-- MATH
+ $v_1(0_-)=v_2(0_-)=5\;V$
+ -->
+<IMG
+ WIDTH="188" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img312.png"
+ ALT="$v_1(0_-)=v_2(0_-)=5\;V$">. However, after
+	the switch closes at <IMG
+ WIDTH="46" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img206.png"
+ ALT="$t=0$">, the voltage at node d drops from 
+	10V to 0V, and the voltage at node c drops from 5V to -5V with 
+	respect to node b as ground (voltage across a capacitor cannot 
+	change instantaneously), i.e., <IMG
+ WIDTH="115" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img313.png"
+ ALT="$v_1(0_+)=15V$"> and <IMG
+ WIDTH="121" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img314.png"
+ ALT="$v_2(0_+)=-5V$">; 
+</LI>
+<LI>Find <!-- MATH
+ $\tau=RC=5\times 10^{-4}$
+ -->
+<IMG
+ WIDTH="164" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img315.png"
+ ALT="$\tau=RC=5\times 10^{-4}$"> (same as before);
+</LI>
+<LI>Find <IMG
+ WIDTH="43" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img298.png"
+ ALT="$v_1(t)$"> and <IMG
+ WIDTH="43" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img299.png"
+ ALT="$v_2(t)$">:
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_1(t)=v_1(\infty)+[v_1(0_+)-v_1(\infty)]e^{-t/\tau}
+	=5+(15-5)e^{-t/\tau}=5+10e^{-t/\tau}\;V
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="567" HEIGHT="33" BORDER="0"
+ SRC="img316.png"
+ ALT="\begin{displaymath}v_1(t)=v_1(\infty)+[v_1(0_+)-v_1(\infty)]e^{-t/\tau}
+=5+(15-5)e^{-t/\tau}=5+10e^{-t/\tau}\;V \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_2(t)=v_2(\infty)+[v_2(0_+)-v_2(\infty)]e^{-t/\tau}
+	=5+(-5-5)e^{-t/\tau}=5-10e^{-t/\tau}\;V
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="573" HEIGHT="33" BORDER="0"
+ SRC="img317.png"
+ ALT="\begin{displaymath}v_2(t)=v_2(\infty)+[v_2(0_+)-v_2(\infty)]e^{-t/\tau}
+=5+(-5-5)e^{-t/\tau}=5-10e^{-t/\tau}\;V \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+We see that <!-- MATH
+ $v_1(t)+v_2(t)=V_0=10V$
+ -->
+<IMG
+ WIDTH="206" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img318.png"
+ ALT="$v_1(t)+v_2(t)=V_0=10V$">.
+</LI>
+<LI>Find <IMG
+ WIDTH="40" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img304.png"
+ ALT="$i_1(t)$"> and <IMG
+ WIDTH="40" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img305.png"
+ ALT="$i_2(t)$"> through <IMG
+ WIDTH="26" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img300.png"
+ ALT="$R_1$"> and <IMG
+ WIDTH="26" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img301.png"
+ ALT="$R_2$">:
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+i_1(t)=\frac{v_1(t)}{R_1}=2.5+5e^{-t/\tau}\;mA
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="258" HEIGHT="50" BORDER="0"
+ SRC="img319.png"
+ ALT="\begin{displaymath}i_1(t)=\frac{v_1(t)}{R_1}=2.5+5e^{-t/\tau}\;mA \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+i_2(t)=\frac{v_2(t)}{R_2}=2.5-5e^{-t/\tau}\;mA
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="259" HEIGHT="50" BORDER="0"
+ SRC="img320.png"
+ ALT="\begin{displaymath}i_2(t)=\frac{v_2(t)}{R_2}=2.5-5e^{-t/\tau}\;mA \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI>Find current <IMG
+ WIDTH="44" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img296.png"
+ ALT="$i_C(t)$"> through capacitor <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img76.png"
+ ALT="$C$">:
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+i_C(t)=i_1(t)-i_2(t)=10 e^{-t/\tau}\; mA
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="277" HEIGHT="33" BORDER="0"
+ SRC="img321.png"
+ ALT="\begin{displaymath}i_C(t)=i_1(t)-i_2(t)=10 e^{-t/\tau}\; mA \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+</UL>
+Note that when <IMG
+ WIDTH="57" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img322.png"
+ ALT="$t=0_+$">, <!-- MATH
+ $v_2(t)=V_c=-5V$
+ -->
+<IMG
+ WIDTH="150" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img323.png"
+ ALT="$v_2(t)=V_c=-5V$">, lower than ground voltage <IMG
+ WIDTH="22" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img324.png"
+ ALT="$V_b$">!
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../figures/transientDCexample.gif"
+ ALT="transientDCexample.gif">
+
+<P>
+<B>Complete Solution 2: Sinusoidal input</B>
+
+<P>
+If the input voltage to the RC circuit considered above is sinusoidal 
+<!-- MATH
+ $v(t)=V_s \cos(\omega t+\psi)$
+ -->
+<IMG
+ WIDTH="176" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img325.png"
+ ALT="$v(t)=V_s \cos(\omega t+\psi)$">, then the DE becomes
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_R(t)+v_C(t)=\tau\frac{d}{dt} v_c(t)+v_c(t)=V_s \cos(\omega t+\psi)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="398" HEIGHT="46" BORDER="0"
+ SRC="img326.png"
+ ALT="\begin{displaymath}v_R(t)+v_C(t)=\tau\frac{d}{dt} v_c(t)+v_c(t)=V_s \cos(\omega t+\psi) \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The homogeneous solution is the same as before <!-- MATH
+ $v''_C(t)=A e^{-t/\tau}$
+ -->
+<IMG
+ WIDTH="125" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img244.png"
+ ALT="$v''_C(t)=A e^{-t/\tau}$">.
+The particular solution <IMG
+ WIDTH="46" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img327.png"
+ ALT="$v'_C(t)$"> as the steady state response to <IMG
+ WIDTH="36" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img207.png"
+ ALT="$v(t)$"> 
+can be found by the phasor method. The input is 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v(t)=V_s \cos(\omega t)=Re[\dot{V}\sqrt{2}e^{j\omega t}]
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="262" HEIGHT="33" BORDER="0"
+ SRC="img328.png"
+ ALT="\begin{displaymath}v(t)=V_s \cos(\omega t)=Re[\dot{V}\sqrt{2}e^{j\omega t}] \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where <!-- MATH
+ $\dot{V}=V_s\; e^{j\psi}/\sqrt{2}$
+ -->
+<IMG
+ WIDTH="128" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img329.png"
+ ALT="$\dot{V}=V_s\; e^{j\psi}/\sqrt{2}$"> is the phasor representation of the
+voltage. The steady state voltage across
+<IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img76.png"
+ ALT="$C$"> is (voltage divider)
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\dot{V}_C=\dot{V} \frac{Z_C}{R+Z_C}
+   =\dot{V} \frac{1/j\omega C}{R+1/j\omega C}
+   =\frac{\dot{V}}{j\omega \tau+1}	
+   =\frac{\dot{V}}{\sqrt{(\omega \tau)^2+1}\;e^{j\phi}} 
+   =\frac{\dot{V}\;e^{-j\phi}}{\sqrt{(\omega \tau)^2+1}}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="627" HEIGHT="64" BORDER="0"
+ SRC="img330.png"
+ ALT="\begin{displaymath}\dot{V}_C=\dot{V} \frac{Z_C}{R+Z_C}
+=\dot{V} \frac{1/j\omega...
+...phi}}
+=\frac{\dot{V}\;e^{-j\phi}}{\sqrt{(\omega \tau)^2+1}}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where <!-- MATH
+ $\phi=\tan^{-1} \omega \tau$
+ -->
+<IMG
+ WIDTH="112" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img331.png"
+ ALT="$\phi=\tan^{-1} \omega \tau$">. In time domain the steady state voltage 
+<IMG
+ WIDTH="46" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img327.png"
+ ALT="$v'_C(t)$"> is:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v'_C(t)=Re\left[\sqrt{2}\dot{V}_C e^{j\omega t} \right]
+=Re\left[ \frac{V_s e^{\psi}\;e^{-j\phi} e^{j\omega t}}{\sqrt{(\omega \tau)^2+1}} \right]
+= \frac{V_s}{\sqrt{(\omega \tau)^2+1}} \cos(\omega t+\psi-\phi)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="603" HEIGHT="67" BORDER="0"
+ SRC="img332.png"
+ ALT="\begin{displaymath}
+v'_C(t)=Re\left[\sqrt{2}\dot{V}_C e^{j\omega t} \right]
+=Re\...
+... \frac{V_s}{\sqrt{(\omega \tau)^2+1}} \cos(\omega t+\psi-\phi) \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The complete solution is then the sum of both homogeneous and particular
+solutions:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_C(t)=v'_C(t)+v''_C(t)=
+\frac{V_s}{\sqrt{(\omega \tau)^2+1}}\cos(\omega t+\psi-\phi)+A e^{-t/\tau}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="502" HEIGHT="59" BORDER="0"
+ SRC="img333.png"
+ ALT="\begin{displaymath}v_C(t)=v'_C(t)+v''_C(t)=
+\frac{V_s}{\sqrt{(\omega \tau)^2+1}}\cos(\omega t+\psi-\phi)+A e^{-t/\tau} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+From the initial condition <IMG
+ WIDTH="93" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img334.png"
+ ALT="$v_C(0)=V_0$">, we have
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_C(0)=V_0=\frac{V_s}{\sqrt{(\omega \tau)^2+1}}\cos(\psi-\phi)+A
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="337" HEIGHT="59" BORDER="0"
+ SRC="img335.png"
+ ALT="\begin{displaymath}v_C(0)=V_0=\frac{V_s}{\sqrt{(\omega \tau)^2+1}}\cos(\psi-\phi)+A \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Solving for <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img43.png"
+ ALT="$A$"> we get
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+A=V_0-\frac{V_s}{\sqrt{(\omega \tau)^2+1}}\cos(\psi-\phi)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="266" HEIGHT="59" BORDER="0"
+ SRC="img336.png"
+ ALT="\begin{displaymath}A=V_0-\frac{V_s}{\sqrt{(\omega \tau)^2+1}}\cos(\psi-\phi) \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Substituting <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img43.png"
+ ALT="$A$"> back to the expression of <IMG
+ WIDTH="46" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img209.png"
+ ALT="$v_C(t)$">, we get 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_C(t)=\frac{V_s}{\sqrt{(\omega \tau)^2+1}}\cos(\omega t+\psi-\phi)+ 
+\left[V_0-\frac{V_s}{\sqrt{(\omega \tau)^2+1}}\cos(\psi-\phi)\right] e^{-t/\tau}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="584" HEIGHT="67" BORDER="0"
+ SRC="img337.png"
+ ALT="\begin{displaymath}v_C(t)=\frac{V_s}{\sqrt{(\omega \tau)^2+1}}\cos(\omega t+\psi...
+...s}{\sqrt{(\omega \tau)^2+1}}\cos(\psi-\phi)\right] e^{-t/\tau} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+This result can also be generalized for any non-constant input:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+f(t)=f_{\infty}(t)+[f(0)-f_{\infty}(0)]e^{-t/\tau}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="279" HEIGHT="33" BORDER="0"
+ SRC="img338.png"
+ ALT="\begin{displaymath}f(t)=f_{\infty}(t)+[f(0)-f_{\infty}(0)]e^{-t/\tau} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+also in terms of three essential components
+
+<OL>
+<LI><IMG
+ WIDTH="40" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img271.png"
+ ALT="$f(0)$">: the initial value (same as before);
+</LI>
+<LI><IMG
+ WIDTH="49" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img339.png"
+ ALT="$f_{\infty}(t)$">: the steady state response, <IMG
+ WIDTH="52" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img340.png"
+ ALT="$f_{\infty}(0)$"> is
+  <IMG
+ WIDTH="49" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img339.png"
+ ALT="$f_{\infty}(t)$"> evaluated at <IMG
+ WIDTH="46" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img206.png"
+ ALT="$t=0$">;
+</LI>
+<LI><IMG
+ WIDTH="15" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img217.png"
+ ALT="$\tau$">: the time constant of the system (same as before).
+</LI>
+</OL>
+Note that while the steady state response <IMG
+ WIDTH="50" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img272.png"
+ ALT="$f(\infty)$"> for the same system 
+with a constant input <IMG
+ WIDTH="23" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img243.png"
+ ALT="$V_s$"> is a constant, here the steady state response 
+<IMG
+ WIDTH="49" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img339.png"
+ ALT="$f_{\infty}(t)$"> is a function of time <IMG
+ WIDTH="11" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img341.png"
+ ALT="$t$">, but its evaluation at <IMG
+ WIDTH="46" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img206.png"
+ ALT="$t=0$"> 
+<!-- MATH
+ $f_{\infty}(0)=f_{\infty}(t)\big|_{t=0}$
+ -->
+<IMG
+ WIDTH="150" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img342.png"
+ ALT="$f_{\infty}(0)=f_{\infty}(t)\big\vert _{t=0}$"> is still a constant. We see that the 
+complete response is composed of the steady state response and the exponential
+decay of the difference between the initial value <IMG
+ WIDTH="40" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img271.png"
+ ALT="$f(0)$"> and the steady state
+response evaluated at <IMG
+ WIDTH="46" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img206.png"
+ ALT="$t=0$">.
+
+<P>
+If the initial voltage on <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img76.png"
+ ALT="$C$"> is zero <IMG
+ WIDTH="58" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img343.png"
+ ALT="$V_0=0$">, then
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_C(t)=\frac{V_s}{\sqrt{(\omega \tau)^2+1}}[\cos(\omega t+\psi-\phi) 
+-\cos(\psi-\phi) e^{-t/\tau}]
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="450" HEIGHT="59" BORDER="0"
+ SRC="img344.png"
+ ALT="\begin{displaymath}v_C(t)=\frac{V_s}{\sqrt{(\omega \tau)^2+1}}[\cos(\omega t+\psi-\phi)
+-\cos(\psi-\phi) e^{-t/\tau}] \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+Note that the initial magnitude of the transient component varies depending
+on the angle <IMG
+ WIDTH="52" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img345.png"
+ ALT="$\psi-\phi$">. When this angle is either <IMG
+ WIDTH="46" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img346.png"
+ ALT="$\pm 90^\circ$">, 
+<!-- MATH
+ $\cos(\psi-\phi)=0$
+ -->
+<IMG
+ WIDTH="126" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img347.png"
+ ALT="$\cos(\psi-\phi)=0$">, i.e., the transient component disappears altogether.
+However, when <IMG
+ WIDTH="52" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img345.png"
+ ALT="$\psi-\phi$"> is either <IMG
+ WIDTH="22" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img348.png"
+ ALT="$0^\circ$"> or <IMG
+ WIDTH="40" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img349.png"
+ ALT="$180^\circ$">, 
+<!-- MATH
+ $\cos(\psi-\phi)=\pm 1$
+ -->
+<IMG
+ WIDTH="141" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img350.png"
+ ALT="$\cos(\psi-\phi)=\pm 1$">, i.e., the magnitude of the transient component 
+reaches maximum (positive or negative), and if <IMG
+ WIDTH="15" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img217.png"
+ ALT="$\tau$"> value is large and 
+therefore the transient component decays slowly, the magnitude of the initial
+voltage <IMG
+ WIDTH="46" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img209.png"
+ ALT="$v_C(t)$"> could be close to three times the peak of steady state. 
+The three cases for <IMG
+ WIDTH="52" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img345.png"
+ ALT="$\psi-\phi$"> to be <IMG
+ WIDTH="22" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img348.png"
+ ALT="$0^\circ$">, <IMG
+ WIDTH="31" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img32.png"
+ ALT="$90^\circ$">, and <IMG
+ WIDTH="40" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img349.png"
+ ALT="$180^\circ$"> 
+are shown below:
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../figures/first_order_response.gif"
+ ALT="first_order_response.gif">
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../figures/first_order_response_0.gif"
+ ALT="first_order_response_0.gif">
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../figures/first_order_response_90.gif"
+ ALT="first_order_response_90.gif">
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../figures/first_order_response_180.gif"
+ ALT="first_order_response_180.gif">
+
+<P>
+<B>Example 2:</B>
+
+<P>
+An electromagnet, modeled by a resistor <IMG
+ WIDTH="76" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img351.png"
+ ALT="$R=20\Omega$"> and <IMG
+ WIDTH="83" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img352.png"
+ ALT="$L=0.3H$">,
+is powered by sinusoidal voltage of <IMG
+ WIDTH="48" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img353.png"
+ ALT="$120V$"> and <IMG
+ WIDTH="50" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img354.png"
+ ALT="$60Hz$">. Find the current
+through the circuit when the switch is closed at <IMG
+ WIDTH="46" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img206.png"
+ ALT="$t=0$"> when the phase
+angle happens to be <IMG
+ WIDTH="69" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img355.png"
+ ALT="$\psi=10^\circ$">, i.e., <!-- MATH
+ $v(t)=120\sqrt{2}\;
+\cos(6.28\times 60 t+10^\circ)$
+ -->
+<IMG
+ WIDTH="293" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img356.png"
+ ALT="$v(t)=120\sqrt{2}\;
+\cos(6.28\times 60 t+10^\circ)$">.
+
+<P>
+
+<UL>
+<LI>Find initial value: <IMG
+ WIDTH="69" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img357.png"
+ ALT="$i(0)=0$">. 
+</LI>
+<LI>Find impedance of circuit:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Z=R+j\omega L=20+j6.28\times 60 \times 0.3=20+j113=114.8\angle{80^\circ}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="515" HEIGHT="32" BORDER="0"
+ SRC="img358.png"
+ ALT="\begin{displaymath}Z=R+j\omega L=20+j6.28\times 60 \times 0.3=20+j113=114.8\angle{80^\circ} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI>Find steady state value <IMG
+ WIDTH="47" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img359.png"
+ ALT="$i_\infty(t)$"> by phasor method:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\dot{V}=120 \angle{10^\circ},\;\;\;\;\dot{I}=\frac{\dot{V}}{Z}
+=\frac{120\angle{10^\circ}}{114.8\angle{80^\circ}}
+=1.05\angle{-70^\circ}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="405" HEIGHT="50" BORDER="0"
+ SRC="img360.png"
+ ALT="\begin{displaymath}
+\dot{V}=120 \angle{10^\circ},\;\;\;\;\dot{I}=\frac{\dot{V}}{...
+...angle{10^\circ}}{114.8\angle{80^\circ}}
+=1.05\angle{-70^\circ} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+i_\infty(t)=1.05\sqrt{2}\;\cos(6.28\times 60 t -70^\circ)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="304" HEIGHT="33" BORDER="0"
+ SRC="img361.png"
+ ALT="\begin{displaymath}i_\infty(t)=1.05\sqrt{2}\;\cos(6.28\times 60 t -70^\circ) \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+i_\infty(0)=1.05\sqrt{2}\;\cos(-70^\circ)
+=1.05\sqrt{2}\times 0.342=0.51
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="424" HEIGHT="33" BORDER="0"
+ SRC="img362.png"
+ ALT="\begin{displaymath}i_\infty(0)=1.05\sqrt{2}\;\cos(-70^\circ)
+=1.05\sqrt{2}\times 0.342=0.51 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI>Find time constant <!-- MATH
+ $\tau=L/R=0.3/20=0.015$
+ -->
+<IMG
+ WIDTH="221" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img363.png"
+ ALT="$\tau=L/R=0.3/20=0.015$">.
+</LI>
+<LI>Find current
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+i(t)=i_{\infty}(t)+[i(0)-i_{\infty}(0)]e^{-t/\tau}
+      =1.05\sqrt{2}\;\cos(6.28\times 60 t -70^\circ)-0.51 e^{-t/0.015}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="604" HEIGHT="33" BORDER="0"
+ SRC="img364.png"
+ ALT="\begin{displaymath}i(t)=i_{\infty}(t)+[i(0)-i_{\infty}(0)]e^{-t/\tau}
+=1.05\sqrt{2}\;\cos(6.28\times 60 t -70^\circ)-0.51 e^{-t/0.015} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+</LI>
+</UL>
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../figures/electromagnet1.gif"
+ ALT="electromagnet1.gif">
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html96"
+  HREF="node7.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html94"
+  HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html88"
+  HREF="node5.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html97"
+  HREF="node7.html">Second Order RCL Circuit</A>
+<B> Up:</B> <A NAME="tex2html95"
+  HREF="node1.html">Chapter 3: AC Circuit</A>
+<B> Previous:</B> <A NAME="tex2html89"
+  HREF="node5.html">AC Circuit Analysis II</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Ruye Wang
+2014-10-05
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,1270 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Complete Response I - Constant Input</TITLE>
+<META NAME="description" CONTENT="Complete Response I - Constant Input">
+<META NAME="keywords" CONTENT="ch3">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="ch3.css">
+
+<LINK REL="next" HREF="node9.html">
+<LINK REL="previous" HREF="node7.html">
+<LINK REL="next" HREF="node9.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node9.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node5.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node7.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node9.html">Complete Response II -</A>
+<B> Up:</B> <A
+ HREF="node5.html">First Order Systems</A>
+<B> Previous:</B> <A
+ HREF="node7.html">Particular Solution</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H3><A ID="SECTION00014300000000000000">
+Complete Response I - Constant Input</A>
+</H3>
+
+<P>
+The complete response of a non-homogeneous linear system due to both
+the external input and the initial condition can be found as the sum of 
+the homogeneous and particular solutions of the non-homogeneous DE with 
+a non-zero right-hand side for the external input:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\mbox{Complete Solution}=\mbox{Homogeneous Solution}+\mbox{Particular Solution}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH">Complete Solution<IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$">Homogeneous Solution<IMG STYLE="height: 1.86ex; vertical-align: -0.31ex; " SRC="img291.svg"
+ ALT="$\displaystyle +$">Particular Solution</SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">101</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Specifically in the RC circuit, we have
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\tau\frac{d}{dt} v_c(t)+v_c(t)=v_s(t)=V_s
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.11ex; vertical-align: -1.71ex; " SRC="img292.svg"
+ ALT="$\displaystyle \tau\frac{d}{dt} v_c(t)+v_c(t)=v_s(t)=V_s$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">102</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+We want to solve the DE for <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img194.svg"
+ ALT="$v_C(t)$"></SPAN> as the circuit's complete response to the
+input <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img293.svg"
+ ALT="$v(t)\ne 0$"></SPAN> as well as the initial condition <!-- MATH
+ $v_C(0)=V_0\ne 0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img239.svg"
+ ALT="$v_C(0)=V_0\ne 0$"></SPAN>, after a 
+switch is closed at time moment <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img219.svg"
+ ALT="$t=0$"></SPAN>. 
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/RCcircuit.png"
+ ALT="RCcircuit.png">
+
+<P>
+Given an RC circuit shown above where the switch is closed at <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img219.svg"
+ ALT="$t=0$"></SPAN>,
+we want to find the voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img194.svg"
+ ALT="$v_C(t)$"></SPAN> across <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img104.svg"
+ ALT="$C$"></SPAN> and voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img222.svg"
+ ALT="$v_R(t)$"></SPAN> 
+across <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img112.svg"
+ ALT="$R$"></SPAN> as a function of time for <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.21ex; " SRC="img294.svg"
+ ALT="$t&gt;0$"></SPAN>. 
+
+<P>
+First we consider a constant (DC) input <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img295.svg"
+ ALT="$v(t)=V_s$"></SPAN> applied to the circuit 
+at <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img219.svg"
+ ALT="$t=0$"></SPAN>, i.e., a step input 
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v(t)=V_s u(t) =\left\{ \begin{array}{ll}V_s & t\ge 0\\0 & t<0\end{array}\right.
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img296.svg"
+ ALT="$\displaystyle v(t)=V_s u(t) =\left\{ \begin{array}{ll}V_s &amp; t\ge 0\\ 0 &amp; t&lt;0\end{array}\right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">103</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The solution of this inhomogeneous DE is composed of two parts, 
+
+<UL>
+<LI><EM>Homogeneous solution (natural response) </EM>: 
+  <!-- MATH
+ $v'_C(t)=A e^{-t/\tau}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.76ex; " SRC="img297.svg"
+ ALT="$v'_C(t)=A e^{-t/\tau}$"></SPAN> due to the initial condition
+  <!-- MATH
+ $v_C(t)\big|_{t=0}=v_C(0)=V_0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.25ex; vertical-align: -1.05ex; " SRC="img298.svg"
+ ALT="$v_C(t)\big\vert _{t=0}=v_C(0)=V_0$"></SPAN>.
+</LI>
+<LI><EM>Particular solution (forced response) </EM>
+  <!-- MATH
+ $v''_C(t)=v_C(t)|_{t\rightarrow \infty}=V_s$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.76ex; " SRC="img299.svg"
+ ALT="$v''_C(t)=v_C(t)\vert _{t\rightarrow \infty}=V_s$"></SPAN> due to the DC input <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img300.svg"
+ ALT="$V_s$"></SPAN>.
+  Or by phasor method, we can get
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_c=V_s\frac{Z_c}{R+Z_c}=V_s\frac{1/j\omega C}{R+1/j\omega C}=V_s
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img301.svg"
+ ALT="$\displaystyle V_c=V_s\frac{Z_c}{R+Z_c}=V_s\frac{1/j\omega C}{R+1/j\omega C}=V_s$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">104</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+as <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img106.svg"
+ ALT="$\omega=0$"></SPAN> and <!-- MATH
+ $Z_c=1/j\omega C=\infty$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img302.svg"
+ ALT="$Z_c=1/j\omega C=\infty$"></SPAN>.
+</LI>
+</UL>
+The complete solution is
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_C(t)=v'_C(t)+v''_C(t)=V_s+A e^{-t/\tau}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img303.svg"
+ ALT="$\displaystyle v_C(t)=v'_C(t)+v''_C(t)=V_s+A e^{-t/\tau}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">105</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The constant <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img9.svg"
+ ALT="$A$"></SPAN> can be determined from the initial condition <!-- MATH
+ $v_C(0)=V_0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img221.svg"
+ ALT="$v_C(0)=V_0$"></SPAN>:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_C(0)=V_0=v_C(t)\big|_{t=0}=V_s+Ae^{0}=V_s+A,
+  \;\;\;\;\;\mbox{i.e.,}\;\;\;\;A=V_0-V_s
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.25ex; vertical-align: -1.05ex; " SRC="img304.svg"
+ ALT="$\displaystyle v_C(0)=V_0=v_C(t)\big\vert _{t=0}=V_s+Ae^{0}=V_s+A,
+\;\;\;\;\;$">i.e.,<IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img305.svg"
+ ALT="$\displaystyle \;\;\;\;A=V_0-V_s$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">106</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+and the complete solution is
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_C(t)=V_s+A e^{-t/\tau}=V_s+(V_0-V_s) e^{-t/\tau}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img306.svg"
+ ALT="$\displaystyle v_C(t)=V_s+A e^{-t/\tau}=V_s+(V_0-V_s) e^{-t/\tau}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">107</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The same result can also be obtained using the 
+<A ID="tex2html5"
+  HREF="../ch3_sub0/index.html">Laplace transform method</A>.
+
+<P>
+In particular, if <!-- MATH
+ $v_C(0)=V_0=0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img307.svg"
+ ALT="$v_C(0)=V_0=0$"></SPAN>, the solution is
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_C(t)=V_s+(-V_s) e^{-t/\tau}=V_s(1-e^{-t/\tau})
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img308.svg"
+ ALT="$\displaystyle v_C(t)=V_s+(-V_s) e^{-t/\tau}=V_s(1-e^{-t/\tau})$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">108</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+The current through <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img104.svg"
+ ALT="$C$"></SPAN> is
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+i(t)=C\frac{d}{dt}\,v_C(t)=-\frac{C}{\tau}(V_0-V_s)e^{-t/\tau}
+  =\frac{V_s-V_0}{R}e^{-t/\tau}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.11ex; vertical-align: -1.71ex; " SRC="img309.svg"
+ ALT="$\displaystyle i(t)=C\frac{d}{dt}\,v_C(t)=-\frac{C}{\tau}(V_0-V_s)e^{-t/\tau}
+=\frac{V_s-V_0}{R}e^{-t/\tau}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">109</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The voltage across <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img112.svg"
+ ALT="$R$"></SPAN> is
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_R(t)=R\; i(t)=(V_s-V_0) e^{-t/\tau}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img310.svg"
+ ALT="$\displaystyle v_R(t)=R\; i(t)=(V_s-V_0) e^{-t/\tau}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">110</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+We can further verify that
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_C(t)+v_R(t)=V_s+(V_0-V_s) e^{-t/\tau}+(V_s-V_0) e^{-t/\tau} =V_s
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img311.svg"
+ ALT="$\displaystyle v_C(t)+v_R(t)=V_s+(V_0-V_s) e^{-t/\tau}+(V_s-V_0) e^{-t/\tau} =V_s$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">111</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+The plots below show <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img194.svg"
+ ALT="$v_C(t)$"></SPAN> (red) and <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img222.svg"
+ ALT="$v_R(t)$"></SPAN> (green) under different
+initial conditions (purple) and inputs (blue).
+
+<P>
+
+<UL>
+<LI><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img312.svg"
+ ALT="$V_0=2$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img313.svg"
+ ALT="$V_s=1$"></SPAN>, i.e., <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img314.svg"
+ ALT="$V_0&gt;V_s$"></SPAN>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/FirstOrderResponse1.png"
+ ALT="FirstOrderResponse1.png">
+</LI>
+<LI><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img257.svg"
+ ALT="$V_0=1$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img315.svg"
+ ALT="$V_s=2$"></SPAN>, i.e., <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img316.svg"
+ ALT="$V_0&lt;V_s$"></SPAN>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/FirstOrderResponse2.png"
+ ALT="FirstOrderResponse2.png">
+</LI>
+</UL>
+
+<P>
+Note that in the first case, after the switch is closed at <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img219.svg"
+ ALT="$t=0$"></SPAN>, 
+
+<P>
+
+<UL>
+<LI><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img222.svg"
+ ALT="$v_R(t)$"></SPAN> takes a negative value if <!-- MATH
+ $v_C(0)=V_0>V_s$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img317.svg"
+ ALT="$v_C(0)=V_0&gt;V_s$"></SPAN> for <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.21ex; " SRC="img294.svg"
+ ALT="$t&gt;0$"></SPAN>, although
+  the voltage source <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img318.svg"
+ ALT="$V_s&gt;0$"></SPAN> is positive (both measured with respective to 
+  the bottom wire treated as the ground). This is because right after the
+  switch is closed, the voltage on the left side of <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img104.svg"
+ ALT="$C$"></SPAN> drops from 
+  <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img319.svg"
+ ALT="$V_0=2V$"></SPAN> to <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img320.svg"
+ ALT="$V_s=1V$"></SPAN>, causing the voltage on its right side to also drop 
+  from <SPAN CLASS="MATH">0</SPAN> to <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.31ex; " SRC="img321.svg"
+ ALT="$-1V$"></SPAN>, lower than the ground level of <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img322.svg"
+ ALT="$0V$"></SPAN>.
+</LI>
+<LI>Voltages on both sides of <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img104.svg"
+ ALT="$C$"></SPAN> go through a discontinuous transition to
+  drop (case 1) or jump (case 2) by <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img323.svg"
+ ALT="$V_S-V_0$"></SPAN>, however, the voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img194.svg"
+ ALT="$v_C(t)$"></SPAN> 
+  remains the same, as the voltage across <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img104.svg"
+ ALT="$C$"></SPAN> does not change instantaneously. 
+  <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img222.svg"
+ ALT="$v_R(t)$"></SPAN> drops from <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img324.svg"
+ ALT="$v_R(t)=0$"></SPAN> for <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.21ex; " SRC="img325.svg"
+ ALT="$t&lt;0$"></SPAN> to <!-- MATH
+ $v_R(t)=V_s-v_c(0)=V_s-V_0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img326.svg"
+ ALT="$v_R(t)=V_s-v_c(0)=V_s-V_0$"></SPAN> at 
+  <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.12ex; " SRC="img327.svg"
+ ALT="$t=0^+$"></SPAN>, while <!-- MATH
+ $v_C(t)+v_R(t)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img328.svg"
+ ALT="$v_C(t)+v_R(t)$"></SPAN> (left side of <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img104.svg"
+ ALT="$C$"></SPAN>) drops from <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img329.svg"
+ ALT="$V_0$"></SPAN> to <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img330.svg"
+ ALT="$V_S$"></SPAN>.
+</LI>
+</UL>
+
+<P>
+In general, neither the voltage across a capacitor nor the current through
+an inductor can be changed instantaneously as it takes time for them to 
+build up:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_C(t)=\frac{1}{C}\int i(t) dt,\;\;\;\;\;\;\;i_C(t)=\frac{1}{L}\int v(t) dtt
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.12ex; " SRC="img331.svg"
+ ALT="$\displaystyle v_C(t)=\frac{1}{C}\int i(t) dt,\;\;\;\;\;\;\;i_C(t)=\frac{1}{L}\int v(t) dtt$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">112</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Therefore the capacitor can behave like a temporary voltage source, and,
+similarly, an inductor can behave like a temporary current source.
+
+<P>
+<B>Example 0 (homework):</B> When an RC circuit with zero initial voltage 
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img332.svg"
+ ALT="$v_C(0)=0$"></SPAN> is charged by a DC voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img313.svg"
+ ALT="$V_s=1$"></SPAN>. Find energy <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img333.svg"
+ ALT="$W_R$"></SPAN> is consumed 
+by <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img112.svg"
+ ALT="$R$"></SPAN> and energy <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img334.svg"
+ ALT="$W_C$"></SPAN> is stored in <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img104.svg"
+ ALT="$C$"></SPAN>. 
+
+<P>
+<B>A Shortcut Method:</B>
+
+<P>
+Observing the complete solution <!-- MATH
+ $v_C(t)=V_s+(V_0-V_s) e^{-t/\tau}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img335.svg"
+ ALT="$v_C(t)=V_s+(V_0-V_s) e^{-t/\tau}$"></SPAN> obtained
+above, we see that
+
+<UL>
+<LI>When <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img219.svg"
+ ALT="$t=0$"></SPAN>, <!-- MATH
+ $v_C(t)=v_C(0)=V_0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img336.svg"
+ ALT="$v_C(t)=v_C(0)=V_0$"></SPAN> is the initial condition
+</LI>
+<LI>When <!-- MATH
+ $t\rightarrow \infty$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img251.svg"
+ ALT="$t\rightarrow\infty$"></SPAN>, <!-- MATH
+ $v_C(t)=v_C(\infty)=V_s$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img337.svg"
+ ALT="$v_C(t)=v_C(\infty)=V_s$"></SPAN> is the steady 
+  state response.
+</LI>
+</UL>
+
+<P>
+We can therefore generalize the complete solution obtained above to all 
+first-order systems, i.e., their responses to a step input, a constant input 
+that is turned on at moment <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img219.svg"
+ ALT="$t=0$"></SPAN>, always take the same form: 
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+f(t)=f(\infty)+[f(0)-f(\infty)] e^{-t/\tau}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img338.svg"
+ ALT="$\displaystyle f(t)=f(\infty)+[f(0)-f(\infty)] e^{-t/\tau}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">113</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+in terms of three essential components of the system's response:
+
+<UL>
+<LI>The steady state response <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img339.svg"
+ ALT="$f(\infty)$"></SPAN>: as discussed in previous 
+  section for steady state response.
+</LI>
+<LI>The initial value <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img340.svg"
+ ALT="$f(0)$"></SPAN>: 
+  Denote the value of <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img341.svg"
+ ALT="$f(t)$"></SPAN> immediately before and after the moment
+  <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img219.svg"
+ ALT="$t=0$"></SPAN> by <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img342.svg"
+ ALT="$f(0_-)$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img343.svg"
+ ALT="$f(0_+)$"></SPAN>, respectively. If <!-- MATH
+ $f(0_-)\ne f(0_+)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img344.svg"
+ ALT="$f(0_-)\ne f(0_+)$"></SPAN>, 
+  then use <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img343.svg"
+ ALT="$f(0_+)$"></SPAN> for <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img340.svg"
+ ALT="$f(0)$"></SPAN>;
+</LI>
+<LI>The time constant of the system <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img234.svg"
+ ALT="$\tau$"></SPAN>: When there is only one 
+  resistor in the circuit, the time constant is <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img224.svg"
+ ALT="$\tau=RC$"></SPAN> or <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img228.svg"
+ ALT="$\tau=L/R$"></SPAN>.
+  When there are multiple resistors, the time constant can be found by:
+  
+<UL>
+<LI>Remove <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img104.svg"
+ ALT="$C$"></SPAN> or <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img105.svg"
+ ALT="$L$"></SPAN> so that the rest of the circuit (<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.21ex; " SRC="img294.svg"
+ ALT="$t&gt;0$"></SPAN>) is a 
+    one port network.
+</LI>
+<LI>Find the equivalent resistance <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img112.svg"
+ ALT="$R$"></SPAN> of the network by turning off 
+    all energy sources (short-circuit for voltage source, open-circuit 
+    for current source).
+</LI>
+<LI>Find time constant <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img224.svg"
+ ALT="$\tau=RC$"></SPAN> or <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img228.svg"
+ ALT="$\tau=L/R$"></SPAN>.
+  
+</LI>
+</UL>
+</LI>
+</UL>
+
+<P>
+In particular, note that
+
+<UL>
+<LI>when <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img219.svg"
+ ALT="$t=0$"></SPAN>, <!-- MATH
+ $f(t)=f(\infty)+f(0)-f(\infty)=f(0)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img345.svg"
+ ALT="$f(t)=f(\infty)+f(0)-f(\infty)=f(0)$"></SPAN> the initial condition;
+</LI>
+<LI>when <!-- MATH
+ $t\rightarrow \infty$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img251.svg"
+ ALT="$t\rightarrow\infty$"></SPAN>, <!-- MATH
+ $f(t)=f(\infty)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img346.svg"
+ ALT="$f(t)=f(\infty)$"></SPAN> the <EM>steady state response</EM>;
+</LI>
+<LI>when <!-- MATH
+ $0 < t < \infty$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.21ex; " SRC="img347.svg"
+ ALT="$0 &lt; t &lt; \infty$"></SPAN>, the difference <!-- MATH
+ $f(0)-f(\infty)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img348.svg"
+ ALT="$f(0)-f(\infty)$"></SPAN> between the initial 
+    and the steady state values of the response decays exponentially. This term is 
+    the <EM>transient response</EM> of the system.
+</LI>
+</UL>
+
+<P>
+<B>Example 1:</B> <!-- MATH
+ $V_{in}=2\,V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img349.svg"
+ ALT="$V_{in}=2\,V$"></SPAN>, <!-- MATH
+ $R_1=R_2=2\,k\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img350.svg"
+ ALT="$R_1=R_2=2\,k\Omega$"></SPAN>, <!-- MATH
+ $C=10^{-6}\,F=1\,\mu F$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.57ex; " SRC="img351.svg"
+ ALT="$C=10^{-6}\,F=1\,\mu F$"></SPAN>.
+Find <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img194.svg"
+ ALT="$v_C(t)$"></SPAN>.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/1stOrderRCa.png"
+ ALT="1stOrderRCa.png">
+
+<P>
+
+<UL>
+<LI>Find initial value <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img332.svg"
+ ALT="$v_C(0)=0$"></SPAN>. 
+
+<P>
+</LI>
+<LI>Find steady state value <!-- MATH
+ $v_C(\infty)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img352.svg"
+ ALT="$v_C(\infty)$"></SPAN>:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_C(\infty)=V_s\frac{R_2}{R_1+R_2}=\frac{V_s}{2} =1\,V
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img353.svg"
+ ALT="$\displaystyle v_C(\infty)=V_s\frac{R_2}{R_1+R_2}=\frac{V_s}{2} =1\,V$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">114</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>Find equivalent resistance <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img112.svg"
+ ALT="$R$"></SPAN>:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+R=R_1 || R_2=\frac{R_1 R_2}{R_1+R_2}=1\;k\Omega
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img354.svg"
+ ALT="$\displaystyle R=R_1 \vert\vert R_2=\frac{R_1 R_2}{R_1+R_2}=1\;k\Omega$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">115</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>Find time constant 
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\tau=RC=1000\times 10^{-6}= 10^{-3}\,sec
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.31ex; " SRC="img355.svg"
+ ALT="$\displaystyle \tau=RC=1000\times 10^{-6}= 10^{-3}\,sec$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">116</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>Find the complete response
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_C(t)=v_C(\infty)+[v_C(0)-v_C(\infty)]e^{-t/\tau}
+    =1+(0-1)e^{-t/10^{-3}}=1-e^{-1000\,t}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.25ex; vertical-align: -0.70ex; " SRC="img356.svg"
+ ALT="$\displaystyle v_C(t)=v_C(\infty)+[v_C(0)-v_C(\infty)]e^{-t/\tau}
+=1+(0-1)e^{-t/10^{-3}}=1-e^{-1000\,t}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">117</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+In particular,
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_C(0)=\left[1-e^{-1000\,t}\right]_{t=0}=0,\;\;\;\;\;
+    v_C(\infty)=\left[1-e^{-1000\,t}\right]_{t=\infty}=1
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.25ex; vertical-align: -1.05ex; " SRC="img357.svg"
+ ALT="$\displaystyle v_C(0)=\left[1-e^{-1000\,t}\right]_{t=0}=0,\;\;\;\;\;
+v_C(\infty)=\left[1-e^{-1000\,t}\right]_{t=\infty}=1$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">118</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+</UL>
+
+<P>
+<B>Example 2:</B>
+
+<P>
+In the circuit below, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img358.svg"
+ ALT="$V_0=10V$"></SPAN>, <!-- MATH
+ $R_1=R_2=2K\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img359.svg"
+ ALT="$R_1=R_2=2K\Omega$"></SPAN>, <!-- MATH
+ $R_3=5K\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img360.svg"
+ ALT="$R_3=5K\Omega$"></SPAN>, 
+<!-- MATH
+ $C=0.5\mu F$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img361.svg"
+ ALT="$C=0.5\mu F$"></SPAN>, the circuit is in steady state when <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img219.svg"
+ ALT="$t=0$"></SPAN>. Find <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img194.svg"
+ ALT="$v_C(t)$"></SPAN>
+after the switch is closed at <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img219.svg"
+ ALT="$t=0$"></SPAN>.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/BridgeCapacitor.png"
+ ALT="BridgeCapacitor.png">
+
+<P>
+Consider node voltage method. Applying KCL to node <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img362.svg"
+ ALT="$c$"></SPAN> 
+we get
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\frac{V_0-v_c(t)}{R_1}=C\dot{v}_c(t)+\frac{v_c(t)}{R_2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.06ex; " SRC="img363.svg"
+ ALT="$\displaystyle \frac{V_0-v_c(t)}{R_1}=C\dot{v}_c(t)+\frac{v_c(t)}{R_2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">119</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+i.e.,
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\frac{R_1R_2}{R_1+R_2}\,C\dot{v}_c(t)+v_c(t)
+=\tau\dot{v}_c(t)+v_c(t)=V_0\frac{R_2}{R_1++R_2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img364.svg"
+ ALT="$\displaystyle \frac{R_1R_2}{R_1+R_2}\,C\dot{v}_c(t)+v_c(t)
+=\tau\dot{v}_c(t)+v_c(t)=V_0\frac{R_2}{R_1++R_2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">120</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+where 
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\tau=C\frac{R_1R_2}{R_1+R_2}=C(R_1||R_2)
+=0.5\times 10^{-6}\times 10^3=5\times 10^{-4}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img365.svg"
+ ALT="$\displaystyle \tau=C\frac{R_1R_2}{R_1+R_2}=C(R_1\vert\vert R_2)
+=0.5\times 10^{-6}\times 10^3=5\times 10^{-4}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">121</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The initial condition for the DE above is <!-- MATH
+ $v_c(0)=-V_0/2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img366.svg"
+ ALT="$v_c(0)=-V_0/2$"></SPAN>, the
+homogeneous solution is <!-- MATH
+ $v_h(t)=Ae^{-t/\tau}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img367.svg"
+ ALT="$v_h(t)=Ae^{-t/\tau}$"></SPAN> and the particular 
+(steady state) solution is <!-- MATH
+ $v_p(t)=V_0/2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.78ex; " SRC="img368.svg"
+ ALT="$v_p(t)=V_0/2$"></SPAN>. The complete solution 
+is 
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_c(t)=v_h(t)+v_p(t)=Ae^{-t/\tau}+\frac{V_0}{2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.11ex; vertical-align: -1.71ex; " SRC="img369.svg"
+ ALT="$\displaystyle v_c(t)=v_h(t)+v_p(t)=Ae^{-t/\tau}+\frac{V_0}{2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">122</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+To find <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img9.svg"
+ ALT="$A$"></SPAN>, we evaluate <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img370.svg"
+ ALT="$v_c(t)$"></SPAN> at <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img219.svg"
+ ALT="$t=0$"></SPAN> and equate that to the
+known initial condition <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img371.svg"
+ ALT="$v_c(0)$"></SPAN> to get
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_c(t)\bigg|_{t=0}=V_s+Ae^{-t/\tau}\bigg|_{t=0}=\frac{V_0}{2}+A
+=v_c(0)=-\frac{V_0}{2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.44ex; " SRC="img372.svg"
+ ALT="$\displaystyle v_c(t)\bigg\vert _{t=0}=V_s+Ae^{-t/\tau}\bigg\vert _{t=0}=\frac{V_0}{2}+A
+=v_c(0)=-\frac{V_0}{2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">123</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+i.e., <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img373.svg"
+ ALT="$A=-V_0$"></SPAN>. Now the solution is
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_c(t)=Ae^{-t/\tau}+\frac{V_0}{2}
+=\frac{V_0}{2}-V_0 e^{-t/\tau}=5-10\,e^{-2000\,t}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.11ex; vertical-align: -1.71ex; " SRC="img374.svg"
+ ALT="$\displaystyle v_c(t)=Ae^{-t/\tau}+\frac{V_0}{2}
+=\frac{V_0}{2}-V_0 e^{-t/\tau}=5-10\,e^{-2000\,t}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">124</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+<B>Example 3:</B>
+
+<P>
+Resolve the circuit above using the short-cut method:
+
+<UL>
+<LI>Find initial value <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img375.svg"
+ ALT="$v_C(0)$"></SPAN>. As the circuit has been in steady 
+  state before <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img219.svg"
+ ALT="$t=0$"></SPAN>, <!-- MATH
+ $v_C(0_-)=-5V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img376.svg"
+ ALT="$v_C(0_-)=-5V$"></SPAN>. Also, as voltage across <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img104.svg"
+ ALT="$C$"></SPAN> 
+  cannot change instantaneously (unless <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img377.svg"
+ ALT="$R=0$"></SPAN> therefore <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img378.svg"
+ ALT="$\tau=RC=0$"></SPAN>), 
+  we have <!-- MATH
+ $v_C(0_+)=v_C(0_-)=-5\,V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img379.svg"
+ ALT="$v_C(0_+)=v_C(0_-)=-5\,V$"></SPAN>.
+
+<P>
+At <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.66ex; " SRC="img380.svg"
+ ALT="$t=0_+$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img381.svg"
+ ALT="$V_d$"></SPAN> drops from <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img382.svg"
+ ALT="$10\,V$"></SPAN> to <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img383.svg"
+ ALT="$0\,V$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img384.svg"
+ ALT="$V_c$"></SPAN> also drops 
+  from <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img385.svg"
+ ALT="$5\,V$"></SPAN> to <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.31ex; " SRC="img386.svg"
+ ALT="$-5\,V$"></SPAN>.
+
+<P>
+</LI>
+<LI>Find steady state value <!-- MATH
+ $v_C(\infty)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img352.svg"
+ ALT="$v_C(\infty)$"></SPAN>:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_C(\infty)=V_{R_2}=V_0\frac{R_2}{R_1+R_2}=\frac{V_0}{2}=5V
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img387.svg"
+ ALT="$\displaystyle v_C(\infty)=V_{R_2}=V_0\frac{R_2}{R_1+R_2}=\frac{V_0}{2}=5V$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">125</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>Find equivalent resistance <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img112.svg"
+ ALT="$R$"></SPAN>:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+R=R_1 || R_2=\frac{R_1 R_2}{R_1+R_2}=1\;k\Omega
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img354.svg"
+ ALT="$\displaystyle R=R_1 \vert\vert R_2=\frac{R_1 R_2}{R_1+R_2}=1\;k\Omega$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">126</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>Find time constant 
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\tau=RC=1000\times 0.5\times 10^{-6}=5\times 10^{-4}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.31ex; " SRC="img388.svg"
+ ALT="$\displaystyle \tau=RC=1000\times 0.5\times 10^{-6}=5\times 10^{-4}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">127</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>Find the complete response
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_C(t)=v_C(\infty)+[v_C(0)-v_C(\infty)]e^{-t/\tau}
+    =5+(-5-5) e^{-t/0.0005}=5-10 e^{-2000t}\;(V)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img389.svg"
+ ALT="$\displaystyle v_C(t)=v_C(\infty)+[v_C(0)-v_C(\infty)]e^{-t/\tau}
+=5+(-5-5) e^{-t/0.0005}=5-10 e^{-2000t}\;(V)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">128</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+In particular,
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_C(0)=\left[5-10 e^{-2000t}\right]_{t=0}=-5,\;\;\;\;\;
+    v_C(\infty)=\left[5-10 e^{-2000t}\right]_{t=\infty}=5
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.25ex; vertical-align: -1.05ex; " SRC="img390.svg"
+ ALT="$\displaystyle v_C(0)=\left[5-10 e^{-2000t}\right]_{t=0}=-5,\;\;\;\;\;
+v_C(\infty)=\left[5-10 e^{-2000t}\right]_{t=\infty}=5$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">129</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+<LI>Find current <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img391.svg"
+ ALT="$i_C(t)$"></SPAN> through <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img104.svg"
+ ALT="$C$"></SPAN>:
+  <BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+i_C(t)&=&C\frac{dv_C(t)}{dt}=C\frac{d}{dt}(5-10 e^{-t/\tau})
+    =C\,\frac{10 e^{-t/\tau}}{\tau}=10 e^{-2000 t}\;(mA)
+    \nonumber \\
+    &=&\frac{10 e^{-t/\tau}}{R}=10 e^{-2000 t}\;(mA)	
+  
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img392.svg"
+ ALT="$\displaystyle i_C(t)$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 5.57ex; vertical-align: -1.71ex; " SRC="img393.svg"
+ ALT="$\displaystyle C\frac{dv_C(t)}{dt}=C\frac{d}{dt}(5-10 e^{-t/\tau})
+=C\,\frac{10 e^{-t/\tau}}{\tau}=10 e^{-2000 t}\;(mA)$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 5.57ex; vertical-align: -1.71ex; " SRC="img394.svg"
+ ALT="$\displaystyle \frac{10 e^{-t/\tau}}{R}=10 e^{-2000 t}\;(mA)$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">130</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+
+</LI>
+<LI>Find voltages <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img395.svg"
+ ALT="$v_1(t)$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img396.svg"
+ ALT="$v_2(t)$"></SPAN> across <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img215.svg"
+ ALT="$R_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img191.svg"
+ ALT="$R_2$"></SPAN>,
+  respectively:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_2(t)=v_C(t)=5-10 e^{-2000t}\;(V)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img397.svg"
+ ALT="$\displaystyle v_2(t)=v_C(t)=5-10 e^{-2000t}\;(V)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">131</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_1(t)=V_0-v_C(t)=10-(5-10 e^{-2000t})=5+10 e^{-2000t}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img398.svg"
+ ALT="$\displaystyle v_1(t)=V_0-v_C(t)=10-(5-10 e^{-2000t})=5+10 e^{-2000t}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">132</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>Find currents <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img399.svg"
+ ALT="$i_1(t)$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img400.svg"
+ ALT="$i_2(t)$"></SPAN> through <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img215.svg"
+ ALT="$R_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img191.svg"
+ ALT="$R_2$"></SPAN>, 
+  respectively:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+i_1(t)=\frac{v_1(t)}{R_1}=2.5+5 e^{-2000t} \; (mA)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.06ex; " SRC="img401.svg"
+ ALT="$\displaystyle i_1(t)=\frac{v_1(t)}{R_1}=2.5+5 e^{-2000t} \; (mA)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">133</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+i_2(t)=\frac{v_C(t)}{R_2}=2.5-5 e^{-2000t}\; (mA)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.06ex; " SRC="img402.svg"
+ ALT="$\displaystyle i_2(t)=\frac{v_C(t)}{R_2}=2.5-5 e^{-2000t}\; (mA)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">134</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>Verify current <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img391.svg"
+ ALT="$i_C(t)$"></SPAN>:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+i_C(t)=i_1(t)-i_2(t)=10 e^{-2000t} \; (mA)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img403.svg"
+ ALT="$\displaystyle i_C(t)=i_1(t)-i_2(t)=10 e^{-2000t} \; (mA)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">135</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+</UL>
+
+<P>
+<B>Example 4:</B>
+
+<P>
+In the same circuit above, find the voltages <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img395.svg"
+ ALT="$v_1(t)$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img396.svg"
+ ALT="$v_2(t)$"></SPAN> 
+across and currents <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img399.svg"
+ ALT="$i_1(t)$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img400.svg"
+ ALT="$i_2(t)$"></SPAN> through <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img215.svg"
+ ALT="$R_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img191.svg"
+ ALT="$R_2$"></SPAN>, 
+respectively.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/BridgeCapacitor.png"
+ ALT="BridgeCapacitor.png">
+
+<P>
+
+<UL>
+<LI>Find <!-- MATH
+ $v_1(\infty)=v_2(\infty)=5\;V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img404.svg"
+ ALT="$v_1(\infty)=v_2(\infty)=5\;V$"></SPAN>
+</LI>
+<LI>Find <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img405.svg"
+ ALT="$v_1(0_+)$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img406.svg"
+ ALT="$v_2(0_+)$"></SPAN>. Before <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img219.svg"
+ ALT="$t=0$"></SPAN>, the circuit is in
+	steady state, i.e., <!-- MATH
+ $v_1(0_-)=v_2(0_-)=5\;V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img407.svg"
+ ALT="$v_1(0_-)=v_2(0_-)=5\;V$"></SPAN>. However, after
+	the switch closes at <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img219.svg"
+ ALT="$t=0$"></SPAN>, the voltage at node d drops from 
+	10V to 0V (with respect to node b as ground), and the voltage 
+        at node c drops from 5V to -5V (voltage across a capacitor 
+        cannot change instantaneously), i.e., <!-- MATH
+ $v_1(0_+)=15V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img408.svg"
+ ALT="$v_1(0_+)=15V$"></SPAN> and 
+        <!-- MATH
+ $v_2(0_+)=-5V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img409.svg"
+ ALT="$v_2(0_+)=-5V$"></SPAN>; 
+</LI>
+<LI>Find <!-- MATH
+ $\tau=RC=5\times 10^{-4}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.31ex; " SRC="img410.svg"
+ ALT="$\tau=RC=5\times 10^{-4}$"></SPAN> (same as before);
+</LI>
+<LI>Find <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img395.svg"
+ ALT="$v_1(t)$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img396.svg"
+ ALT="$v_2(t)$"></SPAN>:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_1(t)=v_1(\infty)+[v_1(0_+)-v_1(\infty)]e^{-t/\tau}
+    =5+(15-5)e^{-t/\tau}=5+10e^{-t/\tau}\;V
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img411.svg"
+ ALT="$\displaystyle v_1(t)=v_1(\infty)+[v_1(0_+)-v_1(\infty)]e^{-t/\tau}
+=5+(15-5)e^{-t/\tau}=5+10e^{-t/\tau}\;V$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">136</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_2(t)=v_2(\infty)+[v_2(0_+)-v_2(\infty)]e^{-t/\tau}
+    =5+(-5-5)e^{-t/\tau}=5-10e^{-t/\tau}\;V
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img412.svg"
+ ALT="$\displaystyle v_2(t)=v_2(\infty)+[v_2(0_+)-v_2(\infty)]e^{-t/\tau}
+=5+(-5-5)e^{-t/\tau}=5-10e^{-t/\tau}\;V$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">137</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+We see that <!-- MATH
+ $v_1(t)+v_2(t)=V_0=10V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img413.svg"
+ ALT="$v_1(t)+v_2(t)=V_0=10V$"></SPAN>.
+</LI>
+<LI>Find <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img399.svg"
+ ALT="$i_1(t)$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img400.svg"
+ ALT="$i_2(t)$"></SPAN> through <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img215.svg"
+ ALT="$R_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img191.svg"
+ ALT="$R_2$"></SPAN>:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+i_1(t)=\frac{v_1(t)}{R_1}=2.5+5e^{-t/\tau}\;mA
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.06ex; " SRC="img414.svg"
+ ALT="$\displaystyle i_1(t)=\frac{v_1(t)}{R_1}=2.5+5e^{-t/\tau}\;mA$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">138</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+i_2(t)=\frac{v_2(t)}{R_2}=2.5-5e^{-t/\tau}\;mA
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.06ex; " SRC="img415.svg"
+ ALT="$\displaystyle i_2(t)=\frac{v_2(t)}{R_2}=2.5-5e^{-t/\tau}\;mA$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">139</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>Find current <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img391.svg"
+ ALT="$i_C(t)$"></SPAN> through capacitor <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img104.svg"
+ ALT="$C$"></SPAN>:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+i_C(t)=i_1(t)-i_2(t)=10 e^{-t/\tau}\; mA
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img416.svg"
+ ALT="$\displaystyle i_C(t)=i_1(t)-i_2(t)=10 e^{-t/\tau}\; mA$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">140</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+</UL>
+Note that when <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.66ex; " SRC="img380.svg"
+ ALT="$t=0_+$"></SPAN>, <!-- MATH
+ $v_2(t)=V_c=-5V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img417.svg"
+ ALT="$v_2(t)=V_c=-5V$"></SPAN>, lower than ground voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img418.svg"
+ ALT="$V_b$"></SPAN>!
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/transientDCexample.gif"
+ ALT="transientDCexample.gif">
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node9.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node5.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node7.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node9.html">Complete Response II -</A>
+<B> Up:</B> <A
+ HREF="node5.html">First Order Systems</A>
+<B> Previous:</B> <A
+ HREF="node7.html">Particular Solution</A></DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

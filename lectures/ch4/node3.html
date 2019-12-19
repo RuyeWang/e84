@@ -1,0 +1,797 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Bipolar Junction Transistor (BJT)</TITLE>
+<META NAME="description" CONTENT="Bipolar Junction Transistor (BJT)">
+<META NAME="keywords" CONTENT="ch4">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="ch4.css">
+
+<LINK REL="next" HREF="node4.html">
+<LINK REL="previous" HREF="node2.html">
+<LINK REL="next" HREF="node4.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="ch4.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node4.html">DC Operating Point</A>
+<B> Up:</B> <A
+ HREF="ch4.html">ch4</A>
+<B> Previous:</B> <A
+ HREF="node2.html">Diodes</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A ID="SECTION00030000000000000000">
+Bipolar Junction Transistor (BJT)</A>
+</H1> 
+<A ID="tex2html10"
+  HREF="http://en.wikipedia.org/wiki/Bipolar_junction_transistor">(External reference on Wikipedia)</A>
+<P>
+A Bipolar Junction Transistor (BJT) has three terminals connected to three
+doped semiconductor regions. In an NPN transistor, a thin and lightly doped 
+P-type <EM>base</EM> is sandwiched between a heavily doped N-type <EM>emitter</EM>
+and another N-type <EM>collector</EM>; while in a PNP transistor, a thin and 
+lightly doped N-type <EM>base</EM> is sandwiched between a heavily doped P-type
+<EM>emitter</EM> and another P-type <EM>collector</EM>. In the following we will 
+only consider NPN BJTs.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/transistors1.gif"
+ ALT="transistors1.gif">
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/transistorBJT1.gif"
+ ALT="transistorBJT1.gif">
+
+<P>
+In many schematics of transistor circuits (especially when there exist a
+large number of transistors in the circuit), the circle in the symbol of
+a transistor is omitted. The figures below show the cross section of two
+NPN transistors. Note that although both the collector and emitter of a
+transistor are made of N-type semiconductor material, they have totally
+different geometry and therefore can not be interchanged.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/transistorBJT2a.gif"
+ ALT="transistorBJT2a.gif">
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/transistorBJT2b.gif"
+ ALT="transistorBJT2b.gif">
+
+<P>
+All previously considered components (resistor, capacitor, inductor, and 
+diode) have two terminals (leads) and can therefore be characterized by 
+the single relationship between the current going through and the voltage 
+across the two leads. Differently, a transistor is a three-terminal component,
+which could be considered as a two-port network with an input-port and an
+output-port, each formed by two of the three terminals, and characterized
+by the relationships of both input and output currents and voltages.
+
+<P>
+Depending on which of the three terminals is used as common terminal, there
+can be three possible configurations for the two-port network formed by a
+transistor: 
+
+<UL>
+<LI>Common emitter (CE), 
+</LI>
+<LI>Common base (CB), 
+</LI>
+<LI>Common collector (CC).
+</LI>
+</UL>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/transistors2.gif"
+ ALT="transistors2.gif">
+
+<P>
+
+<UL>
+<LI><B>Common-Base (CB) configuration</B>
+
+<P>
+The CB configuration can be considered as a 2-port circuit. The input
+  port is formed by the emitter and base, the output port is formed by 
+  the collector and base. Two voltages <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img75.svg"
+ ALT="$V_{BE}$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img76.svg"
+ ALT="$V_{CB}$"></SPAN> are applied 
+  respectively to the emitter <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img77.svg"
+ ALT="$E$"></SPAN> and collector <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img72.svg"
+ ALT="$C$"></SPAN>, with respect to the 
+  common base <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img78.svg"
+ ALT="$B$"></SPAN>, so that the BE junction is forward biased while the
+  CB junction is reverse biased.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/CBnpn.gif"
+ ALT="CBnpn.gif">  <IMG STYLE=""
+ SRC="../figures/CB3.png"
+ ALT="CB3.png">
+
+<P>
+The polarity of <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img75.svg"
+ ALT="$V_{BE}$"></SPAN> and direction of <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img79.svg"
+ ALT="$I_B$"></SPAN> associated with the
+  PN-junction between E and B are the same as those associated with 
+  a diode, voltage polarity: positive on P, negative on N, current 
+  direction: from P to N, but <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img76.svg"
+ ALT="$V_{CB}$"></SPAN> and the direction of <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img80.svg"
+ ALT="$I_C$"></SPAN> 
+  associated with the PN-junction between the base and collector are 
+  defined oppositely. 
+
+<P>
+The behavior of the NPN-transistor is determined by its two PN-junctions:
+
+<P>
+
+<UL>
+<LI>The forward biased base-emitter (BE) PN-junction allows the 
+    majority charge carriers, the electrons, in N-type emitter to go 
+    through the PN-junction to arrive at the P-type base, forming the 
+    emitter current <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img81.svg"
+ ALT="$I_E$"></SPAN>.
+
+<P>
+</LI>
+<LI>As the base is thin and lightly doped, only a small number of 
+    the electrons from the emitter (e.g., 1%) are combined with the 
+    majority carriers, the holes, in the P-type base to form the base 
+    current <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img79.svg"
+ ALT="$I_B$"></SPAN>. The percentage depends on the doping and geometry 
+    of the material.
+
+<P>
+</LI>
+<LI>Most of the electrons from the emitter (e.g., 99%), now the
+    minority carriers in the P-type base, can go through the reverse 
+    biased collector-base PN junction to arrive at the N-type collector
+    forming the collector current <!-- MATH
+ $I_C=I_E-I_B$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img82.svg"
+ ALT="$I_C=I_E-I_B$"></SPAN>.
+
+<P>
+</LI>
+</UL>
+
+<P>
+The <EM>current gain</EM> or <EM>current transfer ratio</EM> of this CB circuit,
+denoted by <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img83.svg"
+ ALT="$\alpha$"></SPAN>, is defined as the ratio between collector current 
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img80.svg"
+ ALT="$I_C$"></SPAN> treated as the output and the emitter current <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img81.svg"
+ ALT="$I_E$"></SPAN> treated as the 
+input:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\alpha=\frac{I_C}{I_E}<1,\;\;\;\mbox{e.g.}\;\;\;\;\;\alpha =99\% \approx 1
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img84.svg"
+ ALT="$\displaystyle \alpha=\frac{I_C}{I_E}&lt;1,\;\;\;$">e.g.<IMG STYLE="height: 2.32ex; vertical-align: -0.25ex; " SRC="img85.svg"
+ ALT="$\displaystyle \;\;\;\;\;\alpha =99\% \approx 1$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">8</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+i.e., 
+<BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+I_C& = &\alpha I_E
+  \nonumber\\
+  I_B& =&I_E-I_C=I_E-\alpha I_E=(1-\alpha)I_E
+  \nonumber\\
+  I_E&=&\frac{I_C}{\alpha}=\frac{I_B}{1-\alpha}
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img86.svg"
+ ALT="$\displaystyle I_C$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img87.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img88.svg"
+ ALT="$\displaystyle \alpha I_E$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img89.svg"
+ ALT="$\displaystyle I_B$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img87.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img90.svg"
+ ALT="$\displaystyle I_E-I_C=I_E-\alpha I_E=(1-\alpha)I_E$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img91.svg"
+ ALT="$\displaystyle I_E$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img87.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 5.34ex; vertical-align: -1.90ex; " SRC="img92.svg"
+ ALT="$\displaystyle \frac{I_C}{\alpha}=\frac{I_B}{1-\alpha}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">9</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+
+<P>
+The relationships between the current and voltage of both the input 
+and output ports are described by the following input and output 
+characteristics.
+
+<P>
+
+<UL>
+<LI><B>Input characteristics:</B> 
+
+<P>
+The input current <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img81.svg"
+ ALT="$I_E$"></SPAN> is a function of <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img93.svg"
+ ALT="$V_{CE}$"></SPAN> as well as the input
+    voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img75.svg"
+ ALT="$V_{BE}$"></SPAN>, which is much more dominant:
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_E=f(V_{BE}, V_{CB})\approx f(V_{BE})=\frac{I_B}{1-\alpha}
+    =\frac{1}{1-\alpha} I_0 ( e^{V_{BE}/V_T}-1 )
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -1.90ex; " SRC="img94.svg"
+ ALT="$\displaystyle I_E=f(V_{BE}, V_{CB})\approx f(V_{BE})=\frac{I_B}{1-\alpha}
+=\frac{1}{1-\alpha} I_0 ( e^{V_{BE}/V_T}-1 )$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">10</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Note that <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img76.svg"
+ ALT="$V_{CB}$"></SPAN> has little effect on <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img81.svg"
+ ALT="$I_E$"></SPAN>.
+    Here <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img79.svg"
+ ALT="$I_B$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img75.svg"
+ ALT="$V_{BE}$"></SPAN> associated with the emitter-base PN-junction 
+    satisfy the relationship for a diode:
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_B=I_0 ( e^{V_{BE}/V_T}-1 )
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img95.svg"
+ ALT="$\displaystyle I_B=I_0 ( e^{V_{BE}/V_T}-1 )$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">11</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The voltage across the forward biased PN junction can be approximated
+    by <!-- MATH
+ $V_{BE}=0.7\,V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img96.svg"
+ ALT="$V_{BE}=0.7\,V$"></SPAN>. 
+
+<P>
+</LI>
+<LI><B>Output characteristics:</B> 
+
+<P>
+The output current <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img80.svg"
+ ALT="$I_C$"></SPAN> is a function of the output voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img93.svg"
+ ALT="$V_{CE}$"></SPAN>
+    as well as the input current <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img81.svg"
+ ALT="$I_E$"></SPAN>, which is much more dominant:
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_C=f(I_E,V_{CB})\approx f(I_E)=\alpha I_E
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img97.svg"
+ ALT="$\displaystyle I_C=f(I_E,V_{CB})\approx f(I_E)=\alpha I_E$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">12</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Here the approximation is based on the assumption that <!-- MATH
+ $V_{CB}>0.2V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img98.svg"
+ ALT="$V_{CB}&gt;0.2V$"></SPAN>
+    (in linear region). As <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img99.svg"
+ ALT="$V_{CB}&gt;0$"></SPAN>, i.e., the CB junction is reverse 
+    biased, the current <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img80.svg"
+ ALT="$I_C$"></SPAN> only depends on <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img81.svg"
+ ALT="$I_E$"></SPAN>. When <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img100.svg"
+ ALT="$I_E=0$"></SPAN>, 
+    <!-- MATH
+ $I_C=I_{CB0}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img101.svg"
+ ALT="$I_C=I_{CB0}$"></SPAN> is the current caused by the minority carriers crossing 
+    the PN-junction. This is similar to the diode current-voltage 
+    characteristics seen before, except both axes are reversed (the 
+    polarity of <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img76.svg"
+ ALT="$V_{CB}$"></SPAN> and the direction <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img80.svg"
+ ALT="$I_C$"></SPAN> are oppositely defined).
+    When <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img81.svg"
+ ALT="$I_E$"></SPAN> is increased, <!-- MATH
+ $I_C=\alpha I_E+I_{CB0}\approx \alpha I_E$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img102.svg"
+ ALT="$I_C=\alpha I_E+I_{CB0}\approx \alpha I_E$"></SPAN> is 
+    increased correspondingly. However, as higher <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img76.svg"
+ ALT="$V_{CB}$"></SPAN> does not cause
+    more electrons from the emitter, it has little effect on <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img80.svg"
+ ALT="$I_C$"></SPAN>.
+
+<P>
+Note that when <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img103.svg"
+ ALT="$V_{CB}=0$"></SPAN>, the PN-junction between base and collector
+    is not biased (short circuited), there is still a non-zero collector 
+    current <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img104.svg"
+ ALT="$I_C&gt;0$"></SPAN>, formed by the electrons coming from the emitter,
+    through both PN-junctions to form a closed loop current.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/TransistorCBplots.gif"
+ ALT="TransistorCBplots.gif">
+
+<P>
+</LI>
+</UL>
+
+<P>
+</LI>
+<LI><B>Common-Emitter (CE) configuration</B>
+
+<P>
+Two voltages <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img75.svg"
+ ALT="$V_{BE}$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img93.svg"
+ ALT="$V_{CE}$"></SPAN> are applied respectively to the base 
+  <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img78.svg"
+ ALT="$B$"></SPAN> and collector <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img72.svg"
+ ALT="$C$"></SPAN> with respect to the common emitter <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img77.svg"
+ ALT="$E$"></SPAN>. Typically
+  <!-- MATH
+ $V_{CE} > V_{BE}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img105.svg"
+ ALT="$V_{CE} &gt; V_{BE}$"></SPAN>, i.e., the BE junction is forward biased while the CB 
+  junction is reverse biased, same as the CB configuration. The voltages 
+  of CB and CE configurations are related by:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_{CE}=V_{CB}+V_{BE},\;\;\;\;\;\mbox{or}\;\;\;\;\;  V_{CB}=V_{CE}-V_{BE}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img106.svg"
+ ALT="$\displaystyle V_{CE}=V_{CB}+V_{BE},\;\;\;\;\;$">or<IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img107.svg"
+ ALT="$\displaystyle \;\;\;\;\; V_{CB}=V_{CE}-V_{BE}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">13</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/CEnpn.gif"
+ ALT="CEnpn.gif">  <IMG STYLE=""
+ SRC="../figures/CE3.png"
+ ALT="CE3.png">
+
+<P>
+The CE configuration can be considered as a 2-port circuit. The input
+  port is formed by the emitter and base, the output port is formed by 
+  the collector and emitter. The current gain of the CE circuit, denoted 
+  by <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img108.svg"
+ ALT="$\beta$"></SPAN>, is defined as the ratio between the collector current <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img80.svg"
+ ALT="$I_C$"></SPAN> 
+  treated as the output and the base current <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img79.svg"
+ ALT="$I_B$"></SPAN> treated as the input:  
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\beta=\frac{I_C}{I_B}=\frac{\alpha I_E}{(1-\alpha) I_E}=\frac{\alpha}{1-\alpha},
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img109.svg"
+ ALT="$\displaystyle \beta=\frac{I_C}{I_B}=\frac{\alpha I_E}{(1-\alpha) I_E}=\frac{\alpha}{1-\alpha},$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">14</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+For example, if <!-- MATH
+ $\alpha=0.99$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img110.svg"
+ ALT="$\alpha=0.99$"></SPAN>, then <!-- MATH
+ $\beta=0.99/(1-0.99)=99$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img111.svg"
+ ALT="$\beta=0.99/(1-0.99)=99$"></SPAN>. 
+
+<P>
+The two parameters <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img83.svg"
+ ALT="$\alpha$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img108.svg"
+ ALT="$\beta$"></SPAN> are related by any of the 
+  following:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\beta=\frac{\alpha}{1-\alpha},\;\;\;\;\;\;\alpha=\frac{\beta}{1+\beta},
+  \;\;\;\;1+\beta=\frac{1}{1-\alpha},\;\;\;\;\;1-\alpha=\frac{1}{1+\beta}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.16ex; " SRC="img112.svg"
+ ALT="$\displaystyle \beta=\frac{\alpha}{1-\alpha},\;\;\;\;\;\;\alpha=\frac{\beta}{1+\beta},
+\;\;\;\;1+\beta=\frac{1}{1-\alpha},\;\;\;\;\;1-\alpha=\frac{1}{1+\beta}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">15</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+The relationships between the current and voltage of both the input 
+  and output ports are described by the following input and output 
+  characteristics.
+
+<P>
+
+<UL>
+<LI><B>Input characteristics:</B> 
+
+<P>
+Same as in the case of common-base configuration, the EB junction of the
+    common-emitter configuration can also be considered as a forward biased
+    diode, the current-voltage characteristics is similar to that of a diode:
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_B=f(V_{BE},V_{CE})\approx f(V_{BE})=I_0 ( e^{V_{BE}/V_T}-1 )
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img113.svg"
+ ALT="$\displaystyle I_B=f(V_{BE},V_{CE})\approx f(V_{BE})=I_0 ( e^{V_{BE}/V_T}-1 )$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">16</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The voltage across the forward biased PN junction is approximately 
+    <!-- MATH
+ $V_{BE}=0.7\,V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img96.svg"
+ ALT="$V_{BE}=0.7\,V$"></SPAN>. <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img93.svg"
+ ALT="$V_{CE}$"></SPAN> has little effect on <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img79.svg"
+ ALT="$I_B$"></SPAN>.
+
+<P>
+</LI>
+<LI><B>Output characteristics:</B> 
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_C=f(I_B,V_{CE})\approx f(I_B)=\beta I_B\;\;\;\;\;\;\;\;\;\;\mbox{(in linear region)}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img114.svg"
+ ALT="$\displaystyle I_C=f(I_B,V_{CE})\approx f(I_B)=\beta I_B\;\;\;\;\;\;\;\;\;\;$">(in linear region)</SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">17</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The current <!-- MATH
+ $I_C=\beta I_B$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img115.svg"
+ ALT="$I_C=\beta I_B$"></SPAN> depends on the current <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img79.svg"
+ ALT="$I_B$"></SPAN>, which in 
+    turn depends on <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img75.svg"
+ ALT="$V_{BE}$"></SPAN>. However, as higher <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img93.svg"
+ ALT="$V_{CE}$"></SPAN> does not cause
+    more electrons from the emitter, it has little effect on <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img80.svg"
+ ALT="$I_C$"></SPAN>.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/TransistorCEplots.gif"
+ ALT="TransistorCEplots.gif">
+
+<P>
+</LI>
+</UL>
+</LI>
+</UL>
+
+<P>
+The relationship between the input and output currents of both CB and CE 
+configurations is summarized below:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_E=I_C+I_B,\;\;\;\;\;\;V_{CE}=V_{CB}+V_{BE}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img116.svg"
+ ALT="$\displaystyle I_E=I_C+I_B,\;\;\;\;\;\;V_{CE}=V_{CB}+V_{BE}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">18</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+
+<UL>
+<LI>Common Base:
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/CB3.png"
+ ALT="CB3.png">
+  <BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+\alpha&=&\frac{I_{out}}{I_{in}}=\frac{I_C}{I_E},
+    \;\;\;\;\mbox{i.e.,}\;\;\;\;\;I_C=\alpha I_E
+    \nonumber\\
+    I_E&=&I_C+I_B=\alpha I_E+(1-\alpha) I_E
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img117.svg"
+ ALT="$\displaystyle \alpha$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img87.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img118.svg"
+ ALT="$\displaystyle \frac{I_{out}}{I_{in}}=\frac{I_C}{I_E},
+\;\;\;\;$">i.e.,<IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img119.svg"
+ ALT="$\displaystyle \;\;\;\;\;I_C=\alpha I_E$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img91.svg"
+ ALT="$\displaystyle I_E$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img87.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img120.svg"
+ ALT="$\displaystyle I_C+I_B=\alpha I_E+(1-\alpha) I_E$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">19</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+
+<P>
+</LI>
+<LI>Common Emitter:
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/CE3.png"
+ ALT="CE3.png">
+  <BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+\beta&=&\frac{I_{out}}{I_{in}}=\frac{I_C}{I_B},
+    \;\;\;\;\mbox{i.e.,}\;\;\;\;\;I_C=\beta I_B
+    \nonumber\\
+    I_E&=&I_C+I_B=\beta I_B + I_B
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img121.svg"
+ ALT="$\displaystyle \beta$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img87.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img122.svg"
+ ALT="$\displaystyle \frac{I_{out}}{I_{in}}=\frac{I_C}{I_B},
+\;\;\;\;$">i.e.,<IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img123.svg"
+ ALT="$\displaystyle \;\;\;\;\;I_C=\beta I_B$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img91.svg"
+ ALT="$\displaystyle I_E$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img87.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img124.svg"
+ ALT="$\displaystyle I_C+I_B=\beta I_B + I_B$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">20</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+
+<P>
+</LI>
+</UL>
+
+<P>
+The collector characteristics of the common-base (CB) and common-emitter 
+(CE) configurations have the following differences:
+
+<UL>
+<LI>In CB circuit <!-- MATH
+ $I_C=\alpha I_E$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img125.svg"
+ ALT="$I_C=\alpha I_E$"></SPAN> is slightly less than <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img81.svg"
+ ALT="$I_E$"></SPAN>, while 
+  in CE circuit <!-- MATH
+ $I_C=\beta I_B$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img115.svg"
+ ALT="$I_C=\beta I_B$"></SPAN> is much greater than <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img79.svg"
+ ALT="$I_B$"></SPAN>.
+</LI>
+<LI>In CB circuit, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img104.svg"
+ ALT="$I_C&gt;0$"></SPAN> when <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img103.svg"
+ ALT="$V_{CB}=0$"></SPAN>; while in CE circuit <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img126.svg"
+ ALT="$I_C=0$"></SPAN>
+  when <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img127.svg"
+ ALT="$V_{CE}=0$"></SPAN> (as <!-- MATH
+ $V_{CB}=-V_{BE}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img128.svg"
+ ALT="$V_{CB}=-V_{BE}$"></SPAN> has the effect of suppressing <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img80.svg"
+ ALT="$I_C$"></SPAN>).
+</LI>
+<LI>Increased <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img93.svg"
+ ALT="$V_{CE}$"></SPAN> will slightly increase <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img83.svg"
+ ALT="$\alpha$"></SPAN> but more
+  greatly increase <!-- MATH
+ $\beta=\alpha/(1-\alpha)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img129.svg"
+ ALT="$\beta=\alpha/(1-\alpha)$"></SPAN>, thereby causing more 
+  significantly increased <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img80.svg"
+ ALT="$I_C$"></SPAN>.
+</LI>
+<LI><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img81.svg"
+ ALT="$I_E$"></SPAN> in CB is a function of two variables <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img75.svg"
+ ALT="$V_{BE}$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img76.svg"
+ ALT="$V_{CB}$"></SPAN>,
+  but the former is much more significant then the latter.
+  <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img79.svg"
+ ALT="$I_B$"></SPAN> in CE is a function of two variables <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img75.svg"
+ ALT="$V_{BE}$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img93.svg"
+ ALT="$V_{CE}$"></SPAN>,
+  but the former is much more significant then the latter.
+</LI>
+<LI><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img80.svg"
+ ALT="$I_C$"></SPAN> in CB is a function of two variables <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img76.svg"
+ ALT="$V_{CB}$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img81.svg"
+ ALT="$I_E$"></SPAN>. 
+  When <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img76.svg"
+ ALT="$V_{CB}$"></SPAN> is small, its slight increase will cause significant increase 
+  of <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img80.svg"
+ ALT="$I_C$"></SPAN>. But its further increase will not cause much change in <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img80.svg"
+ ALT="$I_C$"></SPAN> due 
+  to saturation (all available charge carriers travel at the saturation velocity
+  to arrive at collector C), <!-- MATH
+ $I_C=\alpha I_E$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img125.svg"
+ ALT="$I_C=\alpha I_E$"></SPAN> is mostly determined by <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img81.svg"
+ ALT="$I_E$"></SPAN>.
+</LI>
+<LI><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img80.svg"
+ ALT="$I_C$"></SPAN> in CE is a function of two variables <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img93.svg"
+ ALT="$V_{CE}$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img79.svg"
+ ALT="$I_B$"></SPAN>. 
+  When <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img93.svg"
+ ALT="$V_{CE}$"></SPAN> is small (<!-- MATH
+ $\approx 0.3V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img130.svg"
+ ALT="$\approx 0.3V$"></SPAN>), its slight increase will cause 
+  significant increase of <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img80.svg"
+ ALT="$I_C$"></SPAN>. But when <!-- MATH
+ $V_{CE}>0.3V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img131.svg"
+ ALT="$V_{CE}&gt;0.3V$"></SPAN>, its further increase 
+  will not cause much change in <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img80.svg"
+ ALT="$I_C$"></SPAN> due to saturation (all available charge 
+  carriers travel at the saturation velocity to arrive at collector C), 
+  <!-- MATH
+ $I_C=\beta I_B$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img115.svg"
+ ALT="$I_C=\beta I_B$"></SPAN> is mostly determined by <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img79.svg"
+ ALT="$I_B$"></SPAN>.
+</LI>
+</UL>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/InputOutputChar.gif"
+ ALT="InputOutputChar.gif">
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/transistortemp.gif"
+ ALT="transistortemp.gif">
+
+<P>
+Various parameters of a transistor change as functions of temperature. 
+For example, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img108.svg"
+ ALT="$\beta$"></SPAN> increases along with temperature.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="ch4.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node4.html">DC Operating Point</A>
+<B> Up:</B> <A
+ HREF="ch4.html">ch4</A>
+<B> Previous:</B> <A
+ HREF="node2.html">Diodes</A></DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

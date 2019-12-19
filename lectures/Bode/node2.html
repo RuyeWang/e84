@@ -1,0 +1,245 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Impedance</TITLE>
+<META NAME="description" CONTENT="Impedance">
+<META NAME="keywords" CONTENT="Bode">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="Bode.css">
+
+<LINK REL="next" HREF="node3.html">
+<LINK REL="previous" HREF="node1.html">
+<LINK REL="up" HREF="Bode.html">
+<LINK REL="next" HREF="node3.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html30"
+  HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html28"
+  HREF="Bode.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html22"
+  HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html31"
+  HREF="node3.html">Decibel (dB)</A>
+<B> Up:</B> <A NAME="tex2html29"
+  HREF="Bode.html">Bode</A>
+<B> Previous:</B> <A NAME="tex2html23"
+  HREF="node1.html">Logarithmic and Complex operations</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00020000000000000000">
+Impedance</A>
+</H1>
+
+<P>
+In DC circuits the relationships of various voltages and currents are described 
+by a set of linear algebraic equations, while in AC circuits they are described
+by a set of linear differential equations. 
+
+<P>
+The resistance <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.png"
+ ALT="$R$"> of a resistor is defined by Ohm's law as the ratio of voltage 
+<IMG
+ WIDTH="14" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img13.png"
+ ALT="$v$"> across a resistor and current <IMG
+ WIDTH="11" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img14.png"
+ ALT="$i$"> through the resistor: <IMG
+ WIDTH="69" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.png"
+ ALT="$ R=v/i$">.
+This concept is generalized to that of impedance <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img16.png"
+ ALT="$Z$"> of any element (L, C, as
+well R) in AC circuits, defined as the frequency response function of the element
+with the current through the element as the input and the voltage across the element
+as the output:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Z=\frac{V}{I}=\frac{v_m e^{j\phi}}{i_m e^{j\psi}}=\frac{v_m}{i_m} e^{j(\phi-\psi)}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="234" HEIGHT="51" BORDER="0"
+ SRC="img17.png"
+ ALT="\begin{displaymath}
+Z=\frac{V}{I}=\frac{v_m e^{j\phi}}{i_m e^{j\psi}}=\frac{v_m}{i_m} e^{j(\phi-\psi)}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+This is the generalized Ohm's law, which represents impedance <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img16.png"
+ ALT="$Z$"> as the ration 
+of the phasor voltage <IMG
+ WIDTH="20" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img18.png"
+ ALT="$V$"> across an element and the phasor current <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img19.png"
+ ALT="$I$"> through it.
+In other words, impedance <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img16.png"
+ ALT="$Z$"> represents (a) the phase difference between <IMG
+ WIDTH="20" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img18.png"
+ ALT="$V$"> and 
+<IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img19.png"
+ ALT="$I$"> as well as (b) the ratio of their amplitudes.
+
+<P>
+
+<UL>
+<LI>Inductor <IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img20.png"
+ ALT="$L$">: Assume the current through <IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img20.png"
+ ALT="$L$"> is <!-- MATH
+ $I e^{j\omega t}$
+ -->
+<IMG
+ WIDTH="44" HEIGHT="22" ALIGN="BOTTOM" BORDER="0"
+ SRC="img21.png"
+ ALT="$I e^{j\omega t}$">, 
+  then the voltage across L is:
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V e^{j\omega t}=L\frac{d}{dt} [I e^{j\omega t}]=j\omega L I e^{j\omega t}
+  \;\;\;\;\mbox{i.e.}\;\;\;\;\;\;Z_L=\frac{V}{I}=\frac{j\omega LI}{I}=j\omega L
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="524" HEIGHT="46" BORDER="0"
+ SRC="img22.png"
+ ALT="\begin{displaymath}V e^{j\omega t}=L\frac{d}{dt} [I e^{j\omega t}]=j\omega L I e...
+....e.}\;\;\;\;\;\;Z_L=\frac{V}{I}=\frac{j\omega LI}{I}=j\omega L \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI>Capacitor <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img23.png"
+ ALT="$C$">: Assume the voltage across <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img23.png"
+ ALT="$C$"> is <!-- MATH
+ $V e^{j\omega t}$
+ -->
+<IMG
+ WIDTH="49" HEIGHT="22" ALIGN="BOTTOM" BORDER="0"
+ SRC="img24.png"
+ ALT="$V e^{j\omega t}$">, 
+  then the current through C is
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+I e^{j\omega t}=C\frac{d}{dt} [V e^{j\omega t}]=j\omega C V e^{j\omega t}
+  \;\;\;\;\mbox{i.e.}\;\;\;\;\;\;Z_C=\frac{V}{I}=\frac{V}{j\omega CV}=\frac{1}{j\omega C}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="548" HEIGHT="50" BORDER="0"
+ SRC="img25.png"
+ ALT="\begin{displaymath}I e^{j\omega t}=C\frac{d}{dt} [V e^{j\omega t}]=j\omega C V e...
+...\;\;\;Z_C=\frac{V}{I}=\frac{V}{j\omega CV}=\frac{1}{j\omega C} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI>Resistor <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.png"
+ ALT="$R$">: the voltage across R and current through R are in phase, therefore:
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Z_R=\frac{V}{I}=\frac{v_me^{j\phi}}{i_me^{j\phi}}=\frac{v_m}{i_m}=R
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="232" HEIGHT="51" BORDER="0"
+ SRC="img26.png"
+ ALT="\begin{displaymath}Z_R=\frac{V}{I}=\frac{v_me^{j\phi}}{i_me^{j\phi}}=\frac{v_m}{i_m}=R \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+</UL>
+
+<P>
+All familiar laws such as Ohm's law, KCL and KCL, current divider and voltage
+divider, can be generalized and applied to the analysis of AC circuit containing
+elements such as L, C as well as R.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html30"
+  HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html28"
+  HREF="Bode.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html22"
+  HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html31"
+  HREF="node3.html">Decibel (dB)</A>
+<B> Up:</B> <A NAME="tex2html29"
+  HREF="Bode.html">Bode</A>
+<B> Previous:</B> <A NAME="tex2html23"
+  HREF="node1.html">Logarithmic and Complex operations</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Ruye Wang
+2018-07-23
+</ADDRESS>
+</BODY>
+</HTML>

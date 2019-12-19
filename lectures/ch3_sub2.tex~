@@ -1,0 +1,43 @@
+\documentstyle[12pt]{article}
+\usepackage{html}
+
+\begin{document}
+
+The circurt can be redrawn as:
+
+\htmladdimg{../figures/ch3Ex0.png}
+
+Applying KCL to the top-right node we get
+\[
+\frac{V_0-v_c(t)}{R_1}=C\dot{v}_c(t)+\frac{v_c(t)}{R_1}
+\]
+i.e.,
+\[
+\dot{v}_c+\frac{R_1+R_2}{R_1R_2C}v_c(t)=\dot{v}_c(t)+\frac{1}{\tau}v_c(t)=\frac{V_0}{CR_1}
+\]
+where 
+\[
+\tau=C\frac{R_1R_2}{R_1+R_2}=C(R_1||R_2)=0.5\times 10^{-6}\times 10^3
+=5\times 10^{-4}
+\]
+The initial condition for the DE above is $v_c(0)=-V_0/2$, the
+homogeneous solution is $v_h(t)=Ae^{-t/\tau}$ and the particular 
+(steady state) solution is $v_p(t)=V_0/2$. The complete solution 
+is 
+\[
+v_c(t)=v_h(t)+v_p(t)=Ae^{-t/\tau}+\frac{V_0}{2}
+\]
+To find $A$, we evaluate $v_c(t)$ at $t=0$ and equate that to the
+known initial condition $v_c(0)$ to get
+\[
+v_c(t)\bigg|_{t=0}=V_s+Ae^{-t/\tau}\bigg|_{t=0}=\frac{V_0}{2}+A
+=v_c(0)=-\frac{V_0}{2}
+\]
+i.e., $A=-V_0$. Now the solution is
+\[
+v_c(t)=Ae^{-t/\tau}+\frac{V_0}{2}
+=\frac{V_0}{2}-V_0 e^{-t/\tau}=5-10\,e^{-2000\,t}
+\]
+
+\end{document}
+

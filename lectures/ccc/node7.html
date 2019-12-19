@@ -1,0 +1,1392 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Second Order RCL Circuit</TITLE>
+<META NAME="description" CONTENT="Second Order RCL Circuit">
+<META NAME="keywords" CONTENT="ccc">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="ccc.css">
+
+<LINK REL="next" HREF="node8.html">
+<LINK REL="previous" HREF="node6.html">
+<LINK REL="up" HREF="node1.html">
+<LINK REL="next" HREF="node8.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html106"
+  HREF="node8.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html104"
+  HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html98"
+  HREF="node6.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html107"
+  HREF="node8.html">Responses to Impulse Train</A>
+<B> Up:</B> <A NAME="tex2html105"
+  HREF="node1.html">Chapter 3: AC Circuit</A>
+<B> Previous:</B> <A NAME="tex2html99"
+  HREF="node6.html">AC Circuit Analysis III</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00016000000000000000">
+Second Order RCL Circuit</A>
+</H2>
+
+<P>
+Applying KVL to an RCL series circuit we get
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_C(t)+v_L(t)+v_R(t)=v(t)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="224" HEIGHT="33" BORDER="0"
+ SRC="img365.png"
+ ALT="\begin{displaymath}
+v_C(t)+v_L(t)+v_R(t)=v(t)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where <IMG
+ WIDTH="36" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img207.png"
+ ALT="$v(t)$"> on the right-hand side is the input voltage. Substituting 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_L(t)=L\frac{d}{dt}i(t)=L\frac{d}{dt}\left[C\frac{d\,v_C(t)}{dt} \right]
+=LC\frac{d^2\,v_C(t)}{dt^2},\;\;\;\;\;\;v_R(t)=Ri(t)=R\,C\frac{d\,v_C(t)}{dt}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="661" HEIGHT="55" BORDER="0"
+ SRC="img366.png"
+ ALT="\begin{displaymath}
+v_L(t)=L\frac{d}{dt}i(t)=L\frac{d}{dt}\left[C\frac{d\,v_C(t)...
+...C(t)}{dt^2},\;\;\;\;\;\;v_R(t)=Ri(t)=R\,C\frac{d\,v_C(t)}{dt}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+we can rewrite the equation above as a second order ODE in terms of <IMG
+ WIDTH="46" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img209.png"
+ ALT="$v_C(t)$">:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+LC\frac{d^2}{dt^2}v_C(t)+RC\frac{d}{dt}v_C(t)+v_C(t)=v(t)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="330" HEIGHT="48" BORDER="0"
+ SRC="img367.png"
+ ALT="\begin{displaymath}
+LC\frac{d^2}{dt^2}v_C(t)+RC\frac{d}{dt}v_C(t)+v_C(t)=v(t)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+We further divide both sides by <IMG
+ WIDTH="32" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img368.png"
+ ALT="$LC$"> to get the canonical form
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\frac{d^2}{dt^2}v_C(t)+\frac{R}{L}\frac{d}{dt}v_C(t)+\frac{1}{LC}v_C(t)
+=\frac{1}{LC}v(t)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="353" HEIGHT="48" BORDER="0"
+ SRC="img369.png"
+ ALT="\begin{displaymath}
+\frac{d^2}{dt^2}v_C(t)+\frac{R}{L}\frac{d}{dt}v_C(t)+\frac{1}{LC}v_C(t)
+=\frac{1}{LC}v(t)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+We further define the damping coefficient and natural frequency of the second 
+order system as
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\omega_n=\frac{1}{\sqrt{LC}},\;\;\;\;\;\;\;\;\zeta=\frac{R}{2}\sqrt{\frac{C}{L}}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="232" HEIGHT="57" BORDER="0"
+ SRC="img370.png"
+ ALT="\begin{displaymath}
+\omega_n=\frac{1}{\sqrt{LC}},\;\;\;\;\;\;\;\;\zeta=\frac{R}{2}\sqrt{\frac{C}{L}}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+and rewrite the equation above as
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\ddot{v}_C(t)+2\zeta\omega_n\dot{v}_C(t)+\omega_n^2v_C(t)=\omega_n^2v(t)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="307" HEIGHT="33" BORDER="0"
+ SRC="img371.png"
+ ALT="\begin{displaymath}
+\ddot{v}_C(t)+2\zeta\omega_n\dot{v}_C(t)+\omega_n^2v_C(t)=\omega_n^2v(t)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+To solve the DE, we first find the homogeneous solution by substituting
+ <IMG
+ WIDTH="92" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img372.png"
+ ALT="$v_C(t)=e^{st}$"> into the homogeneous DE and get
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+(s^2+2\zeta\omega_n s+\omega_n^2)e^{st}=0
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="200" HEIGHT="33" BORDER="0"
+ SRC="img373.png"
+ ALT="\begin{displaymath}
+(s^2+2\zeta\omega_n s+\omega_n^2)e^{st}=0
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Solving the algebraic equation <!-- MATH
+ $s^2+2\zeta\omega_n s+\omega_n^2=0$
+ -->
+<IMG
+ WIDTH="171" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img374.png"
+ ALT="$s^2+2\zeta\omega_n s+\omega_n^2=0$"> we get the 
+two roots
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+s_{1,2}=(-\zeta\pm\sqrt{\zeta^2-1})\omega_n=(-\zeta\pm j\sqrt{1-\zeta^2})\omega_n
+=\omega_n e^{\mp j\phi}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="462" HEIGHT="36" BORDER="0"
+ SRC="img375.png"
+ ALT="\begin{displaymath}
+s_{1,2}=(-\zeta\pm\sqrt{\zeta^2-1})\omega_n=(-\zeta\pm j\sqrt{1-\zeta^2})\omega_n
+=\omega_n e^{\mp j\phi}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\phi=\tan^{-1}\left(\frac{\sqrt{1-\zeta^2}}{\zeta}\right)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="175" HEIGHT="55" BORDER="0"
+ SRC="img376.png"
+ ALT="\begin{displaymath}
+\phi=\tan^{-1}\left(\frac{\sqrt{1-\zeta^2}}{\zeta}\right)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The first expression is for <IMG
+ WIDTH="60" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img377.png"
+ ALT="$\vert\zeta\vert\ge 1$"> and the second <IMG
+ WIDTH="59" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img378.png"
+ ALT="$\vert\zeta\vert&lt;1$">.
+The two roots <IMG
+ WIDTH="21" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img379.png"
+ ALT="$s_1$"> and <IMG
+ WIDTH="21" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img380.png"
+ ALT="$s_2$"> can be represented as the root locus on the 
+complex plane, for a fixed value of <IMG
+ WIDTH="25" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img381.png"
+ ALT="$\omega_n$"> and a changing value of 
+<!-- MATH
+ $-\infty<\zeta<\infty$
+ -->
+<IMG
+ WIDTH="118" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img382.png"
+ ALT="$-\infty&lt;\zeta&lt;\infty$">. For a physical system, such as the RCL circuit, 
+<IMG
+ WIDTH="49" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img383.png"
+ ALT="$\zeta&gt;0$">.
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../rootlocus2nd1.gif"
+ ALT="rootlocus2nd1.gif">
+
+<P>
+The homogeneous solution takes the following form:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_C(t)=A e^{s_1t}+B e^{s_2t}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="173" HEIGHT="33" BORDER="0"
+ SRC="img384.png"
+ ALT="\begin{displaymath}v_C(t)=A e^{s_1t}+B e^{s_2t} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+As in the RCL circuit <IMG
+ WIDTH="49" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img385.png"
+ ALT="$\zeta\ge 0$"> and <IMG
+ WIDTH="60" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img386.png"
+ ALT="$\omega_n\ge 0$">, we only need to consider
+the root locus in the II and III quadrants in the figure above. The complete
+derivation of the homogeneous solution can be found 
+<A NAME="tex2html1"
+  HREF="http://fourier.eng.hmc.edu/e59/lectures/e59/node35.html">here</A>.
+
+<P>
+Specifically we consider the following two cases:
+
+<UL>
+<LI><IMG
+ WIDTH="84" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img387.png"
+ ALT="$0\le\zeta&lt;1$">. The system is underdamped.
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+s_{1,2}=-\zeta\omega_n \pm j\sqrt{1-\zeta^2}\;\omega_n=-\zeta\omega_n \pm j\omega_d
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="341" HEIGHT="36" BORDER="0"
+ SRC="img388.png"
+ ALT="\begin{displaymath}s_{1,2}=-\zeta\omega_n \pm j\sqrt{1-\zeta^2}\;\omega_n=-\zeta\omega_n \pm j\omega_d
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where <!-- MATH
+ $\omega_d=\sqrt{1-\zeta^2}\omega_n$
+ -->
+<IMG
+ WIDTH="136" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img389.png"
+ ALT="$\omega_d=\sqrt{1-\zeta^2}\omega_n$"> is the damped natural frequency.
+  Correspondingly 
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+e^{st}=e^{-\zeta\omega_n t} e^{\pm j\omega_d t}=e^{-\zeta\omega_nt}(\cos\omega_dt\pm\sin\omega_dt)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="357" HEIGHT="33" BORDER="0"
+ SRC="img390.png"
+ ALT="\begin{displaymath}e^{st}=e^{-\zeta\omega_n t} e^{\pm j\omega_d t}=e^{-\zeta\omega_nt}(\cos\omega_dt\pm\sin\omega_dt) \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+is an exponentially decaying sinusoidal oscillation. 
+  In particular, when <IMG
+ WIDTH="49" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img391.png"
+ ALT="$\zeta=0$">, <!-- MATH
+ $e^{st}=\cos\omega_nt\pm\sin\omega_nt$
+ -->
+<IMG
+ WIDTH="183" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img392.png"
+ ALT="$e^{st}=\cos\omega_nt\pm\sin\omega_nt$">, the 
+  system is undamped.
+</LI>
+<LI><IMG
+ WIDTH="49" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img393.png"
+ ALT="$\zeta\ge 1$">. The system is over-damped. 
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+s_{1,2}=-(\zeta\pm \sqrt{\zeta^2-1})\omega_n<0
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="234" HEIGHT="36" BORDER="0"
+ SRC="img394.png"
+ ALT="\begin{displaymath}s_{1,2}=-(\zeta\pm \sqrt{\zeta^2-1})\omega_n&lt;0 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+and the corresponding solution 
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+e^{st}=e^{-(\zeta\pm\sqrt{\zeta^2-1}) \omega_n t}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="161" HEIGHT="28" BORDER="0"
+ SRC="img395.png"
+ ALT="\begin{displaymath}e^{st}=e^{-(\zeta\pm\sqrt{\zeta^2-1}) \omega_n t} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+decays exponentially. In particular, when <IMG
+ WIDTH="49" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img396.png"
+ ALT="$\zeta=1$">, the system is critically 
+  damped.
+</LI>
+</UL>
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../e84Zeta.gif"
+ ALT="e84Zeta.gif">
+
+<P>
+It can be shown that the impulse response of the system is
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+h_C(t)=\frac{\omega_ne^{-\zeta\omega_nt}}{\sqrt{1-\zeta^2}}\sin(\omega_dt)u(t)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="238" HEIGHT="53" BORDER="0"
+ SRC="img397.png"
+ ALT="\begin{displaymath}h_C(t)=\frac{\omega_ne^{-\zeta\omega_nt}}{\sqrt{1-\zeta^2}}\sin(\omega_dt)u(t) \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+In particular, when <IMG
+ WIDTH="54" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img398.png"
+ ALT="$R=0$"> and <IMG
+ WIDTH="49" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img391.png"
+ ALT="$\zeta=0$">,
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+h_C(t)=\omega_n\sin(\omega_nt)u(t)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="187" HEIGHT="33" BORDER="0"
+ SRC="img399.png"
+ ALT="\begin{displaymath}h_C(t)=\omega_n\sin(\omega_nt)u(t) \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../RCLimpulseresponses.gif"
+ ALT="RCLimpulseresponses.gif">
+
+<P>
+Impulse responses by R, L, and C of an RCL system. Top: impulse responses <IMG
+ WIDTH="47" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img400.png"
+ ALT="$h_L(t)$">
+(solid curve) and <IMG
+ WIDTH="48" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img401.png"
+ ALT="$h_C(t)$"> (dashed curve); middle: their sum <!-- MATH
+ $h_L(t) + h_C(t)$
+ -->
+<IMG
+ WIDTH="113" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img402.png"
+ ALT="$h_L(t) + h_C(t)$">
+(solid curve) and impulse response <IMG
+ WIDTH="48" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img403.png"
+ ALT="$h_R(t)$"> (dashed curve); bottom: the sum of 
+all three: <!-- MATH
+ $\delta(t)=h_L(t)+h_R(t)+h_C(t)$
+ -->
+<IMG
+ WIDTH="235" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img404.png"
+ ALT="$\delta(t)=h_L(t)+h_R(t)+h_C(t)$">.
+
+<P>
+The step response of the system can be found 
+<A NAME="tex2html2"
+  HREF="http://fourier.eng.hmc.edu/e59/lectures/e59/node36.html">here</A>.
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_C(t)=\left[ 1-\frac{e^{-\zeta\omega_nt}}{\sqrt{1-\zeta^2}}\sin(\omega_dt+\phi)\right] u(t)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="322" HEIGHT="55" BORDER="0"
+ SRC="img405.png"
+ ALT="\begin{displaymath}
+v_C(t)=\left[ 1-\frac{e^{-\zeta\omega_nt}}{\sqrt{1-\zeta^2}}\sin(\omega_dt+\phi)\right] u(t)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+In particular, when <IMG
+ WIDTH="54" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img398.png"
+ ALT="$R=0$">, <IMG
+ WIDTH="49" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img391.png"
+ ALT="$\zeta=0$"> and <IMG
+ WIDTH="71" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img406.png"
+ ALT="$\phi=\pi/2$">, then the general form
+of the step response becomes
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+y(t)=\left[1-\frac{e^{-\zeta\omega_nt}}{\sqrt{1-\zeta^2}}\sin(\omega_dt+\phi)\right]u(t)
+=[ 1-\sin(\omega_nt+\pi/2)] u(t)=[1-\cos(\omega_nt)] u(t)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="672" HEIGHT="55" BORDER="0"
+ SRC="img407.png"
+ ALT="\begin{displaymath}y(t)=\left[1-\frac{e^{-\zeta\omega_nt}}{\sqrt{1-\zeta^2}}\sin...
+...u(t)
+=[ 1-\sin(\omega_nt+\pi/2)] u(t)=[1-\cos(\omega_nt)] u(t) \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P> 
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../RCLstepresponses.gif"
+ ALT="RCLstepresponses.gif">
+
+<P>
+Step responses by R, L as well as C of an RCL system. Top: step responses <IMG
+ WIDTH="45" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img210.png"
+ ALT="$v_L(t)$">
+(solid curve) and <IMG
+ WIDTH="46" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img209.png"
+ ALT="$v_C(t)$"> (dashed curve); middle: their sum <!-- MATH
+ $v_L(t) + v_C (t)$
+ -->
+<IMG
+ WIDTH="110" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img408.png"
+ ALT="$v_L(t) + v_C (t)$">
+(solid curve) and step responses <IMG
+ WIDTH="46" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img409.png"
+ ALT="$y_R(t)$"> (dashed curve); bottom: the sum of all
+three: <!-- MATH
+ $v_C (t)+v_L(t)+v_R(t)=u(t)$
+ -->
+<IMG
+ WIDTH="231" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img410.png"
+ ALT="$v_C (t)+v_L(t)+v_R(t)=u(t)$">.
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../secondstep.gif"
+ ALT="secondstep.gif">
+
+<P>
+Step response of second-order system for different <IMG
+ WIDTH="14" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img411.png"
+ ALT="$\zeta$">.
+Step responses corresponding to five different values of <IMG
+ WIDTH="14" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img411.png"
+ ALT="$\zeta$">: 0, 0.05, 0.5, 
+1, and 2. The envelope of the step response for <IMG
+ WIDTH="73" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img412.png"
+ ALT="$\zeta=0.05$"> is also plotted to
+show the exponential decay of the sinusoid.
+
+<P>
+<B>Example</B> 
+
+<P>
+Consider the response <IMG
+ WIDTH="103" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img413.png"
+ ALT="$y(t)=v_C(t)$"> of an undamped 2nd order system (an RCL system
+with <IMG
+ WIDTH="54" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img398.png"
+ ALT="$R=0$">).
+
+<P>
+
+<UL>
+<LI>Find the response <IMG
+ WIDTH="36" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img414.png"
+ ALT="$y(t)$"> of the RLC circuit to a step input <IMG
+ WIDTH="109" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img415.png"
+ ALT="$x(t)=Vu(t)$">.
+  The general solution is the sum of the homogeneous solution 
+  <!-- MATH
+ $A\sin\omega_nt+B\cos\omega_nt$
+ -->
+<IMG
+ WIDTH="172" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img416.png"
+ ALT="$A\sin\omega_nt+B\cos\omega_nt$"> and the particular solution <IMG
+ WIDTH="20" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img417.png"
+ ALT="$V$">:
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+y(t)=V+A\sin(\omega_nt)+B\cos(\omega_nt),\;\;\;\;\;\;\;t>0
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="371" HEIGHT="33" BORDER="0"
+ SRC="img418.png"
+ ALT="\begin{displaymath}y(t)=V+A\sin(\omega_nt)+B\cos(\omega_nt),\;\;\;\;\;\;\;t&gt;0 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Consider two different sets of initial conditions:
+  
+<UL>
+<LI>Zero initial conditions <!-- MATH
+ $y(0)=\dot{y}(0)=0$
+ -->
+<IMG
+ WIDTH="132" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img419.png"
+ ALT="$y(0)=\dot{y}(0)=0$">. We have <IMG
+ WIDTH="151" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img420.png"
+ ALT="$y(0)=V+B=0$"> 
+    and <!-- MATH
+ $\dot{y}(0)=A\omega_n=0$
+ -->
+<IMG
+ WIDTH="133" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img421.png"
+ ALT="$\dot{y}(0)=A\omega_n=0$">, and
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+y(t)=V+A\sin(\omega_nt)+B\cos(\omega_nt)=V[1-\cos(\omega_nt)]
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="433" HEIGHT="33" BORDER="0"
+ SRC="img422.png"
+ ALT="\begin{displaymath}y(t)=V+A\sin(\omega_nt)+B\cos(\omega_nt)=V[1-\cos(\omega_nt)] \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI><IMG
+ WIDTH="79" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img423.png"
+ ALT="$y(0)=V$">, <IMG
+ WIDTH="49" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img424.png"
+ ALT="$\dot{y}=0$">. We have <IMG
+ WIDTH="157" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img425.png"
+ ALT="$y(0)=V+B=V$"> and <!-- MATH
+ $\dot{y}(0)=A\omega_n=0$
+ -->
+<IMG
+ WIDTH="133" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img421.png"
+ ALT="$\dot{y}(0)=A\omega_n=0$">, 
+    i.e., <IMG
+ WIDTH="93" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img426.png"
+ ALT="$A=B=0$"> and
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+y(t)=V+A\sin(\omega_nt)+B\cos(\omega_nt)=V
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="325" HEIGHT="33" BORDER="0"
+ SRC="img427.png"
+ ALT="\begin{displaymath}y(t)=V+A\sin(\omega_nt)+B\cos(\omega_nt)=V \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+</UL>
+
+<P>
+</LI>
+<LI>Find the system's response to a square impulse 
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+x(t)=\left\{ \begin{array}{ll}1 & 0\le t< t_0 \\0 & \mbox{else} 
+  \end{array} \right.
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="183" HEIGHT="55" BORDER="0"
+ SRC="img428.png"
+ ALT="\begin{displaymath}x(t)=\left\{ \begin{array}{ll}1 &amp; 0\le t&lt; t_0 \\ 0 &amp; \mbox{else}
+\end{array} \right. \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+As <!-- MATH
+ $x(t)=u(t)-u(t-t_0)$
+ -->
+<IMG
+ WIDTH="187" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img429.png"
+ ALT="$x(t)=u(t)-u(t-t_0)$">, the response is
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+y(t)=[1-\cos(\omega_nt)]u(t)-[1-\cos(\omega_n(t-t_0))]u(t-t_0)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="452" HEIGHT="33" BORDER="0"
+ SRC="img430.png"
+ ALT="\begin{displaymath}y(t)=[1-\cos(\omega_nt)]u(t)-[1-\cos(\omega_n(t-t_0))]u(t-t_0) \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+When <IMG
+ WIDTH="51" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img431.png"
+ ALT="$t&gt;t_0$">, we have
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+y(t)=\cos(\omega_n(t-t_0))-\cos(\omega_nt)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="264" HEIGHT="33" BORDER="0"
+ SRC="img432.png"
+ ALT="\begin{displaymath}y(t)=\cos(\omega_n(t-t_0))-\cos(\omega_nt) \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+We further consider two special cases. 
+  
+<UL>
+<LI>When <!-- MATH
+ $t_0=T=2\pi/\omega_n$
+ -->
+<IMG
+ WIDTH="133" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img433.png"
+ ALT="$t_0=T=2\pi/\omega_n$">, we have 
+    <BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+y(t)&=&[1-\cos(\omega_nt)]u(t)-[1-\cos(\omega_n(t-T))]u(t-T)
+      \nonumber \\
+      &=&\left\{\begin{array}{cl} 1-\cos(\omega_nt) & 0<t<T \\0 & \mbox{else}
+      \end{array} \right. 
+      \nonumber
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="36" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img434.png"
+ ALT="$\displaystyle y(t)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img49.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="400" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img435.png"
+ ALT="$\displaystyle [1-\cos(\omega_nt)]u(t)-[1-\cos(\omega_n(t-T))]u(t-T)$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img49.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="231" HEIGHT="66" ALIGN="MIDDLE" BORDER="0"
+ SRC="img436.png"
+ ALT="$\displaystyle \left\{\begin{array}{cl} 1-\cos(\omega_nt) &amp; 0&lt;t&lt;T \\  0 &amp; \mbox{else}
+\end{array} \right.$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+This is a one period of a sinusoid.
+</LI>
+<LI>When <!-- MATH
+ $t_0=T/2=\pi/\omega_n$
+ -->
+<IMG
+ WIDTH="142" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img437.png"
+ ALT="$t_0=T/2=\pi/\omega_n$">, we have
+    <BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+y(t)&=&[1-\cos(\omega_nt)]u(t)-[1-\cos(\omega_n(t-T/2))]u(t-T/2)
+      \nonumber \\
+      &=&[1-\cos(\omega_nt)]u(t)-[1+\cos(\omega_nt)]u(t-T/2)
+      \nonumber \\
+      &=&\left\{\begin{array}{cl}1-\cos(\omega_nt) & 0<t<T/2 \\
+      -2\cos(\omega_nt) & t>T/2 \end{array} \right.
+      \nonumber
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="36" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img434.png"
+ ALT="$\displaystyle y(t)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img49.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="437" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img438.png"
+ ALT="$\displaystyle [1-\cos(\omega_nt)]u(t)-[1-\cos(\omega_n(t-T/2))]u(t-T/2)$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img49.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="367" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img439.png"
+ ALT="$\displaystyle [1-\cos(\omega_nt)]u(t)-[1+\cos(\omega_nt)]u(t-T/2)$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img49.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="249" HEIGHT="66" ALIGN="MIDDLE" BORDER="0"
+ SRC="img440.png"
+ ALT="$\displaystyle \left\{\begin{array}{cl}1-\cos(\omega_nt) &amp; 0&lt;t&lt;T/2 \\
+-2\cos(\omega_nt) &amp; t&gt;T/2 \end{array} \right.$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+This is a pure sinusoid after <IMG
+ WIDTH="68" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img441.png"
+ ALT="$t&gt;T/2$">.
+  
+</LI>
+</UL>
+
+<P>
+</LI>
+<LI>Find the impulse response <IMG
+ WIDTH="37" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img442.png"
+ ALT="$h(t)$">. The input <IMG
+ WIDTH="37" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img144.png"
+ ALT="$x(t)$"> is an impulse which
+  can be written as
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+x(t)=\delta(t)=\lim_{t_0\rightarrow 0}\left\{ \begin{array}{cl}
+    1/t_0 & 0\le t< t_0 \\0 & \mbox{else} \end{array}\right.
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="297" HEIGHT="55" BORDER="0"
+ SRC="img443.png"
+ ALT="\begin{displaymath}x(t)=\delta(t)=\lim_{t_0\rightarrow 0}\left\{ \begin{array}{cl}
+1/t_0 &amp; 0\le t&lt; t_0 \\ 0 &amp; \mbox{else} \end{array}\right. \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+When <!-- MATH
+ $t_0\rightarrow 0$
+ -->
+<IMG
+ WIDTH="58" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img444.png"
+ ALT="$t_0\rightarrow 0$">, we have first order approximations 
+  <!-- MATH
+ $\cos(\omega_nt_0)\approx 1$
+ -->
+<IMG
+ WIDTH="114" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img445.png"
+ ALT="$\cos(\omega_nt_0)\approx 1$"> and <!-- MATH
+ $\sin(\omega_nt_0)\approx \omega_nt_0$
+ -->
+<IMG
+ WIDTH="138" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img446.png"
+ ALT="$\sin(\omega_nt_0)\approx \omega_nt_0$">, 
+  and we get
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\cos(\omega_n(t-t_0))=\cos(\omega_nt)\;\cos(\omega_nt_0)+\sin(\omega_nt)\;
+  \sin(\omega_nt_0)  \approx\cos(\omega_nt)+\sin(\omega_nt)\,\omega_nt_0
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="656" HEIGHT="33" BORDER="0"
+ SRC="img447.png"
+ ALT="\begin{displaymath}\cos(\omega_n(t-t_0))=\cos(\omega_nt)\;\cos(\omega_nt_0)+\sin...
+...mega_nt_0) \approx\cos(\omega_nt)+\sin(\omega_nt)\,\omega_nt_0 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Substituting this into <!-- MATH
+ $y(t)=\cos(\omega_n(t-t_0))-\cos(\omega_nt)$
+ -->
+<IMG
+ WIDTH="270" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img448.png"
+ ALT="$y(t)=\cos(\omega_n(t-t_0))-\cos(\omega_nt)$">
+  we get the impulse response 
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+y(t)=\omega_n\sin(\omega_nt)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="144" HEIGHT="33" BORDER="0"
+ SRC="img449.png"
+ ALT="\begin{displaymath}y(t)=\omega_n\sin(\omega_nt) \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+</LI>
+<LI>It is often desirable for a second order system to reach a set steady 
+  state value without overshoot. This can be achieved by drive the system 
+  by an impulse <!-- MATH
+ $\delta(t)/\omega_n$
+ -->
+<IMG
+ WIDTH="65" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img450.png"
+ ALT="$\delta(t)/\omega_n$"> with response <!-- MATH
+ $\sin(\omega_nt)$
+ -->
+<IMG
+ WIDTH="70" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img451.png"
+ ALT="$\sin(\omega_nt)$">, followed 
+  by a step <IMG
+ WIDTH="92" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img452.png"
+ ALT="$u(t-T/4)$"> with response 
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+[1-\cos(\omega_n(t-T/4))]u(t-T/4)=[1-\cos(\omega_nt-\pi/2)]u(t-T/4)
+  =[1-\sin(\omega_nt)]u(t-T/4)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="691" HEIGHT="33" BORDER="0"
+ SRC="img453.png"
+ ALT="\begin{displaymath}[1-\cos(\omega_n(t-T/4))]u(t-T/4)=[1-\cos(\omega_nt-\pi/2)]u(t-T/4)
+=[1-\sin(\omega_nt)]u(t-T/4) \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The total response is
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+y(t)=\sin(\omega_nt)u(t)+[1-\sin(\omega_nt)]u(t-T/4)
+  =\left\{\begin{array}{cl} \sin(\omega_nt) & 0<t<T/4 \\
+  1 & t>T/4\end{array} \right.
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="570" HEIGHT="55" BORDER="0"
+ SRC="img454.png"
+ ALT="\begin{displaymath}y(t)=\sin(\omega_nt)u(t)+[1-\sin(\omega_nt)]u(t-T/4)
+=\left\...
+...l} \sin(\omega_nt) &amp; 0&lt;t&lt;T/4 \\
+1 &amp; t&gt;T/4\end{array} \right. \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+We see that after <IMG
+ WIDTH="36" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img414.png"
+ ALT="$y(t)$"> reaches the first peak of <IMG
+ WIDTH="14" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img455.png"
+ ALT="$1$"> at <IMG
+ WIDTH="68" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img456.png"
+ ALT="$t=T/4$">, it will
+  stay at the constant value <IMG
+ WIDTH="14" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img455.png"
+ ALT="$1$"> as the two responses cancel each other for
+  <IMG
+ WIDTH="68" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img457.png"
+ ALT="$t&gt;T/4$">.
+
+<P>
+</LI>
+<LI>Alternatively, the steady state value <IMG
+ WIDTH="49" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img458.png"
+ ALT="$v=1$"> can be achieved without
+  overshoot by applying an input <!-- MATH
+ $x(t)=[u(t)-u(t-T/2)]/2$
+ -->
+<IMG
+ WIDTH="233" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img459.png"
+ ALT="$x(t)=[u(t)-u(t-T/2)]/2$">. The response to 
+  <IMG
+ WIDTH="55" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img460.png"
+ ALT="$u(t)/2$"> is 
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\frac{1}{2}[1-\cos(\omega_nt)]u(t)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="152" HEIGHT="45" BORDER="0"
+ SRC="img461.png"
+ ALT="\begin{displaymath}\frac{1}{2}[1-\cos(\omega_nt)]u(t) \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+while the response to <IMG
+ WIDTH="110" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img462.png"
+ ALT="$u(t-T/2)/2$"> is  
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\frac{1}{2}[1-\cos(\omega_n(t-T/2))]u(t-T/2)
+  =\frac{1}{2}[1-\cos(\omega_nt-\pi)]u(t-T/2)
+  =\frac{1}{2}[1+\cos(\omega_nt)]u(t-T/2)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="714" HEIGHT="45" BORDER="0"
+ SRC="img463.png"
+ ALT="\begin{displaymath}\frac{1}{2}[1-\cos(\omega_n(t-T/2))]u(t-T/2)
+=\frac{1}{2}[1-...
+...mega_nt-\pi)]u(t-T/2)
+=\frac{1}{2}[1+\cos(\omega_nt)]u(t-T/2) \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The overall response is the difference between the two individual responses:
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+y(t)=\left\{\begin{array}{cl}
+     [1-\cos\omega_nt]/2 & 0<t<T/2 \\1 & t>T/2 \end{array} \right.
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="308" HEIGHT="55" BORDER="0"
+ SRC="img464.png"
+ ALT="\begin{displaymath}y(t)=\left\{\begin{array}{cl}
+[1-\cos\omega_nt]/2 &amp; 0&lt;t&lt;T/2 \\ 1 &amp; t&gt;T/2 \end{array} \right.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+i.e., the response is <IMG
+ WIDTH="70" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img465.png"
+ ALT="$y(t)=1$"> for all <IMG
+ WIDTH="68" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img441.png"
+ ALT="$t&gt;T/2$">.
+
+<P>
+</LI>
+<LI>It is desirable for a second order system to reach a steady state value
+  <IMG
+ WIDTH="70" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img465.png"
+ ALT="$y(t)=1$"> within a time delay <IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img466.png"
+ ALT="$t_0$"> without overshoot. We first consider 
+  driving the system with a positive square pulse of value <IMG
+ WIDTH="54" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img467.png"
+ ALT="$V&gt;0$"> followed
+  by a negative one of <IMG
+ WIDTH="111" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img468.png"
+ ALT="$(1-a)V&lt;0$">:
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+x(t)=\left\{\begin{array}{cl} 
+  V & (0<t<t_0/2) \\(1-a)V & (t_0/2<t<t_0)
+  \end{array}\right.  =V \left[u(t)-a u(t-t_0/2)\right]
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="499" HEIGHT="55" BORDER="0"
+ SRC="img469.png"
+ ALT="\begin{displaymath}x(t)=\left\{\begin{array}{cl}
+V &amp; (0&lt;t&lt;t_0/2) \\ (1-a)V &amp; (...
+...2&lt;t&lt;t_0)
+\end{array}\right. =V \left[u(t)-a u(t-t_0/2)\right] \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The response for <IMG
+ WIDTH="109" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img470.png"
+ ALT="$t_0/2&lt;t&lt;t_0$"> is:
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+y(t)=V\left[ 1-\cos(\omega_nt)-a[1-\cos(\omega_n(t-t_0/2))]\right]
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="397" HEIGHT="33" BORDER="0"
+ SRC="img471.png"
+ ALT="\begin{displaymath}y(t)=V\left[ 1-\cos(\omega_nt)-a[1-\cos(\omega_n(t-t_0/2))]\right] \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+In order for the output to be a constant <IMG
+ WIDTH="70" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img465.png"
+ ALT="$y(t)=1$"> for <IMG
+ WIDTH="51" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img431.png"
+ ALT="$t&gt;t_0$">, we need to 
+  have the input <IMG
+ WIDTH="71" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img472.png"
+ ALT="$x(t)=1$"> for <IMG
+ WIDTH="51" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img431.png"
+ ALT="$t&gt;t_0$">, and set the initial conditions at <IMG
+ WIDTH="51" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img473.png"
+ ALT="$t=t_0$">
+  to be <IMG
+ WIDTH="78" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img474.png"
+ ALT="$y(t_0)=1$"> and <!-- MATH
+ $\dot{y}(t_0)=0$
+ -->
+<IMG
+ WIDTH="78" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img475.png"
+ ALT="$\dot{y}(t_0)=0$">. To do so, we let
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\frac{dy(t)}{dt}\bigg|_{t=t_0}=V\omega_n\left[ \sin(\omega_nt)
+    -a\sin(\omega_n(t-t_0/2))\right]_{t=t_0}
+  =V\omega_n\left[ \sin(\omega_nt_0)-a\sin(\omega_nt_0/2)\right]=0
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="723" HEIGHT="51" BORDER="0"
+ SRC="img476.png"
+ ALT="\begin{displaymath}\frac{dy(t)}{dt}\bigg\vert _{t=t_0}=V\omega_n\left[ \sin(\ome...
+...mega_n\left[ \sin(\omega_nt_0)-a\sin(\omega_nt_0/2)\right]=0
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Based on the trigonometric identity 
+  <!-- MATH
+ $\sin(\omega_nt_0)=2\sin(\omega_nt_0/2)\cos(\omega_nt_0/2)$
+ -->
+<IMG
+ WIDTH="302" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img477.png"
+ ALT="$\sin(\omega_nt_0)=2\sin(\omega_nt_0/2)\cos(\omega_nt_0/2)$">, the equation above 
+  can be written as
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+2\cos(\omega_nt_0/2) =a
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="140" HEIGHT="33" BORDER="0"
+ SRC="img478.png"
+ ALT="\begin{displaymath}2\cos(\omega_nt_0/2) =a \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Substituting this into the desired initial condition <IMG
+ WIDTH="78" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img474.png"
+ ALT="$y(t_0)=1$">, we get
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+y(t_0)=V\left[ 1-\cos(\omega_nt_0)-2\cos(\omega_nt_0/2)
+    [1-\cos(\omega_n(t_0/2))]\right] 
+  =2V(1-\cos(\omega_nt_0/2) =4V\sin^2(\omega_nt_0/4)=1
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="839" HEIGHT="33" BORDER="0"
+ SRC="img479.png"
+ ALT="\begin{displaymath}y(t_0)=V\left[ 1-\cos(\omega_nt_0)-2\cos(\omega_nt_0/2)
+[1-\...
+...\right]
+=2V(1-\cos(\omega_nt_0/2) =4V\sin^2(\omega_nt_0/4)=1 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where we have used the trigonometric identities
+  <!-- MATH
+ $2\cos^2(\omega_nt_0/2)=1+\cos(\omega_nt_0)$
+ -->
+<IMG
+ WIDTH="250" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img480.png"
+ ALT="$2\cos^2(\omega_nt_0/2)=1+\cos(\omega_nt_0)$"> and
+  <!-- MATH
+ $2\sin^2(\omega_nt_0/4)=1-\cos(\omega_nt_0/2)$
+ -->
+<IMG
+ WIDTH="267" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img481.png"
+ ALT="$2\sin^2(\omega_nt_0/4)=1-\cos(\omega_nt_0/2)$">. Solving this for <IMG
+ WIDTH="20" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img417.png"
+ ALT="$V$"> we get
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V=\frac{1}{4\sin^2(\omega_nt_0/4)}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="153" HEIGHT="50" BORDER="0"
+ SRC="img482.png"
+ ALT="\begin{displaymath}V=\frac{1}{4\sin^2(\omega_nt_0/4)} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+As now we have the initial conditions <IMG
+ WIDTH="78" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img474.png"
+ ALT="$y(t_0)=1$"> and <!-- MATH
+ $\dot{y}(t_0)=0$
+ -->
+<IMG
+ WIDTH="78" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img475.png"
+ ALT="$\dot{y}(t_0)=0$"> as 
+  needed. If we set <IMG
+ WIDTH="71" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img472.png"
+ ALT="$x(t)=1$"> for <IMG
+ WIDTH="51" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img431.png"
+ ALT="$t&gt;t_0$">, so that the output will be at 
+  constant <IMG
+ WIDTH="70" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img465.png"
+ ALT="$y(t)=1$"> when <IMG
+ WIDTH="51" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img431.png"
+ ALT="$t&gt;t_0$">.
+
+<P>
+</LI>
+</UL>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html106"
+  HREF="node8.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html104"
+  HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html98"
+  HREF="node6.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html107"
+  HREF="node8.html">Responses to Impulse Train</A>
+<B> Up:</B> <A NAME="tex2html105"
+  HREF="node1.html">Chapter 3: AC Circuit</A>
+<B> Previous:</B> <A NAME="tex2html99"
+  HREF="node6.html">AC Circuit Analysis III</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Ruye Wang
+2014-10-05
+</ADDRESS>
+</BODY>
+</HTML>

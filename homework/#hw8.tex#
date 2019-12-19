@@ -1,0 +1,77 @@
+\documentstyle[11pt]{article}
+\usepackage{html}
+\begin{document}
+\begin{center}
+{\Large \bf  Home Work 8 ---- E84, Fall, 2004}
+\end{center}
+\begin{enumerate}
+
+\item The circuit shown in the figure contains a voltage source $V=10V$,
+two resistors $R_1=300\Omega$ and $R_2=200\Omega$, and a silicon diode.
+Find the voltage $V_D$ across and the current $I_D$ through the diode.
+Solve this problem in two different methods: (a) assume voltage $V_D=0.7$ 
+(as the diode is always forward biased), and (b) use the graphic approach
+to find the intersection of the load line and the diode equation:
+\[ I_D=I_0 ( e^{V_D/\eta V_T}-1 ) \]
+Sketch the plot of the two curves and estimate the solution $(I_D,V_D)$
+at their intersection. (Note that you can assume $I_0=10^{-10}$ and 
+$V_T=0.026V$ at room temperature 300K.)
+
+\htmladdimg{../hw8a.gif}
+
+% {\bf Solution:} 
+% Method 1: As the diode is forward biased, the voltage across it
+% is 0.7V, and the current through $R_2$ is $0.7V/200\Omega=3.5mA$, and
+% the current through $R_1$ is $(10-0.7)/300=31 mA$. The current through
+% the diode is therefore $I_D=31-3.5=27.5 mA$.
+% Method 2: set up the equation for $V_D$ and $I_D$:
+% \[ \frac{V_D}{R_2}+I_D=\frac{V-V_D}{R_1} \]
+% if $V_D=0$, $I_D=\frac{V}{R_1}=\frac{10}{300}=33.3 mA$
+% if $I_D=0$, $V_D=V\;\frac{R_2}{R_1+R_2}=10\frac{200}{300+200}=4V$
+% the intersection of the two curves is aprroximately the same as method 1.
+% \htmladdimg{../hw8aa.gif}
+
+\item The circuit shown in the figure contains a voltage source $V=10V$,
+three resistors $R_1=300\Omega$, $R_2=200\Omega$, and $R_3=100\Omega$, 
+and two silicon diode. Find the voltage across the two parallel branches.
+(Hint: assume $V_D=0.7$ when the diode is forward biased.)
+
+\htmladdimg{../hw8c.gif}
+
+% {\bf Solution:} As the diode is forward biased, the voltage across it
+% is 0.7V. Assume the voltage in question is $x$, then we have the following
+% equation:
+% \[	\frac{10-x}{300}=\frac{x-0.7}{200}+\frac{x-0.7}{100}	\]
+% which can be solved for $x$ to get the voltage to be $2.39V$.
+
+\item The circuit shown in the figure is a converter (adaptor) based on
+a full-wave rectifier, which gets an AC voltage input of 115V 60 Hz, and
+produces a 12V DC output. The voltage variation or ripple of the output
+should not exceed 5\% when the load current is no more than 2A. Design 
+the converter in terms of the turn ratio of the transformer and the 
+value of the capacitor. 
+
+\htmladdimg{../hw8d.gif}
+
+\item The input voltage to the circuit in the following figure is
+$v(t)=10 \sin (\omega t)$. The two DC voltages are both 5V. Sketch the
+waveform of the output voltage $V_{out}$.
+
+\htmladdimg{../hw8e.gif}
+
+\item Assume each of the input voltages $V_1$ and $V_2$ takes one of
+two values, either 0V or 5V. Find the output voltage $V_{out}$ in the
+following combinations of three input:
+ 
+\begin{tabular}{c||c c c c}\hline\hline
+$V_1$ & 0V & 0V & 5V & 5V \\ \hline
+$V_1$ & 0V & 5V & 0V & 5V \\ \hline
+$V_{out}$ &   &   &   &   \\
+\end{tabular}
+
+\htmladdimg{../hw8f.gif}
+
+
+\end{enumerate}
+
+\end{document}

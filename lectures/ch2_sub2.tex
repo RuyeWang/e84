@@ -1,0 +1,24 @@
+\documentstyle[12pt]{article}
+\usepackage{html}
+
+\begin{document}
+
+  \htmladdimg{../figures/voltageamplifierex6a.gif}
+
+  \[ v_{out}=v_s A_1 A_2\frac{r_{i1}}{r_{i1}+R_s}\frac{r_{21}}{r_{i2}+r_{o1}}\frac{R_L}{r_{o2}+R_L} \]
+      
+  To maximize $v_{out}$, we want lower $R_s$, $r_{o1}$, $r_{o2}$, and increase
+  $r_{i1}$, $r_{i2}$, $R_L$, as well as $A_1$ and $A_2$
+  
+  The power delivered by the source is
+  \[ P_{in}=(i_{in})^2 r_{i1}=[\frac{v_s}{R_s+r_{i1}}]^2 r_{i1} \]
+  The power dissipated by the load $R_L$ is
+  \[ P_{out}=\frac{v_{out}^2}{R_L}=
+  v^2_s A^2_1 A^2_2[\frac{r_{i1}}{r_{i1}+R_s}\frac{r_{21}}{r_{i2}+r_{o1}}\frac{R_L}{r_{o2}+R_L}]^2 \frac{1}{R_L}\]
+  The power gain is:
+  \[ G_p=\frac{P_{out}}{P_{in}}=A^2_1A^2_2 r_{i1}R_L
+  [\frac{r_{21}}{r_{i2}+r_{o1}}\frac{1}{r_{o2}+R_L}]^2 \]
+  
+
+\end{document}
+

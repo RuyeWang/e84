@@ -1,0 +1,46 @@
+\documentstyle[12pt]{article}
+\usepackage{html}
+
+\begin{document}
+
+  The input and output resistances $R_{in}$ and $R_{out}$, as well as the voltage 
+  gain $A_{oc}$ of a two-port network can be obtained experimentally. First,
+  connect an ideal voltage source $v_s$ (a new battary with very low internal
+  resistance) in series with a resistor $R_s$, and then connect load $R_L$ of
+  two different resistances to the output port. Now the three parameters can
+  be derived from the known values of $v_s$, $R_s$ and the two measurements of
+  the load voltage $v_{out}$, corresponding to the two resistance values used.
+
+  Assume $v_s=1.5V$, $R_s=5 k\Omega$, and the input voltage is measured to be 
+  $v_{in}=1.25 V$; also, assume the two different load resistors used are 
+  $R_1=150 \Omega$ and $R_2=200 \Omega$ respectively, with the two corresponding
+  output voltage $v_1=18.75V$ and $v_2=20$. Find $R_{in}$, $R_{out}$ and $A_{oc}$.
+
+%  \htmladdimg{../figures/voltageamplifierex7a.gif}
+
+  {\bf Solution:}
+
+  First consider the voltage $v_{in}$ of the input port:
+  \[ v_{in}=v_s \frac{R_{in}}{R_s+R_{in}}
+  =1.5 \frac{R_{in}}{5 k\Omega +R_{in}}=1.25 V \]
+  Solving this equation for $R_{in}$, we get $R_{in}=25 k\Omega$
+
+  Next consider the voltage of the output port:
+  \[ v_{out}=A v_{in} \frac{R_L}{R_L+R_{out}} \]
+  i.e., 
+  \[ R_L A v_{in}-v_{out} R_{out} = v_{out} R_L \]
+  Using the values of $R_L$ and $V_L$ of the two experiments, we get
+  \[ \left\{ \begin{array}{l} 
+    150 Av_{in}-18.75 R_{out} = 2812.5 \\
+    200 Av_{in}-20.00 R_{out} = 4000 \end{array} \right. \]
+  Solving these two equations we get
+  \[ \left\{ \begin{array}{l} 
+    R_{out}=50 \Omega \\ Av_{in}=25 V \end{array} \right. \]
+  But we know $v_{in}=1.25 V$, we get $A=20$.  
+
+\end{document}
+
+
+
+
+

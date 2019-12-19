@@ -1,0 +1,586 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>First and Second Order Low/High/Band-Pass filters</TITLE>
+<META NAME="description" CONTENT="First and Second Order Low/High/Band-Pass filters">
+<META NAME="keywords" CONTENT="ch6">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="ch6.css">
+
+<LINK REL="next" HREF="node3.html">
+<LINK REL="previous" HREF="node1.html">
+<LINK REL="next" HREF="node3.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node3.html">The Sallen-Key filters</A>
+<B> Up:</B> <A
+ HREF="node1.html">Chapter 6: Active Filter</A>
+<B> Previous:</B> <A
+ HREF="node1.html">Chapter 6: Active Filter</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION00011000000000000000">
+First and Second Order Low/High/Band-Pass filters</A>
+</H2>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/opamp4a.gif"
+ ALT="opamp4a.gif">
+
+<P>
+Consider the two active filters shown below and determine what kind
+of filters they are. 
+
+<P>
+
+<UL>
+<LI><B>Low-pass filter:</B>
+
+<P>
+Qualitatively, we see that this is a low-pass filter as
+  
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+H(j\omega)=\frac{V_{out}}{V_{in}}=\left\{\begin{array}{ll}
+    -R_2/R_1 & \omega=0\\0 & \omega\rightarrow\infty \end{array}\right.
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img1.svg"
+ ALT="$\displaystyle H(j\omega)=\frac{V_{out}}{V_{in}}=\left\{\begin{array}{ll}
+-R_2/R_1 &amp; \omega=0\\ 0 &amp; \omega\rightarrow\infty \end{array}\right.
+$"> 
+
+(<SPAN CLASS="arabic">1</SPAN>)
+</DIV>
+The second case is due to the fact that <!-- MATH
+ $Z_C=1/j\omega C\rightarrow 0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img2.svg"
+ ALT="$Z_C=1/j\omega C\rightarrow 0$"></SPAN>
+  when <!-- MATH
+ $\omega\rightarrow\infty$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img3.svg"
+ ALT="$\omega\rightarrow\infty$"></SPAN>.
+
+<P>
+Specifically,
+  <BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+H(j\omega)&=&-\frac{Z_2}{Z_1}=-\frac{R_2\;||\;(1/j\omega C)}{R_1}
+    =-\frac{1}{R_1}\frac{R_2/j\omega C}{R_2+1/j\omega C}
+    =-\frac{R_2}{R_1}\frac{1}{j\omega R_2C+1}
+    \nonumber \\
+    &=&-H(0)\frac{1}{1+j\omega \tau}
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img4.svg"
+ ALT="$\displaystyle H(j\omega)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img5.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img6.svg"
+ ALT="$\displaystyle -\frac{Z_2}{Z_1}=-\frac{R_2\;\vert\vert\;(1/j\omega C)}{R_1}
+=-\f...
+...\frac{R_2/j\omega C}{R_2+1/j\omega C}
+=-\frac{R_2}{R_1}\frac{1}{j\omega R_2C+1}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img5.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 5.34ex; vertical-align: -2.16ex; " SRC="img7.svg"
+ ALT="$\displaystyle -H(0)\frac{1}{1+j\omega \tau}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">2</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+where <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img8.svg"
+ ALT="$H(0)=R_2/R_1$"></SPAN> is the DC gain when <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img9.svg"
+ ALT="$\omega=0$"></SPAN>, and
+  <!-- MATH
+ $\omega_c=1/\tau=1/R_2C$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img10.svg"
+ ALT="$\omega_c=1/\tau=1/R_2C$"></SPAN> is cut-off or corner frequency, at which 
+  <!-- MATH
+ $|H(j\omega_c)|=H(0)/\sqrt{2}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img11.svg"
+ ALT="$\vert H(j\omega_c)\vert=H(0)/\sqrt{2}$"></SPAN>. Intuitively, when frequency is high, 
+  <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img12.svg"
+ ALT="$Z_2(j\omega)$"></SPAN> is small and the negative feedback becomes strong,
+  and the output is low. For example, when
+  <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.12ex; " SRC="img13.svg"
+ ALT="$\tau=10^{-3}$"></SPAN>, <!-- MATH
+ $\omega_c=1/\tau=10^3$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img14.svg"
+ ALT="$\omega_c=1/\tau=10^3$"></SPAN>, the Bode plots are shown  
+  below:
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/BodeLP.gif"
+ ALT="BodeLP.gif">
+
+<P>
+</LI>
+<LI><B>High-pass filter:</B>
+
+<P>
+Qualitatively, we see that this is a high-pass filter as
+  
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+H(j\omega)=\frac{V_{out}}{V_{in}}=\left\{\begin{array}{ll}
+    0 & \omega\rightarrow 0\\-R_2/R_1 & \omega\rightarrow\infty
+    \end{array}\right.
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img15.svg"
+ ALT="$\displaystyle H(j\omega)=\frac{V_{out}}{V_{in}}=\left\{\begin{array}{ll}
+0 &amp; \omega\rightarrow 0\\ -R_2/R_1 &amp; \omega\rightarrow\infty
+\end{array}\right.
+$"> 
+
+(<SPAN CLASS="arabic">3</SPAN>)
+</DIV>
+The first case is due to the fact that <!-- MATH
+ $Z_C=1/j\omega C\rightarrow\infty$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img16.svg"
+ ALT="$Z_C=1/j\omega C\rightarrow\infty$"></SPAN>
+  when <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img9.svg"
+ ALT="$\omega=0$"></SPAN>.
+
+<P>
+Specifically,
+  <BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+H(j\omega)&=&-\frac{Z_2(j\omega)}{Z_1(j\omega)}
+    =-\frac{R_2}{R_1+1/j\omega C}
+    =-\frac{R_2}{R_1}\;\frac{1}{1+1/j\omega R_1C}
+    \nonumber \\
+    &=&-H(\infty)\;\frac{1}{1+1/j\omega\tau}
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img4.svg"
+ ALT="$\displaystyle H(j\omega)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img5.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img17.svg"
+ ALT="$\displaystyle -\frac{Z_2(j\omega)}{Z_1(j\omega)}
+=-\frac{R_2}{R_1+1/j\omega C}
+=-\frac{R_2}{R_1}\;\frac{1}{1+1/j\omega R_1C}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img5.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img18.svg"
+ ALT="$\displaystyle -H(\infty)\;\frac{1}{1+1/j\omega\tau}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">4</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+where <!-- MATH
+ $H(\infty)=R_2/R_1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img19.svg"
+ ALT="$H(\infty)=R_2/R_1$"></SPAN> is the gain when <!-- MATH
+ $\omega\rightarrow\infty$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img3.svg"
+ ALT="$\omega\rightarrow\infty$"></SPAN>, 
+  <!-- MATH
+ $\omega_c=1/\tau=1/R_1C$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img20.svg"
+ ALT="$\omega_c=1/\tau=1/R_1C$"></SPAN> is the cut-off or corner frequency, at which
+  <!-- MATH
+ $|H(j\omega_c)|=H(\infty)/\sqrt{2}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img21.svg"
+ ALT="$\vert H(j\omega_c)\vert=H(\infty)/\sqrt{2}$"></SPAN>. Intuitively, when frequency is 
+  low <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img22.svg"
+ ALT="$Z_1(j\omega)$"></SPAN> is large and the signal is difficult to pass, 
+  therefore the output is low. For example, when <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.12ex; " SRC="img23.svg"
+ ALT="$\tau=10^{-6}$"></SPAN>, 
+  <!-- MATH
+ $\omega_c=1/\tau=10^6$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img24.svg"
+ ALT="$\omega_c=1/\tau=10^6$"></SPAN>, the Bode plots are shown below:
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/BodeHP.gif"
+ ALT="BodeHP.gif">
+
+<P>
+If we let <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img25.svg"
+ ALT="$R_1=R_2$"></SPAN>, i.e., <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img26.svg"
+ ALT="$H(0)=1$"></SPAN>, and ignore the negative sign (<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img27.svg"
+ ALT="$180^\circ$"></SPAN>
+  phase shift), the low-pass and high-pass filters can be represented by their
+  transfer functions with <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img28.svg"
+ ALT="$s=j\omega$"></SPAN>:
+  
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+H_{lp}(j\omega)=\frac{\omega_c}{j\omega+\omega_c}
+    =\frac{1}{j\omega\tau+1}, \;\;\;\;\;\;\;
+    H_{hp}(j\omega)=\frac{j\omega}{j\omega+\omega_c}
+    =\frac{\j\omega\tau}{j\omega\tau+1}
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.57ex; vertical-align: -2.16ex; " SRC="img29.svg"
+ ALT="$\displaystyle H_{lp}(j\omega)=\frac{\omega_c}{j\omega+\omega_c}
+=\frac{1}{j\om...
+...\omega)=\frac{j\omega}{j\omega+\omega_c}
+=\frac{\j\omega\tau}{j\omega\tau+1}
+$"> 
+
+(<SPAN CLASS="arabic">5</SPAN>)
+</DIV>
+
+<P>
+</LI>
+<LI><B>Second Order Band-pass Filters:</B>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/opamp4b.gif"
+ ALT="opamp4b.gif">
+
+<P>
+Qualitatively, we see that this is a band-pass filter as
+  
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+H(j\omega)=\frac{V_{out}}{V_{in}}=\left\{\begin{array}{ll}
+    0 & \omega=0 \\0 & \omega\rightarrow\infty \end{array}\right.
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img30.svg"
+ ALT="$\displaystyle H(j\omega)=\frac{V_{out}}{V_{in}}=\left\{\begin{array}{ll}
+0 &amp; \omega=0 \\ 0 &amp; \omega\rightarrow\infty \end{array}\right.
+$"> 
+
+(<SPAN CLASS="arabic">6</SPAN>)
+</DIV>
+The second case is due to the fact that <!-- MATH
+ $Z_C=1/j\omega C\rightarrow 0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img2.svg"
+ ALT="$Z_C=1/j\omega C\rightarrow 0$"></SPAN>
+  when <!-- MATH
+ $\omega\rightarrow\infty$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img3.svg"
+ ALT="$\omega\rightarrow\infty$"></SPAN>.
+
+<P>
+We let 
+  
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+Z_1(\omega)=R_1+(1/j\omega C_1),\;\;\;\;\;\;\;
+    Z_2(\omega)=R_2||(1/j\omega C_2)
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img31.svg"
+ ALT="$\displaystyle Z_1(\omega)=R_1+(1/j\omega C_1),\;\;\;\;\;\;\;
+Z_2(\omega)=R_2\vert\vert(1/j\omega C_2)
+$"> 
+
+(<SPAN CLASS="arabic">7</SPAN>)
+</DIV>
+and get the FRF of this inverting amplifier as
+  <BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+H_{BP}(j\omega)&=&-\frac{Z_2(\omega)}{Z_1(\omega)}
+    =-\frac{R_2||(1/j\omega C_2)}{R_1+1/j\omega C_1}
+    =-\frac{R_2/j\omega C_2}{(R_1+1/j\omega C_1)(R_2+1/j\omega C_2)}
+    \nonumber \\
+    &=&-\frac{j\omega R_2C_1}{(j\omega R_1C_1+1)(j\omega C_2R_2+1)}
+    =-\frac{j\omega \tau_3}{(1+j\omega \tau_1)(1+j\omega \tau_2)}
+    =-\left(j\omega\tau_3\right)\;\left(\frac{1}{1+j\omega\tau_1}\right)
+    \;\left(\frac{1}{1+j\omega\tau_2}\right)
+    \nonumber \\
+    &=&
+    =-j\omega\tau_3\;
+    \left(\frac{1/\tau_1\tau_2}{(j\omega)^2+j\omega(\tau_1+\tau_2)/\tau_1\tau_2+1/\tau_1\tau_2}\right)
+    =-j\omega\tau_3\;\frac{\omega_n^2}{\omega^2+j\omega\Delta\omega+\omega_n^2}
+  
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img32.svg"
+ ALT="$\displaystyle H_{BP}(j\omega)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img5.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img33.svg"
+ ALT="$\displaystyle -\frac{Z_2(\omega)}{Z_1(\omega)}
+=-\frac{R_2\vert\vert(1/j\omega ...
+...1/j\omega C_1}
+=-\frac{R_2/j\omega C_2}{(R_1+1/j\omega C_1)(R_2+1/j\omega C_2)}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img5.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img34.svg"
+ ALT="$\displaystyle -\frac{j\omega R_2C_1}{(j\omega R_1C_1+1)(j\omega C_2R_2+1)}
+=-\f...
+...\left(\frac{1}{1+j\omega\tau_1}\right)
+\;\left(\frac{1}{1+j\omega\tau_2}\right)$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img5.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 6.04ex; vertical-align: -2.32ex; " SRC="img35.svg"
+ ALT="$\displaystyle =-j\omega\tau_3\;
+\left(\frac{1/\tau_1\tau_2}{(j\omega)^2+j\omega...
+...ht)
+=-j\omega\tau_3\;\frac{\omega_n^2}{\omega^2+j\omega\Delta\omega+\omega_n^2}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">8</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+where <!-- MATH
+ $\omega_{c_1}=1/\tau_1=1/R_1C_1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img36.svg"
+ ALT="$\omega_{c_1}=1/\tau_1=1/R_1C_1$"></SPAN>, <!-- MATH
+ $\omega_{c_2}=1/\tau_2=1/R_2C_2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img37.svg"
+ ALT="$\omega_{c_2}=1/\tau_2=1/R_2C_2$"></SPAN>, 
+  <!-- MATH
+ $\omega_{c_3}=1/\tau_3=1/R_2C_1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img38.svg"
+ ALT="$\omega_{c_3}=1/\tau_3=1/R_2C_1$"></SPAN>, <!-- MATH
+ $\Delta\omega=(\tau_1+\tau_2)/\tau_1\tau_2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img39.svg"
+ ALT="$\Delta\omega=(\tau_1+\tau_2)/\tau_1\tau_2$"></SPAN>,
+  and <!-- MATH
+ $\omega_n=1/\sqrt{\tau_1\tau_2}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.85ex; " SRC="img40.svg"
+ ALT="$\omega_n=1/\sqrt{\tau_1\tau_2}$"></SPAN>. The natural frequency can be
+  written as <!-- MATH
+ $\omega_n=1/\tau_n$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img41.svg"
+ ALT="$\omega_n=1/\tau_n$"></SPAN> with <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img42.svg"
+ ALT="$\tau_n$"></SPAN> being the geometric average 
+  of <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img43.svg"
+ ALT="$\tau_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img44.svg"
+ ALT="$\tau_2$"></SPAN>:
+  
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+\tau_n=\sqrt{\tau_1\tau_2}=(\tau_1\tau_2)^{1/2},\;\;\;\;\;\;\;
+    \log\tau_n=\frac{1}{2}\left(\log\tau_1+\log\tau_2\right)
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 4.88ex; vertical-align: -1.71ex; " SRC="img45.svg"
+ ALT="$\displaystyle \tau_n=\sqrt{\tau_1\tau_2}=(\tau_1\tau_2)^{1/2},\;\;\;\;\;\;\;
+\log\tau_n=\frac{1}{2}\left(\log\tau_1+\log\tau_2\right)
+$"> 
+
+(<SPAN CLASS="arabic">9</SPAN>)
+</DIV>
+i.e.,
+  
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+\log\omega_n=\frac{1}{2}\left(\log\omega_1+\log\omega_2\right)
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 4.88ex; vertical-align: -1.71ex; " SRC="img46.svg"
+ ALT="$\displaystyle \log\omega_n=\frac{1}{2}\left(\log\omega_1+\log\omega_2\right)
+$"> 
+
+(<SPAN CLASS="arabic">10</SPAN>)
+</DIV>
+We see that in log scale, the resonant (peak) frequency <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img47.svg"
+ ALT="$\omega_n$"></SPAN> 
+  of this bandpass filter is in the middle between <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img48.svg"
+ ALT="$\omega_1$"></SPAN> and 
+  <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img49.svg"
+ ALT="$\omega_2$"></SPAN>.
+
+<P>
+For example, when <!-- MATH
+ $\tau_1=10^{-6}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.46ex; " SRC="img50.svg"
+ ALT="$\tau_1=10^{-6}$"></SPAN>, <!-- MATH
+ $\tau_2=10^{-8}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.46ex; " SRC="img51.svg"
+ ALT="$\tau_2=10^{-8}$"></SPAN>, <!-- MATH
+ $\tau_3=10^{-3}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.46ex; " SRC="img52.svg"
+ ALT="$\tau_3=10^{-3}$"></SPAN>, 
+  the Bode plots are shown below:
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/BodeBP.gif"
+ ALT="BodeBP.gif">
+
+<P>
+</LI>
+<LI><B>Second Order Band-stop Filters:</B>
+
+<P>
+If the log-magnitude <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img53.svg"
+ ALT="$Lm$"></SPAN> of the Bode plot of a band-pass filter is 
+  vertically flipped, we get a band-stop filter:
+  
+<DIV class="equation">
+
+<!-- MATH
+ \begin{equation}
+-Lm_{BP}(j\omega)=-20\log |H_{BP}(j\omega)|
+  =-20\log \bigg| \frac{Z_2(\omega)}{Z_1(\omega)} \bigg|
+  =20\log \bigg| \frac{Z_1(\omega)}{Z_2(\omega)} \bigg|
+  =Lm_{BS}(j\omega)
+\end{equation}
+ -->
+ &nbsp;  <IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img54.svg"
+ ALT="$\displaystyle -Lm_{BP}(j\omega)=-20\log \vert H_{BP}(j\omega)\vert
+=-20\log \b...
+...\log \bigg\vert \frac{Z_1(\omega)}{Z_2(\omega)} \bigg\vert
+=Lm_{BS}(j\omega)
+$"> 
+
+(<SPAN CLASS="arabic">11</SPAN>)
+</DIV>
+We therefore see that if we simply swap <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img55.svg"
+ ALT="$Z_1(\omega)$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img56.svg"
+ ALT="$Z_2(\omega)$"></SPAN> 
+  in the op-ammp circuit of the band-pass filter, we get a band-stop filter:
+
+<P>
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+H_{BS}(j\omega)&=&-\frac{Z_1(\omega)}{Z_2(\omega)}
+    =-\frac{R_2+1/j\omega C_2}{R_1||1/j\omega C_1}
+    =-\frac{R_2+1/j\omega C_2}{R_1/j\omega C_1/(R_1+1/j\omega C_1)}
+    \nonumber \\
+    &=& \frac{(1+j\omega C_1R_1)(1+j\omega C_2R_2)}{j\omega R_1C_2}
+    =\frac{(1+j\omega\tau_1)(1+j\omega\tau_1)}{j\omega\tau_3}
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img57.svg"
+ ALT="$\displaystyle H_{BS}(j\omega)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img5.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img58.svg"
+ ALT="$\displaystyle -\frac{Z_1(\omega)}{Z_2(\omega)}
+=-\frac{R_2+1/j\omega C_2}{R_1\v...
+... 1/j\omega C_1}
+=-\frac{R_2+1/j\omega C_2}{R_1/j\omega C_1/(R_1+1/j\omega C_1)}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img5.svg"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG STYLE="height: 5.57ex; vertical-align: -2.16ex; " SRC="img59.svg"
+ ALT="$\displaystyle \frac{(1+j\omega C_1R_1)(1+j\omega C_2R_2)}{j\omega R_1C_2}
+=\frac{(1+j\omega\tau_1)(1+j\omega\tau_1)}{j\omega\tau_3}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">12</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+</LI>
+</UL>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node3.html">The Sallen-Key filters</A>
+<B> Up:</B> <A
+ HREF="node1.html">Chapter 6: Active Filter</A>
+<B> Previous:</B> <A
+ HREF="node1.html">Chapter 6: Active Filter</A></DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

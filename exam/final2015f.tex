@@ -1,0 +1,255 @@
+\documentstyle[11pt]{article}
+\usepackage{html}
+\begin{document}
+\begin{center}
+{\Large \bf  Final Exam (Fall, 2015)}
+\end{center}
+
+\section{The Instructions}
+
+\begin{itemize}
+\item Take home, open book/notes/web
+\item Mark your start and end times. Don't spend more than 3 hours.
+  Do not click ``The exam problems'' until you are ready to take the 
+  final.
+\item Mark your name and question number clearly on top of each page.
+  Indicate the total number of pages submitted.
+\item When solving a problem, list all the steps. Concisely describe 
+  in English what you are doing in each step, then show the calculation 
+  and the result of the step. Box final your answers.
+\item A final answer, even if correct, without evidence of the steps 
+  leading to the answer will not receive credit.
+\end{itemize}
+
+
+
+\section{The Exam Problems (don't click until you take the final)}
+
+\begin{enumerate}
+
+
+\item {\bf Problem 1 (25 points)} 
+
+  Find the output $V_{out}$ in terms of the four inputs $V_1$,
+  $V_2$, $V_3$, and $V_4$. Assume $R_5=R_{f_1}$.
+
+  \htmladdimg{../../lectures/figures/opamp2.png}
+
+  \begin{comment}
+
+  {\bf Solution:} Let $V$ be the output of the first op-amp.
+  \[
+  \frac{V_1}{R_1}+\frac{V_2}{R_2}+\frac{V}{R_{f_1}}=0,
+  \;\;\;\;\;\;\mbox{i.e.,}\;\;\;\;
+  V=-\frac{R_{f_1}}{R_1}V_1-\frac{R_{f_1}}{R_2}V_2
+  \]
+  \[
+  \frac{V_{out}}{R_{f_2}}+\frac{V_3}{R_3}+\frac{V_4}{R_4}+\frac{V}{R_5}
+  =\frac{V_{out}}{R_{f_2}}+\frac{V_3}{R_3}+\frac{V_4}{R_4}
+  -\frac{1}{R_5}\left(\frac{R_{f_1}}{R_1}V_1-\frac{R_{f_1}}{R_2}V_2\right)=0
+  \]
+  Solving for $V_{out}$:
+  \[
+  V_{out}=\frac{R_{f_2}}{R_5}\frac{R_{f_1}}{R_1}V_1+\frac{R_{f_2}}{R_5}\frac{R_{f_1}}{R_2}V_2-\frac{R_{f_2}}{R_3}V_3-\frac{R_{f_2}}{R_4}V_4
+  =\frac{R_{f_2}}{R_1}V_1+\frac{R_{f_2}}{R_2}V_2-\frac{R_{f_2}}{R_3}V_3-\frac{R_{f_2}}{R_4}V_4
+  \]
+  \end{comment}
+
+\item {\bf Problem 2 (25 points)} 
+
+  An op-amp circuit is given below:
+
+  \htmladdimg{../../lectures/figures/opampMF.png}
+
+  \begin{itemize}
+  \item What is the order of the circuit? What kind of filter is it
+    (high-pass, low-pass, band-pass, or band-stop)? 
+  \item Find the frequency response function $H(j\omega)=V_{out}/V_{in}$ 
+    of circuit in canonical form, in terms of the cut-off or corner 
+    frequency $\omega_c$ if the circuit is first order, or natural 
+    frequency $\omega_n$ and the quality factor $Q$ if it is second
+    order.
+  \item Given the voltage gain $|H(j\omega)|$ when (a) $\omega=0$, 
+    and (b) $\omega\rightarrow\infty$.
+  \end{itemize}
+
+  \begin{comment}
+    {\bf Solution:}
+
+    Apply KCL to the point between $C_1$ and $C_2$ denoted by $V$:
+    \[
+    \frac{V_{in}-V}{1/j\omega C_1}+\frac{V_{out}-V}{1/j\omega C_2}
+    =\frac{V}{R_2}+\frac{V}{1/j\omega C_1}
+    \]
+    i.e.,
+    \[
+    V_{in}j\omega C_1+V_{out}j\omega C_2
+    =\left(\frac{1}{R_2}+2j\omega C_1+j\omega C_2\right) V
+    =\left(\frac{1}{R_2}+j\omega(2C_1+C_2)\right) V
+    \]
+    Apply KCL to the inverting input of the op-amp which is virtually
+    grounded:
+    \[
+    \frac{V}{1/j\omega C_1}+\frac{V_{out}}{R_1}=0
+    \;\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;\;
+    V=-\frac{1}{j\omega R_1C_1}V_{out}
+    \]
+    Substitute into the first equation
+    \begin{eqnarray}
+      V_{in}j\omega C_1+V_{out}j\omega C_2
+      &=&-\left(\frac{1}{R_2}+j\omega(2C_1+C_2)\right) \frac{1}{j\omega R_1C_1}V_{out}
+      \nonumber\\
+      &=&-\left(\frac{1}{j\omega R_1R_2C_1}+\frac{2C_1+C_2}{R_1C_1}\right) V_{out}
+      \nonumber
+    \end{eqnarray}
+    Rearrange:
+    \[
+    V_{in}
+    =-\frac{1}{j\omega C_1}\left(j\omega C_2+\frac{1}{j\omega R_1R_2C_1}+\frac{2C_1+C_2}{R_1C_1}\right) V_{out}
+    =\left(\frac{C_2}{C_1}+\frac{1}{(j\omega)^2 R_1R_2C^2_1}
+    +\frac{2C_1+C_2}{j\omega R_1C_1^2}\right) V_{out}
+    \]
+    The FRF can be found to be:
+    \begin{eqnarray}
+      H(j\omega)&=&\frac{V_{out}}{V_{in}}
+      =-\left(\frac{C_2}{C_1}+\frac{1}{(j\omega)^2 R_1R_2C_1^2}
+      +\frac{2C_1+C_2}{j\omega R_1C_1^2}\right)^{-1}
+      =-\frac{(j\omega)^2R_1R_2C_1^2}{(j\omega)^2R_1R_2C_1C_2+j\omega(2C_1+C_2)R_2+1}
+      \nonumber\\
+      &=&-\frac{C_1}{C_2}\;\frac{(j\omega)^2}{(j\omega)^2+j\omega(2C_1+C_2)/R_1C_1C_2+1/R_1R_2C_1C_2}
+      =-\frac{C_1}{C_2}\;\frac{(j\omega)^2}{(j\omega)^2+j\omega\omega_n/Q+\omega_n^2}
+      \nonumber
+    \end{eqnarray}
+    where
+    \[
+    \omega_n=\frac{1}{\sqrt{R_1R_2C_1C_2}},\;\;\;\;\;\;
+    \frac{2C_1+C_2}{R_1C_1C_2}=\frac{\omega_n}{Q}=\Delta\omega,
+    \;\;\;\mbox{i.e.,}\;\;\;\;
+    Q=\omega_n\frac{R_1C_1C_2}{2C_1+C_2}=\frac{\sqrt{R_1R_2C_1C_2}}{(2C_1+C_2)R_2}
+    \]
+    This is a 2nd-order high-pass filter, when $\omega=\infty$, we have
+    \[
+    H(j\omega)\big|_{\omega=\infty}=H(j\infty)=-\frac{C_1}{C_2}
+    \]
+    \end{comment}
+
+\item {\bf Problem 3 (25 points)}
+
+  The output $v_{out}(t)$ of the transistor circuit with a sinusoidal input
+  is plotted as shown below. As you can see, $v_{out}(t)$ is distorted in 
+  either of the two cases of (a) and (b). As the designer of the circuit, 
+  you can change $R_B$, $R_C$ and/or $V_{cc}$ to avoid the distortion. 
+
+  \htmladdimg{../final09s1.gif}
+
+  \begin{itemize}
+  \item What would you do to avoid distortion in (a) and why? 
+  \item What would you do to avoid distortion in (b) and why? 
+  \end{itemize}
+  Sketch the input and output characteristic plots of the transistor
+  circuit to visualize and explane how each of the two types of distortion 
+  may be caused.
+
+  \htmladdimg{../final09s2.gif}
+
+
+
+
+  \begin{comment}
+  {\bf Solution:}
+
+  \begin{itemize}
+  \item Reduce $R_B$, and/or increase $V_{cc}$.
+  \item Increase $V_{cc}$ and/or reduce $R_C$ and/or increase $R_B$.
+  \end{itemize}
+
+
+\item {\bf Problem 3 (25 points)} 
+
+The circuit below shows a simple means for obtaining improved bias
+stability of the DC operating point of the transistor. As always,
+assume $V_{BE}=0.7V$ when answering the following questions.
+
+\htmladdimg{../midterm3e.gif}
+
+\begin{itemize}
+\item Explain qualitatively what happens if $I_C$ tends to rise as a
+  result of an increased $\beta$.
+\item Derive an expression for $I_C$ in terms of $R_B$, $R_C$, $\beta$
+  and $V_{CC}$.
+\item Find an approximation of the expression of $I_C$ when $\beta$ is 
+  large enough, so that $I_C$ independent of $\beta$. In this case, how 
+  are $R_C$ and $R_B$ related?
+\item Find $R_C$ and $R_B$ so that the DC operating point is $V_{CE}=5V$ 
+and $I_C=2mA$, when $\beta=100$ and $V_{CC}=10V$. 
+\item Find $V_{CE}$ and $I_C$ for $\beta=50$, $\beta=100$, and $\beta=200$
+	based on the resistances found above.
+\end{itemize}
+
+\item {\bf Problem 3. (30 points)} 
+
+\htmladdimg{../midterm3a.gif}
+
+The circuit shown below is a silicon transistor amplifier which takes one
+input and generates two outputs. Assume $V_{CC}=20V$, $R_1=20K\Omega$,
+$R_2=10K\Omega$, $R_C=R_E=500\Omega$, $\beta=100$. 
+
+\begin{itemize}
+\item Find $V_B$, $I_B$, $V_E$ and $V_C$, and the DC operating point in 
+terms of $I_C$ and $V_{CE}$. 
+\item In the figure provided, draw the load line, indicate the DC operating 
+point, and find the corresponding $I_C$ and $V_{CE}$.
+\item If the input voltage is such that it produces an AC component of the 
+base current:
+\[	i_b(t)=0.1 cos(\omega t) \; mA	\]
+give the expression of the AC component of the two output voltages $v_1(t)$ 
+at the emitter and $v_2(t)$ at the collector, and sketch their waveforms in 
+the SAME plot provided below, where $v_{in}(t)=cos(\omega t)$ is also ploted.
+(No need to be to the scale vertically, but do pay attention to the time
+scale.)
+\end{itemize}
+
+\htmladdimg{../midterm3b.gif}
+\htmladdimg{../midterm3c.gif}
+
+% {\bf Solution:} 
+% Apply Thevenin thm to base circuit to get $R_B=R_1 || R_2=6.7K$, $V_BB=6.7V$.
+% \[ I_B=(V_{BB}-V_{BE})/(R_B+(\beta+1)R_E)=6V/(6.7K+101\times 0.5K)=0.106 mA \]
+% \[ I_C=I_E=10.6 mA \]
+% \[ V_E=0.5\times 10.6=5.3V,\;\;\;\; V_C=20-0.5\times 10.6=14.7V,\;\;\;\;
+% 	V_{CE}=V_C-V_E=14.7-5.3=9.4V \]
+% \[ v_1(t)=-5 cos(\omega t) V,\;\;\;\;v_1(t)=5 cos(\omega t) V	\]
+
+\end{comment}
+
+\item {\bf Problem 4 (25 points)} 
+  \begin{itemize}
+  \item Represent voltage $V_L$ across the load $R_L$ in terms of all
+    parameters given in the circuit shown on the left of the figure below.
+  \item Represent the voltage $V'_L$ across the load $R_L$ in terms of all
+    parameters given in the circuit shown on the right of the figure below,
+    in which a voltage-amplifier is inserted between the source and the load, 
+    characterized by three parameters: (a) the input resistance $R_{in}$, (b)
+    the output resistance $R_{out}$, and (c) the over-circuit voltage gain 
+    $A_{oc}$. 
+  \item Assuming $V_o=10\,V$, $R_o=6\,k\Omega$, $R_L=4\,k\Omega$, 
+    $R_{in}=100\,k\Omega$, $R_{out}=1\,k\Omega$, and $A_{oc}=10$, find the 
+    numerical value for $V_L$ and $V'_L$ in the two cases above.
+  \end{itemize}
+\htmladdimg{../SourceLoad.png}
+
+\begin{comment}
+{\bf Solution:}
+\begin{itemize}
+\item \[ V_L=V_o \frac{R_L}{R_o+R_L} \]
+\item \[ V'_L=A_{oc}V_o \frac{R_{in}}{R_o+R_{in}}\frac{R_L}{R_{out}+R_L} \]
+\item \[ V_L=V_o \frac{R_L}{R_o+R_L}=10\frac{4}{6+4}=4  \]
+  \[ V'_L=A_{oc}V_o \frac{R_{in}}{R_o+R_{in}}\frac{R_L}{R_{out}+R_L} 
+  =10\times 10\frac{100}{6+100}\frac{4}{1+4}=75.47 \]
+\end{itemize}
+\end{comment}
+
+\end{enumerate}
+
+\end{document}
+

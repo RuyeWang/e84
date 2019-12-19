@@ -1,0 +1,54 @@
+\documentstyle[12pt]{article}
+\usepackage{html}
+
+\begin{document}
+
+  \htmladdimg{../figures/voltageamplifierex5a.gif}
+
+
+  \begin{itemize}
+    \item {\bf Voltage gain:} Assume an ideal voltage source $v_s$ is applied to the 
+      input port AB. Apply KVL to the loop to get:
+      \[ v_s=i_{in} r_{in} +i_{in} r_{out} +A r_{in} i_{in}
+      =i_{in}[r_{out}+(A+1) r_{in}] \]
+      i.e.,
+      \[ i_{in}=\frac{v_s}{r_{out}+(A+1) r_{in}} \]
+      The voltage across the output port CD is:
+      \[ v_{out}=A r_{in} i_{in}+r_{out}i_{in}
+      =v_s\frac{A r_{in}+r_{out}}{r_{out}+(A+1) r_{in}} \]
+      i.e.,
+      \[ A_{oc}=\frac{A r_{in}+r_{out}}{r_{out}+(A+1) r_{in}} \approx 1 \]
+  
+    \item {\bf Input resistance:} Assume a load $R_L$ is connnected to the output
+      port CD. Apply KVL to the two loops and get:
+      \[ v_s=(r_{in}+r_{out}+A r_{in})i_{in}-r_{out}i_{out} \]
+      \[ Ar_{in}i_{in}=(r_{out}+R_L)i_{out}-r_{out} i_{in} \]
+      Solving the second equation we get
+      \[ i_{out}=\frac{Ar_{in}+r_{out}}{r_{out}+R_L} i_{in} \]
+      Plugging that into the first equation we get
+      \[ v_s =i_{in}[(r_{in}+r_{out}+A r_{in})-r_{out}\frac{Ar_{in}+r_{out}}{r_{out}+R_L}] \]
+      i.e.,
+      \[ R_{in}=\frac{v_s}{i_{in}}=r_{in}(1+\frac{AR_L}{r_{out}+R_L})\approx A r_{in}\]
+
+    \item {\bf Output resistance:} Apply a source voltage $v_s$ with an internal 
+      resistance $R_s$ to the input port AB, and get
+      \[ v_s=i_{in} [R_s+r_{in}+r_{out} +A r_{in}] \]
+      i.e.,
+      \[ i_{in}=\frac{v_s}{R_s+(A+1)r_{in}+r_{out}} \]
+      The open-circuit output voltage is:
+      \[ v_{oc}=(r_{out}+Ar_{in}) i_{in}=(r_{out}+Ar_{in}) \frac{v_s}{R_s+(A+1)r_{in}+r_{out}} \]
+      Next, we find short-circuit output current. Due to superposition (two voltage 
+      sources $v_s$ and $Ar_{in}i_{in}$) we have:
+      \[ i_{sc}=\frac{v_s}{R_s+r_{in}}+Ar_{in}\frac{v_s}{(R_s+r_{in})r_{out}}
+      =v_s\frac{Ar_{in}+r_{out}}{(R_s+r_{in})r_{out}} \]
+      Now we get:
+      \[ R_{out}=\frac{v_{oc}}{i_{sc}}=\frac{(R_s+r_{in})r_{out}}{R_s+(A+1)r_{in}+r_{out}}
+      \approx \frac{r_{out}}{A}\]
+      The approximation is due to the assumption that $A>>1$ and both $R_s$ and $r_{out}$
+      are very small.
+	
+      
+  \end{itemize}
+
+\end{document}
+

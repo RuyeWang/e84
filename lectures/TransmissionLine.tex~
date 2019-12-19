@@ -1,0 +1,528 @@
+\documentstyle[11pt]{article}
+\usepackage{html}
+\begin{document}
+
+{\huge \bf Transmission and Delay Lines}
+
+\section*{The voltage and current wave equations}
+
+As shown in the figure, a transmission line can be modeled by its 
+resistance and inductance in series, and the conductance and capacitance
+in parallel, all distributed along its length in $x$ direction. Here $R$,
+$L$, $G$ and $C$ represent, respectively, the resistance, inductance, 
+conductance and capacitance per unit length.
+
+\htmladdimg{../TransmissionLine.gif}
+
+The voltage $v(x,t)$ and current $i(x,t)$ along the transmission
+line are variables of both time $t$ and 1D space $x$. Across an
+infinitesimal section $\triangle x$ along the line, the voltage and 
+current change from $v$ and $i$ to $v+\triangle v$ and 
+$i+\triangle i$, respectively: 
+\[ v+\triangle v=v-R\triangle x\; i-L\triangle x \;\frac{\partial i}{\partial t}	\]
+\[ i+\triangle i=i-G\triangle x\; v-C\triangle x\; \frac{\partial v}{\partial t}	\]
+From these equations, we get
+\[
+\frac{\partial v}{\partial x}+L \frac{\partial i}{\partial t}+Ri=0
+\]
+\[
+\frac{\partial i}{\partial x}+C \frac{\partial v}{\partial t}+Gv=0
+\]
+Differentiating the first equation with respect to $t$ and the second one
+with respect to $x$, the two equations can be combined to get 
+\[	\frac{\partial^2 i}{\partial x^2}-LC\frac{\partial^2 i}{\partial t^2}
+	-RC\frac{\partial i}{\partial t}+G\frac{\partial v}{\partial x}=0
+\]
+Replacing $\partial v/\partial x$ by $-L \partial i/\partial t-Ri$, we get
+the {\em transmission line equation} for current $i(x,t)$:
+\[	\frac{\partial^2 i}{\partial x^2}=LC\frac{\partial^2 i}{\partial t^2}
+	+(RC+GL)\frac{\partial i}{\partial t}+GRi
+\]
+Similarly, differentiating the first equation above with respect to $x$ and 
+the second one with respect to $t$, the two equations can be combined 
+to get the {\em transmission line equation} for voltage $v(x,t)$:
+\[	\frac{\partial^2 v}{\partial x^2}=LC\frac{\partial^2 v}{\partial t^2}
+	+(RC+GL)\frac{\partial v}{\partial t}+GRv
+\]
+At high frequency, the inductance and capacitance are dominant and the 
+resistance and conductance can be ignored, i.e., $R=G=0$. In this case the
+transmission line is {\em loss-less} and the above equations become
+\[
+\frac{\partial^2 i}{\partial x^2}=LC \frac{\partial^2 i}{\partial t^2}=\frac{1}{\mu^2} \frac{\partial^2 v}{\partial t^2}
+\]
+\[
+\frac{\partial^2 v}{\partial x^2}=LC \frac{\partial^2 v}{\partial t^2}=\frac{1}{\mu^2} \frac{\partial^2 v}{\partial t^2}
+\]
+These high frequency transmission line equations are actually {\em wave 
+equations} with the {\em velocity of the waves} defined as:
+\[	\mu \stackrel{\triangle}{=} \frac{1}{\sqrt{LC}}	\]
+
+\newpage
+\section*{Forward and backward traveling waves}
+
+The above wave equations are partial differential equations (PDEs) of two 
+variables $t$ and $x$ and can be solved by Laplace transform method. By
+taking Laplace transform of both $v(x,t)$ and $i(x,t)$ with respect to $t$:
+\[ 	V(x,s)={\cal L}[v(x,t)]=\int_0^\infty v(x,t)e^{-st}dt	\]
+\[ 	I(x,s)={\cal L}[i(x,t)]=\int_0^\infty i(x,t)e^{-st}dt	\]
+and assuming zero initial conditions, the two PDEs become ordinary 
+differential equations (ODEs) with respect to variable $x$ (with $s$ treated
+as a parameter):
+\[	\frac{dV}{dx}=-sLI\;\;\;\mbox{and}\;\;\;\;\frac{dI}{dx}=-sCV	\]
+Combining these two first order ODEs, we get the voltage wave equation as
+a second order ODE:
+\[	\frac{d^2 V}{d x^2}-s^2LCV
+	=\frac{d^2 V}{d x^2}-(\frac{s}{\mu})^2V=0	\]
+with the general solution
+\[	V(x,s)=V_b(s)e^{sx/\mu}+V_f(s)e^{-sx/\mu}	\]
+where $e^{sx/\mu}$ and $e^{-sx/\mu}$ are the two particular solutions, and 
+$V_b(s)$ and $V_f(s)$ are two arbitrary constants (with respect to variable 
+$x$), although they are in general functions of the other variable $s$ (or
+$t$ in time domain) which is treated as a parameter here. These two constants
+can be determined by boundary conditions as discussed later. If $l$ is the 
+length of the transmission line, then the time for the wave to travel with 
+speed $\mu=1/\sqrt{LC}$ the whole length $l$ of the line is:
+\[	T\stackrel{\triangle}{=}\frac{l}{\mu} = l\sqrt{LC} \]
+The above solution can now be written as
+\[	V(x,s)=V_B(x,s)+V_F(x,s)	\]
+where
+\[	V_B(x,s)\stackrel{\triangle}{=}V_b(s)e^{ sx/\mu}=V_b(s)e^{ sTx/l} \]
+\[	V_F(x,s)\stackrel{\triangle}{=}V_f(s)e^{-sx/\mu}=V_f(s)e^{-sTx/l} \]
+Note that $V_b(s)$ and $V_f(s)$ are just the backward and forward voltages
+at the front end of the line
+\[	V_b(s)=V_B(0,s),\;\;\;\;\mbox{and}\;\;\;\;V_f(s)=V_F(0,s)	\]
+The time domain solution can be obtained as
+\[
+v(x,t)={\cal L}^{-1}[V(x,s)]={\cal L}^{-1}[V_b(x,s)]+{\cal L}^{-1}[V_f(x,s)]
+=v_b(t+x/\mu)+v_f(t-x/\mu)	
+\]
+where
+\[ v_b(t)={\cal L}^{-1}[V_b(s)],\;\;\;\;\;v_f(t)={\cal L}^{-1}[V_f(s)] \]
+The solution is composed of two voltage waves $v_b(t+x/\mu)$ and $v_f(t-x/\mu)$
+traveling along the transmission line in backward and forward directions, 
+respectively. Similar result can be obtained for the current equation:
+\[	I(x,s)=I_B(x,s)+I_F(x,s)=I_b(s)e^{sx/\mu}+I_f(s)e^{-sx/\mu} \]
+or in the time domain
+\[	i(x,t)=i_b(t+x/\mu)+i_f(t-x/\mu)	\]
+
+\newpage
+\section*{Characteristic Impedance}
+
+Substituting $V(x,s)=V_b(s)e^{sx/\mu}+V_f(s)e^{-sx/\mu}$ and
+$I(x,s)=I_b(s)e^{sx/\mu}+I_f(s)e^{-sx/\mu}$ into the equation
+\[	\frac{dV}{dx}=-sLI	\]
+we have
+\[	\frac{s}{\mu}[V_f(s)e^{sx/\mu}-V_b(s)e^{-sx/\mu}]
+	=-sL[I_f(s)e^{sx/\mu}+I_b(s)e^{-sx/\mu}]	\]
+or 
+\[ [\frac{s}{\mu}V_b(s)+sLI_b(s)]e^{sx/\mu}=
+	[\frac{s}{\mu}V_f(s)-sLI_f(s)]e^{-sx/\mu}	\]
+For this equation to hold for all $x$, the coefficients of the
+exponentials have to be zero:
+\[	\frac{s}{\mu}V_b(s)+sLI_b(s)=\frac{s}{\mu}V_f(s)-sLI_f(s)=0 \]
+From these equations we can find the {\em characteristic impedance} 
+of the transmission line defined as the ratio between forward voltage 
+and current
+\[	Z_0(s)\stackrel{\triangle}{=}\frac{V_f(s)}{I_f(s)}
+	=L\mu=\frac{L}{\sqrt{LC}}=\sqrt{\frac{L}{C}}	\]
+and the ratio between backward voltage and current is
+\[	\frac{V_b(s)}{I_b(s)}=-L\mu=-\frac{L}{\sqrt{LC}}
+	=-\sqrt{\frac{L}{C}}=-Z_0(s)	\]
+We also have
+\[	\frac{V_F(x,s)}{I_F(x,s)}
+	=\frac{V_f(s)e^{-sTx/l}}{I_f(s)e^{-sTx/l}}
+	=\frac{V_f(s)}{I_f(s)}=Z_0(s)	\]
+\[	\frac{V_B(x,s)}{I_B(x,s)}
+	=\frac{V_b(s)e^{-sTx/l}}{I_b(s)e^{-sTx/l}}
+	=\frac{V_b(s)}{I_b(s)}=-Z_0(s)	\]
+Note that the characteristic impedance $Z_0(s)$ is solly determined by the
+distributive inductance $L$ and capacitance $C$ of the transmission
+line, and it is independent of the total length $l$ of the line.
+
+\newpage
+\section*{Termination}
+
+The transmission line is typically used to connect a voltage source
+$v_0(t)$ or $V_0(s)$ with output (internal) impedance $Z_1(s)$ and a
+load of input impedance $Z_2(s)$, as shown in the figure. 
+
+\begin{itemize}
+\item At the front of the line ($x=0$), we have
+\[	V_1(s)=V_0(s)-I_1(s)Z_1(s)	\]
+but as
+\[ V_1(s)=V(x,s)|_{x=0}=[V_b(s)e^{sTx/l}+V_f(s)e^{-sTx/l}]_{x=0}
+	=V_b(s)+V_f(s)	\]
+\[ I_1(s)=I(x,s)|_{x=0}=[I_b(s)e^{sTx/l}+I_f(s)e^{-sTx/l}]_{x=0}
+	=I_b(s)+I_f(s)	\]
+we have
+\[ V_b(s)+V_f(s)=V_0(s)-[I_b(s)+I_f(s)]Z_1(s)
+	=V_0(s)-[-V_b(s)+V_f(s)]\frac{Z_1(s)}{Z_0(s)}	\]
+Solving for $V_f(s)$, we have
+\[
+V_f(s)=\frac{Z_0(s)}{Z_0(s)+Z_1(s)}V_0(s)+\frac{Z_1(s)-Z_0(s)}{Z_1(s)+Z_0(s)}V_b(s)
+=A(s)V_0(s)+\eta_1(s)V_b(s)	\]
+where
+\[	A(s)\stackrel{\triangle}{=}\frac{Z_0(s)}{Z_0(s)+Z_1(s)}	\]
+is the {\em voltage attenuation ratio} describing the transmission 
+line and the output impedance of the source as a voltage divider, and
+\[ \eta_1(s)\stackrel{\triangle}{=}\frac{Z_1(s)-Z_0(s)}{Z_1(s)+Z_0(s)} \]
+is the {\em reflection coefficient at the front of the line}
+representing how much of the backward voltage wave is reflected at
+the front. Note, in particular, that when the output impedance of the
+source is the same as the characteristic impedance
+\[	Z_1(s)=Z_0(s)	\]
+the backward voltage is not reflected at the front end.
+
+\item At the end of the transmission line ($x=l$), we have
+\[	V_2(s)=I_2(s)Z_2(s)	\]
+but as
+\[ V_2(s)=V(x,s)|_{x=l}=[V_b(s)e^{sx/\mu}+V_f(s)e^{-sx/\mu}]_{x=l}
+	=V_b(s)e^{sT}+V_f(s)e^{-sT}	\]
+\[ I_2(s)=I(x,s)|_{x=l}=[I_b(s)e^{sx/\mu}+I_f(s)e^{-sx/\mu}]_{x=l}
+	=I_b(s)e^{sT}+I_f(s)e^{-sT}	\]
+we have
+\[ V_b(s)e^{sT}+V_f(s)e^{-sT}=[I_b(s)e^{sT}+I_f(s)e^{-sT}]Z_2(s)
+   =[-V_b(s)e^{sT}+V_f(s)e^{-sT}]\frac{Z_2(s)}{Z_0(s)} \]
+From this we can find the ratio between the backward voltage and
+the forward voltage at the end of the line:
+\[	\eta_2(s)\stackrel{\triangle}{=}\frac{V_B(l,s)}{V_F(l,s)}
+	=\frac{V_be^{sT}}{V_fe^{-sT}}
+	=\frac{Z_2(s)-Z_0(s)}{Z_2(s)+Z_0(s)}		\]
+which is defined as the {\em reflection coefficient at the end of the line}
+representing how much of the forward voltage wave is reflected at the 
+end. Note, in particular, that when the load impedance is equal to the 
+characteristic impedance
+\[	Z_2(s)=Z_0(s)	\]
+the forward voltage is not reflected and the backward voltage is zero.
+\end{itemize}
+
+\newpage
+\section*{Determination of $V_b(s)$ and $V_f(s)$}
+
+Summarizing the above, we have two simultaneous equations with 
+$V_b(s)$ and $V_f(s)$ as two unknowns:
+\[ \left\{ \begin{array}{ll}
+V_f(s)=A(s)V_0(s)+\eta_1(s)V_b(s) & \mbox{(at the front $x=0$)} \\
+V_b(s)e^{sT}=\eta_2(s)V_f(s)e^{-sT} & \mbox{(at the end $x=l$)}
+	\end{array} \right. \]
+Given the voltage source $V_0(s)$, we can solve these simultaneous
+equations to get the forward and backward voltage waves
+\[ V_f(s)=\frac{A(s)}{1-\eta_1(s)\eta_2(s)e^{-2sT}}V_0(s) \]
+\[ V_b(s)=\frac{A(s)\eta_2(s)e^{-2sT}}{1-\eta_1(s)\eta_2(s)e^{-2sT}}V_0(s) \]
+Moreover, the voltages at the two ends of the transmission can be 
+obtained. At the front, we have
+\[ V_1(s)=V_b(s)+V_f(s)=\frac{A(s)[1+\eta_2(s)e^{-2sT}]}{1-\eta_1(s)\eta_2(s)e^{-2sT}}V_0(s) = T_1(s)V_0(s) \]
+where $T_1(s)$ is the {\em voltage transfer function at the front} 
+defined as
+\[ T_1(s)\stackrel{\triangle}{=}\frac{A(s)[1+\eta_2(s)e^{-2sT}]}{1-\eta_1(s)\eta_2(s)e^{-2sT}}	\]
+At the end, we have
+\[  V_2(s)=V_b(s)e^{sT}+V_f(s)e^{-sT}=\frac{A(s)[1+\eta_2(s)]e^{-sT}}{1-\eta_1(s)\eta_2(s)e^{-2sT}}V_0(s) = T_2(s)V_0(s) \]
+where $T_2(s)$ is the {\em voltage transfer function at the end} 
+defined as
+\[ T_2(s)\stackrel{\triangle}{=}\frac{A(s)[1+\eta_2(s)]e^{-sT}}{1-\eta_1(s)\eta_2(s)e^{-2sT}}	\]
+The input current is
+\begin{eqnarray}
+I_1(x,s) &=& I(x,s)|_{x=0}=I_b(s)+I_f(s)
+	\nonumber \\
+ & = &\frac{-V_b(s)+V_f(s)}{Z_0(s)}=\frac{A(s)[1-\eta_2(s)e^{-2sT}]}{1-\eta_1(s)\eta_2(s)e^{-2sT}}
+	\frac{V_0(s)}{Z_0(s)}	\nonumber 
+\end{eqnarray}
+And the {\em input impedance} of the transmission line can be 
+obtained:
+\[
+Z_{in}(s)\stackrel{\triangle}{=}\frac{V_1(s)}{I_1(s)}=\frac{1+\eta_2e^{-2sT}}{1-\eta_2e^{-2sT}}
+Z_0(s) \]
+
+\newpage
+{\large
+\section*{Summary}
+\begin{itemize}
+\item {\bf Characteristic impedance:}
+\[	Z_0(s)=\sqrt{L/C}	\]
+\item {\bf Velocity of traveling wave:}
+\[	\mu = \frac{1}{\sqrt{LC}}	\]
+\item {\bf Voltage attenuation ratio:}
+\[ A(s)=\frac{Z_0(s)}{Z_0(s)+Z_1(s)}	\]
+\item {\bf Reflection coefficient at front:}
+\[ \eta_1(s)=\frac{Z_1(s)-Z_0(s)}{Z_1(s)+Z_0(s)} \]
+\item {\bf Reflection coefficient at end:}
+\[ \eta_2(s)=\frac{Z_2(s)-Z_0(s)}{Z_2(s)+Z_0(s)} \]
+\item {\bf Voltage transfer function at front:}
+\[ T_1(s)=\frac{A(s)[1+\eta_2(s)e^{-2sT}]}{1-\eta_1(s)\eta_2(s)e^{-2sT}} \]
+\item {\bf Voltage transfer function at end:}
+\[ T_2(s)=\frac{A(s)[1+\eta_2(s)]e^{-sT}}{1-\eta_1(s)\eta_2(s)e^{-2sT}} \]
+\item {\bf Input impedance:}
+\[ Z_{in}(s)=\frac{1+\eta_2e^{-2sT}}{1-\eta_2e^{-2sT}}Z_0(s) \]
+\end{itemize}
+}
+\newpage
+\section*{Physical interpretation}
+
+To find the physical interpretation of the voltage transfer functions
+$T_1$ and $T_2$ at both ends of the line, we first consider their common
+denominator. Assuming $Re[s]>0$ (and also $|\eta_1|<1$ and $|\eta_2|<1$), 
+we have $|\eta_1\eta_2e^{-2sT}|<1$ and the common denominator can be 
+expanded to become:
+\[	\frac{1}{1-\eta_1\eta_2e^{-2sT}}=1+\eta_1\eta_2e^{-2sT}
+	+(\eta_1\eta_2e^{-2sT})^2+(\eta_1\eta_2e^{-2sT})^3+\cdots 
+\]
+The voltage at front of the line is
+\[ V_1=T_1V_0=AV_0(1+\eta_2e^{-s2T})[1+\eta_1\eta_2e^{-2sT}
+	+(\eta_1\eta_2)^2e^{-4sT}+\cdots ]	\]
+Here $AV_0$ is the voltage first entering the line at $t=0$, the term 
+$(1+\eta_2 e^{-s2T})$ represents the sum of the forward wave and backward
+wave reflected by the end of the line arriving at front after $2T$ time
+delay. The general term $(\eta_1\eta_2)^ke^{-2ksT}$ ($k=1,2,3, \cdots$) 
+inside the brackets represents the signal arriving at the front of the line
+after traveling forward and backward $k$ times along the line and being 
+reflected $k$ times at both ends. When the impedances are not well matched 
+($Z_0\ne Z_1$, $Z_0\ne Z_2$), there will be multiple (infinite in principle)
+reflections in the transmission line.
+
+The output voltage at end of the line is 
+\begin{eqnarray}
+V_2 &=& T_2V_0=AV_0(1+\eta_2)e^{-sT}[1+\eta_1\eta_2e^{-2sT}
+	+(\eta_1\eta_2)^2e^{-4sT}+\cdots ]
+	\nonumber \\
+ &=& AV_0 [ (1+\eta_2)e^{-sT}+(1+\eta_2)\eta_1\eta_2e^{-3sT}+
+	(1+\eta_2)(\eta_1\eta_2)^2e^{-5sT}+ \cdots ]
+	\nonumber 
+\end{eqnarray}
+Again $AV_0$ is the voltage first entering the line at $t=0$. The term 
+$(1+\eta_2)$ represents the sum of the forward wave and its reflection at
+the end of the line, and the factor $e^{-sT}$ represents the delay time for 
+the wave to travel forward from front to end of the line. The meaning of the
+general term $(\eta_1\eta_2)^ke^{-2ksT}$ is the same as above. 
+
+\newpage
+\section*{Examples}
+
+\begin{itemize}
+\item Assume the output impedance of the voltage source, the input
+	impedance of the load and the characteristic impedance of
+	the transmission line are all the same $Z_1=Z_2=Z_0$. Then we
+	have:
+
+\[ A(s)=\frac{Z_0(s)}{Z_0(s)+Z_1(s)}=\frac{1}{2}   \]	
+
+\[ \eta_1(s)=\frac{Z_1(s)-Z_0(s)}{Z_1(s)+Z_0(s)}=0 \]
+
+\[ \eta_2(s)=\frac{Z_2(s)-Z_0(s)}{Z_2(s)+Z_0(s)}=0 \]
+
+\[ T_1(s)=\frac{A(s)[1+\eta_2(s)e^{-2sT}]}{1-\eta_1(s)\eta_2(s)e^{-2sT}}=A(s)=\frac{1}{2}	\]
+
+\[ T_2(s)=\frac{A(s)[1+\eta_2(s)]e^{-sT}}{1-\eta_1(s)\eta_2(s)e^{-2sT}}=A(s)e^{-sT}=\frac{1}{2}e^{-sT}	\]
+
+\[ Z_{in}(s)=\frac{1+\eta_2e^{-2sT}}{1-\eta_2e^{-2sT}}Z_0(s)=Z_0(s) \]
+
+Under a step input 
+\[	V_0(s)=\frac{V}{s}	\]
+i.e.,
+\[	v_0(t)=V u(t)=\left\{ \begin{array}{ll}0 & t<0 \\ V & t \ge 0
+	\end{array} \right. \]
+we have
+\[	V_1(s)=T_1(s)V_0(s)=\frac{V}{2}	\]
+i.e., 
+\[	v_1(t)={\cal L}^{-1}[V_1(s)]=\frac{V}{2}u(t)	\]
+and
+\[	V_2(s)=T_2(s)V_0(s)=\frac{V}{2}e^{-sT}	\]
+i.e.,
+\[	v_2(t)={\cal L}^{-1}[V_2(s)]=\frac{V}{2}u(t-T)	\]
+The load and the transmission line behave like a voltage divider with
+a pure delay of $T$. In particular, if the internal impedance is zero
+$Z_1=0$, we have $A(s)=1$, $\eta_1(s)=-1$, $\eta_2(s)=0$, $T_1(s)=1$,
+$T_2(s)=e^{-sT}$, $Z_{in}(s)=Z_0(s)$, and consequently, 
+\[	V_1(s)=T_1(s)V_0(s)=V_0(s)	\]
+\[	V_2(s)=T_2(s)V_0(s)=V_0(s)e^{-sT}	\]
+i.e., the input voltage $V_0(s)$ is transmitted to the output (the 
+load) without distortion but a pure delay of $T$. 
+
+\item Assume $Z_1(s)=Z_0(s)$ but the load is an open circuit, i.e., 
+$Z_2(s)\rightarrow \infty$, we have
+\[	A(s)=\frac{1}{2} \]
+\[	\eta_1(s)=0	\]
+\[	\eta_2(s)=1	\]
+\[	T_1(s)=\frac{1}{2}(1+e^{-2sT})	\]
+\[	T_2(s)=e^{-sT}	\]
+\[ Z_{in}(s)=\frac{1+e^{-2sT}}{1-e^{-2sT}}Z_0(s)=\frac{Z_0(s)}{tanh(sT)} \]
+In particular, if $|sT| << 1$, we have
+\[ Z_{in}(s)\approx \frac{Z_0(s)}{sT}=\frac{\sqrt{L/C}}{sl\sqrt{LC}}
+	=\frac{1}{slC}=\frac{1}{sC_{line}}	\]
+i.e., if $T$ is short compared to times of interest (pulse width or
+period of signal), the open circuit load behaves like a capacitor of
+capacitance equal to that of the entire line $C_{line}=lC$.
+
+Under the same step input $V_0(s)=V/s$, or $v_0(t)=Vu(t)$, we have
+\[	V_2(s)=T_2(s)V_0(s)=\frac{V}{s}e^{-sT}	\]
+or
+\[	v_2(t)={\cal L}^{-1}[V_2(s)]=Vu(t-T)	\]
+i.e., the output is just a delayed version of the input. But at the
+front
+\[	V_1(s)=T_1(s)V_0(s)=\frac{V}{2s}(1+e^{-2sT})	\]
+or
+\[	v_1(t)={\cal L}^{-1}[V_1(s)]=\frac{V}{2}[u(t)+u(t-2T)]	\]
+The second term $u(t-2T)$ is the reflection at the end of the line
+with coefficient $\eta_2(s)=1$ which arrives at the front after
+the signal traveling along the line forward and backward in $2T$ time.
+But as $\eta_1(s)=0$, it is no longer reflected at the front.
+
+\item Assume $Z_1(s)=Z_0(s)$ but the load is a short circuit, i.e., 
+$Z_2(s)=0$, we have
+\[	A(s)=\frac{1}{2} \]
+\[	\eta_1(s)=0	\]
+\[	\eta_2(s)=-1	\]
+\[	T_1(s)=\frac{1}{2}(1-e^{-2sT})	\]
+\[	T_2(s)=0	\]
+\[ Z_{in}(s)=\frac{1-e^{-2sT}}{1+e^{-2sT}}Z_0(s)=Z_0(s)\;tanh(sT) \]
+In particular, if $|sT| << 1$, we have
+\[ Z_{in}(s)\approx Z_0(s) \;sT=\sqrt{L/C}sl\sqrt{LC}
+	=slL=sL_{line}	\]
+i.e., if $T$ is short compared to times of interest, the short
+circuit load behaves like an inductor of inductance equal to that of 
+the entire line $L_{line}=lL$.
+
+Under the same step input $V_0(s)=V/s$, or $v_0(t)=Vu(t)$, we have
+\[	V_2(s)=T_2(s)V_0(s)=0	\]
+i.e., the output is zero due to the short circuit load. But at the
+front
+\[	V_1(s)=T_1(s)V_0(s)=\frac{V}{2s}(1-e^{-2sT})	\]
+or
+\[	v_1(t)={\cal L}^{-1}[V_1(s)]=\frac{V}{2}[u(t)-u(t-2T)]	\]
+The second term $-u(t-2T)$ is the reflection at the end of the line
+with coefficient $\eta_2(s)=-1$ which arrives at the front after
+the signal traveling along the line forward and backward in $2T$ time.
+As the reflected signal $-u(t-2T)$ cancels the input $u(t)$ after $2T$
+time, the step input becomes a pulse of width $2T$ at the front of
+the line.
+
+\item Assume $Z_1(s)=Z_0(s)$ but the load is a pure inductance, i.e.,
+$Z_2(s)=sL_2$, we have
+\[	A(s)=\frac{1}{2} \]
+\[	\eta_1(s)=0	\]
+\[	\eta_2(s)=\frac{sL_2-Z_0(s)}{sL_2+Z_0(s)}
+	=\frac{s-1/\tau}{s+1/\tau} \]
+where $\tau\stackrel{\triangle}{=}sL_2/Z_0(s)$ is the time constant of the
+circuit. 
+\[	T_1(s)=\frac{1}{2}[1+\frac{s-1/\tau}{s+1/\tau} e^{-2sT}] \]
+\[	T_2(s)=\frac{s}{s+1/\tau}e^{-sT} \]
+
+The response at the front of the line to a step input 
+$v_0(t)=Vu(t)$ or $V_0(s)=V/s$ is
+\begin{eqnarray}
+V_1(s) & = & T_1(s)V_0(s)
+	=\frac{1}{2}[1+\frac{s-1/\tau}{s+1/\tau}e^{-2sT}]\frac{V}{s}
+	\nonumber \\
+ & = & \frac{V}{2s}[1+(\frac{2s}{s+1/\tau}-1)e^{-2sT}]
+  =\frac{V}{2s}(1-e^{-2sT})+\frac{V}{s+1/\tau}e^{-2sT}
+	\nonumber 
+\end{eqnarray}
+or in time domain
+\[	v_1(t)={\cal L}^{-1}[V_1(s)]=\frac{V}{2}[u(t)-u(t-2T)]+Ve^{-(t-2T)/\tau}u(t-2T) \]
+The response at the end of the line is
+\[ 	V_2(s)=T_2(s)V_0(s)=\frac{s}{s+\tau}e^{-sT} \frac{V}{s}
+	=\frac{V}{s+\tau}e^{-sT} \]
+or in time domain
+\[	v_2(t)={\cal L}^{-1}[V_2(s)]=Ve^{-(t-T)/\tau}u(t-T)	\]
+We see that this is a {\em delayed differentiator} with delay time $T$. 
+
+%The input impedance is
+% \[ Z_{in}(s)=\frac{sL_2(1+e^{-2sT})+Z_0(s)(1-e^{-2sT})}
+%	{sL_2(1-e^{-2sT})+Z_0(s)(1+e^{-2sT})}Z_0(s)	\]
+
+\item So far we have only considered some special cases where either
+$\eta_1(s)=0$ or $\eta_2(s)=0$ (reflection at either or both ends is
+zero). As the result, the denominator of $T_1(s)$ and $T_2(s)$ is always 1.
+Now we consider the general case where $\eta_1(s)\ne 0$ and $\eta_2(s) 
+\ne 0$. Assume $Z_1=Z_0/2$ and $Z_2=2Z_0$, and an impulse input
+\[	v_0(t)=u(t)-u(t-T/3)	\]
+then we have
+\[ A=\frac{Z_0}{Z_1+Z_0}=\frac{2Z_1}{Z_1+2Z_1}=\frac{2}{3} \]
+\[ \eta_1=\frac{Z_1-Z_0}{Z_1+Z_0}=\frac{Z_1-2Z_1}{Z_1+2Z_1}=-\frac{1}{3} \]
+\[ \eta_2=\frac{Z_2-Z_0}{Z_2+Z_0}=\frac{2Z_0-Z_0}{2Z_0+Z_0}=\frac{1}{3}  \]
+The output 
+\[	V_2=V_0A(1+\eta_2)e^{-sT}[1+\eta_1\eta_2 e^{-2sT}
+	+(\eta_1\eta_2)^2 e^{-4sT}+\cdots ]	\]
+where
+\[	1+\eta_2=1+\frac{1}{3}=\frac{4}{3}	\]
+\[ 	\eta_1 \eta_2=-\frac{1}{9}	\]
+\begin{itemize}
+\item $t=T:$ 
+\[	v_2=\frac{4}{3}Av_0=\frac{8}{9}v_0	\]
+\item $t=3T:$ 
+\[ v_2=\frac{4}{3}A(-\frac{1}{9})v_0=-\frac{4}{27}Av_0=-\frac{8}{81}v_0 \]
+\item $t=5T:$ 
+\[ v_2=\frac{4}{3}A(\frac{1}{81})v_0=\frac{4}{243}Av_0=\frac{8}{729}v_0	\]
+\item
+\[	\cdots  \cdots  \cdots  \cdots  \]
+\end{itemize}
+Note that as the signal only has a finite $T/3$ duration, at any time $t=2kT$
+only the term $(\eta_1\eta_2)^k e^{-2ksT}$ representing the wave arriving at
+the end most recently is non-zero.
+
+\end{itemize}
+
+\newpage
+\section*{Attenuation}
+
+The above LC model of the transmission line above is based on the 
+assumption that the line is loss-less, i.e., $R=G=0$. In reality the 
+signal is always attenuated due to the resistance $R$ in series with 
+the inductance $L$ and the conductance $G$ in parallel with the 
+capacitance $C$.($G=1/R_l$, where $R_l$ is the leakage resistance of
+the capacitor.) The two partial differential equations describing the
+line become
+\[
+\frac{\partial v}{\partial x}+L \frac{\partial i}{\partial t}+Ri=0
+\]
+\[
+\frac{\partial i}{\partial x}+C \frac{\partial v}{\partial t}+Gv=0
+\]
+In Laplace domain, these equations are
+\[
+\frac{dV(x,s)}{dx}=-(R+sL)I(x,s)=-sL'I(x,s)
+\]
+\[
+\frac{dI(x,s)}{dx}=-(G+sC)V(x,s)=-sC'V(x,s)
+\]
+where
+\[	L'\stackrel{\triangle}{=}L(1+\frac{R}{sL})	\]
+\[	C'\stackrel{\triangle}{=}C(1+\frac{G}{sC})	\]
+Based on these definitions, the above equations take the same form
+as that of the loss-less model (with $L$ and $C$ replaced by $L'$ and
+$C'$ respectively) and can be solved in the same way. Specifically,
+we have
+\[
+T=l\sqrt{L'C'}=l\sqrt{LC}\sqrt{(1+\frac{R}{sL})(1+\frac{G}{sC})}
+\]
+and
+\[ Z_0(s)=\sqrt{\frac{L'}{C'}}=\sqrt{\frac{L(1+R/sL)}{C(1+G/sC)}}
+\]
+If $R<<sL$, $G<<sC$, we have
+\[ T\approx l\sqrt{LC}[1+(\frac{R}{L}+\frac{G}{C})\frac{1}{2s}]	\]
+As before, the solution of the above equations is
+\[	V(x,s)=V_b(s)e^{sxT/l}+V_f(s)e^{-sxT/l}
+	\approx V_b(s)e^{\alpha x}e^{s\sqrt{LC}x}
+	+V_f(s)e^{-\alpha x}e^{-s\sqrt{LC}x}
+\]
+where $\alpha$ is the {\em attenuation constant} defined as:
+\[
+\alpha\stackrel{\triangle}{=}\frac{R}{2}\sqrt{\frac{C}{L}}+
+	\frac{G}{2}\sqrt{\frac{L}{C}}
+\]
+Note that the forward wave $V_f(s)$ attenuates exponentially as
+$x$ increases from 0 to $l$, while the backward wave $V_b(s)$
+attenuates exponentially as $x$ decreases from $l$ to 0.
+
+
+\end{document}
+
+
+
+
+The inductance and capacitance 
+associated with an infinitesimal section $dx$ of the transmission 
+line are $Ldx$ and $Cdx$, respectively, i.e., the total inductance
+and capacitance of the line are
+\[	L_{line}=\int_l Ldx=lL	\]
+and
+\[	C_{line}=\int_l Cdx=lC	\]

@@ -1,0 +1,175 @@
+\documentstyle[11pt]{article}
+\usepackage{html}
+\begin{document}
+\begin{center}
+{\Large \bf  Midterm Exam ---- E84, Spring, 2006}
+\end{center}
+
+\section*{Please fill out the feedback form}
+
+{\bf Note: } To help me improve my teaching of the course in the future, I would 
+like to collect your feedback and comments. Please fill the following form 
+{\bf anonymously} and turn it in {\bf separately} from your midterm exam. Your 
+help is greatly appreciated!
+
+\begin{itemize}
+\item {\bf Feedback:} (circle one of the numbers)
+\begin{itemize}
+
+\item {\bf Lecture pace:} (1 too slow, 3 just right, 5 too fast)
+
+\framebox[0.5in]{1}\framebox[0.5in]{2}\framebox[0.5in]{3}\framebox[0.5in]{4}\framebox[0.5in]{5}
+
+\item {\bf Lecture clearity:} (1 Too tedious, 3 just right, 5 too sketchy)
+
+\framebox[0.5in]{1}\framebox[0.5in]{2}\framebox[0.5in]{3}\framebox[0.5in]{4}\framebox[0.5in]{5}
+
+\item {\bf Overall homework workload:} (1 too little, 3 just right, 5 too much)
+
+\framebox[0.5in]{1}\framebox[0.5in]{2}\framebox[0.5in]{3}\framebox[0.5in]{4}\framebox[0.5in]{5}
+
+\item {\bf Overall difficulty of course materials:} (1 too easy, 3 just right, 5 too hard)
+
+\framebox[0.5in]{1}\framebox[0.5in]{2}\framebox[0.5in]{3}\framebox[0.5in]{4}\framebox[0.5in]{5}
+\end{itemize} 
+
+\item {\bf Comments:}
+\begin{itemize}
+
+\item {\bf What went well for your learning in the course? Be specific.}
+
+\begin{tabular}{l}
+.  \\
+.  \\
+.  \\
+\end{tabular}
+\vskip 5cm
+
+\item {\bf What did not go well for your learning in the course? Be specific.}
+\begin{tabular}{l}
+.  \\
+.  \\
+.  \\
+\end{tabular}
+\vskip 0.9in
+
+\item {\bf Indicate one thing you want to improve and how.}
+\begin{tabular}{l}
+.  \\
+.  \\
+.  \\
+\end{tabular}
+\vskip 0.9in
+
+\end{itemize}
+
+\end{itemize}
+
+
+\section*{E84 Midterm Exam 1}
+
+{\bf Instructions}
+\begin{itemize}
+\item Take home, open everything except discussion. 
+\item Mark your start and end times. 
+\item Compare your print-out of the exam with the online version to make
+	sure your hard copy is complete.
+\item Mark your name and question number clearly on top of each page.
+	Indicate the total number of pages submitted.
+\item When solving a problem, list all the steps. In each step, describe 
+	concisely what you are doing in English, then show the calculation 
+	and the result of the step. A final answer, even if correct, without 
+	evidence of the steps leading to the answer will not receive credit.
+\end{itemize}
+
+{\bf The Problems}
+\begin{enumerate}
+
+\item {\bf Problem 0. (20 points)} 
+Use Norton's thereom to convert the circuit below (left) to an equivalent 
+current source with $R_N$ and $I_N$ in parallel (right).
+
+\htmladdimg{../midterm06sa.gif}
+
+{\bf Solution:} When the current source is open, the resistance between a 
+and b is $R_N=(8+12)||(16+4)=10$. To find the short-circuit current from a 
+to b, realize that the total current of 5A goes through the parallel connection 
+of $8\Omega$ and $12\Omega$ resistors and then the parallel connection of 
+$16\Omega$ and $4\Omega$ resistors. The currents through the $8\Omega$ and 
+$16\Omega$ resistors are, respectively, $5A *12/(12+8)=3A$ and $5A *4/(16+4)=1A$,
+and due to KCL at node a, the current from a to b is $I_N=3A-1A=2A$.
+
+\item {\bf Problem 1. (20 points)} 
+
+The values of $\omega$, $L$ and $C$ of the circuit below are such that 
+$\omega L=5\Omega$, $1/\omega C=5\Omega$, and also $R=10\Omega$. Find the 
+phase difference between the input voltage $v_{in}(t)$ and the output 
+voltage $v_{out}(t)$. Which of the two voltages is leading? by how much?
+
+\htmladdimg{../midterm06sb.gif}
+
+{\bf Solution:} 
+\[ \dot{V}_{out}=\dot{V}_{in} \frac{-j5||10}{-j5||10+j5}=-2j=2\angle -90^\circ \]
+So $v_{out}(t)$ is lagging $v_{in}S(t)$ by $90^\circ$.
+
+\item {\bf Problem 3. (25 points)} 
+
+The one-port network in the circuit below is a resistor network with some
+energy sources. When the switch is in position 1, the ideal ammeter reads
+3A, when the switch is in position 2, the ideal voltmeter reads 9V. Find 
+the output voltage $v_{out}(t)$ across the inductor with $L=1\,H$ after 
+the switch is turned into positon 3 at $t=0$.
+
+\htmladdimg{../midterm06sd.gif}
+
+{\bf Solution:} 
+\begin{itemize}
+\item Model the one-port network by a Thevenin equivalent circuit with 
+open-circuit voltage $V_T=9V$ and internal resistance $R_T$, which can
+be found to be $R_T=V_T/I_{sc}=9V/3A=3\Omega$.
+\item $v_{out}(0_+)=V_t=9V$, $v_{out}(\infty)=0V$, $\tau=L/R=1H/3\Omega=1/3\;s$,
+  the output voltage is therefore:
+  \[ v_{out}(t)=v_{out}(\infty)+[v_{out}(0_+)-v_{out}(\infty)]e^{-t/\tau}
+    =9 e^{-3t} \]
+\end{itemize}
+
+\item {\bf Problem 3. (35 points)} 
+
+In the circuit below, $R_1=2\Omega$, $R_2=3\Omega$, $R_3=6\Omega$, $L=0.5H$, 
+$V_1=6V$, $V_2=3V$, and before the switch S closes at $t=0$, the circuit is 
+already in steady state. Find the current $i_1(t)$ through $R_1$ for $t>0$.
+(Hint: as current through an inductor cannot change instantaeously, the 
+inductor can be treated as a current source right after the switch is closed.)
+
+\htmladdimg{../midterm06sc.gif}
+
+{\bf Solution:} 
+\begin{itemize}
+\item First find current through $L$ at $t=0$: 
+  \[ i_L(0_+)=i_L(0_-)=V_1/R_3=3V/6\Omega=0.5A \]
+\item Then find $i_1(0_+)$ by superposition (with three energy sources $V_1=6V$, 
+  $V_2=3V$ and current source due to the inductor $I_L=0.5A$:
+\begin{itemize}
+  \item $V_1=6V$ alone:
+    current thru $V_1$ is $ V_1/(R_1|| R_3+R_2)=6/(2||6+3)=4/3\;A$, current thru $R_1$ is
+    $4/3 \times R_3/(R_1+R_3)=4/3 \times 6/8=1 A$ (downward).
+  \item $V_2=3V$ alone: 
+    current thru $R_1$ is $V_2/(R_2||R_3+R_1)=3/(3||6+2)=3/4=0.75 \;A $ (downward)
+  \item $I_L=0.5A$ alone:
+    current thru $R_1$ is $I_L \times (R_2||R_3)/(R_2||R_3+R_1)=0.5\times 2/4=0.25\;A$
+    (upward)
+\end{itemize}
+The total current thru $R_1$ is therefore: $i_1(0_+)=1+0.75-0.25=1.5\;A$ (downward).
+\item $i_i(\infty)=0$, as $R_1$ is by-passed by $L$ with zero impedance when $t=\infty$.
+\item Find time constant: resistance $R$ between two ends of $L$ is $R_1||R_2||R_3=1\Omega$,
+  therefore $\tau=L/R=0.5/1=0.5\;s$.
+\item Finally, the current thru $R_1$ is 
+  \[ i_1(t)=i_1(\infty)+[i_1(0_+)-i_1(\infty)] e^{-t/\tau}=1.5 e^{2t}\; A \]
+\end{itemize}
+
+
+
+\end{enumerate}
+
+\end{document}
+

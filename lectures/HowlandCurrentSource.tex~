@@ -1,0 +1,74 @@
+\documentstyle[12pt]{article}
+\usepackage{html}
+%\usepackage{graphics}  
+\begin{document}
+
+\section*{Howland Current Source}
+
+  \htmladdimg{../figures/HowlandCurrentSource.png}
+
+  Assuming $R_2/R_1=R_4/R_3$, we can show that the output current
+  through the load $R_L$ is a constant determined by the input
+  voltages $V^-$ and $V^+$, as well as the circuit parameters.
+
+  \[
+  \frac{V^--V}{R_1}+\frac{V_0-V}{R_2}=0,\;\;\;\;\;\;
+  \frac{V^+-V}{R_3}+\frac{V_0-V}{R_4}=\frac{V}{R_L};
+  \]
+  Solving the first equation for $V_0-V$, we get
+  \[
+  V_0-V=(V-V^-)\frac{R_2}{R_1}=(V-V^-)\frac{R_4}{R_3}
+  \]
+  and substituting into the second equation, we get:
+  \[
+  \frac{V^+-V}{R_3}+\frac{V-V^-}{R_3}
+  =\frac{V^+-V^-}{R_3}=\frac{V}{R_L}=I_L
+  \]
+  We see that the current through the load resistor $R_L$
+  is constant, independent of $R_L$, i.e., the circuit is
+  a current source.
+
+
+  {\bf Logarithmic and Exponential Amplifiers}
+
+  \htmladdimg{../figures/ExpLogAmplifier.png}
+
+  Based on the relationship between the current through and voltage 
+  across a diode and the virtual ground assumption, we can show 
+  that the output voltage of the exponential amplifier (left) is
+  approximately an exponential function of the input voltage, and 
+  the output voltage of the logarithmic amplifier (right) is 
+  approximately a logarithmic function of the input voltage.
+  
+  First, the current $I_D$ through and voltage $V_D$ across a diode 
+  are related by:
+  \[           
+  I_D=I_0 \left( e^{V_D/\eta V_T}-1 \right)\approx I_0 \; e^{V_D/\eta V_T},
+  \]        
+  where $I_0$, $\eta$ and $V_T$ are some parameters, and $V_D/\eta V_T$ 
+  is large enough so that $e^{V_D/\eta V_T}\gg 1$.    
+
+  \begin{itemize}  
+  \item Applying KCL to inverting input of the circuit on the left, 
+  we get
+  \[
+  I_0\;e^{V_{in}/\eta V_T}+\frac{V_{out}}{R}=0,\;\;\;\;\mbox{i.e.}\;\;\;\;
+  V_{out}=-I_0R\;e^{V_{in}/\eta V_T}
+  \]      
+  \item Applying KCL to inverting input of the circuit on the right, 
+  we get
+  \[
+  \frac{V_{in}}{R}=I_0\;e^{-V_{out}/\eta V_T},\;\;\;\;\mbox{i.e.}\;\;\;\;
+  V_{out}=-\eta V_T \ln\frac{V_{in}}{RI_0}
+  \]      
+  \end{itemize}
+  Comparing the above with the desired:
+  \[
+  V_{out}=C \;\exp(V_{in}/a),\;\;\;\;\;V_{out}=D\;\ln(V_{in}/b)
+  \]
+  we see that
+  \[
+  C=-I_0R,\;\;\;\;a=\eta V_T,\;\;\;\;D=-\eta V_T,\;\;\;\;b=RI_0
+  \]  
+
+\end{document}

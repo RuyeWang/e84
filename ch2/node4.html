@@ -1,0 +1,1794 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Two-Port Networks</TITLE>
+<META NAME="description" CONTENT="Two-Port Networks">
+<META NAME="keywords" CONTENT="ch2">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="ch2.css">
+
+<LINK REL="next" HREF="node5.html">
+<LINK REL="previous" HREF="node3.html">
+<LINK REL="up" HREF="node1.html">
+<LINK REL="next" HREF="node5.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html57"
+  HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html55"
+  HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html49"
+  HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html58"
+  HREF="node5.html">Active Circuits</A>
+<B> Up:</B> <A NAME="tex2html56"
+  HREF="node1.html">Chapter 2: Circuit Principles</A>
+<B> Previous:</B> <A NAME="tex2html50"
+  HREF="node3.html">Network Theorems</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00013000000000000000">
+Two-Port Networks</A>
+</H2>
+
+<P>
+<B>Models of two-port networks</B>
+
+<P>
+Many complex passive and linear circuits can be modeled by a two-port network
+model as shown below. A two-port network is represented by four external 
+variables: voltage <IMG
+ WIDTH="23" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img60.png"
+ ALT="$V_1$"> and current <IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$I_1$"> at the input port, and voltage 
+<IMG
+ WIDTH="23" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img61.png"
+ ALT="$V_2$"> and current <IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$I_2$"> at the output port, so that the two-port network 
+can be treated as a black box modeled by the relationships between the 
+four variables <IMG
+ WIDTH="23" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img60.png"
+ ALT="$V_1$">, <IMG
+ WIDTH="23" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img61.png"
+ ALT="$V_2$">, <IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$I_1$"> and <IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$I_2$">. There exist six different ways 
+to describe the relationships between these variables, depending on which 
+two of the four variables are given, while the other two can always be derived.
+
+<P>
+<B>Note: </B> All voltages and currents below are complex variables and
+represented by phasors containing both magnitude and phase angle. However, 
+for convenience the phasor notation <IMG
+ WIDTH="20" HEIGHT="22" ALIGN="BOTTOM" BORDER="0"
+ SRC="img256.png"
+ ALT="$\dot{V}$"> and <IMG
+ WIDTH="14" HEIGHT="21" ALIGN="BOTTOM" BORDER="0"
+ SRC="img257.png"
+ ALT="$\dot{I}$"> are replaced by 
+<IMG
+ WIDTH="20" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img39.png"
+ ALT="$V$"> and <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img97.png"
+ ALT="$I$"> respectively.
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../figures/twoportmodel.gif"
+ ALT="twoportmodel.gif">
+
+<P>
+
+<UL>
+<LI><B>Z or impedance model:</B> Given two currents <IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$I_1$"> and <IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$I_2$"> 
+  find voltages <IMG
+ WIDTH="23" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img60.png"
+ ALT="$V_1$"> and <IMG
+ WIDTH="23" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img61.png"
+ ALT="$V_2$"> by:
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\left\{ \begin{array}{l} V_1=Z_{11}I_1+Z_{12}I_2 \\
+    V_2=Z_{21}I_1+Z_{22}I_2 \end{array} \right.\;\;\;\;\;
+  \left[ \begin{array}{l} V_1 \\V_2\end{array} \right]=
+  \left[ \begin{array}{ll} Z_{11} & Z_{12}\\Z_{21} & Z_{22}\end{array}\right]
+  \left[ \begin{array}{l} I_1 \\I_2\end{array} \right]
+  ={\bf Z}\left[ \begin{array}{l} I_1 \\I_2\end{array} \right]
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="535" HEIGHT="55" BORDER="0"
+ SRC="img258.png"
+ ALT="\begin{displaymath}\left\{ \begin{array}{l} V_1=Z_{11}I_1+Z_{12}I_2 \\
+V_2=Z_{...
+... ={\bf Z}\left[ \begin{array}{l} I_1 \\ I_2\end{array} \right] \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Here all four parameters <IMG
+ WIDTH="32" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img259.png"
+ ALT="$Z_{11}$">, <IMG
+ WIDTH="32" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img260.png"
+ ALT="$Z_{12}$">, <IMG
+ WIDTH="32" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img261.png"
+ ALT="$Z_{21}$">, and <IMG
+ WIDTH="32" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img262.png"
+ ALT="$Z_{22}$"> represent
+  impedance. In particular, <IMG
+ WIDTH="32" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img261.png"
+ ALT="$Z_{21}$"> and <IMG
+ WIDTH="32" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img260.png"
+ ALT="$Z_{12}$"> are <B>transfer impedances</B>, 
+  defined as the ratio of a voltage <IMG
+ WIDTH="23" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img60.png"
+ ALT="$V_1$"> (or <IMG
+ WIDTH="23" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img61.png"
+ ALT="$V_2$">) in one part of a network to 
+  a current <IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$I_2$"> (or <IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$I_1$">) in another part <!-- MATH
+ $Z_{12}=V_1/I_2$
+ -->
+<IMG
+ WIDTH="101" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img263.png"
+ ALT="$Z_{12}=V_1/I_2$">. <IMG
+ WIDTH="18" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img264.png"
+ ALT="${\bf Z}$"> is a 2 
+  by 2 matrix containing all four parameters.
+
+<P>
+</LI>
+<LI><B>Y or admittance model:</B> Given two voltages <IMG
+ WIDTH="23" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img60.png"
+ ALT="$V_1$"> and <IMG
+ WIDTH="23" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img61.png"
+ ALT="$V_2$">,
+  find currents <IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$I_1$"> and <IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$I_2$"> by:
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\left\{ \begin{array}{l} I_1=Y_{11}V_1+Y_{12}V_2 \\
+    I_2=Y_{21}V_1+Y_{22}V_2 \end{array} \right.\;\;\;\;\;
+  \left[ \begin{array}{l} I_1 \\I_2\end{array} \right]=
+  \left[ \begin{array}{ll} Y_{11} & Y_{12}\\Y_{21} & Y_{22}\end{array}\right]
+  \left[ \begin{array}{l} V_1 \\V_2\end{array} \right]
+  ={\bf Y}\left[ \begin{array}{l} V_1 \\V_2\end{array} \right]
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="535" HEIGHT="55" BORDER="0"
+ SRC="img265.png"
+ ALT="\begin{displaymath}\left\{ \begin{array}{l} I_1=Y_{11}V_1+Y_{12}V_2 \\
+I_2=Y_{...
+... ={\bf Y}\left[ \begin{array}{l} V_1 \\ V_2\end{array} \right] \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Here all four parameters <IMG
+ WIDTH="30" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img266.png"
+ ALT="$Y_{11}$">, <IMG
+ WIDTH="30" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img267.png"
+ ALT="$Y_{12}$">, <IMG
+ WIDTH="30" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img268.png"
+ ALT="$Y_{21}$">, and <IMG
+ WIDTH="30" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img269.png"
+ ALT="$Y_{22}$"> represent
+  admittance. In particular, <IMG
+ WIDTH="30" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img268.png"
+ ALT="$Y_{21}$"> and <IMG
+ WIDTH="30" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img267.png"
+ ALT="$Y_{12}$"> are <B>transfer admittances</B>. 
+  <IMG
+ WIDTH="21" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img270.png"
+ ALT="${\bf Y}$"> is the corresponding parameter matrix.
+
+<P>
+</LI>
+<LI><B>A or transmission model:</B> Given <IMG
+ WIDTH="23" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img61.png"
+ ALT="$V_2$"> and <IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$I_2$">, find 
+  <IMG
+ WIDTH="23" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img60.png"
+ ALT="$V_1$"> and <IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$I_1$"> by:
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\left\{ \begin{array}{l} 
+    V_1=A_{11}V_2+A_{12}(-I_2) \\
+    I_1=A_{21}V_2+A_{22}(-I_2) \end{array} \right.\;\;\;\;\;
+  \left[ \begin{array}{l} V_1 \\I_1\end{array} \right]=
+  \left[ \begin{array}{ll} A_{11} & A_{12}\\A_{21} & A_{22}\end{array}\right]
+  \left[ \begin{array}{r} V_2 \\-I_2\end{array} \right]
+  ={\bf A}\left[ \begin{array}{r} V_2 \\-I_2\end{array} \right]
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="604" HEIGHT="55" BORDER="0"
+ SRC="img271.png"
+ ALT="\begin{displaymath}\left\{ \begin{array}{l}
+V_1=A_{11}V_2+A_{12}(-I_2) \\
+I_...
+...={\bf A}\left[ \begin{array}{r} V_2 \\ -I_2\end{array} \right] \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Here <IMG
+ WIDTH="33" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img272.png"
+ ALT="$A_{11}$"> and <IMG
+ WIDTH="33" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img273.png"
+ ALT="$A_{22}$"> are dimensionless coefficients, <IMG
+ WIDTH="33" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img274.png"
+ ALT="$A_{12}$"> is impedance 
+  and <IMG
+ WIDTH="33" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img275.png"
+ ALT="$A_{21}$"> is admittance. A negative sign is added to the output current <IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$I_2$"> 
+  in the model, so that the direction of the current is out-ward, for easy
+  analysis of a cascade of multiple network models.
+
+<P>
+</LI>
+<LI><B>H or hybrid model:</B> Given <IMG
+ WIDTH="23" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img61.png"
+ ALT="$V_2$"> and <IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$I_1$">, find <IMG
+ WIDTH="23" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img60.png"
+ ALT="$V_1$"> and <IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$I_2$"> by:
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\left\{ \begin{array}{l} 
+    V_1=H_{11}I_1+H_{12}V_2 \\
+    I_2=H_{21}I_1+H_{22}V_2 \end{array} \right.\;\;\;\;\;
+  \left[ \begin{array}{l} V_1 \\I_2\end{array} \right]=
+  \left[ \begin{array}{ll} H_{11} & H_{12}\\H_{21} & H_{22}\end{array}\right]
+  \left[ \begin{array}{l} I_1 \\V_2\end{array} \right]
+  ={\bf H}\left[ \begin{array}{l} I_1 \\V_2\end{array} \right]
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="557" HEIGHT="55" BORDER="0"
+ SRC="img276.png"
+ ALT="\begin{displaymath}\left\{ \begin{array}{l}
+V_1=H_{11}I_1+H_{12}V_2 \\
+I_2=H...
+... ={\bf H}\left[ \begin{array}{l} I_1 \\ V_2\end{array} \right] \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Here <IMG
+ WIDTH="34" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img277.png"
+ ALT="$H_{12}$"> and <IMG
+ WIDTH="34" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img278.png"
+ ALT="$H_{21}$"> are dimensionless coefficients, <IMG
+ WIDTH="34" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img279.png"
+ ALT="$H_{11}$"> is impedance
+  and <IMG
+ WIDTH="34" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img280.png"
+ ALT="$H_{22}$"> is admittance. 
+
+<P>
+</LI>
+</UL>
+
+<P>
+<B>Generalization to nonlinear circuits</B>
+
+<P>
+The two-port models can also be applied to a nonlinear circuit if the 
+variations of the variables are small and therefore the nonlinear behavior 
+of the circuit can be piece-wise linearized. Assume <IMG
+ WIDTH="94" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img281.png"
+ ALT="$z=f(x,y)$"> is a nonlinear
+function of variables <IMG
+ WIDTH="15" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img74.png"
+ ALT="$x$"> and <IMG
+ WIDTH="14" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img75.png"
+ ALT="$y$">. If the variations <IMG
+ WIDTH="32" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img282.png"
+ ALT="$\triangle x$"> and 
+<IMG
+ WIDTH="31" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img283.png"
+ ALT="$\triangle y$"> are small, the function can be approximated by a linear 
+model 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\triangle z=\triangle f(x,y)=\frac{\partial f}{\partial x}\triangle x +
+                    \frac{\partial f}{\partial y}\triangle y
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="276" HEIGHT="50" BORDER="0"
+ SRC="img284.png"
+ ALT="\begin{displaymath}\triangle z=\triangle f(x,y)=\frac{\partial f}{\partial x}\triangle x +
+\frac{\partial f}{\partial y}\triangle y \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+with the linear coefficients
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\frac{\partial f}{\partial x}=\lim_{\triangle x\rightarrow 0}
+   \frac{\triangle f}{\triangle x}\bigg|_{\triangle y=0}
+   \;\;\;\;\;\;\;\;
+   \frac{\partial f}{\partial y}=\lim_{\triangle y\rightarrow 0}
+   \frac{\triangle f}{\triangle y}\bigg|_{\triangle x=0}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="377" HEIGHT="51" BORDER="0"
+ SRC="img285.png"
+ ALT="\begin{displaymath}\frac{\partial f}{\partial x}=\lim_{\triangle x\rightarrow 0}...
+...0}
+\frac{\triangle f}{\triangle y}\bigg\vert _{\triangle x=0}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+<B>Finding the model parameters</B>
+
+<P>
+For each of the four types of models, the four parameters can be found
+from variables <IMG
+ WIDTH="23" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img60.png"
+ ALT="$V_1$">, <IMG
+ WIDTH="23" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img61.png"
+ ALT="$V_2$">, <IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$I_1$"> and <IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$I_2$"> of a network by the following.
+
+<UL>
+<LI>For Z-model:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Z_{11}=\frac{V_1}{I_1}\bigg|_{I_2=0},\;\;\;\;
+	Z_{12}=\frac{V_1}{I_2}\bigg|_{I_1=0},\;\;\;\;
+	Z_{21}=\frac{V_2}{I_1}\bigg|_{I_2=0},\;\;\;\;
+	Z_{22}=\frac{V_2}{I_2}\bigg|_{I_1=0}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="528" HEIGHT="50" BORDER="0"
+ SRC="img286.png"
+ ALT="\begin{displaymath}Z_{11}=\frac{V_1}{I_1}\bigg\vert _{I_2=0},\;\;\;\;
+Z_{12}=\f...
+...t _{I_2=0},\;\;\;\;
+Z_{22}=\frac{V_2}{I_2}\bigg\vert _{I_1=0}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI>For Y-model:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Y_{11}=\frac{I_1}{V_1}\bigg|_{V_2=0},\;\;\;\;
+	Y_{12}=\frac{I_1}{V_2}\bigg|_{V_1=0},\;\;\;\;
+	Y_{21}=\frac{I_2}{V_1}\bigg|_{V_2=0},\;\;\;\;
+	Y_{22}=\frac{I_2}{V_2}\bigg|_{Y_1=0},\;\;\;\;
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="535" HEIGHT="50" BORDER="0"
+ SRC="img287.png"
+ ALT="\begin{displaymath}Y_{11}=\frac{I_1}{V_1}\bigg\vert _{V_2=0},\;\;\;\;
+Y_{12}=\f...
+...},\;\;\;\;
+Y_{22}=\frac{I_2}{V_2}\bigg\vert _{Y_1=0},\;\;\;\;
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI>For A-model:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+A_{11}=\frac{V_1}{V_2}\bigg|_{I_2=0},\;\;\;\;
+	A_{12}=\frac{V_1}{I_2}\bigg|_{V_2=0},\;\;\;\;
+	A_{21}=\frac{I_1}{V_2}\bigg|_{I_2=0},\;\;\;\;
+	A_{22}=\frac{I_1}{I_2}\bigg|_{V_2=0}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="537" HEIGHT="50" BORDER="0"
+ SRC="img288.png"
+ ALT="\begin{displaymath}A_{11}=\frac{V_1}{V_2}\bigg\vert _{I_2=0},\;\;\;\;
+A_{12}=\f...
+...t _{I_2=0},\;\;\;\;
+A_{22}=\frac{I_1}{I_2}\bigg\vert _{V_2=0}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI>For H-model:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+H_{11}=\frac{V_1}{I_1}\bigg|_{V_2=0},\;\;\;\;
+	H_{12}=\frac{V_1}{V_2}\bigg|_{I_1=0},\;\;\;\;
+	H_{21}=\frac{I_2}{I_1}\bigg|_{V_2=0},\;\;\;\;
+	H_{22}=\frac{I_2}{V_2}\bigg|_{I_1=0}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="542" HEIGHT="50" BORDER="0"
+ SRC="img289.png"
+ ALT="\begin{displaymath}H_{11}=\frac{V_1}{I_1}\bigg\vert _{V_2=0},\;\;\;\;
+H_{12}=\f...
+...t _{V_2=0},\;\;\;\;
+H_{22}=\frac{I_2}{V_2}\bigg\vert _{I_1=0}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+</UL>
+
+<P>
+If we further define
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+{\bf V}=[V_1, V_2]^T,\;\;\;\;\;\;{\bf I}=[I_1, I_2]^T
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="241" HEIGHT="33" BORDER="0"
+ SRC="img290.png"
+ ALT="\begin{displaymath}{\bf V}=[V_1, V_2]^T,\;\;\;\;\;\;{\bf I}=[I_1, I_2]^T \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+then the Z-model and Y-model above can be written in matrix form:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+{\bf V}={\bf Z} {\bf I},\;\;\;\;\;\;{\bf I}={\bf Y} {\bf V},\;\;\;\;
+	{\bf Y}={\bf Z}^{-1}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="270" HEIGHT="32" BORDER="0"
+ SRC="img291.png"
+ ALT="\begin{displaymath}{\bf V}={\bf Z} {\bf I},\;\;\;\;\;\;{\bf I}={\bf Y} {\bf V},\;\;\;\;
+{\bf Y}={\bf Z}^{-1} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+<B>Example: </B> 
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../figures/networkLC.gif"
+ ALT="networkLC.gif">
+
+<P>
+Find the Z-model and Y-model of the circuit shown.
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\left\{ \begin{array}{l} V_1=Z_{11}I_1+Z_{12}I_2 \\
+	V_2=Z_{21}I_1+Z_{22}I_2 \end{array} \right.
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="170" HEIGHT="55" BORDER="0"
+ SRC="img292.png"
+ ALT="\begin{displaymath}\left\{ \begin{array}{l} V_1=Z_{11}I_1+Z_{12}I_2 \\
+V_2=Z_{21}I_1+Z_{22}I_2 \end{array} \right.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<UL>
+<LI>First assume <IMG
+ WIDTH="55" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img293.png"
+ ALT="$I_2=0$">, we get
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Z_{11}=V_1/I_1=j\omega L+1/j\omega C,\;\;\;\;\;Z_{21}=V_2/I_1=1/j\omega C
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="441" HEIGHT="33" BORDER="0"
+ SRC="img294.png"
+ ALT="\begin{displaymath}Z_{11}=V_1/I_1=j\omega L+1/j\omega C,\;\;\;\;\;Z_{21}=V_2/I_1=1/j\omega C \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI>Next assume <IMG
+ WIDTH="55" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img295.png"
+ ALT="$I_1=0$">, we get
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Z_{22}=V_2/I_2=1/j\omega C,\;\;\;\;\;\;Z_{12}=V_1/I_2=1/j\omega C
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="389" HEIGHT="33" BORDER="0"
+ SRC="img296.png"
+ ALT="\begin{displaymath}Z_{22}=V_2/I_2=1/j\omega C,\;\;\;\;\;\;Z_{12}=V_1/I_2=1/j\omega C \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+</UL>
+The parameters of the Y-model can be found as the inverse of <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img297.png"
+ ALT="$Z$">:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\left[\begin{array}{cc}Y_{11}&Y_{12}\\Y_{21}&Y_{22}\end{array}\right]
+  =\left[\begin{array}{cc}Z_{11}&Z_{12}\\Z_{21}&Z_{22}\end{array}\right]^{-1}
+  =\left[\begin{array}{cc}j\omega L+1/j\omega C & 1/j\omega C\\
+	1/j\omega C & 1/j\omega \end{array}\right]^{-1}
+  =\left[\begin{array}{cc}1/j\omega L & -1/j\omega L\\
+	-1/j\omega L & j\omega C+1/j\omega L\end{array}\right]
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="755" HEIGHT="58" BORDER="0"
+ SRC="img298.png"
+ ALT="\begin{displaymath}\left[\begin{array}{cc}Y_{11}&amp;Y_{12}\\ Y_{21}&amp;Y_{22}\end{arra...
+...a L\\
+-1/j\omega L &amp; j\omega C+1/j\omega L\end{array}\right] \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+<B>Note:</B> 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\left[ \begin{array}{rr} a & b \\c & d \end{array} \right]^{-1}
+=\frac{1}{ad-bc}\left[ \begin{array}{rr} d & -b \\-c & a \end{array} \right]
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="267" HEIGHT="58" BORDER="0"
+ SRC="img299.png"
+ ALT="\begin{displaymath}\left[ \begin{array}{rr} a &amp; b \\ c &amp; d \end{array} \right]^{...
+...}\left[ \begin{array}{rr} d &amp; -b \\ -c &amp; a \end{array} \right]
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+<B>Combinations of two-port models</B>
+
+<P>
+
+<UL>
+<LI>Series connection of two 2-port networks: 
+	<!-- MATH
+ ${\bf Z}={\bf Z}_1+{\bf Z}_2$
+ -->
+<IMG
+ WIDTH="107" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img300.png"
+ ALT="${\bf Z}={\bf Z}_1+{\bf Z}_2$">
+</LI>
+<LI>Parallel connection of two 2-port networks: 
+	<!-- MATH
+ ${\bf Y}={\bf Y}_1+{\bf Y}_2$
+ -->
+<IMG
+ WIDTH="117" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img301.png"
+ ALT="${\bf Y}={\bf Y}_1+{\bf Y}_2$">
+</LI>
+<LI>Cascade connection of two 2-port networks:
+	<!-- MATH
+ ${\bf A}={\bf A}_1 \cdot {\bf A}_2$
+ -->
+<IMG
+ WIDTH="107" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img302.png"
+ ALT="${\bf A}={\bf A}_1 \cdot {\bf A}_2$">
+</LI>
+</UL>
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../figures/networkmodels1.gif"
+ ALT="networkmodels1.gif">
+
+<P>
+<B>Example:</B> A The circuit shown below contains a two-port network (e.g., a 
+filter circuit, or an amplification circuit) represented by a Z-model:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+{\bf Z}=\left[\begin{array}{ll} Z_{11} & Z_{12} \\
+	Z_{21} & Z_{22} \end{array}\right]
+	=\left[\begin{array}{rr} 4\Omega & j3\Omega \\
+	j3\Omega & 2\Omega \end{array}\right]
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="276" HEIGHT="55" BORDER="0"
+ SRC="img303.png"
+ ALT="\begin{displaymath}{\bf Z}=\left[\begin{array}{ll} Z_{11} &amp; Z_{12} \\
+Z_{21} &amp;...
+... 4\Omega &amp; j3\Omega \\
+j3\Omega &amp; 2\Omega \end{array}\right] \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The input voltage is <!-- MATH
+ $V_0=3\angle 0^\circ$
+ -->
+<IMG
+ WIDTH="85" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img304.png"
+ ALT="$V_0=3\angle 0^\circ$"> with an internal impedance 
+<IMG
+ WIDTH="73" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img305.png"
+ ALT="$Z_0=5\Omega$"> and the load impedance is <IMG
+ WIDTH="77" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img306.png"
+ ALT="$R_L=4\Omega$">. Find the two voltages 
+<IMG
+ WIDTH="23" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img60.png"
+ ALT="$V_1$">, <IMG
+ WIDTH="23" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img61.png"
+ ALT="$V_2$"> and two currents <IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$I_1$">, <IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$I_2$">.
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../figures/networkexample1.gif"
+ ALT="networkexample1.gif">
+
+<P>
+<B>Method 1:</B> 
+
+<UL>
+<LI>First, according the Z-model, we have
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\left\{ \begin{array}{l} V_1=Z_{11}I_1+Z_{12}I_2= 4I_1+j3I_2 \\
+	V_2=Z_{21}I_1+Z_{22}I_2=j3I_1+ 2I_2 \end{array} \right.
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="277" HEIGHT="55" BORDER="0"
+ SRC="img307.png"
+ ALT="\begin{displaymath}\left\{ \begin{array}{l} V_1=Z_{11}I_1+Z_{12}I_2= 4I_1+j3I_2 \\
+V_2=Z_{21}I_1+Z_{22}I_2=j3I_1+ 2I_2 \end{array} \right. \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI>Second, two more equations can be obtained from the circuit:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\left\{ \begin{array}{l} V_1=V_0-Z_0 I_1=3-5I_1 \\
+	V_2=-Z_L I_2=-4 I_2 \end{array} \right.
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="222" HEIGHT="55" BORDER="0"
+ SRC="img308.png"
+ ALT="\begin{displaymath}\left\{ \begin{array}{l} V_1=V_0-Z_0 I_1=3-5I_1 \\
+V_2=-Z_L I_2=-4 I_2 \end{array} \right. \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI>Substituting the last two equations for <IMG
+ WIDTH="23" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img60.png"
+ ALT="$V_1$"> and <IMG
+ WIDTH="23" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img61.png"
+ ALT="$V_2$"> into the 
+	first two, we get
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\left\{ \begin{array}{l} 9I_1+j3I_2=3 \\j3I_1+6I_2=0 \end{array} \right.
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="135" HEIGHT="55" BORDER="0"
+ SRC="img309.png"
+ ALT="\begin{displaymath}\left\{ \begin{array}{l} 9I_1+j3I_2=3 \\ j3I_1+6I_2=0 \end{array} \right. \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI>Solving these we get 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+I_1=\frac{2}{7},\;\;\;\;\;I_2=-\frac{j}{7}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="156" HEIGHT="45" BORDER="0"
+ SRC="img310.png"
+ ALT="\begin{displaymath}I_1=\frac{2}{7},\;\;\;\;\;I_2=-\frac{j}{7} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI>Then we can get the voltages
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V_1=\frac{11}{7},\;\;\;\;\;V_2=\frac{j4}{7}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="165" HEIGHT="45" BORDER="0"
+ SRC="img311.png"
+ ALT="\begin{displaymath}V_1=\frac{11}{7},\;\;\;\;\;V_2=\frac{j4}{7} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+</UL>
+
+<P>
+<B>Method 2:</B> We can also use Thevenin's theorem to treat everything before
+the load impedance as an equivalent voltage source with Thevenin's voltage
+<IMG
+ WIDTH="26" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img109.png"
+ ALT="$V_T$"> and resistance <IMG
+ WIDTH="29" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img110.png"
+ ALT="$R_T$">, and the output voltage <IMG
+ WIDTH="23" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img61.png"
+ ALT="$V_2$"> and current 
+<IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$I_2$"> can be found.
+
+<P>
+
+<UL>
+<LI>Find <IMG
+ WIDTH="97" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img312.png"
+ ALT="$Z_T=V_2/I_2$"> with voltage <IMG
+ WIDTH="23" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img137.png"
+ ALT="$V_0$"> short-circuit:
+  
+<UL>
+<LI>The Z-model:
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\left\{ \begin{array}{l} V_1=Z_{11}I_1+Z_{12}I_2=4I_1+j3I_2	\\
+      V_2=Z_{21}I_1+Z_{22}I_2=j3I_1+2I_2 \end{array} \right.
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="277" HEIGHT="55" BORDER="0"
+ SRC="img307.png"
+ ALT="\begin{displaymath}\left\{ \begin{array}{l} V_1=Z_{11}I_1+Z_{12}I_2= 4I_1+j3I_2 \\
+V_2=Z_{21}I_1+Z_{22}I_2=j3I_1+ 2I_2 \end{array} \right. \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI>Also due to the short-circuit of voltage source <IMG
+ WIDTH="58" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img313.png"
+ ALT="$V_0=0$">, we have
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V_1=V_0-I_1 Z_0=0-5I_1
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="202" HEIGHT="31" BORDER="0"
+ SRC="img314.png"
+ ALT="\begin{displaymath}V_1=V_0-I_1 Z_0=0-5I_1 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI>equating the two expressions for <IMG
+ WIDTH="23" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img60.png"
+ ALT="$V_1$">, we get
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+4I_1+j3I_2=-5I_1,\;\;\;\;\mbox{i.e.}\;\;\;\;I_1=-\frac{j}{3} I_2
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="306" HEIGHT="45" BORDER="0"
+ SRC="img315.png"
+ ALT="\begin{displaymath}4I_1+j3I_2=-5I_1,\;\;\;\;\mbox{i.e.}\;\;\;\;I_1=-\frac{j}{3} I_2 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI>Substituting this <IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$I_1$"> into the equation for <IMG
+ WIDTH="23" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img61.png"
+ ALT="$V_2$"> above, we get
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V_2=j3I_1+2I_2=I_2+2I_2=3I_2
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="263" HEIGHT="32" BORDER="0"
+ SRC="img316.png"
+ ALT="\begin{displaymath}V_2=j3I_1+2I_2=I_2+2I_2=3I_2 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI>Find <IMG
+ WIDTH="97" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img312.png"
+ ALT="$Z_T=V_2/I_2$">:
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Z_T=\frac{V_2}{I_2}=3
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="104" HEIGHT="49" BORDER="0"
+ SRC="img317.png"
+ ALT="\begin{displaymath}Z_T=\frac{V_2}{I_2}=3 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+</UL>
+</LI>
+<LI>Find open-circuit voltage <IMG
+ WIDTH="26" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img109.png"
+ ALT="$V_T$"> with <IMG
+ WIDTH="55" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img293.png"
+ ALT="$I_2=0$">:
+  
+<UL>
+<LI>Since the load is an open-circuit, <IMG
+ WIDTH="55" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img293.png"
+ ALT="$I_2=0$">, we have
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\left\{ \begin{array}{l} V_1=Z_{11}I_1=4I_1 \\
+      V_2=Z_{21}I_1=j3 I_1 \end{array} \right.
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="163" HEIGHT="55" BORDER="0"
+ SRC="img318.png"
+ ALT="\begin{displaymath}\left\{ \begin{array}{l} V_1=Z_{11}I_1=4I_1 \\
+V_2=Z_{21}I_1=j3 I_1 \end{array} \right. \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI>Find <IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$I_1$">:
+      <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+I_1=\frac{V_0-V_1}{Z_0}=\frac{3-4I_1}{5}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="190" HEIGHT="49" BORDER="0"
+ SRC="img319.png"
+ ALT="\begin{displaymath}I_1=\frac{V_0-V_1}{Z_0}=\frac{3-4I_1}{5} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Solving this to get <IMG
+ WIDTH="74" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img320.png"
+ ALT="$I_1=1/3$">
+</LI>
+<LI>Find open-circuit voltage <IMG
+ WIDTH="70" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img321.png"
+ ALT="$V_T=V_2$">:
+      <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V_2=Z_{21}I_1=j3 \frac{1}{3}=j
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="175" HEIGHT="45" BORDER="0"
+ SRC="img322.png"
+ ALT="\begin{displaymath}V_2=Z_{21}I_1=j3 \frac{1}{3}=j \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+</UL>
+</LI>
+<LI>Find load voltage <IMG
+ WIDTH="23" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img61.png"
+ ALT="$V_2$">:
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V_2=\frac{V_T}{Z_T+Z_L}\;Z_L=\frac{j}{3+4}\;4=\frac{j4}{7}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="275" HEIGHT="49" BORDER="0"
+ SRC="img323.png"
+ ALT="\begin{displaymath}V_2=\frac{V_T}{Z_T+Z_L}\;Z_L=\frac{j}{3+4}\;4=\frac{j4}{7} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI>Find load voltage <IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$I_2$">:
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+I_2=-\frac{V_2}{Z_L}=-\frac{j4}{7}\;\frac{1}{4}=-\frac{j}{7}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="214" HEIGHT="49" BORDER="0"
+ SRC="img324.png"
+ ALT="\begin{displaymath}I_2=-\frac{V_2}{Z_L}=-\frac{j4}{7}\;\frac{1}{4}=-\frac{j}{7} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+</UL>
+
+<P>
+<B>Principle of reciprocity</B>:
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../figures/reciprocal.gif"
+ ALT="reciprocal.gif">
+
+<P>
+Consider the example circuit on the left above, which can be simplified 
+as the network in the middle. The voltage source is in the branch on the
+left, while the current <IMG
+ WIDTH="20" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img325.png"
+ ALT="$\dot{I}_2$"> is in the branch on the right, which
+can be found to be (current divider):
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\dot{I}_2=\frac{V}{Z_1+Z_2 Z_3/(Z_2+Z_3)}\;\frac{Z_3}{Z_2+Z_3}
+=V \frac{Z_3}{Z_1Z_2+Z_1Z_3+Z_2Z_3}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="500" HEIGHT="51" BORDER="0"
+ SRC="img326.png"
+ ALT="\begin{displaymath}\dot{I}_2=\frac{V}{Z_1+Z_2 Z_3/(Z_2+Z_3)}\;\frac{Z_3}{Z_2+Z_3}
+=V \frac{Z_3}{Z_1Z_2+Z_1Z_3+Z_2Z_3} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+We next interchange the positions of the voltage source and the current, 
+so that the voltage source is in the branch on the right and the current 
+to be found is in the branch on the left, as shown on the right of the 
+figure above. The current can be found to be
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\dot{I}_1=\frac{V}{Z_2+Z_1 Z_3/(Z_1+Z_3)}\frac{Z_3}{Z_1+Z_3}
+=V \frac{Z_3}{Z_1Z_2+Z_1Z_3+Z_2Z_3}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="494" HEIGHT="51" BORDER="0"
+ SRC="img327.png"
+ ALT="\begin{displaymath}\dot{I}_1=\frac{V}{Z_2+Z_1 Z_3/(Z_1+Z_3)}\frac{Z_3}{Z_1+Z_3}
+=V \frac{Z_3}{Z_1Z_2+Z_1Z_3+Z_2Z_3} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The two currents <IMG
+ WIDTH="20" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img328.png"
+ ALT="$\dot{I}_1$"> and <IMG
+ WIDTH="20" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img325.png"
+ ALT="$\dot{I}_2$"> are exactly the same! This
+result illustrates the following <B>reciprocity principle</B>, which can 
+be proven in general:
+
+<P>
+<EM>In any passive (without energy sources), 
+linear network, if a voltage <IMG
+ WIDTH="20" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img39.png"
+ ALT="$V$"> applied in branch 1 causes a current <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img97.png"
+ ALT="$I$"> in 
+branch 2, then this voltage <IMG
+ WIDTH="20" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img39.png"
+ ALT="$V$"> applied in branch 2 will cause the same current
+<IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img97.png"
+ ALT="$I$"> in branch 1.</EM>
+
+<P>
+This reciprocity principle can also be stated as:
+
+<P>
+<EM>In any passive, linear network, the transfer impedance <IMG
+ WIDTH="32" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img260.png"
+ ALT="$Z_{12}$"> is equal 
+to the reciprocal transfer impedance <IMG
+ WIDTH="32" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img261.png"
+ ALT="$Z_{21}$">.</EM>
+
+<P>
+Based on this reciprocity principle, any complex passive linear network can
+be modeled by either a T-network or a <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img329.png"
+ ALT="$\Pi$">-network:
+
+<P>
+
+<UL>
+<LI><B>T-Network Model:</B>
+    <IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../figures/Tmodel.gif"
+ ALT="Tmodel.gif">
+
+<P>
+From this T-model, we get
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\left\{ \begin{array}{l} V_1=(Z_1+Z_3)I_1+Z_3I_2=Z_{11}I_1+Z_{12}I_2 \\
+      V_2=Z_3I_1+(Z_2+Z_3)I_2=Z_{21}I_1+Z_{22}I_2  \end{array} \right.
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="348" HEIGHT="55" BORDER="0"
+ SRC="img330.png"
+ ALT="\begin{displaymath}\left\{ \begin{array}{l} V_1=(Z_1+Z_3)I_1+Z_3I_2=Z_{11}I_1+Z_...
+..._2=Z_3I_1+(Z_2+Z_3)I_2=Z_{21}I_1+Z_{22}I_2 \end{array} \right. \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Comparing this with the Z-model, we get
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Z_{11}=Z_1+Z_3,\;\;\;\;\;Z_{22}=Z_2+Z_3,\;\;\;\;\;Z_{12}=Z_{21}=Z_3
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="426" HEIGHT="32" BORDER="0"
+ SRC="img331.png"
+ ALT="\begin{displaymath}Z_{11}=Z_1+Z_3,\;\;\;\;\;Z_{22}=Z_2+Z_3,\;\;\;\;\;Z_{12}=Z_{21}=Z_3 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Solving these equations for <IMG
+ WIDTH="25" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img166.png"
+ ALT="$Z_1$">, <IMG
+ WIDTH="25" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img170.png"
+ ALT="$Z_2$"> and <IMG
+ WIDTH="25" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img167.png"
+ ALT="$Z_3$">, we get
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Z_1=Z_{11}-Z_{12},\;\;\;\;Z_2=Z_{22}-Z_{21},\;\;\;\;Z_3=Z_{12}=Z_{21}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="427" HEIGHT="32" BORDER="0"
+ SRC="img332.png"
+ ALT="\begin{displaymath}Z_1=Z_{11}-Z_{12},\;\;\;\;Z_2=Z_{22}-Z_{21},\;\;\;\;Z_3=Z_{12}=Z_{21} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+</LI>
+<LI><B><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img329.png"
+ ALT="$\Pi$">-Network Model:</B>
+    <IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../figures/Pmodel.gif"
+ ALT="Pmodel.gif">
+
+<P>
+From this <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img329.png"
+ ALT="$\Pi$">-model, we get:
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\left\{ \begin{array}{l} 
+      I_1=Y_1V_1+Y_3(V_1-V_2)=(Y_1+Y_3)V_1-Y_3V_2=Y_{11}V_1+Y_{12}V_2 \\
+      I_2=Y_3(V_2-V_1)+Y_2V_2=-Y_3V_1+(Y_2+Y_3)V_2=Y_{21}V_1+Y_{22}V_2 \end{array} \right.
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="540" HEIGHT="55" BORDER="0"
+ SRC="img333.png"
+ ALT="\begin{displaymath}\left\{ \begin{array}{l}
+I_1=Y_1V_1+Y_3(V_1-V_2)=(Y_1+Y_3)V...
+...2=-Y_3V_1+(Y_2+Y_3)V_2=Y_{21}V_1+Y_{22}V_2 \end{array} \right. \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Comparing this with the Y-model, we get
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Y_{11}=Y_1+Y_3,\;\;\;\;\;Y_{22}=Y_2+Y_3,\;\;\;\;\;Y_{12}=Y_{21}=-Y_3
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="423" HEIGHT="32" BORDER="0"
+ SRC="img334.png"
+ ALT="\begin{displaymath}Y_{11}=Y_1+Y_3,\;\;\;\;\;Y_{22}=Y_2+Y_3,\;\;\;\;\;Y_{12}=Y_{21}=-Y_3 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Solving these equations for <IMG
+ WIDTH="23" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img335.png"
+ ALT="$Y_1$">, <IMG
+ WIDTH="23" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img336.png"
+ ALT="$Y_2$"> and <IMG
+ WIDTH="23" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img337.png"
+ ALT="$Y_3$">, we get
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Y_1=Y_{11}+Y_{12},\;\;\;\;Y_2=Y_{22}+Y_{21},\;\;\;\;Y_3=-Y_{12}=-Y_{21}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="440" HEIGHT="32" BORDER="0"
+ SRC="img338.png"
+ ALT="\begin{displaymath}Y_1=Y_{11}+Y_{12},\;\;\;\;Y_2=Y_{22}+Y_{21},\;\;\;\;Y_3=-Y_{12}=-Y_{21} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+</UL>
+
+<P>
+<B>Example 1:</B> Convert the given T-network to a <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img329.png"
+ ALT="$\Pi$"> network.
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../figures/TPmodelexample.gif"
+ ALT="TPmodelexample.gif">
+
+<P>
+<B>Solution:</B> Given <IMG
+ WIDTH="68" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img339.png"
+ ALT="$Z_1=j5$">, <IMG
+ WIDTH="83" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img340.png"
+ ALT="$Z_2=-j5$">, <IMG
+ WIDTH="59" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img341.png"
+ ALT="$Z_3=1$">, we get its Z-model:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Z_{11}=Z_1+Z_3=1+j5,\;\;\;\;Z_{22}=Z_2+Z_3=1-j5,\;\;\;\;Z_{12}=Z_{21}=Z_3=1
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="566" HEIGHT="32" BORDER="0"
+ SRC="img342.png"
+ ALT="\begin{displaymath}Z_{11}=Z_1+Z_3=1+j5,\;\;\;\;Z_{22}=Z_2+Z_3=1-j5,\;\;\;\;Z_{12}=Z_{21}=Z_3=1 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The Z-model can be expressed in matrix form:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\left[ \begin{array}{l} V_1 \\V_2\end{array} \right]=
+	\left[ \begin{array}{cc} Z_{11} & Z_{12} \\Z_{21} & Z_{22} \end{array} \right]
+	\left[ \begin{array}{l} I_1 \\I_2\end{array} \right]
+=	\left[ \begin{array}{cc} 1+j5 & 1 \\1 & 1-j5 \end{array} \right]
+	\left[ \begin{array}{l} I_1 \\I_2\end{array} \right]
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="458" HEIGHT="55" BORDER="0"
+ SRC="img343.png"
+ ALT="\begin{displaymath}\left[ \begin{array}{l} V_1 \\ V_2\end{array} \right]=
+\left...
+...\right]
+\left[ \begin{array}{l} I_1 \\ I_2\end{array} \right]
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+This Z-model can be converted into a Y-model:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\left[ \begin{array}{l} I_1 \\I_2\end{array} \right]=
+	\left[ \begin{array}{cc} 1+j5 & 1 \\1 & 1-j5 \end{array} \right]^{-1}
+	\left[ \begin{array}{l} V_1 \\V_2\end{array} \right]
+=\frac{1}{25}
+	\left[ \begin{array}{cc} 1-j5 & -1 \\-1 & 1+j5 \end{array} \right]
+	\left[ \begin{array}{l} V_1 \\V_2\end{array} \right]
+=	\left[ \begin{array}{cc} Y_{11} & Y_{12} \\Y_{21} & Y_{22} \end{array} \right]
+	\left[ \begin{array}{l} V_1 \\V_2\end{array} \right]
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="734" HEIGHT="58" BORDER="0"
+ SRC="img344.png"
+ ALT="\begin{displaymath}\left[ \begin{array}{l} I_1 \\ I_2\end{array} \right]=
+\left...
+...\right]
+\left[ \begin{array}{l} V_1 \\ V_2\end{array} \right]
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+This Y-model can be converted to a <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img329.png"
+ ALT="$\Pi$"> network:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Y_1=Y_{11}+Y_{12}=-j/5,\;\;\;\;Z_2=Y_{22}+Y_{21}=j/5,\;\;\;\;
+	Y_3=-Y_{21}=-Y_{12}=1/25
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="609" HEIGHT="33" BORDER="0"
+ SRC="img345.png"
+ ALT="\begin{displaymath}Y_1=Y_{11}+Y_{12}=-j/5,\;\;\;\;Z_2=Y_{22}+Y_{21}=j/5,\;\;\;\;
+Y_3=-Y_{21}=-Y_{12}=1/25 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+These admittances can be further converted into impedances:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Z_1=1/Y_1=5j,\;\;\;\;Z_2=1/Y_2=-j5,\;\;\;\;Z_3=1/Y_3=25
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="453" HEIGHT="33" BORDER="0"
+ SRC="img346.png"
+ ALT="\begin{displaymath}Z_1=1/Y_1=5j,\;\;\;\;Z_2=1/Y_2=-j5,\;\;\;\;Z_3=1/Y_3=25 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The same results can be obtained by Y to delta conversion.
+
+<P>
+<B>Example 2:</B> Consider the ideal transformer shown in the figure below. 
+Assume <IMG
+ WIDTH="84" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img347.png"
+ ALT="$R_0=10\Omega$">, <IMG
+ WIDTH="77" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img348.png"
+ ALT="$R_L=5\Omega$">, and the turn ratio is <IMG
+ WIDTH="122" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img349.png"
+ ALT="$n=n_1/n_2=2$">. 
+Describe this circuit as a two-port network.
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../figures/transformerexample2.gif"
+ ALT="transformerexample2.gif">
+
+<P>
+
+<UL>
+<LI>Set up basic equations:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\left\{ \begin{array}{l} 
+	V_1=10\;I_1+2\;V_2 \\I_2-V_2/5=-2\;I_1 \end{array} \right.
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="164" HEIGHT="55" BORDER="0"
+ SRC="img350.png"
+ ALT="\begin{displaymath}\left\{ \begin{array}{l}
+V_1=10\;I_1+2\;V_2 \\ I_2-V_2/5=-2\;I_1 \end{array} \right. \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI>Rearrange the equations in the form of a Z-model. The second equation is
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V_2=10\;I_1+5\;I_2
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="135" HEIGHT="31" BORDER="0"
+ SRC="img351.png"
+ ALT="\begin{displaymath}V_2=10\;I_1+5\;I_2 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Substituting into the first equation, we get
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V_1=30\;I_1+10\;I_2
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="143" HEIGHT="31" BORDER="0"
+ SRC="img352.png"
+ ALT="\begin{displaymath}V_1=30\;I_1+10\;I_2 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The Z-model is:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\left[ \begin{array}{l} V_1 \\V_2 \end{array} \right]=
+	\left[ \begin{array}{rr} Z_{11} & Z_{12} \\Z_{21} & Z_{22} \end{array} \right]
+	\left[ \begin{array}{l} I_1 \\I_2 \end{array} \right]
+=	\left[ \begin{array}{rr} 30 & 10 \\10 & 5 \end{array} \right]
+	\left[ \begin{array}{l} I_1 \\I_2 \end{array} \right]
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="394" HEIGHT="55" BORDER="0"
+ SRC="img353.png"
+ ALT="\begin{displaymath}\left[ \begin{array}{l} V_1 \\ V_2 \end{array} \right]=
+\lef...
+...right]
+\left[ \begin{array}{l} I_1 \\ I_2 \end{array} \right]
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+As <!-- MATH
+ $Z_{12}=Z_{21}=10$
+ -->
+<IMG
+ WIDTH="128" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img354.png"
+ ALT="$Z_{12}=Z_{21}=10$">, this is a reciprocal network.
+</LI>
+</UL>
+Alternatively, we can set up the equations in terms of the currents:
+
+<P>
+
+<UL>
+<LI>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\left\{ \begin{array}{l} 
+	I_1=(V_1-2\;V_2)/10 \\I_2=-2\;I_1+V_2/5 \end{array} \right.
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="177" HEIGHT="55" BORDER="0"
+ SRC="img355.png"
+ ALT="\begin{displaymath}\left\{ \begin{array}{l}
+I_1=(V_1-2\;V_2)/10 \\ I_2=-2\;I_1+V_2/5 \end{array} \right. \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI>Rearrange the equations in the form of a Y-model. The first equation is
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+I_1=V_1/10-V_2/5
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="147" HEIGHT="33" BORDER="0"
+ SRC="img356.png"
+ ALT="\begin{displaymath}I_1=V_1/10-V_2/5 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI>Substituting into the second equation, we get
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+I_2=-V_1/5+2V_2/5+V_2/5=-V_1/5+3V_2/5
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="369" HEIGHT="33" BORDER="0"
+ SRC="img357.png"
+ ALT="\begin{displaymath}I_2=-V_1/5+2V_2/5+V_2/5=-V_1/5+3V_2/5 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The Y-model is:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\left[ \begin{array}{l} I_1 \\I_2 \end{array} \right]=
+	\left[ \begin{array}{rr} Y_{11} & Y_{12} \\Y_{21} & Y_{22} \end{array} \right]
+	\left[ \begin{array}{l} V_1 \\V_2 \end{array} \right]
+=	\left[ \begin{array}{rr} 1/10 & -1/5 \\-1/5 & 3/5 \end{array} \right]
+	\left[ \begin{array}{l} V_1 \\V_2 \end{array} \right]
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="441" HEIGHT="55" BORDER="0"
+ SRC="img358.png"
+ ALT="\begin{displaymath}\left[ \begin{array}{l} I_1 \\ I_2 \end{array} \right]=
+\lef...
+...right]
+\left[ \begin{array}{l} V_1 \\ V_2 \end{array} \right] \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+</UL>
+Finally, we can verify that <!-- MATH
+ ${\bf Z}^{-1}={\bf Y}$
+ -->
+<IMG
+ WIDTH="78" HEIGHT="22" ALIGN="BOTTOM" BORDER="0"
+ SRC="img359.png"
+ ALT="${\bf Z}^{-1}={\bf Y}$">
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+{\bf Z}^{-1}=\left[ \begin{array}{rr} 30 & 10 \\10 & 5 \end{array} \right]^{-1}
+	=\frac{1}{50}\left[ \begin{array}{rr} 5 & -10 \\-10 & 30 \end{array} \right]
+	=\left[ \begin{array}{rr} 1/10 & -1/5 \\-1/5 & 3/5 \end{array} \right]
+	={\bf Y}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="532" HEIGHT="58" BORDER="0"
+ SRC="img360.png"
+ ALT="\begin{displaymath}{\bf Z}^{-1}=\left[ \begin{array}{rr} 30 &amp; 10 \\ 10 &amp; 5 \end{...
+...y}{rr} 1/10 &amp; -1/5 \\ -1/5 &amp; 3/5 \end{array} \right]
+={\bf Y} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html57"
+  HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html55"
+  HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html49"
+  HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html58"
+  HREF="node5.html">Active Circuits</A>
+<B> Up:</B> <A NAME="tex2html56"
+  HREF="node1.html">Chapter 2: Circuit Principles</A>
+<B> Previous:</B> <A NAME="tex2html50"
+  HREF="node3.html">Network Theorems</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Ruye Wang
+2014-09-24
+</ADDRESS>
+</BODY>
+</HTML>

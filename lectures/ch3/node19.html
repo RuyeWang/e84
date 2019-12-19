@@ -1,0 +1,794 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Radio/TV Broadcasting and the Tuning Circuit</TITLE>
+<META NAME="description" CONTENT="Radio/TV Broadcasting and the Tuning Circuit">
+<META NAME="keywords" CONTENT="ch3">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="ch3.css">
+
+<LINK REL="previous" HREF="node18.html">
+<LINK REL="next" HREF="node20.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node20.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node16.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node18.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node20.html">Real and Reactive Power</A>
+<B> Up:</B> <A
+ HREF="node16.html">Frequency Response Functions and</A>
+<B> Previous:</B> <A
+ HREF="node18.html">Second-order system as a</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H3><A ID="SECTION00017300000000000000">
+Radio/TV Broadcasting and the Tuning Circuit</A>
+</H3>
+
+<P>
+<B>Broadcasting and Frequency Allocation</B>
+
+<P>
+
+<UL>
+<LI>The AM radio frequency range is from 535 kHz to 1605 kHz with 10 kHz
+  frequency spacing or bandwidth, i.e., the highest signal frequency allowed 
+  is about 5 kHz (while the upper limit of the audible frequencies is 20 kHz). 
+</LI>
+<LI>The FM radio frequency range (VHF) is from 88 MHz to 108 MHz with 
+  0.2 MHz=200 kHz frequency spacing, corresponding to a much wider
+  bandwidth that makes high fidelity and stereo broadcasting possible. 
+</LI>
+<LI>The TV broadcasting is also in MHz frequency range with a much wider 
+  spacing of 6 MHz, needed to carry video as well as audio signals. 
+  
+<UL>
+<LI>VHF: 54 MHz to 210 MHz (not continuous, for channels 2 to 13) 
+</LI>
+<LI>UHF: 470 MHz to 884 MHz (not continuous, for channels 14 to 83)
+  
+</LI>
+</UL>
+</LI>
+</UL>
+
+<P>
+The Federal Communications Commission (FCC) has very specific frequency allocation 
+regulations, see the <A ID="tex2html13"
+  HREF="http://www.ntia.doc.gov/osmhome/allochrt.pdf">FCC frequency allocation chart</A>.
+
+<P>
+<B>Example 1:</B>
+
+<P>
+Resonant circuit is widely used in radio and TV receivers to select a 
+desired station from many stations available. The tuning circuit shown 
+in the figure below is a series RCL circuit composed of an inductor 
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img105.svg"
+ ALT="$L$"></SPAN>, a resistor <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img112.svg"
+ ALT="$R$"></SPAN> (of the inductor) and variable capacitor <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img104.svg"
+ ALT="$C$"></SPAN>, which
+is adjustable to match the resonant frequency of the circuit to the 
+frequency of the desired radio station. The voltage across <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img104.svg"
+ ALT="$C$"></SPAN> is to 
+be amplified by the subsequent circuits.
+
+<P>
+If <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img953.svg"
+ ALT="$L=80\mu H$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img954.svg"
+ ALT="$R=8\Omega$"></SPAN>, find the value of <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img104.svg"
+ ALT="$C$"></SPAN> for this circuit to 
+resonate at <!-- MATH
+ $f=400\;kHz$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img955.svg"
+ ALT="$f=400\;kHz$"></SPAN>, also find the bandwidth.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/tuning.gif"
+ ALT="tuning.gif">
+
+<P>
+<B>Solution:</B>
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\omega_n=\frac{1}{\sqrt{LC}},\;\;\;\;
+  C=\frac{1}{\omega_n^2 L}=\frac{1}{(2\pi 400\times 10^3)^2\times 80\times 10^{-6}}
+=20nF
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img956.svg"
+ ALT="$\displaystyle \omega_n=\frac{1}{\sqrt{LC}},\;\;\;\;
+C=\frac{1}{\omega_n^2 L}=\frac{1}{(2\pi 400\times 10^3)^2\times 80\times 10^{-6}}
+=20nF$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">351</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The quality factor is
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Q=\frac{\omega_n L}{R}=\frac{2\pi 400\times 10^3\times 80\times 10^{-6}}{8}=25.13
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -1.71ex; " SRC="img957.svg"
+ ALT="$\displaystyle Q=\frac{\omega_n L}{R}=\frac{2\pi 400\times 10^3\times 80\times 10^{-6}}{8}=25.13$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">352</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The bandwidth is
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\triangle f=\frac{f_0}{Q}=\frac{400\times 10^3}{25.13}=15.9\;kHz
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.16ex; " SRC="img958.svg"
+ ALT="$\displaystyle \triangle f=\frac{f_0}{Q}=\frac{400\times 10^3}{25.13}=15.9\;kHz$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">353</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+or 
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\triangle \omega= 2\pi\triangle f=\frac{\omega_n}{Q}=\frac{R}{L}=10^5
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.16ex; " SRC="img959.svg"
+ ALT="$\displaystyle \triangle \omega= 2\pi\triangle f=\frac{\omega_n}{Q}=\frac{R}{L}=10^5$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">354</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+<B>Example 2:</B> 
+
+<P>
+Assume <!-- MATH
+ $L=0.3\; mH,\;\;R=16\;\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img960.svg"
+ ALT="$L=0.3\; mH,\;\;R=16\;\Omega$"></SPAN>, and the frequency of the desired 
+station is 640 kHz, find the value of <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img104.svg"
+ ALT="$C$"></SPAN> and the bandwidth of the tuning 
+circuit. Moreover, if the induced voltage in the circuit is <!-- MATH
+ $e=2\;\mu V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img961.svg"
+ ALT="$e=2\;\mu V$"></SPAN>
+(rms), find the current (rms) in the resonant circuit, and the output 
+voltage (rms) across the capacitor.
+
+<P>
+<B>Solution:</B> At the desired resonant frequency <!-- MATH
+ $f=640\;kHz$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img962.svg"
+ ALT="$f=640\;kHz$"></SPAN>, the 
+reactance of the inductor is
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+X_L=\omega L=2\pi f L
+  =2\times 3.14\times 640\times 10^3\times 0.3\times 10^{-3}=1206\;\Omega
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.57ex; " SRC="img963.svg"
+ ALT="$\displaystyle X_L=\omega L=2\pi f L
+=2\times 3.14\times 640\times 10^3\times 0.3\times 10^{-3}=1206\;\Omega$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">355</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+and the quality factor <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img23.svg"
+ ALT="$Q$"></SPAN> of this circuit is 
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Q=\frac{X_L}{R}=\frac{\omega L}{R}=\frac{1206}{16}\approx 75
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.11ex; vertical-align: -1.71ex; " SRC="img964.svg"
+ ALT="$\displaystyle Q=\frac{X_L}{R}=\frac{\omega L}{R}=\frac{1206}{16}\approx 75$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">356</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The bandwidth is:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\triangle f =\frac{f_0}{Q}=\frac{640}{75}\approx 8.53\;kHz
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.16ex; " SRC="img965.svg"
+ ALT="$\displaystyle \triangle f =\frac{f_0}{Q}=\frac{640}{75}\approx 8.53\;kHz$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">357</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The resonant frequency can be expressed as:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+f_0=\frac{\omega_0}{2\pi}=\frac{1}{2\pi\sqrt{LC}}=640\;kHz
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.28ex; " SRC="img966.svg"
+ ALT="$\displaystyle f_0=\frac{\omega_0}{2\pi}=\frac{1}{2\pi\sqrt{LC}}=640\;kHz$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">358</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Solving this we get
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+C=\frac{1}{(2\pi f_0)^2L}=206\times 10^{-12}F=206\;pF
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img967.svg"
+ ALT="$\displaystyle C=\frac{1}{(2\pi f_0)^2L}=206\times 10^{-12}F=206\;pF$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">359</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The current in circuit is
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_{rms}=e/R=2\times 10^{-6}/16=0.125\times 10^{-6}\; A =0.125\;\mu A
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img968.svg"
+ ALT="$\displaystyle I_{rms}=e/R=2\times 10^{-6}/16=0.125\times 10^{-6}\; A =0.125\;\mu A$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">360</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The voltage across <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img112.svg"
+ ALT="$R$"></SPAN> is
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_R=I_{rms} R=0.125\times 16\times 10^{-6}=2\times 10^{-6}\;V=0.002\;mV
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.46ex; " SRC="img969.svg"
+ ALT="$\displaystyle V_R=I_{rms} R=0.125\times 16\times 10^{-6}=2\times 10^{-6}\;V=0.002\;mV$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">361</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The output voltage across <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img104.svg"
+ ALT="$C$"></SPAN> is
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_C = V_L=I_{rms} X_L=0.125\times 10^{-6}\times 1206=150\times 10^{-6}\;V
+  =150\;\mu V =0.150\;mV=Q\,V_R
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.57ex; " SRC="img970.svg"
+ ALT="$\displaystyle V_C = V_L=I_{rms} X_L=0.125\times 10^{-6}\times 1206=150\times 10^{-6}\;V
+=150\;\mu V =0.150\;mV=Q\,V_R$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">362</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+which is <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img971.svg"
+ ALT="$Q=75$"></SPAN> times the voltage <!-- MATH
+ $V_R=2\times 10^{-6}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.46ex; " SRC="img972.svg"
+ ALT="$V_R=2\times 10^{-6}$"></SPAN> across <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img112.svg"
+ ALT="$R$"></SPAN> 
+(same as the voltage source).
+
+<P>
+<B>Example</B> 
+
+<P>
+In reality, all inductors have a non-zero resistance, therefore a 
+parallel resonance circuit should be modeled as shown in the figure.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/parallelRCL.gif"
+ ALT="parallelRCL.gif">
+
+<P>
+The admittance is:
+<BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+Y(\omega)&=&\frac{1}{R+j\omega L}+j\omega C
+  =\frac{R-j\omega L+j\omega C(R^2+\omega^2L^2)}{R^2+\omega^2L^2}
+  \nonumber \\
+  &=&\frac{1}{R^2+\omega^2L^2}[R-j(\omega L-\omega C(R^2+\omega^2L^2))]
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img973.svg"
+ ALT="$\displaystyle Y(\omega)$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 5.81ex; vertical-align: -2.16ex; " SRC="img974.svg"
+ ALT="$\displaystyle \frac{1}{R+j\omega L}+j\omega C
+=\frac{R-j\omega L+j\omega C(R^2+\omega^2L^2)}{R^2+\omega^2L^2}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 5.11ex; vertical-align: -1.90ex; " SRC="img975.svg"
+ ALT="$\displaystyle \frac{1}{R^2+\omega^2L^2}[R-j(\omega L-\omega C(R^2+\omega^2L^2))]$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">363</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+
+As frequency <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img10.svg"
+ ALT="$\omega$"></SPAN> appears in the real part <!-- MATH
+ $Re[Y(\omega)]$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img976.svg"
+ ALT="$Re[Y(\omega)]$"></SPAN> as well 
+as in the imaginary part <!-- MATH
+ $Im[Y(\omega)]$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img977.svg"
+ ALT="$Im[Y(\omega)]$"></SPAN>, the frequency that minimizes 
+<!-- MATH
+ $|Y(\omega)|$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img978.svg"
+ ALT="$\vert Y(\omega)\vert$"></SPAN> has to be found by solving
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\frac{d}{d\omega} \; |Y(\omega)| =0
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.11ex; vertical-align: -1.71ex; " SRC="img979.svg"
+ ALT="$\displaystyle \frac{d}{d\omega} \; \vert Y(\omega)\vert =0$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">364</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+However, when the quality factor <!-- MATH
+ $Q=\omega_n L/R$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img980.svg"
+ ALT="$Q=\omega_n L/R$"></SPAN> associated with the
+non-ideal inductor is large enough (e.g., <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img981.svg"
+ ALT="$Q &gt; 20$"></SPAN>), all previous discussed 
+relations for ideal inductors still hold approximately, and the resonant 
+frequency <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img488.svg"
+ ALT="$\omega_n$"></SPAN> can still be found approximately by the previous 
+approach by letting <!-- MATH
+ $Im[Y(\omega)]=0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img982.svg"
+ ALT="$Im[Y(\omega)]=0$"></SPAN>: 
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\omega_n L=\omega_n C(R^2+\omega_n^2L^2),\;\;\;\;\Longrightarrow
+  \;\;\;\;\;\omega_n=\sqrt{\frac{1}{LC}-\left(\frac{R}{L}\right)^2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 7.43ex; vertical-align: -2.56ex; " SRC="img983.svg"
+ ALT="$\displaystyle \omega_n L=\omega_n C(R^2+\omega_n^2L^2),\;\;\;\;\Longrightarrow
+\;\;\;\;\;\omega_n=\sqrt{\frac{1}{LC}-\left(\frac{R}{L}\right)^2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">365</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+For <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img488.svg"
+ ALT="$\omega_n$"></SPAN> to be real, we must have
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\frac{1}{LC} > (\frac{R}{L})^2, \;\;\;\;\;\;\mbox{i,e,}
+  \;\;\;\;\;\;R<\sqrt{\frac{L}{C}}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.11ex; vertical-align: -1.71ex; " SRC="img984.svg"
+ ALT="$\displaystyle \frac{1}{LC} &gt; (\frac{R}{L})^2, \;\;\;\;\;\;$">i,e,<IMG STYLE="height: 6.04ex; vertical-align: -1.90ex; " SRC="img985.svg"
+ ALT="$\displaystyle \;\;\;\;\;\;R&lt;\sqrt{\frac{L}{C}}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">366</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Typically we have <!-- MATH
+ $R \ll \sqrt{L/C}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.25ex; vertical-align: -0.82ex; " SRC="img986.svg"
+ ALT="$R \ll \sqrt{L/C}$"></SPAN>, and the resonant frequency is
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\omega_n=\sqrt{\frac{1}{LC}-\left(\frac{R}{L}\right)^2}\approx \frac{1}{\sqrt{LC}}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 7.43ex; vertical-align: -2.56ex; " SRC="img987.svg"
+ ALT="$\displaystyle \omega_n=\sqrt{\frac{1}{LC}-\left(\frac{R}{L}\right)^2}\approx \frac{1}{\sqrt{LC}}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">367</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+<B>Note: </B> For the same reason, when considering the transfer function
+of a series RCL circuit when the output is the voltage across either <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img104.svg"
+ ALT="$C$"></SPAN>
+or <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img105.svg"
+ ALT="$L$"></SPAN>, the peak frequency <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.78ex; " SRC="img988.svg"
+ ALT="$\omega_p$"></SPAN> is not exactly the same as the 
+resonant frequency <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img488.svg"
+ ALT="$\omega_n$"></SPAN>, which only minimizes the denominator, but
+the numerator is still a function of <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img10.svg"
+ ALT="$\omega$"></SPAN>. Only when the output is 
+the voltage across <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img112.svg"
+ ALT="$R$"></SPAN> (i.e., the numerator is <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img112.svg"
+ ALT="$R$"></SPAN>, a constant, not a 
+function of <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img10.svg"
+ ALT="$\omega$"></SPAN>), will the resonant frequency <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img488.svg"
+ ALT="$\omega_n$"></SPAN> be the same 
+as the peak frequency.
+
+<P>
+<B>Amplitude, Phase, and Frequency Modulations</B>
+
+<P>
+In radio or TV broadcast, the audio or video signal <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img989.svg"
+ ALT="$s(t)$"></SPAN> to be transmitted 
+is used to modulate the amplitude, phase, or frequency of the carrier signal 
+<!-- MATH
+ $c(t)=\cos(\omega_c t)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img990.svg"
+ ALT="$c(t)=\cos(\omega_c t)$"></SPAN> with <EM>carrier frequency</EM> <!-- MATH
+ $\omega_c=2\pi f_C$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img991.svg"
+ ALT="$\omega_c=2\pi f_C$"></SPAN>, which
+is much higher than the highest frequency component of the signal <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img989.svg"
+ ALT="$s(t)$"></SPAN>. The 
+modulated signal <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img85.svg"
+ ALT="$x(t)$"></SPAN> is then transmitted.
+
+<P>
+
+<UL>
+<LI><EM>Amplitude Modulation (AM)</EM>
+
+<P>
+The amplitude of the carrier is modulated by the signal <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img989.svg"
+ ALT="$s(t)$"></SPAN> and becomes 
+  time variant:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+x(t)=\cos(\omega_c t)\,[1+k_a s(t)]
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img992.svg"
+ ALT="$\displaystyle x(t)=\cos(\omega_c t)\,[1+k_a s(t)]$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">368</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+where <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img993.svg"
+ ALT="$0&lt;k_a&lt;1$"></SPAN> is the amplitude modulation index, and we assume the 
+  amplitude of the signal is no greater than 1. For example, if the signal
+  is sinusoidal <!-- MATH
+ $s(t)=\cos(\omega_s t)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img994.svg"
+ ALT="$s(t)=\cos(\omega_s t)$"></SPAN>, then the modulated signal is:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+x(t)=\cos(\omega_ct)[1+\cos(\omega_st)]
+    =\cos(\omega_ct)+\frac{1}{2}[\cos(\omega_c+\omega_s)t+\cos(\omega_c-\omega_s)t]
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.88ex; vertical-align: -1.71ex; " SRC="img995.svg"
+ ALT="$\displaystyle x(t)=\cos(\omega_ct)[1+\cos(\omega_st)]
+=\cos(\omega_ct)+\frac{1}{2}[\cos(\omega_c+\omega_s)t+\cos(\omega_c-\omega_s)t]$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">369</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+In order to transmit all signal frequencies up to the highest frequency
+  component <!-- MATH
+ $\omega_{max}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img996.svg"
+ ALT="$\omega_{max}$"></SPAN> in the signal, a bandwidth of 
+  <!-- MATH
+ $\triangle\omega=(\omega_c+\omega_{max})-(\omega_c-\omega_{max})=2\omega_{max}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img997.svg"
+ ALT="$\triangle\omega=(\omega_c+\omega_{max})-(\omega_c-\omega_{max})=2\omega_{max}$"></SPAN> 
+  centered around the carrier (or central) frequency <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img998.svg"
+ ALT="$\omega_c$"></SPAN> is required.  
+
+<P>
+</LI>
+<LI><EM>Phase Modulation (PM)</EM>
+
+<P>
+The phase of the carrier is modulated by the signal <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img989.svg"
+ ALT="$s(t)$"></SPAN> and becomes
+  time variant:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+x(t)=\cos(\omega_ct+k_p s(t))
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.78ex; " SRC="img999.svg"
+ ALT="$\displaystyle x(t)=\cos(\omega_ct+k_p s(t))$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">370</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+where <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.78ex; " SRC="img1000.svg"
+ ALT="$k_p$"></SPAN> is the phase modulation index. For example, if the signal is 
+  sinusoidal <!-- MATH
+ $s(t)=\cos(\omega_s t)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img994.svg"
+ ALT="$s(t)=\cos(\omega_s t)$"></SPAN>, then the modulated signal is:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+x(t)=\cos(\omega_ct+k_p \cos(\omega_st))
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.78ex; " SRC="img1001.svg"
+ ALT="$\displaystyle x(t)=\cos(\omega_ct+k_p \cos(\omega_st))$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">371</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+where <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.78ex; " SRC="img1000.svg"
+ ALT="$k_p$"></SPAN> is the phase modulation index. The phase angle of the carrier 
+  is modulated to vary within the range of <!-- MATH
+ $(-k_p,\;k_p)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.78ex; " SRC="img1002.svg"
+ ALT="$(-k_p,\;k_p)$"></SPAN>.
+
+<P>
+</LI>
+<LI><EM>Frequency Modulation (FM)</EM>  
+
+<P>
+The frequency of the carrier is modulated by the signal <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img989.svg"
+ ALT="$s(t)$"></SPAN> and becomes
+  time variant:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\omega(t)=\omega_c+k_f s(t)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.78ex; " SRC="img1003.svg"
+ ALT="$\displaystyle \omega(t)=\omega_c+k_f s(t)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">372</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+where <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.78ex; " SRC="img1004.svg"
+ ALT="$k_f$"></SPAN> is the frequency modulation index. As <!-- MATH
+ $\omega(t) =d\phi(t)/dt$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img1005.svg"
+ ALT="$\omega(t) =d\phi(t)/dt$"></SPAN>,
+  the angle is also time variant:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\phi(t)=\int_0^t\omega(\tau)d\tau=\int_0^t ( \omega_c+k_f s(\tau)) d\tau
+    =\omega_c t+k_f \int_0^t s(\tau)d\tau
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.23ex; " SRC="img1006.svg"
+ ALT="$\displaystyle \phi(t)=\int_0^t\omega(\tau)d\tau=\int_0^t ( \omega_c+k_f s(\tau)) d\tau
+=\omega_c t+k_f \int_0^t s(\tau)d\tau$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">373</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+and the modulated signal is:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+x(t)=\cos(\phi(t))=\cos\left(\omega_c t+k_f \int_0^t s(\tau)d\tau\right)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.32ex; " SRC="img1007.svg"
+ ALT="$\displaystyle x(t)=\cos(\phi(t))=\cos\left(\omega_c t+k_f \int_0^t s(\tau)d\tau\right)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">374</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+For example, if the signal is sinusoidal <!-- MATH
+ $s(t)=\cos(\omega_s t)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img994.svg"
+ ALT="$s(t)=\cos(\omega_s t)$"></SPAN>, then
+  the modulated signal is:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+x(t)=\cos\left(\omega_c t+k_f \int_0^t \cos(\omega_s \tau)d\tau\right)
+    =\cos\left(\omega_c t+\frac{k_f}{\omega_s} \sin(\omega_s t)\right)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.32ex; " SRC="img1008.svg"
+ ALT="$\displaystyle x(t)=\cos\left(\omega_c t+k_f \int_0^t \cos(\omega_s \tau)d\tau\right)
+=\cos\left(\omega_c t+\frac{k_f}{\omega_s} \sin(\omega_s t)\right)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">375</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/AMFMmodulation.png"
+ ALT="AMFMmodulation.png">
+
+<P>
+</LI>
+</UL>
+
+<P>
+The amplitude-modulated signal can be demodulated to recovered the signal
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img989.svg"
+ ALT="$s(t)$"></SPAN> from the transmitted signal by RF amplification, rectification, 
+low-pass filtering, and audio signal amplification.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/AMradio.png"
+ ALT="AMradio.png">
+
+<P>
+In any of the three case above, it requires a certain bandwidth around the
+carrier frequency <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img998.svg"
+ ALT="$\omega_c$"></SPAN> to transmit the modulated signal. Consequently, 
+the <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img23.svg"
+ ALT="$Q$"></SPAN> value of the tuner of the receiver needs to be very carefully chosen.
+It needs to be high enough for good selectivity between different radio 
+stations, but, on the other hand, it cannot be too high in order to have a 
+bandwidth wide enough to contain all frequency components in the signal.
+
+<P>
+In 
+<A ID="tex2html14"
+  HREF="https://en.wikipedia.org/wiki/Digital_broadcasting">digital broadcasting</A>,
+the information to be broadcast is first converted into digital signal,
+which is then used to 
+<A ID="tex2html15"
+  HREF="https://en.wikipedia.org/wiki/Modulation#Fundamental_digital_modulation_methods">modulate</A>
+the phase, amplitude or frequency of the carrier signal at certain radio 
+frequency:
+
+<UL>
+<LI><A ID="tex2html16"
+  HREF="https://en.wikipedia.org/wiki/Phase-shift_keying">Phase-shift keying (PSK)</A>
+</LI>
+<LI><A ID="tex2html17"
+  HREF="https://en.wikipedia.org/wiki/Amplitude-shift_keying">Amplitude-shift keying (ASK)</A>
+</LI>
+<LI><A ID="tex2html18"
+  HREF="https://en.wikipedia.org/wiki/Frequency-shift_keying">Frequency-shift keying (FSK)</A>
+</LI>
+</UL>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node20.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node16.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node18.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node20.html">Real and Reactive Power</A>
+<B> Up:</B> <A
+ HREF="node16.html">Frequency Response Functions and</A>
+<B> Previous:</B> <A
+ HREF="node18.html">Second-order system as a</A></DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

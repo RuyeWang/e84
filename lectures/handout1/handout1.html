@@ -1,0 +1,646 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>handout1</TITLE>
+<META NAME="description" CONTENT="handout1">
+<META NAME="keywords" CONTENT="handout1">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="handout1.css">
+
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/sw/share/lib/latex2html/icons/next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/sw/share/lib/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/sw/share/lib/latex2html/icons/prev_g.png">   
+<BR>
+<B> Next:</B> <A NAME="tex2html3"
+  HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<P>
+<DIV ALIGN="CENTER">
+<FONT SIZE="+3"><B>Handout 1: Review</B> </FONT>
+
+</DIV>
+
+<P>
+
+<UL>
+<LI><B>Basic Circuit Variables</B>
+  
+<UL>
+<LI><B>Voltage:</B>
+
+<P>
+Voltage is an ''across variable'' as it measures the difference between two electrical
+      potentials at two points. When a reference point is used (e.g., the ''ground''), the
+      voltage at a certain point is defined as the potential difference between this point
+      and the reference point.
+
+<P>
+</LI>
+<LI><B>Current:</B>
+
+<P>
+Current is a ''through variable'' as it measures the amount of electrical charge that
+      flow through a pass per unit time.
+
+<P>
+</LI>
+</UL>
+
+<P>
+</LI>
+<LI><B>Basic Elements</B>
+
+<P>
+
+<UL>
+<LI><B>Resistor:</B>
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V=RI,\;\;\;I=\frac{V}{R},\;\;\;R=\frac{V}{I}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="222" HEIGHT="46" BORDER="0"
+ SRC="img1.png"
+ ALT="\begin{displaymath}V=RI,\;\;\;I=\frac{V}{R},\;\;\;R=\frac{V}{I} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+</LI>
+<LI><B>Capacitor:</B>
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V=\frac{Q}{C}, \;\;\;i(t)=C\frac{d}{dt} v(t),\;\;\;
+    v(t)=\frac{1}{C}\int_{-\infty}^t i(\tau) d\tau
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="391" HEIGHT="48" BORDER="0"
+ SRC="img2.png"
+ ALT="\begin{displaymath}V=\frac{Q}{C}, \;\;\;i(t)=C\frac{d}{dt} v(t),\;\;\;
+v(t)=\frac{1}{C}\int_{-\infty}^t i(\tau) d\tau \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+</LI>
+<LI><B>Inductor:</B>
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V=\frac{W}{Q};\;\;\;\;\;v(t)=\frac{d}{dt} \psi(t)=L\frac{d}{dt} i(t),\;\;\;
+    i(t)=\frac{1}{L}\int_{-\infty}^t v(\tau) d\tau
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="482" HEIGHT="50" BORDER="0"
+ SRC="img3.png"
+ ALT="\begin{displaymath}V=\frac{W}{Q};\;\;\;\;\;v(t)=\frac{d}{dt} \psi(t)=L\frac{d}{dt} i(t),\;\;\;
+i(t)=\frac{1}{L}\int_{-\infty}^t v(\tau) d\tau \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+</LI>
+</UL>
+
+<P>
+</LI>
+<LI><B>Series and Parallel Connections</B>
+
+<P>
+
+<UL>
+<LI><B>Series Connections:</B>
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../figures/series_connections.gif"
+ ALT="series_connections.gif">
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+R_{s}=R_1+\cdots+R_n=\sum_{i=1}^n R_i
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="229" HEIGHT="55" BORDER="0"
+ SRC="img4.png"
+ ALT="\begin{displaymath}R_{s}=R_1+\cdots+R_n=\sum_{i=1}^n R_i \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+L_{s}=L_1+\cdots+L_n=\sum_{i=1}^n L_i
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="223" HEIGHT="55" BORDER="0"
+ SRC="img5.png"
+ ALT="\begin{displaymath}L_{s}=L_1+\cdots+L_n=\sum_{i=1}^n L_i \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\frac{1}{C_{s}}=\frac{1}{C_1}+\cdots+\frac{1}{C_n}
+    =\sum_{i=1}^n \frac{1}{C_i},\;\;\;or\;\;\;
+    C_{s}=\frac{1}{\sum_{i=1}^n \frac{1}{C_i}}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="407" HEIGHT="56" BORDER="0"
+ SRC="img6.png"
+ ALT="\begin{displaymath}\frac{1}{C_{s}}=\frac{1}{C_1}+\cdots+\frac{1}{C_n}
+=\sum_{i=...
+..._i},\;\;\;or\;\;\;
+C_{s}=\frac{1}{\sum_{i=1}^n \frac{1}{C_i}} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+If <IMG
+ WIDTH="50" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.png"
+ ALT="$n=2$">,
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+C_s=\frac{1}{\frac{1}{C_1}+\frac{1}{C_2}}=\frac{C_1C_2}{C_1+C_2}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="205" HEIGHT="54" BORDER="0"
+ SRC="img8.png"
+ ALT="\begin{displaymath}C_s=\frac{1}{\frac{1}{C_1}+\frac{1}{C_2}}=\frac{C_1C_2}{C_1+C_2} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+</LI>
+<LI><B>Parallel Connections:</B>
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../figures/parallel_connections.gif"
+ ALT="parallel_connections.gif">
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\frac{1}{R_{p}}=\frac{1}{R_1}+\cdots+\frac{1}{R_n}
+    =\sum_{i=1}^n \frac{1}{R_i},\;\;\;or\;\;\;
+    R_{p}=\frac{1}{\sum_{i=1}^n \frac{1}{R_i}}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="414" HEIGHT="56" BORDER="0"
+ SRC="img9.png"
+ ALT="\begin{displaymath}\frac{1}{R_{p}}=\frac{1}{R_1}+\cdots+\frac{1}{R_n}
+=\sum_{i=...
+..._i},\;\;\;or\;\;\;
+R_{p}=\frac{1}{\sum_{i=1}^n \frac{1}{R_i}} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+If <IMG
+ WIDTH="50" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.png"
+ ALT="$n=2$">,
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+R_p=\frac{1}{\frac{1}{R_1}+\frac{1}{R_2}}=\frac{R_1R_2}{R_1+R_2}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="209" HEIGHT="54" BORDER="0"
+ SRC="img10.png"
+ ALT="\begin{displaymath}R_p=\frac{1}{\frac{1}{R_1}+\frac{1}{R_2}}=\frac{R_1R_2}{R_1+R_2} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\frac{1}{L_{p}}=\frac{1}{L_1}+\cdots+\frac{1}{L_n}
+    =\sum_{i=1}^n \frac{1}{L_i},\;\;\;or\;\;\;
+    L_{p}=\frac{1}{\sum_{i=1}^n \frac{1}{L_i}}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="405" HEIGHT="56" BORDER="0"
+ SRC="img11.png"
+ ALT="\begin{displaymath}\frac{1}{L_{p}}=\frac{1}{L_1}+\cdots+\frac{1}{L_n}
+=\sum_{i=...
+..._i},\;\;\;or\;\;\;
+L_{p}=\frac{1}{\sum_{i=1}^n \frac{1}{L_i}} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+If <IMG
+ WIDTH="50" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.png"
+ ALT="$n=2$">,
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+L_p=\frac{1}{\frac{1}{L_1}+\frac{1}{L_2}}=\frac{L_1L_2}{L_1+L_2}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="202" HEIGHT="54" BORDER="0"
+ SRC="img12.png"
+ ALT="\begin{displaymath}L_p=\frac{1}{\frac{1}{L_1}+\frac{1}{L_2}}=\frac{L_1L_2}{L_1+L_2} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+C_{p}=C_1+C_2
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="109" HEIGHT="34" BORDER="0"
+ SRC="img13.png"
+ ALT="\begin{displaymath}C_{p}=C_1+C_2 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+</UL>
+  If <IMG
+ WIDTH="50" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.png"
+ ALT="$n=2$">, we have:
+  <TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="CENTER">&nbsp;</TD>
+<TD ALIGN="CENTER">Resistor</TD>
+<TD ALIGN="CENTER">Inductor</TD>
+<TD ALIGN="CENTER">Capacitor</TD>
+</TR>
+<TR><TD ALIGN="CENTER">v-i relation</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="66" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img14.png"
+ ALT="$v=R\;i$"></TD>
+<TD ALIGN="CENTER"><!-- MATH
+ $v=L \;\frac{di}{dt}$
+ -->
+<IMG
+ WIDTH="73" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.png"
+ ALT="$v=L \;\frac{di}{dt}$"></TD>
+<TD ALIGN="CENTER"><!-- MATH
+ $v=\frac{1}{C}\int i\;dt$
+ -->
+<IMG
+ WIDTH="99" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.png"
+ ALT="$v=\frac{1}{C}\int i\;dt $"></TD>
+</TR>
+<TR><TD ALIGN="CENTER">Series</TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="118" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$R_s=R_1+R_2$"></TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="113" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.png"
+ ALT="$L_s=L_1+L_2$"></TD>
+<TD ALIGN="CENTER"><!-- MATH
+ $C_s=C_1C_2/(C_1+C_2)$
+ -->
+<IMG
+ WIDTH="181" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.png"
+ ALT="$C_s=C_1C_2/(C_1+C_2)$"></TD>
+</TR>
+<TR><TD ALIGN="CENTER">Parallel</TD>
+<TD ALIGN="CENTER"><!-- MATH
+ $R_p=R_1R_2/(R_1+R_2)$
+ -->
+<IMG
+ WIDTH="186" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.png"
+ ALT="$R_p=R_1R_2/(R_1+R_2)$"></TD>
+<TD ALIGN="CENTER"><!-- MATH
+ $L_p=L_1L_2/(L_1+L_2)$
+ -->
+<IMG
+ WIDTH="178" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.png"
+ ALT="$L_p=L_1L_2/(L_1+L_2)$"></TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="116" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.png"
+ ALT="$C_p=C_1+C_2$"></TD>
+</TR>
+</TABLE>
+
+<P>
+<B>Q:</B> Why are <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img23.png"
+ ALT="$R$"> and <IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img24.png"
+ ALT="$L$"> similar to each other while <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img25.png"
+ ALT="$C$"> is different?
+
+<P>
+<B>A:</B> Observe how <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img23.png"
+ ALT="$R$">, <IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img24.png"
+ ALT="$L$"> and <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img25.png"
+ ALT="$C$"> are related to voltage <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img26.png"
+ ALT="$v$"> and current
+      <IMG
+ WIDTH="11" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.png"
+ ALT="$i$"> differently.
+
+<P>
+</LI>
+<LI><B>Energy and Power</B>
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V=\frac{W}{Q},\;\;\;W=VQ,\;\;\;P=\frac{dW}{dt}=V \frac{dQ}{dt}=VI=\frac{V^2}{R}=RI^2
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="487" HEIGHT="52" BORDER="0"
+ SRC="img28.png"
+ ALT="\begin{displaymath}V=\frac{W}{Q},\;\;\;W=VQ,\;\;\;P=\frac{dW}{dt}=V \frac{dQ}{dt}=VI=\frac{V^2}{R}=RI^2 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+</LI>
+<LI><B>Voltage/Current Dividers</B>
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../figures/dividers.gif"
+ ALT="dividers.gif">
+
+<P>
+
+<UL>
+<LI><B>Voltage Divider</B>
+	<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+I=\frac{V}{R_1+R_2},\;\;\;\;V_1=IR_1=V\;\frac{R_1}{R_1+R_2},\;\;\;\;
+	V_2=IR_2=V\;\frac{R_2}{R_1+R_2}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="545" HEIGHT="49" BORDER="0"
+ SRC="img29.png"
+ ALT="\begin{displaymath}I=\frac{V}{R_1+R_2},\;\;\;\;V_1=IR_1=V\;\frac{R_1}{R_1+R_2},\;\;\;\;
+V_2=IR_2=V\;\frac{R_2}{R_1+R_2} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Voltage across <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img23.png"
+ ALT="$R$"> is proportional to its <B>own</B> resistance.
+
+<P>
+When there are more than two resistors in series, we simply have:
+	<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V_i=IR_i=V\;\frac{R_i}{\sum_j R_j}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="167" HEIGHT="52" BORDER="0"
+ SRC="img30.png"
+ ALT="\begin{displaymath}V_i=IR_i=V\;\frac{R_i}{\sum_j R_j} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+</LI>
+<LI><B>Current Divider</B>
+	<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V=I\frac{R_1R_2}{R_1+R_2},\;\;\;I_1=\frac{V}{R_1}=I\frac{R_2}{R_1+R_2},
+	\;\;\;\;I_2=\frac{V}{R_2}=I\frac{R_1}{R_1+R_2}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="515" HEIGHT="49" BORDER="0"
+ SRC="img31.png"
+ ALT="\begin{displaymath}V=I\frac{R_1R_2}{R_1+R_2},\;\;\;I_1=\frac{V}{R_1}=I\frac{R_2}{R_1+R_2},
+\;\;\;\;I_2=\frac{V}{R_2}=I\frac{R_1}{R_1+R_2} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Current through <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img23.png"
+ ALT="$R$"> is proportional to <B>the other</B> resistance.
+
+<P>
+When there are more than twor esistors in parallel, we have:
+	<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V=I\frac{1}{\sum_j 1/R_j},\;\;\;I_i=\frac{V}{R_i}=I\frac{1/R_i}{\sum_j 1/R_j}
+	=I\frac{G_i}{\sum_j G_j}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="399" HEIGHT="54" BORDER="0"
+ SRC="img32.png"
+ ALT="\begin{displaymath}V=I\frac{1}{\sum_j 1/R_j},\;\;\;I_i=\frac{V}{R_i}=I\frac{1/R_i}{\sum_j 1/R_j}
+=I\frac{G_i}{\sum_j G_j} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where <IMG
+ WIDTH="88" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img33.png"
+ ALT="$G_i=1/R_i$"> is the <EM>conductance</EM> of the ith resistor.
+
+<P>
+</LI>
+</UL>
+
+<P>
+</LI>
+<LI><B>Kirchhoff's Laws</B>
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../figures/Kirchhoff.gif"
+ ALT="Kirchhoff.gif">
+
+<P>
+
+<UL>
+<LI><B>KCL:</B> Due to conservation of electric charge, Kirchhoff 
+	current Law (KCL) states:
+
+<P>
+The algebraic sum of all currents into a node is zero <IMG
+ WIDTH="84" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.png"
+ ALT="$\sum_k I_k =0$">
+	(Currents leaving the node take negative values.)
+</LI>
+<LI><B>KVL:</B> Due to conservation of electric energy, Kirchhoff 
+	voltage Law (KCL) states:
+
+<P>
+The algebraic sum of voltage around a loop is zero <IMG
+ WIDTH="86" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img35.png"
+ ALT="$\sum_k V_k =0$">
+	(Voltages with opposite polarity take negative values.)
+
+<P>
+</LI>
+</UL>
+
+<P>
+</LI>
+<LI><B>Reference Point or Ground</B>
+
+<P>
+The voltage between any two nodes in a circuit is the difference between
+      the potentials at the two nodes. However, a particular node in the
+      circuit is usually chosen as the reference point, called the ground.
+      The voltage at any node in the circuit is therefore defined as the 
+      voltage between this node and the common ground.
+
+<P>
+</LI>
+</UL>
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html4"
+  HREF="node1.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/sw/share/lib/latex2html/icons/next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/sw/share/lib/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/sw/share/lib/latex2html/icons/prev_g.png">   
+<BR>
+<B> Next:</B> <A NAME="tex2html3"
+  HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Ruye Wang
+2009-01-20
+</ADDRESS>
+</BODY>
+</HTML>

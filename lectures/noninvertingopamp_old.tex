@@ -1,0 +1,83 @@
+\documentstyle[12pt]{article}
+\usepackage{html}
+
+\begin{document}
+
+  \htmladdimg{../figures/noninverteramplifier.gif}
+
+  Find the three parameters of this non-inverting amplifier: open-circuit 
+  voltage gain $A_{oc}$, input resistance $R_{in}$ and output resistance $R_{out}$.
+
+  \begin{itemize}
+    \item {\bf Voltage gain:} 
+      \begin{itemize}
+      \item First, we assume $r_{out}=0$, and apply an ideal voltage source $v_s$ 
+        ($R_s=0$) to the positive input so that $v^+=v_s$, and denote the voltage 
+      across $r_{in}$ by $v_{in}=v^+-v^-$, i.e., $v^-=v_s-v_{in}$. Applying KCL to 
+      the node of $v^-$, we get
+      \[ \frac{-v_{in}}{r_{in}}+\frac{v_s-v_{in}}{R_1}+\frac{v_s-v_{in}-Av_{in}}{R_f}=0 \]
+      Solving this for $v_{in}$, we get:
+      \[ v_{in}=v_s \frac{r_{in}(R_f+R_1)}{R_1R_f+r_{in}R_f+r_{in}R_1(A+1)} \]
+      The open-circuit voltage gain is:
+      \[ A_{oc}=\frac{v_{out}}{v_s}\approx \frac{Av_{in}}{v_s}
+      =\frac{Ar_{in}(R_f+R_1)}{R_1R_f+r_{in}R_f+r_{in}R_1(A+1)} \]
+      As $A>>1$ and $r_{in}$ is usually very large, we have
+      \[ A_{oc}\approx \frac{R_1+R_f}{R_1} \]
+
+      \item Second, assume $r_{in}\rightarrow \infty$ but $r_{out}\ne 0$,
+	we have
+      \[ v_{out}=A(v^+-v^-)\frac{R_f+R_1}{r_{out}+R_f+R_1} 
+      =A(v^+-v^-)\frac{R_f+R_1}{r_{out}+R_f+R_1} 
+      =A(v_s-v_{out}\frac{R_1}{R_1+R_f}) \frac{R_f+R_1}{r_{out}+R_f+R_1} \]
+      Solving for $v_{out}$ we get
+      \[ v_{out} =v_s \frac{A(R_f+R_1)}{r_{out}+R_f+(A+1)R_1} \]
+      and 
+      \[ A_{oc}=\frac{v_{out}}{v_s}=\frac{A(R_1+R_f)}{r_{out}+R_f+(A+1)R_1}
+      \approx \frac{A(R_1+R_f)}{AR_1}=\frac{R_1+R_f}{R_1} \]
+      The approximation is due to $A>>1$ and $r_{out}<<R_f+R_1$, i.e., 
+      $(R_f+R_1)(r_{out}+R_f+R_1)\approx 1$. 
+
+      \item If we could assume both $r_{in}\rightarrow \infty$ and $r_{out}=0$, 
+      we can apply KCL to the $v^-$ node to get
+      \[ \frac{v^-}{R_1}+\frac{v^--v_{out}}{R_f}=0, \;\;\;\;\;
+      \mbox{or}\;\;\;\;\; v_{out}=\frac{R_1+R_f}{R_1} v^- \]
+      But as $v^-\approx v^+=v_s$, we get the same result for $A_{oc}$.
+      \end{itemize}
+
+      In particular, when $R_f=0$, $A_{oc}=1$ and the circut becomes the voltage
+      follower.
+
+    \item {\bf Input resistance:} We let $v^+=v_s$ (with $R_s=0$) and assume
+      the input current is $i_{in}$, then we have $v^+-v^-=r_{in}i_{in}$, i.e.,
+      $v^-=v^+-r_{in}i_{in}=v_s-r_{in}i_{in}$. Applying KCL to the node of $v^-$ 
+      we get:
+      \[ i_{in}-\frac{v_s-r_{in}i_{in}}{R_1}-\frac{v_s-r_{in}i_{in}-A r_{in}i_{in}}{R_f+r_{out}}=0 \]
+      Solving this we get:
+      \[ R_{in}=\frac{v_s}{i_{in}}
+      =\frac{[(A+1)R_1+R_f+r_{out}]r_{in}+(R_f+r_{out})R_1}{R_1+R_f+r_{out}}
+      =\frac{(A+1)R_1+R_f+r_{out}}{R_1+R_f+r_{out}}r_{in}+R_1||(R_f+r_{out}) \]
+      The same result can be obtained if we use loop current method.
+      As $A>>1$ and $r_{out} \approx 0$, we get
+      \[ R_{in}  \approx \frac{(A+1)R_1+R_f}{R_1+R_f}r_{in}+R_1||R_f
+      \approx A r_{in}+R_1||R_f \]
+      Moreover, when $R_f=0$, $R_{in}\approx A r_{in}$ as in the voltage follower case.
+
+    \item {\bf Output resistance:} 
+      To simplify the analysis we still assume $r_{in}=\infty$. First, as shown above, 
+      the open-circuit output voltage is 
+      \[ v_{oc}=\frac{A(R_f+R_1)}{r_{out}+R_f+(A+1)R_1}v_s \]
+      Second, we find the short-circuit current, i.e., output port is shorted with
+      $v_{out}=0$, we have $v^-=v_{out}R_1/(R_1+R_f)=0$, and $v_{in}=v^+-v^-=v_s$,
+      \[ i_{sc}=\frac{A(v^+-v^-)}{r_{out}}=\frac{Av_{in}}{r_{out}}
+      =\frac{Av_s}{r_{out}} \]
+      Now the output resistance can be obtained as:
+      \[ R_{out}=\frac{v_{oc}}{i_{sc}}=\frac{A(R_f+R_1)v_s}{r_{out}+R_f+(A+1)R_1} 
+      \frac{r_{out}}{Av_s}=\frac{(R_1+R_f)r_{out}}{r_{out}+R_f+(A+1)R_1}
+      \approx \frac{r_{out}}{A} \frac{R_1+R_f}{R_1} \]
+      The approximation is due to $A>>1$. In particular, when $R_f=0$, 
+      $R_{out}=r_{out}/A$, as in the voltage follower case.
+
+  \end{itemize}
+
+\end{document}
+

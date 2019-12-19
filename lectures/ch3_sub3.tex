@@ -1,0 +1,138 @@
+\documentstyle[12pt]{article}
+\usepackage{html}
+
+\begin{document}
+
+
+The canonical 2nd-order LCCODE 
+\[
+y''(t)+2\zeta\omega_n y(t)+\omega_n^2 y(t)=x(t)
+\]
+caan be converted into a 1st-order ODE system containing two 
+1st-order LCCODEs (see 
+\htmladdnormallink{here}{../../../e176/lectures/ch5/node9.html}):
+\[
+{\bf y}'=\left[\begin{array}{c}y_1'\\y_2'\end{array}\right]
+=\left[\begin{array}{cc}0 & 1\\-\omega_n^2 & -2\zeta\omega_n\end{array}
+\right]\left[\begin{array}{c}y_1\\y_2\end{array}\right]
++\left[\begin{array}{c}0\\x(t)\end{array}\right]
+={\bf Ay}+{\bf x}
+\]
+The characteristic equation of the coefficient matrix ${\bf A}$ is
+\[
+\det(\lambda{\bf I}-{\bf A})
+=\det\left[\begin{array}{cc}\lambda & -1\\\omega_n^2 & \lambda+2\zeta\omega_n
+\end{array}\right]
+=\lambda^2+2\zeta\omega_n\lambda+\omega_n^2=0
+\]
+Solving which we get the two eigenvalues and the eigenvalue matrix:
+\[
+\lambda_{1,2}=(-\zeta\pm\sqrt{\zeta^2-1})\omega_n
+\;\;\;\;\;\;\;
+{\bf\Lambda}=\left[\begin{array}{cc}\lambda_1 & 0\\0 & \lambda_2\end{array}\right]
+\]
+Note that
+\[
+\lambda_1\lambda_2=\omega_n^2,\;\;\;\;\;\;\;\;\;\;
+\lambda_2-\lambda_1=2\omega_n\sqrt{\zeta^2-1}
+\]
+
+The eigenvector matrix and its inverse are:
+\[
+{\bf V}=\left[\begin{array}{cc}1 & 1\\ \lambda_1 & \lambda_2\end{array}\right],
+\;\;\;\;\;\;
+{\bf V}^{-1}=\frac{1}{\lambda_2-\lambda_1}
+\left[\begin{array}{cc}\lambda_2 & -1\\ -\lambda_1 & 1\end{array}\right]
+\]
+and we can verify thatat ${\bf A}={\bf V\Lambda V}^{-1}$. 
+
+\begin{itemize}
+\item Homogeneous solution $x(t)=0$:
+
+  Assuming $y_1(0)=y(0)=y_0$ and $y_2(0)=y'(0)=0$, we get the homogeneous 
+  solution:
+
+  \begin{eqnarray}
+  {\bf y}_h(t)&=&e^{{\bf A}t}{\bf y}(0)={\bf V}e^{{\bf\Lambda}t}{\bf V}^{-1}{\bf y}(0)
+  =\frac{1}{\lambda_2-\lambda_1}
+  \left[\begin{array}{cc} 1 & 1\\\lambda_1&\lambda_2\end{array}\right]
+  \left[\begin{array}{cc} e^{\lambda_1t} & 0\\0 & e^{\lambda_2t}\end{array}\right]
+  \left[\begin{array}{cc} \lambda_2 & -1\\\ -\lambda_1&1\end{array}\right]
+  \left[\begin{array}{c} y_0 \\ 0\end{array}\right]
+  \nonumber\\
+  &=&\frac{1}{\lambda_2-\lambda_1}
+  \left[\begin{array}{cc} \lambda_2e^{\lambda_1t}-\lambda_1e^{\lambda_2t}
+      & e^{\lambdaa_2t}-e^{\lambda_1t}
+      \\ \lambda_1\lambda_2(e^{\lambda_1 t}-e^{\lambda_2 t}) &
+      \lambda_2 e^{\lambda_2t}-\lambda_1 e^{\lambda_1t}\end{array}\right]
+  \left[\begin{array}{c} y_0 \\ 0\end{array}\right]
+  \nonumber\\
+  &=&\frac{y_0}{\lambda_2-\lambda_1}
+  \left[\begin{array}{c} \lambda_2e^{\lambda_1t}-\lambda_1e^{\lambda_2t}\\
+      \lambda_1\lambda_2(e^{\lambda_1t}-e^{\lambda_2t})
+    \end{array}\right]
+  \nonumber
+  \end{eqnarray}
+  we get the same result as shown above:
+  \[
+  y(t)=y_1(t)=\frac{y_0}{\lambda_2-\lambda_1}(\lambda_2e^{\lambda_1t}-\lambda_1e^{\lambda_2t})
+  \]
+
+\item Nonhomogeneous sollution $x(t)=1$, i.e.,${\bf x}=[0,\;1]^T$:
+
+  Assuming zero-initial condition $y_1(0)=y_2(0)=0$, i.e., ${\bf y}={\bf 0}$,
+  the non-homogeneous solution is:
+  \[
+  {\bf y}(t)=e^{{\bf A}t}{\bf y}(0)+e^{{\bf A}t}\int_0^t e^{-{\bf A}\tau}{\bf x}(\tau)d\tau
+  =e^{{\bf A}t}\int_0^t e^{-{\bf A}\tau} d\tau \;[0,\;1]^T
+  \]
+
+  \[
+  y(t)=y_1(t)=[1,\;0]\;{\bf y}(t)=[1,\;0]\; e^{{\bf A}t}\int_0^t e^{-{\bf A}\tau} d\tau\; [0,\;1]^T
+  \]
+  where 
+  \[
+  \int_0^t e^{-{\bf A}\tau} d\tau=-{\bf A}^{-1} e^{-{\bf A}\tau}\bigg|_0^t
+  ={\bf A}^{-1}( {\bf I}-e^{-{\bf A}t} )
+  \]
+  Substituting 
+  \[
+  {\bf A}^{-1}=({\bf V\Lambda V}^{-1})^{-1}={\bf V\Lambda}^{-1}{\bf V}^{-1},
+  \;\;\;\;\;\;
+  e^{{\bf A}t}={\bf V}e^{{\bf\Lambda}t}{\bf V}^{-1},\;\;\;\;\;\;
+  e^{-{\bf A}t}={\bf V}e^{-{\bf\Lambda}t}{\bf V}^{-1}
+  \]
+  into the function, we get
+%  \end{document}
+  \begin{eqnarray}
+  y(t)&=&[1,\;0]\;\left(e^{{\bf A}t}\int_0^t e^{-{\bf A}\tau} d\tau\right)\;[0,\;1]^T
+  =[1,\;0]\;\left({\bf V}e^{{\bf\Lambda}t}{\bf V}^{-1}\right)\,
+  \left({\bf V\Lambda}^{-1}{\bf V}^{-1}\right)
+  \left({\bf I}-{\bf V}e^{-{\bf\Lambda}t}{\bf V}^{-1}\right)\;[0,\;1]^T
+  \nonumber\\
+  &=&[1,\;0]\;{\bf V}e^{{\bf\Lambda}t} {\bf \Lambda}^{-1}{\bf V}^{-1}
+  -{\bf V}e^{{\bf\Lambda}t}{\bf\Lambda}^{-1}  e^{-{\bf\Lambda}t}{\bf V}^{-1}
+  ={\bf V}e^{{\bf\Lambda}t}{\bf\Lambda}^{-1}({\bf I}-e^{-{\bf\Lambda}t} ){\bf V}^{-1}
+  \;[0,\;1]^T
+  \nonumber\\
+  &=&[1,\;0]\;\left[\begin{array}{cc}1&1\\\lambda_1&\lambda_2\end{array}\right]
+  \left[\begin{array}{cc}e^{\lambda_1t}&0\\0&e^{\lambda_2t}\end{array}\right]
+  \left[\begin{array}{cc}1/\lambda_1&0\\0&1/\lambda_2\end{array}\right]
+  \left[\begin{array}{cc} 1-e^{-\lambda_1t} & 0\\0 & 1-e^{-\lambda_2t}\end{array}\right]
+  \frac{1}{\lambda_2-\lambda_1}
+  \left[\begin{array}{cc}\lambda_2&-1\\-\lambda_1&1\end{array}\right]
+  \left[\begin{array}{c}0\\1\end{array}\right]
+  \nonumber\\
+  &=&\left[e^{\lambda_1t},\;e^{\lambda_2t}\right]
+    \left[\begin{array}{cc}1/\lambda_1&0\\0&1/\lambda_2\end{array}\right]
+    \frac{1}{\lambda_2-\lambda_1}
+  \left[\begin{array}{c}-(1-e^{-\lambda_1t})\\1-e^{-\lambda_2t}\end{array}\right]    
+  =\frac{1}{\lambda_1\lambda_2}
+  \left(1-\frac{\lambda_2e^{\lambda_1t}-\lambda_1e^{\lambda_2t}}{\lambda_2-\lambda_1}\right)
+  \nonumber
+  \end{eqnarray}
+\end{itemize}
+
+\end{document}
+
+

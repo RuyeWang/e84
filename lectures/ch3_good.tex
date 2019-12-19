@@ -1,0 +1,1506 @@
+\documentstyle[12pt]{article}
+\usepackage{html}
+\textwidth 6.0in
+\topmargin -0.5in
+\oddsidemargin -0in
+\evensidemargin -0.5in
+% \usepackage{graphics}  
+\begin{document}
+
+\section*{Chapter 3: AC Circuit Analysis}
+
+\subsection*{Sinusoidal Variables}
+
+Sinusoidal variables are of special importance in electrical and 
+electronic systems, not only because they occur frequently in such 
+systems, but also because any periodical signal can be represented 
+as a linear combination of a set of sinusoidal signals of different 
+frequencies, amplitudes, and phase angles (Fourier transform theory).
+
+A sinusoidal variable (voltage or current) can be written as
+\[	x(t)=\cos(\omega t + \phi),\;\;\;\mbox{or}\;\;\;
+	x(t)=A\;\sin(\omega t+\phi+\pi/2) \]
+The three parameters $A$, $\omega$ and $\phi$ represent three 
+important elements:
+\begin{itemize}
+\item {\bf $A$: amplitude or peak value}
+\item {\bf $\phi$: phase angle $0 \le \phi \le 2\pi$ in radians or
+	$0^\circ \le \phi \le 360^\circ$ in degrees.}
+\item {\bf $\omega$: angular frequency in radians per second.}
+\end{itemize}
+Frequency can also be measured by cycles per second. i.e., $f=1/T$ 
+where $T$ is cycle time or period (in seconds). Since one cycle is
+$2\pi$ radians, we have 
+\[ \omega=2\pi f=2\pi/T,\;\;\;\;f=1/T=\omega/2\pi,\;\;\;T=1/f=2\pi/\omega \]
+
+{\bf Example:} A sinusoidal current with a frequency of 60 Hz reaches
+a positive maximum of 20A at $t=2 \; ms$. Give the expression of this
+current as a function of time $i(t)$.
+
+We have $A=20$, $\omega=2\pi f=6.28\times 60=377\;rad/s$. As cosine
+function $\cos(\alpha)$ reaches maximum when $\alpha=0$ (or $\pm 2\pi,
+\pm 4\pi, \cdots$), the phase angle $\phi$ should satisfy 
+$\omega t+\phi=0$ where $\omega=377$ and $t=2\times 10^{-3}$, i.e.,
+\[	\phi=-\omega t=-377 \times 2 \times 10^{-3}=-0.754\; rad 
+	=-0.754\times 360^\circ /2\pi=-43.2^\circ	\]
+The current is
+\[	i(t)=20\;\cos(377 t-43.2^\circ)	\]
+
+{\bf Average Value} 
+
+The average of a varying current $i(t)$ is the steady value of current 
+$I_{av}$ that in period $T$ would transfer the same charge $Q$:
+\[	I_{av}T=Q=\int_0^T i(t) dt,\;\;\;\;\mbox{i.e.}\;\;\;\;
+	I_{av}=\frac{1}{T}\int_0^T i(t) dt	\]
+Similarly, the average voltage is defined as:
+\[	V_{av}=\frac{1}{T}\int_0^T v(t) dt	\]
+In general, when $i(t)$ and $v(t)$ are periodic, the time period $T$ is
+one complete cycle. For a sinusoidal variable $i(t)=I_m \cos(\omega t)$, 
+the average over the complete cycle is always zero (the charge transferred 
+during the first half is the opposite to that transferred in the second).
+We can consider the half-cycle average:
+\begin{eqnarray} 
+I_{av}&=&\frac{1}{T/2}\int_{-T/4}^{T/4} i(t) dt
+	=\frac{2}{T}\int_{-T/4}^{T/4} I_m\;\cos(2\pi t/T)dt	
+	=\frac{2I_m}{T}\frac{T}{2\pi} \sin(2\pi t/T)|_{-T/4}^{T/4}
+	\nonumber \\
+	&=& \frac{I_m}{\pi}[\sin(\pi/2)-\sin(-\pi/2)]
+	=2I_m/\pi=0.637\;I_m
+	\nonumber
+\end{eqnarray}
+
+{\bf Effective Value}
+
+The effective value of a varying current $i(t)$ is the steady value of 
+current $I_{eff}$ that in period $T$ would transfer the same amount of 
+energy $W$:
+\[	I^2_{eff}RT=W=\int_0^T i^2(t)R dt,\;\;\;\;\mbox{i.e.}\;\;\;\;
+	I_{eff}=\sqrt{\frac{1}{T}\int_0^T i^2(t) dt}	\]
+As $I_{eff}$ is the ``square root of the mean squared value'', it is
+also called the {\em root-mean-square (rms)} current $I_{rms}$.
+Similarly, the effective voltage is defined as:
+\[	V_{eff}=\sqrt{\frac{1}{T}\int_0^T v^2(t) dt}	\]
+For a sinusoidal variable $i(t)=I_m \cos(\omega t)$, we have
+\[
+I^2_{eff} = \frac{1}{T}\int_0^T i^2(t) dt
+	= \frac{I^2_m}{T}\int_0^T \cos(2\pi t/T) dt
+	= \frac{I^2_m}{2T}\int_0^T (1+\cos(4\pi t/T) dt
+	=\frac{I^2_m}{2}
+\]
+i.e.,
+\[	I_{eff}=\frac{I_m}{\sqrt{2}}=0.707 I_m	\]
+
+\subsection*{Complex and Vector Representations}
+
+{\bf Phasor Representation}
+
+To simplify the computation of sinusoidal variables, they are often
+represented as the real or imaginary part of the corresponding complex 
+variables (vectors in complex plane) which can be more conveniently 
+operated.
+
+A sinusoidal variable is either the real or imaginary part of a complex
+variable, e.g.,:
+\[	A\;\cos(\omega t+\phi)=Re[A\;e^{j\omega t+\phi}],\;\;\;\;
+	A\;\sin(\omega t+\phi)=Im[A\;e^{j\omega t+\phi}]	\]
+A sinusoidal voltage can be represented as:
+\[	v(t)=V_m\;cos(\omega t+\phi)=Re[V e^{j\phi} \sqrt{2}e^{j\omega t}] 
+	=Re[\dot{V} \sqrt{2} e^{j\omega t}] \]
+where $V_m$ is the peak magnitude of the voltage and $V=V_m/\sqrt{2}$ is the
+effective value (RMS), and the complex component of the voltage is defined 
+as the {\bf phasor} representation of the voltage:
+\[	\dot{V}\stackrel{\triangle}{=}V e^{j\phi} =V \angle \phi	\]
+Phasor represents the magnitude, the rms (effective) value $V$, and the 
+phase $\phi$ of the voltate. The frequency $\omega=2\pi f$ is not explicitly 
+represented by the phasor, as all currents and voltages in the circuit 
+considered here have the same frequency.
+
+{\bf Example} A 120V 60Hz AC voltage 
+\[	v(t)=120 \sqrt{2}\; \cos(2\pi f t+60^\circ)
+	=120\sqrt{2}\; \cos(6.28\times 60 t+60^\circ)
+	=170\;\cos(377\;t+60^\circ)	\]
+is expressed as $\dot{V}=V \angle \phi= 120 \angle 60^\circ$ with rms
+value $V=120$ and $\phi=60^\circ$, and the implied frequency $f=60Hz$. 
+All sinusoidal signals, currents as well as voltages can be represented
+by phasors.
+
+{\bf Complex Arithmetic} 
+
+A complex number can be represented in four different formats:
+\begin{itemize}
+\item {\bf Algebraic expression:} $z=x+jy$ where $x$ and $y$ are the
+	real and imaginary part of complex variable $z$.
+\item {\bf Complex exponential:} $z=|z|e^{j\angle z}=|z|\;e^{j\phi}$ where 
+\[ \left\{ \begin{array}{ll} |z|=\sqrt{x^2+y^2} & \mbox{amplitude}\\
+			\phi=\angle z=tan^{-1} (y/x) & \mbox{phase angle}
+	\end{array} \right. \]
+\item {\bf Trigonometric:} $z=|z|\;e^{j\phi}=|z|(\cos\phi+j\;\sin\phi)=x+jy$
+	due to Euler identity, i.e.,
+\[ \left\{ \begin{array}{ll} x=|z|\;\cos\phi & \mbox{real part}\\
+			      y=|z|\;\sin\phi & \mbox{imaginary part}
+	\end{array} \right. \]
+\item {\bf Polar coordinates:} $z=|z|\angle z=|z|\angle \phi=|z| e^{j\phi}$
+\end{itemize}
+
+The arithmetic operations of two complex numbers $z=x+jy=|z|\;e^{j\phi}$ 
+and $w=u+jv=|w|\;e^{j\psi}$ are listed below:
+\begin{itemize}
+	\item {\bf Add/Subtract:} 
+\[	z+w=(x+u)+j(y+v),\;\;\;\;z-w=(x-u)+j(y-v)	\]
+	\item {\bf Multiply:}
+\[	z\;w=(x+jy)(u+jv)=(xu-yv)+j(xv+yu)=|z|\;|w|\;e^{j(\phi+\psi)}	\]
+	\item {\bf Divide:}
+\[	\frac{z}{w}=\frac{x+jy}{u+jv}=\frac{(x+jy)(u-jv)}{(u+jv)(u-jv)}
+	=\frac{(xu+yv)+j(yu-xv)}{u^2+v^2}
+	=\frac{|z|}{|w|}\;e^{j(\phi-\psi)}	\]
+	\item {\bf Rotation:}
+
+A complex number (vector) $z=|z|\;e^{j\phi}$ multiplied by $e^{j\alpha}$ 
+will become $z\;e^{j\alpha}=|z|\;e^{j(\phi+\alpha)}$, i.e., rotated by
+an angle of $\alpha$. In particular, As $e^{j\pi/2}=j$ and $e^{-j\pi/2}=-j$,
+they can be considered as $90^\circ$ rotation factors. Any complex number
+multiplied by $j$ or $-j$ will be rotated counter clockwise or clockwise 
+by 90 degrees.
+
+	\item {\bf Complex Conjugate:}
+
+The complex conjugate of $z=x+jy=|z|e^{j\angle z}$ is 
+$z^*=x-jy=|z|e^{-j\angle z} $. In general, $z^*$ can be obtained by
+negating every $j$ in the expression of $z$ (replacing $j$ by $-j$). 
+The magnitude of a complex number $z=x+jy$ can be found by:
+\[	\sqrt{zz^*}=\sqrt{(x+jy)(x-jy)}=\sqrt{x^2+y^2}	\]
+
+	\item {\bf Reciprocal:}
+\[	|z^{-1}|=\frac{1}{|z|}=\frac{1}{\sqrt{x^2+y^2}},\;\;\;\;
+	\angle(z^{-1})=\angle(\frac{1}{z})=0-\angle{z}=-\angle z	\]
+
+\end{itemize}
+
+\subsection*{Generalized Kirchhoff's Laws and Ohm's Law}
+
+If we assume all voltages and currents in a circuit are sinusoidals of
+the same frequency $\omega$, they can be represented as complex phasors 
+(vectors), e.g.,
+\[
+v(t)=V_m cos(\omega t+\phi)=Re[V e^{j\phi}\;\sqrt{2}\;e^{j\omega t}]
+=Re[\dot{V}\;\sqrt{2}\;e^{j\omega t}]	\]
+and the KVL $\sum_k v_k(t)=0$ can be expressed as $\sum_k \dot{V}_k=0$,
+and the same is true for KCL. In general, the Kirchhoff's laws can now 
+be stated as
+\begin{itemize}
+\item {\bf Current Law (KCL):} The vector sum of the currents into a node
+	at any instant is zero	$\sum_k \dot{I}_k=0$.
+\item {\bf Voltage Law (KVL):} The vector sum of the voltages around a
+	loop at any instant is zero $\sum_k \dot{V}_k=0$.
+\end{itemize}
+
+{\bf Example 1:} Consider three sinusoidal voltage sources 
+$v_1(t)=6\sqrt{2}\;\sin(\omega t)$, $v_2(t)=12\sqrt{2}\;\sin(\omega t+\pi/2)$
+and $v_3(t)=4\sqrt{2}\;\sin(\omega t-\pi/2)$ in series. According to KVL,
+the overall voltage will be the algebra sum of the three:
+\[ 	v(t)=v_1(t)+v_2(t)+v_3(t)
+	=6\sqrt{2}\;\sin(\omega t)+12\sqrt{2}\;\sin(\omega t+\pi/2)
+	+4\sqrt{2}\;\sin(\omega t-\pi/2)	\]
+
+\htmladdimg{../figures/sinusoidalsum.gif}
+
+While the addition of these sinusoidal functions is not easy to carry out, 
+it is quite straight forward to find the vector sum when the voltages are
+represented as phasors:
+\begin{eqnarray}
+\dot{V}&=&\dot{V}_1+\dot{V}_2+\dot{V}_3=6\angle 0^\circ+12\angle 90^\circ+
+	4\angle -90^\circ	
+	\nonumber \\
+	&=&6+j12-j4=6+j8=10 \angle tan^{-1}(8/6)
+	=10\angle 53.1^\circ	\nonumber \end{eqnarray}
+The resulting voltage is therefore $v(t)=10\sqrt{2}\;sin(\omega t+53.1^\circ)$
+
+\htmladdimg{../figures/vectorsum.gif}
+
+\htmladdimg{../figures/sinusoidalsum1.gif}
+
+{\bf Impedance}
+
+The complex impedance of an element can be obtained according the physics
+of the element. We represent sinusoidal voltages and currents as complex
+variables:
+\begin{itemize}
+\item voltage $u(t)=V_m cos(\omega t)=Re[V_m e^{j\omega t}]=Re[{\bf V}(t)]$
+	is represented by ${\bf V}(t)=V_m e^{j\omega t}$,
+\item current $i(t)=I_m cos(\omega t)=Re[I_m e^{j\omega t}]=Re[{\bf I}(t)]$
+	is represented by ${\bf I}(t)=I_m e^{j\omega t}$.
+\end{itemize}
+The {\bf impedance} of the element is defined as the ratio between complex 
+voltage across an element and the complex current through the element.
+The complex current and complex voltage are related differently for
+different components:
+\begin{itemize}
+\item {\bf Resistor:} 
+\[	{\bf I}(t)=\frac{{\bf V}(t)}{R},\;\;\;\;\;Z_R=\frac{{\bf V}(t)}{{\bf I}(t)}=R	\]
+\item {\bf Capacitor:} 
+\[	{\bf I}(t)=C \frac{d}{dt}{\bf V}(t)=C\frac{d}{dt}[V_m e^{j\omega t}]
+	=j\omega C V_m e^{j\omega t}=j\omega C {\bf V}(t),\;\;\;\;
+	Z_C=\frac{{\bf V}(t)}{{\bf I}(t)}=\frac{1}{j\omega C}=\frac{-j}{\omega C}
+\]
+\item {\bf Inductor:}
+\[	{\bf V}(t)=L \frac{d}{dt}{\bf I}(t)=L\frac{d}{dt}[I_m e^{j\omega t}]
+	=j\omega L I_m e^{j\omega t}=j\omega L {\bf I}(t),\;\;\;
+	Z_L=\frac{{\bf V}(t)}{{\bf I}(t)}=j\omega L	\]
+\end{itemize}
+When $\omega=0$, $Z_C\rightarrow \infty$ and the capacitor has zero 
+conductivity due to the insulation between its two plates (open circuit),
+and $Z_L=0$ as there is no flux change in the inductor and the resistance 
+of the coil is ideally zero.
+
+When $\omega\rightarrow \infty$, $Z_C\rightarrow 0$ and the capacitor 
+becomes highly conductive, and $Z_L\rightarrow \infty$ as the self-induced
+voltage in the coil always acts against any change in the input (Lenz's Law).
+
+{\bf Generalized Ohm's law}
+
+In general, all sinusoidal voltages and currents in a circuit can be 
+represented as a complex variable 
+\begin{eqnarray}
+&&v(t)=V_m cos(\omega t+\phi)=Re[{\bf V}]=Re[V_m e^{j\omega t+\phi}]
+	=Re[\dot{V} \sqrt{2} e^{j\omega t}] 
+	\nonumber \\
+&&i(t)=I_m cos(\omega t+\psi)=Re[{\bf I}]=Re[I_m e^{j\omega t+\psi}]
+	=Re[\dot{I} \sqrt{2} e^{j\omega t}] 
+	\nonumber
+\end{eqnarray}
+and the Ohm's law can be further generalized in terms of phasors:
+\[	Z=\frac{{\bf V}}{{\bf I}}=\frac{V_m e^{j\omega t+\phi}}
+{I_m e^{j\omega t+\psi}}=\frac{\dot{V}e^{j\omega t}}{\dot{I}e^{j\omega t}}
+=\frac{\dot{V}}{\dot{I}},\;\;\;\;\;\;\;
+	\dot{I}=\frac{\dot{V}}{Z},\;\;\;\;\;Z\dot{I}=\dot{V}	\]
+Here $Z$ is the complex {\bf impedance}:
+\[	Z=R+jX=|Z|e^{j\angle Z}=|Z|\angle Z	\]
+The magnitude and phase angle of $Z$ are:
+\[	|Z|=\sqrt{R^2+X^2},\;\;\;\;\angle Z=tan^{-1}\frac{X}{R}	\]
+\begin{itemize}
+\item The real part of impedance $Re[Z]=R$ is called {\bf resistance}. 
+\item The imaginary part of impedance  $Im[Z]=X$ is called {\bf reactance}. 
+\end{itemize}
+Impedance, resistance and reactance are all measured by the same unit 
+Ohm ($\Omega$). 
+
+The reciprocal of the impedance $Z$ is called {\bf admittance}:
+\[	Y=\frac{1}{Z}=\frac{1}{R+jX}=\frac{R-jX}{R^2+X^2}=G+jB	\]
+which contains real and imaginary parts:
+\begin{itemize}
+\item The real part of admittance is called {\bf conductance}:
+\[	G=Re[Y]=\frac{R}{R^2+X^2}	\]
+\item The imaginary part of admittance is called {\bf susceptance}:
+\[	B=Im[Y]=\frac{-X}{R^2+X^2}	\]
+\end{itemize}
+Unlike $R$ and $X$, $G$ and $B$ do not correspond to any particular
+circuit elements. The magnitude and phase of complex admittance are
+\[	|Y|=\sqrt{G^2+B^2}=\frac{1}{\sqrt{R^2+X^2}},\;\;\;\;\;
+	\angle Y=\tan^{-1} \frac{B}{G}=\tan^{-1} \frac{-X}{R}
+	=-\angle Z	\]
+Admittance, conductance and susceptance are all measured by the same 
+unit Siemen ($S$). 
+
+Impedance $Z$ and admittance $Y=1/Z$ are both complex variables. The 
+real parts $Re[Z]=R$ and $Re[Y]=G$ are always positive, while the
+imaginary parts $Im[Z]=X$ and $Im[Y]=B$ can be either positive or
+negative. Therefore $Z$ and $Y$ can only be in the first or the 
+fourth quadrants of the complex plane.
+
+In particular, the admittances of the three types of elements R, L
+and C are
+\[ Y_R=\frac{1}{R},\;\;\;\;
+Y_L=\frac{1}{Z_L}=\frac{1}{j\omega L}=\frac{-j}{\omega L},\;\;\;\;
+Y_C=\frac{1}{Z_C}=\frac{1}{1/j\omega C}=j\omega C	\]
+
+{\bf Circuit analysis using admittance}
+
+The Ohm's law can also be expressed in terms of admittance as:
+\[	\dot{I}=\dot{V}/Z=\dot{V}Y	\]
+Sometimes it is more convenient in circuit analysis to use admittance
+instead of impedance.
+\begin{itemize}
+\item Components Parallel:
+\[ Z_{total}=\frac{Z_1\;Z_2}{Z_1+Z_2},\;\;\;\;Y_{total}=Y_1+Y_2 \]
+\item Components in series:
+\[ Y_{total}=\frac{Y_1\;Y_2}{Y_1+Y_2},\;\;\;\;Z_{total}=Z_1+Z_2 \]
+\end{itemize}
+
+\subsection*{Sinusoidal AC Circuit Analysis}
+
+{\bf Example 1:} Given a resistor $R$, and an inductor $L$ connected in 
+series to an AC voltage source $v(t)=\cos(\omega t)=Re[e^{j\omega t}]$, 
+find the current $i(t)$.
+
+{\bf Method 1:} The DE describing the circuit is:
+\[	v_L(t)+v_R(t)=L\frac{d}{dt}i(t)+Ri=v(t)=\cos(\omega t)	\]
+We want to find its particular or steady state solution. (The homogeneous
+or transient solution will be discussed later.) Due to Eular's formula,
+the input can be written as:
+\[	\cos(\omega t)=(e^{j\omega t}+e^{-j\omega t})/2	\]
+Since the DE describes a linear system, the superposition principle applies
+$O(ax+by)=aO(x)+bO(y)$. If we find the solutions for
+\[	L\frac{d}{dt}i_1(t)+Ri_1(t)=v_1(t)=e^{j\omega t},\;\;\;\;\;
+	\mbox{and}\;\;\;\;\;
+	L\frac{d}{dt}i_2(t)+Ri_2(t)=v_2(t)=e^{-j\omega t}
+\]
+we can then find the solution for the original input as $i(t)=[i_1(t)+i_2(t)]/2$.
+To solve the DE with input $v_1(t)=e^{j\omega t}$, we assume
+\[ 
+i(t)=A\;e^{j\omega t},\;\;\;\;\;\frac{d}{dt}i(t)=j\omega A\;e^{j\omega t} 
+\]
+and substitute them back into the DE to get
+\[	j\omega L A e^{j\omega t}+RA e^{j\omega t}
+	=(R+j\omega L)A\; e^{j\omega t}=e^{j\omega t} \]
+i.e.
+\[	A=\frac{1}{R+j\omega L}=|A|e^{-j\phi},\;\;\;\;\mbox{where}
+	\;\;\;\;\;\;|A|=\frac{1}{\sqrt{R^2+\omega^2 L^2}},\;\;\;\;\;
+	\phi=\angle A=tan^{-1}(\frac{\omega L}{R})	\]
+and the solution is:
+\[ i_1(t)=A\;e^{j\omega t}=\frac{1}{\sqrt{R^2+\omega^2 L^2}} 
+	e^{j(\omega t-\phi)} \]
+Similarly, when the input is $v_2(t)=e^{-j\omega t}$ we assume
+\[ 
+i(t)=A\;e^{-j\omega t},\;\;\;\;\;\frac{d}{dt}i(t)=-j\omega A\;e^{-j\omega t} 
+\]
+and substitute them back into the DE to get
+\[	-j\omega L A e^{-j\omega t}+RA e^{-j\omega t}
+	=(R-j\omega L)A\; e^{-j\omega t}=e^{-j\omega t} \]
+i.e.
+\[	A=\frac{1}{R-j\omega L}=|A|e^{j\phi}	\]
+with $|A|$ and $\phi$ the same as defined above. The solution is:
+\[ i_2(t)=A\;e^{-j\omega t}=\frac{1}{\sqrt{R^2+\omega^2 L^2}} 
+	e^{-j(\omega t-\phi)} \]
+The solution (the response or output) for the DE with input 
+$v(t)=[v_1(t)+v_2(t)]/2$ is 
+\[ 
+i(t)=\frac{v_1(t)+v_2(t)}{2}=A\;\frac{e^{j(\omega t-\phi)}+e^{-j(\omega t-\phi)}}{2}
+=\frac{1}{\sqrt{R^2+\omega^2 L^2}}\cos(\omega t-\phi)	\]
+
+{\bf Method 2:}
+The overall complex impedance of the two elements in series is:
+\[	Z=Z_R+Z_L=R+j\omega L=\sqrt{R^2+\omega^2L^2}e^{j\phi}	\]
+Representing voltage $v(t)$ also as a complex variable $e^{j\omega t}$, 
+we get the current by generalized Ohm's law:
+\[	\frac{e^{j\omega t}}{Z}
+	=\frac{e^{j\omega t}}{\sqrt{R^2+\omega^2L^2}\;e^{j\phi}}
+	=\frac{1}{\sqrt{R^2+\omega^2L^2}} e^{j(\omega t-\phi)}
+\]
+where $\phi=tan^{-1}(\frac{\omega L}{R})$
+and the real current is
+\[	i(t)=Re[\frac{1}{\sqrt{R^2+\omega^2 L^2}}e^{j(\omega t-\phi)}]
+	=\frac{1}{\sqrt{R^2+\omega^2 L^2}}\cos(\omega t-\phi)	\]
+The second method, much easier than the first one, is actually a short 
+cut representation of the first DE method. This is the justification of
+the complex variable (vector) method for analysis of AC circuits. However,
+note that if the transient solution can only be obtained by the DE method,
+as the phasor method can only find the steady state solution.
+
+\htmladdimg{../figures/phasorfigure.gif}
+
+{\bf Example 2:} A current $i(t)=17\;cos(1000t+90^\circ)=
+12\sqrt{2}cos(1000t+90^\circ)$ flows
+through a circuit composed of a resistor $R=18\Omega$, and capacitor
+$C=83.3\mu F=83.3\times 10^{-6}F$ and an inductor $L=30 mH=30\times 
+10^{-3}H$ connected in series. Find the resulting voltage across all 
+three elements.
+
+\begin{itemize}
+\item Express $i(t)$ in phasor: $\dot{I}=12\angle{90^\circ}$
+\item Find impedance for each element ($\omega=1000$):
+\[	Z_R=R=18,\;\;\;\;Z_C=1/j\omega C=12\angle{-90^\circ}=0-j12,\;\;\;\;
+	Z_L=j\omega L=30\angle{90^\circ}=0+j30	\]
+\item Find overall impedance:
+\[ Z_{total}=Z_R+Z_C+Z_L=18+j(-12+30)=18+j18=18\sqrt{2}\angle{45^\circ} \]
+\item Find voltage across all three elements:
+\[ \dot{V}_{total}=\dot{I}Z_{total}=(12\angle{90^\circ})\;(18\sqrt{2}\angle{45^\circ})=216\sqrt{2}\angle{135^\circ}	\]
+\[	v(t)=(216\sqrt{2})\sqrt{2}cos(1000t+135^\circ)=432\;cos(1000t+135^\circ)	\]
+\end{itemize}
+Alternatively, we can find voltage across each element:
+\[	V_R=IZ_R=216\angle{90^\circ},\;\;\;\;
+	V_C=IZ_C=144\angle{0^\circ},\;\;\;\;
+	V_L=IZ_L=360\angle{180^\circ}	\]
+and the total voltage is
+\[	\dot{V}_{total}=V_R+V_C+V_L=216\angle{90^\circ}-216\angle{180^\circ}
+	=216\sqrt{2}\angle{135^\circ}	\]
+
+{\bf Example 3:} The circuit below represents a load consisting of $C$, $R$
+and $L$ supplied by a generator over a transmission line. The voltage from
+the generator is $v(t)=28.3\;cos(5000t+45^\circ)\;V$.
+
+\htmladdimg{../figures/phasorexample.gif}
+
+First find the impedances and admittances of the components and the two
+branches. As $\omega=5000$, we get
+\begin{itemize}
+\item $Y_C=j\omega C=j\;5000\times 10^{-5}=j0.05=0.05\angle{90^\circ}$,
+
+	$Z_C=1/Y_C=1/j0.05=-j20=20\angle{-90^\circ}$
+\item $Z_L=j\omega L=j5000\times 4\times 10^{-3}=0+j20=20\angle{90^\circ}$,
+
+	$Y_L=1/Z_L=-j0.05=0.05\angle{-90^\circ}$
+\item $Z_R=R=20+j0=20\angle{0^\circ}$
+
+\item $Z_{RL}=Z_R+Z_L=20+j20=20\sqrt{2}\angle{45^\circ}$,
+	$Y_{RL}=1/Z_{RL}=1/20\sqrt{2}\angle{45^\circ}
+	=0.025\sqrt{2}\angle{-45^\circ}=0.025-j0.025$
+
+\item $Y_{load}=Y_C+Y_{RL}=j0.05+0.025-j0.025=0.025+j0.025
+	=0.025\sqrt{2}\angle{45^\circ}$
+\end{itemize}
+Next express voltage $v(t)=28.3\;cos(5000t+45^\circ)\;V$ in phasor form
+$\dot{V}=20\angle{45^\circ}$, and find currents in phasor form:
+\begin{itemize}
+\item $\dot{I}_{load}=\dot{V}Y_{load}=(20\angle{45^\circ})\;
+	(0.025\sqrt{2}\angle{45^\circ})=0.5\sqrt{2}\angle{90^\circ}$,
+
+	$i_{load}(t)=Re[\dot{I}\sqrt{2}e^{j5000t}]=cos(5000t+90^\circ)$
+\item $\dot{I}_C=Y_C\dot{V}=(0.05\angle{90^\circ})(20\angle{45^\circ})
+	=1\angle{135^\circ}=-0.5\sqrt{2}+j0.5\sqrt{2}$,
+
+	$i_C(t)=\sqrt{2}cos(5000t+135^\circ)$
+\item $\dot{I}_{RL}=Y_{RL}\dot{V}=(0.025\sqrt{2}\angle{-45^\circ})(20\angle{45^\circ})
+	=0.5\sqrt{2}\angle{0^\circ}=0.5\sqrt{2}$,
+
+	$i_{RL}(t)=cos(5000t)$
+\item $\dot{V}_R=Z_R\dot{I}_{RL}=(20\angle{0^\circ})(0.5\sqrt{2}\angle{0^\circ})
+	=10\sqrt{2}\angle{0^\circ}=10\sqrt{2}+j0$,
+	$i_R(t)=20\;cos(5000t)$
+\item $\dot{V}_L=Z_L\dot{I}_{RL}=(20\angle{90^\circ})(0.5\sqrt{2}\angle{0^\circ})
+	=10\sqrt{2}\angle{90^\circ}=0+j10\sqrt{2}$,
+	$v_L(t)=20\;cos(5000t+90^\circ)$.
+\end{itemize}
+Verify: 
+\begin{itemize}
+\item $\dot{V}_R+\dot{V}_L=10\sqrt{2}+j10\sqrt{2}=20\angle{45^\circ}
+	=\dot{V}$
+\item $\dot{I}_C+\dot{I}_{RL}=0.5\sqrt{2}-0.5\sqrt{2}+j0.5\sqrt{2}
+	=0.5\sqrt{2}\angle{90^\circ}=\dot{I}_{load}$
+\end{itemize}
+
+\subsection*{Complete Response}
+
+The behavior of a circuit composed of resistors, capacitors and inductors can
+be described by differential equations. The solution of DE represents the 
+response (or output) of the circuit to both the external stimulus (or input) 
+and the initial state, and is composed of two parts:
+\begin{itemize}
+\item homogeneous solution representing the transient or natural response 
+	caused by the non-zero initial condition,
+\item particular solutions representing the steady-state or forced response 
+	caused by the external stimulus. 
+\end{itemize} 
+
+For example, the RC and RL circuits shown in the figure are composed of a 
+resistor $R$ and capacitor $C$, or an inductor $L$ in series with a switch
+which is closed at $t=0$. The current $i(t),\;\;(t>0)$ through the elements
+and the voltages $v_R(t)$, $v_C(t)$ and $v_L(t)$ across the components are
+considered as the responses of the circuit.
+
+\htmladdimg{../figures/RC_RLcircuit.gif}
+
+{\bf Homogeneous response}
+
+The RC circuit can be described by KVL:
+\[	v_R(t)+v_C(t)=0	\]
+But since 
+\[	v_R(t)=R i(t),\;\;\;\;\;i(t)=C\frac{d}{dt}v_C(t)	\]
+we get a first order linear homogeneous ordinary DE:
+\[	RC\frac{d}{dt} v_c(t)+v_c(t)=\tau \frac{d}{dt} v_C(t)+v_C(t)=0	\]
+where $\tau=RC$ is the time constant of the system. The dimension of $\tau$ 
+can be found to be time:
+\[	[RC]=\frac{[V]}{[I]}\frac{[Q]}{[V]}=[T]	\]
+
+Similarly, for the RL circuit we have:
+\[	v_R(t)+v_L(t)=0	\]
+But since 
+\[	v_R(t)=R i(t),\;\;\;\;\;v_L(t)=L\frac{d}{dt}i(t)	\]
+we get a first order linear homogeneous ordinary DE:
+\[	L\frac{d}{dt} i(t)+R\;i(t)=\tau \frac{d}{dt} i(t)+i(t)=0	\]
+where $\tau=L/R$ is the time constant of the system. The dimension of 
+$L$ is $[L]=[V][T]/[I]=[R][T]$ and the dimension of $\tau$ is: 
+\[	[L/R]=\frac{[R][T]}{[R]}=[T]	\]
+
+To solve this homogeneous DE, we substitute the general solution 
+$v_C=A e^{pt}$ and its derivative $dv_C(t)/dt=p A e^{pt}$ into the DE,
+and get
+\[	\tau p+1=0,\;\;\;\;\;p=-\frac{1}{\tau}	\]
+i.e., $v_C(t)=Ae^{-t/\tau}$ for ($t\le 0$). Assume the initial charge on $C$
+is $v_C(0)=V_0$ (initial condition), we can find the unknown constant $A$:
+\[	v_C(0)=A e^{0}=V_0,\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;A=V_0	\]
+and the solution is 
+\[	v_C(t)=V_0 e^{-t/\tau}		\]
+The current through $R$ and $C$ is
+\[	i(t)=C\frac{d}{dt}v_C(t)=C\frac{d}{dt}[V_0 e^{-t/\tau}]
+	=-V_0 \frac{C}{\tau} e^{-t/\tau}=-\frac{V_0}{R} e^{-t/\tau}	\]
+The voltage across $R$ is 
+\[	v_R(t)=i(t)R=-V_0 e^{-t/\tau}=-v_C(t)	\]
+This result can be verified: $v_C(t)+v_R(t)=0$.
+
+{\bf DC-input response}
+
+For an non-zero input of a DC voltage $v(t)=V_s$, the DE becomes
+\[	v_R(t)+v_C(t)=\tau\frac{d}{dt} v_c(t)+v_c(t)=V_s	\]
+The solution of this inhomogeneous DE is composed of two parts, 
+\begin{itemize}
+\item {\bf homogeneous (natural, transient) solution:} $v'_C(t)=V_s$ as
+	the steady-state response to the constant input $V_s$,
+\item {\bf particular (forced, steady-state) solution:} 
+	$v''_C(t)=A e^{-t/\tau}$ same as before.
+\end{itemize}
+Therefore the overall solution is:
+\[	v_C(t)=v'_C(t)+v''_C(t)=V_s+A e^{-t/\tau}	\]
+From the intital condition $v(0)=V_0$, we have
+\[	v_C(0)=V_0=V_s+A,\;\;\;\;\;\mbox{i.e.,}\;\;\;\;A=V_0-V_s	\]
+and the solution becomes
+\[	v_C(t)=V_s+(V_0-V_s) e^{-t/\tau}	\]
+In particular, for zero initial condition $v_C(0)=0$, the solution is
+\[	v_C(t)=V_s+(-V_s) e^{-t/\tau}=V_s(1-e^{-t/\tau})		\]
+The voltage across $R$ is
+\[
+v_R(t)=V_s-v_C(t)=V_s-[V_s+(V_0-V_s) e^{-t/\tau}]=(V_s-V_0) e^{-t/\tau}
+\]
+and the current through the circuit is
+\[	i(t)=\frac{V_R(t)}{R}=\frac{V_s-V_0}{R} e^{-t/\tau}	\]
+
+The two plots below show $v_C(t)$ (red) and $v_R(t)$ (green) under
+different initial conditions $V_0$ (purple) and inputs $V_s$ (blue):
+
+\htmladdimg{../figures/first_order_response1.gif}
+\htmladdimg{../figures/first_order_response2.gif}
+
+In general, A first order system's response $f(t)$ (whether a current 
+$i(t)$ or a voltage $v(t)$) to a DC input with non-zero initial condition 
+can be expressed as:
+\[	f(t)=f(\infty)+[f(0)-f(\infty] e^{-t/\tau}	\]
+where 
+\begin{itemize}
+\item $f(0)$ is the initial value, 
+\item $f(\infty)$ is the steady-state response, 
+\item $\tau$ is the time constant of the system.
+\end{itemize}
+These are the three essential components of the system's response.
+Where there is only one resistor in the circuit, the time constant
+is $\tau=RC$ or $\tau=L/R$. When there are multiple resistors, the
+time constant can be found by:
+\begin{itemize}
+\item Remove $C$ or $L$ so that the rest of the circuit ($t>0$) is 
+	a one port network.
+\item Find the equivalent resistance $R$ of the network by turning 
+	off all energy sources (short-circuit for voltage source,
+	open-circuit for current source).
+\item Find time constant $\tau=RC$ or $\tau=L/R$.
+\end{itemize}
+
+{\bf Example 1:}
+
+Find $v_C(t)$ after the switch is closed at $t=0$. Assume $V_0=10V$,
+$R_1=R_2=2K\Omega$, $R_3=5K\Omega$, $C=0.5\mu F$, and the circuit was 
+in steady-state at $t=0$. 
+
+\htmladdimg{../figures/bridgecapacitor.gif}
+
+\begin{itemize}
+\item Find initial value $v_C(0)$. Current through and voltage across
+	$R_3$ are both zero as the circuit was stable when $t=0$.
+\[	v_C(0)=-V_{R_1}=-V_0\frac{R_1}{R_1+R_2}=-V_0/2=-5V	\]
+\item Find steady-state value $v_C(\infty)$:
+\[	v_C(\infty)=V_{R_2}=V_0\frac{R_2}{R_1+R_2}=V_0/2=5V	\]
+\item Find equivalent resistance $R$:
+\[	R=R_1 || R_2=\frac{R_1 R_2}{R_1+R_2}=1	\]
+\item Find time constant $\tau=RC=1000\times 0.5\times 10^{-6}=5\times 10^{-4}$
+\item Find the complete response
+\[	v_C(t)=5+(-5-5) e^{-t/0.0005}=5-10 e^{-2000t}\;(V)	\]
+\item Find currents through $R_2$ and $R_1$:
+\[	i_2=\frac{v_C(t)}{R_2}=\frac{5-10 e^{-2000t}}{2\times 10^3}
+	=2.5-5 e^{-2000t}\; (mA)	\]
+\[	i_1=\frac{V_0-v_C}{R_1}=\frac{10-(5-10 e^{-2000t})}{2\times 10^3}
+	=2.5+5 e^{-2000t} \; (mA)	\]
+\[	i_C=i_1-i_2=10 e^{-2000t} \; (mA)	\]
+\end{itemize}
+
+{\bf Sinudoidal input response}
+
+If the input voltage is sinusoidal $v(t)=V_s cos(\omega t+\psi)$, the 
+DE becomes
+\[ v_R(t)+v_C(t)=\tau\frac{d}{dt} v_c(t)+v_c(t)=V_s cos(\omega t+\psi)	\]
+The homogeneous solution is the same as before $v'_C(t)=A e^{-t/\tau}$.
+The particular solution as the steady-state response to $v(t)$ can be
+found by phasor method. The input is 
+\[	v(t)=V_s cos(\omega t)=Re[\dot{V}\sqrt{2}e^{j\omega t}]	\]
+where $\dot{V}=V_s/\sqrt{2}\;e^{j\psi}$. The steady-state voltage across
+$C$ is (voltage divider)
+\[	\dot{V}_C=\dot{V} \frac{1/j\omega C}{R+1/j\omega C}
+	=\frac{\dot{V}}{j\omega \tau+1}	
+	=\frac{\dot{V}\;e^{-j\phi}}{\sqrt{(\omega \tau)^2+1}} \]
+where $\phi=\tan^{-1} \omega \tau$, and 
+\[
+v'_C(t)=Re[\frac{V_s e^{j\omega t+\psi}\;e^{-j\phi}}{\sqrt{(\omega \tau)^2+1}} ]
+= \frac{V_s}{\sqrt{(\omega \tau)^2+1}} cos(\omega t+\psi-\phi)	\]
+The complete solution is then the sum of both homogeneous and particular
+solutions:
+\[	v_C(t)=v'_C(t)+v''_C(t)=
+\frac{V_s}{\sqrt{(\omega \tau)^2+1}}cos(\omega t+\psi-\phi)+A e^{-t/\tau}	\]
+From the inital condition $v_C(0)=V_0$, we have
+\[ v_C(0)=V_0=\frac{V_s}{\sqrt{(\omega \tau)^2+1}}cos(\psi-\phi)+A \]
+Solving for $A$ we get
+\[	A=V_0-\frac{V_s}{\sqrt{(\omega \tau)^2+1}}cos(\psi-\phi) \]
+Substituting $A$ back to $v_C(t)$, we get 
+\[  v_C(t)=\frac{V_s}{\sqrt{(\omega \tau)^2+1}}cos(\omega t+\psi-\phi)+ 
+[V_0-\frac{V_s}{\sqrt{(\omega \tau)^2+1}}cos(\psi-\phi)] e^{-t/\tau}	\]
+If the initial voltage on $C$ is zero $V_0=0$, then
+\[  v_C(t)=\frac{V_s}{\sqrt{(\omega \tau)^2+1}}[cos(\omega t+\psi-\phi) 
+-cos(\psi-\phi) e^{-t/\tau}]	\]
+In particular, when $\psi-\phi=\pm 90^\circ$, $cos(\psi-\phi)=\pm 1$,
+the magnitude of the initial voltage $v_C(0)$ could be twice as much as
+the steady-state value.
+
+\htmladdimg{../figures/first_order_response3.gif}
+\htmladdimg{../figures/first_order_response4.gif}
+
+In general, a first order system's response $f(t)$ (whether a current 
+$i(t)$ or a voltage $v(t)$) to a sinusoidal input with non-zero initial 
+condition can be expressed as:
+\[	f(t)=f_\infty(t)+[f(0)-f_\infty(0)] e^{-t/\tau}	\]
+where 
+\begin{itemize}
+\item $f(0)$ is the initial value, 
+\item $f_\infty(t)$ is the steady-state response, 
+\item $\tau$ is the time constant of the system.
+\end{itemize}
+These are the three essential components of the system's response.
+
+{\bf Example 2:}
+
+An electromagnet, modeled by a resistor $R=20\Omega$ and $L=0.3H$,
+is powered by sinusoidal voltage of $120V$ and $60Hz$. Find the current
+through the circuit when the switch is closed at $t=0$ when the phase
+angle happens to be $\psi=10^\circ$, i.e., $v(t)=120\sqrt{2}
+cos(6.28\times 60 t+10^\circ)$.
+
+\begin{itemize}
+\item Find initial value $i(0)=0$. 
+\item Find impedance of circuit:
+\[ Z=R+j\omega L=20+j6.28\times 60 \times 0.3=20+j113=114.8\angle{80^\circ}	\]
+\item Find steady-state value $i_\infty(t)$ by phasor method:
+\[
+\dot{V}=120 \angle{10^\circ},\;\;\;\;\dot{I}=\frac{\dot{V}}{Z}
+	=\frac{120\angle{10^\circ}}{114.8\angle{80^\circ}}
+	=1.05\angle{-70^\circ}	
+\]
+\[	i_\infty(t)=1.05\sqrt{2}cos(6.28\times 60 t -70^\circ)
+	,\;\;\;\;i_\infty(0)=1.05\sqrt{2}cos(-70^\circ)
+	=1.05\sqrt{2}\times 0.342=-0.52	\]
+\item Find time constant $\tau=L/R=0.3/20=0.015$.
+\item Find current
+\[	i(t)=1.05\sqrt{2}cos(6.28\times 60 t -70^\circ)+0.52 e^{-t/0.015}	\]
+
+\end{itemize}
+
+\subsection*{Series and Parallel Resonance}
+
+{\bf Series Resonance:} An RCL series circuit consists of a resistor $R$, 
+an inductor $L$ and a capacitor connected in series to a voltage source.
+
+The overall impedance of the three elements is
+\[ Z=R+j\omega L+\frac{1}{j\omega C}=R+j(\omega L-\frac{1}{\omega C})
+	=|Z|e^{j\phi}	\]
+where
+\[	|Z|=\sqrt{R^2+(\omega L-\frac{1}{\omega C})^2},\;\;\;\;
+	\phi=\angle Z=tan^{-1} \frac{\omega L-1/\omega C}{R} \]
+
+\htmladdimg{../figures/impedanceRCL1.gif}
+
+In particular we define the {\bf resonant frequency} as
+\[	\omega_0\stackrel{\triangle}{=}\frac{1}{\sqrt{LC}}	\]
+When $\omega=\omega_0$, the circuit is at resonance with the following
+properties:
+\begin{itemize}
+\item The effects of $L$ and $C$ cancel each other
+\[	j\omega L+\frac{1}{j\omega C}=j(\omega L-\frac{1}{\omega C})=0 \]
+\item The impedances of the capacitor and the inductor have the same 
+	magnitude but opposite phase:
+\[	Z_L=j\omega_0L=j\sqrt{\frac{L}{C}},\;\;\;\;
+	Z_C=1/j\omega_0L=-j\sqrt{\frac{L}{C}}	\]
+\item The complex impedance $Z$ is real and reaches a minimum
+\[	|Z|=\sqrt{R^2+(\omega L-\frac{1}{\omega C})^2}=R,\;\;\;\;
+	\angle Z=0	\]
+\item The current $\dot{I}$ and voltage $\dot{V}$ are in phase, and given
+	$\dot{V}$, the current $\dot{I}=\dot{V}/Z=\dot{V}/R$ reaches 
+	maximum value.
+\end{itemize}
+
+The ratio of the magnitude of the inductor/capacitor impedance and the
+resistance is defined as the {\bf quality factor}
+\[	Q\stackrel{\triangle}{=}\frac{\omega_0L}{R}=\frac{1}{\omega_0CR}
+	=\frac{1}{R}\sqrt{\frac{L}{C}}	\]
+$Q$ is inversely proportional to the resistance $R$ in the circuit.
+
+According to the phasor version of Ohm's law, the voltages across each 
+of the three components are:
+\begin{itemize}
+\item 
+\[ \dot{V}_R=\dot{I} R=\dot{V}	\]
+\item 
+\[ \dot{V}_L=\dot{I} j\omega_0 L|_{\omega_0=1/\sqrt{LC}}
+	=j \sqrt{\frac{L}{C}} \frac{\dot{V}}{R}	=jQ\dot{V}	\]
+\item 
+\[ \dot{V}_C=\dot{I} \frac{1}{j\omega_0 C}|_{\omega_0=1/\sqrt{LC}}
+	=-j \sqrt{\frac{L}{C}} \frac{\dot{V}}{R}=-jQ\dot{V}	\]
+\end{itemize}
+The magnitude of the voltage $V_L$ across $L$ and $V_C$ across $C$ are
+$Q$ times larger than the voltage $\dot{V}_R$ across $R$ which is the 
+same as the voltage source $\dot{V}$). But as $V_L$ and $V_C$ are in
+opposite polarity, they cancel each other.
+
+The RCL series circuit is a band-pass filter with the passing band centered
+around the resonant frequency $\omega_0=1/\sqrt{CL}$, which can be adjusted
+by changing either $C$ or $L$. The bandwidth or the sharpness is determined
+by the quality factor $Q$ (or the resistance $R$), the larger $Q$ (smller
+$R$), the narrower the bandwidth. The impedance $Z=Z_R+R_L+Z_C$ as a function 
+of $\omega$ is shown below
+
+\htmladdimg{../figures/omega0c.gif}
+
+and the admittance $Y=1/Z$ for different $Q$ ($R$) and $C$ is shown below:
+
+\htmladdimg{../figures/omega0a.gif}
+\htmladdimg{../figures/omega0b.gif}
+
+This bandpass effect can be intuitively explained. When $\omega$ is high,
+the inductor's impedance $\omega L$ is high, and when $\omega$ is low,
+the capacitor's impedance $1/\omega C$ is high. When $\omega=\omega_0$
+the overall impedance is the smallest. If the input is a voltage source 
+$v(t)$, the current through the circuit $i(t)=v(t)/Z=v(t)Y$ will reach a
+maximum value when $\omega=\omega_0$.
+
+{\bf Example: } In a series RLC circuit, $R=5\Omega$, $L=4\;mH$ and
+$C=0.1\;\mu F$. The resonant frequency $\omega_0$ can be found to be
+$\omega_0=1/\sqrt{LC}=1/\sqrt{4\times 10^{-3}\times 10^{-7}}=5\times 10^4$.
+The quality factor is
+\[	Q=\frac{\omega_0L}{R}=\frac{(5\times 10^4)\times (4\times 10^{-3})}{5}
+	=40	\]
+or
+\[	Q=\frac{1}{\omega_0CR}=\frac{1}{(5\times 10^4)\times 10^{-7}\times 5}
+	=40	\]
+If the input voltage is $V_{rms}=10V$ at the resonant frequency, the current
+is $I=V/R=10/5=2 A$, and the voltages across each of the elements are:
+\begin{itemize}
+\item $V_R=RI=V=10V$
+\item $V_L=\omega L I=5\times 10^4\times 4\times 10^{-3} \times 2=400V$
+\item $V_C=I/\omega_0C=2/(5\times 10^4\times 10^{-7})=400V$
+\end{itemize}
+Or more conveniently, the amplitudes of $V_L$ and $V_C$ can be found by
+$ V_L=V_C=QV=40\times 10V=400V$. Note that although input voltage is $10V$,
+the voltage across L and C ($Q$ times the input) could be very high (but
+they are in opposite phase and therefore cancel).
+
+{\bf Parallel Resonance:} A GCL parallel circuit consists of a resistor 
+$R=1/G$, an inductor $L$ and a capacitor connected in parallel to 
+input voltage. 
+
+\htmladdimg{../figures/impedanceRCL2.gif}
+
+In this case, it is much easier to consider the conductance of the 
+admittance $Y=1/Z$ of each of the element. The overall admittance of
+the three elements in parallel is
+\[ Y=G+j\omega C+\frac{1}{j\omega L}=G+j(\omega C-\frac{1}{\omega L})
+	=|Y|e^{j\phi}	\]
+where
+\[	|Y|=\sqrt{G^2+(\omega C-\frac{1}{\omega L})^2},\;\;\;\;
+	\phi=\angle Y=tan^{-1} \frac{\omega C-1/\omega L}{G} \]
+In particular when
+\[	j\omega L+\frac{1}{j\omega C}=j(\omega L-\frac{1}{\omega})=0 \]
+the effects of $L$ and $C$ cancel each other, i.e., at the {\bf resonant
+frequency}
+\[	\omega_0\stackrel{\triangle}{=}\frac{1}{\sqrt{LC}}	\]
+The complex admittance $Y$ is real and reaches a minimum
+\[	|Y|=\sqrt{G^2+(\omega L-\frac{1}{\omega c})^2}=G,\;\;\;\;\;	
+	\angle{Y}=0	\]
+and the current $\dot{I}$ reaches a minimum value $\dot{I}=\dot{V}G$.
+
+The {\bf Quality Factor} $Q$ of a parallel resonance circuit is defined
+as the ratio of the magnitude of the inductor/capacitor susceptance and 
+the conductance:
+\[	Q\stackrel{\triangle}{=}\frac{\omega_0C}{G}=\frac{1}{\omega_0LG}
+	=\frac{1}{G}\sqrt{\frac{C}{L}}	\]
+$Q$ is inversely proportional to the conductance $G$ in the circuit.
+
+The currents through each of the three components are:
+\begin{itemize}
+\item 
+\[ \dot{I}_R=\dot{V} G=\dot{I}	\]
+\item 
+\[ \dot{I}_C=\dot{V} j\omega_0 C|_{\omega_0=1/\sqrt{LC}}
+	=j \frac{\dot{I}}{G}\sqrt{\frac{C}{L}}=jQ\dot{I}	\]
+\item 
+\[ \dot{I}_L=\dot{V}\frac{1}{j\omega_0 L}|_{\omega_0=1/\sqrt{LC}}
+	=-j \frac{\dot{I}}{G}\sqrt{\frac{C}{L}}=-jQ\dot{I}	\]
+\end{itemize}
+The magnitude of the current $I_L$ through $L$ and $I_C$ through $C$ are
+$Q$ times larger than the current $\dot{V}_R$ through $R$ which is the 
+same as the current source $\dot{I}$). But as $I_L$ and $I_C$ are in
+opposite direction, they form a loop current through $L$ and $C$ with
+no effect to the rest of the circuit.
+
+The parallel RCL circuit behaves like a bandstop filter which can be 
+intuitively understood. When $\omega$ is high, the capacitor's impedance 
+$1/\omega C$ is low, and when $\omega$ is low, the inductor's impedance 
+$\omega L$ is low. When $\omega=\omega_0$ the overall impedance is the
+largest. However, if the input is a current source, the voltage across 
+the elements $\dot{V}=\dot{I}Z=\dot{I}/Y$ will reach a maximum value
+when $\omega=\omega_0$.
+
+
+\subsection*{Quality Factor}
+
+The general meaning of the quality factor $Q$ of a circuit is the ratio 
+between the energy stored in the circuit (in $C$ and $L$) and the energy 
+dissipated (by $R$):
+\[
+Q=2\pi\frac{\mbox{maximum energy stored}}{\mbox{energy dissipated per cycle}}
+\]
+We can show that this definition is the same as the $Q$ for the series 
+RCL circuit. The energy is stored in the inductor and the capacitor 
+alternatively, and the maximum energy stored in $L$ is the same as that 
+in $C$. 
+
+The energy store in $L$ is:
+\[	W_L=\int_0^T v(t)\; i(t) dt=\int_0^T i(t) L \frac{di(t)}{dt} dt
+	=L \int_0^{I_p} i di=\frac{1}{2}LI_p^2=LI^2_{rms}	\]
+where $i(T)=I_p=\sqrt{2}I_{rms}$ is the maximum or peak current through
+$L$. 
+
+The energy dissipated in $R$ per cycle $T_0=2\pi/\omega_0=1/f_0$ is:
+\[	W_R=P_R T_0=I^2_{rms} R T_0	\]
+Then
+\[ 2\pi\frac{LI^2_{rms}}{I^2_{rmw}RT_0 }
+	=2\pi f_0\frac{L}{R}=\frac{\omega_0L}{R}=Q	\]
+We can also use the energy store in $C$:
+\[	W_C=\int_0^T v(t)\; i(t) dt=\int_0^T v(t) C \frac{dv(t)}{dt} dt
+	=C \int_0^{V_p} v dv=\frac{1}{2}CV_p^2=CV^2_{rms}	\]
+where $v(T)=V_p=\sqrt{2}V_{rms}$ is the maximum or peak voltage across
+$C$, and $V_{rms}=I_{rms}/\omega_0C$. Then
+\[ 2\pi\frac{CV^2_{rms}}{I^2_{rmw}RT_0 }
+	=2\pi f_0\frac{CI^2_{rms}/\omega_0^2C^2}{I^2_{rms} R}
+	=\frac{1}{\omega_0CR}=Q	\]
+
+{\bf Bandwidth}
+
+For a series RCL circuit with voltage input, the impedance is
+\[	Z=R+j(\omega L-\frac{1}{\omega C})=\frac{1}{Y} \]
+and at resonance when $\omega=\omega_0=1/\sqrt{LC}$, we have
+\[	Z_0=R=\frac{1}{Y_0}	\]
+Consider the ratio 
+\[	\frac{Y}{Y_0}=\frac{Z_0}{Z}=\frac{R}{R+j(\omega L-1/\omega C)}
+	=[1+j(\frac{\omega L}{R}-\frac{1}{\omega CR})]^{-1}	\]
+As $Q=\omega_0L/R=1/\omega_0CR$, we substitute $L/R=Q/\omega_0$ and
+$1/RC=Q\omega_0$ into the equation above and get
+\[
+\frac{Y}{Y_0}=[1+jQ(\frac{\omega}{\omega_0}-\frac{\omega_0}{\omega})]^{-1}
+\]
+
+\htmladdimg{../figures/bandwidth1.gif}
+
+%Similarly, for a parallel GCL circuit, the .... Q of GCL....
+
+At the resonant frequency $\omega=\omega_0$, the ratio $Y/Y_0=1$
+reaches the peak, and when $\omega$ is either lower or higher than 
+$\omega_0$, the magnitude ratio $Y/Y_0$ is smaller. The bandwidth 
+is defined as 
+\[ \triangle \omega\stackrel{\triangle}{=}\omega_2-\omega_1 \]
+where $\omega_2>\omega_1$ are the two cut-off frequencies (or 
+half-power frequency) at which $|Y/Y_0|=1/\sqrt{2}=0.707$ (the
+power is halved). This requires
+\[	\frac{Y}{Y_0}=\frac{1}{1\pm j1},\;\;\;\;\;\mbox{i.e.}\;\;\;\;
+\frac{\omega}{\omega_0}-\frac{\omega_0}{\omega}=\pm \frac{1}{Q} \]
+The two cuf-off frequencies should satisfy
+\[ \frac{\omega_1}{\omega_0}-\frac{\omega_0}{\omega_1}=-\frac{1}{Q},\;\;\;\;
+   \frac{\omega_2}{\omega_0}-\frac{\omega_0}{\omega_2}=\frac{1}{Q}	\]
+Solving these two equations, we get:
+\[ \omega_1=\omega_0[\sqrt{1+(\frac{1}{2Q})^2}-\frac{1}{2Q}],\;\;\;\;
+   \omega_2=\omega_0[\sqrt{1+(\frac{1}{2Q})^2}+\frac{1}{2Q}]	\]
+from which we can see that:
+\[	\omega_2-\omega_0 > \omega_0-\omega_1	\]
+i.e., the lower half-power point $\omega_1$ is closer to resonant frequency
+$\omega_0$ than the higher half-power point $\omega_2$:
+
+The bandwidth is 
+\[ \triangle \omega=\omega_2-\omega_1=\frac{\omega_0}{Q},
+\;\;\;\;\mbox{or}\;\;\;\;\triangle f=f_2-f_1=\frac{f_0}{Q}	\]
+i.e., the bandwidth is inversely proportional to the quality factor $Q$.
+
+\htmladdimg{../figures/bandwidth.gif}
+
+In practice, $Q$ is usually much greater than 1 (typically $Q>10$), we have
+$\sqrt{1+(1/2Q)^2} \approx 1$ and
+\[	\omega_1=\omega_0-\frac{\omega_0}{2Q},\;\;\;\;\;\;
+	\omega_2=\omega_0+\frac{\omega_0}{2Q}			\]
+we therefore get these simple relations:
+\[	\omega_2-\omega_0 = \omega_0-\omega_1,\;\;\;\;\;
+	\omega_2-\omega_1=\frac{\omega_0}{Q}	\]
+
+For a parallel RCL circuit with current input, due to the duality between
+current and voltage, parallel and series configuration, the exactly same 
+derivation of bandwidth can be carried out as for the RCL series circuit
+with voltage input, and the same conclusions can be obtained. 
+
+
+{\bf Summary:}
+\begin{itemize}
+\item In both series and parallel RCL circuits, an extremum is reached
+when the frequency of the signal is the same as the resonant frequency
+completely determined by $L$ and $C$: $\omega_0=1/\sqrt{LC}$, independent
+of the resistance $R$ in the circuit.
+
+\item In series RCL with voltage input and parallel RCL with current input, 
+the quality factor $Q$ is proportional to the ratio between $L$ and $C$:
+\[ Q_s=\frac{1}{R}\sqrt{\frac{L}{C}},\;\;\;\;Q_p=R\sqrt{\frac{C}{L}} \]
+The resistance $R$ plays a different role: in series RCL, $Q_s$ is inversely
+proportional $R$ (the larger $R$, the smaller $Q_s$, the more energy lost 
+and the wider bandwidth), while in parallel RCL, $Q_p$ is proportional to
+$R$ (the larger $R$, the larger $Q_p$, the less energy lost and the narrower
+bandwidth).
+
+\item At resonant frequency, the impedance of a series RCL circuit reaches
+minimum and while impedance of a parallel RCL circuit reaches maximum. For
+a voltage input, the series RCL is a band-pass filter and the parallel RCL 
+is a band-stop filter, while for a current input, they behave in an opposite
+way.
+
+\item The quality factor $Q_s$ and $Q_p$ are derived under the assumption 
+of either a voltage or a current input. Therefore when the input to a 
+parallel (series) RCL circuit is a voltage (current) source, we should 
+still use $Q_s$ ($Q_p$) in the calculation bandwidth. 
+
+\end{itemize}
+
+{\bf Example:}
+
+A series CL circuit composed of an inductor $L=80\mu H$ and $R=8\Omega$
+and a capacitor $C$ is connected to a voltage source. Find the value of 
+$C$ for this circuit to resonate at $f=400\;kHz$, also find the bandwidth.
+
+\[	\omega_0=\sqrt{\frac{1}{LC}},\;\;\;\;
+C=\frac{1}{\omega_0^2 L}=\frac{1}{(2\pi 400\times 10^3)^2\times 80\times 10^{-6}}
+=20nF	\]
+The quality factor is
+\[
+Q=\frac{\omega_0 L}{R}=\frac{2\pi 400\times 10^3\times 80\times 10^{-6}}{8}=25
+\]
+The bandwidth is
+\[	f_2-f_1=\frac{f_0}{Q}=\frac{400\times 10^3}{25}=16\;kHz	\]
+
+%In reality, all inductors have a non-zero resistance, therefore a 
+%parallel resonance circuit should be modeled as shown in the figure.
+%\htmladdimg{../figures/parallelRCL.gif}
+%The admittance is:
+%\[	Y=\frac{1}{R+j\omega L}+j\omega C
+%	=\frac{R-j\omega L+j\omega C(R^2+\omega^2L^2)}{R^2+\omega^2L^2}
+%\]
+%When the imaginary part of $Y$ is zoro, the circuit is at resonance and 
+%the resonant frequency $\omega_0$ can be found by solving $Im[Y]=0$:
+%\[	\omega_0 L=\omega_0 C(R^2+\omega_0^2L^2),\;\;\;\;\Longrightarrow
+%	\;\;\;\;\;\omega_0=\sqrt{\frac{1}{LC}-(\frac{R}{L})^2}	\]
+%For $\omega_0$ to be real, we must have
+%\[	\frac{1}{LC} > (\frac{R}{L})^2, \;\;\;\;\;\;\mbox{i,e,}
+%	\;\;\;\;\;\;R<\sqrt{\frac{L}{C}}	\]
+%Typically, we have $R \ll \sqrt{L/C}$, and the resonant frequency is
+%\[
+%\omega_0=\sqrt{\frac{1}{LC}-(\frac{R}{L})^2}\approx \frac{1}{\sqrt{LC}}	
+%\]
+
+
+\subsection*{Sinusoidal AC Power}
+
+A two-terminal network of passive elements (resistors, inductors, 
+capacitors, but not energy sources) can be represented by its complex 
+impedance 
+\[	Z=R+jX=|Z|e^{j\phi}=|Z|\angle \phi \]
+where 
+\[	|Z|=\sqrt{R^2+X^2},\;\;\;\phi=\angle Z=\tan^{-1}(X/R) \]
+If the input voltage to the network is:
+\[ \dot{V}=V_{rms}\angle 0,\;\;\;\;v(t)=\sqrt{2}V_{rms} \cos(\omega t) \]
+the output current through the network is:
+\[ \dot{I}=\frac{\dot{V}}{|Z|\angle \phi}=\frac{V_{rms}}{|Z|\angle \phi}=
+I_{rms}\angle(-\phi),\;\;\;\;i(t)=\sqrt{2}I_{rms} \cos(\omega t-\phi)  \]
+where $V_{rms}$ and $I_{rms}=V_{rms}/|Z|$ are the effective voltage and 
+current, respectively.
+
+The {\bf instantaneous power} in the network is
+\begin{eqnarray}
+p_{in}(t) &=& v(t)\;i(t)=2V_{rms}I_{rms}\;\cos(\omega t)\;\cos(\omega t-\phi)
+	\nonumber \\
+&\stackrel{*}{=}&2V_{rms}I_{rms}\;\cos(\omega t)\;[\cos(\omega t)\cos\phi
+	+\sin(\omega t)\sin\phi ]	\nonumber \\
+&=&V_{rms}I_{rms}\cos\phi [2\cos^2(\omega t)]
+	+V_{rms}I_{rms}\sin\phi [2\cos(\omega t)\sin(\omega t)] \nonumber \\
+&=&V_{rms}I_{rms}\cos\phi\; p(t)+V_{rms}I_{rms}\sin\phi\; q(t)	\nonumber 
+\end{eqnarray}
+Here
+\[ 	p(t)\stackrel{\triangle}{=}2\cos^2(\omega t),\;\;\;\;\;\;
+	q(t)\stackrel{\triangle}{=}2\cos(\omega t)\sin(\omega t) \]
+
+(* $\cos(u-v)=\cos u\;\cos v+\sin u\;\sin v$)
+
+\htmladdimg{../figures/instantaneouspower1.gif}
+
+In particular, consider the average of $p(t)$ and $q(t)$ over a period $T$:
+\[ \frac{1}{T}\int_T p(t)dt=\int_T 2\cos^2(\omega t) dt
+	=\frac{1}{T}\int_T (1+cos(2\omega t) dt=1	\]
+\[ \frac{1}{T}\int_T q(t)dt=\int_T 2\cos(\omega t)\sin(\omega t) dt
+	=\frac{1}{T}\int_T \sin(2\omega t) dt=0	\]
+It is seen that the instantaneous power is composed of two components: the 
+first term $p(t)=2\cos^2(\omega t)$ representing energy dissipation, and the 
+second term $q(t)=2\cos(\omega t)\sin(\omega t)$ representing energy not dissipated
+but store in the system. Instantaneous $p_{in}(t)$ can be both positive (for energy 
+consumed by the load) and negative (for energy released by the load).
+
+\htmladdimg{../figures/instantaneouspower2.gif}
+
+The {\bf average power} over period $T=2\pi /\omega$ is:
+\begin{eqnarray}
+P_{av}&\stackrel{\triangle}{=}&\frac{1}{T}\int_0^T p_{in}(t) dt
+=V_{rms}I_{rms}\cos\phi \frac{1}{T}\int_0^T p(t) dt
++V_{rms}I_{rms}\sin\phi \frac{1}{T}\int_0^T q(t) dt	\nonumber \\
+&\stackrel{*}{=}&
+V_{rms}I_{rms}\cos\phi \; 1+V_{rms}I_{rms}\sin\phi \;0
+	\nonumber \\
+&\stackrel{**}{=}&V_{rms}I_{rms}[\cos\phi\;1 +\sin\phi\; 0]
+	=V_{rms}I_{rms}\;\cos\phi
+	\nonumber 
+\end{eqnarray}
+
+\begin{itemize}
+\item {\bf Apparent Power:} $S\stackrel{\triangle}{=}V_{rms}I_{rms}$;
+\item {\bf Real power:} $P\stackrel{\triangle}{=}V_{rms}I_{rms}\;\cos\phi
+	=V_{rms}I_{rms}\;\lambda=P_{av}$
+
+	This is the first term (non-zero) of the average power expression, 
+	which is consumed by the load (dissipated, converted to heat);
+\item {\bf  Reactive Power:} $Q\stackrel{\triangle}{=}V_{rms}I_{rms}\;\sin\phi$
+
+	This is the second term (zero) of the average power expression,	
+	which is not consumed but converted back and forth between the
+	energy source and the energy storing elements (inductors and capacitors).
+\end{itemize}
+The definitions of real power $P=V_{rms}I_{rms} \cos\phi$ and reactive 
+power $Q=V_{rms}I_{rms} \sin\phi$ above suggest that the power $S$ can 
+be treated a complex variable:
+\[ S\stackrel{\triangle}{=}VI^*=V_{rms}\angle 0\; I_{rms}\angle \phi
+	=V_{rms}I_{rms}\angle \phi=V_{rms}I_{rms}(\cos\phi+j\;\sin\phi)
+	=P+jQ	\]
+Substituting $V=IZ$ into the equation, we have
+\[ S\stackrel{\triangle}{=}VI^*=IZI^*=I^2_{rms}(R+jX)
+	=I^2_{rms}R+j I^2_{rms}X	\]
+i.e.,
+\[	P=I^2_{rms}R=V_{rms}I_{rms}\cos\phi,\;\;\;
+	Q=I^2_{rms}X=V_{rms}I_{rms}\sin\phi,\;\;\;
+	|S|=\sqrt{P^2+Q^2},\;\;\angle S=\tan^{-1}(Q/P)	\]
+
+\htmladdimg{../figures/complexpower.gif}
+
+{\bf Improvement of Power Factor}
+
+The {\bf Power factor} is defined as
+\[	\lambda\stackrel{\triangle}{=}\cos \phi < 1	\]
+which measures the phase difference between the voltage and current in
+the system. In a power system, we want to deliver as much real power 
+($P=V_{rms}I_{rms} \cos\phi$) to the consumer as possible while still 
+keeping the voltage $V$ and current $I$ under certain limits (determined 
+by the capacity of the power system). To efficiently use the system, it
+is desirable to maximize the power factor $\lambda=\cos\phi$ by reducing
+$\phi$. As most large loads are inductive (e.g., the coils in electric
+motors), the power factor can be reduced by using the shunt capacitor 
+to match the inductance in the system so that their effects can be 
+canceled.
+
+\htmladdimg{../figures/shuntcapacitor.gif}
+
+{\bf Example: } Find $C$ of the shunt capacitor so that the power
+factor can be improve to 1.
+
+Assume before $C$ is used, the impedance of the inductive load is
+$Z=R+j\omega L$ with phase $\phi=tan^{-1} (\omega L/R)$. After the
+shunt capacitor is added, the load becomes 
+\[	Z'=(R+j\omega L)\; || \;(1/j\omega C)
+	=\frac{(R+j\omega L)/j\omega C}{(R+j\omega L)+1/j\omega C}
+	=\frac{R+j\omega L}{j\omega CR-\omega^2 LC+1}	\]
+For the new phase angle to be zero, we need to have
+\[ \tan^{-1}\frac{\omega L}{R}=\tan^{-1}\frac{\omega RC}{1-\omega^2 LC},
+	\;\;\;\mbox{i.e.}\;\;\;	
+	\frac{\omega L}{R}=\frac{\omega RC}{1-\omega^2 LC}	\]
+which can be solved for $C$ to get
+\[	C=\frac{L}{R^2+\omega^2 L^2}	\]
+
+The shunt capacitor could also be added in series with the inductive 
+load. If we choose $C=1/\omega^2L$ so that $1/j\omega C+j\omega L=0$, 
+the imaginary part of the impedance is zero and the phase angle is zero
+(power factor is 1). In other words, the load is an RCL series circuit
+with resonant frequency and quality factor:
+\[	\omega_0=1/\sqrt{LC},\;\;\;\;\;\;Q=\frac{1}{R}\sqrt{\frac{L}{C}} \]
+The magnitude of the voltage across the inductor and the capacitor is $Q$
+times higher than that across the resistor:
+\[	\dot{V}_L=jQ\dot{V},\;\;\;\;\;\dot{V}_C=-jQ\dot{V}	\]
+When $X_L=\omega L \gg R$ (i.e., when $\phi$ is close to 90 degrees), $Q$
+is very large and the high voltages across the inductor and capacitor may
+cause damage to the load system (e.g., a motor). 
+
+\subsection*{Two-Port Networks}
+
+{\bf Models of two-port networks}
+
+Many complex circuits can be modeled by a two-port passive and linear model
+as shown below. A two-port network has an input port with volage $V_1$ and
+current $I_2$, and an output with voltage $V_2$ and current $I_2$. The
+relationships between these four variables can be described in different 
+ways, depending on which two of the four variables $V_1$, $V_2$, $I_1$ and 
+$I_2$ are given, while the other two can always be derived.
+
+{\bf Note: } All voltages and currents below are complex variables and
+represented by phasors containing both magnitude and phase angle. However, 
+for convenience the phasor notation $\dot{V}$ and $\dot{I}$ are replaced by 
+$V$ and $I$ respectively.
+
+\htmladdimg{../figures/twoportmodel.gif}
+
+{\bf Z-model:} In the Z-model or impedance model, the two currents $I_1$ 
+and $I_2$ are assumed to be known, and the voltages $V_1$ and $V_2$ can be 
+found by:
+
+\[ \left\{ \begin{array}{l} V_1=Z_{11}I_1+Z_{12}I_2 \\
+	V_2=Z_{21}I_1+Z_{22}I_2 \end{array} \right.\;\;\;\;\;
+	\left[ \begin{array}{l} V_1 \\ V_2\end{array} \right]=
+	\left[ \begin{array}{ll} Z_{11} & Z_{12}\\Z_{21} & Z_{22}\end{array}\right]
+	\left[ \begin{array}{l} I_1 \\ I_2\end{array} \right]
+	={\bf Z}\left[ \begin{array}{l} I_1 \\ I_2\end{array} \right]
+\]
+Here all four parameters $Z_{11}$, $Z_{12}$, $Z_{21}$, and $Z_{22}$ represent
+impedance. In particular, $Z_{21}$ and $Z_{12}$ are {\bf transfer impedances}, 
+defined as the ratio of a voltage $V_1$ (or $V_2$) in one part of a network to 
+a current $I_2$ (or $I_1$) in another part $Z_{12}=V_1/I_2$. ${\bf Z}$ is a 2 
+by 2 matrix containing all four parameters.
+
+{\bf Y-model:} In the Y-model or admitance model, the two voltages $V_1$ and $V_2$
+are assumed to be known, and the currents $I_1$ and $I_2$ can be found by:
+\[ \left\{ \begin{array}{l} I_1=Y_{11}V_1+Y_{12}V_2 \\
+	I_2=Y_{21}V_1+Y_{22}V_2 \end{array} \right.\;\;\;\;\;
+	\left[ \begin{array}{l} I_1 \\ I_2\end{array} \right]=
+	\left[ \begin{array}{ll} Y_{11} & Y_{12}\\Y_{21} & Y_{22}\end{array}\right]
+	\left[ \begin{array}{l} V_1 \\ V_2\end{array} \right]
+	={\bf Y}\left[ \begin{array}{l} V_1 \\ V_2\end{array} \right]
+\]
+Here all four parameters $Y_{11}$, $Y_{12}$, $Y_{21}$, and $Y_{22}$ represent
+admitance. In particular, $Y_{21}$ and $Y_{12}$ are {\bf transfer admitances}. 
+${\bf Y}$ is the corresponding parameter matrix.
+
+{\bf A-model:} In the A-model or transmission model, we assume $V_2$ and $I_2$
+are known, and find $V_1$ and $I_1$ by:
+\[\left\{ \begin{array}{l} 
+	V_1=A_{11}V_2+A_{12}(-I_2) \\
+	I_1=A_{21}V_2+A_{22}(-I_2) \end{array} \right.\;\;\;\;\;
+	\left[ \begin{array}{l} V_1 \\ I_1\end{array} \right]=
+	\left[ \begin{array}{ll} A_{11} & A_{12}\\A_{21} & A_{22}\end{array}\right]
+	\left[ \begin{array}{r} V_2 \\ -I_2\end{array} \right]
+	={\bf A}\left[ \begin{array}{r} V_2 \\ -I_2\end{array} \right]
+\]
+Here $A_{11}$ and $A_{22}$ are dimensionless coefficients, $A_{12}$ is impedance 
+and $A_{21}$ is admitance. A negative sign is added to the output current $I_2$ 
+in the model, so that the direction of the current is out-ward, for easy
+analysis of a cascade of multiple network models.
+
+{\bf H-model:} In the H-model or hybrid model, we assume $V_2$ and $I_1$ are 
+known, and find $V_1$ and $I_2$ by:
+\[\left\{ \begin{array}{l} 
+	V_1=H_{11}I_1+H_{12}V_2 \\
+	I_2=H_{21}I_1+H_{22}V_2 \end{array} \right.\;\;\;\;\;
+	\left[ \begin{array}{l} V_1 \\ I_2\end{array} \right]=
+	\left[ \begin{array}{ll} H_{11} & H_{12}\\H_{21} & H_{22}\end{array}\right]
+	\left[ \begin{array}{l} I_1 \\ V_2\end{array} \right]
+	={\bf H}\left[ \begin{array}{l} I_1 \\ V_2\end{array} \right]
+\]
+Here $H_{12}$ and $H_{21}$ are dimensionless coefficients, $H_{11}$ is impedance
+and $H_{22}$ is admitance. 
+
+For each of the four types of models, the four parameters can be found
+from variables $V_1$, $V_2$, $I_1$ and $I_2$ of a network by the following.
+\begin{itemize}
+\item For Z-model:
+\[	Z_{11}=\frac{V_1}{I_1}|_{I_2=0},\;\;\;\;
+	Z_{12}=\frac{V_1}{I_2}|_{I_1=0},\;\;\;\;
+	Z_{21}=\frac{V_2}{I_1}|_{I_2=0},\;\;\;\;
+	Z_{22}=\frac{V_2}{I_2}|_{I_1=0}
+\]
+\item For Y-model:
+\[	Y_{11}=\frac{I_1}{V_1}|_{V_2=0},\;\;\;\;
+	Y_{12}=\frac{I_1}{I_2}|_{V_1=0},\;\;\;\;
+	Y_{21}=\frac{I_2}{I_1}|_{V_2=0},\;\;\;\;
+	Y_{22}=\frac{I_2}{I_2}|_{Y_1=0},\;\;\;\;
+\]
+\item For A-model:
+\[	A_{11}=\frac{V_1}{V_2}|_{I_2=0},\;\;\;\;
+	A_{12}=\frac{V_1}{I_2}|_{V_2=0},\;\;\;\;
+	A_{21}=\frac{I_1}{V_2}|_{I_2=0},\;\;\;\;
+	A_{22}=\frac{I_1}{I_2}|_{V_2=0}
+\]
+\item For H-model:
+\[	H_{11}=\frac{V_1}{I_1}|_{V_2=0},\;\;\;\;
+	H_{12}=\frac{V_1}{V_2}|_{I_1=0},\;\;\;\;
+	H_{21}=\frac{I_2}{I_1}|_{V_2=0},\;\;\;\;
+	H_{22}=\frac{I_2}{V_2}|_{I_1=0}
+\]
+\end{itemize}
+
+If we further define
+\[	{\bf V}=[V_1, V_2]^T,\;\;\;\;\;\;{\bf I}=[I_1, I_2]^T	\]
+then the Z-model and Y-model above can be written in matrix form:
+\[ {\bf V}={\bf Z} {\bf I},\;\;\;\;\;\;{\bf I}={\bf Y} {\bf V},\;\;\;\;
+	{\bf Y}={\bf Z}^{-1}		\]
+
+{\bf Combinations of two-port models}
+
+\htmladdimg{../figures/networkmodels1.gif}
+
+{\bf Example:} The circuit shown below contains a two-port network with
+$Z_{11}=4\Omega$, $Z_{12}=j3\Omega$, $Z_{21}=j3\Omega$ and $Z_{22}=2\Omega$.
+The input voltage is $V_0=3\angle 0^\circ$ with an internal impedance 
+$Z_0=5\Omega$ and the load impedance is $R_L=4\Omega$. Find the two voltages 
+$V_1$, $V_2$ and two currents $I_1$, $I_2$.
+
+\htmladdimg{../figures/networkexample1.gif}
+
+{\bf Method 1:} 
+\begin{itemize}
+\item First, according the Z-model, we have
+\[ \left\{ \begin{array}{l} V_1=Z_{11}I_1+Z_{12}I_2= 4I_1+j3I_2 \\
+	V_2=Z_{21}I_1+Z_{22}I_2=j3I_1+ 2I_2 \end{array} \right.	\]
+\item Second, two more equations can be obtained from the circuit:
+\[ \left\{ \begin{array}{l} V_1=V_0-Z_0 I_1=3-5I_1 \\
+	V_2=-Z_L I_2=-4 I_2 \end{array} \right.	\]
+\item Substituting the last two equations for $V_1$ and $V_2$ into the 
+	first two, we get
+\[ \left\{ \begin{array}{l} 9I_1+j3I_2=3 \\ j3I_1+6I_2=0 \end{array} \right. \]
+\item Solving these we get 
+\[	I_1=\frac{2}{7},\;\;\;\;\;I_2=-\frac{j}{7} \]
+\item Then we can get the voltages
+\[	V_1=\frac{11}{7},\;\;\;\;\;V_2=\frac{j4}{7} \]
+\end{itemize}
+
+{\bf Method 2:} We can also use Thevenin's theorem to treat everything before
+the load impedance as an equivalent voltage source with Thevenin's voltage
+$V_T$ and resistance $R_T$, and the output voltage $_2$ and current $I_2$ can
+be found.
+
+\begin{itemize}
+\item Find $Z_T=V_2/I_2$ with voltage $V_0$ short-circuit:
+  \begin{itemize}
+  \item The Z-model:
+    \[ \left\{ \begin{array}{l} V_1=Z_{11}I_1+Z_{12}I_2=4I_1+j3I_2	\\
+      V_2=Z_{21}I_1+Z_{22}I_2=j3I_1+2I_2 \end{array} \right. \]
+  \item Also due to the voltage source $V_0$, we have
+    \[ V_1=V_0-I_1 Z_0=0-5I_1	\]
+  \item equating the two expressions for $V_1$, we get
+    \[ 4I_1+j3I_2=-5I_1,\;\;\;\;\mbox{i.e.}\;\;\;\;I_1=-\frac{j}{3} I_2	\]
+  \item Substituting this $I_1$ into the equation for $V_2$ above, we get
+    \[ V_2=j3I_1+2I_2=I_2+2I_2=3I_2 \]
+  \item Find $Z_2=V_22/I_2$:
+    \[ Z_T=\frac{V_2}{I_2}=3	\]
+  \end{itemize}
+\item Find open-circuit voltage $V_T$ with $I_2=0$:
+  \begin{itemize}
+  \item Since the load is an open-circuit, $I_2=0$, we have
+    \[ \left\{ \begin{array}{l} V_1=Z_{11}I_1=4I_1 \\
+      V_2=Z_{21}I_1=j3 I_1 \end{array} \right. \]
+    \item Find $I_1$:
+      \[	I_1=\frac{V_0-V_1}{Z_0}=\frac{3-4I_1}{5}	\]
+      Solving this to get $I_1=1/3$
+    \item Find open-circuit voltage $V_T=V_2$:
+      \[	V_2=Z_{21}I_1=j3 \frac{1}{3}=j	\]
+  \end{itemize}
+\item Find load voltage $V_2$:
+  \[ V_2=I_2 Z_L=\frac{V_T}{Z_T+Z_L}\;Z_L=\frac{j}{3+4}\;4=\frac{j4}{7} \]
+\item Find load voltage $I_2$:
+  \[ I_2=-\frac{V_2}{Z_L}=-\frac{j4}{7}\;\frac{1}{4}=-\frac{j}{7} \]
+\end{itemize}
+
+
+{\bf principle of reciprocity}:
+ 
+\htmladdimg{../figures/reciprocal.gif}
+
+Consider the example circuit on the left above, which can be simplified 
+as the network in the middle. The voltage source is in the branch on the
+left, while the current $\dot{I}_2$ is in the branch on the right, which
+can be found to be (current divider):
+\[ \dot{I}_2=\frac{V}{Z_1+Z_2 Z_3/(Z_2+Z_3)}\;\frac{Z_3}{Z_2+Z_3}
+=V \frac{Z_3}{Z_1Z_2+Z_1Z_3+Z_2Z_3} \]
+We next interchange the positions of the voltage source and the current, 
+so that the voltage source is in the branch on the right and the current 
+to be found is in the branch on the left, as shown on the right of the 
+figure above. The current can be found to be
+\[ \dot{I}_1=\frac{V}{Z_2+Z_1 Z_3/(Z_1+Z_3)}\frac{Z_3}{Z_1+Z_3}
+=V \frac{Z_3}{Z_1Z_2+Z_1Z_3+Z_2Z_3} \]
+The two currents $\dot{I}_1$ and $\dot{I}_2$ are exactly the same! This
+result illustrates the following priciple, which can be proven in general:
+
+{\em 
+In any passive (without energy sources), 
+linear network, if a voltage $V$ applied in branch 1 causes a current $I$ in 
+branch 2, then this voltage $V$ applied in branch 2 will cause the same current
+$I$ in branch 1.}
+
+{\em In any passive, inear network, the transfer impedance $Z_{12}$ is equal 
+to the reciprocal transfer impedance $Z_{21}$.}
+
+Based on this reciprocity principle, any complex passive linear network can
+be modeled by either a T-network or a $\Pi$-network:
+
+{\bf T-Network Model:}
+
+\htmladdimg{../figures/Tmodel.gif}
+
+From this T-model, we get
+\[	\left\{ \begin{array}{l} V_1=(Z_1+Z_3)I_1+Z_3I_2=Z_{11}I_1+Z_{12}I_2 \\
+		V_2=Z_3I_1+(Z_2+Z_3)I_2=Z_{21}I_1+Z_{22}I_2  \end{array} \right. \]
+Comparing this with the Z-model, we get
+\[ Z_{11}=Z_1+Z_3,\;\;\;\;\;Z_{22}=Z_2+Z_3,\;\;\;\;\;Z_{12}=Z_{21}=Z_3	\]
+Solving these equations for $Z_1$, $Z_2$ and $Z_3$, we get
+\[ Z_1=Z_{11}-Z_{12},\;\;\;\;Z_2=Z_{22}-Z_{21},\;\;\;\;Z_3=Z_{12}=Z_{21} \]
+
+{\bf $\Pi$-Network Model:}
+\htmladdimg{../figures/Pmodel.gif}
+
+From this $\Pi$-model, we get:
+\[ \left\{ \begin{array}{l} 
+I_1=Y_1V_1+Y_3(V_1-V_2)=(Y_1+Y_3)V_1-Y_3V_2=Y_{11}V_1+Y_{12}V_2 \\
+I_2=Y_3(V_2-V_1)+Y_2V_2=-Y_3V_1+(Y_2+Y_3)V_2=Y_{21}V_1+Y_{22}V_2 \end{array} \right. \]
+Comparing this with the Z-model, we get
+\[ Y_{11}=Y_1+Y_3,\;\;\;\;\;Y_{22}=Y_2+Y_3,\;\;\;\;\;Y_{12}=Y_{21}=-Y_3	\]
+Solving these equations for $Y_1$, $Y_2$ and $Y_3$, we get
+\[ Y_1=Y_{11}+Y_{12},\;\;\;\;Y_2=Y_{22}+Y_{21},\;\;\;\;Y_3=-Y_{12}=-Y_{21} \]
+
+{\bf Example 1:} Convert the given T-network to a $\Pi$ network.
+
+\htmladdimg{../figures/TPmodelexample.gif}
+
+{\bf Solution:} Given $Z_1=j5$, $Z_2=-j5$, $Z_3=1$, we get its Z-model:
+\[  Z_{11}=Z_1+Z_3=1+j5,\;\;\;\;Z_{22}=Z_2+Z_3=1-j5,\;\;\;\;Z_{12}=Z_{21}=Z_3=1 \]
+The Z-model can be expressed in matrix form:
+\[	\left[ \begin{array}{l} V_1 \\ V_2\end{array} \right]=
+	\left[ \begin{array}{cc} Z_{11} & Z_{12} \\ Z_{21} & Z_{22} \end{array} \right]
+	\left[ \begin{array}{l} I_1 \\ I_2\end{array} \right]
+=	\left[ \begin{array}{cc} 1+j5 & 1 \\ 1 & 1-j5 \end{array} \right]
+	\left[ \begin{array}{l} I_1 \\ I_2\end{array} \right]
+\]
+This Z-model can be converted into a Y-model:
+\[	\left[ \begin{array}{l} I_1 \\ I_2\end{array} \right]=
+	\left[ \begin{array}{cc} 1+j5 & 1 \\ 1 & 1-j5 \end{array} \right]^{-1}
+	\left[ \begin{array}{l} V_1 \\ V_2\end{array} \right]
+=\frac{1}{25}
+	\left[ \begin{array}{cc} 1-j5 & -1 \\ -1 & 1+j5 \end{array} \right]
+	\left[ \begin{array}{l} V_1 \\ V_2\end{array} \right]
+=	\left[ \begin{array}{cc} Y_{11} & Y_{12} \\ Y_{21} & Y_{22} \end{array} \right]
+	\left[ \begin{array}{l} V_1 \\ V_2\end{array} \right]
+\]
+This Y-model can be converted to a $\Pi$ network:
+\[ Y_1=Y_{11}+Y_{12}=-j/5,\;\;\;\;Z_2=Y_{22}+Y_{21}=j/5,\;\;\;\;Y_3=Y_{21}=Y_{12}=1/25 \]
+These admitances can be further converted into impedances:
+\[ Z_1=1/Y_1=5j,\;\;\;\;Z_2=1/Y_2=-j5,\;\;\;\;Z_3=1/Y_3=25	\]
+
+\subsection*{Ideal Transformer}
+
+\htmladdimg{../figures/idealtransformer.gif}
+
+The ratio between the primary voltage $V_1$ and the secendary voltage $V_2$ of 
+a transformer is proportional to the ratio between the number of turns:
+\[	\frac{V_2}{V_1}=\frac{n_2}{n_1}	\]
+If there is no power loss by the transformer, then the transformer is ideal and
+we have
+\[P_1=V_1I_1=P_2=V_2I_2,\;\;\;\;\mbox{i.e.}\;\;\;\;
+	\frac{I_2}{I_1}=\frac{V_1}{V_2}=\frac{n_1}{n_2}	\]
+The ratio between the primary current $I_1$ and the secendary current $I_2$ of 
+a transformer is inversely proportional to the ratio between the number of turns.
+Also note the direction of the current.
+
+We can also find the ratio between the primary and secondary impedances based on 
+the assumption that there is no power loss in the transformer, i.e.,
+\[	P_1=\frac{V_1^2}{Z_1}=P_2=\frac{V_2^2}{Z_2}, \;\;\;\;\;
+	\frac{Z_1}{Z_2}=(\frac{V_1}{V_2})^2=(\frac{n_1}{n_2})^2  \]
+
+{\bf Example 1:} Assume $R_0=1000\Omega$, $R_L=10\Omega$, and the voltage souce is
+$V=12V$. Find the turn ratio of the transformer so that the load resistor will get 
+maximum power from the voltage source.
+
+\htmladdimg{../figures/transformerexample1.gif}
+
+We know that when the load resistor will get maximum power if its resistance is 
+equal to the internal resistance of the voltage source. 
+\begin{itemize}
+\item Convert load resistance on the secondary side $R_L=10\Omega$ to 
+	$R'_L=n^2\; R_L=10\; n^2$ on the primary side.
+\item Match $R'_L=10\;n^2$ to $R_0$, i.e., $10\; n^2=1000\Omega$
+\item Find turn ratio $n=N_1/N_2=10$.
+\item Find power consumption on $R'_L$: 
+	\[ P=(\frac{V}{2})^2/R'_L=36/1000=0.036W	\]
+\item The power consumed by real load $R_L$ is the same, due to ideal transformer.
+\end{itemize}
+
+{\bf Example 2:} Assume $R_0=10\Omega$, $R_L=5\Omega$, and the turn ratio is
+$n=n_1/n_2=2$. Describe this circuit as a two-port network.
+
+\htmladdimg{../figures/transformerexample2.gif}
+
+\begin{itemize}
+\item Set up basic equations:
+\[	\left\{ \begin{array}{l} 
+	V_1=10\;I_1+2\;V_2 \\ I_2-V_2/5=-2\;I_1 \end{array} \right. \]
+\item Rearrange the equations in the form of a Z-model. The second equation is
+\[	V_2=10\;I_1+5\;I_2	\]
+Substituting into the first equation, we get
+\[	V_1=30\;I_1+10\I_2	\]
+The Z-model is:
+\[	\left[ \begin{array}{l} V_1 \\ V_2 \end{array} \right]=
+	\left[ \begin{array}{rr} Z_{11} & Z_{12} \\ Z_{21} & Z_{22} \end{array} \right]
+	\left[ \begin{array}{l} I_1 \\ I_2 \end{array} \right]
+=	\left[ \begin{array}{rr} 30 & 10 \\ 10 & 5 \end{array} \right]
+	\left[ \begin{array}{l} I_1 \\ I_2 \end{array} \right]
+\]
+As $Z_{12}=Z_{21}=10$, this is a reciprocal network.
+\end{itemize}
+Alternatively, we can set up the equations in terms of the currents:
+\begin{itemize}
+\[	\left\{ \begin{array}{l} 
+	I_1=(V_1-2\;V_2)/10 \\ I_2=-2\;I_1+V_2/5 \end{array} \right. \]
+\item Rearrange the equations in the form of a Y-model. The first equation is
+\[	I_1=V_1/10-V_2/5	\]
+Substituting into the second equation, we get
+\[	I_2=-V_1/5+2V_2/5+V_2/5=-V_1/5+3V_2/5	\]
+The Y-model is:
+\[	\left[ \begin{array}{l} I_1 \\ I_2 \end{array} \right]=
+	\left[ \begin{array}{rr} Y_{11} & Y_{12} \\ Y_{21} & Y_{22} \end{array} \right]
+	\left[ \begin{array}{l} V_1 \\ V_2 \end{array} \right]
+=	\left[ \begin{array}{rr} 1/10 & -1/5 \\ -1/5 & 3/5 \end{array} \right]
+	\left[ \begin{array}{l} V_1 \\ V_2 \end{array} \right]
+\end{itemize}
+Finally, we can verify that ${\bf Z}^{-1}={\bf Y}$
+\[ {\bf Z}^{-1}=\left[ \begin{array}{rr} 30 & 10 \\ 10 & 5 \end{array} \right]^{-1}
+	=\frac{1}{50}\left[ \begin{array}{rr} 5 & -10 \\ -10 & 30 \end{array} \right]
+	=\left[ \begin{array}{rr} 1/10 & -1/5 \\ -1/5 & 3/5 \end{array} \right]
+	={\bf Y}	\]
+
+\end{document}
+
+
+	
+
+	
+
+
+
+
+
+
+
+
+
+

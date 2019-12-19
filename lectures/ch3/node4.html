@@ -1,0 +1,1261 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Impedance and Generalized Ohm's Law</TITLE>
+<META NAME="description" CONTENT="Impedance and Generalized Ohm's Law">
+<META NAME="keywords" CONTENT="ch3">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="ch3.css">
+
+<LINK REL="next" HREF="node5.html">
+<LINK REL="previous" HREF="node3.html">
+<LINK REL="next" HREF="node5.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node5.html">First Order Systems</A>
+<B> Up:</B> <A
+ HREF="node1.html">Chapter 3: AC Circuit</A>
+<B> Previous:</B> <A
+ HREF="node3.html">Phasor Representation of Sinusoidal</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION00013000000000000000">
+Impedance and Generalized Ohm's Law</A>
+</H2>
+
+<P>
+<B>Impedance of Basic Components</B>
+
+<P>
+The relationship between the sinusoidal current <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img21.svg"
+ ALT="$i(t)$"></SPAN> through and 
+the sinusoidal voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img88.svg"
+ ALT="$v(t)$"></SPAN> across a capacitor or an inductor in 
+an AC circuit is described by a differential equation in time domain.
+However, if we treat such a sinusoidal variable as the projection of 
+a complex exponential, a vector rotating counter-clock wise, onto the 
+real axis:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v(t)=V_p\cos(\omega t+\phi)=Re[ V_p e^{j(\omega t+\phi)} ],
+  \;\;\;\;\;\;\;\;
+  i(t)=I_p\cos(\omega t+\psi)=Re[ I_p e^{j(\omega t+\psi)} ]
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.25ex; vertical-align: -0.78ex; " SRC="img89.svg"
+ ALT="$\displaystyle v(t)=V_p\cos(\omega t+\phi)=Re[ V_p e^{j(\omega t+\phi)} ],
+\;\;\;\;\;\;\;\;
+i(t)=I_p\cos(\omega t+\psi)=Re[ I_p e^{j(\omega t+\psi)} ]$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">29</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+then the relationship between the voltage and current can be 
+described by an algebraic equation. We define the <EM>impedance</EM> 
+of a component (R, C, and L) as the ratio of the complex exponential
+forms of the voltage and the current associated with the component
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\mbox{Impedance}=Z=\frac{V_pe^{j(\omega t+\phi)}}{I_pe^{j(\omega t+\psi)}}
+  =\frac{V_pe^{j\phi}}{I_pe^{j\psi}}=\frac{\dot{V}}{\dot{I}}
+  =\frac{\mbox{Phasor of voltage}}{\mbox{Phasor of current}}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH">Impedance<IMG STYLE="height: 6.27ex; vertical-align: -2.42ex; " SRC="img90.svg"
+ ALT="$\displaystyle =Z=\frac{V_pe^{j(\omega t+\phi)}}{I_pe^{j(\omega t+\psi)}}
+=\frac...
+...ac{\dot{V}}{\dot{I}}
+=\frac{\mbox{Phasor of voltage}}{\mbox{Phasor of current}}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">30</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+This is the generalized version of the Ohm's law for AC circuits.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/ImpedanceFT.png"
+ ALT="ImpedanceFT.png">
+
+<P>
+
+<UL>
+<LI><B>Resistor:</B> 
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_pe^{j(\omega t+\phi)}=R I_pe^{j(\omega t+\psi)}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.25ex; vertical-align: -0.78ex; " SRC="img91.svg"
+ ALT="$\displaystyle V_pe^{j(\omega t+\phi)}=R I_pe^{j(\omega t+\psi)}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">31</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The impedance of a resistor is the ratio of the phasor representations 
+  of the voltage and current. As the current through and voltage across
+  a resistor are always in phase, i.e., <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img92.svg"
+ ALT="$\psi=\phi$"></SPAN>, we have
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Z_R=\frac{V_p\,e^{j\phi}}{I_p\,e^{j\psi}}
+    =\frac{V_p}{I_p}=R, \;\;\;\;\; |Z_R|=R,\;\;\;\;\;\angle Z_R=0
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.37ex; " SRC="img93.svg"
+ ALT="$\displaystyle Z_R=\frac{V_p\,e^{j\phi}}{I_p\,e^{j\psi}}
+=\frac{V_p}{I_p}=R, \;\;\;\;\; \vert Z_R\vert=R,\;\;\;\;\;\angle Z_R=0$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">32</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The magnitude and phase of the current and voltage are related by:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_p=|Z_R|\,I_p=R\,I_p,\;\;\;\;\;\; \angle\dot{V}=\angle\dot{I}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.25ex; vertical-align: -0.78ex; " SRC="img94.svg"
+ ALT="$\displaystyle V_p=\vert Z_R\vert\,I_p=R\,I_p,\;\;\;\;\;\; \angle\dot{V}=\angle\dot{I}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">33</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The resistor introduces no phase shift between the voltage and current,
+  i.e., they are in phase.
+
+<P>
+</LI>
+<LI><B>Capacitor:</B> 
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_pe^{j(\omega t+\psi)}=C\frac{d}{dt}[V_p e^{j(\omega t+\phi)}]
+    =j\omega C V_p e^{j(\omega t+\phi)}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.11ex; vertical-align: -1.71ex; " SRC="img95.svg"
+ ALT="$\displaystyle I_pe^{j(\omega t+\psi)}=C\frac{d}{dt}[V_p e^{j(\omega t+\phi)}]
+=j\omega C V_p e^{j(\omega t+\phi)}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">34</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The impedance of a capacitor is the ratio of the phasor representations 
+  of the voltage and current:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Z_C=\frac{V_pe^{j\phi}}{I_pe^{j\psi}}=\frac{1}{j\omega C}=\frac{-j}{\omega C},
+    \;\;\;\;\;\;|Z_C|=\frac{1}{\omega C},\;\;\;\;\;\;\angle Z_C=-\frac{\pi}{2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.37ex; " SRC="img96.svg"
+ ALT="$\displaystyle Z_C=\frac{V_pe^{j\phi}}{I_pe^{j\psi}}=\frac{1}{j\omega C}=\frac{-...
+...\;\;\;\;\vert Z_C\vert=\frac{1}{\omega C},\;\;\;\;\;\;\angle Z_C=-\frac{\pi}{2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">35</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The magnitude and phase of the current and voltage are related by:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\dot{V}=Z_C\dot{I}=-j\dot{I}/\omega C,\;\;\;\;\;
+    V_p=I_p/\omega C,\;\;\;\;\;\; \angle\dot{V}=\angle\dot{I}-\frac{\pi}{2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.41ex; vertical-align: -1.71ex; " SRC="img97.svg"
+ ALT="$\displaystyle \dot{V}=Z_C\dot{I}=-j\dot{I}/\omega C,\;\;\;\;\;
+V_p=I_p/\omega C,\;\;\;\;\;\; \angle\dot{V}=\angle\dot{I}-\frac{\pi}{2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">36</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The phase shift introduced by a capacitor is <!-- MATH
+ $\angle Z_C=-\pi/2=-90^\circ$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img98.svg"
+ ALT="$\angle Z_C=-\pi/2=-90^\circ$"></SPAN>,
+  i.e., the voltage lags behind the current by <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img3.svg"
+ ALT="$90^\circ$"></SPAN>, or the current 
+  leads the voltage by <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img3.svg"
+ ALT="$90^\circ$"></SPAN> (&ldquo;ICE&rdquo;).
+
+<P>
+</LI>
+<LI><B>Inductor:</B>
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_pe^{j(\omega t+\phi)}=L\frac{d}{dt}[I_p e^{j(\omega t+\psi)}]
+    =j\omega L I_p e^{j(\omega t+\psi)}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.11ex; vertical-align: -1.71ex; " SRC="img99.svg"
+ ALT="$\displaystyle V_pe^{j(\omega t+\phi)}=L\frac{d}{dt}[I_p e^{j(\omega t+\psi)}]
+=j\omega L I_p e^{j(\omega t+\psi)}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">37</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The impedance of an inductor is the ratio of the phasor representations 
+  of the voltage and current:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Z_L =\frac{V_pe^{j\phi}}{I_pe^{j\psi}} =j\omega L,
+    \;\;\;\;|Z_L|=\omega L,\;\;\;\angle Z_L=\frac{\pi}{2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.37ex; " SRC="img100.svg"
+ ALT="$\displaystyle Z_L =\frac{V_pe^{j\phi}}{I_pe^{j\psi}} =j\omega L,
+\;\;\;\;\vert Z_L\vert=\omega L,\;\;\;\angle Z_L=\frac{\pi}{2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">38</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The magnitude and phase of the current and voltage are related by:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\dot{V}=Z_L\dot{I}=j\omega L\dot{I},\;\;\;\;\;
+    V_p=\omega LI_p,\;\;\;\;\;\; \angle\dot{V}=\angle\dot{I}+\frac{\pi}{2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.41ex; vertical-align: -1.71ex; " SRC="img101.svg"
+ ALT="$\displaystyle \dot{V}=Z_L\dot{I}=j\omega L\dot{I},\;\;\;\;\;
+V_p=\omega LI_p,\;\;\;\;\;\; \angle\dot{V}=\angle\dot{I}+\frac{\pi}{2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">39</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The phase shift introduced by a inductor is <!-- MATH
+ $\angle Z_L=\pi/2=90^\circ$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img102.svg"
+ ALT="$\angle Z_L=\pi/2=90^\circ$"></SPAN>,
+  i.e., the voltage leads the current by <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img3.svg"
+ ALT="$90^\circ$"></SPAN> (&ldquo;ELI&rdquo;). 
+</LI>
+</UL>
+One way to remember the phase between the voltage <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img103.svg"
+ ALT="$E$"></SPAN> and current <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img61.svg"
+ ALT="$I$"></SPAN> 
+associated with capacitor <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img104.svg"
+ ALT="$C$"></SPAN> and inductor <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img105.svg"
+ ALT="$L$"></SPAN> is &ldquo;ELI the ICE man&rdquo;. 
+Also, consider two extreme cases:
+
+<UL>
+<LI>When <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img106.svg"
+ ALT="$\omega=0$"></SPAN>, <!-- MATH
+ $Z_C\rightarrow \infty$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img107.svg"
+ ALT="$Z_C\rightarrow \infty$"></SPAN> and the capacitor has zero 
+  conductivity due to the insulation between its two plates (open circuit),
+  and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img108.svg"
+ ALT="$Z_L=0$"></SPAN> as there is no flux change in the inductor and the resistance 
+  of the coil is ideally zero.
+</LI>
+<LI>When <!-- MATH
+ $\omega\rightarrow \infty$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img109.svg"
+ ALT="$\omega\rightarrow \infty$"></SPAN>, <!-- MATH
+ $Z_C\rightarrow 0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img110.svg"
+ ALT="$Z_C\rightarrow 0$"></SPAN> and the capacitor 
+  becomes highly conductive, and <!-- MATH
+ $Z_L\rightarrow \infty$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img111.svg"
+ ALT="$Z_L\rightarrow \infty$"></SPAN> as the self-induced
+  voltage in the coil always acts against any change in the input (Lenz's Law).
+</LI>
+</UL>
+
+<P>
+In a DC circuit, each resistor is measured by either its resistance <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img112.svg"
+ ALT="$R$"></SPAN> 
+or its conductance <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img113.svg"
+ ALT="$G=1/R$"></SPAN>. In an AC circuit each component (capacitor, 
+inductor, or resistor) is measured by its impedance <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img114.svg"
+ ALT="$Z$"></SPAN>, of which the
+real and imaginary parts are respectively the resistance <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img112.svg"
+ ALT="$R$"></SPAN> and reactance 
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img59.svg"
+ ALT="$X$"></SPAN>, or its admittance <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img115.svg"
+ ALT="$Y=1/Z$"></SPAN>, of which the real and imaginary parts are
+respectively the conductance <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img116.svg"
+ ALT="$G$"></SPAN> and susceptance <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img117.svg"
+ ALT="$B$"></SPAN>, as summarized below:
+
+<P>
+
+<UL>
+<LI><B>Impedance</B>
+
+<P>
+As a complex variable, the impedance <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img114.svg"
+ ALT="$Z$"></SPAN> can be written in either
+    Cartesian or polar form:
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Z=R+jX=|Z|e^{j\angle Z}=|Z|\angle Z
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img118.svg"
+ ALT="$\displaystyle Z=R+jX=\vert Z\vert e^{j\angle Z}=\vert Z\vert\angle Z$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">40</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+    
+<UL>
+<LI>The real part of impedance <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img119.svg"
+ ALT="$Re[Z]=R$"></SPAN> is called <B>resistance</B>. 
+</LI>
+<LI>The imaginary part of impedance  <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img120.svg"
+ ALT="$Im[Z]=X$"></SPAN> is called <B>reactance</B>. 
+    
+</LI>
+</UL>
+    Impedance, resistance, and reactance are all measured by the same unit 
+    Ohm (<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img121.svg"
+ ALT="$\Omega$"></SPAN>). 
+
+<P>
+The magnitude and phase angle of <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img114.svg"
+ ALT="$Z$"></SPAN> are:
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+|Z|=\sqrt{R^2+X^2},\;\;\;\;\angle Z=tan^{-1}\left(\frac{X}{R}\right)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img122.svg"
+ ALT="$\displaystyle \vert Z\vert=\sqrt{R^2+X^2},\;\;\;\;\angle Z=tan^{-1}\left(\frac{X}{R}\right)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">41</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The impedances <!-- MATH
+ $Z_C=1/j\omega C=-j/\omega C$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img123.svg"
+ ALT="$Z_C=1/j\omega C=-j/\omega C$"></SPAN> associated with <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img104.svg"
+ ALT="$C$"></SPAN> and 
+    <!-- MATH
+ $Z_L=j\omega L$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img124.svg"
+ ALT="$Z_L=j\omega L$"></SPAN> are both purely imaginary, i.e., they are both reactance,
+    indicating these components are reactive and consume no energy.
+
+<P>
+</LI>
+<LI><B>Admittance</B>
+
+<P>
+The reciprocal of the impedance <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img114.svg"
+ ALT="$Z$"></SPAN> is called <B>admittance</B>:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Y=\frac{1}{Z}=\frac{1}{R+jX}=\frac{R-jX}{R^2+X^2}
+    =\frac{R}{R^2+X^2}+j\frac{-X}{R^2+X^2}=G+jB
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.16ex; " SRC="img125.svg"
+ ALT="$\displaystyle Y=\frac{1}{Z}=\frac{1}{R+jX}=\frac{R-jX}{R^2+X^2}
+=\frac{R}{R^2+X^2}+j\frac{-X}{R^2+X^2}=G+jB$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">42</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+  
+<UL>
+<LI>The real part of admittance is called <B>conductance</B>:
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+G=Re[Y]=\frac{R}{R^2+X^2}	\ne \frac{1}{R}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -1.90ex; " SRC="img126.svg"
+ ALT="$\displaystyle G=Re[Y]=\frac{R}{R^2+X^2} \ne \frac{1}{R}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">43</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>The imaginary part of admittance is called <B>susceptance</B>:
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+B=Im[Y]=\frac{-X}{R^2+X^2} \ne \frac{1}{X}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -1.90ex; " SRC="img127.svg"
+ ALT="$\displaystyle B=Im[Y]=\frac{-X}{R^2+X^2} \ne \frac{1}{X}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">44</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+</UL>
+  Admittance, conductance and susceptance are all measured by the same 
+  unit Siemens (<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img128.svg"
+ ALT="$S$"></SPAN>). 
+
+<P>
+The magnitude and phase of complex admittance are
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+|Y|=\sqrt{G^2+B^2}=\frac{1}{\sqrt{R^2+X^2}},\;\;\;\;\;
+    \angle Y=\tan^{-1} \left(\frac{B}{G}\right)=\tan^{-1} \left(\frac{-X}{R}\right)
+    =-\angle Z
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img129.svg"
+ ALT="$\displaystyle \vert Y\vert=\sqrt{G^2+B^2}=\frac{1}{\sqrt{R^2+X^2}},\;\;\;\;\;
+\...
+...an^{-1} \left(\frac{B}{G}\right)=\tan^{-1} \left(\frac{-X}{R}\right)
+=-\angle Z$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">45</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+</UL>
+
+<P>
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left\{\begin{array}{rcl}
+  \mbox{Impedance} &=& \mbox{Resistance} + j \;\mbox{Reactance} \\
+  \mbox{Admittance} &=& \mbox{Conductance} + j\; \mbox{Susceptance} \\
+  \mbox{Admittance}&=&1/\mbox{Impedance}\\
+  \end{array}\right.
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 8.59ex; vertical-align: -3.72ex; " SRC="img130.svg"
+ ALT="$\displaystyle \left\{\begin{array}{rcl}
+\mbox{Impedance} &amp;=&amp; \mbox{Resistance} ...
+...x{Susceptance} \\
+\mbox{Admittance}&amp;=&amp;1/\mbox{Impedance}\\
+\end{array}\right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">46</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+Impedance <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img114.svg"
+ ALT="$Z$"></SPAN> and admittance <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img115.svg"
+ ALT="$Y=1/Z$"></SPAN> are both complex variables. The 
+real parts <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img119.svg"
+ ALT="$Re[Z]=R$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img131.svg"
+ ALT="$Re[Y]=G$"></SPAN> are always positive, but the imaginary 
+parts <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img120.svg"
+ ALT="$Im[Z]=X$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img132.svg"
+ ALT="$Im[Y]=B$"></SPAN> can be either positive or negative. Therefore
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img114.svg"
+ ALT="$Z$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img133.svg"
+ ALT="$Y$"></SPAN> can only be in the 1st or the 4th quadrants of the complex plane.
+
+<P>
+In particular, the admittances of the three types of elements R, L
+and C are
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Y_R=\frac{1}{R},\;\;\;\;
+  Y_L=\frac{1}{Z_L}=\frac{1}{j\omega L}=\frac{-j}{\omega L},\;\;\;\;
+  Y_C=\frac{1}{Z_C}=\frac{1}{1/j\omega C}=j\omega C
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img134.svg"
+ ALT="$\displaystyle Y_R=\frac{1}{R},\;\;\;\;
+Y_L=\frac{1}{Z_L}=\frac{1}{j\omega L}=\frac{-j}{\omega L},\;\;\;\;
+Y_C=\frac{1}{Z_C}=\frac{1}{1/j\omega C}=j\omega C$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">47</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+Ohm's law can also be expressed in terms of admittance as well as 
+impedance. Sometimes it is more convenient in circuit analysis to use 
+admittance instead of impedance.
+
+<UL>
+<LI>Components parallel:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Z_{total}=\frac{Z_1\;Z_2}{Z_1+Z_2},\;\;\;\;Y_{total}=Y_1+Y_2
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img135.svg"
+ ALT="$\displaystyle Z_{total}=\frac{Z_1\;Z_2}{Z_1+Z_2},\;\;\;\;Y_{total}=Y_1+Y_2$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">48</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>Components in series:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Z_{total}=Z_1+Z_2,\;\;\;\;Y_{total}=\frac{Y_1\;Y_2}{Y_1+Y_2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img136.svg"
+ ALT="$\displaystyle Z_{total}=Z_1+Z_2,\;\;\;\;Y_{total}=\frac{Y_1\;Y_2}{Y_1+Y_2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">49</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+</UL>
+
+<P>
+Here is a 
+<A ID="tex2html3"
+  HREF="http://fourier.eng.hmc.edu/e84/lectures/ch3/node23.html">review of complex arithmetic</A>.
+
+<P>
+<B>Example 1:</B> 
+
+<P>
+Solve the circuit below. The voltage from the generator is 
+<!-- MATH
+ $v(t)=28.3\;\cos(5000t+45^\circ)\;V=20\sqrt{2}\;\cos(5000t+45^\circ)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img137.svg"
+ ALT="$v(t)=28.3\;\cos(5000t+45^\circ)\;V=20\sqrt{2}\;\cos(5000t+45^\circ)$"></SPAN>.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/phasorexample.gif"
+ ALT="phasorexample.gif">
+
+<P>
+The given voltage <!-- MATH
+ $v(t)=28.3\;\cos(5000t+45^\circ)\;V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img138.svg"
+ ALT="$v(t)=28.3\;\cos(5000t+45^\circ)\;V$"></SPAN> can be expressed
+in phasor form as <!-- MATH
+ $\dot{V}=28.3\;\angle{45^\circ}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.12ex; " SRC="img139.svg"
+ ALT="$\dot{V}=28.3\;\angle{45^\circ}$"></SPAN>.
+
+<P>
+First find the impedances and admittances of the components and the 
+two branches. As <!-- MATH
+ $\omega=5000$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img140.svg"
+ ALT="$\omega=5000$"></SPAN>, we get
+
+<UL>
+<LI><!-- MATH
+ $Y_C=j\omega C=j\;5000\times 10^{-5}=j0.05=0.05\angle{90^\circ}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.57ex; " SRC="img141.svg"
+ ALT="$Y_C=j\omega C=j\;5000\times 10^{-5}=j0.05=0.05\angle{90^\circ}$"></SPAN>
+
+<P>
+<!-- MATH
+ $Z_C=1/Y_C=1/j0.05=-j20=20\angle{-90^\circ}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img142.svg"
+ ALT="$Z_C=1/Y_C=1/j0.05=-j20=20\angle{-90^\circ}$"></SPAN>
+</LI>
+<LI><!-- MATH
+ $Z_L=j\omega L=j5000\times 4\times 10^{-3}=0+j20=20\angle{90^\circ}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.57ex; " SRC="img143.svg"
+ ALT="$Z_L=j\omega L=j5000\times 4\times 10^{-3}=0+j20=20\angle{90^\circ}$"></SPAN>
+
+<P>
+<!-- MATH
+ $Y_L=1/Z_L=-j0.05=0.05\angle{-90^\circ}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img144.svg"
+ ALT="$Y_L=1/Z_L=-j0.05=0.05\angle{-90^\circ}$"></SPAN>
+</LI>
+<LI><!-- MATH
+ $Z_R=R=20+j0=20\angle{0^\circ}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img145.svg"
+ ALT="$Z_R=R=20+j0=20\angle{0^\circ}$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $Z_{RL}=Z_R+Z_L=20+j20=20\sqrt{2}\angle{45^\circ}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.57ex; " SRC="img146.svg"
+ ALT="$Z_{RL}=Z_R+Z_L=20+j20=20\sqrt{2}\angle{45^\circ}$"></SPAN>
+	<!-- MATH
+ $Y_{RL}=1/Z_{RL}=1/20\sqrt{2}\angle{45^\circ}
+	=0.025\sqrt{2}\angle{-45^\circ}=0.025-j0.025$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img147.svg"
+ ALT="$Y_{RL}=1/Z_{RL}=1/20\sqrt{2}\angle{45^\circ}
+=0.025\sqrt{2}\angle{-45^\circ}=0.025-j0.025$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $Y_{load}=Y_C+Y_{RL}=0.025+j0.025=0.025\sqrt{2}\angle{45^\circ}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.57ex; " SRC="img148.svg"
+ ALT="$Y_{load}=Y_C+Y_{RL}=0.025+j0.025=0.025\sqrt{2}\angle{45^\circ}$"></SPAN>
+</LI>
+</UL>
+Next find all currents in phasor form:
+
+<UL>
+<LI><!-- MATH
+ $\dot{I}_{load}=Y_{load}\dot{V}=(28.3\angle{45^\circ})\;
+  (0.025\sqrt{2}\angle{45^\circ})=1\,\angle{90^\circ}=j$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img149.svg"
+ ALT="$\dot{I}_{load}=Y_{load}\dot{V}=(28.3\angle{45^\circ})\;
+(0.025\sqrt{2}\angle{45^\circ})=1\,\angle{90^\circ}=j$"></SPAN>
+
+<P>
+<!-- MATH
+ $i_{load}(t)=Re[\dot{I} e^{j5000t}]=Re[(1\,e^{j\,90^\circ}) e^{j5000t}]
+  =\cos(5000t+90^\circ)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img150.svg"
+ ALT="$i_{load}(t)=Re[\dot{I} e^{j5000t}]=Re[(1\,e^{j\,90^\circ}) e^{j5000t}]
+=\cos(5000t+90^\circ)$"></SPAN>
+</LI>
+<LI><!-- MATH
+ $\dot{I}_C=\dot{V}Y_C=(0.05\angle{90^\circ})(28.3\angle{45^\circ})
+  =1.41\angle{135^\circ}=-1+j$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img151.svg"
+ ALT="$\dot{I}_C=\dot{V}Y_C=(0.05\angle{90^\circ})(28.3\angle{45^\circ})
+=1.41\angle{135^\circ}=-1+j$"></SPAN> 
+
+<P>
+<!-- MATH
+ $i_C(t)=Re[ (1.41 e^{j 135^\circ}) e^{j5000t}]=1.41\;\cos(5000t+135^\circ)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img152.svg"
+ ALT="$i_C(t)=Re[ (1.41 e^{j 135^\circ}) e^{j5000t}]=1.41\;\cos(5000t+135^\circ)$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\dot{I}_{RL}=Y_{RL}\dot{V}=(0.025\sqrt{2}\angle{-45^\circ})(28.3\angle{45^\circ})
+  =1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img153.svg"
+ ALT="$\dot{I}_{RL}=Y_{RL}\dot{V}=(0.025\sqrt{2}\angle{-45^\circ})(28.3\angle{45^\circ})
+=1$"></SPAN>
+
+<P>
+<!-- MATH
+ $i_{RL}(t)=Re[ (0.707\,e^{j0}) e^{j5000t} ]=0.707\,\cos(5000t)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img154.svg"
+ ALT="$i_{RL}(t)=Re[ (0.707\,e^{j0}) e^{j5000t} ]=0.707\,\cos(5000t)$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\dot{V}_R=Z_R\dot{I}_{RL}=(20\angle{0^\circ})(1\;\angle{0^\circ})
+  =20\;\angle{0^\circ}=20+j0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img155.svg"
+ ALT="$\dot{V}_R=Z_R\dot{I}_{RL}=(20\angle{0^\circ})(1\;\angle{0^\circ})
+=20\;\angle{0^\circ}=20+j0$"></SPAN>
+
+<P>
+<!-- MATH
+ $i_R(t)=20\;\cos(5000t)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img156.svg"
+ ALT="$i_R(t)=20\;\cos(5000t)$"></SPAN>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\dot{V}_L=Z_L\dot{I}_{RL}=(20\angle{90^\circ})(1\;\angle{0^\circ})
+  =20\;\angle{90^\circ}=0+j20$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img157.svg"
+ ALT="$\dot{V}_L=Z_L\dot{I}_{RL}=(20\angle{90^\circ})(1\;\angle{0^\circ})
+=20\;\angle{90^\circ}=0+j20$"></SPAN>
+
+<P>
+<!-- MATH
+ $v_L(t)=20\;\cos(5000t+90^\circ)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img158.svg"
+ ALT="$v_L(t)=20\;\cos(5000t+90^\circ)$"></SPAN>
+</LI>
+</UL>
+Verify: 
+
+<UL>
+<LI><!-- MATH
+ $\dot{V}_R+\dot{V}_L=10\sqrt{2}+j10\sqrt{2}=20\angle{45^\circ}
+	=\dot{V}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.57ex; " SRC="img159.svg"
+ ALT="$\dot{V}_R+\dot{V}_L=10\sqrt{2}+j10\sqrt{2}=20\angle{45^\circ}
+=\dot{V}$"></SPAN>
+</LI>
+<LI><!-- MATH
+ $\dot{I}_C+\dot{I}_{RL}=0.5\sqrt{2}-0.5\sqrt{2}+j0.5\sqrt{2}
+	=0.5\sqrt{2}\angle{90^\circ}=\dot{I}_{load}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.57ex; " SRC="img160.svg"
+ ALT="$\dot{I}_C+\dot{I}_{RL}=0.5\sqrt{2}-0.5\sqrt{2}+j0.5\sqrt{2}
+=0.5\sqrt{2}\angle{90^\circ}=\dot{I}_{load}$"></SPAN>
+</LI>
+</UL>
+
+<P>
+<IMG STYLE="" SRC="../../lectures/figures/VectorPlot.png"
+ ALT="VectorPlot.png">
+
+<P>
+<B>Example 2:</B> 
+
+<P>
+A current <!-- MATH
+ $i(t)=17\;\cos(1000t+90^\circ)=12\sqrt{2}\cos(1000t+90^\circ)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img161.svg"
+ ALT="$i(t)=17\;\cos(1000t+90^\circ)=12\sqrt{2}\cos(1000t+90^\circ)$"></SPAN> 
+flows through a circuit composed of a resistor <!-- MATH
+ $R=18\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img162.svg"
+ ALT="$R=18\Omega$"></SPAN>, a capacitor
+<!-- MATH
+ $C=83.3\mu F=83.3\times 10^{-6}F$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.57ex; " SRC="img163.svg"
+ ALT="$C=83.3\mu F=83.3\times 10^{-6}F$"></SPAN>, and an inductor <!-- MATH
+ $L=30 mH=30\times
+10^{-3}H$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.31ex; " SRC="img164.svg"
+ ALT="$L=30 mH=30\times
+10^{-3}H$"></SPAN> connected in series. Find the resulting voltage across all 
+three elements.
+
+<P>
+
+<UL>
+<LI>Express <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img21.svg"
+ ALT="$i(t)$"></SPAN> in phasor: <!-- MATH
+ $\dot{I}=12\sqrt{2}\;\angle{90^\circ}
+  =j\;12\sqrt{2}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.57ex; " SRC="img165.svg"
+ ALT="$\dot{I}=12\sqrt{2}\;\angle{90^\circ}
+=j\;12\sqrt{2}$"></SPAN>.
+</LI>
+<LI>Find impedance for each element (<!-- MATH
+ $\omega=1000$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img166.svg"
+ ALT="$\omega=1000$"></SPAN>):
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Z_R=R=18,\;\;\;\;Z_C=1/j\omega C=12\angle{-90^\circ}=0-j12,\;\;\;\;
+    Z_L=j\omega L=30\angle{90^\circ}=0+j30
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img167.svg"
+ ALT="$\displaystyle Z_R=R=18,\;\;\;\;Z_C=1/j\omega C=12\angle{-90^\circ}=0-j12,\;\;\;\;
+Z_L=j\omega L=30\angle{90^\circ}=0+j30$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">50</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>Find overall impedance:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Z_{total}=Z_R+Z_C+Z_L=18+j(-12+30)=18+j18=18\sqrt{2}\angle{45^\circ}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.25ex; vertical-align: -0.70ex; " SRC="img168.svg"
+ ALT="$\displaystyle Z_{total}=Z_R+Z_C+Z_L=18+j(-12+30)=18+j18=18\sqrt{2}\angle{45^\circ}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">51</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>Find voltage across all three elements:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\dot{V}_{total}=\dot{I}Z_{total}=(12\sqrt{2}\;\angle{90^\circ})\;(18\sqrt{2}\angle{45^\circ})
+    =432\;\angle{135^\circ}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.25ex; vertical-align: -0.70ex; " SRC="img169.svg"
+ ALT="$\displaystyle \dot{V}_{total}=\dot{I}Z_{total}=(12\sqrt{2}\;\angle{90^\circ})\;(18\sqrt{2}\angle{45^\circ})
+=432\;\angle{135^\circ}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">52</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v(t)=432\;\cos(1000t+135^\circ)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img170.svg"
+ ALT="$\displaystyle v(t)=432\;\cos(1000t+135^\circ)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">53</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+</UL>
+Alternatively, we can find voltage across each of the elements:
+<BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+\dot{V}_R&=&\dot{I}Z_R=216\sqrt{2}\;j=305.5\;\angle{90^\circ}
+  \nonumber\\
+  \dot{V}_C&=&\dot{I}Z_C=144\sqrt{2}\;\angle{0^\circ}=203.6
+  \nonumber\\
+  \dot{V}_L&=&\dot{I}Z_L=360\sqrt{2}\;\angle{180^\circ}=510\;\angle{180^\circ}
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.79ex; vertical-align: -0.46ex; " SRC="img171.svg"
+ ALT="$\displaystyle \dot{V}_R$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 3.02ex; vertical-align: -0.57ex; " SRC="img172.svg"
+ ALT="$\displaystyle \dot{I}Z_R=216\sqrt{2}\;j=305.5\;\angle{90^\circ}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.79ex; vertical-align: -0.46ex; " SRC="img173.svg"
+ ALT="$\displaystyle \dot{V}_C$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 3.02ex; vertical-align: -0.46ex; " SRC="img174.svg"
+ ALT="$\displaystyle \dot{I}Z_C=144\sqrt{2}\;\angle{0^\circ}=203.6$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.79ex; vertical-align: -0.46ex; " SRC="img175.svg"
+ ALT="$\displaystyle \dot{V}_L$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 3.02ex; vertical-align: -0.46ex; " SRC="img176.svg"
+ ALT="$\displaystyle \dot{I}Z_L=360\sqrt{2}\;\angle{180^\circ}=510\;\angle{180^\circ}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">54</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+
+or in time domain:
+<BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+v_R(t)&=&305.5\; \cos(1000t+\pi/2)
+  \nonumber\\
+  v_C(t)&=&203.6\; \cos(1000t)
+  \nonumber\\
+  v_L(t)&=&509\; \cos(1000t+\pi)
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img177.svg"
+ ALT="$\displaystyle v_R(t)$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img178.svg"
+ ALT="$\displaystyle 305.5\; \cos(1000t+\pi/2)$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img179.svg"
+ ALT="$\displaystyle v_C(t)$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img180.svg"
+ ALT="$\displaystyle 203.6\; \cos(1000t)$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img181.svg"
+ ALT="$\displaystyle v_L(t)$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img182.svg"
+ ALT="$\displaystyle 509\; \cos(1000t+\pi)$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">55</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+
+Adding <SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.46ex; " SRC="img183.svg"
+ ALT="$\dot{V}_R$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.46ex; " SRC="img184.svg"
+ ALT="$\dot{V}_C$"></SPAN>, and <SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.46ex; " SRC="img185.svg"
+ ALT="$\dot{V}_L$"></SPAN>, we get the total voltage
+which is the same as what we got above:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\dot{V}_{total}=\dot{V}_R+\dot{V}_C+\dot{V}_L
+  =216\sqrt{2}\angle{90^\circ}+216\sqrt{2}\angle{180^\circ}=432 \angle{135^\circ}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.46ex; " SRC="img186.svg"
+ ALT="$\displaystyle \dot{V}_{total}=\dot{V}_R+\dot{V}_C+\dot{V}_L
+=216\sqrt{2}\angle{90^\circ}+216\sqrt{2}\angle{180^\circ}=432 \angle{135^\circ}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">56</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+<B>Example 3:</B> 
+
+<P>
+In the circuit below, <!-- MATH
+ $v_S(t)=A\cos(\omega t)=A\cos(10^6 t)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img187.svg"
+ ALT="$v_S(t)=A\cos(\omega t)=A\cos(10^6 t)$"></SPAN>
+with some unknown peak value <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img9.svg"
+ ALT="$A$"></SPAN>, <!-- MATH
+ $R_1=R_2=R_3=R=10\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img188.svg"
+ ALT="$R_1=R_2=R_3=R=10\Omega$"></SPAN>, and 
+<!-- MATH
+ $L=10\,\mu H$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img189.svg"
+ ALT="$L=10\,\mu H$"></SPAN>. The RMS value of <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img190.svg"
+ ALT="$v_2$"></SPAN> across <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img191.svg"
+ ALT="$R_2$"></SPAN> is 10 V. It 
+is also known that <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img192.svg"
+ ALT="$v_s(t)$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img193.svg"
+ ALT="$i_s(t)$"></SPAN> are in phase. 
+
+<UL>
+<LI>Find <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img104.svg"
+ ALT="$C$"></SPAN>.
+</LI>
+<LI>Find the RMS values of <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img194.svg"
+ ALT="$v_C(t)$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img195.svg"
+ ALT="$v_L(t)$"></SPAN>.
+</LI>
+<LI>Find the RMS values of <!-- MATH
+ $v_{cd}=v_{RC}=V_{RL}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img196.svg"
+ ALT="$v_{cd}=v_{RC}=V_{RL}$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img197.svg"
+ ALT="$v_{ab}$"></SPAN>.
+</LI>
+<LI>Find the peak value <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img9.svg"
+ ALT="$A$"></SPAN> of <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img192.svg"
+ ALT="$v_s(t)$"></SPAN>.
+</LI>
+</UL>
+
+<P>
+<IMG STYLE=""
+ SRC="../../lectures/figures/Problems9.png"
+ ALT="Problems9.png">
+
+<P>
+<B>Solution</B> 
+
+<P>
+<IMG STYLE=""
+ SRC="../../lectures/figures/Problems8.png"
+ ALT="Problems8.png">
+
+<P>
+We first note that <SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.46ex; " SRC="img184.svg"
+ ALT="$\dot{V}_C$"></SPAN> is behind <!-- MATH
+ $\dot{V}_2=\dot{I}_2R_2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.46ex; " SRC="img198.svg"
+ ALT="$\dot{V}_2=\dot{I}_2R_2$"></SPAN> 
+by <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img199.svg"
+ ALT="$\pi/2$"></SPAN>, and <SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.46ex; " SRC="img185.svg"
+ ALT="$\dot{V}_L$"></SPAN> is ahead of <!-- MATH
+ $\dot{V}_3=\dot{I}_3R_3$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.46ex; " SRC="img200.svg"
+ ALT="$\dot{V}_3=\dot{I}_3R_3$"></SPAN> 
+by <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img199.svg"
+ ALT="$\pi/2$"></SPAN> (&ldquo;ELI the ICE man&rdquo;). Also, as <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img192.svg"
+ ALT="$v_s(t)$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img193.svg"
+ ALT="$i_s(t)$"></SPAN> 
+are in phase, the parallel combination of the RL and RC branches 
+introduces no phase shift, i.e., its impedance shown below must be 
+real:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Z_{RL}(\omega)||Z_{RC}(\omega)=\frac{(R+jX_L)(R+jX_C)}{R+jX_L+R+jX_C}
+  =\frac{R^2-X_LX_C+j(X_L+X_C)}{2R+j(X_L+X_C)}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.29ex; " SRC="img201.svg"
+ ALT="$\displaystyle Z_{RL}(\omega)\vert\vert Z_{RC}(\omega)=\frac{(R+jX_L)(R+jX_C)}{R+jX_L+R+jX_C}
+=\frac{R^2-X_LX_C+j(X_L+X_C)}{2R+j(X_L+X_C)}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">57</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+i.e., <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img202.svg"
+ ALT="$X_C+X_L=0$"></SPAN>. We therefore get <!-- MATH
+ $-1/j\omega C=j\omega L=j 10$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img203.svg"
+ ALT="$-1/j\omega C=j\omega L=j 10$"></SPAN>
+and <!-- MATH
+ $C=10^{-7}=0.1\mu F$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.57ex; " SRC="img204.svg"
+ ALT="$C=10^{-7}=0.1\mu F$"></SPAN>, <!-- MATH
+ $Z_{RL}=10+j\,10$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img205.svg"
+ ALT="$Z_{RL}=10+j\,10$"></SPAN>, <!-- MATH
+ $Z_{RC}=10-j\,10$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img206.svg"
+ ALT="$Z_{RC}=10-j\,10$"></SPAN>, 
+<!-- MATH
+ $|Z_{RL}|=|Z_{RC}|=\sqrt{10^2+10^2}=10\sqrt{2}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img207.svg"
+ ALT="$\vert Z_{RL}\vert=\vert Z_{RC}\vert=\sqrt{10^2+10^2}=10\sqrt{2}$"></SPAN>, i.e.,
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Z_{RL}(\omega)||Z_{RC}(\omega)=\frac{(10+j10)(10-j10)}{10+j10+10-j10}=10
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.16ex; " SRC="img208.svg"
+ ALT="$\displaystyle Z_{RL}(\omega)\vert\vert Z_{RC}(\omega)=\frac{(10+j10)(10-j10)}{10+j10+10-j10}=10$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">58</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+As <!-- MATH
+ $|R_2|=|Z_C|=10 \Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img209.svg"
+ ALT="$\vert R_2\vert=\vert Z_C\vert=10 \Omega$"></SPAN>, <!-- MATH
+ $|\dot{V}_C|=|\dot{V}_R|=10V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img210.svg"
+ ALT="$\vert\dot{V}_C\vert=\vert\dot{V}_R\vert=10V$"></SPAN>.
+But as they are <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img199.svg"
+ ALT="$\pi/2$"></SPAN> apart in phase, we have 
+<!-- MATH
+ $|\dot{V}_{cd}|=|\dot{V}_{RC}|=|\dot{V}_{RL}|=10\sqrt{2}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img211.svg"
+ ALT="$\vert\dot{V}_{cd}\vert=\vert\dot{V}_{RC}\vert=\vert\dot{V}_{RL}\vert=10\sqrt{2}$"></SPAN>, and from the
+vector diagram <!-- MATH
+ $|\dot{V}_{ab}|=10\sqrt{2}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img212.svg"
+ ALT="$\vert\dot{V}_{ab}\vert=10\sqrt{2}$"></SPAN>. We also get the currents 
+through RC and RL branches are:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+|\dot{I}_{RC}|=\frac{|\dot{V}_{RC}|}{|Z_{RC}|}=\frac{10}{10}=1,
+  \;\;\;\;\;\;
+  |\dot{I}_{RL}|=\frac{|\dot{V}_{RL}|}{|Z_{RL}|}=\frac{10}{10}=1
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.27ex; vertical-align: -2.29ex; " SRC="img213.svg"
+ ALT="$\displaystyle \vert\dot{I}_{RC}\vert=\frac{\vert\dot{V}_{RC}\vert}{\vert Z_{RC}...
+...t{I}_{RL}\vert=\frac{\vert\dot{V}_{RL}\vert}{\vert Z_{RL}\vert}=\frac{10}{10}=1$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">59</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+But their phase difference is <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img199.svg"
+ ALT="$\pi/2$"></SPAN>, we have
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+|\dot{I}_s|=|\dot{I}_{RL}+\dot{I}_{RC}|=\sqrt{2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.25ex; vertical-align: -0.70ex; " SRC="img214.svg"
+ ALT="$\displaystyle \vert\dot{I}_s\vert=\vert\dot{I}_{RL}+\dot{I}_{RC}\vert=\sqrt{2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">60</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The voltage across <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img215.svg"
+ ALT="$R_1$"></SPAN> is <!-- MATH
+ $V_1=RI_s=10\sqrt{2}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.46ex; " SRC="img216.svg"
+ ALT="$V_1=RI_s=10\sqrt{2}$"></SPAN>, and
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\dot{V}_s=\dot{V}_1+\dot{V}_{cd}=10\sqrt{2}+10\sqrt{2}=20\sqrt{2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.46ex; " SRC="img217.svg"
+ ALT="$\displaystyle \dot{V}_s=\dot{V}_1+\dot{V}_{cd}=10\sqrt{2}+10\sqrt{2}=20\sqrt{2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">61</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The peak value is therefore <!-- MATH
+ $A=\sqrt{2} V_s=40\,V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.46ex; " SRC="img218.svg"
+ ALT="$A=\sqrt{2} V_s=40\,V$"></SPAN>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node5.html">First Order Systems</A>
+<B> Up:</B> <A
+ HREF="node1.html">Chapter 3: AC Circuit</A>
+<B> Previous:</B> <A
+ HREF="node3.html">Phasor Representation of Sinusoidal</A></DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

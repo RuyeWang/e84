@@ -1,0 +1,1273 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>AC Circuit Analysis I (Steady State)</TITLE>
+<META NAME="description" CONTENT="AC Circuit Analysis I (Steady State)">
+<META NAME="keywords" CONTENT="ccc">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="ccc.css">
+
+<LINK REL="next" HREF="node5.html">
+<LINK REL="previous" HREF="node3.html">
+<LINK REL="up" HREF="node1.html">
+<LINK REL="next" HREF="node5.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html76"
+  HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html74"
+  HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html68"
+  HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html77"
+  HREF="node5.html">AC Circuit Analysis II</A>
+<B> Up:</B> <A NAME="tex2html75"
+  HREF="node1.html">Chapter 3: AC Circuit</A>
+<B> Previous:</B> <A NAME="tex2html69"
+  HREF="node3.html">Generalized Ohm's Law and</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00013000000000000000">
+AC Circuit Analysis I (Steady State)</A>
+</H2>
+
+<P>
+<B>Solving AC Circuits by DE</B>
+
+<P>
+While DC circuit analysis is carried out by solving <B>algebraic</B> equations, 
+the analysis of AC circuits composed of capacitors, inductors as well as 
+resistors will require solving <B>differential</B> equations (DEs). The 
+solution of a DE represents the response (or output) of the circuit to 
+both the <B>external input</B> and the <B>initial state</B>, and is composed 
+of two parts:
+
+<UL>
+<LI><B>Homogeneous solution</B> representing the <B>natural response</B> caused
+  by the <B>initial condition</B>,
+</LI>
+<LI><B>Particular solutions</B> representing the <B>forced response</B> caused
+  by the <B>external input</B>.
+</LI>
+</UL> 
+
+<P>
+<B>Example:</B> 
+
+<P>
+Given an RL circuit consisted of a resistor and an inductor in series connected
+to an AC voltage source <!-- MATH
+ $v(t)=\cos(\omega t)=Re[e^{j\omega t}]$
+ -->
+<IMG
+ WIDTH="207" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img121.png"
+ ALT="$v(t)=\cos(\omega t)=Re[e^{j\omega t}]$">, find the current
+<IMG
+ WIDTH="32" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img122.png"
+ ALT="$i(t)$">.
+
+<P>
+The governing DE describing the circuit can be obtained based on KVL
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_L(t)+v_R(t)=L\frac{d}{dt}i(t)+R\;i(t)=v(t)=\cos(\omega t)	
+=\frac{1}{2}(e^{j\omega t}+e^{-j\omega t})
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="545" HEIGHT="46" BORDER="0"
+ SRC="img123.png"
+ ALT="\begin{displaymath}v_L(t)+v_R(t)=L\frac{d}{dt}i(t)+R\;i(t)=v(t)=\cos(\omega t)
+=\frac{1}{2}(e^{j\omega t}+e^{-j\omega t}) \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Solving this DE we can get the current <IMG
+ WIDTH="32" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img122.png"
+ ALT="$i(t)$">. 
+
+<P>
+We want to find its particular or steady state solution. (The homogeneous or 
+transient solution due to the non-zero initial condition will be discussed 
+later.) As the DE describes a linear system, the superposition principle 
+applies <!-- MATH
+ $O(ax+by)=aO(x)+bO(y)$
+ -->
+<IMG
+ WIDTH="240" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img124.png"
+ ALT="$O(ax+by)=aO(x)+bO(y)$">. We can first find the solutions for
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+L\frac{d}{dt}i_1(t)+Ri_1(t)=v_1(t)=e^{j\omega t},\;\;\;\;\;
+\mbox{and}\;\;\;\;\;
+L\frac{d}{dt}i_2(t)+Ri_2(t)=v_2(t)=e^{-j\omega t}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="601" HEIGHT="46" BORDER="0"
+ SRC="img125.png"
+ ALT="\begin{displaymath}
+L\frac{d}{dt}i_1(t)+Ri_1(t)=v_1(t)=e^{j\omega t},\;\;\;\;\;
+...
+...d}\;\;\;\;\;
+L\frac{d}{dt}i_2(t)+Ri_2(t)=v_2(t)=e^{-j\omega t}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+and then find the solution for the original input as <!-- MATH
+ $i(t)=[i_1(t)+i_2(t)]/2$
+ -->
+<IMG
+ WIDTH="180" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img126.png"
+ ALT="$i(t)=[i_1(t)+i_2(t)]/2$">.
+To solve the DE with input <!-- MATH
+ $v_1(t)=e^{j\omega t}$
+ -->
+<IMG
+ WIDTH="97" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img127.png"
+ ALT="$v_1(t)=e^{j\omega t}$">, we assume
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+i_1(t)=A\;e^{j\omega t},\;\;\;\;\;\frac{d}{dt}i_1(t)=j\omega A\;e^{j\omega t}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="293" HEIGHT="46" BORDER="0"
+ SRC="img128.png"
+ ALT="\begin{displaymath}
+i_1(t)=A\;e^{j\omega t},\;\;\;\;\;\frac{d}{dt}i_1(t)=j\omega A\;e^{j\omega t}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+and substitute them back into the DE to get
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+j\omega L A e^{j\omega t}+RA e^{j\omega t}
+=(R+j\omega L)A\; e^{j\omega t}=e^{j\omega t}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="372" HEIGHT="33" BORDER="0"
+ SRC="img129.png"
+ ALT="\begin{displaymath}
+j\omega L A e^{j\omega t}+RA e^{j\omega t}
+=(R+j\omega L)A\; e^{j\omega t}=e^{j\omega t}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+i.e.
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+A=\frac{1}{R+j\omega L}=|A|e^{-j\phi},\;\;\;\;\mbox{where}
+\;\;\;\;\;\;|A|=\frac{1}{\sqrt{R^2+\omega^2 L^2}},\;\;\;\;\;
+\phi=\angle A=tan^{-1}\left(\frac{\omega L}{R}\right)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="682" HEIGHT="50" BORDER="0"
+ SRC="img130.png"
+ ALT="\begin{displaymath}
+A=\frac{1}{R+j\omega L}=\vert A\vert e^{-j\phi},\;\;\;\;\mbo...
+...;\;\;\;
+\phi=\angle A=tan^{-1}\left(\frac{\omega L}{R}\right)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+and the solution is:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+i_1(t)=A\;e^{j\omega t}=\frac{1}{\sqrt{R^2+\omega^2 L^2}} e^{j(\omega t-\phi)}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="296" HEIGHT="49" BORDER="0"
+ SRC="img131.png"
+ ALT="\begin{displaymath}
+i_1(t)=A\;e^{j\omega t}=\frac{1}{\sqrt{R^2+\omega^2 L^2}} e^{j(\omega t-\phi)}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Similarly, when the input is <!-- MATH
+ $v_2(t)=e^{-j\omega t}$
+ -->
+<IMG
+ WIDTH="108" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img132.png"
+ ALT="$v_2(t)=e^{-j\omega t}$"> we assume
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+i_2(t)=A\;e^{-j\omega t},\;\;\;\;\;\frac{d}{dt}i_2(t)=-j\omega A\;e^{-j\omega t}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="329" HEIGHT="46" BORDER="0"
+ SRC="img133.png"
+ ALT="\begin{displaymath}
+i_2(t)=A\;e^{-j\omega t},\;\;\;\;\;\frac{d}{dt}i_2(t)=-j\omega A\;e^{-j\omega t}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+and substitute them back into the DE to get
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+-j\omega L A e^{-j\omega t}+RA e^{-j\omega t}
+=(R-j\omega L)A\; e^{-j\omega t}=e^{-j\omega t}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="428" HEIGHT="33" BORDER="0"
+ SRC="img134.png"
+ ALT="\begin{displaymath}
+-j\omega L A e^{-j\omega t}+RA e^{-j\omega t}
+=(R-j\omega L)A\; e^{-j\omega t}=e^{-j\omega t}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+i.e.
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+A=\frac{1}{R-j\omega L}=|A|e^{j\phi}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="187" HEIGHT="49" BORDER="0"
+ SRC="img135.png"
+ ALT="\begin{displaymath}
+A=\frac{1}{R-j\omega L}=\vert A\vert e^{j\phi}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+with <IMG
+ WIDTH="29" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img136.png"
+ ALT="$\vert A\vert$"> and <IMG
+ WIDTH="16" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.png"
+ ALT="$\phi$"> the same as defined above. The solution is:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+i_2(t)=A\;e^{-j\omega t}=\frac{1}{\sqrt{R^2+\omega^2 L^2}} e^{-j(\omega t-\phi)}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="317" HEIGHT="49" BORDER="0"
+ SRC="img137.png"
+ ALT="\begin{displaymath}
+i_2(t)=A\;e^{-j\omega t}=\frac{1}{\sqrt{R^2+\omega^2 L^2}} e^{-j(\omega t-\phi)}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The solution (the response or output) for the DE with input 
+<!-- MATH
+ $v(t)=[v_1(t)+v_2(t)]/2$
+ -->
+<IMG
+ WIDTH="189" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img138.png"
+ ALT="$v(t)=[v_1(t)+v_2(t)]/2$"> is 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+i(t)=\frac{i_1(t)+i_2(t)}{2}=|A|\;\frac{e^{j(\omega t-\phi)}+
+  e^{-j(\omega t-\phi)}}{2}=\frac{1}{\sqrt{R^2+\omega^2 L^2}}\cos(\omega t-\phi)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="576" HEIGHT="53" BORDER="0"
+ SRC="img139.png"
+ ALT="\begin{displaymath}
+i(t)=\frac{i_1(t)+i_2(t)}{2}=\vert A\vert\;\frac{e^{j(\omega...
+...hi)}}{2}=\frac{1}{\sqrt{R^2+\omega^2 L^2}}\cos(\omega t-\phi)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+<B>Solving AC circuit by phasor method</B>
+
+<P>
+If only the steady state solutions of the DE describing an AC circuit is of 
+interest, the phasor method can be used to solve the problem algebraically 
+without solving the DEs. Specifically, all sinusoidal variables are represented 
+as phasors in terms of their amplitudes and phases, and all components in the 
+circuit (L and C, as well as R) are represented by their impedances, so that 
+all the laws (Ohm's law, KCL and KVL, current and voltage dividers, parallel 
+and series combinations of components) and methods (loop current and node 
+voltage methods, Thevenin's and Norton's theorems, etc.) discussed for DC 
+circuit can be applied.
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../figures/phasordiagram.gif"
+ ALT="phasordiagram.gif">
+
+<P>
+Operations on sinusoidal variables based on the trigonometric identities
+are in general lengthy and tedious. The phasor method can convert such 
+sinusoidal variables to vectors in complex plane and thereby simplify the 
+operations. 
+
+<P>
+The phasor represents the amplitude (effective or RMS value) and phase of a 
+sinusoidal function, but leaves out its frequency as it is known to be the
+same for all sinusoidal variables in the system.
+
+<P>
+Specifically here are the three steps of the phasor method for arithmetic 
+operation of two sinusoidal functions <!-- MATH
+ $x(t)=A\cos(\omega t+\phi)$
+ -->
+<IMG
+ WIDTH="172" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img140.png"
+ ALT="$x(t)=A\cos(\omega t+\phi)$"> and 
+<!-- MATH
+ $y(t)=B\cos(\omega t+\psi)$
+ -->
+<IMG
+ WIDTH="174" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img141.png"
+ ALT="$y(t)=B\cos(\omega t+\psi)$"> of the same frequency:
+
+<UL>
+<LI>Represent each sinusoidal function as a phasor:
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+x(t)=A\;\cos(\omega t+\phi)=Re[A\,e^{j(\omega t+\phi)}]
+  =Re[A/\sqrt{2} e^{j\phi} \sqrt{2}e^{j\omega t}]=Re[\dot{X} \sqrt{2} e^{j\omega t}]
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="612" HEIGHT="33" BORDER="0"
+ SRC="img142.png"
+ ALT="\begin{displaymath}x(t)=A\;\cos(\omega t+\phi)=Re[A\,e^{j(\omega t+\phi)}]
+=Re[...
+...i} \sqrt{2}e^{j\omega t}]=Re[\dot{X} \sqrt{2} e^{j\omega t}]
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where <!-- MATH
+ $\dot{X}=A/\sqrt{2}e^{j\phi}=A_{rms} e^{j\phi}$
+ -->
+<IMG
+ WIDTH="208" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img143.png"
+ ALT="$\dot{X}=A/\sqrt{2}e^{j\phi}=A_{rms} e^{j\phi}$"> is the phasor of <IMG
+ WIDTH="37" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img144.png"
+ ALT="$x(t)$">. 
+  Similarly we also get <!-- MATH
+ $\dot{Y}=B_{rms}e^{j\psi}$
+ -->
+<IMG
+ WIDTH="109" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img145.png"
+ ALT="$\dot{Y}=B_{rms}e^{j\psi}$">.
+</LI>
+<LI>Carry out any arithmetic operation (represented by *) on the phasors:
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\dot{Z}=\dot{X}\;*\;\dot{Y}=A_{rms}e^{j\phi} \;*\; B_{rms}e^{j\psi}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="280" HEIGHT="31" BORDER="0"
+ SRC="img146.png"
+ ALT="\begin{displaymath}\dot{Z}=\dot{X}\;*\;\dot{Y}=A_{rms}e^{j\phi} \;*\; B_{rms}e^{j\psi} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI>Convert resulting phasor back to a time function:
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+z(t)=x(t)\;*\;y(t)=Re[\dot{Z} \sqrt{2}e^{j\omega t}]
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="273" HEIGHT="33" BORDER="0"
+ SRC="img147.png"
+ ALT="\begin{displaymath}z(t)=x(t)\;*\;y(t)=Re[\dot{Z} \sqrt{2}e^{j\omega t}] \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+</UL>
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../figures/PhasorBlockDiagram1.png"
+ ALT="PhasorBlockDiagram1.png">
+
+<P>
+The operations on the original sinusoidal variables require solving 
+differential equations, while the operations on their phasors only require 
+solving algebraic equations. This is the main advantage of the phasor method.
+
+<P>
+<B>Generalized Ohm's law and Kirchhoff's Laws</B>
+
+<P>
+In general, all methods such as Ohm's law and Kirchhoff's Laws used for DC 
+circuits composed of resistors can be generalized to AC circuits composed 
+of capacitors, inductors, as well as resistors, all represented by their
+impedances. Also, if we assume all voltages and currents in a circuit are 
+sinusoids of same frequency <IMG
+ WIDTH="17" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img40.png"
+ ALT="$\omega$">, they can be represented as complex 
+phasors.
+
+<P>
+The Ohm's law can be generalized to become:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Z=\frac{\dot{V}}{\dot{I}},\;\;\;\;\;\;\dot{I}=\frac{\dot{V}}{Z},
+\;\;\;\;\;\dot{V}=Z\dot{I}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="251" HEIGHT="52" BORDER="0"
+ SRC="img148.png"
+ ALT="\begin{displaymath}Z=\frac{\dot{V}}{\dot{I}},\;\;\;\;\;\;\dot{I}=\frac{\dot{V}}{Z},
+\;\;\;\;\;\dot{V}=Z\dot{I} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+and the Kirchhoff's laws can now be stated as:
+
+<UL>
+<LI><B>Current Law (KCL):</B> The vector sum of the currents into a node
+  is zero <!-- MATH
+ $\sum_k \dot{I}_k=0$
+ -->
+<IMG
+ WIDTH="84" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img149.png"
+ ALT="$\sum_k \dot{I}_k=0$">.
+</LI>
+<LI><B>Voltage Law (KVL):</B> The vector sum of the voltages around a loop 
+  is zero <!-- MATH
+ $\sum_k \dot{V}_k=0$
+ -->
+<IMG
+ WIDTH="86" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img150.png"
+ ALT="$\sum_k \dot{V}_k=0$">.
+</LI>
+</UL>
+
+<P>
+<B>Example:</B>
+
+<P>
+The RL circuit considered previously can now be resolved by the phasor method,
+as only the steady state solution is of interest. Specifically, here the 
+current <IMG
+ WIDTH="32" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img122.png"
+ ALT="$i(t)$"> can be much more easily found by generalized Ohm's law. 
+The complex representation of the input voltage is 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+{\bf V}=e^{j\omega t}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="71" HEIGHT="28" BORDER="0"
+ SRC="img151.png"
+ ALT="\begin{displaymath}
+{\bf V}=e^{j\omega t}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The overall complex impedance of the two elements in series is:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Z=Z_R+Z_L=R+j\omega L=|Z| e^{j\angle Z}=\sqrt{R^2+\omega^2L^2}e^{j \phi}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="440" HEIGHT="33" BORDER="0"
+ SRC="img152.png"
+ ALT="\begin{displaymath}
+Z=Z_R+Z_L=R+j\omega L=\vert Z\vert e^{j\angle Z}=\sqrt{R^2+\omega^2L^2}e^{j \phi}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where <!-- MATH
+ $\phi=tan^{-1}(\omega L/R)$
+ -->
+<IMG
+ WIDTH="150" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img153.png"
+ ALT="$\phi=tan^{-1}(\omega L/R)$">. By generalized Ohm's law, 
+the complex representation of the current can be found to be:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+{\bf I}=\frac{{\bf V}}{Z}
+  =\frac{e^{j\omega t}}{\sqrt{R^2+\omega^2L^2}\;e^{j\phi}}
+  =\frac{1}{\sqrt{R^2+\omega^2L^2}} e^{j(\omega t-\phi)}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="399" HEIGHT="52" BORDER="0"
+ SRC="img154.png"
+ ALT="\begin{displaymath}
+{\bf I}=\frac{{\bf V}}{Z}
+=\frac{e^{j\omega t}}{\sqrt{R^2+...
+...phi}}
+=\frac{1}{\sqrt{R^2+\omega^2L^2}} e^{j(\omega t-\phi)}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+and the real current is
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+i(t)=Re[{\bf I}]=Re\left[\frac{1}{\sqrt{R^2+\omega^2 L^2}}e^{j(\omega t-\phi)}\right]
+=\frac{1}{\sqrt{R^2+\omega^2 L^2}}\cos(\omega t-\phi)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="552" HEIGHT="55" BORDER="0"
+ SRC="img155.png"
+ ALT="\begin{displaymath}
+i(t)=Re[{\bf I}]=Re\left[\frac{1}{\sqrt{R^2+\omega^2 L^2}}e^...
+...\right]
+=\frac{1}{\sqrt{R^2+\omega^2 L^2}}\cos(\omega t-\phi)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Also recall that in general, the <B>frequency response function (FRF)</B> 
+of the system is defined as the ratio of the output to the input of the
+system, both represented as complex exponentials. In this specific case,
+we have
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+H=\frac{{\bf I}}{{\bf V}}=\frac{1}{Z}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="103" HEIGHT="46" BORDER="0"
+ SRC="img156.png"
+ ALT="\begin{displaymath}
+H=\frac{{\bf I}}{{\bf V}}=\frac{1}{Z}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+with 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+|H|=\frac{1}{\sqrt{R^2+\omega^2L^2}},\;\;\;\;\;\angle H=-\phi
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="269" HEIGHT="49" BORDER="0"
+ SRC="img157.png"
+ ALT="\begin{displaymath}
+\vert H\vert=\frac{1}{\sqrt{R^2+\omega^2L^2}},\;\;\;\;\;\angle H=-\phi
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Therefore the steady state output can be found to be:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+i(t)=|H| \cos(\omega t+\angle H)
+=\frac{1}{\sqrt{R^2+\omega^2 L^2}}\cos(\omega t-\phi)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="418" HEIGHT="49" BORDER="0"
+ SRC="img158.png"
+ ALT="\begin{displaymath}
+i(t)=\vert H\vert \cos(\omega t+\angle H)
+=\frac{1}{\sqrt{R^2+\omega^2 L^2}}\cos(\omega t-\phi)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The second method, much easier than the first one, is actually a short 
+cut representation of the first DE method. This is the justification of
+the complex variable or phasor method for analyzing AC circuits. However,
+note that the phasor method can only find the steady state solution. The
+homogeneous differential equation will have to be solved to obtain the
+transient solution.
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../figures/phasorfigure.gif"
+ ALT="phasorfigure.gif">
+
+<P>
+<B>Example</B> 
+
+<P>
+Consider three sinusoidal voltage sources <!-- MATH
+ $v_1(t)=6\sqrt{2}\;\sin(\omega t)$
+ -->
+<IMG
+ WIDTH="167" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img159.png"
+ ALT="$v_1(t)=6\sqrt{2}\;\sin(\omega t)$">,
+<!-- MATH
+ $v_2(t)=12\sqrt{2}\;\sin(\omega t+\pi/2)$
+ -->
+<IMG
+ WIDTH="230" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img160.png"
+ ALT="$v_2(t)=12\sqrt{2}\;\sin(\omega t+\pi/2)$"> and 
+<!-- MATH
+ $v_3(t)=4\sqrt{2}\;\sin(\omega t-\pi/2)$
+ -->
+<IMG
+ WIDTH="221" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img161.png"
+ ALT="$v_3(t)=4\sqrt{2}\;\sin(\omega t-\pi/2)$"> in series. According to KVL, the 
+overall voltage will be the algebraic sum of the three:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v(t)=v_1(t)+v_2(t)+v_3(t)
+	=6\sqrt{2}\;\sin(\omega t)+12\sqrt{2}\;\sin(\omega t+\pi/2)
+	+4\sqrt{2}\;\sin(\omega t-\pi/2)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="650" HEIGHT="33" BORDER="0"
+ SRC="img162.png"
+ ALT="\begin{displaymath}v(t)=v_1(t)+v_2(t)+v_3(t)
+=6\sqrt{2}\;\sin(\omega t)+12\sqrt{2}\;\sin(\omega t+\pi/2)
++4\sqrt{2}\;\sin(\omega t-\pi/2) \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../figures/sinusoidalsum.gif"
+ ALT="sinusoidalsum.gif">
+
+<P>
+While the addition of these sinusoidal functions is not easy to carry out
+(still remember all the trigonometric identities?), it is quite straight 
+forward to find the vector sum if the voltages are represented as phasors:
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+\dot{V}&=&\dot{V}_1+\dot{V}_2+\dot{V}_3=6\angle 0^\circ+12\angle 90^\circ+
+4\angle -90^\circ	
+\nonumber \\
+&=&6+j12-j4=6+j8=10 \angle \left[\tan^{-1}(8/6)\right]=10\angle 53.1^\circ	
+\nonumber
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="20" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img163.png"
+ ALT="$\displaystyle \dot{V}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img49.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="339" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img164.png"
+ ALT="$\displaystyle \dot{V}_1+\dot{V}_2+\dot{V}_3=6\angle 0^\circ+12\angle 90^\circ+
+4\angle -90^\circ$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img49.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="437" HEIGHT="47" ALIGN="MIDDLE" BORDER="0"
+ SRC="img165.png"
+ ALT="$\displaystyle 6+j12-j4=6+j8=10 \angle \left[\tan^{-1}(8/6)\right]=10\angle 53.1^\circ$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+The resulting voltage is <!-- MATH
+ $v(t)=10\sqrt{2}\;sin(\omega t+53.1^\circ)$
+ -->
+<IMG
+ WIDTH="234" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img166.png"
+ ALT="$v(t)=10\sqrt{2}\;sin(\omega t+53.1^\circ)$">
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../figures/vectorsum.gif"
+ ALT="vectorsum.gif">
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../figures/sinusoidalsum1.gif"
+ ALT="sinusoidalsum1.gif">
+
+<P>
+<B>Example:</B> 
+
+<P>
+Solve the circuit below. The voltage from the generator is 
+<!-- MATH
+ $v(t)=28.3\;\cos(5000t+45^\circ)\;V$
+ -->
+<IMG
+ WIDTH="256" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img167.png"
+ ALT="$v(t)=28.3\;\cos(5000t+45^\circ)\;V$">.
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../figures/phasorexample.gif"
+ ALT="phasorexample.gif">
+
+<P>
+First find the impedances and admittances of the components and the two
+branches. As <IMG
+ WIDTH="80" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img168.png"
+ ALT="$\omega=5000$">, we get
+
+<UL>
+<LI><!-- MATH
+ $Y_C=j\omega C=j\;5000\times 10^{-5}=j0.05=0.05\angle{90^\circ}$
+ -->
+<IMG
+ WIDTH="387" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img169.png"
+ ALT="$Y_C=j\omega C=j\;5000\times 10^{-5}=j0.05=0.05\angle{90^\circ}$">,
+
+<P>
+<!-- MATH
+ $Z_C=1/Y_C=1/j0.05=-j20=20\angle{-90^\circ}$
+ -->
+<IMG
+ WIDTH="345" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img170.png"
+ ALT="$Z_C=1/Y_C=1/j0.05=-j20=20\angle{-90^\circ}$">
+</LI>
+<LI><!-- MATH
+ $Z_L=j\omega L=j5000\times 4\times 10^{-3}=0+j20=20\angle{90^\circ}$
+ -->
+<IMG
+ WIDTH="416" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img171.png"
+ ALT="$Z_L=j\omega L=j5000\times 4\times 10^{-3}=0+j20=20\angle{90^\circ}$">,
+
+<P>
+<!-- MATH
+ $Y_L=1/Z_L=-j0.05=0.05\angle{-90^\circ}$
+ -->
+<IMG
+ WIDTH="283" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img172.png"
+ ALT="$Y_L=1/Z_L=-j0.05=0.05\angle{-90^\circ}$">
+</LI>
+<LI><!-- MATH
+ $Z_R=R=20+j0=20\angle{0^\circ}$
+ -->
+<IMG
+ WIDTH="224" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img173.png"
+ ALT="$Z_R=R=20+j0=20\angle{0^\circ}$">
+
+<P>
+</LI>
+<LI><!-- MATH
+ $Z_{RL}=Z_R+Z_L=20+j20=20\sqrt{2}\angle{45^\circ}$
+ -->
+<IMG
+ WIDTH="333" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img174.png"
+ ALT="$Z_{RL}=Z_R+Z_L=20+j20=20\sqrt{2}\angle{45^\circ}$">,
+	<!-- MATH
+ $Y_{RL}=1/Z_{RL}=1/20\sqrt{2}\angle{45^\circ}
+	=0.025\sqrt{2}\angle{-45^\circ}=0.025-j0.025$
+ -->
+<IMG
+ WIDTH="523" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img175.png"
+ ALT="$Y_{RL}=1/Z_{RL}=1/20\sqrt{2}\angle{45^\circ}
+=0.025\sqrt{2}\angle{-45^\circ}=0.025-j0.025$">
+
+<P>
+</LI>
+<LI><!-- MATH
+ $Y_{load}=Y_C+Y_{RL}=j0.05+0.025-j0.025=0.025+j0.025
+	=0.025\sqrt{2}\angle{45^\circ}$
+ -->
+<IMG
+ WIDTH="619" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img176.png"
+ ALT="$Y_{load}=Y_C+Y_{RL}=j0.05+0.025-j0.025=0.025+j0.025
+=0.025\sqrt{2}\angle{45^\circ}$">
+</LI>
+</UL>
+Next express voltage <!-- MATH
+ $v(t)=28.3\;\cos(5000t+45^\circ)\;V$
+ -->
+<IMG
+ WIDTH="256" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img167.png"
+ ALT="$v(t)=28.3\;\cos(5000t+45^\circ)\;V$"> in phasor form
+<!-- MATH
+ $\dot{V}=20\angle{45^\circ}$
+ -->
+<IMG
+ WIDTH="100" HEIGHT="22" ALIGN="BOTTOM" BORDER="0"
+ SRC="img177.png"
+ ALT="$\dot{V}=20\angle{45^\circ}$">, and find currents in phasor form:
+
+<UL>
+<LI><!-- MATH
+ $\dot{I}_{load}=Y_{load}\dot{V}=(20\angle{45^\circ})\;
+	(0.025\sqrt{2}\angle{45^\circ})=0.5\sqrt{2}\angle{90^\circ}$
+ -->
+<IMG
+ WIDTH="446" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img178.png"
+ ALT="$\dot{I}_{load}=Y_{load}\dot{V}=(20\angle{45^\circ})\;
+(0.025\sqrt{2}\angle{45^\circ})=0.5\sqrt{2}\angle{90^\circ}$">,
+
+<P>
+<!-- MATH
+ $i_{load}(t)=Re[\dot{I}\sqrt{2}e^{j5000t}]=\cos(5000t+90^\circ)$
+ -->
+<IMG
+ WIDTH="357" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img179.png"
+ ALT="$i_{load}(t)=Re[\dot{I}\sqrt{2}e^{j5000t}]=\cos(5000t+90^\circ)$">
+</LI>
+<LI><!-- MATH
+ $\dot{I}_C=\dot{V}Y_C=(0.05\angle{90^\circ})(20\angle{45^\circ})
+	=1\angle{135^\circ}=-0.5\sqrt{2}+j0.5\sqrt{2}$
+ -->
+<IMG
+ WIDTH="517" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img180.png"
+ ALT="$\dot{I}_C=\dot{V}Y_C=(0.05\angle{90^\circ})(20\angle{45^\circ})
+=1\angle{135^\circ}=-0.5\sqrt{2}+j0.5\sqrt{2}$">,
+
+<P>
+<!-- MATH
+ $i_C(t)=\sqrt{2}\cos(5000t+135^\circ)$
+ -->
+<IMG
+ WIDTH="240" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img181.png"
+ ALT="$i_C(t)=\sqrt{2}\cos(5000t+135^\circ)$">
+</LI>
+<LI><!-- MATH
+ $\dot{I}_{RL}=Y_{RL}\dot{V}=(0.025\sqrt{2}\angle{-45^\circ})(20\angle{45^\circ})
+	=0.5\sqrt{2}\angle{0^\circ}=0.5\sqrt{2}$
+ -->
+<IMG
+ WIDTH="510" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img182.png"
+ ALT="$\dot{I}_{RL}=Y_{RL}\dot{V}=(0.025\sqrt{2}\angle{-45^\circ})(20\angle{45^\circ})
+=0.5\sqrt{2}\angle{0^\circ}=0.5\sqrt{2}$">,
+
+<P>
+<!-- MATH
+ $i_{RL}(t)=\cos(5000t)$
+ -->
+<IMG
+ WIDTH="161" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img183.png"
+ ALT="$i_{RL}(t)=\cos(5000t)$">
+</LI>
+<LI><!-- MATH
+ $\dot{V}_R=Z_R\dot{I}_{RL}=(20\angle{0^\circ})(0.5\sqrt{2}\angle{0^\circ})
+	=10\sqrt{2}\angle{0^\circ}=10\sqrt{2}+j0$
+ -->
+<IMG
+ WIDTH="488" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img184.png"
+ ALT="$\dot{V}_R=Z_R\dot{I}_{RL}=(20\angle{0^\circ})(0.5\sqrt{2}\angle{0^\circ})
+=10\sqrt{2}\angle{0^\circ}=10\sqrt{2}+j0$">,
+
+<P>
+<!-- MATH
+ $i_R(t)=20\;\cos(5000t)$
+ -->
+<IMG
+ WIDTH="179" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img185.png"
+ ALT="$i_R(t)=20\;\cos(5000t)$">
+</LI>
+<LI><!-- MATH
+ $\dot{V}_L=Z_L\dot{I}_{RL}=(20\angle{90^\circ})(0.5\sqrt{2}\angle{0^\circ})
+	=10\sqrt{2}\angle{90^\circ}=0+j10\sqrt{2}$
+ -->
+<IMG
+ WIDTH="504" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img186.png"
+ ALT="$\dot{V}_L=Z_L\dot{I}_{RL}=(20\angle{90^\circ})(0.5\sqrt{2}\angle{0^\circ})
+=10\sqrt{2}\angle{90^\circ}=0+j10\sqrt{2}$">,
+
+<P>
+<!-- MATH
+ $v_L(t)=20\;\cos(5000t+90^\circ)$
+ -->
+<IMG
+ WIDTH="230" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img187.png"
+ ALT="$v_L(t)=20\;\cos(5000t+90^\circ)$">.
+</LI>
+</UL>
+Verify: 
+
+<UL>
+<LI><!-- MATH
+ $\dot{V}_R+\dot{V}_L=10\sqrt{2}+j10\sqrt{2}=20\angle{45^\circ}
+	=\dot{V}$
+ -->
+<IMG
+ WIDTH="336" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img188.png"
+ ALT="$\dot{V}_R+\dot{V}_L=10\sqrt{2}+j10\sqrt{2}=20\angle{45^\circ}
+=\dot{V}$">
+</LI>
+<LI><!-- MATH
+ $\dot{I}_C+\dot{I}_{RL}=0.5\sqrt{2}-0.5\sqrt{2}+j0.5\sqrt{2}
+	=0.5\sqrt{2}\angle{90^\circ}=\dot{I}_{load}$
+ -->
+<IMG
+ WIDTH="474" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img189.png"
+ ALT="$\dot{I}_C+\dot{I}_{RL}=0.5\sqrt{2}-0.5\sqrt{2}+j0.5\sqrt{2}
+=0.5\sqrt{2}\angle{90^\circ}=\dot{I}_{load}$">
+</LI>
+</UL>
+
+<P>
+<B>Example:</B> A current <!-- MATH
+ $i(t)=17\;\cos(1000t+90^\circ)=12\sqrt{2}\cos(1000t+90^\circ)$
+ -->
+<IMG
+ WIDTH="423" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img190.png"
+ ALT="$i(t)=17\;\cos(1000t+90^\circ)=12\sqrt{2}\cos(1000t+90^\circ)$"> 
+flows through a circuit composed of a resistor <IMG
+ WIDTH="76" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img191.png"
+ ALT="$R=18\Omega$">, and capacitor
+<!-- MATH
+ $C=83.3\mu F=83.3\times 10^{-6}F$
+ -->
+<IMG
+ WIDTH="237" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img192.png"
+ ALT="$C=83.3\mu F=83.3\times 10^{-6}F$"> and an inductor <!-- MATH
+ $L=30 mH=30\times 
+10^{-3}H$
+ -->
+<IMG
+ WIDTH="215" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img193.png"
+ ALT="$L=30 mH=30\times
+10^{-3}H$"> connected in series. Find the resulting voltage across all 
+three elements.
+
+<P>
+
+<UL>
+<LI>Express <IMG
+ WIDTH="32" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img122.png"
+ ALT="$i(t)$"> in phasor: <!-- MATH
+ $\dot{I}=12\angle{90^\circ}$
+ -->
+<IMG
+ WIDTH="95" HEIGHT="22" ALIGN="BOTTOM" BORDER="0"
+ SRC="img194.png"
+ ALT="$\dot{I}=12\angle{90^\circ}$">
+</LI>
+<LI>Find impedance for each element (<IMG
+ WIDTH="80" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img195.png"
+ ALT="$\omega=1000$">):
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Z_R=R=18,\;\;\;\;Z_C=1/j\omega C=12\angle{-90^\circ}=0-j12,\;\;\;\;
+  Z_L=j\omega L=30\angle{90^\circ}=0+j30
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="680" HEIGHT="33" BORDER="0"
+ SRC="img196.png"
+ ALT="\begin{displaymath}Z_R=R=18,\;\;\;\;Z_C=1/j\omega C=12\angle{-90^\circ}=0-j12,\;\;\;\;
+Z_L=j\omega L=30\angle{90^\circ}=0+j30 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI>Find overall impedance:
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Z_{total}=Z_R+Z_C+Z_L=18+j(-12+30)=18+j18=18\sqrt{2}\angle{45^\circ}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="547" HEIGHT="33" BORDER="0"
+ SRC="img197.png"
+ ALT="\begin{displaymath}Z_{total}=Z_R+Z_C+Z_L=18+j(-12+30)=18+j18=18\sqrt{2}\angle{45^\circ} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI>Find voltage across all three elements:
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\dot{V}_{total}=\dot{I}Z_{total}=(12\angle{90^\circ})\;(18\sqrt{2}\angle{45^\circ})=216\sqrt{2}\angle{135^\circ}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="433" HEIGHT="33" BORDER="0"
+ SRC="img198.png"
+ ALT="\begin{displaymath}\dot{V}_{total}=\dot{I}Z_{total}=(12\angle{90^\circ})\;(18\sqrt{2}\angle{45^\circ})=216\sqrt{2}\angle{135^\circ} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v(t)=(216\sqrt{2})\sqrt{2}\cos(1000t+135^\circ)=432\;\cos(1000t+135^\circ)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="498" HEIGHT="33" BORDER="0"
+ SRC="img199.png"
+ ALT="\begin{displaymath}v(t)=(216\sqrt{2})\sqrt{2}\cos(1000t+135^\circ)=432\;\cos(1000t+135^\circ) \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+</UL>
+Alternatively, we can find voltage across each element:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\dot{V}_R=\dot{I}Z_R=216\angle{90^\circ},\;\;\;\;
+\dot{V}_C=\dot{I}Z_C=144\angle{0^\circ},\;\;\;\;
+\dot{V}_L=\dot{I}Z_L=360\angle{180^\circ}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="567" HEIGHT="32" BORDER="0"
+ SRC="img200.png"
+ ALT="\begin{displaymath}\dot{V}_R=\dot{I}Z_R=216\angle{90^\circ},\;\;\;\;
+\dot{V}_C=\...
+...le{0^\circ},\;\;\;\;
+\dot{V}_L=\dot{I}Z_L=360\angle{180^\circ} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+In time domain, we have
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_R(t)=216\sqrt{2}\cos(1000t+\pi/2),\;\;\;
+v_C(t)=144\sqrt{2}\cos(1000t),\;\;\;v_L(t)=360\sqrt{2}\cos(1000t+\pi)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="737" HEIGHT="33" BORDER="0"
+ SRC="img201.png"
+ ALT="\begin{displaymath}v_R(t)=216\sqrt{2}\cos(1000t+\pi/2),\;\;\;
+v_C(t)=144\sqrt{2}\cos(1000t),\;\;\;v_L(t)=360\sqrt{2}\cos(1000t+\pi) \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Adding <IMG
+ WIDTH="27" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img202.png"
+ ALT="$\dot{V}_R$">, <IMG
+ WIDTH="27" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img203.png"
+ ALT="$\dot{V}_C$">, and <IMG
+ WIDTH="26" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img204.png"
+ ALT="$\dot{V}_L$">, we get the total voltage which
+is the same as what we got above:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\dot{V}_{total}=\dot{V}_R+\dot{V}_C+\dot{V}_L=216\angle{90^\circ}+216\angle{180^\circ}
+=216\sqrt{2}\angle{135^\circ}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="485" HEIGHT="31" BORDER="0"
+ SRC="img205.png"
+ ALT="\begin{displaymath}\dot{V}_{total}=\dot{V}_R+\dot{V}_C+\dot{V}_L=216\angle{90^\circ}+216\angle{180^\circ}
+=216\sqrt{2}\angle{135^\circ} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html76"
+  HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html74"
+  HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html68"
+  HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html77"
+  HREF="node5.html">AC Circuit Analysis II</A>
+<B> Up:</B> <A NAME="tex2html75"
+  HREF="node1.html">Chapter 3: AC Circuit</A>
+<B> Previous:</B> <A NAME="tex2html69"
+  HREF="node3.html">Generalized Ohm's Law and</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Ruye Wang
+2014-10-05
+</ADDRESS>
+</BODY>
+</HTML>

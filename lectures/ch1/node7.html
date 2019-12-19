@@ -1,0 +1,1097 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Energy Sources</TITLE>
+<META NAME="description" CONTENT="Energy Sources">
+<META NAME="keywords" CONTENT="ch1">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="ch1.css">
+
+<LINK REL="next" HREF="node8.html">
+<LINK REL="previous" HREF="node6.html">
+<LINK REL="next" HREF="node8.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node8.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node6.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node8.html">Source and Load</A>
+<B> Up:</B> <A
+ HREF="node1.html">Chapter 1: Basic Quantities</A>
+<B> Previous:</B> <A
+ HREF="node6.html">Kirchhoff's Laws</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION00016000000000000000">
+Energy Sources</A>
+</H2>
+
+<P>
+<B>Ideal Energy Sources:</B>
+
+<P>
+Consider the following ideal voltage source <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img274.svg"
+ ALT="$V_0$"></SPAN> and ideal current 
+source <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img334.svg"
+ ALT="$I_0$"></SPAN>, both directly connected to a load resistor <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img152.svg"
+ ALT="$R_L$"></SPAN>. We want
+to find both the load voltage <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img85.svg"
+ ALT="$V$"></SPAN> across <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img152.svg"
+ ALT="$R_L$"></SPAN> and the load current <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img84.svg"
+ ALT="$I$"></SPAN>
+through <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img152.svg"
+ ALT="$R_L$"></SPAN>:
+
+<P>
+
+<UL>
+<LI>An ideal voltage source provides constant voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img274.svg"
+ ALT="$V_0$"></SPAN> independent 
+  of the current through it <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img335.svg"
+ ALT="$I=V_0/R_L$"></SPAN>. The ideal voltage source can
+  provide constant voltage to any number of resistors in parallel with 
+  the source, independent of how much current they each draw.
+
+<P>
+</LI>
+<LI>An ideal current source provides constant current <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img334.svg"
+ ALT="$I_0$"></SPAN> independent 
+  of the voltage across it <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img336.svg"
+ ALT="$V=I_0 R_L$"></SPAN>. The ideal current source can 
+  provide constant current to any number of resistors in series with 
+  the source.
+</LI>
+</UL>
+<IMG STYLE=""
+ SRC="../figures/VIsources.gif"
+ ALT="VIsources.gif">
+
+<P>
+However, such ideal sources do not exist in reality, due to the following
+dilemmas:
+
+<UL>
+<LI>If <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img337.svg"
+ ALT="$R_L=0$"></SPAN> (short circuit), the load voltage <!-- MATH
+ $V=R_L I=0\ne V_0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img338.svg"
+ ALT="$V=R_L I=0\ne V_0$"></SPAN>,
+</LI>
+<LI>If <!-- MATH
+ $R_L=\infty$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img339.svg"
+ ALT="$R_L=\infty$"></SPAN> (open circuit), the load current <!-- MATH
+ $I=V/R_L=V/\infty=0\ne I_0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img340.svg"
+ ALT="$I=V/R_L=V/\infty=0\ne I_0$"></SPAN>,
+</LI>
+</UL>
+
+<P>
+<B>Realistic voltage source:</B> 
+
+<P>
+In reality, all voltage sources (e.g., a battery or a voltage amplifier 
+circuit) can be more realistically modeled by an ideal voltage source <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img274.svg"
+ ALT="$V_0$"></SPAN> 
+in series with a nonzero <EM>internal resistance</EM> <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img341.svg"
+ ALT="$R_0$"></SPAN>, which causes an
+internal voltage drop <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img342.svg"
+ ALT="$IR_0$"></SPAN> due to the current <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img84.svg"
+ ALT="$I$"></SPAN> drawn by the load <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img152.svg"
+ ALT="$R_L$"></SPAN>, 
+so that the actual output voltage across the load <!-- MATH
+ $V=V_0-IR_0< V_0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img343.svg"
+ ALT="$V=V_0-IR_0&lt; V_0$"></SPAN> is lower 
+than <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img274.svg"
+ ALT="$V_0$"></SPAN>. The load voltage <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img85.svg"
+ ALT="$V$"></SPAN> and current <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img84.svg"
+ ALT="$I$"></SPAN> are constrained by the 
+following two relationships imposed by he voltage source <!-- MATH
+ $(V_0, R_0)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img344.svg"
+ ALT="$(V_0, R_0)$"></SPAN> and 
+the load <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img152.svg"
+ ALT="$R_L$"></SPAN>:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left\{ \begin{array}{lll}
+    \mbox{Source:} &  V=V_0-IR_0\;\;\;\;\;\;\;\;
+    (I=0,\;\;V=V_0),\;\;\;\;\;\;\;(V=0,\;\;I=V_0/R_0)\\
+    \mbox{load:} & V=R_LI \end{array} \right.
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img345.svg"
+ ALT="$\displaystyle \left\{ \begin{array}{lll}
+\mbox{Source:} &amp; V=V_0-IR_0\;\;\;\;\;\...
+...,\;\;\;\;\;\;\;(V=0,\;\;I=V_0/R_0)\\
+\mbox{load:} &amp; V=R_LI \end{array} \right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">104</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Solving for <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img84.svg"
+ ALT="$I$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img85.svg"
+ ALT="$V$"></SPAN>, we get:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left\{ \begin{array}{l}
+    I=V_0/(R_0+R_L) \\V=R_L I=V_0\,R_L/(R_0+R_L)
+  \end{array} \right. 
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img346.svg"
+ ALT="$\displaystyle \left\{ \begin{array}{l}
+I=V_0/(R_0+R_L) \\ V=R_L I=V_0\,R_L/(R_0+R_L)
+\end{array} \right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">105</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+For the output (load) voltage <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img85.svg"
+ ALT="$V$"></SPAN> to be as close to the voltage source <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img274.svg"
+ ALT="$V_0$"></SPAN>
+as possible, the internal resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img341.svg"
+ ALT="$R_0$"></SPAN> of a voltage source needs to be as 
+small as possible, ideally <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img347.svg"
+ ALT="$R_0=0$"></SPAN>.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/VoltageSource.png"
+ ALT="VoltageSource.png">
+
+<P>
+The slope of the first curve is the internal resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img341.svg"
+ ALT="$R_0$"></SPAN> and the slope 
+of the second curve is <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img152.svg"
+ ALT="$R_L$"></SPAN>. Solving these two equations we get load voltage
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img85.svg"
+ ALT="$V$"></SPAN> and current <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img84.svg"
+ ALT="$I$"></SPAN>.
+
+<P>
+Only in the case of an ideal voltage source with <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img347.svg"
+ ALT="$R_0=0$"></SPAN> will <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img348.svg"
+ ALT="$V=V_0$"></SPAN>. 
+For <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img349.svg"
+ ALT="$R_0&gt;0$"></SPAN>, the heavier the load, i.e., the smaller <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img152.svg"
+ ALT="$R_L$"></SPAN>, the larger the 
+load current <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img84.svg"
+ ALT="$I$"></SPAN>, and the lower the load voltage <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img85.svg"
+ ALT="$V$"></SPAN>:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+R_L \downarrow \Longrightarrow I \uparrow \Longrightarrow R_0I \uparrow
+  \Longrightarrow V \downarrow
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img350.svg"
+ ALT="$\displaystyle R_L \downarrow \Longrightarrow I \uparrow \Longrightarrow R_0I \uparrow
+\Longrightarrow V \downarrow$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">106</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+In particular, when the load is a short circuit (<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img337.svg"
+ ALT="$R_L=0$"></SPAN>), the output 
+voltage of a battery is zero (instead of the specified <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img351.svg"
+ ALT="$V_0=1.5V$"></SPAN>), as 
+the voltage drop across the nonzero internal resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img341.svg"
+ ALT="$R_0$"></SPAN> is the same 
+as <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img274.svg"
+ ALT="$V_0$"></SPAN>, i.e., the electric energy of the battery is consumed internally,
+with no energy delivered to external circuit.
+
+<P>
+<B>Realistic current source:</B> 
+
+<P>
+In reality, all current sources (e.g., a solar cell or a current amplifier
+circuit) can be modeled by an ideal current source <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img334.svg"
+ ALT="$I_0$"></SPAN> in parallel with a 
+nonzero <EM>internal resistance</EM> <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img341.svg"
+ ALT="$R_0$"></SPAN>, which causes an internal current 
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img352.svg"
+ ALT="$V/R_0$"></SPAN> so that the actual output current through the load <!-- MATH
+ $I=I_0-V/R_0<I_0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img353.svg"
+ ALT="$I=I_0-V/R_0&lt;I_0$"></SPAN> 
+is lower than <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img334.svg"
+ ALT="$I_0$"></SPAN>. The load voltage <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img85.svg"
+ ALT="$V$"></SPAN> and current <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img84.svg"
+ ALT="$I$"></SPAN> are constrained by 
+the following two relationships imposed by the current source <!-- MATH
+ $(I_0, R_0)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img354.svg"
+ ALT="$(I_0, R_0)$"></SPAN> and 
+the load <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img152.svg"
+ ALT="$R_L$"></SPAN>:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left\{ \begin{array}{ll}
+    \mbox{Source:} & I=I_0-V/R_0\;\;\;\;\;\;\;\;\;
+    (I=0,\;\;V=R_0I_0),\;\;\;\;\;\;\;(V=0,\;\;I=I_0) \\
+    \mbox{Load:} & I=V/R_L 
+  \end{array} \right.
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img355.svg"
+ ALT="$\displaystyle \left\{ \begin{array}{ll}
+\mbox{Source:} &amp; I=I_0-V/R_0\;\;\;\;\;\...
+...0),\;\;\;\;\;\;\;(V=0,\;\;I=I_0) \\
+\mbox{Load:} &amp; I=V/R_L
+\end{array} \right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">107</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Solving for <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img85.svg"
+ ALT="$V$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img84.svg"
+ ALT="$I$"></SPAN>, we get
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left\{ \begin{array}{l} V=I_0R_0R_L/(R_0+R_L)=I_0\;R_0||R_L \\
+    I=V/R_L=I_0R_0/(R_0+R_L)\end{array} \right.
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img356.svg"
+ ALT="$\displaystyle \left\{ \begin{array}{l} V=I_0R_0R_L/(R_0+R_L)=I_0\;R_0\vert\vert R_L \\
+I=V/R_L=I_0R_0/(R_0+R_L)\end{array} \right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">108</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/CurrentSource.png"
+ ALT="CurrentSource.png">
+
+<P>
+For the output (load) current <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img84.svg"
+ ALT="$I$"></SPAN> to be as close to the current source <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img334.svg"
+ ALT="$I_0$"></SPAN>
+as possible, the internal resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img341.svg"
+ ALT="$R_0$"></SPAN> of a current source should be as
+large as possible, ideally <!-- MATH
+ $R_0=\infty$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img357.svg"
+ ALT="$R_0=\infty$"></SPAN>.
+
+<P>
+The slope of the first curve is the internal resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img341.svg"
+ ALT="$R_0$"></SPAN> and the slope 
+of the second curve is <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img152.svg"
+ ALT="$R_L$"></SPAN>. Solving these two equations we get load voltage
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img85.svg"
+ ALT="$V$"></SPAN> and current <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img84.svg"
+ ALT="$I$"></SPAN>.
+
+<P>
+Only in the case of an ideal current source will <!-- MATH
+ $R_0=\infty$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img357.svg"
+ ALT="$R_0=\infty$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img358.svg"
+ ALT="$I=I_0$"></SPAN>. 
+For <!-- MATH
+ $R_0<\infty$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img359.svg"
+ ALT="$R_0&lt;\infty$"></SPAN>, the larger the load resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img152.svg"
+ ALT="$R_L$"></SPAN>, the smaller the 
+current <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img360.svg"
+ ALT="$I_L$"></SPAN>.
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+R_L \uparrow \Longrightarrow V \uparrow \Longrightarrow V/R_0 \uparrow
+  \Longrightarrow I \downarrow
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img361.svg"
+ ALT="$\displaystyle R_L \uparrow \Longrightarrow V \uparrow \Longrightarrow V/R_0 \uparrow
+\Longrightarrow I \downarrow$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">109</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+<B>Energy Source Conversion</B>
+
+<P>
+Any two circuits with the same voltage-current relation 
+(<EM>V-I characteristics</EM>) at the output port with <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img152.svg"
+ ALT="$R_L$"></SPAN> are 
+equivalent to each other, as they have the same external behavior, 
+although they may be different internally.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/sourcetransform.gif"
+ ALT="sourcetransform.gif">
+
+<P>
+Comparing the voltage-current relations of the two energy sources:
+
+<UL>
+<LI>The voltage source (<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img362.svg"
+ ALT="$V_0, R_0$"></SPAN>):
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V=V_0-R_0I=R_0(V_0/R_0-I)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img363.svg"
+ ALT="$\displaystyle V=V_0-R_0I=R_0(V_0/R_0-I)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">110</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>The current source <!-- MATH
+ $(I_0, R'_0)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img364.svg"
+ ALT="$(I_0, R'_0)$"></SPAN>:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V=R'_0(I_0-I)=R'_0I_0-R'_0I
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img365.svg"
+ ALT="$\displaystyle V=R'_0(I_0-I)=R'_0I_0-R'_0I$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">111</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+</UL> 
+If <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.69ex; " SRC="img366.svg"
+ ALT="$R_0=R'_0$"></SPAN> and <!-- MATH
+ $V_0=I_0 R_0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img367.svg"
+ ALT="$V_0=I_0 R_0$"></SPAN>, then the two sources have the same
+V-I characteristics and are therefore equivalent to each other. We
+also see that
+
+<UL>
+<LI>a non-ideal voltage source <!-- MATH
+ $(V_0, R_0)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img344.svg"
+ ALT="$(V_0, R_0)$"></SPAN> can be converted into a 
+  non-ideal current source <!-- MATH
+ $(I_0=V_0/R_0,\,R_0)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img368.svg"
+ ALT="$(I_0=V_0/R_0,\,R_0)$"></SPAN>,
+</LI>
+<LI>a non-ideal current source <!-- MATH
+ $(I_0, R'_0)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img364.svg"
+ ALT="$(I_0, R'_0)$"></SPAN> can be converted into a 
+  non-ideal voltage source <!-- MATH
+ $(V_0=I_0R'_0,\,R'_0)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img369.svg"
+ ALT="$(V_0=I_0R'_0,\,R'_0)$"></SPAN>.
+</LI>
+</UL>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/VoltageCurrentSource.png"
+ ALT="VoltageCurrentSource.png">
+
+<P>
+Both of the two energy sources above can be treated as either a voltage 
+or a current source. 
+
+<UL>
+<LI>The source on the left has a small <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img341.svg"
+ ALT="$R_0$"></SPAN> and is therefore a good 
+  voltage source as the voltage <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img85.svg"
+ ALT="$V$"></SPAN> received by the load is close to 
+  the source voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img274.svg"
+ ALT="$V_0$"></SPAN>, but a bad current source as the current <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img84.svg"
+ ALT="$I$"></SPAN> 
+  received by the load is much lower than the source current <!-- MATH
+ $I_0=V_0/R_0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img370.svg"
+ ALT="$I_0=V_0/R_0$"></SPAN>. 
+</LI>
+<LI>The source on the right has a large <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img341.svg"
+ ALT="$R_0$"></SPAN> and is therefore a bad 
+  voltage source as the voltage <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img85.svg"
+ ALT="$V$"></SPAN> received by the load is much lower 
+  than the source voltage <!-- MATH
+ $V_0=I_0R_0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img367.svg"
+ ALT="$V_0=I_0 R_0$"></SPAN>, but a good current source as the 
+  current <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img84.svg"
+ ALT="$I$"></SPAN> received by the load is close to the source current.
+</LI>
+</UL>
+
+<P>
+<B>The Internal Resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img341.svg"
+ ALT="$R_0$"></SPAN>:</B>
+
+<P>
+The internal resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img341.svg"
+ ALT="$R_0$"></SPAN> can be found as the absolute value of the 
+slope of the straight line of the V-I characteristic plot:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+R_0=\frac{|\Delta V|}{|\Delta I|}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img371.svg"
+ ALT="$\displaystyle R_0=\frac{\vert\Delta V\vert}{\vert\Delta I\vert}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">112</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+where <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img372.svg"
+ ALT="$\Delta V$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img373.svg"
+ ALT="$\Delta I$"></SPAN> are respectively the difference in voltage 
+and current between any two points along the line, which can be chosen 
+arbitrarily. The most convenient choice would be the intersections of the 
+straight line with the <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img85.svg"
+ ALT="$V$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img84.svg"
+ ALT="$I$"></SPAN> axes:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\begin{array}{c||c|c}\hline
+    & \mbox{Open circuit ($I=0$)} & \mbox{Short circuit ($V=0$)} \\\hline\hline
+    \mbox{Voltage Source} & V_{oc}=V_0 & I_{sc}=V_0/R_0 \\\hline
+    \mbox{Current Source} & V_{oc}=I_0R_0 & I_{sc}=I_0 \\\hline
+  \end{array}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE=""
+ SRC="img374.svg"
+ ALT="\begin{displaymath}\begin{array}{c\vert\vert c\vert c}\hline
+&amp; \mbox{Open circui...
+...rent Source} &amp; V_{oc}=I_0R_0 &amp; I_{sc}=I_0 \\ \hline
+\end{array}\end{displaymath}"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">113</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+In either case, we have:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\frac{\mbox{open-circuit voltage}}{\mbox{short-circuit current}}
+  =\frac{V_{oc}}{I_{sc}}=\left\{\begin{array}{cc}V_0/(V_0/R_0)&\mbox{(voltage source)}\\
+  (I_0R_0)/I_0&\mbox{(current source)}\end{array}\right\}=R_0
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img375.svg"
+ ALT="$\displaystyle \frac{\mbox{open-circuit voltage}}{\mbox{short-circuit current}}
+...
+...voltage source)}\\
+(I_0R_0)/I_0&amp;\mbox{(current source)}\end{array}\right\}=R_0$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">114</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/InternalResistance.gif"
+ ALT="InternalResistance.gif">
+
+<P>
+While this method can be used to find the internal resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img341.svg"
+ ALT="$R_0$"></SPAN> 
+without knowing either <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img334.svg"
+ ALT="$I_0$"></SPAN> or <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img274.svg"
+ ALT="$V_0$"></SPAN> in theory, it may not be practical, 
+as the short circuit current is difficult to get (the voltage source may 
+be damaged). Instead, we can find some other two voltages and currents 
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img376.svg"
+ ALT="$V_i$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img377.svg"
+ ALT="$I_i$"></SPAN> (<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img378.svg"
+ ALT="$i=1,2$"></SPAN>) corresponding to two load resistors <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img276.svg"
+ ALT="$R_1$"></SPAN> and 
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img277.svg"
+ ALT="$R_2$"></SPAN>. Then <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img341.svg"
+ ALT="$R_0$"></SPAN> can be found as the slope of the straight line determined 
+by the two points <!-- MATH
+ $(V_1, I_1)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img379.svg"
+ ALT="$(V_1, I_1)$"></SPAN> and <!-- MATH
+ $(V_2, I_2)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img380.svg"
+ ALT="$(V_2, I_2)$"></SPAN>. We see that the previous 
+method can be considered as a special case when <!-- MATH
+ $R_1=\infty$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img381.svg"
+ ALT="$R_1=\infty$"></SPAN> (open circuit) 
+and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img382.svg"
+ ALT="$R_2=0$"></SPAN> (short circuit).
+
+<P>
+<B>Example 1:</B> 
+
+<P>
+A given voltage source of <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img383.svg"
+ ALT="$V_0=10V$"></SPAN> and <!-- MATH
+ $R_0=10\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img384.svg"
+ ALT="$R_0=10\Omega$"></SPAN> can be converted to a 
+current source of <!-- MATH
+ $I_0=V_0/R_0=1A$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img385.svg"
+ ALT="$I_0=V_0/R_0=1A$"></SPAN> with the same <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img341.svg"
+ ALT="$R_0$"></SPAN> (and vice versa). A load 
+of <!-- MATH
+ $R_L=40\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img386.svg"
+ ALT="$R_L=40\Omega$"></SPAN> receives from this energy source a voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img387.svg"
+ ALT="$V_L=8V$"></SPAN> (80% of 
+the voltage source) and a current <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img388.svg"
+ ALT="$I_L=0.2A$"></SPAN> (20% of the current source). As 
+the energy source has a low internal resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img341.svg"
+ ALT="$R_0$"></SPAN>, it is a good voltage 
+source but a poor current source.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/sourceex1.gif"
+ ALT="sourceex1.gif">
+<IMG STYLE=""
+ SRC="../figures/PowerSources1.gif"
+ ALT="PowerSources1.gif">
+
+<P>
+<B>Example 2:</B> 
+
+<P>
+A given current source of <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img389.svg"
+ ALT="$I_0=1 mA$"></SPAN> and <!-- MATH
+ $R_0=8 K\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img390.svg"
+ ALT="$R_0=8 K\Omega$"></SPAN> can be converted to a 
+voltage source of <!-- MATH
+ $V_0=I_0 R_0=8V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img391.svg"
+ ALT="$V_0=I_0 R_0=8V$"></SPAN> with the same <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img341.svg"
+ ALT="$R_0$"></SPAN> (and vice versa). A load 
+of <!-- MATH
+ $R_L=2 K\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img392.svg"
+ ALT="$R_L=2 K\Omega$"></SPAN> receives from this energy source a voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img393.svg"
+ ALT="$V_L=1.6V$"></SPAN> (20%
+of the voltage source) and a current <!-- MATH
+ $I_L=0.8 mA$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img394.svg"
+ ALT="$I_L=0.8 mA$"></SPAN> (80% of the current source). 
+As energy source has a high internal resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img341.svg"
+ ALT="$R_0$"></SPAN>, it is a good current 
+source but a poor voltage source.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/sourceex2.gif"
+ ALT="sourceex2.gif">
+<IMG STYLE=""
+ SRC="../figures/PowerSources2.gif"
+ ALT="PowerSources2.gif">
+
+<P>
+<B>Power Delivery/Absorption</B>
+
+<P>
+
+<UL>
+<LI><B>Voltage source</B>
+  
+<UL>
+<LI>If the direction of the current <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img84.svg"
+ ALT="$I$"></SPAN> in a circuit is such that it 
+    goes internally through a voltage source <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img85.svg"
+ ALT="$V$"></SPAN> from its low potential 
+    (-) to high (+), and externally through the rest of the circuit from
+    high to low, then the polarities of the voltage and the current are
+    consistent (both positive or negative depending on the assumed 
+    polarity), and the source is delivering power <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img395.svg"
+ ALT="$W=VI$"></SPAN>.
+</LI>
+<LI>If the direction of the current is reversed, then the power 
+    delivered <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.31ex; " SRC="img396.svg"
+ ALT="$W=-VI$"></SPAN> will be negative, i.e., the voltage source is actually 
+    receiving power. A typical example is the rechargeable battery in your 
+    car that works in either of the two states.
+  
+</LI>
+</UL>
+</LI>
+<LI><B>Current source</B>
+  
+<UL>
+<LI>If the polarity of the voltage <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img85.svg"
+ ALT="$V$"></SPAN> across a current 
+    source is such that the head of the arrow of the current source is
+    at high potential (+) and the tail of the arrow is at low potential (-),
+    then the polarity of the voltage and the current is consistent, and 
+    the current source is delivering power <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img395.svg"
+ ALT="$W=VI$"></SPAN>.
+</LI>
+<LI>If the direction of the current is reversed, then the power 
+    delivered <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.31ex; " SRC="img396.svg"
+ ALT="$W=-VI$"></SPAN> will be negative, i.e., the current source is actually 
+    receiving power. 
+  
+</LI>
+</UL>
+</LI>
+</UL>
+
+<P>
+<B>Example 3:</B>
+
+<P>
+The current in a circuit composed of an ideal voltage source <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img397.svg"
+ ALT="$V_0=5\,V$"></SPAN> 
+and a resistor <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img398.svg"
+ ALT="$R=5\Omega$"></SPAN> is <!-- MATH
+ $I=V/R=1\,A$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img399.svg"
+ ALT="$I=V/R=1\,A$"></SPAN>. The power consumption of the
+resistor and voltage source are <!-- MATH
+ $W_R=I^2R=V^2/R=IV=5$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img400.svg"
+ ALT="$W_R=I^2R=V^2/R=IV=5$"></SPAN> and <!-- MATH
+ $W_V=-IV=-5$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img401.svg"
+ ALT="$W_V=-IV=-5$"></SPAN>,
+respectively. The negative value of <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img402.svg"
+ ALT="$W_V$"></SPAN> indicates the power is actually
+not consumed but generated by the voltage source (converted from other 
+forms of energy, e.g., chemical, mechanical, etc.)
+
+<P>
+<B>Example 4:</B> 
+
+<P>
+In the circuit shown below, the ideal current source is <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img403.svg"
+ ALT="$I_0=1A$"></SPAN>, and the 
+ideal voltage source is <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img404.svg"
+ ALT="$V_0=2V$"></SPAN>, the resistor is <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img405.svg"
+ ALT="$R=3\Omega$"></SPAN>. Find the
+current through and voltage across each of the three components. Find the 
+power delivered, absorbed, or dissipated by each of the three components.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/powerdeliveryexample.gif"
+ ALT="powerdeliveryexample.gif">
+
+<P>
+The current source provides <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img403.svg"
+ ALT="$I_0=1A$"></SPAN> current through the left branch 
+(upward), while the voltage source provides <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img404.svg"
+ ALT="$V_0=2V$"></SPAN> across all three
+components. The current through <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img91.svg"
+ ALT="$R$"></SPAN> is <!-- MATH
+ $2V/3\Omega=2/3A$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img406.svg"
+ ALT="$2V/3\Omega=2/3A$"></SPAN> (downward), 
+by KCL, the current through the voltage source is <!-- MATH
+ $I_v=1-2/3=1/3A$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img407.svg"
+ ALT="$I_v=1-2/3=1/3A$"></SPAN>. 
+We therefore have:
+
+<P>
+
+<UL>
+<LI>Power dissipated by <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img91.svg"
+ ALT="$R$"></SPAN> is <!-- MATH
+ $P_R=V_0^2/R=4/3\;W$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img408.svg"
+ ALT="$P_R=V_0^2/R=4/3\;W$"></SPAN>,
+</LI>
+<LI>Power received by voltage source is <!-- MATH
+ $P=V_0I_V=2/3\;W$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img409.svg"
+ ALT="$P=V_0I_V=2/3\;W$"></SPAN>.
+</LI>
+<LI>Power delivered by current source is <!-- MATH
+ $P=V_0I_0=2\;W$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img410.svg"
+ ALT="$P=V_0I_0=2\;W$"></SPAN> <!-- MATH
+ $(2/3+4/3=2)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img411.svg"
+ ALT="$(2/3+4/3=2)$"></SPAN>.
+</LI>
+</UL>
+
+<P>
+(Homework) Redo the above with the polarity of <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img274.svg"
+ ALT="$V_0$"></SPAN> reversed. Find:
+
+<UL>
+<LI>Power dissipated by <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img91.svg"
+ ALT="$R$"></SPAN>: 
+</LI>
+<LI>Power received/delivered by voltage source:
+</LI>
+<LI>Power delivered/received by current source:
+</LI>
+</UL>
+Verify your results so that total power delivered is equal to total
+power received and dissipated.
+
+<P>
+<A ID="tex2html13"
+  HREF="../ch1_sub2/index.html">Answer</A>
+<P>
+<B>Comment:</B> While various voltage sources such as batteries are common 
+in everyday life, current sources do not seem to be widely available. One
+type of current source is solar-cell, which generates current proportional
+to the intensity of the incoming light. Also, certain transistor circuits
+are designed to output constant current. Moreover, as discussed above, any
+voltage source can be converted into a current source. For example, a 
+current source with <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img412.svg"
+ ALT="$I_0=1$"></SPAN> mA and <!-- MATH
+ $R_0=1\;M\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img413.svg"
+ ALT="$R_0=1\;M\Omega$"></SPAN> can be implemented
+by a voltage source of <!-- MATH
+ $V_0=1000\; V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img414.svg"
+ ALT="$V_0=1000\; V$"></SPAN> in series with <!-- MATH
+ $R_0=1\;M\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img413.svg"
+ ALT="$R_0=1\;M\Omega$"></SPAN>.
+
+<P>
+<B>Example 5</B> (Homework)
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/sourcemeter.gif"
+ ALT="sourcemeter.gif">
+
+<P>
+A realistic voltage source (e.g., a battery) can be modeled as an ideal 
+voltage source <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img274.svg"
+ ALT="$V_0$"></SPAN> in series with an internal resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img341.svg"
+ ALT="$R_0$"></SPAN>. Ideally,
+the voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img274.svg"
+ ALT="$V_0$"></SPAN> can be obtained by measuring the open-circuit voltage 
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img415.svg"
+ ALT="$V_{oc}$"></SPAN> with a voltmeter
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_0=V_{oc}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img416.svg"
+ ALT="$\displaystyle V_0=V_{oc}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">115</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+while the internal resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img341.svg"
+ ALT="$R_0$"></SPAN> can be obtained as the ratio of the 
+open-circuit voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img415.svg"
+ ALT="$V_{oc}$"></SPAN> to the shirt-circuit current <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img417.svg"
+ ALT="$I_{sc}$"></SPAN>, which 
+can be measured by an ammeter:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+R_0=\frac{V_{oc}}{I_{sc}}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img418.svg"
+ ALT="$\displaystyle R_0=\frac{V_{oc}}{I_{sc}}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">116</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+However, in reality, any voltmeter has an internal resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img419.svg"
+ ALT="$R_v$"></SPAN> in 
+parallel with the meter, and any ammeter has an internal resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img420.svg"
+ ALT="$R_a$"></SPAN> 
+in series with the meter. For better measurement accuracy, should <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img419.svg"
+ ALT="$R_v$"></SPAN> be
+small or large, how about <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img420.svg"
+ ALT="$R_a$"></SPAN>? Why? Give the expression of the measured
+open-circuit voltage <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img85.svg"
+ ALT="$V$"></SPAN> and short-circuit current <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img84.svg"
+ ALT="$I$"></SPAN> in terms of the
+true <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img341.svg"
+ ALT="$R_0$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img274.svg"
+ ALT="$V_0$"></SPAN>, as well as <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img419.svg"
+ ALT="$R_v$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img420.svg"
+ ALT="$R_a$"></SPAN>.
+
+<P>
+Assume <!-- MATH
+ $V_0=6V, R_0=100\Omega, R_v=10,000 \Omega, R_a=200 \Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img421.svg"
+ ALT="$V_0=6V, R_0=100\Omega, R_v=10,000 \Omega, R_a=200 \Omega$"></SPAN>. What
+are the measured open-circuit voltage <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img85.svg"
+ ALT="$V$"></SPAN>, and the short-circuit current 
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img84.svg"
+ ALT="$I$"></SPAN>? Given <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img85.svg"
+ ALT="$V$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img84.svg"
+ ALT="$I$"></SPAN>, and the known <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img419.svg"
+ ALT="$R_v$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img420.svg"
+ ALT="$R_a$"></SPAN>, how do your get the 
+true <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img274.svg"
+ ALT="$V_0$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img341.svg"
+ ALT="$R_0$"></SPAN> using your method above? Show your numerical computations.
+
+<P>
+<A ID="tex2html14"
+  HREF="../ch1_sub1/index.html">Answer</A>
+<P>
+Design a method to obtain the true source voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img274.svg"
+ ALT="$V_0$"></SPAN> and internal
+resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img341.svg"
+ ALT="$R_0$"></SPAN> by a voltmeter and an ammeter with known <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img419.svg"
+ ALT="$R_v$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img420.svg"
+ ALT="$R_a$"></SPAN>.
+Give the expression of <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img274.svg"
+ ALT="$V_0$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img341.svg"
+ ALT="$R_0$"></SPAN> in terms of the measured open-circuit
+voltage <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img85.svg"
+ ALT="$V$"></SPAN>, short-circuit <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img84.svg"
+ ALT="$I$"></SPAN>, and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img419.svg"
+ ALT="$R_v$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img420.svg"
+ ALT="$R_a$"></SPAN>. 
+
+<P>
+<A ID="tex2html15"
+  HREF="../ch1_sub3/index.html">Answer</A>
+<P>
+<B>Example 6</B> (Homework)
+
+<P>
+Usually the internal resistances of the voltmeter and ammeter are not 
+readily known (and the values may change depending on the scale used). 
+As another method to find <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img341.svg"
+ ALT="$R_0$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img274.svg"
+ ALT="$V_0$"></SPAN> of a voltage source, we can 
+measure the voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img422.svg"
+ ALT="$V_L$"></SPAN> across two different load resistors <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img152.svg"
+ ALT="$R_L$"></SPAN> 
+connected to the voltage source. If the values of <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img152.svg"
+ ALT="$R_L$"></SPAN> are significantly
+smaller than that of the internal resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img419.svg"
+ ALT="$R_v$"></SPAN> of the voltmeter, the 
+voltmeter can be considered to be ideal with <!-- MATH
+ $R_v\rightarrow \infty$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img423.svg"
+ ALT="$R_v\rightarrow \infty$"></SPAN>. 
+
+<P>
+Assume when the load resistor is <!-- MATH
+ $R_L=1 k\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img424.svg"
+ ALT="$R_L=1 k\Omega$"></SPAN>, the voltage across it 
+is found to be <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img425.svg"
+ ALT="$V_L=9.09V$"></SPAN>, when a different load <!-- MATH
+ $R_L=2 k\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img426.svg"
+ ALT="$R_L=2 k\Omega$"></SPAN> is used 
+and the voltage across it is <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img427.svg"
+ ALT="$V_L=9.52V$"></SPAN>. Find <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img274.svg"
+ ALT="$V_0$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img341.svg"
+ ALT="$R_0$"></SPAN> of the 
+voltage source.
+
+<P>
+<B>Answer:</B>
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_0\frac{1}{R_0+1}=9.09,\;\;\;\;\;\;V_0\frac{2}{R_0+2}=9.52
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img428.svg"
+ ALT="$\displaystyle V_0\frac{1}{R_0+1}=9.09,\;\;\;\;\;\;V_0\frac{2}{R_0+2}=9.52$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">117</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+i.e.,
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_0=9.09\,R_0+9.09,\;\;\;\;\;\;\;V_0=4.76\,R_0+9.52
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img429.svg"
+ ALT="$\displaystyle V_0=9.09\,R_0+9.09,\;\;\;\;\;\;\;V_0=4.76\,R_0+9.52$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">118</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Subtracting we get 
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+R_0=\frac{9.52-9.09}{9.09-4.76}=\frac{0.43}{4.33}\approx 0.1\;k\Omega
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.11ex; vertical-align: -1.90ex; " SRC="img430.svg"
+ ALT="$\displaystyle R_0=\frac{9.52-9.09}{9.09-4.76}=\frac{0.43}{4.33}\approx 0.1\;k\Omega$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">119</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+and 
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_0=9.09\,R_0+9.09=9.09\times 0.1+9.09=10\,V
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img431.svg"
+ ALT="$\displaystyle V_0=9.09\,R_0+9.09=9.09\times 0.1+9.09=10\,V$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">120</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node8.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node6.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node8.html">Source and Load</A>
+<B> Up:</B> <A
+ HREF="node1.html">Chapter 1: Basic Quantities</A>
+<B> Previous:</B> <A
+ HREF="node6.html">Kirchhoff's Laws</A></DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

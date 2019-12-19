@@ -1,0 +1,449 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Metal-Oxide-Semiconductor Field-Effect Transistors</TITLE>
+<META NAME="description" CONTENT="Metal-Oxide-Semiconductor Field-Effect Transistors">
+<META NAME="keywords" CONTENT="ch4">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="ch4.css">
+
+<LINK REL="next" HREF="node14.html">
+<LINK REL="previous" HREF="node12.html">
+<LINK REL="next" HREF="node14.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node14.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="ch4.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node12.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node14.html">MOSFET Amplifier</A>
+<B> Up:</B> <A
+ HREF="ch4.html">ch4</A>
+<B> Previous:</B> <A
+ HREF="node12.html">Colpitts Oscillators</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A ID="SECTION000130000000000000000">
+Metal-Oxide-Semiconductor Field-Effect Transistors</A>
+</H1>
+
+<P>
+A metal-oxide-semiconductor field-effect transistor (MOSFET) has three terminals,
+source, gate, and drain. In an n-MOSFET (or p-MOSFET), both the source S and drain
+D are N-type (or P-type) and the substrate between them is P-type (or N-type). 
+The gate and the P-type substrate is insulated by a thin layer of silicon dioxide 
+(<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img607.svg"
+ ALT="$SiO_2$"></SPAN>). Due to this insulation, there is no gate current to either the source or
+drain.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/MOS_FET_transistors.gif"
+ ALT="MOS_FET_transistors.gif">
+<IMG STYLE=""
+ SRC="../figures/MOSFET4.gif"
+ ALT="MOSFET4.gif">
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/MOSFET.gif"
+ ALT="MOSFET.gif">
+
+<P>
+Typically the polarities of the voltages applied to the MOS transistor
+are such that 
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_{GS}=V_G-V_S>0 \;\;\;\;\;\;\;\mbox{and}\;\;\;\;\;\;V_{DS}=V_D-V_S>0
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img608.svg"
+ ALT="$\displaystyle V_{GS}=V_G-V_S&gt;0 \;\;\;\;\;\;\;$">and<IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img609.svg"
+ ALT="$\displaystyle \;\;\;\;\;\;V_{DS}=V_D-V_S&gt;0$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">150</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The n-MOSFET can be considered as a voltage-controlled current channel.
+When sufficient voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img610.svg"
+ ALT="$V_{GS}$"></SPAN> is applied between gate and source, the 
+positive potential at the gate will induce enough electrons from the 
+P-type substrate (minority carriers) to form an electronic channel 
+called an <EM>inversion layer</EM> between source and drain, and a current 
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img28.svg"
+ ALT="$I_D$"></SPAN> between source and drain is formed. 
+
+<P>
+The MOS transistor can be used in either analog circuits or as a switch 
+in binary logic circuit:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left\{ \begin{array}{l}
+  V_{GS} \uparrow \Longrightarrow I_D \uparrow \Longrightarrow \mbox{conducting} \\
+  V_{GS} \downarrow \Longrightarrow I_D \downarrow \Longrightarrow \mbox{cut off}
+\end{array} \right. 	
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img611.svg"
+ ALT="$\displaystyle \left\{ \begin{array}{l}
+V_{GS} \uparrow \Longrightarrow I_D \upa...
+...ongrightarrow I_D \downarrow \Longrightarrow \mbox{cut off}
+\end{array} \right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">151</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+More acturately, the drain current <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img28.svg"
+ ALT="$I_D$"></SPAN> and the gate voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img610.svg"
+ ALT="$V_{GS}$"></SPAN> can 
+be modeled by
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_D=\left\{ \begin{array}{ll}
+  0 & \mbox{if $V_{GS}<V_T$\  (cutoff)} \\
+  K(V_{GS}-V_T)^2 & \mbox{if $V_{GS}\ge V_T$\  (conducting)}
+\end{array} \right.
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img612.svg"
+ ALT="$\displaystyle I_D=\left\{ \begin{array}{ll}
+0 &amp; \mbox{if $V_{GS}&lt;V_T$\ (cutoff)...
+...
+K(V_{GS}-V_T)^2 &amp; \mbox{if $V_{GS}\ge V_T$\ (conducting)}
+\end{array} \right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">152</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/MOSFET3.gif"
+ ALT="MOSFET3.gif">
+
+<P>
+The current <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img28.svg"
+ ALT="$I_D$"></SPAN> is affected by voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img613.svg"
+ ALT="$V_{DS}$"></SPAN> as well as <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img610.svg"
+ ALT="$V_{GS}$"></SPAN>. It can
+therefore considered as a function <!-- MATH
+ $I_D(V_{GS},\,V_{DS})$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img614.svg"
+ ALT="$I_D(V_{GS},\,V_{DS})$"></SPAN> of both <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img610.svg"
+ ALT="$V_{GS}$"></SPAN> and 
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img613.svg"
+ ALT="$V_{DS}$"></SPAN> plotted below (similar to a bipolar transistor <!-- MATH
+ $I_C=f(I_B,\,V_{CE})$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img615.svg"
+ ALT="$I_C=f(I_B,\,V_{CE})$"></SPAN>):
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/MOSFETplots.gif"
+ ALT="MOSFETplots.gif">
+
+<P>
+This function can be divided into three different regions:
+
+<P>
+
+<UL>
+<LI><B>Cutoff region:</B> 
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_{GS} < V_T
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img616.svg"
+ ALT="$\displaystyle V_{GS} &lt; V_T$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">153</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+where <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img517.svg"
+ ALT="$V_T$"></SPAN> is a threshold voltage, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img25.svg"
+ ALT="$I_D=0$"></SPAN>, i.e., no current
+    flows through S and D (due to the two back-to-back PN-junctions).
+
+<P>
+</LI>
+<LI><B>Triode region:</B> 
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_{GS}>V_T\;\;\;\;\;\;\mbox{and}\;\;\;\;\;\;V_{GD}=V_{GS}-V_{DS}>V_T
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img617.svg"
+ ALT="$\displaystyle V_{GS}&gt;V_T\;\;\;\;\;\;$">and<IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img618.svg"
+ ALT="$\displaystyle \;\;\;\;\;\;V_{GD}=V_{GS}-V_{DS}&gt;V_T$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">154</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Voltages <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img610.svg"
+ ALT="$V_{GS}$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img619.svg"
+ ALT="$V_{GD}$"></SPAN> at both the S and D ends of the 
+    inversion layer exceeds <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img517.svg"
+ ALT="$V_T$"></SPAN>, some electrons in the P-type 
+    substrate  (minority carriers) are pulled toward the gate to 
+    form an inversion layer close to the gate to form an N-type 
+    channel with certain resistance between S and D. <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img28.svg"
+ ALT="$I_D$"></SPAN> 
+    increases linearly as <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img613.svg"
+ ALT="$V_{DS}$"></SPAN> increases, with a coefficient 
+    <!-- MATH
+ $\Delta V_{DS}/\Delta I_D$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img620.svg"
+ ALT="$\Delta V_{DS}/\Delta I_D$"></SPAN> (Ohm's law), and nonlinearly as <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img610.svg"
+ ALT="$V_{GS}$"></SPAN> 
+    increases (to pull more electrons toward the gate to enhance the 
+    conductivity of the n-channel). Note that as <!-- MATH
+ $V_{GS}>V_{GD}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img621.svg"
+ ALT="$V_{GS}&gt;V_{GD}$"></SPAN>, the 
+    inversion layer is narrower at the D end than the S end.
+
+<P>
+</LI>
+<LI><B>Saturation region:</B> 
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_{GS}>V_T\;\;\;\;\;\;\mbox{but}\;\;\;\;\; V_{GD}=V_{GS}-V_{DS}<V_T
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img617.svg"
+ ALT="$\displaystyle V_{GS}&gt;V_T\;\;\;\;\;\;$">but<IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img622.svg"
+ ALT="$\displaystyle \;\;\;\;\; V_{GD}=V_{GS}-V_{DS}&lt;V_T$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">155</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img610.svg"
+ ALT="$V_{GS}$"></SPAN> at the S end exceeds <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img517.svg"
+ ALT="$V_T$"></SPAN>, but <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img619.svg"
+ ALT="$V_{GD}$"></SPAN> at the D
+    end is lower than <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img517.svg"
+ ALT="$V_T$"></SPAN>. On the one hand, the increased voltage 
+    <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img613.svg"
+ ALT="$V_{DS}$"></SPAN> tends to increase <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img28.svg"
+ ALT="$I_D$"></SPAN>, on the other hand, the reduced 
+    <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img619.svg"
+ ALT="$V_{GD}$"></SPAN> makes the inversion layer at the D end narrow to the extend
+    that it is nearly closed (<EM>pinch-off</EM>). As the result, higher 
+    voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img613.svg"
+ ALT="$V_{DS}$"></SPAN> does not  cause more current <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img28.svg"
+ ALT="$I_D$"></SPAN> (saturated), and 
+    it is only affected by <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img610.svg"
+ ALT="$V_{GS}$"></SPAN>.
+ 
+</LI>
+</UL>
+
+<P>
+In the plot of <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img28.svg"
+ ALT="$I_D$"></SPAN> vs <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img613.svg"
+ ALT="$V_{DS}$"></SPAN>, the triode region and the saturation
+region are separated by the curve of <!-- MATH
+ $V_{GD}=V_{GS}-V_{DS}=V_T$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img623.svg"
+ ALT="$V_{GD}=V_{GS}-V_{DS}=V_T$"></SPAN>. 
+
+<P>
+<B>Example:</B> Assume <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img624.svg"
+ ALT="$V_T=1V$"></SPAN>.
+
+<UL>
+<LI>when <!-- MATH
+ $V_{GS}<V_T=1V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img625.svg"
+ ALT="$V_{GS}&lt;V_T=1V$"></SPAN>, the MOSFET is in cutoff region with <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img25.svg"
+ ALT="$I_D=0$"></SPAN> 
+  independent of <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img613.svg"
+ ALT="$V_{DS}$"></SPAN>.
+</LI>
+<LI>when <!-- MATH
+ $V_{GS}=2V > V_T=1V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img626.svg"
+ ALT="$V_{GS}=2V &gt; V_T=1V$"></SPAN> and <!-- MATH
+ $V_{DS}<V_{GS}-V_T=1V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img627.svg"
+ ALT="$V_{DS}&lt;V_{GS}-V_T=1V$"></SPAN>, the MOSFET is in 
+  linear or triode region with <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img28.svg"
+ ALT="$I_D$"></SPAN> affected by both <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img610.svg"
+ ALT="$V_{GS}$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img613.svg"
+ ALT="$V_{DS}$"></SPAN>.
+</LI>
+<LI>when <!-- MATH
+ $V_{DS}>V_{GS}-V_T=1V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img628.svg"
+ ALT="$V_{DS}&gt;V_{GS}-V_T=1V$"></SPAN>, the MOSFET is in saturation region with
+  <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img28.svg"
+ ALT="$I_D$"></SPAN> determined only by <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img610.svg"
+ ALT="$V_{GS}$"></SPAN>.
+</LI>
+</UL>
+
+<P>
+<B>Example:</B> Assume <!-- MATH
+ $K=2 mA/V^2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img629.svg"
+ ALT="$K=2 mA/V^2$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img624.svg"
+ ALT="$V_T=1V$"></SPAN>, and both MOSFETs in the
+following circuit are in the saturation region. Find output voltage <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img630.svg"
+ ALT="$V$"></SPAN>.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/MOSFETexample1.gif"
+ ALT="MOSFETexample1.gif">
+
+<P>
+Since both MOSFETs are in saturation region with the same <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img28.svg"
+ ALT="$I_D$"></SPAN> which is
+determined only by <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img610.svg"
+ ALT="$V_{GS}$"></SPAN> but independent of <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img613.svg"
+ ALT="$V_{DS}$"></SPAN>, their <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img610.svg"
+ ALT="$V_{GS}$"></SPAN> must 
+be the same. The upper MOSFET must have the same <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img610.svg"
+ ALT="$V_{GS}$"></SPAN> as the lower one 
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img631.svg"
+ ALT="$V_{GS}=2V$"></SPAN>, i.e., the output voltage has to be <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img632.svg"
+ ALT="$3V$"></SPAN>.
+
+<P>
+<B>Comparison between BJT and FET</B>
+
+<P>
+
+<UL>
+<LI>BJT has a low input resistance <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img360.svg"
+ ALT="$r_{in}$"></SPAN>. But as MOSFET's gate is
+  insulated from the channel (<!-- MATH
+ $r_{in}>10^{11} \Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.46ex; " SRC="img633.svg"
+ ALT="$r_{in}&gt;10^{11} \Omega$"></SPAN>), it draws virtually
+  no input current and therefore its input resistance is infinity in theory.
+</LI>
+<LI>BJT is current (<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img79.svg"
+ ALT="$I_B$"></SPAN> or <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img81.svg"
+ ALT="$I_E$"></SPAN>) controlled, but MOSFET is voltage 
+  (<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img610.svg"
+ ALT="$V_{GS}$"></SPAN>) controlled. Consequently, the power consumption of MOSFETs 
+  is lower than BJTs.
+</LI>
+<LI>MOSFETs are easy to fabricate in large scale and have higher element
+  density than BJTs.
+</LI>
+<LI>MOSFETs have thin insulation layer which is more prone to statics
+  and requires special protection. 
+</LI>
+<LI>BJTs have higher cutoff frequency and higher maximum current than 
+  MOSFETs.
+</LI>
+<LI>MOSFETs are much more widely used (especially in computers and 
+  digital systems) than BJTs.
+</LI>
+<LI>Both majority and minority carriers are used in BJTs, but only 
+  majority carriers are used in FETs. Consequently FETs have better
+  temperature stability (minority carriers are more sensitive to
+  temperature).
+
+<P>
+</LI>
+</UL>
+
+<P>
+The BJT and FET can be compared with the old technology of 
+<A ID="tex2html27"
+  HREF="http://en.wikipedia.org/wiki/Vacuum_tube">vacuum tube</A>.
+Although the specific physics of each of these devices is quite different 
+from others, the working principles of these devices are essentially the 
+same. In all three devices, a small AC input voltage (signal) is applied
+to the input terminal of the device (base, gate, or grid) to control the
+current that flows through the device (from collector, drain, or plate to 
+emitter, source, or cathode, respectively), causing a much amplified voltage
+to appear at the output terminal (collector, drain, or plate) of the device.
+
+<P>
+<IMG STYLE="" SRC="../figures/tube.png"
+ ALT="tube.png">
+<IMG STYLE="" SRC="../figures/tubePlot.png"
+ ALT="tubePlot.png">
+<IMG STYLE="" SRC="../figures/tubeAmplifier.png"
+ ALT="tubeAmplifier.png">
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node14.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="ch4.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node12.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node14.html">MOSFET Amplifier</A>
+<B> Up:</B> <A
+ HREF="ch4.html">ch4</A>
+<B> Previous:</B> <A
+ HREF="node12.html">Colpitts Oscillators</A></DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

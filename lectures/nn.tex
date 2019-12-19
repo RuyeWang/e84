@@ -1,0 +1,1008 @@
+\documentstyle[12pt]{article}
+
+\begin{document}
+\usepackage{html}
+\section*{Introduction to Neural Networks}
+
+
+
+\subsection*{Biological and artificial networks}
+
+{\bf The Brain:}
+	
+	consists of $10^{12}$ nerve cells (also called neurons) interconnected 
+	through about $10^{15}$ {\em synaptic junctions} to form millions of
+	neural networks. Hundreds specialized cortical areas are formed based
+	on these networks for different information processing tasks;
+
+{\bf The Neuron:}
+
+	\begin{itemize}
+	\item {\em Dendrites:}		
+
+	conduct impulses (inputs) from other cells toward the cell body;
+	\item {\em Axon:}
+
+	conducts impulses (output) away from the cell body to other cells; 
+
+	\item {\em Synapse:}
+
+	the point at which impulses pass from one cell to another;
+
+	\end{itemize}
+
+	See \htmladdnormallink{additional notes}{../../../e180/handouts/signal1/index.html}
+
+{\bf Model of neuron:}
+
+	A neuron is modeled mathematically as the following:
+
+	\begin{itemize}
+	\item {\bf activation -- the net input signal:}
+
+	The net input to the ith node is a weighted sum of all inputs:
+	\[	net_i=\sum_j w_{ij} x_j	\]
+	where $o_j$ is the input signal from the jth node, $w_{ij}$ is
+	the synaptic connectivity between the jth node and the ith node.
+
+	\[	w_{ij}=\left\{ \begin{array}{ll}
+			> 0	& excitatory\;\;input	\\
+			< 0	& inhibitory\;\;input	\\
+			= 0	& no\;\;connection
+			\end{array} \right.
+	\]
+
+	\item {\bf the output signal:}
+
+	The output of the ith node is a function of the net input:
+
+	\[ 	y_i=f(net_i)=f(\sum_j w_{ij} x_j)	\]
+	where the function $f$ can be a sigmoid, a threshold function,
+	or an identical function.
+
+	\end{itemize}
+
+{\bf Model of neural network:}
+
+\htmladdimg{../figures/threelayernet.gif}
+
+	The artificial neural network is a group of neurons organized in
+	several layers:
+
+	\begin{itemize}
+	\item {\em input layer:} receives inputs from sources external to the
+		network;
+	\item {\em output layer:} generates outputs to the external world.
+
+	\item {\em hidden layer(s):} layers in between of the input and output
+		layers, not visible from outside the network.
+	\item {\em learning laws:} mathematical rules for modifying the
+		weights of a network iteratively according the inputs (and
+		outputs if the learning is supervised).
+	\end{itemize}
+
+{\bf Computation}
+
+Assume a simple 2-layer network has $n$ input nodes receiving stimuli (input 
+patterns) $X=[x_1,\cdots,x_n]^T$ and $m$ output nodes generating responses
+(output patterns)  $Y=[y_1,\cdots,y_m]^T$. Also assume the output function
+$f$ is an identical function. Then the output of the ith output node is:
+\[	y_i=\sum_{j=1}^n w_{ij} x_j=W_i^T X \;\;\;\;\;(i=1,\cdots,m) \]
+where
+\[	W_i\stackrel{\triangle}{=}[w_{i1},\cdots,w_{in} ]^T	\]
+is a weight vector formed by all the weights leading from the $n$ input nodes 
+to the ith output node.
+
+The output $Y$ can also be represented in the matrix form:
+\[	Y=WX	\]
+where $W$ is the weight matrix
+\[	W=\left[ \begin{array}{c}
+		W_1^T	\\ \cdots \\ \cdots \\ W_m^T \end{array} \right]
+	=\left[ \begin{array}{cccc}
+		w_{11} & w_{12} & \cdots & w_{1n} \\
+		w_{21} & w_{22} & \cdots & w_{2n} \\
+		\cdots & \cdots & \cdots & \cdots \\
+		w_{m1} & w_{m2} & \cdots & w_{mn} \\
+	\end{array} \right]_{m \times n}
+\]
+
+
+\newpage
+\subsection*{Paradigms of Learning}
+
+\begin{enumerate}
+\item {\bf Pattern Associator}
+	
+	{\bf Training (supervised):}
+	
+	A set of pairs of patterns $\{(X_i, Y_i), i=1,2, \cdots, L\}$
+	is repeatedly presented to the NN which then learns to establish
+	the relationship (association) between two sets of patterns:
+	\[	f: X \in R^n \rightarrow Y \in R^m	\]
+	i.e., the associtive relationship between the two patterns of 
+	the pairs is stored in the NN.
+
+	{\bf Testing:}
+
+	When one pattern in a pair is presented, the NN will produce the 
+	other.
+
+\item {\bf Autoassociator}
+
+	{\bf Training:}
+
+	A set of patterns $\{X_i, i=1,2, \cdots, L\}$ is repeatedly presented
+	to the NN which learns and remembers them, i.e., the patterns are 
+	stored in the NN.
+
+	{\bf Testing:}
+
+	When part of a pattern, or a similar pattern (pattern with noise)
+	is presented to the NN, the complete original pattern will be
+	retrieved through pattern completion by the NN.
+
+\item {\bf Pattern Classifier}
+
+	This is a variation of the first type of NN. The input patterns
+	are classified by the NN into a set of classes (represented by
+	names or any other symbols). This can be considered as a special
+	type of mapping:
+\[	f: X \in R^n \rightarrow \omega_i \in \{\omega_1, \cdots, \omega_m\} \]
+
+\item {\bf Regularity Detector}	
+
+	The NN discovers the regularity in the inputs so that patterns of
+	various types can be automatically detected and classified into a 
+	set of classes.	This is an unsupervised learning process.
+
+\end{enumerate}
+
+Examples of association:
+\begin{itemize}
+	\item $X_1$: Evolution $\rightarrow$ $Y_1$: Darwin
+	\item $X_2$: Einstein $\rightarrow$ $Y_2$: $E=mc^2$
+	\item $X_3$: sounding bell $\rightarrow$ $Y_3$: food
+\end{itemize}
+
+\newpage
+\subsection*{Hebb's Learning}
+
+Donald Hebb (Canadian Psychologist) speculated in 1949 that 
+\begin{quote}
+``When neuron A repeatedly and persistently takes part in exciting neuron B, 
+the synaptic connection from A to B will be strengthened.'' 
+\end{quote}
+So a Hebbian network can be used as an associator which will establish the 
+association between two sets of patterns
+$\{X_i,\;\;i=1,\cdots,L \}$ and $\{Y_i,\;\;j=1,\cdots,L\}$.
+
+An explanation of the classical conditioning  (Pavlov, 1927):
+
+\begin{itemize}
+	\item F: sight of food -- unconditioned stimulus
+	\item B: sound of bell -- conditioned stimulus
+	\item S: Salivation -- response
+\end{itemize}
+
+\[	(F \rightarrow S) \Rightarrow (F \cap B \rightarrow S) \Rightarrow 
+	(B \rightarrow S)
+\]
+Synaptic connections between pattern B and pattern S are strengthened as both 
+are repeatedly excited simultaneously. 
+
+{\bf The structure}
+
+\htmladdimg{../figures/twolayernet.gif}
+	
+The Hebbian network model has an n-node input layer $X=[x_1,\cdots,x_n]^T$ and 
+an m-node output layer $Y=[y_1,\cdots,y_m]^T$. Each output node is connected
+to all input nodes:
+\[	y_i=\sum_{j=1}^n w_{ij} x_j\;\;\;\;\;(i=1,\cdots,m)	\]
+or in matrix form, we have
+\[	Y=WX	\]
+
+{\bf The learning law}
+
+\[
+w_{ij}^{new}=w_{ij}^{old}+\eta x_j y_i\;\;\;\;(i=1,\cdots,n,\;j=1,\cdots,m)
+\]
+or in matrix form:
+\[	W^{new}=W^{old}+\eta Y X^T	\]
+Here $\eta$ is the learning rate, a parameter controlling how fast the
+weights get modified. Note that the weight matrix is symmetric: $W^T=W$.
+
+{\bf Training}
+
+If we assume $w_{ij}=0$ initially, $\eta=1$ and a set of $L$ pairs of patterns 
+$\{ (X_k,Y_k),\;\;k=1,\cdots,L \}$ are presented repeatedly during training,
+we have
+\[ w_{ij}=\sum_{k=1}^Lx_j^{(k)}y_i^{(k)}\;\;\;\;(i,j=1,\cdots,n,
+	\;\;j=1,\cdots,m) \]
+or in matrix form, the weight matrix is the sum of the outer-products of all
+$L$ pairs of patterns:
+\[	W=\sum_{k=1}^L Y_k X_k^T = \sum_{k=1}^L 
+   \left[ \begin{array}{c} y_1^{(k)} \\ \cdots \\ y_n^{(k)} \end{array} \right]
+   [ x_1^{(k)}, \cdots, x_n^{(k)} ]	\]
+
+{\bf Classification}
+
+When presented with one of the patterns $X_l$, the network will produce the 
+output:
+\[
+Y=WX_l=(\sum_{k=1}^L Y_k X_k^T)\;X_l=Y_l(X_l^TX_l)+\sum_{k\neq l}Y_k(X_k^TX_l)
+\]
+To interpret the output pattern $Y$, we first consider the ideal case where the
+following two conditions are satisfied:
+\begin{itemize}
+\item $X's$ are orthogonal to each other:
+\[	X_i^TX_j=|X_i| |X_j| cos \phi 
+	= \delta_{ij}=\left\{ \begin{array}{ll} 1 & i=j \\ 0 & i\ne j \end{array} 
+	\right. \]
+	where $|X_i|$ is the length of vector $X_i$ and $\phi$ is the angle between
+	vectors $X_i$ and $X_j$.
+
+This condition implies that the $L$ input patterns are totally unrelated 
+to each	other. Intuitively, how much two vectors are related to each other
+can be measured by the angle $\phi$ between them. If $\phi$ is close to 0
+the two vectors are closely related, because their elements are very similar
+to each other so that they almost coincide. When negative values are allowed 
+for the elements and $\phi$ is close to 180 degrees, the vectors are also 
+highly related because their elements are the opposite of each other. In 
+either case, the $cos \phi$ is close to 1 and the inner product is maximinzed
+indicating that the two vectors are either positively or negatively related 
+to each other. On the other hand, if the two vectors are perpendicular to each
+other ($\phi=\pi/2$, $cos \phi = 0$), the inner product of the two vectors is
+very small or even zero indicating the elements of the a vector are irrelevant
+to those of the other vector.
+
+How much two patterns $X$ and $Y$ are related to each other can also be measured
+quantitatively, we define {\em correlation coefficient} as:
+	\[ r_{xy}\stackrel{\triangle}{=}\frac{\sum_i x_i y_i}
+	{\sqrt{\sum_i x_i^2}\sqrt{\sum_i y_i^2} }	\]
+$r_{xy}$ is the inner product of 2 normalized vectors representing 2 patterns
+in the n-D feature space, and can take the following values
+
+\begin{tabular}{l|l}	\hline
+$ 0 < r_{xy} \leq 1$ &  if $X$ and $Y$ are positively correlated ($r_{xy}=1$ iff $X=Y$)	
+\\ \hline
+$ r_{xy} =0 $ 	     &  if $X$ and $Y$ are not correlated\\ \hline
+$ -1<r_{xy} \leq 0 $ &  if $X$ and $Y$ are negatively correlated ($r_{xy}=-1$ iff $X=-Y$) 
+\\ \hline
+\end{tabular} 
+
+\vskip 0.3in
+
+In other words, if $X$ and $Y$ are totally unrelated, then $r_{xy}=0$ and they
+are orthogonal to each other.
+
+\item The number of pattern pairs is smaller than the number of input nodes:
+	\[	L \leq n	\]
+
+This condition implies that the capacity of the network (n input nodes) 
+is large enough for representing $L$ different patterns. This can be 
+translated into mathematical language that there can be no more than $n$
+orthogonal vectors in an n-D space. 
+
+\end{itemize}
+
+If these conditions are true, then the response of the network to $X_l$ will 
+be 
+\[ Y=Y_l(X_l^TX_l)+\sum_{k\neq l}Y_k(X_k^TX_l)=Y_l \]
+because all other terms ($k \ne l$) are zero:
+\[	X_k^T X_l=0\;\;\;\;for\;\;all\;\;k \neq l	\]
+In other words, a one-to-one correspondence relationship between $X_i$ and 
+$Y_i$ has been established for all $i=1,\cdots,L$.
+In non-ideal case, the summation term (called cross talk) is non-zero and
+we have an error $Y-Y_l \neq 0$.
+
+Although two patterns $X=B$ and $Y=S$ don't have causal relationship (as $S$ is
+caused by another pattern $F$), but if they always appear simultaneously,
+an association relationship can be established in the Hebbian network.
+
+
+\newpage
+\subsection*{Hopfield Network}
+
+Hopfield network (Hopfield 1982) is {\em recurrent} network composed of a 
+set of $n$ nodes and behaves as an autoassociator (content addressable 
+memory) with a set of $L$ patterns $\{ Y_k,\;\;\;\;k=1,\cdots,L\}$ stored 
+in it. The network is first trained and then used as a two-phase process. 
+After the training (similar to Hebbean learning), the network can be used 
+as a pattern autoassociator. When the incomplete or noisy version of one 
+of the stored patterns is presented as the input, the complete pattern will
+be generated as the output.
+
+\htmladdimg{../figures/recurrentnet.gif}
+
+Presented with a new input pattern (e.g., noisy, incomplete version of some 
+prestored pattern) $Y_k$:
+
+\[ Y_k=[y_1^{(k)},\cdots, y_n^{(k)}]^T\;\;\;\;\;\;\;\;\;\;y_i \in\{-1,\;1\} \]
+
+the network responds by iteratively updating its output 
+
+\[ X=[x_1,\cdots, x_n]^T\;\;\;\;\;\;\;\;\;\;x_i \in\{-1,\;1\} \]
+
+until finally convergence is reached when one of the stored patterns which
+most closely resembles $X$ is produced as the output.
+
+
+{\bf The weights and the outputs}
+
+The network trained by Hebbian learning and the weight matrix is obtained as
+the sum of the outer-products of the $L$ patterns to be stored:
+\[	W=\frac{1}{n}\sum_{k=1}^L X_k X_k^T= \frac{1}{n}\sum_{k=1}^L 
+   \left[ \begin{array}{c} x_1^{(k)} \\ \cdots \\ x_n^{(k)} \end{array} \right]
+   [ x_1^{(k)}, \cdots, x_n^{(k)} ]	\]
+Equivalently, the weight connecting node i and node j is
+\[	w_{ij}=\frac{1}{n}\sum_{k=1}^L x_i^{(k)} x_j^{(k)}=w_{ji}	\]
+And we assume no self-connection exists
+\[	w_{ii}=0 \;\;\;\;\;(i=1,\cdots,n)	\]
+
+The training process is essentially the same as Hebbian learning, except here
+the two associated patterns $X_k$ and $Y_k$ in each pair are the same 
+(self-association) and the input and output patterns all have the same
+dimensionality.
+
+After an input pattern, an $n$ dimensional vector $X$, is presented to the 
+$n$ nodes of the network, the outputs $x_i$ are updated {\em iteratively} and 
+{\em asynchronously}. Only one of the $n$ nodes randomly selected is updated 
+at a time:
+\[	x'_i=sgn(\sum_{j=1}^n w_{ij}x_j)	\]
+where $x'_i$ represents the new output of the ith node, and
+\[	sgn(x)\stackrel{\triangle}{=}\left\{ \begin{array}{ll} 
+		+1 & x \geq 0 \\ -1 & x < 0 \end{array} \right.
+\]
+We will show later that the iteration will always converge to produce one of 
+the stored patterns as the output.
+
+{\bf Energy function}
+
+The {\em energy} of a pair of nodes i and j is defined as
+\[	e_{ij}\stackrel{\triangle}{=}-w_{ij}x_ix_j	\]
+and the interaction between these two nodes can be summarized by this table
+
+\[
+\begin{tabular}{ r | r | c | c} \hline
+	$x_i$	& $x_j$	& $w_{ij}>0$ 	& $w_{ij}<0$	\\  \hline
+	-1	& -1	& $e_{ij}<0$	& $e_{ij}>0$	\\
+	-1	&  1	& $e_{ij}>0$	& $e_{ij}<0$	\\
+	 1	& -1	& $e_{ij}>0$	& $e_{ij}<0$	\\
+	 1	&  1	& $e_{ij}<0$	& $e_{ij}>0$	\\  \hline
+\end{tabular}
+\]
+
+We see that whenever the two nodes are reinforcing each other's state (e.g.,
+in the last row when $w_{ij}>0$, $x_i=1$ will help keep $x_j$ to stay at state
+1 and vice versa), the energy is negative; and whenever the two nodes are 
+trying to change each other's state (e.g., in the same row when $w_{ij}<0$, 
+$x_i=1$ will tend to reverse $x_j$ from 1 to -1 and vice versa), the energy is
+positive. In other words, low energy level of $e_{ij}$ corresponds to a stable
+interaction between $x_i$ and $x_j$, and high energy level corresponds to an
+unstable interaction.
+
+The {\em energy function} $E(X)$ of all $n$ nodes in the network is defined as
+the sum of all the pair-wise energies:
+\[
+E(X) \stackrel{\triangle}{=} \sum_{i>j} e_{ij}=-\sum_{i>j} \; w_{ij}x_ix_j
+	 \stackrel{*}{=} -\frac{1}{2}\sum_{i=1}^{n} \sum_{j=1}^{n} w_{ij} x_i x_j 
+\]
+(* $w_{ij}=w_{ji}$)
+
+Again, lower energy function level corresponds to more stable condition of 
+the network, and vice versa.
+
+{\bf The iteration and convergence}
+
+Here we show that the total energy $E(X)$ always decreases whenever the state 
+of any node changes. Assume $x_k$ has just been updated, i.e., $x'_k \neq x_k$ 
+while all others remain the same $x'_{l \neq k} = x_{l \neq k}$. The energy 
+before $x_k$ changes state is
+\[ 
+E(X)	= -\frac{1}{2}[ \sum_{i\neq k}\sum_{j\neq k}w_{ij}x_ix_j
+	+ \sum_i w_{ik}x_ix_k + \sum_j w_{kj}x_kx_j ]
+	= -\frac{1}{2} \sum_{i\neq k}\sum_{j\neq k}w_{ij}x_ix_j
+	- \sum_i w_{ik}x_ix_k 
+\]
+Similarly, the energy after $x_k$ changes state is
+\[	E'(X)= -\frac{1}{2} \sum_{i\neq k}\sum_{j\neq k}w_{ij}x_ix_j
+	- \sum_i w_{ik}x_ix'_k 
+\]
+The energy difference is
+\[	\bigtriangleup E\stackrel{\triangle}{=}E'(X)-E(X)
+	=-(x'_k-x_k) \sum_i w_{ik}x_i=(x_k-x'_k) \sum_i w_{ik}x_i
+\]
+Consider two cases:
+\begin{itemize}
+\item	case 1:  if $\sum_i w_{ik}x_i \geq 0$, then $x'_k=1$, we have 
+	$(x_k-x'_k) \le 0$ and $\bigtriangleup E \leq 0$.
+\item	case 2:  if $\sum_i w_{ik}x_i < 0$, then $x'_k=-1$, we have 
+	$(x_k-x'_k) \ge 0$ and $\bigtriangleup E \leq 0$.
+\end{itemize}
+As $\bigtriangleup E(X) \leq 0$ is always true throughout the iteration,
+(and also note the magnitude of $E(X)$ is finite), we conclude that the energy 
+function $E(X)$ will eventually reach one of the minima of the ``energy 
+landscape'' and, therefore, the iteration will always converge.
+
+{\bf Retrieval of stored patterns}
+
+Here we show the $L$ pre-stored patterns correspond to the minima of the 
+energy function. First recall the weights of the network are obtained by
+Hebbian learning:
+\[	w_{ij}=\frac{1}{n}\sum_{k=1}^L y_i^{(k)} y_j^{(k)}	\]
+the energy function $E(X)$ can now be written as
+\begin{eqnarray}
+E(X) & = & -\frac{1}{2n}\sum_i \sum_j [\sum_{k=1}^L y_i^{(k)} y_j^{(k)}] x_i x_j
+	= -\frac{1}{2n}\sum_{k=1}^L [\sum_i \sum_j y_i^{(k)} x_i y_j^{(k)} x_j]
+		\nonumber	\\ 
+  & = & -\frac{1}{2n}\sum_{k=1}^L [ (\sum_i y_i^{(k)} x_i) (\sum_j y_j^{(k)} x_j)]
+		= -\frac{1}{2n}\sum_{k=1}^L [ (\sum_i y_i^{(k)} x_i)^2 ]
+		\nonumber 	
+\end{eqnarray}
+
+If $X$ is different from any of the stored patterns, all $L$ terms of the 
+summation will contribute to the sum only moderately. However, if $X$ is the 
+same as any of the stored patterns, their inner product reaches maximum, and 
+thus causing the total energy to be minimized to reach one of the minima.
+In other words, the patterns stored in the net correspond to the local minima 
+of the energy function. i.e., these patterns become attractors. 
+ 
+Note that it is possible to have other local minima, called {\em spurious 
+states}, which do not represent any of the stored patterns, i.e., the 
+associative memory is not perfect.
+
+
+\newpage
+\subsection*{Perceptron Learning}
+
+A perceptron network (F. Rosenblatt, 1957) also has 2 layers as in the
+previous Hebb's network, except the learning law is different. We first 
+consider one of the output nodes:
+
+\vskip 2in
+
+In addition to the n inputs $x_i\;\;(i=1,\cdots,n)$, the output node also
+receives an input $y$ representing the desired output for the current input 
+used for training. The node generates its output $y'$:
+\[	y'=\left\{ \begin{array}{ll} 1 & if\;\;X^TW \geq 0 \\ 0 & if\;\;X^TW<0
+		\end{array} \right.
+\]
+Here both $y$ and $y'$ are binary:
+\[	y \in \{ 0,1\},\;\;\;\;\;\;\;y' \in \{0,1\}	\]
+and this simple network is a 2-class classifier.
+
+{\bf The learning law}
+
+\[	W^{new}=W^{old}+\triangle W=W^{old}+\eta (y-y')X	\]
+where
+\[	\triangle W\stackrel{\triangle}{=}\eta(y-y')X=\eta \delta X	\]
+
+Here $\delta\stackrel{\triangle}{=}y-y'$ represents the error, the difference 
+between the actual output and the desired output. And the learning law is 
+called the $\delta$-rule.
+
+\newpage
+How the learning law works can be shown by the following 2 cases:
+\begin{itemize}
+\item If $X^TW^{old}>0$ and therefore $y'=1$, but $y=0$, then $\delta=-1$ and
+	\[ W^{new}=W^{old}-\eta X	\]
+	so that next time when the same $X$ is presented, $y'$ will be more 
+	likely to be 0 as desired because:
+	\[	X^TW^{new}=X^TW^{old}-\eta X^TX < X^TW^{old}	\]
+\item If $X^TW^{old}<0$ and therefore $y'=0$, but $y=1$, then $\delta=1$ and
+	\[ W^{new}=W^{old}+\eta X	\]
+	so that next time when the same $X$ is presented, $y'$ will be more 
+	likely to be 1 as desired because:
+	\[	X^TW^{new}=X^TW^{old}+\eta X^TX > X^TW^{old}	\]
+\end{itemize}
+
+{\bf Perceptron convergence theorem:}
+
+\begin{quote}
+	If $\omega_1$ and $\omega_2$ are two linearly separable clusters of
+	patterns, then a perceptron will develop a $W$ in finite number of 
+	training trials to classify them.
+\end{quote}
+
+The condition of linear separability is obvious as the output node of the
+perceptron network is only capable of linear operations. When multiple output
+nodes are available, the network can associate multiple classes to different
+binary output patterns.
+
+
+\newpage
+\subsection*{Constraint of linear classifier}
+
+The use of linear classifier is limited, as shown by the following 
+example. Consider a 2-class problem in a 2D feature space as shown:
+
+
+\newpage
+\subsection*{Back Propagation Network (BPN)}
+
+\htmladdimg{../figures/threelayernet.gif}
+
+\subsubsection*{The basic idea}
+
+This is a typical supervised learning network, composed of input, hidden and 
+output layers with n, l, m nodes, respectively. Each node is fully connected 
+to all nodes in the previous layer.
+
+\vskip 2in
+
+The two phase classification:
+\begin{itemize}
+\item {\bf Training:}  The training data are a set of pattern pairs 
+	$\{(X_p, Y_p), p=1,2,...,L\}$, where $X_p$'s are the input patterns 
+	and $Y_p$'s are the desired output patterns --- the correct responses.
+
+	In training phase the following two steps are repeated for all input
+	patterns presented to the input layer in random order:
+\begin{itemize}
+	\item Present an input pattern $X$ to the input layer and generate
+		the output $Y'$ at the output layer, which is compared with
+		the desired output $Y$ to find the error $E=Y-Y'$;
+	\item Propagate the error backwards from the output layer to input
+		layer to modify the weights so that the error, as a function
+		of the weights, can be minimized.
+\end{itemize}
+
+The weights are updated iteratively until eventually every input pattern 
+presented to the input layer will cause the correct response pattern to appear
+at the output layer. 
+
+\item {\bf Classification} The network responds to various input patterns
+	by generating the patterns associated to the input.
+
+\end{itemize}
+
+\subsubsection*{Derivation of training}
+
+The following is the 2-step training process for a particular pattern pair 
+$(X_p, Y_p)$.
+ 
+\begin{itemize}
+\item Define error energy $E_p$ at the output layer:
+	\[	
+	E_p=\frac{1}{2}\sum_{i=1}^m (y_{pi}-y'_{pi})^2=\frac{1}{2} \sum_{i=1}^m (\delta_{pi}^{o})^2
+	\]
+	where
+	\[
+	\delta_{pi}^{o} \stackrel{\triangle}{=}y_{pi}-y'_{pi}
+	\]
+	$y_{pi}$ is the desired output, and $y'_{pi}$ is the actual output
+	\[
+	y'_{pi}=f(net_{pi})=f(\sum_{j=1}^l w^{o}_{ij} z_{pj}+T_i)
+	\]
+\item Find gradient of $E_p$ in output weight space $\{w_{ij}^{o}\}$:
+	\[
+	\frac{\partial E_p}{\partial w_{ij}^{o}}
+	=\frac{\partial E_p}{\partial y'_{pi}}\;
+	 \frac{\partial y'_{pi}}{\partial net_{pi}}\;
+	 \frac{\partial net_{pi}}{\partial w_{ij}^{o}}
+	=-\delta_{pi}^{o}\;f'(net_{pi})\;z_{pj}
+	\]
+\item Update $w_{ij}^{o}$ to minimize $E_p$ with gradient descent method:
+	\[
+	w_{ij}^{o(new)}
+	=w_{ij}^{o(old)}+\Delta w_{ij}^{o}
+	=w_{ij}^{o(old)} -\eta \frac{\partial E_p}{\partial w_{ij}^{o}}
+	\]
+	where
+	\[	
+	\Delta w_{ij}^{o}\stackrel{\triangle}{=}-\eta \frac{\partial E_p}{\partial w_{ij}^{o}}
+	\]
+	and $\eta$ is the learning rate.
+\item Relate $E_p$ to the hidden layer weights $w_{jk}^{h}$
+	\begin{eqnarray}
+	E_p & = & \frac{1}{2}\sum_{i=1}^m(y_{pi}-y'_{pi})^2 \nonumber \\
+ 	    & = & \frac{1}{2}\sum_{i=1}^m(y_{pi}-f(\sum_{j=1}^lw_{ij}^{o}z_{pj}+T_i))^2
+		 \nonumber \\
+	  & = & \frac{1}{2}\sum_{i=1}^m(y_{pi}-f(\sum_{j=1}^lw_{ij}^{o}f(net_{pj})+T_i))^2
+		 \nonumber \\
+	  & = & \frac{1}{2}\sum_{i=1}^m(y_{pi}-f(\sum_{j=1}^lw_{ij}^{o}f(\sum_{k=1}^nw_{jk}^{h}x_{pk}+T_j)+T_i))^2
+		\nonumber
+	\end{eqnarray}
+\item Find gradient of $E_p$ in hidden weight space $\{w_{jk}^{h}\}$:
+	\begin{eqnarray}
+	\frac{\partial E_p}{\partial w_{jk}^{h}}
+	& = & -\sum_{i=1}^m(y_{pi}-y'_{pi})\frac{\partial y'_{pi}}{\partial net_{pi}} 
+		\frac{\partial net_{pi}}{\partial z_{pj}}
+		\frac{\partial z_{pj}}{\partial net_{pj}}
+		\frac{\partial net_{pj}}{\partial w_{jk}^{h}}
+		\nonumber \\
+	& = & -\sum_{i=1}^m \delta_{pi}^{o} f'(net_{pi})w_{ij}^{o}\;f'(net_{pj})x_{pk} 
+		\nonumber \\
+	& = & -f'(net_{pj})x_{pk} \delta_{pj}^{h}
+		\nonumber
+	\end{eqnarray}
+	where 
+	\[
+	\delta_{pj}^{h} \stackrel{\triangle}{=}\sum_{i=1}^m \delta_{pi}^{o} f'(net_{pi})w_{ij}^{o}
+	\]
+\item Update $w_{ij}^{h}$ to minimize $E_p$ with gradient descent method
+	\[
+	w_{jk}^{h(new)}
+	=w_{jk}^{h(old)}+\Delta w_{jk}^{h}
+	=w_{jk}^{h(old)} -\eta \frac{\partial E_p}{\partial w_{jk}}
+	\]
+	where
+	\[
+	\Delta w_{jk}^{h}\stackrel{\triangle}{=}
+	-\eta \frac{\partial E_p}{\partial w_{ji}^{h}}
+	=\eta f'(net_{pj}) x_k \delta_{pj}^{h}
+	\]
+\end{itemize}
+
+\newpage
+\subsubsection*{Summary of BP training}
+
+The following is for one training pattern pair $\{X_p, Y_p\}$.
+
+\begin{enumerate}
+\item Apply $X_p=(x_{p1}, x_{p2}, ... , x_{pn})^t$ to the input nodes;
+
+\item Compute net input to hidden nodes
+	\[
+	net_{pj}=\sum_{k=1}^{n} w_{jk}^{h} x_{pk}+T_j
+	\]
+\item Compute output from hidden nodes
+	\[
+	z_{pj}=f(net_{pj})\;\;\;\;\;\;\;\;(j=1,\cdots,l)
+	\]
+\item Compute net input to output nodes
+	\[
+	net_{pi}=\sum_{j=1}^{l} w_{ij}^{o} z_{pj} + T_i\;\;\;\;\;\;\;\;\;(i=1,\cdots,m)
+	\]
+\item Compute output from output nodes
+	\[
+	y'_{pi}=f(net_{pi})\;\;\;\;\;\;\;\;\;(i=1,\cdots,m)
+	\]
+\item Find error terms for all output nodes (not quite the same as defined
+	previously)
+	\[
+	\delta_{pi}^{o}=f'(net_{pi}) (y_{pi}-y'_{pi})  \;\;\;\;\;\;\;\;(i=1,\cdots,m)
+	\]
+	where $Y_p=(y_{p1},y_{p2},...,y_{pm})^t$ is the desired output for
+	$X_p$.
+\item Find error terms for all hidden nodes (not quite the same as defined
+	previously)
+	\[
+	\delta_{pj}^{h}=f'(net_{pj}) \sum_{i=1}^{m} \delta_{pi}^{o} w_{ij}^o
+	\;\;\;\;\;\;\;(j=1,\cdots,l)
+	\]
+\item Update weights to output nodes
+	\[
+	w_{ij}^o \leftarrow w_{ij}^o+\eta \delta_{pi}^o z_{pj}\;\;\;\;\;\;\;(i=1,\cdots,m,\;\;j=1,\cdots,l)
+	\]
+\item Update weights to hidden nodes
+	\[
+	w_{jk}^h \leftarrow w_{jk}^h+\eta \delta_{pj}^h x_{pk}\;\;\;\;\;\;\;(j=1,\cdots,l,\;\;k=1,\cdots,n)
+	\]
+\item Compute 
+	\[
+	E_p=\frac{1}{2}\sum_{i=1}^{m} (y_{pi}-y'_{pi})^2
+	\]
+\end{enumerate}
+When this error is acceptably small for all of the training pattern pairs,
+training can be discontinued.
+
+\newpage
+\subsection*{Competitive Learning Network}
+
+This is a typical unsupervised learning network, similar to the statistical
+clustering analysis methods (k-means, Isodata). The simplest form of 
+competitive learning network has 2 layers, the input layer composed of n
+nodes to which an input pattern $X=[x_1,\cdots,x_n]^T$ is presented and the 
+output layer composed of m nodes $y_i,\;\;\;(i=1,\cdots,m)$. The net input
+(activation) of the ith output node is
+\[	net_i=\sum_{j=1}^n w_{ij} x_j=W_i^TX	\]
+
+The outputs of the network are determined by a ``winner-take-all'' competition
+such that only the output node receiving the maximal net input will output
+1 while all others output 0:
+\[y_k=\left\{ \begin{array}{ll} 1 & iff\;\;net_k=max\{net_i,\;i=1,\cdots,m\} \\
+				0 & else
+	\end{array} \right.
+\]
+
+For simplicity, we assume 
+\begin{itemize}
+	\item the input patterns are binary: $x_i=0\;\;or\;\;1$
+	\item all weights are positive
+		\[ w_{ij}>0	\]
+	 and the weight vector $W_i$ is normalized in a certain sense:
+		\[ \sum_j w_{ij}=1	\]
+\end{itemize}
+
+The net input $net_i$ can be considered as the inner product of two vectors 
+$W_i$ and $X$:
+\[	net_i=\sum_j w_{ij} x_j=W_i^TX=|W_i|\;|X|\;cos\,\theta	\]
+which is closely related to the difference between the two vectors:
+\[	|W_i-X|^2=|W_i|^2+|X|^2-2|W_i|\,|X|\;cos\,\theta	\]
+where $\theta$ is the angle between the two vectors.
+
+We see that the weight vector $W_k$ of the winning node is closest to the 
+current input pattern vector $X$ in the n-D feature space (with smallest angle
+$\theta$ and therefore smallest distance $|W_i-X|$).
+
+
+The competitive learning law is
+\[ W_i^{new}=W_i^{old}+u_i\,\eta\;(X-W_i^{old})
+	=W_i^{old}+u_i\;\triangle W_i \]
+where
+\[ u_i\stackrel{\triangle}{=}\left\{ \begin{array}{ll} 
+	1 & iff\;\;y_i\;\;is\;\;the\;\;winner\\ 0 & else
+	\end{array} \right.
+\]
+and
+\[	\triangle W_i\stackrel{\triangle}{=}\eta(X-W_i^{old})	\]
+According to this learning law, only the weights of the winning node will get
+updated:
+\[	W_k^{new}=W_k^{old}+\triangle W=(1-\eta)W_k^{old}+\eta X	\]
+while all other weights stay the same:
+\[	W_i^{new}=W_i^{old}\;\;\;\;(for\;\;all\;\;i\neq k) \]
+
+It can be seen that the effect of this learning process is to pull the weight
+vector $W_k$ closest to the current input pattern $X$ even closer to $X$
+(note that $W_k^{new}$ is a point between $W_k^{old}$ and $X$).
+
+Every time a different pattern $X$ is presented to the input layer, a certain
+output node will win and be drawn closer to $X$. After many patterns have been
+repeatedly presented to the input layer, each group of similar patterns --- a 
+cluster of points in the n-D feature space --- will draw a certain weight 
+vector to its center, and, as a result, the corresponding node will always win
+and produce a non-zero output whenever a member of the cluster is presented to
+the input. In other words, each group of similar patterns is represented by a
+certain output node.
+
+
+\newpage
+\subsection*{Vector Support Machines (SVM}
+
+\subsubsection*{Linear separation of a feature space}
+
+This is a variation of the perceptron learning algorithm.
+Consider a hyper plane in an n-dimensional (n-D) feature space:
+\[ f(X)=X^T W+b=\sum_{i=0}^n x_i w_i+b=0	\]
+where the weight vector $W$ is normal to the plane, and $b/|W|$ is the 
+distance from the origin to the plane. The n-D space is partitioned by the 
+plane into two regions. We further define a mapping function $y=sign(f(X)) 
+\in \{1,-1\}$, i.e.,
+\[ f(X)=X^T W+b=\left\{ \begin{array}{ll} >0, &  y=sign(f(X))=1,\;X\in P  \\
+					  <0, &  y=sign(f(X))=-1,\;X\in N \\
+	\end{array} \right. \]
+Any point $X\in P$ on the positive side of the plane is mapped to 1, while
+any point $X\in N$ on the negative side is mapped to -1. A point $X$ of 
+unknown class will be classified to P if $f(X)>0$, or N if $f(X)<0$.
+
+\subsubsection*{The learning problem:}
+
+Given a set $m$ training samples from two linearly separable classes P and N:
+\[	\{ (X_i, y_i), i=1,\cdots,m \}	\]
+where $y_i \in \{1,-1\}$ labels $X_i$ to belong to either of the two classes.
+we want to find a hyperplane in terms of $W$ and $b$, that linearly separates
+the two classes.
+
+Before $W$ is properly trained, the actual output $y'=sign(f(X))$ may not be 
+the same as the desired output $y$. There are four possible cases:
+
+\[ \begin{tabular}{c|l|l|l} \hline
+& Input $(X,y)$ & Output $y'=sign(f(X))$ & result	\\ \hline \hline
+1 & $(X,y= 1)$ & $y'= 1=  y $ & corrrect  \\ \hline
+2 & $(X,y=-1)$ & $y'= 1\ne y$ & incorrect \\ \hline
+3 & $(X,y= 1)$ & $y'=-1\ne y$ & incorrect \\ \hline
+4 & $(X,y=-1)$ & $y'=-1=  y $ & corrrect  \\ \hline
+\end{tabular} \]
+
+The weight vector $W$ is updated whenever the result is incorrect (mistake
+driven):
+
+\begin{itemize} 
+\item If $(X,y=-1)$ but $y'=1\ne y$ (case 2 above), then
+	\[ W^{new}=W^{old}+\eta y X=W^{old}-\eta X	\]
+	When the same $X$ is presented again, we have
+	\[ f(X)=X^TW^{new}+b=X^TW^{old}-\eta X^TX+b<X^TW^{old}+b \]
+	The output $y'=sign(f(X))$ is more likely to be $y=-1$ as desired. 
+	Here $0 < \eta < 1$ is the learning rate.
+\item If $(X,y=1)$ but $y'=-1\ne y$ (case 3 above), then
+	\[ W^{new}=W^{old}+\eta y X=W^{old}+\eta X	\]
+	When the same $X$ is presented again, we have
+	\[ f(X)=X^TW^{new}+b=X^TW^{old}+\eta X^TX+b>X^TW^{old}+b \]
+	The output $y'=sign(f(X))$ is more likely to be $y=1$ as desired.
+\end{itemize}
+Summaring the two cases, we get the learning law:
+\[	\mbox{if} \;\;y f(X)= y (X^TW^{old}+b)<0,\;\;\mbox{then}\;\;
+	 W^{new}=W^{old}+\eta y X	\]
+The two correct cases can also be summaried as
+\[	y f(X)= y (X^T W+b)\ge 0	\]
+which is the condition a successful classifier should satisfy.
+
+We assume initially $W=0$, and the $m$ training samples are presented
+repeatedly, the learning law during training will yield eventually:
+\[	W=\sum_{j=1}^m \alpha_j y_j X_j		\]
+where $\alpha_i>0$. Note that $W$ is expressed as a linear combination of 
+the training samples. After receiving a new sample $(X_i,y_i)$, vector $W$
+is updated by 
+\begin{eqnarray}
+&& \mbox{if} \;\;y_i f(X_i)=y_i (X_i^TW^{old}+b)=y_i(\sum_{j=1}^m \alpha_j y_j(X_i^TX_j)+b)<0,
+	\nonumber \\
+&& \mbox{then}\;\; W^{new}=W^{old}+\eta y_i X_i=\sum_{j=1}^m \alpha_j y_j X_j
+	+\eta y_i X_i,\;\;\;\mbox{i.e.}\;\;\;
+	\alpha_i^{new}=\alpha_i^{old}+\eta	\nonumber
+\end{eqnarray}
+Now both the decision funciton
+\[ f(X)=X^T W+b=\sum_{j=1}^m \alpha_j y_j (X_i^T X_j)+b	\]
+and the learning law 
+\[ \mbox{if} \;\;y_i(\sum_{j=1}^m \alpha_j y_j(X_i^TX_j)+b)<0,\;\;\;
+	\mbox{then}\;\; \alpha_i^{new}=\alpha_i^{old}+\eta	\]
+are expressed in terms of the inner production of input vectors.
+
+
+\subsubsection*{Support Vector Machine}
+
+For a decision hyperplane $X^T W+b=0$ to separate the two classes
+P $(X_i,1)$ and N $(X_i,-1)$, it has to satisfy
+\[ y_i (X_i^TW+b) \ge 0	\]
+for both $X_i \in P$ and $X_i \in N$. Among all such planes satisfying 
+this condition, we want to find the optimal one that separtes the two 
+classes with the maximal margin (the distance between the decision plane
+and the closest sample points).
+
+The optimal plane should be in the middle of the two classes, so that 
+the distance from the plane to the cloeset point on either side is the 
+same. We define two additional planes $H_+$ and $H_-$ that are parallel
+to $H_0$ and go through the point cloeset to the plane on either side:
+\[	X^T W+b=1,\;\;\;\;\mbox{and}\;\;\;\;X^T W+b=-1	\]
+All points $X_i \in P$ on the positive side should satisfy 
+\[ X_i^T W+b \ge 1,\;\;\;\;y_i=1	\]
+and all points $X_i \in N$ on the negative side should satisfy
+\[ X_i^T W+b \le -1,\;\;\;\; y_i=-1	\]
+These can be combined into one inequality:
+\[	y_i (X_i^TW +b) \ge 1,\;\;\;(i=1,\cdots,m)	\]
+The equality holds for those points on the planes $H_+$ or $H_-$. Such
+points are called {\em supprot vectors}, for which 
+\[ X_i^T W+b = y_i	\]
+i.e., the following holds for all support vectors:
+\[ b=y_i-X_i^T W=y_i-\sum_{j=1}^m  \alpha_j y_j (X_i^T X_j)	\]
+
+Moreover, the distances from the origin to the three planes $H_-$, $H_0$ 
+and $H_+$ are, respectively, $|b-1|/||w||$, $|b|/||w||$, and $|b+1|/||w||$, 
+and the distances between planes $H_-$ and $H_+$ is $2/||W||$, which is to
+be maximized. Now the problem of finding the optimal decision plane in terms 
+of $W$ and $b$ can be formulated as:
+\begin{eqnarray}
+&&	\mbox{minimize}\;\;\;\frac{1}{2}||W||^2	\nonumber \\
+&&	\mbox{subject to}\;\;\;y_i (X_i^T W+b) \ge 1,\;\;\;\;(i=1,\cdots,m)
+	\nonumber
+\end{eqnarray}
+Since the objective function is quadratic, this constrained optimization
+problem is called a quadratic program (QP) problem.
+(If the objective function is linear, the problem is a linear program (LP)
+problem). This QP problem can be solved by Lagrange multipliers method to
+minimize 
+\[
+L_p(W,b,{\bf \alpha})=\frac{1}{2}||W||^2-\sum_{i=1}^m \alpha_i(y_i(X_i^TW+b)-1)
+\]
+with respect to $W$, $b$ and the Lagrange coefficients $\alpha_i,\;\;(i=1,
+\cdots,\alpha_m)$.  We let
+\[ 	\frac{\partial}{\partial W}L_p(W,b)=0,\;\;\;
+	\frac{\partial}{\partial b}L_p(W,b)=0	\]
+These lead, respectively, to
+\[	W=\sum_{j=1}^m \alpha_j y_j X_j,\;\;\;\mbox{and}\;\;\;\;
+	\sum_{i=1}^m \alpha_i y_i=0	\]
+Substituting these two equations back into the expression of $L(W,b)$,
+we get the {\em dual problem} (with respect to $\alpha_i$) of the above 
+{\em primal problem}:
+\begin{eqnarray}
+&& 	\mbox{maximize}\;\;\;\;L_d({\bf \alpha})=
+	\sum_{i=0}^m\alpha_i -\frac{1}{2}
+	\sum_{i=1}^m \sum_{j=1}^m \alpha_i \alpha_j y_i y_j X_i^T,X_j
+	\nonumber \\
+&&	\mbox{subject to}\;\;\;\;\alpha_i\ge 0,\;\;\;\;
+	\sum_{i=0}^m \alpha_i y_i=0	
+	\nonumber
+\end{eqnarray}
+The dua problem is related to the primal problem by:
+\[	L_d({\bf \alpha})=inf_{(W,b)} L_p(W,b,{\bf \alpha})	\]
+As $L_d$ is the greatest lower bound (infimum) of $L_p$ for all $W$ and $b$,
+we want it to be maximized. 
+
+Solving this dual problem (an easier problem than the primal one), we get
+$\alpha_i$, from which $W$ of the optimal plane can be found. 
+
+Those points $X_i$ on either of the two planes $H_+$ and $H_-$ (for which 
+the equality $y_i(W^T X_i+b)=1$ holds) are called {\em support vectors}
+and they correspond to positive Lagrange multipliers $\alpha_i>0$. The 
+training depends only on the support vectors, while all other samples away 
+from the planes $H_+$ and $H_-$ are not important.
+
+For a support vector $X_i$ (on the $H_-$ or $H_+$ plane), the constraining 
+condition is 
+\[	y_i (X_i^T W+b) = 1\;\;\;\;(i \in sv)	\]
+here $sv$ is a set of all indices of support vectors $X_i$ (corresponding 
+to $\alpha_i > 0$. Subsituting 
+\[	W=\sum_{j=1}^m \alpha_j y_j X_j=\sum_{j\in sv} \alpha_j y_j X_j \]
+we get
+\[	y_i(\sum_{j\in sv} \alpha_j y_j X^T_i X_j+b) = 1	\]
+Note that the summation only contains terms corresponding to those support 
+vectors $X_j$ with $\alpha_j>0$, i.e.
+\[	y_i \sum_{j\in sv} \alpha_j y_j X^T_i X_j= 1-y_i b	\]
+For the optimal weight vector $W$ and optimal $b$, we have:
+\begin{eqnarray}
+||W||^2&=&W^T W=\sum_{i\in sv} \alpha_i y_i X^T_i
+	\sum_{j\in sv} \alpha_j y_j X_j	=
+	\sum_{i\in sv} \alpha_i y_i 
+	\sum_{j\in sv} \alpha_j y_j X^T_iX_j	\nonumber \\
+&=&	\sum_{i\in sv} \alpha_i (1-y_i b)
+	=\sum_{i\in sv} \alpha_i - b\sum_{i\in sv} \alpha_i y_i	\nonumber \\
+&=&	\sum_{i\in sv} \alpha_i 		\nonumber 
+\end{eqnarray}
+The last equality is due to $\sum_{i=0}^m \alpha_i y_i=0$ shown above.
+Recall that the distance between the two margin planes $H_+$ and $H_-$ is
+$2/||W||$, and the margin, the distance between $H_+$ (or $H_-$) and the 
+optimal decision plane $H_0$, is 
+\[	1/||W||=(\sum_{i\in sv} \alpha_i)^{-1/2}	\]
+
+\subsubsection*{Kernel Mapping}
+
+The algorithm above converges only for linearly separabel data. If the 
+data set is not linearly separable, we can map the the samples $X$ into a
+feature space of higher dimensions:
+\[	X \longrightarrow \Phi(X)	\]
+in which the classes can be linearly separated. The decision function in 
+the new space becomes:
+\[ f(X)=\Phi(X)^T W+b=
+\sum_{j=1}^m \alpha_j y_j (\phi(X_i)^T \phi(X_j))+b	\]
+where 
+\[ W=\sum_{j=1}^m \alpha_j y_j \Phi(X_j)	\]
+and $b$ are the parameters of the desicion plane in the new space.
+As the vectors $X_i$ appear only in inner products in both the decision
+function and the learning law, the mapping function $\Phi(X)$ does not 
+need to be explicitly specified. Instead, all we need is the inner 
+product of the vectors in the new space. The function $\Phi(X)$ is a 
+kernel-induced {\em implicit} mapping.
+
+{\bf Definition: } A kernel is a function that takes two vectors $X_i$ 
+and $X_j$ as arguments and returns the value of the inner product of
+their images $\Phi(X_i)$ and $\Phi(X_j)$:
+\[	K(X_1,X_2)=\phi(X_1)^T\phi(X_2) \]
+As only the inner product of the two vectors in the new space is returned,
+the dimensionality of the new space is not important. 
+
+The learning algorithm in the kernel space can be obtained by replacing
+all inner products in the learning algorithm in the original space with 
+the kernels:
+\[ f(X)=\Phi(X)^T W+b=\sum_{j=1}^m \alpha_j y_j K(X_i,X_j)+b	\]
+The parameter $b$ can be found from any support vectors $X_i$:
+\[ b=y_i-\Phi(X_i)^T W=y_i-\sum_{j=1}^m  \alpha_j y_j 
+	(\Phi(X_i)^T \Phi(X_j))=y_i-\sum_{j=1}^m  \alpha_j y_j K(X_i,X_j) \]
+
+{\bf Example 0:} linear kernel
+
+Assume $X=(x_1,\cdots,x_n)^T$, $Z=(z_1,\cdots,z_n)^T$, 
+
+\[	K(X,Z)=X^T Z=\sum_{i=1}^n x_1z_1	\]
+
+{\bf Example 1:} polynomial kernels
+
+Assume $X=(x_1,x_2)^T$, $Z=(z_1,z_2)^T$, 
+\begin{eqnarray}
+	K(X,Z)=(X^TZ)^2&=&(x_1z_1+x_2z_2)^2=x_1^2z_1^2+x_2^2z_2^2+2x_1z_1x_2z_2
+	\nonumber \\
+	&=&<(x_1^2,x_2^2,\sqrt{2}x_1x_2),(z_1^2,z_2^2,\sqrt{2}z_1z_2)>
+	=\phi(X)^T \phi(Z)
+	\nonumber
+\end{eqnarray}
+This is a mapping from a 2-D space to a 3-D space. The order can be changed 
+from 2 to general d.
+
+{\bf Example 2:} 
+\[	K(X,Z)=e^{-||X-Z||^2/2\sigma^2}	\]
+
+{\bf Example 3:} 
+\[	K(X,Z)=K(X,Z)K(X,X)^{-1/2}K(Z,Z)^{-1/2}	\]
+
+\end{document}
+
+

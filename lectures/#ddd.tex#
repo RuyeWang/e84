@@ -1,0 +1,176 @@
+
+{\bf Solving AC circuit by phasor method}
+
+If only the steady state solutions of the DE describing an AC circuit is of 
+interest, the phasor method can be used to solve the problem algebraically 
+without solving the DEs. Specifically, all sinusoidal variables are represented 
+as phasors in terms of their amplitudes and phases, and all components in the 
+circuit (L and C, as well as R) are represented by their impedances, so that 
+all the laws (Ohm's law, KCL and KVL, current and voltage dividers, parallel 
+and series combinations of components) and methods (loop current and node 
+voltage methods, Thevenin's and Norton's theorems, etc.) discussed for DC 
+circuit can be applied.
+
+\htmladdimg{../figures/phasordiagram.gif}
+
+Operations on sinusoidal variables based on the trigonometric identities
+are in general lengthy and tedious. The phasor method can convert such 
+sinusoidal variables to vectors in complex plane and thereby simplify the 
+operations. 
+
+The phasor represents the amplitude (effective or RMS value) and phase of a 
+sinusoidal function, but leaves out its frequency as it is known to be the
+same for all sinusoidal variables in the system.
+
+Specifically here are the three steps of the phasor method for arithmetic 
+operation of two sinusoidal functions $x(t)=A\cos(\omega t+\phi)$ and 
+$y(t)=B\cos(\omega t+\psi)$ of the same frequency:
+\begin{itemize}
+\item Represent each sinusoidal function as a phasor:
+  \[ x(t)=A\;\cos(\omega t+\phi)=Re[A\,e^{j(\omega t+\phi)}]
+  =Re[A/\sqrt{2} e^{j\phi} \sqrt{2}e^{j\omega t}]=Re[\dot{X} \sqrt{2} e^{j\omega t}] 
+  \]
+  where $\dot{X}=A/\sqrt{2}e^{j\phi}=A_{rms} e^{j\phi}$ is the phasor of $x(t)$. 
+  Similarly we also get $\dot{Y}=B_{rms}e^{j\psi}$.
+\item Carry out any arithmetic operation (represented by *) on the phasors:
+  \[ \dot{Z}=\dot{X}\;*\;\dot{Y}=A_{rms}e^{j\phi} \;*\; B_{rms}e^{j\psi} \]
+\item Convert resulting phasor back to a time function:
+  \[ z(t)=x(t)\;*\;y(t)=Re[\dot{Z} \sqrt{2}e^{j\omega t}]  \]
+\end{itemize}
+
+\htmladdimg{../figures/PhasorBlockDiagram1.png}
+
+The operations on the original sinusoidal variables require solving 
+differential equations, while the operations on their phasors only require 
+solving algebraic equations. This is the main advantage of the phasor method.
+
+
+{\bf Generalized Ohm's law and Kirchhoff's Laws}
+
+In general, all methods such as Ohm's law and Kirchhoff's Laws used for DC 
+circuits composed of resistors can be generalized to AC circuits composed 
+of capacitors, inductors, as well as resistors, all represented by their
+impedances. Also, if we assume all voltages and currents in a circuit are 
+sinusoids of same frequency $\omega$, they can be represented as complex 
+phasors.
+
+The Ohm's law can be generalized to become:
+\[ Z=\frac{\dot{V}}{\dot{I}},\;\;\;\;\;\;\dot{I}=\frac{\dot{V}}{Z},
+\;\;\;\;\;\dot{V}=Z\dot{I} \]
+and the Kirchhoff's laws can now be stated as:
+\begin{itemize}
+\item {\bf Current Law (KCL):} The vector sum of the currents into a node
+  is zero $\sum_k \dot{I}_k=0$.
+\item {\bf Voltage Law (KVL):} The vector sum of the voltages around a loop 
+  is zero $\sum_k \dot{V}_k=0$.
+\end{itemize}
+
+
+{\bf Example:}
+
+The RL circuit considered previously can now be resolved by the phasor method,
+as only the steady state solution is of interest. Specifically, here the 
+current $i(t)$ can be much more easily found by generalized Ohm's law. 
+The complex representation of the input voltage is 
+\[	
+{\bf V}=e^{j\omega t}	
+\]
+The overall complex impedance of the two elements in series is:
+\[
+Z=Z_R+Z_L=R+j\omega L=|Z| e^{j\angle Z}=\sqrt{R^2+\omega^2L^2}\;e^{j \phi} 
+\]
+where $\phi=tan^{-1}(\omega L/R)$. By generalized Ohm's law, 
+the complex representation of the current can be found to be:
+\[
+  {\bf I}=\frac{{\bf V}}{Z}
+  =\frac{e^{j\omega t}}{\sqrt{R^2+\omega^2L^2}\;e^{j\phi}}
+  =\frac{1}{\sqrt{R^2+\omega^2L^2}} e^{j(\omega t-\phi)}	
+\]
+and the real current is
+\[
+i(t)=Re[{\bf I}]=Re\left[\frac{1}{\sqrt{R^2+\omega^2 L^2}}e^{j(\omega t-\phi)}\right]
+=\frac{1}{\sqrt{R^2+\omega^2 L^2}}\cos(\omega t-\phi)	
+\]
+Note that in general, the {\bf frequency response function (FRF)} of 
+the system is defined as the ratio of the output to the input of the
+system, both represented as complex exponentials. In this specific case,
+we have
+\[
+H=\frac{{\bf I}}{{\bf V}}=\frac{1}{Z} 
+\]
+with 
+\[
+|H|=\frac{1}{\sqrt{R^2+\omega^2L^2}},\;\;\;\;\;\angle H=-\phi 
+\]
+Therefore the steady state output can be found to be:
+\[
+i(t)=|H| \cos(\omega t+\angle H)
+=\frac{1}{\sqrt{R^2+\omega^2 L^2}}\cos(\omega t-\phi)	
+\]
+The second method, much easier than the first one, is actually a short 
+cut representation of the first DE method. This is the justification of
+the complex variable or phasor method for analyzing AC circuits. However,
+note that the phasor method can only find the steady state solution. The
+homogeneous differential equation will have to be solved to obtain the
+transient solution.
+
+\htmladdimg{../figures/phasorfigure.gif}
+
+{\bf Example:} 
+
+Solve the circuit below. The voltage from the generator is 
+$v(t)=28.3\;\cos(5000t+45^\circ)\;V$.
+
+\htmladdimg{../figures/phasorexample.gif}
+
+First find the impedances and admittances of the components and the two
+branches. As $\omega=5000$, we get
+\begin{itemize}
+\item $Y_C=j\omega C=j\;5000\times 10^{-5}=j0.05=0.05\angle{90^\circ}$,
+
+	$Z_C=1/Y_C=1/j0.05=-j20=20\angle{-90^\circ}$
+\item $Z_L=j\omega L=j5000\times 4\times 10^{-3}=0+j20=20\angle{90^\circ}$,
+
+	$Y_L=1/Z_L=-j0.05=0.05\angle{-90^\circ}$
+\item $Z_R=R=20+j0=20\angle{0^\circ}$
+
+\item $Z_{RL}=Z_R+Z_L=20+j20=20\sqrt{2}\angle{45^\circ}$,
+	$Y_{RL}=1/Z_{RL}=1/20\sqrt{2}\angle{45^\circ}
+	=0.025\sqrt{2}\angle{-45^\circ}=0.025-j0.025$
+
+\item $Y_{load}=Y_C+Y_{RL}=j0.05+0.025-j0.025=0.025+j0.025
+	=0.025\sqrt{2}\angle{45^\circ}$
+\end{itemize}
+Next express voltage $v(t)=28.3\;\cos(5000t+45^\circ)\;V$ in phasor form
+$\dot{V}=20\angle{45^\circ}$, and find currents in phasor form:
+\begin{itemize}
+\item $\dot{I}_{load}=Y_{load}\dot{V}=(20\angle{45^\circ})\;
+	(0.025\sqrt{2}\angle{45^\circ})=0.5\sqrt{2}\angle{90^\circ}$,
+
+	$i_{load}(t)=Re[\dot{I}\sqrt{2}e^{j5000t}]=\cos(5000t+90^\circ)$
+\item $\dot{I}_C=\dot{V}Y_C=(0.05\angle{90^\circ})(20\angle{45^\circ})
+	=1\angle{135^\circ}=-0.5\sqrt{2}+j0.5\sqrt{2}$,
+
+	$i_C(t)=\sqrt{2}\cos(5000t+135^\circ)$
+\item $\dot{I}_{RL}=Y_{RL}\dot{V}=(0.025\sqrt{2}\angle{-45^\circ})(20\angle{45^\circ})
+	=0.5\sqrt{2}\angle{0^\circ}=0.5\sqrt{2}$,
+
+	$i_{RL}(t)=\cos(5000t)$
+\item $\dot{V}_R=Z_R\dot{I}_{RL}=(20\angle{0^\circ})(0.5\sqrt{2}\angle{0^\circ})
+	=10\sqrt{2}\angle{0^\circ}=10\sqrt{2}+j0$,
+
+	$i_R(t)=20\;\cos(5000t)$
+\item $\dot{V}_L=Z_L\dot{I}_{RL}=(20\angle{90^\circ})(0.5\sqrt{2}\angle{0^\circ})
+	=10\sqrt{2}\angle{90^\circ}=0+j10\sqrt{2}$,
+
+	$v_L(t)=20\;\cos(5000t+90^\circ)$.
+\end{itemize}
+Verify: 
+\begin{itemize}
+\item $\dot{V}_R+\dot{V}_L=10\sqrt{2}+j10\sqrt{2}=20\angle{45^\circ}
+	=\dot{V}$
+\item $\dot{I}_C+\dot{I}_{RL}=0.5\sqrt{2}-0.5\sqrt{2}+j0.5\sqrt{2}
+	=0.5\sqrt{2}\angle{90^\circ}=\dot{I}_{load}$
+\end{itemize}
+
+

@@ -1,0 +1,123 @@
+\documentstyle[12pt]{article}
+\usepackage{html}
+% \usepackage{graphics}  
+\begin{document}
+
+\section*{Twin-T Active Filter}
+
+\htmladdimg{../figures/TwinT.png}
+
+\begin{itemize}
+\item The RCR network is is a T (or Y) network that can be converted to a 
+  $\pi$ (or $\Delta$) network (see 
+  \htmladdnormallink{here}{http://fourier.eng.hmc.edu/e84/lectures/ch2/node3.html}) 
+  of three branches:
+  \[
+  Z'_1=Z'_2=R+\frac{1}{2j\omega C}+\frac{R/2j\omega C}{R}
+  =R+\frac{1}{j\omega C}=\frac{j\omega RC+1}{j\omega C}
+  \]
+  \[
+  Z'_3=R+R+\frac{R^2}{1/2j\omega C}=2R+2R^2j\omega C=2R(1+j\omega RC)
+  \]
+  The frequency response function of the voltage divider formed by 
+  $Z'_3$ and $Z'_2$ is:
+  \begin{eqnarray}
+  H'(j\omega)&=&\frac{Z'_2}{Z'_2+Z'_3}
+  =\frac{(1+j\omega RC)/j\omega C}{(1+j\omega RC)/j\omega C+2R(1+j\omega RC)}
+  \nonumber\\
+  &=&\frac{1}{1+2j\omega RC}=\frac{1}{1+2j\omega\tau}
+  \nonumber
+  \end{eqnarray}
+  where $\tau=RC$. This is a first-order low-pass filter with cut-off
+  frequency at $\omega_c=1/2\tau$:
+  \[
+  |H'(j\omega)|=\left\{\begin{array}{ll}1 & \omega=0\\1/\sqrt{2}& 
+  \omega=1/2\tau\\ 0&\omega\rightarrow\infty\end{array}\right.
+  \]
+
+\item The CRC network is a T (or Y) network that can be converted to a
+  $\pi$ (or $\Delta$) network of three branches:
+  \[
+  Z''_1=Z''_2=\frac{R}{2}+\frac{1}{j\omega C}+\frac{R/2j\omega C}{1/j\omega C}
+  =R+\frac{1}{j\omega C}  =\frac{j\omega RC+1}{j\omega C}
+  \]
+  \[
+  Z''_3=\frac{1}{j\omega C}+\frac{1}{j\omega C}+\frac{1/(j\omega C)^2}{R/2}
+  =\frac{2}{j\omega C}+\frac{2}{R(j\omega C)^2}
+  =\frac{2(1+j\omega RC)}{R(j\omega C)^2}
+  \]
+  The frequency response function of the voltage divider formed by $Z''_3$ 
+  and $Z''_2$ is:
+  \begin{eqnarray}
+  H''(j\omega)&=&\frac{Z''_2}{Z''_2+Z''_3}
+  =\frac{(1+j\omega RC)/j\omega C}
+  {(1+j\omega RC)/j\omega C+2(1+j\omega RC)/R(j\omega C)^2}
+  \nonumber \\
+  &=&\frac{j\omega RC}{j\omega RC+2}=\frac{j\omega\tau}{j\omega\tau+2}
+  =\frac{1}{1-j2/\omega\tau}
+  \nonumber 
+  \end{eqnarray}
+  This is a first-order high-pass filter with cut-off frequency at
+  $\omega_c=2/\tau$:
+  \[
+  |H'(j\omega)|=\left\{\begin{array}{ll}0 & \omega=0\\1/\sqrt{2}& 
+  \omega=2/\tau\\ 1&\omega\rightarrow\infty\end{array}\right.
+  \]
+
+\end{itemize}
+
+As these two $\pi$-networks are combined in parallel, they form a single
+$\pi$-network with three branches $Z_1=Z'_1||Z''_1$, $Z_2=Z'_2||Z''_2$, 
+and $Z_3=Z'_3||Z''_3$:
+\[
+Z_1=Z'_1||Z''_1=Z_2=Z'_2||Z''_2=\frac{1}{2}\left(R+\frac{1}{j\omega C}\right)
+\]
+\[
+  Z_3=Z'_3||Z''_3=\frac{Z'_3 Z''_3}{Z'_3+Z''_3}
+  =\frac{2R(1+j\omega RC)}{1+(j\omega RC)^2}
+\]
+The frequency response function of this $\pi$-network (a voltage divider) is:
+\begin{eqnarray}
+  H(j\omega)&=&\frac{Z_2}{Z_2+Z_3}=\frac{R+1/j\omega C}
+  {R+1/j\omega C+4R(1+j\omega RC)/(1+(j\omega RC)^2)}
+  \nonumber \\
+  &=&\frac{(1+j\omega RC)/j\omega C}{(1+j\omega RC)/j\omega C+4R(1+j\omega RC)/(1+(j\omega RC)^2)}
+  \nonumber \\
+  &=&\frac{1/j\omega C}{1/j\omega C+4R/(1+(j\omega RC)^2)}
+  =\frac{1}{1+4j\omega RC/(1+(j\omega RC)^2)}
+  \nonumber \\
+  &=&\frac{1+(j\omega\tau)^2}{1+(j\omega\tau)^2+4j\omega\tau}
+  =\frac{(j\omega)^2+(1/\tau)^2}{(j\omega)^2+4j\omega/\tau+(1/\tau)^2}
+  \nonumber
+\end{eqnarray}
+
+Alternatively, we apply KCL at the middle points of the RCR and CRC 
+networks with $v_a$ and $v_b$:
+\begin{eqnarray}
+  &&\frac{v_{in}-v_a}{R}+\frac{v_{out}-v_a}{R}=\frac{v_a}{1/j\omega 2C}
+  \nonumber\\
+  &&\frac{v_{in}-v_b}{1/j\omega C}+\frac{v_{out}-v_b}{1/j\omega C}=\frac{v_b}{R/2}
+  \nonumber
+\end{eqnarray}
+Solving for $v_a$ and $v_b$, we get
+\[
+v_a=\frac{v_{in}+v_{out}}{2(1+j\omega\tau)},\;\;\;\;\;\;\;
+v_b=\frac{(v_{in}+v_{out})j\omega\tau}{2(1+j\omega\tau)}
+\]
+Also, apply KCL to the output to get
+\[
+\frac{v_{out}-v_a}{R}+\frac{v_{out}-v_b}{1/j\omega C}=0,\;\;\;\;\;\;
+v_{out}=\frac{v_a+j\omega\tau v_b}{1+j\omega\tau}
+\]
+Substituting $v_a$ and $v_b$ into this equation we get:
+\[
+v_{out}=\frac{v_{in}(1+j\omega\tau)+v_{out}(1-(\omega\tau)^2)}{2(1+j\omega\tau)^2}
+\]
+Solving this for $v_{out}$
+\[
+H(j\omega)=\frac{v_{out}}{v_{in}}=\frac{1+(j\omega\tau)^2}{1+4j\omega\tau+(j\omega\tau)^2}
+=\frac{(j\omega)^2+\omega_n^2}{(j\omega)^2+4j\omega\omega_n+\omega_n^2}
+\]
+where $\omega_n=1/\tau=1/RC$.
+
+\end{document}

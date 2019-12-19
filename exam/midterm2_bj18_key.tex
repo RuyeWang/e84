@@ -1,0 +1,273 @@
+\documentstyle[11pt]{article}
+\usepackage{html}
+\begin{document}
+\begin{center}
+{\Large \bf E84 Midterm Exam 2}
+\end{center}
+
+
+\begin{enumerate}
+
+\item {\bf Problem 1. (25 points)} 
+
+  Answer the following questions regarding the two circuits shown 
+  below, where $V_o=1\,V$, $R_o=6\,k\Omega$, $R_L=4\,k\Omega$, 
+  $R_{in}=1\,M\Omega$, $R_{out}=0.1\,k\Omega$, and $A_{oc}=10$.
+  \begin{itemize}
+  \item Represent the voltage $V_L$ across the load $R_L$ in terms of 
+    all of the parameters given in the circuit shown on the left of the 
+    figure. Then obtain the numerical value of $V_L$ by substituting the 
+    specific values of the parameters into the expression.
+  \item Repeat the above for the circuit shown on the right of the 
+    figure, in which a voltage-amplification circuit is inserted between 
+    the source and the load, characterized by three parameters: (a) the
+    input resistance $R_{in}$, (b) the output resistance $R_{out}$, and 
+    (c) the open-circuit voltage gain $A_{oc}$. 
+  \end{itemize}
+\htmladdimg{../../lectures/figures/SourceLoad.png}
+
+{\bf Solution:}
+\begin{itemize}
+\item \[ V_L=V_o \frac{R_L}{R_o+R_L} \]
+\item \[ V'_L=A_{oc}V_o \frac{R_{in}}{R_o+R_{in}}\frac{R_L}{R_{out}+R_L} \]
+\item \[ V_L=V_o \frac{R_L}{R_o+R_L}=\frac{4}{6+4}=0.4  \]
+ \[ V'_L=A_{oc}V_o \frac{R_{in}}{R_o+R_{in}}\frac{R_L}{R_{out}+R_L} 
+ =10\frac{1000}{6+1000}\frac{4}{0.1+4}=9.7 \]
+
+
+\item {\bf Problem 2. (35 points)}
+
+\htmladdimg{../../lectures/figures/Example6.png}
+
+Based on the transsitor circuit shown above, do the following:
+\begin{itemize}
+\item Find the expressions of $I_B$, $I_C$, and $V_{CE}$, all in terms 
+  of the circuit parameters ($V_{CC}$, $R_B$, $R_C$, $R_E$ and $\beta$).
+\item Given $V_{CC}=10V$, $\beta=200$, $R_C=2K$ and $R_E=0.5K$, find
+  $R_B$ so that the DC operating point is in the middle of the output
+  characteristic plot.
+\item Draw the small signal model.
+\item Give the expressions of the three parameters: (1) input resistance,
+  (2) output resistance, and (3) open-circuit ($R_L=\infty$) voltage gain,
+  all in terms of the circuit parameter symbols $V_{CC}$, $R_B$, $R_C$, 
+  $R_E$ and $\beta$ (not their numerical values).
+\end{itemize}
+
+{\bf Solution:}
+\[
+V_{CC}-V_{BE}=I_B R_B+(\beta+1)I_BR_E,\;\;\;\;\;
+I_B=\frac{V_{CC}-V_{BE}}{R_B+(\beta+1)R_E}
+\]
+\[
+I_C=\beta I_B=\beta \frac{V_{CC}-V_{BE}}{R_B+(\beta+1)R_E},\;\;\;\;\;
+V_{CE}\approx V_{CC}-I_C(R_C+R_E)
+\]
+\[
+V_{CE}=I_C(R_C+R_E)=\frac{\beta(V_{CC}-R_{BE})}{R_B+\beta R_E}(R_C+R_E)
+=\frac{9.3\times 200}{R_B+100}2.5=\frac{V_{CC}}{2}=5
+\]
+Solving to get $R_B=830K$. For the rest see
+\htmladdnormallink{here}{../../lectures/ch4/node8.html}.
+
+
+\item {\bf Problem 3. (20 points)} 
+
+  Give the expression for the voltage gain $V_{out}/V_{in}$ in terms of 
+  the circuit parameters in the op-amp circuit below:
+
+  \htmladdimg{../../lectures/figures/opamp3.png}
+
+  {\bf Solution:}
+
+  Denote the voltage at the inputs of the op-amp by $V$. Then we have
+  \[
+  \frac{V_{in}-V}{R_1}+\frac{V_{out}-V}{R_f}=0,\;\;\;\;\;\;\;\;\;\;
+  V=V_{in}\frac{R_3}{R_2+R_3}
+  \]
+  Substituting the 2nd equation into the first, we get
+  \[
+  \frac{V_{out}}{V_{in}}=\frac{R_2}{R_2+R_3}\left( \frac{R_3}{R_2}-\frac{R_f}{R_1}\right)
+  \]
+
+
+\item {\bf Problem 4. (20 points)} 
+The output $v_{out}(t)$ of the transistor circuit with a sinusoidal 
+input is plotted. As you can see, $v_{out}(t)$ is distorted in either 
+of the two cases of (a) and (b). As the designer of the circuit, you 
+can change $R_B$, $R_C$ and/or $V_{cc}$ to avoid the distortion. Make
+sure your answer is concise and to the point.
+
+
+\htmladdimg{../final09s1.gif}
+
+\begin{itemize}
+\item What would you do to avoid distortion in (a) and why? 
+\item What would you do to avoid distortion in (b) and why? 
+\end{itemize}
+
+\htmladdimg{../final09s2.gif}
+
+{\bf Hint:} Draw the input and output characteristic plots of the transistor
+circuit to visualize how each of the two types of distortion can be avoided.
+
+{\bf Solution:}
+
+\begin{itemize}
+\item Reduce $R_B$, and/or increase $V_{CC}$.
+\item Increase $V_{cc}$, increase $R_B$, and/or reduce $R_C$.
+\end{itemize}
+
+
+\end{itemize}
+\end{document}
+
+
+
+
+\item {\bf Problem 1. (33 points)} 
+
+  An electric motor, modeled as an inductor and a resistor in series, has 
+  a power factor of 0.85. The nameplate current is 10 Amps at 115 Volts 
+  (60 Hz). 
+  \begin{itemize}
+  \item Find the apparent power, active power, and reactive power. 
+  \item Find the inductance and resistance of the motor.
+  \item Find the capacitance of a parallel shunt capacitor that can improve
+    the power factor to 1.
+  \item Find the capacitance if the power factor can be 0.9.
+  \end{itemize}
+
+%  {\bf Solution:} 
+%  The apprarent power is $S=115V \times 10A = 1150 W$, the real power is
+%  $P=S\cos \phi=S*0.85=977.5 W$, the reactive power is 
+%  $P=S\sin \phi=S*0.527=605.8 W$. The impedance of the motor is
+%  \[	Z=\frac{V}{I}=\frac{115}{10}=11.5\Omega \]
+%  The inductance L and resistance R satisfy the following equations:
+%  \[ \left\{ \begin{array}{l} (\omega L)^2+R^2=Z^2=11.5^2 \\
+%    tan^{-1} \frac{\omega L}{R}=cos^{-1} 0.85 \end{array} \right. \]
+%  Given $\omega=2\pi f=377\;rad/sec$, the quations can be solve for R and
+%  L to get
+%  \[	R=9.8\Omega,\;\;\;\;L=16\;mH,\;\;\;\;\omega L=6\Omega	\]
+%  With the parallel capacitor C, the overall impedance is
+%  \[	Z=(R+j\omega L)\; || \;(1/j\omega C)
+%  =\frac{(R+j\omega L)/j\omega C}{(R+j\omega L)+1/j\omega C}
+%  =\frac{R+j\omega L}{j\omega CR-\omega^2 LC+1}	\]
+%  For $\angle Z=0$, we need to have
+%  \[ \tan^{-1}\frac{\omega L}{R}=\tan^{-1}\frac{\omega RC}{1-\omega^2 LC},
+%  \;\;\;\mbox{i.e.}\;\;\;	
+%  \frac{\omega L}{R}=\frac{\omega RC}{1-\omega^2 LC}	\]
+%  which can be solved for $C$ to get
+%  \[	C=\frac{L}{R^2+\omega^2 L^2}=120\;\mu F	\]
+%  For the power factor to be 0.9, or $\cos^{-1} 0.9=\phi=25.8$, we need
+%  \[ \tan^{-1}\frac{\omega L}{R}-\tan^{-1}\frac{\omega RC}{1-\omega^2 LC}
+%  =25.8,	\;\;\;\mbox{i.e.}\;\;\;	
+%  \tan^{-1}\frac{\omega RC}{1-\omega^2 LC}=\tan^{-1}\frac{\omega L}{R}-25.8=
+%  5.8 \]
+% which can be solved to get $C=25.5\;\mu F$.
+
+
+\item {\bf Problem 3. (34 points)} 
+
+
+
+The circuit shown below is called Darlington transistor amplifier which is
+composed of two transistors $T_1$ and $T_2$ with their collectors connected 
+and the emitter of $T_1$ connected to the base of $T_2$. Assume $V_{CC}=20V$ 
+and both transistors have $\beta=50$. 
+\begin{enumerate}
+\item Give the expressions of $I_{C1}$, $I_{E1}=I_{B2}$, $I_{C2}$, $I_{E2}$
+  all in terms of $\beta$ and $I_{B1}$.
+\item Given $R_C=1 k\Omega$, find $R_B$ so that the DC operating point $Q$
+  is in the middle of the linear region of the output V-I characteristic plot.
+\item Given $R_B= 4.6 M\Omega$ and the same $R_C$ as before, find the proper 
+DC voltage $V_{cc}$ so that the Q point is in the middle of the linear region.
+\end{enumerate}
+For simplicity, assume for both transistors $v_{be}=0.7V$.
+
+\htmladdimg{../midterm3g.gif}
+
+%{\bf Solution:}
+
+%\begin{enumerate}
+%\item $I_{C1}=\beta I_{B1}$, $I_{E1}=I_{B2}=(\beta+1) I_{B1}$, 
+%  $I_{C2}=\beta I_{B2}=\beta (\beta+1) I_{B1}$, 
+%  $I_{E2}=(\beta+1) I_{B2}=(\beta+1)^2 I_{B1}=(\beta^2+2\beta+1)I_{B1}$, 
+
+%\item In order for $V_C=V_{CC}-R_C (I_{C1}+I_{C2})=10V$, we need to have
+%  $I_{C1}+I_{C2}=\beta I_{B1}+\beta (\beta+1) I_{B1}=2500 I_{B1}=10 mA$, i.e.,
+%  $I_{B1}=10 mA/2600=3.8 \mu A$. 
+
+%  $R_B=(V_{CC}-2V_{be})/I_{B1}=18.6/3.8=4.89 M\Omega$
+%\item 
+%  \[ \beta I_{B1}+\beta (\beta+1) I_{B1}
+%  =(2\beta+\beta^2)\;\frac{V_{cc}-1.4}{4.6\times 10^6}
+%  =2600\;\frac{V_{cc}-1.4}{4.6\times 10^6}=\frac{1}{2}\frac{V_{cc}}{10^3} \]
+%  Solving this we get
+%  \[ V_{cc}=12\;V \]
+% \end{enumerate}
+\end{enumerate}
+
+\end{document}
+
+\item {\bf Problem 3. (25 points)} 
+
+\htmladdimg{../midterm3a.gif}
+
+The transistor amplifier below takes one input and generates two
+outputs $v_1$ and $v_2$ as shown. Assume $V_{CC}=20V$, $R_1=20K\Omega$, 
+$R_2=10K\Omega$, $R_C=R_E=500\Omega$, $\beta=100$. 
+
+\begin{itemize}
+\item Find $V_B$, $I_B$, $V_E$ and $V_C$, and the DC operating point in 
+terms of $I_C$ and $V_{CE}$. 
+\item In the figure provided, draw the load line, indicate the DC operating 
+point, and find the corresponding $I_C$ and $V_{CE}$.
+\item If the input voltage is such that it produces an AC component of the 
+base current:
+\[	i_b(t)=0.1 cos(\omega t) \; mA	\]
+give the expression of the AC component of the two output voltages $v_1(t)$ 
+at the emitter and $v_2(t)$ at the collector, and sketch their waveforms in 
+the SAME plot provided below, where $v_{in}(t)=cos(\omega t)$ is also plotted.
+(No need to be to the scale vertically, but do pay attention to the time
+scale.)
+\end{itemize}
+
+\htmladdimg{../midterm3b.gif}
+\htmladdimg{../midterm3c.gif}
+
+{\bf Solution:} 
+Apply Thevenin theorem to base circuit to get $R_B=R_1 || R_2=6.7K$, $V_BB=6.7V$.
+\[ I_B=(V_{BB}-V_{BE})/(R_B+(\beta+1)R_E)=6V/(6.7K+101\times 0.5K)=0.106 mA \]
+\[ I_C=I_E=10.6 mA \]
+\[ V_E=0.5\times 10.6=5.3V,\;\;\;\; V_C=20-0.5\times 10.6=14.7V,\;\;\;\;
+	V_{CE}=V_C-V_E=14.7-5.3=9.4V \]
+\[ v_1(t)=-5 cos(\omega t) V,\;\;\;\;v_1(t)=5 cos(\omega t) V	\]
+
+
+\item {\bf Problem 2. (25 points)} 
+
+Find the DC operating point $(I_C, V_{CE})$ of the transistor circuit 
+given below, where $R_1=100K\Omega$, $R_2=300K\Omega$, $R_C=R_E=2K\Omega$, 
+$V_{CC}=12V$, and $\beta=100$. If you find the DC operating point is not 
+in the middle of the linear region of the output characteristic plot, 
+modify $R_2$ so that the DC operating point is in the middle of the linear
+region (to maximize the dynamic range of the AC output).
+
+\htmladdimg{../../lectures/figures/transistorbiasingb.gif}
+
+{\bf Solution:} 
+
+Find the load line: 
+When $I_C=0$, $V_{CE}=V_{CC}=12V$, when $V_{CE}=0$, $I_C=V_{CC}/(R_C+R_E)=3mA$
+ 
+\[ R_{B}=\frac{R_1 R_2}{R_1+R_2}=75K,\;\;\;V_{BB}=12\frac{R_2}{R_1+R_2}=9V \]
+\[ I_B=\frac{V_{BB}-V_{BE}}{R_B+(\beta+1)R_E}=\frac{9-0.7}{75+202}=30\mu A \]
+\[ I_C=\beta I_B=3 mA, \;\;\;\;V_{CE}=V_{CC}-(R_C+R_E)I_C=0V \]
+The DC operating point is in saturation region.
+ 
+Now we modify $R_2$ to move Q-point to the middel point where $I_C=1.5mA$.
+\[ V_{BB}=12R_2/(100+R_2),\;\;\;\;R_B=100R_2/(100+R_2) \]
+We then plug these into 
+\[ I_C=\beta \frac{V_{BB}-V_{BE}}{(\beta+1) R_E+R_B}=1.5 \]
+and solve it for $R_2$ to get $R_2=55K$.
+

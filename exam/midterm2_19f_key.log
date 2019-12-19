@@ -1,0 +1,203 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=latex 2019.5.29)  12 NOV 2019 20:36
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**midterm2_19f_key.tex
+(./midterm2_19f_key.tex
+LaTeX2e <2018-12-01>
+(/usr/local/texlive/2019/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
+(/usr/local/texlive/2019/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
+)
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2018/12/01 v2.17b AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks14
+\ex@=\dimen103
+))
+(/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen104
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count88
+LaTeX Info: Redefining \frac on input line 223.
+\uproot@=\count89
+\leftroot@=\count90
+LaTeX Info: Redefining \overline on input line 385.
+\classnum@=\count91
+\DOTSCASE@=\count92
+LaTeX Info: Redefining \ldots on input line 482.
+LaTeX Info: Redefining \dots on input line 485.
+LaTeX Info: Redefining \cdots on input line 606.
+\Mathstrutbox@=\box27
+\strutbox@=\box28
+\big@size=\dimen105
+LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
+\macc@depth=\count93
+\c@MaxMatrixCols=\count94
+\dotsspace@=\muskip10
+\c@parentequation=\count95
+\dspbrk@lvl=\count96
+\tag@help=\toks15
+\row@=\count97
+\column@=\count98
+\maxfields@=\count99
+\andhelp@=\toks16
+\eqnshift@=\dimen106
+\alignsep@=\dimen107
+\tagshift@=\dimen108
+\tagwidth@=\dimen109
+\totwidth@=\dimen110
+\lineht@=\dimen111
+\@envbody=\toks17
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks18
+LaTeX Info: Redefining \[ on input line 2844.
+LaTeX Info: Redefining \] on input line 2845.
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: dvips.def on input line 99.
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics-def/dvips.def
+File: dvips.def 2017/06/20 v3.1d Graphics/color driver for dvips
+))
+(/usr/local/texlive/2019/texmf-dist/tex/latex/comment/comment.sty
+\CommentStream=\write3
+
+Excluding comment 'comment')
+(/usr/local/texlive/texmf-local/tex/latex/html/html.sty
+Package: html 1999/07/19 v1.38 hypertext commands for latex2html (nd, hws, rrm)
+
+\c@lpart=\count100
+\c@lchapter=\count101
+\c@chapter=\count102
+\c@lsection=\count103
+\c@lsubsection=\count104
+\c@lsubsubsection=\count105
+\c@lparagraph=\count106
+\c@lsubparagraph=\count107
+\c@lsubsubparagraph=\count108
+\ptrfile=\write4
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/base/makeidx.sty
+Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
+)
+(./midterm2_19f_key.aux)
+\openout1 = `midterm2_19f_key.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 18.
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 18.
+LaTeX Font Info:    Try loading font information for U+msa on input line 37.
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 37.
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1
+
+]
+Overfull \hbox (1.55879pt too wide) in paragraph at lines 74--80
+[][] 
+ []
+
+
+Overfull \hbox (1.55879pt too wide) in paragraph at lines 95--101
+[][] 
+ []
+
+
+Overfull \hbox (36.51976pt too wide) detected at line 104
+\OML/cmm/m/it/10 i[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) = \OML
+/cmm/m/it/10 i[]\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 1\OT1/cmr/m/n/10 ) + [\OML/cm
+m/m/it/10 i[]\OT1/cmr/m/n/10 (0) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 i[]\OT1/
+cmr/m/n/10 (\OMS/cmsy/m/n/10 1\OT1/cmr/m/n/10 )]\OML/cmm/m/it/10 e[] \OT1/cmr/m
+/n/10 = 6 + (4 \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 6)\OML/cmm/m/it/10 e[] \OT1
+/cmr/m/n/10 = 6 \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 e[]  \OT
+1/cmr/m/n/10 (\OML/cmm/m/it/10 mA\OT1/cmr/m/n/10 )
+ []
+
+[2]
+Overfull \hbox (41.70534pt too wide) detected at line 180
+\OML/cmm/m/it/10 v[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) = \OML
+/cmm/m/it/10 v[]\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 1\OT1/cmr/m/n/10 ) + [\OML/cm
+m/m/it/10 v[]\OT1/cmr/m/n/10 (0[]) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 v[]\OT
+1/cmr/m/n/10 (\OMS/cmsy/m/n/10 1\OT1/cmr/m/n/10 )]\OML/cmm/m/it/10 e[] \OT1/cmr
+/m/n/10 = \OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 6 + (\OMS/cmsy/m/n/10 ^^@\OT1/cmr
+/m/n/10 10 + 6)\OML/cmm/m/it/10 e[] \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 ^^@\OT1/
+cmr/m/n/10 6 \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 4\OML/cmm/m/it/10 e[]
+ []
+
+[3] [4] (./midterm2_19f_key.aux) ) 
+Here is how much of TeX's memory you used:
+ 1678 strings out of 492617
+ 20033 string characters out of 6129507
+ 87601 words of memory out of 5000000
+ 5617 multiletter control sequences out of 15000+600000
+ 6252 words of font info for 25 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 27i,7n,27p,232b,311s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on midterm2_19f_key.dvi (4 pages, 11604 bytes).

@@ -1,0 +1,1663 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Quality Factor, Peak Frequency and Bandwidth</TITLE>
+<META NAME="description" CONTENT="Quality Factor, Peak Frequency and Bandwidth">
+<META NAME="keywords" CONTENT="ccc">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="ccc.css">
+
+<LINK REL="next" HREF="node11.html">
+<LINK REL="previous" HREF="node9.html">
+<LINK REL="up" HREF="node1.html">
+<LINK REL="next" HREF="node11.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html136"
+  HREF="node11.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html134"
+  HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html128"
+  HREF="node9.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html137"
+  HREF="node11.html">Real/Reactive Power and Power</A>
+<B> Up:</B> <A NAME="tex2html135"
+  HREF="node1.html">Chapter 3: AC Circuit</A>
+<B> Previous:</B> <A NAME="tex2html129"
+  HREF="node9.html">Series and Parallel Resonance</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00019000000000000000">
+Quality Factor, Peak Frequency and Bandwidth</A>
+</H2>
+
+<P>
+The physical meaning of the quality factor <IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img544.png"
+ ALT="$Q$"> of an RCL series circuit is 
+the ratio between the energy stored in the circuit (in <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img76.png"
+ ALT="$C$"> and <IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img77.png"
+ ALT="$L$">) and the 
+energy dissipated (by <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.png"
+ ALT="$R$">):
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Q=2\pi\frac{\mbox{maximum energy stored}}{\mbox{energy dissipated per cycle}}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="281" HEIGHT="50" BORDER="0"
+ SRC="img584.png"
+ ALT="\begin{displaymath}
+Q=2\pi\frac{\mbox{maximum energy stored}}{\mbox{energy dissipated per cycle}}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The maximum energy stored in <IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img77.png"
+ ALT="$L$"> is:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+W_L=\int_0^T v(t)\; i(t) dt=\int_0^T i(t) L \frac{di(t)}{dt} dt
+	=L \int_0^{I_p} i \;di=\frac{1}{2}LI_p^2=LI^2_{rms}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="555" HEIGHT="48" BORDER="0"
+ SRC="img585.png"
+ ALT="\begin{displaymath}W_L=\int_0^T v(t)\; i(t) dt=\int_0^T i(t) L \frac{di(t)}{dt} dt
+=L \int_0^{I_p} i \;di=\frac{1}{2}LI_p^2=LI^2_{rms} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where <!-- MATH
+ $I_p=\sqrt{2}I_{rms}$
+ -->
+<IMG
+ WIDTH="105" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img586.png"
+ ALT="$I_p=\sqrt{2}I_{rms}$"> is the peak current through <IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img77.png"
+ ALT="$L$">. The maximum
+energy stored in <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img76.png"
+ ALT="$C$"> is:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+W_C=\int_0^T v(t)\; i(t) dt=\int_0^T v(t) C \frac{dv(t)}{dt} dt
+	=C \int_0^{V_p} v \;dv=\frac{1}{2}CV_p^2=CV^2_{rms}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="588" HEIGHT="48" BORDER="0"
+ SRC="img587.png"
+ ALT="\begin{displaymath}W_C=\int_0^T v(t)\; i(t) dt=\int_0^T v(t) C \frac{dv(t)}{dt} dt
+=C \int_0^{V_p} v \;dv=\frac{1}{2}CV_p^2=CV^2_{rms} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where <!-- MATH
+ $V_p=\sqrt{2}V_{rms}$
+ -->
+<IMG
+ WIDTH="110" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img588.png"
+ ALT="$V_p=\sqrt{2}V_{rms}$"> is the peak voltage across <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img76.png"
+ ALT="$C$">.
+We can show that <IMG
+ WIDTH="86" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img589.png"
+ ALT="$W_L=W_C$"> at resonant frequency <!-- MATH
+ $\omega=1/\sqrt{LC}$
+ -->
+<IMG
+ WIDTH="104" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img590.png"
+ ALT="$\omega=1/\sqrt{LC}$">:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+W_L=LI^2_{rms}=L \left( \frac{V_{rms}}{\omega_0L}\right)^2
+=L\frac{V^2_{rms}LC}{L^2}=CV^2_{rms}=W_C
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="445" HEIGHT="52" BORDER="0"
+ SRC="img591.png"
+ ALT="\begin{displaymath}W_L=LI^2_{rms}=L \left( \frac{V_{rms}}{\omega_0L}\right)^2
+=L\frac{V^2_{rms}LC}{L^2}=CV^2_{rms}=W_C \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where <IMG
+ WIDTH="41" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img592.png"
+ ALT="$V_{rms}$"> is the voltage across <IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img77.png"
+ ALT="$L$"> which is the same as that
+across <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img76.png"
+ ALT="$C$"> when <!-- MATH
+ $\omega=\omega_0$
+ -->
+<IMG
+ WIDTH="61" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img532.png"
+ ALT="$\omega=\omega_0$">. Here the energy <IMG
+ WIDTH="86" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img589.png"
+ ALT="$W_L=W_C$"> is converted
+back and forth between magnetic energy in <IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img77.png"
+ ALT="$L$"> and electrical energy in <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img76.png"
+ ALT="$C$">.
+
+<P>
+The energy dissipated in <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.png"
+ ALT="$R$"> per cycle <!-- MATH
+ $T_0=2\pi/\omega_0=1/f_0$
+ -->
+<IMG
+ WIDTH="158" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img593.png"
+ ALT="$T_0=2\pi/\omega_0=1/f_0$"> is:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+W_R=P_R T_0=I^2_{rms} R T_0
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="186" HEIGHT="33" BORDER="0"
+ SRC="img594.png"
+ ALT="\begin{displaymath}W_R=P_R T_0=I^2_{rms} R T_0 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Following the definition of <IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img544.png"
+ ALT="$Q$"> above, we have
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Q=2\pi\frac{W_L}{W_R}=2\pi\frac{LI^2_{rms}}{I^2_{rms}RT_0 }
+	=2\pi f_0\frac{L}{R}=\frac{\omega_0L}{R}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="348" HEIGHT="53" BORDER="0"
+ SRC="img595.png"
+ ALT="\begin{displaymath}Q=2\pi\frac{W_L}{W_R}=2\pi\frac{LI^2_{rms}}{I^2_{rms}RT_0 }
+=2\pi f_0\frac{L}{R}=\frac{\omega_0L}{R} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+which is indeed the same as the <IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img544.png"
+ ALT="$Q$"> defined before.
+
+<P>
+<B>Relationship between <IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img544.png"
+ ALT="$Q$"> and <IMG
+ WIDTH="14" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img411.png"
+ ALT="$\zeta$"></B>
+
+<P>
+If the voltage across <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.png"
+ ALT="$R$"> is treated as the output of the circuit, then
+the frequency response function (FRF) of this second order system can be 
+expressed as (voltage divider):
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+H_R(\omega)=\frac{{\bf V}_R}{{\bf V}}=\frac{R}{j\omega L+R+1/j\omega C}
+  =\frac{j\omega R/L}{(j\omega)^2+(j\omega) R/L+1/LC}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="521" HEIGHT="52" BORDER="0"
+ SRC="img596.png"
+ ALT="\begin{displaymath}H_R(\omega)=\frac{{\bf V}_R}{{\bf V}}=\frac{R}{j\omega L+R+1/j\omega C}
+=\frac{j\omega R/L}{(j\omega)^2+(j\omega) R/L+1/LC} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Multiplying both the numerator and the denominator by <IMG
+ WIDTH="48" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img597.png"
+ ALT="$j\omega/L$"> we get
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+H_R(\omega)
+=\frac{j\omega 2\zeta \omega_0}{(j\omega)^2+j\omega 2\zeta \omega_0+\omega_0^2}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="248" HEIGHT="51" BORDER="0"
+ SRC="img598.png"
+ ALT="\begin{displaymath}H_R(\omega)
+=\frac{j\omega 2\zeta \omega_0}{(j\omega)^2+j\omega 2\zeta \omega_0+\omega_0^2}\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+with the denominator now represented in canonical form:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+(j\omega)^2+\frac{R}{L}\,j\omega +\frac{1}{LC}
+=(j\omega)^2+j\omega 2\zeta \omega_0+\omega_0^2
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="355" HEIGHT="46" BORDER="0"
+ SRC="img599.png"
+ ALT="\begin{displaymath}(j\omega)^2+\frac{R}{L}\,j\omega +\frac{1}{LC}
+=(j\omega)^2+j\omega 2\zeta \omega_0+\omega_0^2 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+in terms of the two parameters of a second-order system, i.e.,
+<!-- MATH
+ $\omega_0=1/\sqrt{LC}$
+ -->
+<IMG
+ WIDTH="111" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img600.png"
+ ALT="$\omega_0=1/\sqrt{LC}$"> as shown above, and <IMG
+ WIDTH="14" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img411.png"
+ ALT="$\zeta$">, which can be found by
+solving the equation <!-- MATH
+ $R/L=2\zeta \omega_0$
+ -->
+<IMG
+ WIDTH="104" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img601.png"
+ ALT="$R/L=2\zeta \omega_0$">:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\zeta=\frac{R}{2L}\frac{1}{\omega_0}=\frac{R}{2L}\sqrt{LC}
+=\frac{R}{2}\sqrt{\frac{C}{L}}=\frac{1}{2Q}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="308" HEIGHT="56" BORDER="0"
+ SRC="img602.png"
+ ALT="\begin{displaymath}\zeta=\frac{R}{2L}\frac{1}{\omega_0}=\frac{R}{2L}\sqrt{LC}
+=\frac{R}{2}\sqrt{\frac{C}{L}}=\frac{1}{2Q}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+i.e.,
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Q=\frac{1}{2\zeta}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="60" HEIGHT="49" BORDER="0"
+ SRC="img603.png"
+ ALT="\begin{displaymath}Q=\frac{1}{2\zeta} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+We therefore see that the quality factor <IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img544.png"
+ ALT="$Q$"> can also be used to judge whether 
+a second order system is under, critically or over damped:
+
+<P>
+<TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="CENTER"><IMG
+ WIDTH="49" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img604.png"
+ ALT="$\zeta&lt;1$"></TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="68" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img605.png"
+ ALT="$Q&gt;0.5$"></TD>
+<TD ALIGN="CENTER">under damped</TD>
+</TR>
+<TR><TD ALIGN="CENTER"><IMG
+ WIDTH="49" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img396.png"
+ ALT="$\zeta=1$"></TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="68" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img606.png"
+ ALT="$Q=0.5$"></TD>
+<TD ALIGN="CENTER">critically damped</TD>
+</TR>
+<TR><TD ALIGN="CENTER"><IMG
+ WIDTH="49" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img607.png"
+ ALT="$\zeta&gt;1$"></TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="68" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img608.png"
+ ALT="$Q&lt;0.5$"></TD>
+<TD ALIGN="CENTER">over damped</TD>
+</TR>
+</TABLE>
+
+<P>
+<B>Peak Frequency and Bandwidth</B>
+
+<P>
+The frequency response function above can be further expressed as:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+H_R(\omega)=\frac{R}{R+j(\omega L-1/\omega C)}
+   =\left[1+j\left(\frac{\omega L}{R}-\frac{1}{\omega CR}\right)\right]^{-1}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="461" HEIGHT="54" BORDER="0"
+ SRC="img609.png"
+ ALT="\begin{displaymath}H_R(\omega)=\frac{R}{R+j(\omega L-1/\omega C)}
+=\left[1+j\left(\frac{\omega L}{R}-\frac{1}{\omega CR}\right)\right]^{-1} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+As <!-- MATH
+ $Q=\omega_0L/R=1/\omega_0CR$
+ -->
+<IMG
+ WIDTH="192" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img610.png"
+ ALT="$Q=\omega_0L/R=1/\omega_0CR$">, we have 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\frac{L}{R}=\frac{Q}{\omega_0},\;\;\;\;\;\;\mbox{and}
+   \;\;\;\;\;\;\frac{1}{RC}=Q\omega_0
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="259" HEIGHT="49" BORDER="0"
+ SRC="img611.png"
+ ALT="\begin{displaymath}\frac{L}{R}=\frac{Q}{\omega_0},\;\;\;\;\;\;\mbox{and}
+\;\;\;\;\;\;\frac{1}{RC}=Q\omega_0 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Substituting these into the equation above we get
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+H_R(\omega)=\left[1+jQ\left(\frac{\omega}{\omega_0}-\frac{\omega_0}{\omega}\right)\right]^{-1}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="263" HEIGHT="50" BORDER="0"
+ SRC="img612.png"
+ ALT="\begin{displaymath}H_R(\omega)=\left[1+jQ\left(\frac{\omega}{\omega_0}-\frac{\omega_0}{\omega}\right)\right]^{-1} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+At the resonant frequency <!-- MATH
+ $\omega=\omega_0$
+ -->
+<IMG
+ WIDTH="61" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img532.png"
+ ALT="$\omega=\omega_0$">, <IMG
+ WIDTH="66" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img613.png"
+ ALT="$H_R=1$"> reaches the 
+maximum. When <IMG
+ WIDTH="17" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img40.png"
+ ALT="$\omega$"> is either lower or higher than <IMG
+ WIDTH="24" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img553.png"
+ ALT="$\omega_0$">,
+<IMG
+ WIDTH="22" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img614.png"
+ ALT="$H$"> is smaller. The bandwidth is defined as 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\triangle \omega\stackrel{\triangle}{=}\omega_2-\omega_1
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="113" HEIGHT="32" BORDER="0"
+ SRC="img615.png"
+ ALT="\begin{displaymath}\triangle \omega\stackrel{\triangle}{=}\omega_2-\omega_1 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where <!-- MATH
+ $\omega_2>\omega_1$
+ -->
+<IMG
+ WIDTH="68" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img616.png"
+ ALT="$\omega_2&gt;\omega_1$"> are the two cut-off frequencies (or 
+half-power frequency) at which <!-- MATH
+ $|H(\omega_{1,2})|=1/\sqrt{2}=0.707$
+ -->
+<IMG
+ WIDTH="213" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img617.png"
+ ALT="$\vert H(\omega_{1,2})\vert=1/\sqrt{2}=0.707$"> or 
+<!-- MATH
+ $|H(\omega_{1,2})|^2=1/2$
+ -->
+<IMG
+ WIDTH="137" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img618.png"
+ ALT="$\vert H(\omega_{1,2})\vert^2=1/2$"> (i.e., the power is halved):
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+H_R(\omega_{1,2})=\frac{1}{1\pm j},\;\;\;\;\;\mbox{i.e.}\;\;\;\;
+Q\left(\frac{\omega_{1,2}}{\omega_0}-\frac{\omega_0}{\omega_{1,2}}\right)=\pm 1
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="402" HEIGHT="55" BORDER="0"
+ SRC="img619.png"
+ ALT="\begin{displaymath}H_R(\omega_{1,2})=\frac{1}{1\pm j},\;\;\;\;\;\mbox{i.e.}\;\;\...
+...ga_{1,2}}{\omega_0}-\frac{\omega_0}{\omega_{1,2}}\right)=\pm 1 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Therefore the two cut-off frequencies should satisfy, respectively
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Q\left(\frac{\omega_1}{\omega_0}-\frac{\omega_0}{\omega_1}\right)=-1,
+   \;\;\;\;\mbox{i.e.}\;\;\;
+   \omega_1^2+\frac{\omega_0}{Q}\omega_1-\omega_0^2=0
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="391" HEIGHT="47" BORDER="0"
+ SRC="img620.png"
+ ALT="\begin{displaymath}Q\left(\frac{\omega_1}{\omega_0}-\frac{\omega_0}{\omega_1}\ri...
+....e.}\;\;\;
+\omega_1^2+\frac{\omega_0}{Q}\omega_1-\omega_0^2=0 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+and
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Q\left(\frac{\omega_2}{\omega_0}-\frac{\omega_0}{\omega_2}\right)=1,
+   \;\;\;\;\mbox{i.e.}\;\;\;
+   \omega_2^2-\frac{\omega_0}{Q}\omega_2-\omega_0^2=0
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="376" HEIGHT="47" BORDER="0"
+ SRC="img621.png"
+ ALT="\begin{displaymath}Q\left(\frac{\omega_2}{\omega_0}-\frac{\omega_0}{\omega_2}\ri...
+....e.}\;\;\;
+\omega_2^2-\frac{\omega_0}{Q}\omega_2-\omega_0^2=0 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The positive solutions of these two quadratic equations are, respectively:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\omega_{1,2}=\omega_0\left[\sqrt{1+\left(\frac{1}{2Q}\right)^2}\mp \frac{1}{2Q}\right]
+	=\omega_0\left(\sqrt{1+\zeta^2}\mp \zeta\right)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="427" HEIGHT="74" BORDER="0"
+ SRC="img622.png"
+ ALT="\begin{displaymath}\omega_{1,2}=\omega_0\left[\sqrt{1+\left(\frac{1}{2Q}\right)^...
+...}{2Q}\right]
+=\omega_0\left(\sqrt{1+\zeta^2}\mp \zeta\right)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Note that in general a quadratic equation has two solutions. But here one 
+of them is negative (with no physical meaning) and ignored. The bandwidth
+can  therefore be found to be:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\triangle \omega=\omega_2-\omega_1=\frac{\omega_0}{Q}=2\zeta \omega_0,
+\;\;\;\;\mbox{or}\;\;\;\;\triangle f=f_2-f_1=\frac{f_0}{Q}=2\zeta f_0
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="510" HEIGHT="50" BORDER="0"
+ SRC="img623.png"
+ ALT="\begin{displaymath}\triangle \omega=\omega_2-\omega_1=\frac{\omega_0}{Q}=2\zeta ...
+...;\mbox{or}\;\;\;\;\triangle f=f_2-f_1=\frac{f_0}{Q}=2\zeta f_0 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+i.e., the bandwidth is proportional to <IMG
+ WIDTH="14" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img411.png"
+ ALT="$\zeta$"> or inversely proportional 
+to <IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img544.png"
+ ALT="$Q$">. Also note that the middle point between <IMG
+ WIDTH="24" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img624.png"
+ ALT="$\omega_1$"> and <IMG
+ WIDTH="24" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img625.png"
+ ALT="$\omega_2$">
+is <!-- MATH
+ $\omega'_0=(\omega_1+\omega_2)/2=\omega_0 \sqrt{1+\zeta^2}>\omega_0$
+ -->
+<IMG
+ WIDTH="298" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img626.png"
+ ALT="$\omega'_0=(\omega_1+\omega_2)/2=\omega_0 \sqrt{1+\zeta^2}&gt;\omega_0$">, 
+i.e., <!-- MATH
+ $\omega_2-\omega_0>\omega_0-\omega_1$
+ -->
+<IMG
+ WIDTH="153" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img627.png"
+ ALT="$\omega_2-\omega_0&gt;\omega_0-\omega_1$">.
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../figures/bandwidth1.gif"
+ ALT="bandwidth1.gif">
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../figures/bandwidth.gif"
+ ALT="bandwidth.gif">
+
+<P>
+If <IMG
+ WIDTH="82" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img628.png"
+ ALT="$Q=1/2\zeta$"> is much greater than 1 (typically <IMG
+ WIDTH="63" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img629.png"
+ ALT="$Q&gt;10$">, i.e., <IMG
+ WIDTH="73" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img630.png"
+ ALT="$\zeta&lt;0.05$">),
+we have <!-- MATH
+ $\sqrt{1+(1/2Q)^2}=\sqrt{1+\zeta^2} \approx 1$
+ -->
+<IMG
+ WIDTH="243" HEIGHT="51" ALIGN="MIDDLE" BORDER="0"
+ SRC="img631.png"
+ ALT="$\sqrt{1+(1/2Q)^2}=\sqrt{1+\zeta^2} \approx 1$"> and
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\omega_1\approx \omega_0-\frac{\omega_0}{2Q}=\omega_0(1-\zeta),
+\;\;\;\;\;\;
+   \omega_2\approx \omega_0+\frac{\omega_0}{2Q}=\omega_0(1+\zeta)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="471" HEIGHT="45" BORDER="0"
+ SRC="img632.png"
+ ALT="\begin{displaymath}\omega_1\approx \omega_0-\frac{\omega_0}{2Q}=\omega_0(1-\zeta...
+...\omega_2\approx \omega_0+\frac{\omega_0}{2Q}=\omega_0(1+\zeta) \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+we therefore get these simple relations:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\omega_2-\omega_0=\omega_0-\omega_1=\frac{\omega_0}{2Q}=\omega_0\zeta
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="255" HEIGHT="45" BORDER="0"
+ SRC="img633.png"
+ ALT="\begin{displaymath}\omega_2-\omega_0=\omega_0-\omega_1=\frac{\omega_0}{2Q}=\omega_0\zeta \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+If we consider the voltage across each of the three components in the RCL 
+series circuit as the output, then we have the following frequency response
+functions:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+H_L(\omega)=\frac{{\bf V}_L}{\bf V}
+=\frac{j\omega L}{R+j\omega L+1/j\omega C}
+=\frac{(j\omega)^2}{(j\omega)^2+j\omega 2\zeta \omega_0+\omega_0^2}
+=\frac{(j\omega)^2}{(j\omega)^2+\triangle \omega j\omega +\omega_0^2}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="669" HEIGHT="53" BORDER="0"
+ SRC="img634.png"
+ ALT="\begin{displaymath}H_L(\omega)=\frac{{\bf V}_L}{\bf V}
+=\frac{j\omega L}{R+j\ome...
+...(j\omega)^2}{(j\omega)^2+\triangle \omega j\omega +\omega_0^2} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+H_R(\omega)=\frac{{\bf V}_R}{\bf V}
+=\frac{R}{R+j\omega L+1/j\omega C}
+=\frac{j\omega 2\zeta \omega_0}{(j\omega)^2+j\omega 2\zeta \omega_0+\omega_0^2}	
+=\frac{j\omega 2\zeta \omega_0}{(j\omega)^2+\triangle \omega j\omega+\omega_0^2}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="671" HEIGHT="51" BORDER="0"
+ SRC="img635.png"
+ ALT="\begin{displaymath}H_R(\omega)=\frac{{\bf V}_R}{\bf V}
+=\frac{R}{R+j\omega L+1/j...
+...zeta \omega_0}{(j\omega)^2+\triangle \omega j\omega+\omega_0^2}\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+H_C(\omega)=\frac{{\bf V}_C}{\bf V}
+=\frac{1/j\omega C}{R+j\omega L+1/j\omega C}
+=\frac{\omega^2_0}{(j\omega)^2+j\omega 2\zeta \omega_0+\omega_0^2} 
+=\frac{\omega^2_0}{(j\omega)^2+\triangle \omega j\omega+\omega_0^2}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="671" HEIGHT="53" BORDER="0"
+ SRC="img636.png"
+ ALT="\begin{displaymath}H_C(\omega)=\frac{{\bf V}_C}{\bf V}
+=\frac{1/j\omega C}{R+j\o...
+...c{\omega^2_0}{(j\omega)^2+\triangle \omega j\omega+\omega_0^2} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+For a parallel RCL circuit with current input, due to the duality between 
+current and voltage, parallel and series configuration, the same derivation
+of bandwidth can be carried out to obtain the same conclusions. 
+
+<P>
+<B>Summary:</B>
+
+<UL>
+<LI>The resonant frequency of both series and parallel RCL circuits is
+  completely determined by <IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img77.png"
+ ALT="$L$"> and <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img76.png"
+ ALT="$C$">: <!-- MATH
+ $\omega_0=1/\sqrt{LC}$
+ -->
+<IMG
+ WIDTH="111" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img600.png"
+ ALT="$\omega_0=1/\sqrt{LC}$">, independent 
+  of the resistance <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.png"
+ ALT="$R$"> in the circuit.
+
+<P>
+</LI>
+<LI>At the resonant frequency <!-- MATH
+ $\omega=\omega_0$
+ -->
+<IMG
+ WIDTH="61" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img532.png"
+ ALT="$\omega=\omega_0$">, the impedance <IMG
+ WIDTH="79" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img637.png"
+ ALT="$Z=1/Y$"> of
+  a series RCL circuit is real and reaches minimum, and the current through the 
+  three components reaches maximum; the admittance <IMG
+ WIDTH="77" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img113.png"
+ ALT="$Y=1/Z$"> of a parallel RCL 
+  circuit is real and reaches minimum and the voltage across the three components 
+  reaches maximum. 
+
+<P>
+</LI>
+<LI>In series RCL with voltage input and parallel RCL with current input, 
+  the quality factor <IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img544.png"
+ ALT="$Q$"> is proportional to the ratio between <IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img77.png"
+ ALT="$L$"> and <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img76.png"
+ ALT="$C$">:
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Q_s=\frac{1}{R}\sqrt{\frac{L}{C}},\;\;\;\;Q_p=R\sqrt{\frac{C}{L}}=\frac{1}{Q_s}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="274" HEIGHT="56" BORDER="0"
+ SRC="img638.png"
+ ALT="\begin{displaymath}Q_s=\frac{1}{R}\sqrt{\frac{L}{C}},\;\;\;\;Q_p=R\sqrt{\frac{C}{L}}=\frac{1}{Q_s} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+</LI>
+<LI>In series RCL, <IMG
+ WIDTH="26" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img577.png"
+ ALT="$Q_s$"> is inversely proportional to <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.png"
+ ALT="$R$"> (the larger <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.png"
+ ALT="$R$">, 
+  the smaller <IMG
+ WIDTH="26" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img577.png"
+ ALT="$Q_s$">, the more energy lost and the wider bandwidth), while in 
+  parallel RCL, <IMG
+ WIDTH="27" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img575.png"
+ ALT="$Q_p$"> is proportional to <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.png"
+ ALT="$R$"> (the larger <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.png"
+ ALT="$R$">, the larger <IMG
+ WIDTH="27" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img575.png"
+ ALT="$Q_p$">,
+  the less energy lost and the narrower bandwidth).
+
+<P>
+</LI>
+<LI>At resonant frequency, the impedance of a series RCL circuit reaches
+  minimum, consequently the current <IMG
+ WIDTH="13" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img639.png"
+ ALT="${\bf I}$"> reaches maximum and so does 
+  the voltage across the resistor <!-- MATH
+ ${\bf V_R}={\bf I}R$
+ -->
+<IMG
+ WIDTH="81" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img640.png"
+ ALT="${\bf V_R}={\bf I}R$">. However, the voltage
+  across the inductor <!-- MATH
+ ${\bf V_L}={\bf I}Z_L$
+ -->
+<IMG
+ WIDTH="87" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img641.png"
+ ALT="${\bf V_L}={\bf I}Z_L$"> reaches maximum at a frequency 
+  slightly higher than the resonant frequency as <IMG
+ WIDTH="86" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img104.png"
+ ALT="$Z_L=j\omega L$"> is 
+  proportional to <IMG
+ WIDTH="17" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img40.png"
+ ALT="$\omega$">, and the voltage across the capacitor 
+  <!-- MATH
+ ${\bf V_C}={\bf I}Z_C$
+ -->
+<IMG
+ WIDTH="90" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img642.png"
+ ALT="${\bf V_C}={\bf I}Z_C$"> reaches maximum at a frequency slightly lower than
+  the resonant frequency as <!-- MATH
+ $Z_C=1/j\omega C$
+ -->
+<IMG
+ WIDTH="109" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img643.png"
+ ALT="$Z_C=1/j\omega C$"> is inversely proportional to 
+  <IMG
+ WIDTH="17" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img40.png"
+ ALT="$\omega$">, as shown in the linear and log-scale plots below.
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../figures/rcl_plots2.gif"
+ ALT="rcl_plots2.gif">
+  <IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../figures/rcl_plots1.gif"
+ ALT="rcl_plots1.gif">
+
+<P>
+See <A NAME="tex2html3"
+  HREF="http://fourier.eng.hmc.edu/e80/active_filter/index.html">this website</A>
+for more detailed discussions of second-order systems.
+
+<P>
+</LI>
+</UL>
+
+<P>
+<B>Example 1:</B>
+
+<P>
+A series RCL circuit composed of an inductor <IMG
+ WIDTH="89" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img644.png"
+ ALT="$L=80\mu H$"> and <IMG
+ WIDTH="67" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img645.png"
+ ALT="$R=8\Omega$">
+and a capacitor <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img76.png"
+ ALT="$C$"> is connected to a voltage source. Find the value of 
+<IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img76.png"
+ ALT="$C$"> for this circuit to resonate at <IMG
+ WIDTH="111" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img646.png"
+ ALT="$f=400\;kHz$">, also find the bandwidth.
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\omega_0=\sqrt{\frac{1}{LC}},\;\;\;\;
+C=\frac{1}{\omega_0^2 L}=\frac{1}{(2\pi 400\times 10^3)^2\times 80\times 10^{-6}}
+=20nF
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="518" HEIGHT="57" BORDER="0"
+ SRC="img647.png"
+ ALT="\begin{displaymath}\omega_0=\sqrt{\frac{1}{LC}},\;\;\;\;
+C=\frac{1}{\omega_0^2 L}=\frac{1}{(2\pi 400\times 10^3)^2\times 80\times 10^{-6}}
+=20nF \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The quality factor is
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Q=\frac{\omega_0 L}{R}=\frac{2\pi 400\times 10^3\times 80\times 10^{-6}}{8}=25.13
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="372" HEIGHT="48" BORDER="0"
+ SRC="img648.png"
+ ALT="\begin{displaymath}
+Q=\frac{\omega_0 L}{R}=\frac{2\pi 400\times 10^3\times 80\times 10^{-6}}{8}=25.13
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The bandwidth is
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\triangle f=\frac{f_0}{Q}=\frac{400\times 10^3}{25.13}=15.9\;kHz
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="280" HEIGHT="52" BORDER="0"
+ SRC="img649.png"
+ ALT="\begin{displaymath}\triangle f=\frac{f_0}{Q}=\frac{400\times 10^3}{25.13}=15.9\;kHz \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+or 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\triangle \omega=\frac{\omega_0}{Q}=\frac{R}{L}=10^5
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="169" HEIGHT="50" BORDER="0"
+ SRC="img650.png"
+ ALT="\begin{displaymath}\triangle \omega=\frac{\omega_0}{Q}=\frac{R}{L}=10^5 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+<B>Example 2:</B> 
+
+<P>
+Resonant circuit is widely used in radio and TV receivers to select a 
+desired station from many stations available. The circuit are shown in 
+the figure below. Assume <IMG
+ WIDTH="100" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img651.png"
+ ALT="$L=0.3mH$">, <IMG
+ WIDTH="76" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img652.png"
+ ALT="$R=16\Omega$">, and <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img76.png"
+ ALT="$C$"> is a variable 
+capacitor, which can be adjusted to match the resonant frequency of the 
+circuit to the frequency of the desired station. Assume the frequency
+of the desired station is <IMG
+ WIDTH="75" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img653.png"
+ ALT="$640\;kHz$">, find the value of <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img76.png"
+ ALT="$C$"> and the 
+bandwidth of the tuning circuit. Moreover, if the induced voltage in 
+the circuit is <IMG
+ WIDTH="74" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img654.png"
+ ALT="$e=2 \mu V$"> (rms), find the current (rms) in the resonant
+circuit, and the output voltage (rms) across the capacitor.
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../figures/tuning.gif"
+ ALT="tuning.gif">
+
+<P>
+<B>Solution:</B> At the desired resonant frequency <IMG
+ WIDTH="111" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img655.png"
+ ALT="$f=640\;kHz$">, the 
+reactance of the inductor is
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+X_L=\omega L=2\pi f L
+=2\times 3.14\times 640\times 10^3\times 0.3\times 10^{-3}=1206\Omega
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="521" HEIGHT="32" BORDER="0"
+ SRC="img656.png"
+ ALT="\begin{displaymath}X_L=\omega L=2\pi f L
+=2\times 3.14\times 640\times 10^3\times 0.3\times 10^{-3}=1206\Omega \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+and the quality factor <IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img544.png"
+ ALT="$Q$"> of this circuit is 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Q=\frac{\omega L}{R}=\frac{X_L}{R}=\frac{1206}{16}=75
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="232" HEIGHT="46" BORDER="0"
+ SRC="img657.png"
+ ALT="\begin{displaymath}Q=\frac{\omega L}{R}=\frac{X_L}{R}=\frac{1206}{16}=75 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The bandwidth is:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\triangle f =\frac{f_0}{Q}=\frac{640}{75}\approx 8.53\;kHz
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="230" HEIGHT="50" BORDER="0"
+ SRC="img658.png"
+ ALT="\begin{displaymath}\triangle f =\frac{f_0}{Q}=\frac{640}{75}\approx 8.53\;kHz \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The resonant frequency can be expressed as:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+f_0=\frac{1}{2\pi\sqrt{LC}}=640\;kHz
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="204" HEIGHT="49" BORDER="0"
+ SRC="img659.png"
+ ALT="\begin{displaymath}f_0=\frac{1}{2\pi\sqrt{LC}}=640\;kHz \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Solving this we get
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+C=\frac{1}{(2\pi f_0)^2L}=206\times 10^{-12}F=206\;pF
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="332" HEIGHT="50" BORDER="0"
+ SRC="img660.png"
+ ALT="\begin{displaymath}C=\frac{1}{(2\pi f_0)^2L}=206\times 10^{-12}F=206\;pF \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The current in circuit is
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+I_{rms}=e/R=2\times 10^{-6}/16=0.125\;\mu A
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="312" HEIGHT="33" BORDER="0"
+ SRC="img661.png"
+ ALT="\begin{displaymath}I_{rms}=e/R=2\times 10^{-6}/16=0.125\;\mu A \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The output voltage across <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img76.png"
+ ALT="$C$"> is
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V_C = V_L=I_{rms} X_L=0.125\times 10^{-6}\times 1206=151\;\mu V
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="425" HEIGHT="32" BORDER="0"
+ SRC="img662.png"
+ ALT="\begin{displaymath}V_C = V_L=I_{rms} X_L=0.125\times 10^{-6}\times 1206=151\;\mu V \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+<B>Radio/TV Broadcasting and Frequency Allocation</B>
+
+<P>
+In either radio or TV broadcasting, the audio or video signal is used to
+modulate the amplitude, frequency or phase of the <EM>carrier frequency</EM>,
+which is transmitted through the air. In amplitude modulation (AM) radio 
+broadcasting, if the highest frequency component contained in the audio signal
+is <!-- MATH
+ $s(t)=\cos(\omega_s t)$
+ -->
+<IMG
+ WIDTH="125" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img663.png"
+ ALT="$s(t)=\cos(\omega_s t)$">, and the carrier is <!-- MATH
+ $c(t)=\cos(\omega_c t)$
+ -->
+<IMG
+ WIDTH="124" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img664.png"
+ ALT="$c(t)=\cos(\omega_c t)$">, where 
+the carrier frequency is much higher than the signal frequency, <!-- MATH
+ $\omega_c >> 
+\omega_s$
+ -->
+<IMG
+ WIDTH="81" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img665.png"
+ ALT="$\omega_c &gt;&gt;
+\omega_s$">, then the signal transmitted is the carrier signal <IMG
+ WIDTH="34" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img666.png"
+ ALT="$c(t)$"> with its
+amplitude modulated by the signal <IMG
+ WIDTH="35" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img667.png"
+ ALT="$s(t)$">:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+c(t)\,s(t)=\cos(\omega_ct)\cos(\omega_st)
+=\frac{1}{2}[\cos(\omega_c+\omega_s)+\cos(\omega_c-\omega_s)]
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="490" HEIGHT="45" BORDER="0"
+ SRC="img668.png"
+ ALT="\begin{displaymath}c(t)\,s(t)=\cos(\omega_ct)\cos(\omega_st)
+=\frac{1}{2}[\cos(\omega_c+\omega_s)+\cos(\omega_c-\omega_s)] \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+i.e., a certain bandwidth of <!-- MATH
+ $\Delta \omega=2\omega_s$
+ -->
+<IMG
+ WIDTH="86" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img669.png"
+ ALT="$\Delta \omega=2\omega_s$"> around the carrier (or
+central) frequency <IMG
+ WIDTH="23" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img670.png"
+ ALT="$\omega_c$"> is needed to transmitting all signal frequencies 
+up to <IMG
+ WIDTH="23" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img671.png"
+ ALT="$\omega_s$">. Consequently, the <IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img544.png"
+ ALT="$Q$"> value of the tuner of the receiver needs 
+to be very carefully chosen. It needs to be high enough for good selectivity 
+between different radio stations, but it cannot be too high in order to have
+a bandwidth wide enough to contain all frequency components in the signal.
+
+<P>
+The AM radio frequency range is from 535 to 1605 kHz with 10 kHz frequency 
+spacing or bandwidth, i.e., the highest signal frequency allowed is about 5 kHz,
+while the upper limit of the audible frequencies is 20 kHz. In the case of FM 
+radio, the frequency range is from 87.8 to 108 MHz with 0.2 MHz=200 kHz frequency 
+spacing, corresponding to a much wider bandwidth that makes high fidelity and
+stereo broadcasting possible. The TV broadcasting is also in MHz frequency 
+range with a much wider spacing of 6 MHz, needed to carry video as well as audio
+signals.
+
+<P>
+The Federal Communications Commission (FCC) has very specific frequency allocation 
+regulations, see the 
+<A NAME="tex2html4"
+  HREF="http://www.panix.com/clay/scanning/frequencies.html">FCC frequency allocations</A>
+and the
+<A NAME="tex2html5"
+  HREF="http://www.ntia.doc.gov/osmhome/allochrt.pdf">frequency allocation chart</A>.
+
+<P>
+<B>Example 3:</B> 
+
+<P>
+In reality, all inductors have a non-zero resistance, therefore a 
+parallel resonance circuit should be modeled as shown in the figure.
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../figures/parallelRCL.gif"
+ ALT="parallelRCL.gif">
+
+<P>
+The admittance is:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Y(\omega)=\frac{1}{R+j\omega L}+j\omega C
+  =\frac{R-j\omega L+j\omega C(R^2+\omega^2L^2)}{R^2+\omega^2L^2}
+  =\frac{1}{R^2+\omega^2L^2}[R-j(\omega L-\omega C(R^2+\omega^2L^2))]
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="785" HEIGHT="52" BORDER="0"
+ SRC="img672.png"
+ ALT="\begin{displaymath}Y(\omega)=\frac{1}{R+j\omega L}+j\omega C
+=\frac{R-j\omega L...
+...c{1}{R^2+\omega^2L^2}[R-j(\omega L-\omega C(R^2+\omega^2L^2))]
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+As frequency <IMG
+ WIDTH="17" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img40.png"
+ ALT="$\omega$"> appears in the real part <IMG
+ WIDTH="80" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img673.png"
+ ALT="$Re[Y(\omega)]$"> as well 
+as in the imaginary part <IMG
+ WIDTH="83" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img674.png"
+ ALT="$Im[Y(\omega)]$">, the resonant frequency that
+minimizes <IMG
+ WIDTH="57" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img675.png"
+ ALT="$\vert Y(\omega)\vert$"> has to be found by
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\frac{d}{d\omega} \; |Y(\omega)| =0
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="117" HEIGHT="46" BORDER="0"
+ SRC="img676.png"
+ ALT="\begin{displaymath}\frac{d}{d\omega} \; \vert Y(\omega)\vert =0 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+However, when the quality factor <!-- MATH
+ $Q=\omega_0 L/R$
+ -->
+<IMG
+ WIDTH="100" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img677.png"
+ ALT="$Q=\omega_0 L/R$"> associated with the
+non-ideal inductor is large enough (<IMG
+ WIDTH="63" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img678.png"
+ ALT="$Q &gt; 20$">), all previous discussed 
+relations for ideal inductors still hold approximately, and the resonant 
+frequency <IMG
+ WIDTH="24" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img553.png"
+ ALT="$\omega_0$"> can still be found approximately by the previous 
+approach by letting <!-- MATH
+ $Im[Y(\omega)]=0$
+ -->
+<IMG
+ WIDTH="117" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img679.png"
+ ALT="$Im[Y(\omega)]=0$">: 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\omega_0 L=\omega_0 C(R^2+\omega_0^2L^2),\;\;\;\;\Longrightarrow
+	\;\;\;\;\;\omega_0=\sqrt{\frac{1}{LC}-\left(\frac{R}{L}\right)^2}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="447" HEIGHT="55" BORDER="0"
+ SRC="img680.png"
+ ALT="\begin{displaymath}\omega_0 L=\omega_0 C(R^2+\omega_0^2L^2),\;\;\;\;\Longrightar...
+...;\;\;\;\omega_0=\sqrt{\frac{1}{LC}-\left(\frac{R}{L}\right)^2} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+For <IMG
+ WIDTH="24" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img553.png"
+ ALT="$\omega_0$"> to be real, we must have
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\frac{1}{LC} > (\frac{R}{L})^2, \;\;\;\;\;\;\mbox{i,e,}
+	\;\;\;\;\;\;R<\sqrt{\frac{L}{C}}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="265" HEIGHT="55" BORDER="0"
+ SRC="img681.png"
+ ALT="\begin{displaymath}\frac{1}{LC} &gt; (\frac{R}{L})^2, \;\;\;\;\;\;\mbox{i,e,}
+\;\;\;\;\;\;R&lt;\sqrt{\frac{L}{C}} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Typically we have <!-- MATH
+ $R \ll \sqrt{L/C}$
+ -->
+<IMG
+ WIDTH="101" HEIGHT="51" ALIGN="MIDDLE" BORDER="0"
+ SRC="img682.png"
+ ALT="$R \ll \sqrt{L/C}$">, and the resonant frequency is
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\omega_0=\sqrt{\frac{1}{LC}-\left(\frac{R}{L}\right)^2}\approx \frac{1}{\sqrt{LC}}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="236" HEIGHT="58" BORDER="0"
+ SRC="img683.png"
+ ALT="\begin{displaymath}
+\omega_0=\sqrt{\frac{1}{LC}-\left(\frac{R}{L}\right)^2}\approx \frac{1}{\sqrt{LC}}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+<B>Note: </B> For the same reason, when considering the transfer function
+of a series RCL circuit when the output is the voltage across either <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img76.png"
+ ALT="$C$">
+or <IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img77.png"
+ ALT="$L$">, the peak frequency <IMG
+ WIDTH="24" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img684.png"
+ ALT="$\omega_p$"> is not exactly the same as the 
+resonant frequency <IMG
+ WIDTH="24" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img553.png"
+ ALT="$\omega_0$">, which only minimizes the denominator, but
+the numerator is still a function of <IMG
+ WIDTH="17" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img40.png"
+ ALT="$\omega$">. Only when the output is 
+the voltage across <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.png"
+ ALT="$R$"> (i.e., the numerator is <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.png"
+ ALT="$R$">, no longer a function 
+of <IMG
+ WIDTH="17" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img40.png"
+ ALT="$\omega$">), will the resonant frequency <IMG
+ WIDTH="24" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img553.png"
+ ALT="$\omega_0$"> be the same as the
+peak frequency.
+
+<P>
+<B>Example:</B> Consider the output voltage <IMG
+ WIDTH="83" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img685.png"
+ ALT="$V_{out}=V_R$"> across the resistor 
+R of the circuit shown below.
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../figures/bandblock.gif"
+ ALT="bandblock.gif">
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V_R=V_0 \frac{R}{R+Z_C||Z_L}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="161" HEIGHT="51" BORDER="0"
+ SRC="img686.png"
+ ALT="\begin{displaymath}V_R=V_0 \frac{R}{R+Z_C\vert\vert Z_L} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Z_C||Z_L=\frac{Z_LZ_C}{Z_L+Z_C}=\frac{j\omega L/j\omega C}{j\omega L+1/j\omega C}
+=\frac{j\omega L}{1-\omega^2 LC}=\frac{j\omega L}{1-(\omega/\omega_0)^2 }
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="527" HEIGHT="52" BORDER="0"
+ SRC="img687.png"
+ ALT="\begin{displaymath}Z_C\vert\vert Z_L=\frac{Z_LZ_C}{Z_L+Z_C}=\frac{j\omega L/j\om...
+...ega L}{1-\omega^2 LC}=\frac{j\omega L}{1-(\omega/\omega_0)^2 } \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where <!-- MATH
+ $\omega_0=1/\sqrt{LC}$
+ -->
+<IMG
+ WIDTH="111" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img600.png"
+ ALT="$\omega_0=1/\sqrt{LC}$">.
+
+<UL>
+<LI>When <!-- MATH
+ $\omega\rightarrow 0$
+ -->
+<IMG
+ WIDTH="56" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img688.png"
+ ALT="$\omega\rightarrow 0$">, <!-- MATH
+ $Z_C||Z_L\approx Z_L\rightarrow 0$
+ -->
+<IMG
+ WIDTH="149" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img689.png"
+ ALT="$Z_C\vert\vert Z_L\approx Z_L\rightarrow 0$">, <!-- MATH
+ $V_{out}\approx V_0$
+ -->
+<IMG
+ WIDTH="79" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img690.png"
+ ALT="$V_{out}\approx V_0$">
+</LI>
+<LI>When <!-- MATH
+ $\omega\rightarrow\infty$
+ -->
+<IMG
+ WIDTH="66" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img95.png"
+ ALT="$\omega\rightarrow \infty$"> <!-- MATH
+ $Z_C||Z_L\approx Z_C\rightarrow 0$
+ -->
+<IMG
+ WIDTH="151" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img691.png"
+ ALT="$Z_C\vert\vert Z_L\approx Z_C\rightarrow 0$">, <!-- MATH
+ $V_{out}\approx V_0$
+ -->
+<IMG
+ WIDTH="79" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img690.png"
+ ALT="$V_{out}\approx V_0$">
+</LI>
+<LI>When <!-- MATH
+ $\omega\rightarrow\omega_0$
+ -->
+<IMG
+ WIDTH="66" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img692.png"
+ ALT="$\omega\rightarrow\omega_0$">, <!-- MATH
+ $Z_C||Z_L\rightarrow \pm j\infty$
+ -->
+<IMG
+ WIDTH="135" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img693.png"
+ ALT="$Z_C\vert\vert Z_L\rightarrow \pm j\infty$">,
+  <!-- MATH
+ $V_{out}\approx 0$
+ -->
+<IMG
+ WIDTH="70" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img694.png"
+ ALT="$V_{out}\approx 0$">.
+</LI>
+</UL>
+This is a band-stop or band-block filter which attenuates frequencies around
+<!-- MATH
+ $\omega_0=1/\sqrt{LC}$
+ -->
+<IMG
+ WIDTH="111" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
+ SRC="img600.png"
+ ALT="$\omega_0=1/\sqrt{LC}$">.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html136"
+  HREF="node11.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html134"
+  HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html128"
+  HREF="node9.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html137"
+  HREF="node11.html">Real/Reactive Power and Power</A>
+<B> Up:</B> <A NAME="tex2html135"
+  HREF="node1.html">Chapter 3: AC Circuit</A>
+<B> Previous:</B> <A NAME="tex2html129"
+  HREF="node9.html">Series and Parallel Resonance</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Ruye Wang
+2014-10-05
+</ADDRESS>
+</BODY>
+</HTML>

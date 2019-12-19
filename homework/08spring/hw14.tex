@@ -1,0 +1,128 @@
+\documentstyle[11pt]{article}
+\usepackage{html}
+\begin{document}
+\begin{center}
+{\Large \bf  E84 Home Work 13}
+\end{center}
+\begin{enumerate}
+
+\item The Wien bridge is a particular type of the Wheatstone bridge 
+  of which two of the four arms are composed of a capacitor as well 
+  as resistor in parallel and series:
+
+  \htmladdimg{../../../lectures/figures/WienBridge2.png}
+
+  Assuming $R_1=R_2=R$, $C_1=C-2=C$, and $v_{ab}=A\cos\omega t$. For the
+  bridge to balance, i.e., $v_{cd}=v_c-v_d=0$, what does the frequency 
+  $\omega$ have to be? What is the ratio $R_4/R_3$?
+
+  {\bf Hint:} For this bridge to balance, the ratios of the upper and
+  lower impedances of the left branch has to be the same of that of
+  the right branch.
+
+  {\bf Solution:}
+  \[
+  \frac{R_3}{R_4}=\frac{R_2+1/j\omega C_2}{R_1||1/j\omega C_1}
+  =\frac{(j\omega R_1C_1+1)(j\omega R_2C_2+1)}{j\omega R_1C_2}
+  =\frac{1-\omega^2R_1R_2C_1C_2+j\omega(R_1C_1+R_2C_2)}{j\omega R_1C_2}
+  \]
+
+  For this equation to hold, the right-hand side needs to be real, i.e., 
+  \[
+  1-\omega^2R_1R_2C_1C_2=0,\;\;\;\;\;\mbox{i.e.,}\;\;\;\;\;
+  \omega=\frac{1}{\sqrt{R_1R_2C_1C_2}}
+  \]
+  and the equation above becomes 
+  \[
+  \frac{R_3}{R_4}=\frac{R_1C_1+R_2C_2}{R_1C_2}=\frac{C_1}{C_2}+\frac{R_2}{R_1}
+  \]
+
+  In particular, if $R_1=R_2=R$ and $C_1=C_2=C$, we have: 
+  \[
+  \omega=\frac{1}{\sqrt{R_1R_2C_1C_2}}
+  =\frac{1}{\sqrt{R^2C^2}}=\frac{1}{RC}
+  \]
+  and 
+  \[
+  \frac{R_3}{R_4}=\frac{C_1}{C_2}+\frac{R_2}{R_1}=1+1=2,
+  \;\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;R_4=2R_3
+  \]
+
+\item Find the FRF $H(\omega)$ of the Wien-Robinsion filter shown below. 
+
+  \htmladdimg{../../../lectures/figures/WienRobinson.png}
+
+  \begin{enumerate}
+  \item Show that this is a band-stop filter.
+  \item Find the frequency at which $|H(\omega)|$ is minimized.
+  \item Find the voltage gain at $\omega=0$ and $\omega=\infty$.
+  \item Find the $Q$ value and the bandwidth (the frequency difference 
+    between two half-point frequencies).
+  \end{enumerate}
+
+  {\bf Solution:}
+
+  \[
+  \frac{V_{in}}{R_4}+\frac{V_{out}}{R_3}+\frac{V_1}{R_2}=0\;\;\;\;\;\;\;\;(1)
+  \]
+
+  \[
+  V_2=\frac{R+1/j\omega C}{R+1/j\omega C+R/j\omega C/(R+1/j\omega C)}V_1
+  =\frac{(j\omega\tau+1)^2}{(j\omega\tau+1)^2+j\omega\tau}V_1,
+  \]
+  where $\tau=RC$, i.e., 
+  \[
+  V_1=\left(1+\frac{j\omega\tau}{(j\omega\tau+1)^2}\right)V_2,\;\;\;\;\;\;(2)
+  \]
+  \[
+  \frac{V_1-V_2}{R_1}+\frac{V_{out}-V_2}{2R_1}=0,
+  \;\;\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;\; V_{out}=3V_2-2V_1,\;\;\;\;\;\;(3)
+  \]
+  \[
+  V_{out}=3V_2-2V_1=3V_2-2\left(1+\frac{j\omega\tau}{(j\omega\tau+1)^2}\right)V_2
+  =V_2-\frac{j\omega 2\tau}{(j\omega\tau+1)^2}\;V_2
+  =\frac{(j\omega\tau)^2+1}{(j\omega\tau+1)^2}\;V_2
+  \]
+  or 
+  \[
+  V_2=\frac{(j\omega\tau+1)^2}{(j\omega\tau)^2+1}V_{out}
+  \]
+  Substituting this into (2) we get 
+  \[
+  V_1=\left(1+\frac{j\omega\tau}{(j\omega\tau+1)^2}\right)V_2
+  =\left(1+\frac{j\omega\tau}{(j\omega\tau+1)^2}\right)\frac{(j\omega\tau+1)^2}{(j\omega\tau)^2+1}V_{out}
+  =\frac{(j\omega\tau)^2+3j\omega\tau+1}{(j\omega\tau)^2+1}\;V_{out}
+  \]
+  Substituting this into (1) we get 
+  \[
+  \frac{V_{in}}{R_4}+\frac{V_{out}}{R_3}
+  +\frac{(j\omega\tau)^2+3j\omega\tau+1}{(j\omega\tau)^2+1}\;\frac{V_{out}}{R_2}=0
+  \]
+  We rearrange to get
+  \[
+  \frac{V_{in}}{R_4}=-\left(\frac{1}{R_3}
+  +\frac{(j\omega\tau)^2+3j\omega\tau+1}{(j\omega\tau)^2+1}\;\frac{1}{R_2}\right)V_{out}
+  \]
+  \[
+  \frac{R_2}{R_4}=-\left(\frac{R_2}{R_3}
+  +\frac{(j\omega\tau)^2+3j\omega\tau+1}{(j\omega\tau)^2+1}\right)
+  \frac{V_{out}}{V_{in}}
+  \]
+  \[
+  H(j\omega)=\frac{V_{out}}{V_{in}}
+  =-\frac{R_2R_3}{R_4(R_2+R_3)}\;\frac{(j\omega\tau)^2+1}{(j\omega\tau)^2+3j\omega\tau R_3/(R_2+R_3)+1}
+  \]
+  \[
+  H(j\omega)=A\;\frac{(j\omega)^2+\omega_n^2}{(j\omega)^2+\Delta\omega/Q\;j\omega+\omega_n^2}
+  =\left\{\begin{array}{ll}A&\omega=0\\0&\omega=\omega_n=1/\tau
+  \\A&\omega\rightarrow\infty\end{array}\right.
+  \]
+  This is a band-stop filter with passband gain $A=-R_2R_3/R_4(R_2+R_3)=(R_2//R_3)/R_4$,
+  stop-band $\omega_n=1/\tau$ and $Q=(R_2+R_3)/3R_3$.
+
+
+
+
+\end{document}
+
+\end{enumerate}

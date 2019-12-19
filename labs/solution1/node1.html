@@ -1,0 +1,802 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>E84 Lab 1: Design of a Multimeter (Solution)</TITLE>
+<META NAME="description" CONTENT="E84 Lab 1: Design of a Multimeter (Solution)">
+<META NAME="keywords" CONTENT="solution1">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="solution1.css">
+
+<LINK REL="next" HREF="node2.html">
+<LINK REL="previous" HREF="solution1.html">
+<LINK REL="up" HREF="solution1.html">
+<LINK REL="next" HREF="node2.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html14"
+  HREF="node2.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html12"
+  HREF="solution1.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html6"
+  HREF="solution1.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html15"
+  HREF="node2.html">About this document ...</A>
+<B> Up:</B> <A NAME="tex2html13"
+  HREF="solution1.html">solution1</A>
+<B> Previous:</B> <A NAME="tex2html7"
+  HREF="solution1.html">solution1</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00010000000000000000">
+E84 Lab 1: Design of a Multimeter (Solution)</A>
+</H1>
+
+<P>
+<B>Solution:</B>
+
+<P>
+The complete schematic diagram of the multimeter:
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../multimeter.gif"
+ ALT="multimeter.gif">
+
+<P>
+The following is the calculation of all 13 resistors in the diagram.
+Assume the negative input is ground (common input).
+
+<P>
+
+<UL>
+<LI><B>The meter head assembly:</B>
+
+<P>
+The resistance in meter branch is <!-- MATH
+ $1.8+0.19=1.99\; K\Omega$
+ -->
+<IMG
+ WIDTH="179" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$1.8+0.19=1.99\; K\Omega$">. The voltage across 
+  this branch when <!-- MATH
+ $I_0=0.043\; mA$
+ -->
+<IMG
+ WIDTH="124" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.png"
+ ALT="$I_0=0.043\; mA$"> (full scale) is <!-- MATH
+ $V_0=1.99\times 0.043=0.0856
+  \approx 0.09\;V$
+ -->
+<IMG
+ WIDTH="304" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="$V_0=1.99\times 0.043=0.0856
+\approx 0.09\;V$">. The current through the 32 K resistor is <!-- MATH
+ $0.0856/32=0.0027\;mA$
+ -->
+<IMG
+ WIDTH="197" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$0.0856/32=0.0027\;mA$">.
+  The combined current through these parallel branches is <!-- MATH
+ $0.043+0.0027=0.0457;\mA$
+ -->
+<IMG
+ WIDTH="204" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$0.043+0.0027=0.0457;\mA$">, 
+  and the resistance of these parallel branches is <!-- MATH
+ $R_0=32||1.99=1.8735\;K$
+ -->
+<IMG
+ WIDTH="214" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.png"
+ ALT="$R_0=32\vert\vert 1.99=1.8735\;K$">. 
+
+<P>
+With another parallel branch of <!-- MATH
+ $10+18=28\;K\Omega$
+ -->
+<IMG
+ WIDTH="145" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.png"
+ ALT="$10+18=28\;K\Omega$"> added, the resistance
+  of the meter head assembly becomes <!-- MATH
+ $32||28||1.99=1.756\;K\Omega$
+ -->
+<IMG
+ WIDTH="200" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.png"
+ ALT="$32\vert\vert 28\vert\vert 1.99=1.756\;K\Omega$">. For the meter
+  head to get the full scale current <IMG
+ WIDTH="83" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$0.043\;mA$">, the total current to these three
+  parallel branches needs to be
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V_0(\frac{1}{32}+\frac{1}{1.99}+\frac{1}{28})=0.0487 \approx 0.05\;mA
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="332" HEIGHT="45" BORDER="0"
+ SRC="img10.png"
+ ALT="\begin{displaymath}V_0(\frac{1}{32}+\frac{1}{1.99}+\frac{1}{28})=0.0487 \approx 0.05\;mA \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+</LI>
+<LI><B>DC current measurement:</B>
+  
+<UL>
+<LI>250 mA scale:
+
+<P>
+At this scale, the total resistance through the meter head branch is
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+3,000+240+1,756=4,996\approx 5,000\;\Omega
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="325" HEIGHT="32" BORDER="0"
+ SRC="img11.png"
+ ALT="\begin{displaymath}3,000+240+1,756=4,996\approx 5,000\;\Omega \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+There is a 1 <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.png"
+ ALT="$\Omega$"> resistor in parallel with the current being measured.
+    According to the current division, the current through the meter head is:
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+250 \frac{1}{4,996+1}=250 \frac{1}{5000}=0.05\;mA
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="298" HEIGHT="49" BORDER="0"
+ SRC="img13.png"
+ ALT="\begin{displaymath}250 \frac{1}{4,996+1}=250 \frac{1}{5000}=0.05\;mA \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+corresponding to the full-scale current through the meter head.
+
+<P>
+</LI>
+<LI>Other scales:
+
+<P>
+Assume the resistor needed for measuring current <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img14.png"
+ ALT="$I$"> at the scale is <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img15.png"
+ ALT="$R$">, for
+    the meter to be at full scale, we need to have:
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+I \frac{R}{4,996+R}=0.05\;mA
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="190" HEIGHT="50" BORDER="0"
+ SRC="img16.png"
+ ALT="\begin{displaymath}I \frac{R}{4,996+R}=0.05\;mA \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Solving this we get:
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+R=\frac{5,000\times 0.05}{I+0.05}=\frac{250}{I+0.05}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="239" HEIGHT="47" BORDER="0"
+ SRC="img17.png"
+ ALT="\begin{displaymath}R=\frac{5,000\times 0.05}{I+0.05}=\frac{250}{I+0.05} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+When <!-- MATH
+ $I=250,\;25,\;2.5\,mA$
+ -->
+<IMG
+ WIDTH="171" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.png"
+ ALT="$I=250,\;25,\;2.5 mA$">, we get respectively,
+    <!-- MATH
+ $R=1,\;10,\;98\;\Omega$
+ -->
+<IMG
+ WIDTH="137" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.png"
+ ALT="$R=1,\;10,\;98\;\Omega$">.
+
+<P>
+</LI>
+</UL>
+
+<P>
+</LI>
+<LI><B>DC voltage measurement:</B>
+
+<P>
+
+<UL>
+<LI>0.5V scale:
+
+<P>
+At this scale, the total resistance in series with the voltage being measured 
+    is <!-- MATH
+ $4.9+3+0.24=8.14\;K\Omega$
+ -->
+<IMG
+ WIDTH="212" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.png"
+ ALT="$4.9+3+0.24=8.14\;K\Omega$">. This forms a voltage divider with the meter head
+    assembly, and the voltage across it is:
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+0.5V \frac{1.756}{8.14+1.756} =0.5V \frac{1.756}{9.896}=0.089\approx 0.09\;V
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="398" HEIGHT="47" BORDER="0"
+ SRC="img21.png"
+ ALT="\begin{displaymath}0.5V \frac{1.756}{8.14+1.756} =0.5V \frac{1.756}{9.896}=0.089\approx 0.09\;V \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+corresponding to the full-scale current through the meter head.
+
+<P>
+</LI>
+<LI>Other scales:
+
+<P>
+Assume the resistor needed for measuring voltage <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img22.png"
+ ALT="$V$"> at the scale is <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img15.png"
+ ALT="$R$">, for 
+    the meter to be at full scale, we need to have:
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V\frac{1.756}{9.896+R}=V_0=0.09\;V
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="220" HEIGHT="47" BORDER="0"
+ SRC="img23.png"
+ ALT="\begin{displaymath}V\frac{1.756}{9.896+R}=V_0=0.09\;V \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Solving this we get:
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+R=\frac{1.756V-9.896\times 0.09}{0.09}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="221" HEIGHT="46" BORDER="0"
+ SRC="img24.png"
+ ALT="\begin{displaymath}R=\frac{1.756V-9.896\times 0.09}{0.09} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+When <!-- MATH
+ $V=2.5,\;10,\;50,\;250,\;1000$
+ -->
+<IMG
+ WIDTH="226" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.png"
+ ALT="$V=2.5,\;10,\;50,\;250,\;1000$">, we get respectively:
+    <!-- MATH
+ $R=38.9,\;185.2,\;965.7,\;4,868,\;19,501$
+ -->
+<IMG
+ WIDTH="318" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img26.png"
+ ALT="$R=38.9,\;185.2,\;965.7,\;4,868,\;19,501$"> in <IMG
+ WIDTH="35" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.png"
+ ALT="$K\Omega$">, which can be converted
+    to the resistances needed for the configuration in the schematic:
+    <!-- MATH
+ $39,\;185-39=146,\;966-185=781,\;4,868-966=3,902,\;14,633$
+ -->
+<IMG
+ WIDTH="557" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img28.png"
+ ALT="$39,\;185-39=146,\;966-185=781,\;4,868-966=3,902,\;14,633$">
+
+<P>
+</LI>
+</UL>
+
+<P>
+</LI>
+<LI><B>AC voltage measurement:</B>
+
+<P>
+
+<UL>
+<LI>10V scale:
+    At this scale, the total resistance in series with the voltage being measured 
+    is <IMG
+ WIDTH="59" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img29.png"
+ ALT="$83\;K\Omega$">. This forms a voltage divider with the meter head assembly, 
+    and the voltage across it is:
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+10 \frac{1.756}{83+1.756}=10V \frac{1.756}{84.756}\approx 0.21V
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="293" HEIGHT="47" BORDER="0"
+ SRC="img30.png"
+ ALT="\begin{displaymath}10 \frac{1.756}{83+1.756}=10V \frac{1.756}{84.756}\approx 0.21V \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+which corresponds to full scale display.
+
+<P>
+</LI>
+<LI>Other scales:
+
+<P>
+Assume the resistor needed for measuring voltage <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img22.png"
+ ALT="$V$"> at the scale is <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img15.png"
+ ALT="$R$">, for 
+    the meter to be at full scale, we need to have:
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+50 \frac{1.756}{R+1.756}=0.207V
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="184" HEIGHT="47" BORDER="0"
+ SRC="img31.png"
+ ALT="\begin{displaymath}50 \frac{1.756}{R+1.756}=0.207V \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Solving this we get:
+    <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+R=\frac{1.756V-0.35}{0.207}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="155" HEIGHT="46" BORDER="0"
+ SRC="img32.png"
+ ALT="\begin{displaymath}R=\frac{1.756V-0.35}{0.207} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+When <!-- MATH
+ $V=10,\;50,\;250,\;50,\;1000$
+ -->
+<IMG
+ WIDTH="221" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img33.png"
+ ALT="$V=10,\;50,\;250,\;50,\;1000$">, we get respectively:
+    <!-- MATH
+ $R=83,\;423,\;2,119,\;8,481$
+ -->
+<IMG
+ WIDTH="223" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.png"
+ ALT="$R=83,\;423,\;2,119,\;8,481$"> in <IMG
+ WIDTH="35" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.png"
+ ALT="$K\Omega$">, which can be converted to the 
+    resistances needed for the configuration in the schematic:
+    <!-- MATH
+ $83,\;423-83=340,\;2,119-423=1,696,\;8,481-2,119=6362\;K\Omega$
+ -->
+<IMG
+ WIDTH="567" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img35.png"
+ ALT="$83,\;423-83=340,\;2,119-423=1,696,\;8,481-2,119=6362\;K\Omega$">.
+
+<P>
+</LI>
+</UL>
+
+<P>
+</LI>
+<LI><B>Resistance measurement:</B>
+
+<P>
+
+<UL>
+<LI>To calibrate the meter, we connect the two leads for zero resistance 
+  and the current through the meter head assembly should be <IMG
+ WIDTH="38" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.png"
+ ALT="$0.05$"> mA for 
+  the pointer to indicate <IMG
+ WIDTH="27" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img37.png"
+ ALT="$0 \Omega$">.
+  The voltage across the meter head assembly is
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V'_0=I_0\times R_0=0.05\times 1.8735=0.0937\;V
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="336" HEIGHT="33" BORDER="0"
+ SRC="img38.png"
+ ALT="\begin{displaymath}V'_0=I_0\times R_0=0.05\times 1.8735=0.0937\;V \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Assume the lower resistance of the potentiometer is <IMG
+ WIDTH="15" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img39.png"
+ ALT="$x$"> K, then the upper 
+  one is <IMG
+ WIDTH="57" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img40.png"
+ ALT="$10-x$"> K. 
+  The voltage of the middle lead of the potentiometer (with respect to ground) is:
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V_p=0.05\times (1.8735+10-x)=0.05\times (11.8735-x)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="432" HEIGHT="34" BORDER="0"
+ SRC="img41.png"
+ ALT="\begin{displaymath}V_p=0.05\times (1.8735+10-x)=0.05\times (11.8735-x) \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The current through <IMG
+ WIDTH="70" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img42.png"
+ ALT="$R_2=44$"> K should be:
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+0.05+\frac{V_p}{18+x}=\frac{3-V_p}{R_2}=\frac{3-V_p}{44}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="271" HEIGHT="49" BORDER="0"
+ SRC="img43.png"
+ ALT="\begin{displaymath}0.05+\frac{V_p}{18+x}=\frac{3-V_p}{R_2}=\frac{3-V_p}{44} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+i.e.
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+(x+62)V_p=(x+62)(0.05\times (11.8735-x))=0.8(x+18)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="470" HEIGHT="34" BORDER="0"
+ SRC="img44.png"
+ ALT="\begin{displaymath}(x+62)V_p=(x+62)(0.05\times (11.8735-x))=0.8(x+18) \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+i.e.
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+x^2+66.1265\,x-448.157=0
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="235" HEIGHT="30" BORDER="0"
+ SRC="img45.png"
+ ALT="\begin{displaymath}x^2+66.1265 x-448.157=0 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Solving this we get <!-- MATH
+ $x=6.1966\approx 6.2\;K\Omega$
+ -->
+<IMG
+ WIDTH="178" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img46.png"
+ ALT="$x=6.1966\approx 6.2\;K\Omega$">.
+  The resistance along the meter head branch is <!-- MATH
+ $R_1=11.8735-x=11.8735-6.1966=5.6769$
+ -->
+<IMG
+ WIDTH="386" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img47.png"
+ ALT="$R_1=11.8735-x=11.8735-6.1966=5.6769$"> K,
+  the resistance of the parallel branch is <!-- MATH
+ $R_1=18+x=24.1966$
+ -->
+<IMG
+ WIDTH="190" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img48.png"
+ ALT="$R_1=18+x=24.1966$"> K, and the resistance
+  of their parallel combination is <!-- MATH
+ $5.6769||24.1966=4.6\; K\Omega$
+ -->
+<IMG
+ WIDTH="214" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img49.png"
+ ALT="$5.6769\vert\vert 24.1966=4.6\; K\Omega$">.
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../multimeter2.gif"
+ ALT="multimeter2.gif">
+
+<P>
+</LI>
+<LI>When the resistance being measured is 20 <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.png"
+ ALT="$\Omega$"> (x1, x10, x1k) and the 
+  switch is at the corresponding position for resistance measurement, the current 
+  through the meter head assembly should be 0.025 mA so that the needle points to
+  the middle value 20 of the scale for resistance. The voltage at the middle lead 
+  of the potentiometer is:
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+V_p=5.6769\times 0.025=0.1419\;V
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="258" HEIGHT="34" BORDER="0"
+ SRC="img50.png"
+ ALT="\begin{displaymath}V_p=5.6769\times 0.025=0.1419\;V \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The current through 18 K resistor is
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+I_2=V_p/24.1966=0.0059\;mA
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="242" HEIGHT="34" BORDER="0"
+ SRC="img51.png"
+ ALT="\begin{displaymath}I_2=V_p/24.1966=0.0059\;mA \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The combined current is <!-- MATH
+ $.0.025+0.0059=0.0309\approx 0.031$
+ -->
+<IMG
+ WIDTH="272" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img52.png"
+ ALT="$.0.025+0.0059=0.0309\approx 0.031$"> mA.
+
+<P>
+The resistance of two parallel branches (meter and <IMG
+ WIDTH="41" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img53.png"
+ ALT="$18 K$"> resistor) is:
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+R_1 || R_2=5.6769||24.1966=4.598\;K
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="292" HEIGHT="33" BORDER="0"
+ SRC="img54.png"
+ ALT="\begin{displaymath}R_1 \vert\vert R_2=5.6769\vert\vert 24.1966=4.598\;K \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The series combination with <IMG
+ WIDTH="93" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img55.png"
+ ALT="$R_3=44\;K$"> is <!-- MATH
+ $R_3+R_1 || R_2\approx 48.6\;K$
+ -->
+<IMG
+ WIDTH="185" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img56.png"
+ ALT="$R_3+R_1 \vert\vert R_2\approx 48.6\;K$">.
+  Let <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img15.png"
+ ALT="$R$"> be the resistor needed to measure resistance <IMG
+ WIDTH="14" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img57.png"
+ ALT="$r$"> (in positions x1, 
+  x10 and x1k), then this equation needs to be satisfied:
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\frac{3}{48.6||R+r}\frac{R}{48.6+R}=\frac{3R}{48.6R+r(48.6+R)}=0.031
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="428" HEIGHT="51" BORDER="0"
+ SRC="img58.png"
+ ALT="\begin{displaymath}\frac{3}{48.6\vert\vert R+r}\frac{R}{48.6+R}=\frac{3R}{48.6R+r(48.6+R)}=0.031 \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Solving for <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img15.png"
+ ALT="$R$">, we get
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+R=\frac{0.031\times 48.6R}{3-0.031\times (48.6+R)}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="225" HEIGHT="51" BORDER="0"
+ SRC="img59.png"
+ ALT="\begin{displaymath}R=\frac{0.031\times 48.6R}{3-0.031\times (48.6+R)} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Use <!-- MATH
+ $r=0.02,\; 0.2,\; 20$
+ -->
+<IMG
+ WIDTH="142" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img60.png"
+ ALT="$r=0.02,\; 0.2,\; 20$">, all in <IMG
+ WIDTH="35" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img27.png"
+ ALT="$K\Omega$">, we can obtain, respectively,
+  <!-- MATH
+ $R=20\Omega,\; 200\Omega,\; 34\,K\Omega$
+ -->
+<IMG
+ WIDTH="198" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img61.png"
+ ALT="$R=20\Omega,\; 200\Omega,\; 34 K\Omega$">. These values are very close to the
+  actual resistances used <!-- MATH
+ $R=17.8\Omega,\;195\Omega,\;31\;K\Omega$
+ -->
+<IMG
+ WIDTH="215" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img62.png"
+ ALT="$R=17.8\Omega,\;195\Omega,\;31\;K\Omega$">.
+
+<P>
+</LI>
+</UL>
+
+<P>
+</LI>
+</UL><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html14"
+  HREF="node2.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html12"
+  HREF="solution1.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html6"
+  HREF="solution1.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html15"
+  HREF="node2.html">About this document ...</A>
+<B> Up:</B> <A NAME="tex2html13"
+  HREF="solution1.html">solution1</A>
+<B> Previous:</B> <A NAME="tex2html7"
+  HREF="solution1.html">solution1</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Ruye Wang
+2014-09-29
+</ADDRESS>
+</BODY>
+</HTML>

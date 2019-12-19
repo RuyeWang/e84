@@ -1,0 +1,773 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Twin-T Active Filter</TITLE>
+<META NAME="description" CONTENT="Twin-T Active Filter">
+<META NAME="keywords" CONTENT="TwinT">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="TwinT.css">
+
+<LINK REL="next" HREF="node2.html">
+<LINK REL="previous" HREF="TwinT.html">
+<LINK REL="up" HREF="TwinT.html">
+<LINK REL="next" HREF="node2.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html15"
+  HREF="node2.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html13"
+  HREF="TwinT.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html7"
+  HREF="TwinT.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html16"
+  HREF="node2.html">About this document ...</A>
+<B> Up:</B> <A NAME="tex2html14"
+  HREF="TwinT.html">TwinT</A>
+<B> Previous:</B> <A NAME="tex2html8"
+  HREF="TwinT.html">TwinT</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00010000000000000000">
+Twin-T Active Filter</A>
+</H1>
+
+<P>
+<IMG
+ WIDTH="281" HEIGHT="177" ALIGN="BOTTOM" BORDER="0"
+ SRC="../figures/TwinT.png"
+ ALT="TwinT.png">
+
+<P>
+
+<UL>
+<LI>The RCR network is is a T (or Y) network that can be converted to a 
+  <IMG
+ WIDTH="16" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.png"
+ ALT="$\pi$"> (or <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$\Delta$">) network (see 
+  <A NAME="tex2html1"
+  HREF="http://fourier.eng.hmc.edu/e84/lectures/ch2/node3.html">here</A>) 
+  of three branches:
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Z'_1=Z'_2=R+\frac{1}{2j\omega C}+\frac{R/2j\omega C}{R}
+  =R+\frac{1}{j\omega C}=\frac{j\omega RC+1}{j\omega C}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="485" HEIGHT="51" BORDER="0"
+ SRC="img3.png"
+ ALT="\begin{displaymath}
+Z'_1=Z'_2=R+\frac{1}{2j\omega C}+\frac{R/2j\omega C}{R}
+=R+\frac{1}{j\omega C}=\frac{j\omega RC+1}{j\omega C}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Z'_3=R+R+\frac{R^2}{1/2j\omega C}=2R+2R^2j\omega C=2R(1+j\omega RC)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="471" HEIGHT="53" BORDER="0"
+ SRC="img4.png"
+ ALT="\begin{displaymath}
+Z'_3=R+R+\frac{R^2}{1/2j\omega C}=2R+2R^2j\omega C=2R(1+j\omega RC)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The frequency response function of the voltage divider formed by 
+  <IMG
+ WIDTH="25" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$Z'_3$"> and <IMG
+ WIDTH="25" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.png"
+ ALT="$Z'_2$"> is:
+  <BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+H'(j\omega)&=&\frac{Z'_2}{Z'_2+Z'_3}
+  =\frac{(1+j\omega RC)/j\omega C}{(1+j\omega RC)/j\omega C+2R(1+j\omega RC)}
+  \nonumber\\
+  &=&\frac{1}{1+2j\omega RC}=\frac{1}{1+2j\omega\tau}
+  \nonumber
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="62" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.png"
+ ALT="$\displaystyle H'(j\omega)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="387" HEIGHT="63" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.png"
+ ALT="$\displaystyle \frac{Z'_2}{Z'_2+Z'_3}
+=\frac{(1+j\omega RC)/j\omega C}{(1+j\omega RC)/j\omega C+2R(1+j\omega RC)}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="202" HEIGHT="59" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.png"
+ ALT="$\displaystyle \frac{1}{1+2j\omega RC}=\frac{1}{1+2j\omega\tau}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+where <IMG
+ WIDTH="69" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img11.png"
+ ALT="$\tau=RC$">. This is a first-order low-pass filter with cut-off
+  frequency at <!-- MATH
+ $\omega_c=1/2\tau$
+ -->
+<IMG
+ WIDTH="86" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.png"
+ ALT="$\omega_c=1/2\tau$">:
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+|H'(j\omega)|=\left\{\begin{array}{ll}1 & \omega=0\\1/\sqrt{2}& 
+  \omega=1/2\tau\\0&\omega\rightarrow\infty\end{array}\right.
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="249" HEIGHT="77" BORDER="0"
+ SRC="img13.png"
+ ALT="\begin{displaymath}
+\vert H'(j\omega)\vert=\left\{\begin{array}{ll}1 &amp; \omega=0...
+... \omega=1/2\tau 0&amp;\omega\rightarrow\infty\end{array}\right.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+</LI>
+<LI>The CRC network is a T (or Y) network that can be converted to a
+  <IMG
+ WIDTH="16" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.png"
+ ALT="$\pi$"> (or <IMG
+ WIDTH="20" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$\Delta$">) network of three branches:
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Z''_1=Z''_2=\frac{R}{2}+\frac{1}{j\omega C}+\frac{R/2j\omega C}{1/j\omega C}
+  =R+\frac{1}{j\omega C}  =\frac{j\omega RC+1}{j\omega C}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="483" HEIGHT="52" BORDER="0"
+ SRC="img14.png"
+ ALT="\begin{displaymath}
+Z''_1=Z''_2=\frac{R}{2}+\frac{1}{j\omega C}+\frac{R/2j\omeg...
+...ga C}
+=R+\frac{1}{j\omega C} =\frac{j\omega RC+1}{j\omega C}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Z''_3=\frac{1}{j\omega C}+\frac{1}{j\omega C}+\frac{1/(j\omega C)^2}{R/2}
+  =\frac{2}{j\omega C}+\frac{2}{R(j\omega C)^2}
+  =\frac{2(1+j\omega RC)}{R(j\omega C)^2}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="550" HEIGHT="53" BORDER="0"
+ SRC="img15.png"
+ ALT="\begin{displaymath}
+Z''_3=\frac{1}{j\omega C}+\frac{1}{j\omega C}+\frac{1/(j\om...
+...c{2}{R(j\omega C)^2}
+=\frac{2(1+j\omega RC)}{R(j\omega C)^2}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The frequency response function of the voltage divider formed by <IMG
+ WIDTH="27" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.png"
+ ALT="$Z''_3$"> 
+  and <IMG
+ WIDTH="27" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$Z''_2$"> is:
+  <BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+H''(j\omega)&=&\frac{Z''_2}{Z''_2+Z''_3}
+  =\frac{(1+j\omega RC)/j\omega C}
+  {(1+j\omega RC)/j\omega C+2(1+j\omega RC)/R(j\omega C)^2}
+  \nonumber \\
+  &=&\frac{j\omega RC}{j\omega RC+2}=\frac{j\omega\tau}{j\omega\tau+2}
+  =\frac{1}{1-j2/\omega\tau}
+  \nonumber
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="65" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.png"
+ ALT="$\displaystyle H''(j\omega)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="459" HEIGHT="63" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.png"
+ ALT="$\displaystyle \frac{Z''_2}{Z''_2+Z''_3}
+=\frac{(1+j\omega RC)/j\omega C}
+{(1+j\omega RC)/j\omega C+2(1+j\omega RC)/R(j\omega C)^2}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="295" HEIGHT="62" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.png"
+ ALT="$\displaystyle \frac{j\omega RC}{j\omega RC+2}=\frac{j\omega\tau}{j\omega\tau+2}
+=\frac{1}{1-j2/\omega\tau}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+This is a first-order high-pass filter with cut-off frequency at
+  <!-- MATH
+ $\omega_c=2/\tau$
+ -->
+<IMG
+ WIDTH="77" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.png"
+ ALT="$\omega_c=2/\tau$">:
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+|H'(j\omega)|=\left\{\begin{array}{ll}0 & \omega=0\\1/\sqrt{2}& 
+  \omega=2/\tau\\1&\omega\rightarrow\infty\end{array}\right.
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="239" HEIGHT="77" BORDER="0"
+ SRC="img22.png"
+ ALT="\begin{displaymath}
+\vert H'(j\omega)\vert=\left\{\begin{array}{ll}0 &amp; \omega=0...
+...
+\omega=2/\tau 1&amp;\omega\rightarrow\infty\end{array}\right.
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+</LI>
+</UL>
+
+<P>
+As these two <IMG
+ WIDTH="16" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.png"
+ ALT="$\pi$">-networks are combined in parallel, they form a single
+<IMG
+ WIDTH="16" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.png"
+ ALT="$\pi$">-network with three branches <!-- MATH
+ $Z_1=Z'_1||Z''_1$
+ -->
+<IMG
+ WIDTH="103" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img23.png"
+ ALT="$Z_1=Z'_1\vert\vert Z''_1$">, <!-- MATH
+ $Z_2=Z'_2||Z''_2$
+ -->
+<IMG
+ WIDTH="103" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img24.png"
+ ALT="$Z_2=Z'_2\vert\vert Z''_2$">, 
+and <!-- MATH
+ $Z_3=Z'_3||Z''_3$
+ -->
+<IMG
+ WIDTH="103" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.png"
+ ALT="$Z_3=Z'_3\vert\vert Z''_3$">:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Z_1=Z'_1||Z''_1=Z_2=Z'_2||Z''_2=\frac{1}{2}\left(R+\frac{1}{j\omega C}\right)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="362" HEIGHT="55" BORDER="0"
+ SRC="img26.png"
+ ALT="\begin{displaymath}
+Z_1=Z'_1\vert\vert Z''_1=Z_2=Z'_2\vert\vert Z''_2=\frac{1}{2}\left(R+\frac{1}{j\omega C}\right)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+Z_3=Z'_3||Z''_3=\frac{Z'_3 Z''_3}{Z'_3+Z''_3}
+  =\frac{2R(1+j\omega RC)}{1+(j\omega RC)^2}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="341" HEIGHT="52" BORDER="0"
+ SRC="img27.png"
+ ALT="\begin{displaymath}
+Z_3=Z'_3\vert\vert Z''_3=\frac{Z'_3 Z''_3}{Z'_3+Z''_3}
+=\frac{2R(1+j\omega RC)}{1+(j\omega RC)^2}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The frequency response function of this <IMG
+ WIDTH="16" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.png"
+ ALT="$\pi$">-network (a voltage divider) is:
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+H(j\omega)&=&\frac{Z_2}{Z_2+Z_3}=\frac{R+1/j\omega C}
+  {R+1/j\omega C+4R(1+j\omega RC)/(1+(j\omega RC)^2)}
+  \nonumber \\
+  &=&\frac{(1+j\omega RC)/j\omega C}{(1+j\omega RC)/j\omega C+4R(1+j\omega RC)/(1+(j\omega RC)^2)}
+  \nonumber \\
+  &=&\frac{1/j\omega C}{1/j\omega C+4R/(1+(j\omega RC)^2)}
+  =\frac{1}{1+4j\omega RC/(1+(j\omega RC)^2)}
+  \nonumber \\
+  &=&\frac{1+(j\omega\tau)^2}{1+(j\omega\tau)^2+4j\omega\tau}
+  =\frac{(j\omega)^2+(1/\tau)^2}{(j\omega)^2+4j\omega/\tau+(1/\tau)^2}
+  \nonumber
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="57" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img28.png"
+ ALT="$\displaystyle H(j\omega)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="466" HEIGHT="63" ALIGN="MIDDLE" BORDER="0"
+ SRC="img29.png"
+ ALT="$\displaystyle \frac{Z_2}{Z_2+Z_3}=\frac{R+1/j\omega C}
+{R+1/j\omega C+4R(1+j\omega RC)/(1+(j\omega RC)^2)}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="423" HEIGHT="63" ALIGN="MIDDLE" BORDER="0"
+ SRC="img30.png"
+ ALT="$\displaystyle \frac{(1+j\omega RC)/j\omega C}{(1+j\omega RC)/j\omega C+4R(1+j\omega RC)/(1+(j\omega RC)^2)}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="487" HEIGHT="63" ALIGN="MIDDLE" BORDER="0"
+ SRC="img31.png"
+ ALT="$\displaystyle \frac{1/j\omega C}{1/j\omega C+4R/(1+(j\omega RC)^2)}
+=\frac{1}{1+4j\omega RC/(1+(j\omega RC)^2)}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="377" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.png"
+ ALT="$\displaystyle \frac{1+(j\omega\tau)^2}{1+(j\omega\tau)^2+4j\omega\tau}
+=\frac{(j\omega)^2+(1/\tau)^2}{(j\omega)^2+4j\omega/\tau+(1/\tau)^2}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+Alternatively, we apply KCL at the middle points of the RCR and CRC 
+networks with <IMG
+ WIDTH="22" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img33.png"
+ ALT="$v_a$"> and <IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.png"
+ ALT="$v_b$">:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\frac{v_{in}-v_a}{R}+\frac{v_{out}-v_a}{R}=\frac{v_a}{1/j\omega 2C},
+\;\;\;\;\;\;\;
+\frac{v_{in}-v_b}{1/j\omega C}+\frac{v_{out}-v_b}{1/j\omega C}=\frac{v_b}{R/2}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="520" HEIGHT="49" BORDER="0"
+ SRC="img35.png"
+ ALT="\begin{displaymath}
+\frac{v_{in}-v_a}{R}+\frac{v_{out}-v_a}{R}=\frac{v_a}{1/j\om...
+...}{1/j\omega C}+\frac{v_{out}-v_b}{1/j\omega C}=\frac{v_b}{R/2}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Solving for <IMG
+ WIDTH="22" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img33.png"
+ ALT="$v_a$"> and <IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.png"
+ ALT="$v_b$">, we get
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_a=\frac{v_{in}+v_{out}}{2(1+j\omega\tau)},\;\;\;\;\;\;\;
+v_b=\frac{(v_{in}+v_{out})j\omega\tau}{2(1+j\omega\tau)}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="343" HEIGHT="52" BORDER="0"
+ SRC="img36.png"
+ ALT="\begin{displaymath}
+v_a=\frac{v_{in}+v_{out}}{2(1+j\omega\tau)},\;\;\;\;\;\;\;
+v_b=\frac{(v_{in}+v_{out})j\omega\tau}{2(1+j\omega\tau)}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Also, apply KCL to the output to get
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\frac{v_{out}-v_a}{R}+\frac{v_{out}-v_b}{1/j\omega C}=0,\;\;\;\;\;\;
+v_{out}=\frac{v_a+j\omega\tau v_b}{1+j\omega\tau}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="385" HEIGHT="50" BORDER="0"
+ SRC="img37.png"
+ ALT="\begin{displaymath}
+\frac{v_{out}-v_a}{R}+\frac{v_{out}-v_b}{1/j\omega C}=0,\;\;\;\;\;\;
+v_{out}=\frac{v_a+j\omega\tau v_b}{1+j\omega\tau}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Substituting <IMG
+ WIDTH="22" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img33.png"
+ ALT="$v_a$"> and <IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.png"
+ ALT="$v_b$"> into this equation we get:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_{out}=\frac{v_{in}(1+j\omega\tau)+v_{out}(1-(\omega\tau)^2)}{2(1+j\omega\tau)^2}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="301" HEIGHT="53" BORDER="0"
+ SRC="img38.png"
+ ALT="\begin{displaymath}
+v_{out}=\frac{v_{in}(1+j\omega\tau)+v_{out}(1-(\omega\tau)^2)}{2(1+j\omega\tau)^2}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Solving this for <IMG
+ WIDTH="34" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img39.png"
+ ALT="$v_{out}$">
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+H(j\omega)=\frac{v_{out}}{v_{in}}=\frac{1+(j\omega\tau)^2}{1+4j\omega\tau+(j\omega\tau)^2}
+=\frac{(j\omega)^2+\omega_n^2}{(j\omega)^2+4j\omega\omega_n+\omega_n^2}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="476" HEIGHT="53" BORDER="0"
+ SRC="img40.png"
+ ALT="\begin{displaymath}
+H(j\omega)=\frac{v_{out}}{v_{in}}=\frac{1+(j\omega\tau)^2}{1...
+...\omega)^2+\omega_n^2}{(j\omega)^2+4j\omega\omega_n+\omega_n^2}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where <!-- MATH
+ $\omega_n=1/\tau=1/RC$
+ -->
+<IMG
+ WIDTH="152" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img41.png"
+ ALT="$\omega_n=1/\tau=1/RC$">.
+
+<P>
+<B>Active twin-T filter</B>
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_1=\frac{R_5}{R_4+R_5}v_{out}=\alpha v_{out}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="207" HEIGHT="49" BORDER="0"
+ SRC="img42.png"
+ ALT="\begin{displaymath}
+v_1=\frac{R_5}{R_4+R_5}v_{out}=\alpha v_{out}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where <!-- MATH
+ $\alpha=R_5/(R_4+R_5)$
+ -->
+<IMG
+ WIDTH="154" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img43.png"
+ ALT="$\alpha=R_5/(R_4+R_5)$">, i.e., <!-- MATH
+ $1-\alpha=R_4/(R_4+R_5)$
+ -->
+<IMG
+ WIDTH="187" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img44.png"
+ ALT="$1-\alpha=R_4/(R_4+R_5)$">.
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\frac{v_{in}-v_a}{R}+\frac{v_{out}-v_a}{R}=\frac{v_a-v_1}{1/j\omega 2C},
+\;\;\;\;\;\;\;
+\frac{v_{in}-v_b}{1/j\omega C}+\frac{v_{out}-v_b}{1/j\omega C}=\frac{v_b-v_1}{R/2}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="543" HEIGHT="49" BORDER="0"
+ SRC="img45.png"
+ ALT="\begin{displaymath}
+\frac{v_{in}-v_a}{R}+\frac{v_{out}-v_a}{R}=\frac{v_a-v_1}{1/...
+...j\omega C}+\frac{v_{out}-v_b}{1/j\omega C}=\frac{v_b-v_1}{R/2}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Solving these for <IMG
+ WIDTH="22" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img33.png"
+ ALT="$v_a$"> and <IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.png"
+ ALT="$v_b$">, we get
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_a=\frac{v_{in}+(1+2\alpha j\omega\tau)v_{out}}{2(1+j\omega\tau)},
+\;\;\;\;\;\;\;\;
+v_b=\frac{j\omega\tau v_{in}+(j\omega\tau+2\alpha)v_{out}}{2(1+j\omega\tau)}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="511" HEIGHT="52" BORDER="0"
+ SRC="img46.png"
+ ALT="\begin{displaymath}
+v_a=\frac{v_{in}+(1+2\alpha j\omega\tau)v_{out}}{2(1+j\omega...
+...ega\tau v_{in}+(j\omega\tau+2\alpha)v_{out}}{2(1+j\omega\tau)}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Substituting these into... 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_{out}=\frac{v_{in}+v_{out}(1+2\alpha j\omege\tau)
+  +(j\omega\tau)^2v_{in}+j\omega\tau(j\omega\tau+2\alpha)v_{out}}{2(1+j\omega\tau)^2}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="491" HEIGHT="53" BORDER="0"
+ SRC="img47.png"
+ ALT="\begin{displaymath}
+v_{out}=\frac{v_{in}+v_{out}(1+2\alpha j\omege\tau)
++(j\ome...
+...}+j\omega\tau(j\omega\tau+2\alpha)v_{out}}{2(1+j\omega\tau)^2}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+<BR>
+<DIV ALIGN="CENTER">
+
+<!-- MATH
+ \begin{eqnarray}
+H(j\omega)&=&\frac{v_{out}}{v_{in}}=\frac{1+(j\omega\tau)^2}{1+4j\omega\tau(1-\alpha)+(j\omega\tau)^2}
+\nonumber\\
+&=&\frac{1+(j\omega\tau)^2}{1+4j\omega\tau R_4/(R_4+R_5)+(j\omega\tau)^2}
+=\frac{\omega_n^2-\omega^2}{\omega_n^2+4j\omega\omega_n R_4/(R_4+R_5)-\omega^2}
+\nonumber
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="57" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img28.png"
+ ALT="$\displaystyle H(j\omega)$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="275" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img48.png"
+ ALT="$\displaystyle \frac{v_{out}}{v_{in}}=\frac{1+(j\omega\tau)^2}{1+4j\omega\tau(1-\alpha)+(j\omega\tau)^2}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT">&nbsp;</TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="550" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img49.png"
+ ALT="$\displaystyle \frac{1+(j\omega\tau)^2}{1+4j\omega\tau R_4/(R_4+R_5)+(j\omega\ta...
+...=\frac{\omega_n^2-\omega^2}{\omega_n^2+4j\omega\omega_n R_4/(R_4+R_5)-\omega^2}$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html15"
+  HREF="node2.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html13"
+  HREF="TwinT.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html7"
+  HREF="TwinT.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html16"
+  HREF="node2.html">About this document ...</A>
+<B> Up:</B> <A NAME="tex2html14"
+  HREF="TwinT.html">TwinT</A>
+<B> Previous:</B> <A NAME="tex2html8"
+  HREF="TwinT.html">TwinT</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Ruye Wang
+2016-04-14
+</ADDRESS>
+</BODY>
+</HTML>

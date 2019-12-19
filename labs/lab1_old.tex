@@ -1,0 +1,106 @@
+\documentstyle[12pt]{article}
+\usepackage{html}
+\textwidth 6.0in
+\topmargin -0.5in
+\oddsidemargin -0in
+\evensidemargin -0.5in
+% \usepackage{graphics}  
+\begin{document}
+
+\section*{E84 Lab 1: Design of a Multimeter}
+
+%{\bf Design on paper due 2/18 Wednesday in class}
+
+%{\bf Final project due by 3/4  Wednesday}
+
+
+The schematic diagram of a multimeter is shown in the figure below:
+\htmladdimg{../multimeter1.gif}
+
+\begin{itemize}
+  \item Pick up the hardware of the multimeter kit from the stock room,
+    including all the components (resistors, potentiometer, meter head, 
+    rotary switch, batteries, etc.). 
+
+  \item Study the diagram above carefully to understand how the meter 
+    measures the voltages, currents and resistances at each of positions 
+    of the rotary positions. The rectangular shape to the left of the meter 
+    head (a circle with an arrow in it) represents two parallel diodes 
+    with opposite polarity for the protection of the meter head. You don't
+    need to worry about this. 
+
+  \item The part marked by 10KBVR is a potentiometer, a resistor of 10
+    $K\Omega$ but with an additional terminal which is a piece of metal 
+    that can slide along the resistor, so that the resistance between the 
+    3rd terminal and any of the other two is variable between 0 and 10 
+    $K\Omega$. See
+    \htmladdnormallink{here}{http://en.wikipedia.org/wiki/Potentiometer}
+    for more detailed explanation. This potentiometer is needed to calibrate
+    the Ohmmeter. Specifically, before taking the measurement of a resistance,
+    the potentiometer needs to be adjusted so that the needle points to 
+    zero on the resistance scale when the two leads of the multimeter touch
+    each other for zero resistance.
+    
+  \item Understand how the rotary switch works. It is represented by the 
+    18 circles on top of the diagram and the two layers of rectangular shapes.
+    At each of the 18 positions, the corresponding circle on top is connected
+    to both of the rectangles, while all remaining circles are not connected
+    to anything. If you still have difficulty understanding this, it should
+    be most helpful if you take a look at the physical parts and the printed 
+    circuit board (PCB) in the kit. The diagram provided above may contain
+    minor errors. Whenever in doubt, take a look at the physical parts of
+    the hardware.
+
+  \item Find the resistance for each of the 13 resistors with their values 
+    erased.
+
+  \item Turn in your design on paper with all the resistance values before
+    the first deadline (to be arranged). After the deadline the solution key
+    and the complete diagram will be available 
+    \htmladdnormallink{here}{../solution1/index.html}
+
+  \item Assemble the multimeter in the lab, verify every single position 
+    to see if the meter works as expected.
+    
+\end{itemize}
+
+{\bf How to find the polarity of a diode? (not necessarily trivial!)}
+
+When the voltage at the anode (labeled by a triangle) of a diode is higher
+than that of the cathode, the diode has a very low resistance (close to a short
+circuit, called forward biased). If the polarity is reversed, the resistance 
+of the diode becomes very high (close to an open circuit, called reverse biased).
+The polarity of the diode can therefore be found by checking its resistance 
+using a multimeter.
+
+However, we need to know which lead of the multimeter (when used as an ohmmeter) 
+is positive and which is negative. In most analog multimeters, such as the one 
+you are building, the positive lead (marked by +) is connected to the negative 
+end of the internal battery, while the other lead (marked by -, or COM for common)
+is connected to positive end of the battery. So if the measured resistance of the 
+diode is low, the end connected to the COM lead of the multimeter is the anode
+(triangle).
+
+However, the polarities of digital multimeters may be the opposite, i.e., the 
+lead marked by + may be connected to the positive end of the internal battery.
+In this case, the polarity of the diode can be determined in the opposite way
+compared to the method above using an analog multimeter. 
+
+Moreover, some digital multimeters have a particular position for diode measurement. 
+
+Read \htmladdnormallink{this page}{http://www.allaboutcircuits.com/vol_3/chpt_3/2.html}
+for more detailed discussions.
+
+{\bf How to solder?} 
+
+If you have never done soldering before, you should find 
+\htmladdnormallink{this web}{http://www.elecraft.com/TechNotes/N0SS_SolderNotes/N0SS_SolderNotesV6.pdf}
+useful.
+
+\end{document}
+
+
+	
+
+	
+

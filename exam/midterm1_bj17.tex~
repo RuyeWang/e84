@@ -1,0 +1,292 @@
+\documentstyle[11pt]{article}
+\usepackage{html}
+\begin{document}
+\begin{center}
+{\Large \bf E84 Final Exam}
+\end{center}
+
+\section*{Instruction (read this before you start)}
+
+\begin{itemize}
+\item Take home, open everything except discussion. 
+\item Mark your start and end times. Don't spend more than 3 hours.
+\item Mark your name and question number clearly on top of each page.
+  Indicate the total number of pages submitted.
+\item You should be able to solve all problems by hand. If you feel you 
+  have to rely on some software tools (calculator, Matlab, or any other
+  ``solver''), you may be doing something wrong.
+\item When solving a problem, list all the steps. In each step, concisely
+  state what you are doing in English, then show the calculation and the 
+  result of the step. 
+\item A final answer, even if correct, without evidence of the steps 
+  leading to the answer will not receive credit.
+\item Box all answers.
+\item Don't click the ``next'' link for the problems until you are ready 
+  to take the exam.
+\end{itemize}
+
+\section*{The Midterm Exam (don't click until you are ready to take the exam)}
+
+\begin{enumerate}
+
+
+\item {\bf Problem 1. (33 points)}
+  Find all node voltages in the circuit, where $R_1=200\Omega$, 
+  $R_2=75\Omega$, $R_3=25\Omega$, $R_4=50\Omega$, $R_5=100\Omega$,
+  $V=10V$, $I=0.2A$. Use both node voltage and loop current methods.
+
+  \htmladdimg{../hw3b.gif}
+
+  \begin{comment}
+  {\bf Solution:}
+  \begin{itemize}
+    \item {\bf Node voltage:}
+      \[ \begin{array}{ll}
+	\mbox{left node:} & V_1/200+(V_1-V_2)/75=0.2 \\
+	\mbox{middle node:} & (V_2-V_1)/75+V_2/25+V_3/100=0 \\
+	\mbox{voltage source:} & V_3=V_2-V=V_2-10 \end{array} \]
+      Solving this we get:
+      \[ V_1=14.24,\;\;\;\;\;V_2=4.58,\;\;\;\;V_3=-5.42 \]
+    \item {\bf Loop current:}
+      first convert the current source $I=0.2A$ and the parallel resistor
+      $R_1=200\Omega$ into a voltage source with $V_1=40V$ in series with
+      $R_1=200\Omega$. Assume loop currents $I_a$ (left loop) and $I_b$
+      (right loop, $R_4$ does not matter) and get loop current equations:
+      \[ \begin{array}{ll}
+	\mbox{left loop:} & (200+75+25)I_a-25I_b=40 \\
+	\mbox{right loop:} & -25I_a+(100+25)I_b=-10 \end{array} \right. \]
+      Solving these we get $I_a=0.129A$, $I_b=-0.054A$. 
+      $V_2=(I_a-I_b)R_3=0.183\times 25=4.58V$, same as previous result.
+  \end{itemize}
+  \end{comment}
+
+\begin{comment}
+\item {\bf Problem 1 (33 pts)}   Answer the following questions:
+  \begin{itemize}
+  \item ({\bf 11 pts})
+    The RMS values of the three AC voltages across R, L, and C are 
+    known to be $V_1=4\,V$, $V_2=5\,V$, and $V_3=2\,V$, respectively. 
+    Find the RMS voltage $V_0$ of the source. If the AC voltage source 
+    is replaced by a DC voltage source $V_0=10\,V$, Find the three 
+    voltages $V_1$, $V_2$, and $V_3$.
+
+    \htmladdimg{../../lectures/figures/Problems10.png}
+
+  \item ({\bf 11 pts})
+    In the figure above, it is know that $R=10\Omega$, $L=100\,mH$,
+    and $C=500\,\mu F$, and the current through the loop is known to be
+    $i(t)=\cos(100\,t)\,A$, find all four voltages $v_0(t)$, $v_1(t)$, 
+    $v_2(t)$, and $v_3(t)$.
+
+    {\bf Solution:} 
+    $V_0=5$. $V_1=V_2=0$, $V_3=10$.
+
+    \[
+    \left\{\begin{array}{lll}
+    v_1(t)=R i(t)=10\cos(100\,t)\\
+    v_2(t)=Z_L i(t)=j\omega L i(t)=100\times 0.1 \cos(100\,t+\pi/2)=10\cos(100\,t+\pi/2)\\
+    v_3(t)=Z_C i(t)=1/(j\omega C) i(t)=1/(100\times 500\times 10^{-6})\cos(100\,t)=20\cos(100,\,t-\pi/2)
+    \end{array}\right.
+    \]
+    \[
+    V_0=V_1+V_2+V_3=10+10\angle\pi/2+20\angle(-\pi/2)=10+10\angle(-\pi/2)
+    \]
+    \[
+    v_0(t)=10\sqrt{2}\cos(100t-\pi/4)
+    \]
+
+  \item ({\bf 11 pts})
+    The RMS values of the three currents through R, L, and C measured 
+    by the three ammeters $A_1$, $A_2$, and $A_3$ are $I_1=4\,A$, $I_2=5\,A$, 
+    and $I_3=2\,A$, respectively. Find the RMS value of the source current 
+    $I_0$. If the AC voltage source is replaced by a DC current source 
+    $I_0=1\,A$, Find the three currents $I_1$, $I_2$, and $I_3$ measured 
+    respectively by ammeters $A_1$, $A_2$, and $A_3$.
+
+    \htmladdimg{../../lectures/figures/Problems11.png}
+
+    {\bf Solution:} $I_0=5$. $I_2=1$, $I_1=I_3=0$.
+    
+
+  \end{itemize}
+\end{comment}
+
+\item {\bf Problem 2. (33 points)} 
+  The components in the circuit below take the following values:
+  $R_1=1.5\Omega$, $R_2=1\Omega$, $L=1mH$, and $C=500\mu F$. The voltage
+  source is $v(t)=40\sqrt{2} cos(1000t)$. Find the two branch currents 
+  $i_C(t)$, $i_L(t)$ and the overall current $i(t)=i_C(t)+i_L(t)$.
+  Also find the voltages $v_C(t)$ and $v_L(t)$ across $C$ and $L$
+  respectively.
+
+  % phasor representation of voltage source: $\dot(V)=40\angle{0^\circ}$
+  % $\omega=1000$, 
+  % impedances: $Z_L=j\omega L=j\omega L=j1$, $Z_C=1/j\omega C=-j2$
+  % $Z_{RC}=1-j2$, $Z_{LRC}=j1 || (1-j2)=(2+j)/(1-j)=0.5+j1.5$
+  % $Z_{total}=1.5+Z_{LRC}=2+j1.5=2.5\angle{36.9^\circ}$
+  % $\dot{I}=\dot{V}/Z_{total}=40\angle{0^\circ}/2.5\angle{36.9^\circ}
+  % =16\angle{-36.9^\circ}$
+  % Find branch currents by current divider:
+  % \dot{I}_L=\dot{I} Z_{RC}/(Z_L+Z_{RC})=\dot{I} (1-j2)/(j+1-j2)
+  % =(1.58\angle{-18.4^\circ})(16\angle{-36.9^\circ})
+  % =25.3\angle{-55.3^\circ}$
+  % $\dot{I}_{RC}=\dot{I} Z_L/(Z_L+Z_{RC})=\dot{I} j/(j+1-j2)
+  % =(0.707\angle{135^\circ})(16\angle{-36.9^\circ})
+  % =11.3\angle{98.1^\circ}$
+
+  \htmladdimg{../midterm1b.gif}
+
+\item {\bf Problem 3 (34 pts)}
+  In the circuit below, $R_1=20\Omega$, $R_2=10\Omega$, $R_3=30\Omega$,
+  $L=10\,mH$, $I_0=5A$. The circuit is at steady state before the switch is 
+  turned from position 1 to position 2 at $t=0$. Find the three voltages 
+  $v_1(t)$, $v_2(t)$ and $v_L(t)$ across $R_1$, $R_2$ and $L$, respectively,
+  for $t>0$ (the bottom wire is treated as ground).
+  
+  \htmladdimg{../../lectures/figures/Problems12.png}
+
+
+  \begin{comment}
+  {\bf Solution:} $\tau=L/(R_2+R_3)=10^{-2}/40=2.5\times 10^{-4}\,s$
+  \[
+  i_L(0^-)=i_L(0^+)=I_0\frac{R_1}{R_1+R_3}=5A\frac{20}{50}=2A,\;\;\;\;\;
+  i_L(\infty)=0,\;\;\;\;\;i_L(t)=2\,e^{-t/\tau}
+  \]
+  \[ 
+  v_1(t)=5\times 20=100\,V,\;\;\;\; v_2(t)=R_2 i_L(t)=-20\,e^{-t/\tau},\;\;\;\;\;
+  v_3(t)=R_3 i_L(t)=60\,e^{-t/\tau},\;\;\;\;\;
+  v_L(t)=-80\,e^{-t/\tau}
+  \]
+  \end{comment}
+
+
+\end{itemize}
+\end{document}
+
+\item {\bf Problem 3. (34 points)} 
+
+  In the circuit below, $R_1=150\Omega$, $R_2=50\Omega$, $L=0.2H$, $C=5\mu F$.
+  The input voltage is $v_s(t)=70\sin(\omega t+36.9^\circ)=70\sin(1000 t+36.9^\circ)$.
+  The system is in steady state before the switch is closed at $t=0$. Find voltage 
+  $v_C(t)$ across $C$ and current $i_L(t)$ through $L$ for $t>0$.
+
+  \htmladdimg{../midterm2f.gif}
+
+  \begin{comment}
+  {\bf Solution:} 
+  The phasor form of the input voltage is:
+  \[ \dot{V}_s=70/\sqrt{2}\angle 36.9^\circ =49.49\angle 36.9^\circ \]
+  Find $i_L(t)$:
+  \[ \dot{I}_L=\frac{\dot{V_s}}{R_1+R_2+j(\omega L-1/\omega C)}
+  =\frac{49.49\angle 36.9^\circ}{150+50+j(200-200)}=0.247\angle 36.9^\circ \]
+  \[ i_L(t)=0.35\;\sin(\omega t+36.9^\circ)\;\;\;\;\;(t<0) \]
+  \[ i_L(0_-)=0.35\;\sin(36.9^\circ)=0.21\;A \]
+  \[ \dot{V}_C=Z_C \dot{I}=\dot{I}/j\omega C =49.49\angle -53.1^\circ \]
+  \[ v_C(0_-)=70\;sin(-53.1^\circ)=-55.98\;V \]
+
+  For $t>0$, the switch is closed, $\tau_C=R_2C=2.5\times 10^{-4}$, 
+  $1/\tau_1=4000$, $\tau_L=L/R_1=1.33\times 10^{-3}$, $1/\tau_L=750$.
+  As the steady state of $v_C(t)$ is zero, we can find $v_C(t)$ to be
+  \[ v_C(t)=-55.98\;e^{-4000  t} \]
+  Find steady state of $i_L(t)$:
+  \[ \dot{I}_L=\frac{\dot{V}_s}{R_1+j\omega L}=\frac{49.49\angle 36.9}{150+j200}
+  =0.2\angle -16.23 \]
+  the steady state of $i_L(t)$ is
+  \[ i_L(t)=0.2\sqrt{2}\sin(\omega t-16.23^\circ)=0.283\sin(\omega t-16.23^\circ) \]
+  Evaluating $i_L(t)$ at $t=0$ we get:
+  \[ i_L(0)=0.283\sin(-16.23^\circ)=-0.08 \]
+  The complete $i_L(t)$ is
+  \[ i_L(t)=0.283\sin(\omega t-16.23^\circ)+[0.21-(-0.08)]e^{-t/\tau_L}
+  =0.283\sin(\omega t-16.23^\circ)+0.29\;e^{-750\;t} \]
+
+  \end{comment}
+
+
+
+\end{enumerate}
+\end{document}
+
+////
+
+
+\item ({\bf 23 pts})
+  The circuit below shows a simple means for obtaining improved bias
+  stability of the DC operating point of the transistor. As always,
+  assume $V_{BE}=0.7V$ when answering the following questions.
+
+  \htmladdimg{../../lectures/figures/midterm3e.gif}
+
+  \begin{itemize}
+  \item Complete the event chain below (in terms of $V_C$, $V_B$, $I_B$,
+    etc.) to show qualitatively that $R_B$ connected to the collector $C$ 
+    (instead of $V_{CC}$) introduces a negative feedback by which the DC
+    operating point tends to be stabilized:
+    \[
+    I_C \uparrow \Longrightarrow \cdots\cdots\cdots \Longrightarrow I_C \downarrow     
+    \]
+  \item Derive an expression for $I_C$ in terms of $R_B$, $R_C$, $V_{CC}$
+    and $\beta$.
+  \item Assuming $\beta=100$, $V_{BE}=0.7$, and $V_{CC}=10V$, find $R_C$ 
+    and $R_B$ so that $V_{CE}=5V$ and $I_C=2mA$.
+  \item Confirm your design does put the DC operating point in the middle
+    of the linear region.
+  \end{itemize}
+
+
+  {\bf Solution:}
+
+  \[
+  I_C \uparrow \Longrightarrow V_C \downarrow
+  \Longrightarrow I_B \downarrow \Longrightarrow I_C \downarrow 
+  \]
+
+  \[
+  I_B=\frac{V_{CC}-0.7}{(\beta+1)R_C+R_B},\;\;\;\;\;
+  I_C=\beta I_B=\frac{\beta(V_{CC}-0.7)}{(\beta+1)R_C+R_B} 
+  \]
+  $I_C=2mA$, $I_B=I_C/\beta=0.02mA$, $V_C=5V$,
+  $R_C=(V_{CC}-V_C)/(I_C+I_B)=5V/2.02mA=2.475K\Omega$,  
+  $R_B=(5-0.7)/0.02=4.3/0.02=215K\Omega$.
+
+  \[
+  I_B=\frac{V_{CC}-0.7}{(\beta+1)R_C+R_B}=\frac{9.3}{101\times 2.5K+215}
+  =0.02mA
+  \]
+
+  \[
+  I_C=\beta I_B=2 mA,\;\;\;V_C=V_{CC}-(\beta+1)I_B=5V 
+  \]
+
+  \[
+  I_C=\beta I_B=2.6mA,\;\;\;V_C=V_{CC}-(\beta+1)I_B=3.5V 
+  \]
+
+\item ({\bf 24 pts})
+  Determine qualitatively what kind of filter the following op-amp
+  circuit is. Is it a first or second order? a low-pass, high-pass, or 
+  band-pass? 
+
+  Find the frequency response function (FRF) of the circuit, and find the
+  cut-off frequency $\omega_c$ of the filter in terms of the given circuit
+  parameters $R_1$, $R_2$, $R$ and $C$, so that
+  $|H(j\omega_c)|=|H(j\omega_p)|/\sqrt{2}$, where $\omega_p$ is the
+  frequency at which $|H(j\omega_p)|$ reaches maximum.
+
+  \htmladdimg{../../lectures/figures/Problems14.png}
+
+
+  {\bf Solution:} Let $v^+\approx v^-=v$
+  \[
+  v=v_{out}\frac{R_1}{R_1+R_2},\;\;\;\;\;\;\;\;\;\;\frac{v_{in}-v}{R}
+  =\frac{v}{1/j\omega C}=v\;j\omega C
+  \]
+  Substituting $v$ in the first equation into the second, we find
+  \[
+  H(j\omega)=\frac{v_{out}}{v_{in}}=\frac{R_1+R_2}{R_1}\;\frac{1}{j\omega RC+1}
+  \]
+  This is a first-order low-pass filter with cut-off frequency $\omega_c=1/RC$.
+
+
+\end{enumerate}
+\end{document}
+

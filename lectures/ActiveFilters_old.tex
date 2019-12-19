@@ -1,0 +1,1396 @@
+\documentstyle[12pt]{article}
+\usepackage{html}
+% \usepackage{graphics}  
+\begin{document}
+
+\section*{Chapter 6: Active Filter Design}
+
+\subsection{First and Second Order Low/High/Band-Pass filters}
+
+\htmladdimg{../figures/opamp4a.gif}
+
+\begin{itemize}
+\item {\bf Low-pass filter:}
+  \begin{eqnarray}
+    H(j\omega)&=&-\frac{Z_2}{Z_1}=-\frac{R_2\;||\;(1/j\omega C)}{R_1}
+    =-\frac{1}{R_1}\frac{R_2/j\omega C}{R_2+1/j\omega C}
+    =-\frac{R_2}{R_1}\frac{1}{j\omega R_2C+1}
+    \nonumber \\
+    &=&-H(0)\frac{1}{1+j\omega \tau}=-H(0)\frac{1/\tau}{1/\tau+j\omega} 
+    =-H(0)\frac{\omega_c}{j\omega+\omega_c} 
+    \nonumber
+  \end{eqnarray}
+  where $H(0)=R_2/R_1$ is the DC gain when $\omega=0$, and
+  $\omega_c=1/\tau=1/R_2C$ is cut-off or corner frequency, at which 
+  $|H(j\omega_c)|=H(0)/\sqrt{2}$. Intuitively, when frequency is high, 
+  $Z_2(j\omega)$ is small and the negative feedback becomes strong,
+  and the output is low. For example, when
+  $\tau=10^{-3}$, $\omega_c=1/\tau=10^3$, the Bode plots are shown  
+  below:
+
+  \htmladdimg{../figures/BodeLP.gif}
+
+\item {\bf High-pass filter:}
+  \begin{eqnarray}
+    H(j\omega)&=&-\frac{Z_2(j\omega)}{Z_1(j\omega)}
+    =-\frac{R_2}{R_1+1/j\omega C}
+    =-\frac{R_2}{R_1}\;\frac{1}{1+1/j\omega R_1C}
+    \nonumber \\
+    &=&-\frac{R_2}{R_1}\;\frac{j\omega}{j\omega +1/R_1C}
+    =-H(\infty)\;\frac{j\omega}{j\omega+1/\tau} 
+    =-H(\infty)\frac{j\omega}{j\omega+\omega_c} 
+    \nonumber
+  \end{eqnarray}
+  where $H(\infty)=R_2/R_1$ is the gain when $\omega\rightarrow\infty$, 
+  $\omega_c=1/\tau=1/R_1C$ is the cut-off or corner frequency, at which
+  $|H(j\omega_c)|=H(\infty)/\sqrt{2}$. Intuitively, when frequency is 
+  low $Z_1(j\omega)$ is large and the signal is difficult to pass, 
+  therefore the output is low. For example, when $\tau=10^{-6}$, 
+  $\omega_c=1/\tau=10^6$, the Bode plots are shown below:
+  
+  \htmladdimg{../figures/BodeHP.gif}
+
+  If we let $R_1=R_2$, i.e., $H(0)=1$, and ignore the negative sign ($180^\circ$
+  phase shift), the low-pass and high-pass filters can be represented by their
+  transfer functions with $s=j\omega$:
+  \[
+  H_{lp}(j\omega)=\frac{\omega_c}{j\omega+\omega_c},
+  \;\;\;\;\;\;\;H_{hp}(j\omega)=\frac{j\omega}{j\omega+\omega_c}
+  \]
+
+\item {\bf Second Order Band-pass Filters:}
+
+  \htmladdimg{../figures/opamp4b.gif}
+
+  We let 
+  \[
+  Z_1(\omega)=R_1+(1/j\omega C_1),\;\;\;\;\;\;\;
+  Z_2(\omega)=R_2||(1/j\omega C_2)
+  \]
+  and get the FRF of this inverting amplifier as
+  \begin{eqnarray}
+    H_{BP}(j\omega)&=&-\frac{Z_2(\omega)}{Z_1(\omega)}
+    =-\frac{R_2||(1/j\omega C_2)}{R_1+1/j\omega C_1}
+    =-\frac{R_2/j\omega C_2}{(R_1+1/j\omega C_1)(R_2+1/j\omega C_2)}
+    \nonumber \\
+    &=&-\frac{j\omega R_2C_1}{(j\omega R_1C_1+1)(j\omega C_2R_2+1)}
+    =-\frac{j\omega \tau_3}{(1+j\omega \tau_1)(1+j\omega \tau_2)} 
+    \nonumber \\
+    &=&\left(\frac{\omega_{c_1}}{j\omega+\omega_{c_1}}\right)\;
+    \left(\frac{\omega_{c_2}}{j\omega+\omega_{c_2}}\right)\;
+    \left(\frac{j\omega}{\omega_{c_3}}\right)
+    \nonumber
+  \end{eqnarray}
+  where $\omega_{c_1}=1/\tau_1=1/R_1C_1$, $\omega_{c_2}=1/\tau_2=1/R_2C_2$, 
+  and $\omega_{c_3}=1/\tau_3=1/R_2C_1$. We see from the Bode plot above
+  that this is indeed a band-pass filter.
+
+  For example, when $\tau_1=10^{-6}$, $\tau_2=10^{-8}$, $\tau_3=10^{-3}$, 
+  the Bode plots are shown below:
+
+  \htmladdimg{../figures/BodeBP.gif}
+
+\item {\bf Second Order Band-stop Filters:}
+
+  If the log-magnitude $Lm$ of the Bode plot of a band-pass filter is 
+  vertically flipped, we get a band-stop filter:
+  \[
+  -Lm_{BP}(j\omega)=-20\log |H_{BP}(j\omega)|
+  =-20\log \bigg| \frac{Z_2(\omega)}{Z_1(\omega)} \bigg|
+  =20\log \bigg| \frac{Z_1(\omega)}{Z_2(\omega)} \bigg|
+  =Lm_{BS}(j\omega)
+  \]
+  We therefore see that if we simply swap $Z_1(\omega)$ and $Z_2(\omega)$ 
+  in the op-ammp circuit of the band-pass filter, we get a band-stop filter:
+
+  \begin{eqnarray}
+    H_{BS}(j\omega)&=&-\frac{Z_1(\omega)}{Z_2(\omega)}
+    =-\frac{R_2+1/j\omega C_2}{R_1||1/j\omega C_1}
+    =-\frac{R_2+1/j\omega C_2}{R_1/j\omega C_1/(R_1+1/j\omega C_1)}
+    \nonumber \\
+    &=& \frac{(1+j\omega C_1R_1)(1+j\omega C_2R_2)}{j\omega R_1C_2}
+    =\frac{(1+j\omega\tau_1)(1+j\omega\tau_1)}{j\omega\tau_3}
+    \nonumber
+  \end{eqnarray}
+
+\end{itemize}
+
+\begin{comment}
+
+{\bf Example}
+
+\htmladdimg{../figures/opampMF.png}
+
+Apply KCL to the point between $C_1$ and $C_2$ denoted by $V$:
+\[
+\frac{V_{in}-V}{1/j\omega C_1}+\frac{V_{out}-V}{1/j\omega C_2}
+=\frac{V}{R_2}+\frac{V}{1/j\omega C_1}
+\]
+i.e.,
+\[
+V_{in}j\omega C_1+V_{out}j\omega C_2
+=\left(\frac{1}{R_2}+2j\omega C_1+j\omega C_2\right) V
+=\left(\frac{1}{R_2}+j\omega(2C_1+C_2)\right) V
+\]
+Apply KCL to the inverting input of the op-amp which is virtually
+grounded:
+\[
+\frac{V}{1/j\omega C_1}+\frac{V_{out}}{R_1}=0
+\;\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;\;
+V=-\frac{1}{j\omega R_1C_1}V_{out}
+\]
+Substitute into the first equation
+\begin{eqnarray}
+  V_{in}j\omega C_1+V_{out}j\omega C_2
+  &=&-\left(\frac{1}{R_2}+j\omega(2C_1+C_2)\right) \frac{1}{j\omega R_1C_1}V_{out}
+  \nonumber\\
+  &=&-\left(\frac{1}{j\omega R_1R_2C_1}+\frac{2C_1+C_2}{R_1C_1}\right) V_{out}
+  \nonumber
+\end{eqnarray}
+Rearrange:
+\[
+V_{in}
+=-\frac{1}{j\omega C_1}\left(j\omega C_2+\frac{1}{j\omega R_1R_2C_1}+\frac{2C_1+C_2}{R_1C_1}\right) V_{out}
+=\left(\frac{C_2}{C_1}+\frac{1}{(j\omega)^2 R_1R_2C^2_1}
++\frac{2C_1+C_2}{j\omega R_1C_1^2}\right) V_{out}
+\]
+Now we can find the FRF:
+\begin{eqnarray}
+H(j\omega)&=&\frac{V_{out}}{V_{in}}
+=-\left(\frac{C_2}{C_1}+\frac{1}{(j\omega)^2 R_1R_2C_1^2}
++\frac{2C_1+C_2}{j\omega R_1C_1^2}\right)^{-1}
+=-\frac{(j\omega)^2R_1R_2C_1^2}{(j\omega)^2R_1R_2C_1C_2+j\omega(2C_1+C_2)R_2+1}
+\nonumber\\
+&=&-\frac{C_1}{C_2}\;\frac{(j\omega)^2}{(j\omega)^2+j\omega(2C_1+C_2)/R_1C_1C_2+1/R_1R_2C_1C_2}
+=-\frac{C_1}{C_2}\;\frac{(j\omega)^2}{(j\omega)^2+j\omega\omega_n/Q+\omega_n^2}
+\nonumber
+\end{eqnarray}
+where
+\[
+\omega_n=\frac{1}{\sqrt{R_1R_2C_1C_2}},\;\;\;\;\;\;
+\frac{2C_1+C_2}{R_1C_1C_2}=\frac{\omega_n}{Q}=\Delta\omega,
+\;\;\;\mbox{i.e.,}\;\;\;\;
+Q=\omega_n\frac{R_1C_1C_2}{2C_1+C_2}=\frac{\sqrt{R_1R_2C_1C_2}}{(2C_1+C_2)R_2}
+\]
+This is a 2nd-order high-pass filter, when $\omega=\infty$, we have
+\[
+H(j\omega)\big|_{\omega=\infty}=H(j\infty)=-\frac{C_1}{C_2}
+\]
+
+
+{\bf Example}
+
+\htmladdimg{../figures/opampMF1.png}
+
+\[
+\frac{V_{in}-V}{R_1}+\frac{V_{out}-V}{R_2}=\frac{V}{R_1}+\frac{V}{1/j\omega C_2}
+\;\;\;\;\mbox{i.e.,}\;\;\;\;
+\frac{V_{in}}{R_1}+\frac{V_{out}}{R_2}=\left( \frac{2}{R_1}+\frac{1}{R_2}+j\omega C_2 \right)V
+\]
+\[
+\frac{V}{R_1}+\frac{V_{out}}{1/j\omega C_1}=0,\;\;\;\;\mbox{i.e.,}\;\;\;\;
+V=-j\omega R_1C_1 V_{out}
+\]
+Substitute into the first equation:
+\[
+\frac{V_{in}}{R_1}+\frac{V_{out}}{R_2}
+=-\left( \frac{2}{R_1}+\frac{1}{R_2}+j\omega C_2 \right)j\omega R_1C_1 V_{out}
+=-\left( j\omega C_1 \left(\frac{2R_2+R_1}{R_2}\right)+(j\omega)^2 R_1C_1C_2 \right)V_{out}
+\]
+Rearrange:
+\begin{eqnarray}
+\frac{V_{in}}{R_1}&=&-\left(\frac{1}{R_2}+j\omega C_1\left(\frac{2R_2+R_1}{R_2}\right)+(j\omega)^2 R_1C_1C_2 \right)V_{out}
+\nonumber\\
+&=&-R_1C_1C_2\left(\frac{1}{R_1R_2C_1C_2}
++j\omega \left(\frac{2R_2+R_1}{R_1R_2C_2}\right)+(j\omega)^2 \right)V_{out}
+\nonumber
+\end{eqnarray}
+Now we can find the FRF:
+\[
+H(j\omega)=\frac{V_{out}}{V_{in}}
+=-\frac{1}{R_1^2C_1C_2}\;\;\frac{1}{(j\omega)^2+j\omega \omega_n/Q+\omega_n^2}
+\]
+where
+\[
+\omega_n=\frac{1}{\sqrt{R_1R_2C_1C_2}},\;\;\;\;
+\frac{2R_2+R_1}{R_1R_2C_2}=\frac{\omega_n}{Q}=\Delta\omega,\;\;\;\mbox{i.e.,}\;\;\;
+Q=\omega_n\frac{R_1R_2C_2}{2R_2+R_1}=\frac{\sqrt{R_1R_2C_1C_2}}{C_1(2R_2+R_1)}
+\]
+This is a 2nd-order low-pass filter, when $\omega=0$, we have
+\[
+H(j\omega)\big|_{\omega=0}=H(j0)=-\frac{1}{R_1^2C_1C_2}\;\frac{1}{\omega_n^2}
+=-\frac{R_1R_2C_1C_2}{R_1^2C_1C_2}=-\frac{R_2}{R_1}
+\]
+\end{comment}
+
+\subsection{The Sallen-Key filters}
+
+The
+\htmladdnormallink{Sallen-Key filters}{http://en.wikipedia.org/wiki/Sallen-Key_topology}
+are second-order active filters (low-pass, high-pass, and band-pass) that 
+can be easily implemented using the configuration below:
+
+\htmladdimg{../figures/SallenKey.gif}
+
+We represent all voltages in phasor form. Due to the virtual ground 
+assumption, $V_b\approx V_{out}$ at non-inverting input is virtually 
+the same as that at the inverting input, which is connected to the 
+output $V_{out}$. Applying KCL to nodes a and b to get:
+\[ 
+\frac{V_a-V_{in}}{Z_1}+\frac{V_a-V_{out}}{Z_3}+\frac{V_a-V_{out}}{Z_2}
+=\frac{V_a-V_{in}}{Z_1}+(V_a-V_{out})\left(\frac{1}{Z_3}+\frac{1}{Z_2}\right)=0 
+\]
+and
+\[
+\frac{V_{out}-V_a}{Z_2}+\frac{V_{out}}{Z_4}=0,
+\]
+The second equation can also be written as
+\[
+V_a-V_{out}=V_{out}\frac{Z_2}{Z_4}, \;\;\;\;\;\;\;V_a=V_{out}\frac{Z_2+Z_4}{Z_4}
+\]
+Substituting these into the first equation we get 
+\[
+V_{out}\;\left(\frac{Z_2+Z_4}{Z_1Z_4}+\frac{Z_2}{Z_3Z_4}+\frac{Z_2}{Z_2Z_4} \right)
+=\frac{V_{in}}{Z_1}
+\]
+Now the frequency response of the Sallen-Key filter can be found as
+the ratio of $V_{out}$ and $V_{in}$:
+\begin{eqnarray}  
+  H&=&\frac{V_{out}}{V_{in}}=\frac{Z_3Z_4}{Z_1Z_2+Z_1Z_3+Z_2Z_3+Z_3Z_4} 
+\nonumber
+\end{eqnarray}
+
+\begin{itemize}
+\item {\bf Second order low-pass filter}
+  
+  If we let $Z_1=R_1$, $Z_2=R_2$, $Z_3=1/j\omega C_1$, $Z_4=1/j\omega C_2$, 
+  the FRF becomes (see
+  \htmladdnormallink{here}{../ActiveFilters_sub/index.html}):
+  \[
+  H(j\omega)=\frac{\omega_n^2}{(j\omega)^2+\Delta\omega\;j\omega+\omega_n^2} 
+  \]
+  \begin{comment}
+  \begin{eqnarray}
+    H&=&\frac{1/(j\omega)^2C_1C_2}
+    {R_1R_2+(R_1+R_2)/j\omega C_1+1/(j\omega)^2C_1C_2}
+    \nonumber \\
+    &=&\frac{1/R_1R_2C_1C_2}{(j\omega)^2+j\omega(R_1+R_2)/R_1R_2C_1+1/R_1R_2C_1C_2}
+    \nonumber \\
+    &=&\frac{1/R_1R_2C_1C_2}{(j\omega)^2+j\omega/R_pC_1+1/R_1R_2C_1C_2}
+    \nonumber \\
+    &=&\frac{\omega_n^2}{(j\omega)^2+2\zeta\omega_n\;j\omega+\omega_n^2} 
+    =\frac{\omega_n^2}{(j\omega)^2+\omega_n/Q \;j\omega+\omega_n^2}
+    =\frac{\omega_n^2}{(j\omega)^2+\Delta\omega\;j\omega+\omega_n^2} 
+    \nonumber
+  \end{eqnarray}
+  \end{comment}
+  where
+  \[
+  \omega_n=\frac{1}{\sqrt{R_1R_2C_1C_2}},\;\;\;\;\;\;\;
+  \Delta\omega=\frac{1}{(R_1||R_2)C_1}=\frac{1}{R_pC_1},\;\;\;\;
+  R_p=R_1||R_2=\frac{R_1R_2}{R_1+R_2}
+  \]
+  and
+  \[
+  Q=\frac{\omega_n}{\Delta\omega}=\frac{\sqrt{R_1R_2C_1C_2}}{(R_1+R_2)C_2},
+  \;\;\;\;\;
+  \zeta=\frac{1}{2Q}=\frac{(R_1+R_2)C_2}{2\sqrt{R_1R_2C_1C_2}}
+  \]
+  As there are only two parameters $\omega_n$ and $\zeta$ or $Q=1/2\zeta$ 
+  to satisfy, we can arbitrarily set any two of the four variables $R_1$, 
+  $R_2$, $C_1$, and $C_2$, and then solve for the other two. For example, 
+  for convenience, if we let $R_1=R_2=1$, we get
+  \[
+  \omega_n=\frac{1}{\sqrt{C_1C_2}},\;\;\;\;\;\Delta\omega=\frac{1}{C_1}
+  \]
+  \begin{comment}
+    \[
+    \zeta=\sqrt{\frac{C_2}{C_1}}
+    \]
+    Solving these we get
+    \[
+    C_1=\frac{1}{\omega_n\zeta},\;\;\;\;\;\;C_2=\frac{\zeta}{\omega_n}
+    \]
+  \end{comment}
+
+\item {\bf Second order high-pass filter}
+    
+  If we let $Z_1=1/j\omega C_1$, $Z_2=1/j\omega C_2$, $Z_3=R_1$, $Z_4=R_2$, 
+  the FRF becomes (see
+  \htmladdnormallink{here}{../ActiveFilters_sub/index.html}):
+  \[
+  H(j\omega)=\frac{(j\omega)^2}{(j\omega)^2+\Delta\omega\;j\omega+\omega_n^2}
+  \]
+  \begin{comment}
+  \begin{eqnarray}
+    H&=&\frac{R_1R_2}
+    {1/(j\omega)^2C_1C_2+R_1(1/j\omega C_1+1/j\omega C_2)+R_1R_2}
+    \nonumber \\
+    &=&\frac{(j\omega)^2}{1/R_1R_2C_1C_2+j\omega\;(C_1+C_2)/C_1C_2R_2+(j\omega)^2}
+    \nonumber \\
+    &=&\frac{(j\omega)^2}{(j\omega)^2+j\omega\;/C_sR_2+1/R_1R_2C_1C_2}
+    \nonumber \\
+    &=&\frac{(j\omega)^2}{(j\omega)^2+2\zeta\omega_n\;j\omega+\omega_n^2} 
+    =\frac{(j\omega)^2}{(j\omega)^2+\omega_n/Q \;j\omega+\omega_n^2} 
+    =\frac{(j\omega_n)^2}{(j\omega)^2+\Delta\omega\;j\omega+\omega_n^2}
+    \nonumber
+  \end{eqnarray}
+  \end{comment}
+  where 
+  \[
+  \omega_n=\frac{1}{\sqrt{R_1R_2C_1C_2}},\;\;\;\;\;\;\;
+  \Delta\omega=\frac{1}{C_sR_2},\;\;\;\;\;
+  C_s=\frac{C_1C_2}{C_1+C_2}
+  \]
+  and
+  \[
+  Q=\frac{\sqrt{R_1R_2C_1C_2}}{(C_1+C_2)R_1},\;\;\;\;\;\;
+  \zeta=\frac{1}{2Q}=\frac{(C_1+C_2)R_1}{2\sqrt{R_1R_2C_1C_2}}
+  \]
+
+\item {\bf Band-pass filter}
+
+  \htmladdimg{../figures/SallenKeyBP.png}
+
+  By voltage divider and virtual ground, we get
+  \[
+  V_2=\frac{R_a}{R_a+R_b}V_{out}=kV_{out},\;\;\;\;\;\;\;\left(k=\frac{R_a}{R_a+R_b}\right)
+  \]
+  Apply KCL to node $V_2$ to get:
+  \[
+  \frac{V_1-V_2}{Z_2}=\frac{V_2}{Z_4},\;\;\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;
+  V_1=V_2\left(\frac{1}{Z_2}+\frac{1}{Z_4}\right)Z_2
+  =V_2\left(1+\frac{Z_2}{Z_4}\right)
+  \]
+  Apply KCL to node $V_1$ to get:
+  \[
+  \frac{V_{in}-V_1}{Z_1}+\frac{V_{out}-V_1}{R_f}+\frac{V_2-V_1}{Z_2}
+  =\frac{V_1}{Z_3}
+  \]
+  Rearrange the terms, and replace $V_1$ by $V_2(1+Z_2/Z_4)$ to get
+  \begin{eqnarray}
+    &&\frac{V_{in}}{Z_1}+\frac{V_{out}}{R_f}+\frac{V_2}{Z_2}
+    =V_1\left(\frac{1}{Z_1}+\frac{1}{R_f}+\frac{1}{Z_2}+\frac{1}{Z_3}\right)
+    \nonumber\\
+    &=&V_2\left(1+\frac{Z_2}{Z_4}\right)\left(\frac{1}{Z_1}
+    +\frac{1}{R_f}+\frac{1}{Z_2}+\frac{1}{Z_3}\right)
+    \nonumber
+  \end{eqnarray}
+  Further rearrange the terms and replace $V_2$ by $kV_{out}$ to get
+  \[
+  \frac{V_{in}}{Z_1}+\frac{V_{out}}{R_f}
+  =kV_{out}\left[\left(1+\frac{Z_2}{Z_4}\right)\left(\frac{1}{Z_1}+\frac{1}{R_f}
+    +\frac{1}{Z_2}+\frac{1}{Z_3}\right)-\frac{1}{Z_2}\right]
+  \]
+  Further rearrange the terms
+  \begin{eqnarray}
+    \frac{V_{in}}{Z_1}&=&kV_{out}\left[\left(1+\frac{Z_2}{Z_4}\right)
+\left(\frac{1}{Z_1}
+      +\frac{1}{R_f}+\frac{1}{Z_2}+\frac{1}{Z_3}\right)-\frac{1}{Z_2}\right]-\frac{V_{out}}{R_f}
+    \nonumber \\
+    &=&
+    V_{out}\left\{k\left[\left(1+\frac{Z_2}{Z_4}\right)\left(\frac{1}{Z_1}
+      +\frac{1}{R_f}+\frac{1}{Z_2}+\frac{1}{Z_3}\right)-\frac{1}{Z_2}\right]-\frac{1}{R_f}\right\}
+    \nonumber 
+  \end{eqnarray}
+  Finally we get the frequency response function:
+  \begin{eqnarray}
+    H=\frac{V_{out}}{V_{in}}&=&
+    \frac{1}{Z_1\left\{k\left[\left(1+\frac{Z_2}{Z_4}\right)\left(\frac{1}{Z_1}+\frac{1}{R_f}+\frac{1}{Z_2}+\frac{1}{Z_3}\right)-\frac{1}{Z_2}\right]-\frac{1}{R_f}\right\}}
+    \nonumber \\
+    &=&
+    \frac{1/k}{Z_1\left[\left(1+\frac{Z_2}{Z_4}\right)\left(\frac{1}{Z_1}+\frac{1}{R_f}+\frac{1}{Z_2}+\frac{1}{Z_3}\right)-\frac{1}{Z_2}\right]-\frac{Z_1}{kR_f}}
+    \nonumber \\
+    &=&
+    \frac{1/k}{1+\frac{Z_1}{R_f}+\frac{Z_1}{Z_3}+\frac{Z_2}{Z_4}+\frac{Z_1Z_2}{Z_4R_f}+\frac{Z_1}{Z_4}+\frac{Z_1Z_2}{Z_3Z_4}-\frac{Z_1}{kR_f}}
+    \nonumber
+  \end{eqnarray}
+  Now if we let
+  \[
+  Z_1=R_1,\;\;\;\;\;Z_4=R_2,\;\;\;\;Z_2=\frac{1}{j\omega C_2},
+  \;\;\;\;Z_3=\frac{1}{j\omega C_1}
+  \]
+  the frequency response function becomes
+  \begin{eqnarray}
+  H&=&\frac{\left(1+\frac{R_b}{R_a}\right)\frac{1}{R_1C_1}j\omega}{(j\omega)^2+\left(\frac{1}{R_2C_1}+\frac{1}{R_2C_2}+\frac{1}{R_1C_1}-\frac{R_b}{R_aR_fC_1}\right)j\omega+\frac{R_1+R_f}{R_fR_1R_2C_1C_2}}
+  \nonumber\\
+  &=&\frac{Aj\omega}{(j\omega)^2+\Delta\omega j\omega+\omega_n^2},
+  \;\;\;\;\;\;\;\;\;
+  A=(1+R_b/R_a)/R_1C_1
+  \nonumber
+  \end{eqnarray}
+  This is a band-pass filter with the peak frequency equal to the natural
+  frequency:
+  \[
+  \omega_n=\sqrt{\frac{R_1+R_f}{R_fR_1R_2C_1C_2}}
+  \]
+  the bandwidth
+  \[
+  \Delta\omega=\frac{1}{R_2C_1}+\frac{1}{R_2C_2}+\frac{1}{R_1C_1}-\frac{R_b}{R_aR_fC_1}
+  \]
+  The gain of the filter is controlled by $1+R_b/R_a$.
+  
+\end{itemize}
+
+
+\subsection{The Twin-T notch (band-stop) filter}
+
+{\bf The twin-T filter}
+
+\htmladdimg{../figures/TwinT.png}
+
+%\begin{comment}
+The twin-T network is composed of two T-networks: 
+\begin{itemize}
+\item The RCR network is formed by two resistors $R_1=R_2=R$ and one
+  capacitor $C_3=2C$. 
+
+  \begin{comment}
+  This T (or Y) network can be converted to a $\pi$ (or $\Delta$) network (see 
+  \htmladdnormallink{here}{http://fourier.eng.hmc.edu/e84/lectures/ch2/node3.html}) of three branches:
+  \[
+  Z'_1=Z'_2=R+\frac{1}{2j\omega C}+\frac{R/2j\omega C}{R}
+  =R+\frac{1}{j\omega C}=\frac{j\omega RC+1}{j\omega C}
+  \]
+  \[
+  Z'_3=R+R+\frac{R^2}{1/2j\omega C}=2R+2R^2j\omega C=2R(1+j\omega RC)
+  \]
+  The frequency response function of the voltage divider formed by 
+  $Z'_3$ and $Z'_2$ is:
+  \begin{eqnarray}
+  H'(j\omega)&=&\frac{Z'_2}{Z'_2+Z'_3}
+  =\frac{(1+j\omega RC)/j\omega C}{(1+j\omega RC)/j\omega C+2R(1+j\omega RC)}
+  \nonumber\\
+  &=&\frac{1}{1+2j\omega RC}=\frac{1}{1+2j\omega\tau}
+  \nonumber
+  \end{eqnarray}
+  where $\tau=RC$. This is a first-order low-pass filter with cut-off
+  frequency at $\omega_c=1/2\tau$:
+  \[
+  |H'(j\omega)|=\left\{\begin{array}{ll}1 & \omega=0\\1/\sqrt{2}& 
+  \omega=1/2\tau\\ 0&\omega\rightarrow\infty\end{array}\right.
+  \]
+  \end{comment}
+
+\item The CRC network is formed by two capacitors $C_1=C_2=C$ and one
+  resistor $R_3=R/2$. 
+
+  \begin{comment}
+  This T (or Y) network can be converted to a
+  $\pi$ (or $\Delta$) network of three branches:
+  \[
+  Z''_1=Z''_2=\frac{R}{2}+\frac{1}{j\omega C}+\frac{R/2j\omega C}{1/j\omega C}
+  =R+\frac{1}{j\omega C}  =\frac{j\omega RC+1}{j\omega C}
+  \]
+  \[
+  Z''_3=\frac{1}{j\omega C}+\frac{1}{j\omega C}+\frac{1/(j\omega C)^2}{R/2}
+  =\frac{2}{j\omega C}+\frac{2}{R(j\omega C)^2}
+  =\frac{2(1+j\omega RC)}{R(j\omega C)^2}
+  \]
+  The frequency response function of the voltage divider formed by $Z''_3$ 
+  and $Z''_2$ is:
+  \begin{eqnarray}
+  H''(j\omega)&=&\frac{Z''_2}{Z''_2+Z''_3}
+  =\frac{(1+j\omega RC)/j\omega C}
+  {(1+j\omega RC)/j\omega C+2(1+j\omega RC)/R(j\omega C)^2}
+  \nonumber \\
+  &=&\frac{j\omega RC}{j\omega RC+2}=\frac{j\omega\tau}{j\omega\tau+2}
+  =\frac{1}{1-j2/\omega\tau}
+  \nonumber 
+  \end{eqnarray}
+  This is a first-order high-pass filter with cut-off frequency at
+  $\omega_c=2/\tau$:
+  \[
+  |H'(j\omega)|=\left\{\begin{array}{ll}0 & \omega=0\\1/\sqrt{2}& 
+  \omega=2/\tau\\ 1&\omega\rightarrow\infty\end{array}\right.
+  \]
+  \end{comment}
+
+\end{itemize}
+
+\begin{comment}
+
+As these two $\pi$-networks are combined in parallel, they form a single
+$\pi$-network with three branches $Z_1=Z'_1||Z''_1$, $Z_2=Z'_2||Z''_2$, 
+and $Z_3=Z'_3||Z''_3$:
+\[
+Z_1=Z'_1||Z''_1=Z_2=Z'_2||Z''_2=\frac{1}{2}\left(R+\frac{1}{j\omega C}\right)
+\]
+\[
+  Z_3=Z'_3||Z''_3=\frac{Z'_3 Z''_3}{Z'_3+Z''_3}
+  =\frac{2R(1+j\omega RC)}{1+(j\omega RC)^2}
+\]
+The frequency response function of this $\pi$-network (a voltage divider) is:
+\begin{eqnarray}
+  H(j\omega)&=&\frac{Z_2}{Z_2+Z_3}=\frac{R+1/j\omega C}
+  {R+1/j\omega C+4R(1+j\omega RC)/(1+(j\omega RC)^2)}
+  \nonumber \\
+  &=&\frac{(1+j\omega RC)/j\omega C}{(1+j\omega RC)/j\omega C+4R(1+j\omega RC)/(1+(j\omega RC)^2)}
+  \nonumber \\
+  &=&\frac{1/j\omega C}{1/j\omega C+4R/(1+(j\omega RC)^2)}
+  =\frac{1}{1+4j\omega RC/(1+(j\omega RC)^2)}
+  \nonumber \\
+  &=&\frac{1+(j\omega\tau)^2}{1+(j\omega\tau)^2+4j\omega\tau}
+  =\frac{(j\omega)^2+(1/\tau)^2}{(j\omega)^2+4j\omega/\tau+(1/\tau)^2}
+  \nonumber
+\end{eqnarray}
+
+\end{comment}
+
+When the output is open-circuit, i.e., $Z_L=\infty$, the frequency 
+response function of the twin-T network can be found to be
+(see \htmladdnormallink{here}{../TwinT/TwinT.html}):
+\begin{eqnarray}
+H(j\omega)&=&\frac{v_{out}}{v_{in}}
+=\frac{(j\omega)^2+\omega_n^2}{(j\omega)^2+4\omega_nj\omega+\omega_n^2}
+\nonumber\\
+&=&\frac{(j\omega)^2+\omega_n^2}{(j\omega)^2+\omega_nj\omega/Q+\omega_n^2}
+=\frac{\omega_n^2-\omega^2}{\omega_n^2-\omega^2+j\omega\Delta\omega}
+\nonumber
+\end{eqnarray}
+where
+\[
+\omega_n=\frac{1}{RC}=\frac{1}{\tau}
+\]
+$Q=1/4=0.25$ is the quality factor, and $\Delta\omega=\omega_n/Q=4\omega_n$ 
+is the bandwidth of the filter. This twin-T network is a band-stop filter 
+(notch filter) which attenuates the frequency $\omega_n=1/\tau$ to zero:
+\[
+|H(j\omega)|=\left\{\begin{array}{ll} 
+H(0)=\omega_n^2/\omega_n^2=1 & \omega=0 \\
+H(j\omega_n)=0 & \omega=\omega_n=1/\tau\\
+H(\infty)=\lim\limits_{\omega\rightarrow\infty}H(j\omega)=\omega^2/\omega^2=1 & \omega\rightarrow \infty
+\end{array}\right.
+\]
+
+\begin{comment}
+This result can also be reached by noticing the following
+\[
+H'(j\omega)\big|_{\omega=1/\tau}=\frac{1}{1+j2},\;\;\;\;\;\;\;
+H''(j\omega)\big|_{\omega=1/\tau}=\frac{1}{1-j2}
+\]
+As they are equal in magnitude but opposite in phase, their outputs 
+cancel each other to produce zero output.
+\end{comment}
+
+When this notch filter is used in a negative feedback loop of an 
+amplifier, it becomes an oscillator.
+
+\htmladdimg{../figures/TwinTPlots1.png}
+
+{\bf The active twin-T filter}
+
+The bandwidth $\Delta\omega=\omega_n/Q=4\omega_n$ may be too large for 
+most applications due to the small quality factor $Q=1/4$. To overcome 
+this problem, an active filter containing two op-amp followers (with 
+unity gain $A=1$) can be used to introduce a positive feedback loop as 
+shown below:
+
+\htmladdimg{../figures/TwinTActive.png}
+
+Now the common terminal of the twin-T filter is no longer grounded, 
+instead it is connected a potentiometer, a voltage divider composed 
+of $R_4$ and $R_5$, to form a feedback loop by which a fraction of the
+output $V_{out}$ is fed back:
+\[
+V_1=\frac{R_5}{R_4+R_5}\;V_{out}=\alpha v_{out}
+\]
+where $\alpha=R_5/(R_4+R_5)$, i.e., $1-\alpha=R_4/(R_4+R_5)$.
+
+%\begin{comment}
+
+The input and output of the twin-T network are respectively $V_{in}-V_1$ and
+$V_{out}-V_1$, and they are now related by the frequency response function 
+$H(j\omega)$ of the twin-T network:
+\[
+V_{out}-V_1=H(j\omega)(V_{in}-V_1)
+\]
+Rearranging and substituting $V_1=V_{out}\;R_5/(R_4+R_5)$, we get
+\begin{eqnarray}
+  H(j\omega)V_{in}&=&V_{out}+(H(j\omega)-1) V_1
+  =V_{out}+(H(j\omega)-1)\frac{R_5}{R_4+R_5}V_{out}
+  \nonumber \\
+  &=&\left(1+(H(j\omega)-1)\;\frac{R_5}{R_4+R_5}\right)\,V_{out}
+  =\frac{R_4+H(j\omega)R_5}{R_4+R_5}\;V_{out}
+  \nonumber
+\end{eqnarray}
+Now the frequency response function of this active filter with feedback 
+can be found to be
+\[
+H_{active}(j\omega)=\frac{V_{out}}{V_{in}}
+=\frac{H(j\omega)(R_4+R_5)}{R_4+H(j\omega)R_5}
+\]
+Substituting $H(j\omega)=((j\omega)^2+\omega_n^2)/((j\omega)^2+4\omega_n j\omega
++\omega_n^2)$ we get
+\begin{eqnarray}
+  H_{active}(j\omega)&=&\frac{(\omega_n^2-\omega^2)(R_4+R_5)}
+  {R_4(\omega_n^2-\omega^2+4\omega_n j\omega)+(\omega_n^2-\omega^2)R_5}
+  \nonumber \\
+  &=&\frac{(\omega_n^2-\omega^2)(R_4+R_5)}
+  {4\omega_nR_4 j\omega+(\omega_n^2-\omega^2)(R_4+R_5)}
+  \nonumber \\
+  &=&\frac{\omega_n^2-\omega^2}{j\omega 4\omega_n R_4/(R_4+R_5)+\omega_n^2-\omega^2}
+  \nonumber \\
+  &=&\frac{\omega_n^2-\omega^2}{\omega_n^2-\omega^2+\omega_n/Q_{active} j\omega}
+  =\frac{\omega_n^2-\omega^2}{\omega_n^2-\omega^2+\Delta\omega_{active} j\omega}
+  \nonumber
+\end{eqnarray}
+where 
+\[
+Q_{active}=\frac{R_4+R_5}{4R_4},\;\;\;\;\;\;
+\Delta\omega_{active}=\frac{\omega_n}{Q}_{active}
+\]
+are respectively the quality factor and the bandwidth of the active 
+filter with feedback. 
+%\end{comment}
+
+It can be shown (see \htmladdnormallink{here}{../TwinT/TwinT.html})
+that the frequency response function of this active twin-T filter is
+\begin{eqnarray}
+H_{active}(j\omega)
+&=&\frac{\omega_n^2-\omega^2}{\omega_n^2+4j\omega\omega_n R_4/(R_4+R_5)-\omega^2}
+\nonumber\\
+&=&\frac{\omega_n^2-\omega^2}{\omega_n^2-\omega^2+\omega_n/Q_{active} j\omega}
+=\frac{\omega_n^2-\omega^2}{\omega_n^2-\omega^2+\Delta\omega_{active} j\omega}
+\nonumber
+\end{eqnarray}
+where 
+\[
+Q_{active}=\frac{R_4+R_5}{4R_4},\;\;\;\;\;\;
+\Delta\omega_{active}=\frac{\omega_n}{Q}_{active}
+\]
+are respectively the quality factor and the bandwidth of the active 
+filter with feedback. By changing $R_4$ and $R_5$, the bandwidth 
+$\Delta\omega_{active}$ can be adjusted. In particular, 
+\begin{itemize}
+\item when $R_5=0$, $V_1=0$ (no feedback), $Q_{active}=1/4=Q$, 
+  $\Delta\omega=\omega_n/Q=4\omega_n$; 
+\item when $R_4=0$, $V_1=V_{out}$ (one hundred percent feedback), 
+  $Q_{active}=\infty$, $\Delta\omega_{active}=\omega_n/Q_{active}=0$.
+\end{itemize}
+
+
+{\bf The bridged T filter}
+
+If in the RCR T-network the vertical capacitor branch is dropped, 
+i.e., $C=0$, the twin-T network becomes a bridged T network. Now
+we have $Z'_3=2R$, while the CRC T-network is still the same with 
+$Z''_3=2(1+j\omega RC)/R(j\omega C)^2$, we get:
+\[
+  Z_3=Z'_3||Z''_3=\frac{Z'_3 Z''_3}{Z'_3+Z''_3}
+  =\frac{2R(1+j\omega RC)}{1+j\omega RC+(j\omega RC)^2}
+\]
+The frequency response function of this bridged T network (a voltage 
+divider) is:
+\begin{eqnarray}
+  H(j\omega)&=&\frac{Z_2}{Z_2+Z_3}=\frac{R+1/j\omega C}{R+1/j\omega C+2R(1+j\omega RC)/(1+j\omega RC+(j\omega RC)^2)}
+  \nonumber \\
+  &=&\frac{1/C}{1/j\omega C+2R/(1+j\omega RC+(j\omega RC)^2)}
+  =\frac{1}{1+2j\omega RC/(1+j\omega RC+(j\omega RC)^2)}
+  \nonumber \\
+  &=&\frac{1+j\omega RC+(j\omega RC)^2}{1+3j\omega RC+(j\omega RC)^2}
+  =\frac{(j\omega)^2+j\omega /RC+1/(RC)^2}{(j\omega)^2+3j\omega /RC+1/(RC)^2}
+  \nonumber
+\end{eqnarray}
+We let $\omega_n=1/RC$, and express both the numerator and the
+denominator in the canonical form as
+\[
+H(j\omega)=\frac{(j\omega)^2+\omega_n j\omega +\omega_n^2}{(j\omega)^2+3\omega_nj\omega +\omega_n^2}
+=\frac{(j\omega)^2+\Delta\omega_n j\omega+\omega_n^2}{(j\omega)^2+\Delta\omega_dj\omega +\omega_n^2}
+=\frac{\omega_n^2-\omega^2+\Delta\omega_n j\omega }{\omega_n^2-\omega^2+\Delta\omega_dj\omega}
+\]
+where 
+\[
+\Delta\omega_n=\omega_n,\;\;\;\;\;\;\;\Delta\omega_d=3\omega_n
+\]
+are the bandwidth of the 2nd-order systems of the numerator and the
+denominator, respectively. 
+\begin{itemize}
+\item If $\omega=0$, $H(j\omega)=H(0)=1$
+\item If $\omega\rightarrow \infty$, $H(j\omega)=1$
+\item If $\omega=\omega_n=1/RC$, $H(j\omega_n)=1/3$
+\end{itemize}
+We see that this is a band-stop filter.
+
+%\end{comment}
+
+
+
+\subsection*{Wien bridge}
+
+The Wien bridge is a particular type of the Wheatstone bridge of which
+two of the four arms are composed of a capacitor as well as a resistor
+in parallel and series:
+
+%\htmladdimg{../figures/WienBridge.png}
+\htmladdimg{../figures/WienBridge2.png}
+
+For this bridge to balance, the ratios of the left and right branches
+should be the same:
+\[
+\frac{R_3}{R_4}=\frac{R_2+1/j\omega C_2}{R_1||1/j\omega C_1}
+=\frac{(j\omega R_1C_1+1)(j\omega R_2C_2+1)}{j\omega R_1C_2}
+=\frac{1-\omega^2R_1R_2C_1C_2+j\omega(R_1C_1+R_2C_2)}{j\omega R_1C_2}
+\]
+For this equation to hold, the right-hand side needs to be real, i.e.,
+\[
+1-\omega^2R_1R_2C_1C_2=0,\;\;\;\;\;\mbox{i.e.,}\;\;\;\;\;
+\omega=\frac{1}{\sqrt{R_1R_2C_1C_2}}
+\]
+and the equation above becomes
+\[
+\frac{R_3}{R_4}=\frac{R_1C_1+R_2C_2}{R_1C_2}=\frac{C_1}{C_2}+\frac{R_2}{R_1}
+\]
+In particular, if $R_1=R_2=R$ and $C_1=C_2=C$, we have:
+\[
+\omega=\frac{1}{\sqrt{R_1R_2C_1C_2}}
+=\frac{1}{\sqrt{R^2C^2}}=\frac{1}{RC}
+\]
+and
+\[
+\frac{R_3}{R_4}=\frac{C_1}{C_2}+\frac{R_2}{R_1}=1+1=2,
+\;\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;R_4=2R_3
+\]
+
+
+{\bf Wien-Robinson Filter}
+
+\htmladdimg{../figures/WienRobinson2.png}
+
+\begin{itemize}
+\item
+  \[
+  \frac{V_{in}}{R_4}+\frac{V_{out}}{R_3}+\frac{V_1}{R_2}=0\;\;\;\;\;\;\;\;(1)
+  \]
+\item
+  \[
+  V_2=\frac{R+1/j\omega C}{R+1/j\omega C+R/j\omega C/(R+1/j\omega C)}V_1
+  =\frac{(j\omega\tau+1)^2}{(j\omega\tau+1)^2+j\omega\tau}V_1,
+  \]
+  where $\tau=RC$, i.e.,
+  \[
+  V_1=\left(1+\frac{j\omega\tau}{(j\omega\tau+1)^2}\right)V_2,\;\;\;\;\;\;(2)
+  \]
+\item
+  \[
+  \frac{V_1-V_2}}{R_1}+\frac{V_{out}-V_2}{2R_1}=0,
+    \;\;\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;\; V_{out}=3V_2-2V_1,\;\;\;\;\;\;(3)
+  \]
+\end{itemize}
+\[
+V_{out}=3V_2-2V_1=3V_2-2\left(1+\frac{j\omega\tau}{(j\omega\tau+1)^2}\right)V_2
+=V_2-\frac{j\omega 2\tau}{(j\omega\tau+1)^2}\;V_2
+=\frac{(j\omega\tau)^2+1}{(j\omega\tau+1)^2}\;V_2
+\]
+or
+\[
+V_2=\frac{(j\omega\tau+1)^2}{(j\omega\tau)^2+1}V_{out}
+\]
+Substituting this into (2) we get
+\[
+V_1=\left(1+\frac{j\omega\tau}{(j\omega\tau+1)^2}\right)V_2
+=\left(1+\frac{j\omega\tau}{(j\omega\tau+1)^2}\right)\frac{(j\omega\tau+1)^2}{(j\omega\tau)^2+1}V_{out}
+=\frac{(j\omega\tau)^2+3j\omega\tau+1}{(j\omega\tau)^2+1}\;V_{out}
+\]
+Substituting this into (1) we get
+\[
+\frac{V_{in}}{R_4}+\frac{V_{out}}{R_3}
++\frac{(j\omega\tau)^2+3j\omega\tau+1}{(j\omega\tau)^2+1}\;\frac{V_{out}}{R_2}=0
+\]
+We rearrange to get
+\[
+\frac{V_{in}}{R_4}=-\left(\frac{1}{R_3}
++\frac{(j\omega\tau)^2+3j\omega\tau+1}{(j\omega\tau)^2+1}\;\frac{1}{R_2}\right)V_{out}
+\]
+\[
+\frac{R_2}{R_4}=-\left(\frac{R_2}{R_3}
++\frac{(j\omega\tau)^2+3j\omega\tau+1}{(j\omega\tau)^2+1}\right)
+\frac{V_{out}}{V_{in}}
+\]
+\[
+H(j\omega)=\frac{V_{out}}{V_{in}}
+=-\frac{R_2R_3}{R_4(R_2+R_3)}\;\frac{(j\omega\tau)^2+1}{(j\omega\tau)^2+3j\omega\tau R_3/(R_2+R_3)+1}
+\]
+\[
+H(j\omega)=A\;\frac{(j\omega)^2+\omega_n^2}{(j\omega)^2+\Delta\omega/Q\;j\omega+\omega_n^2}
+=\left\{\begin{array}{ll}A&\omega=0\\0&\omega=\omega_n=1/\tau
+\\A&\omega\rightarrow\infty\end{array}\right.
+\]
+This is a band-stop filter with passband gain $A=-R_2R_3/R_4(R_2+R_3)=(R_2//R_3)/R_4$,
+stop-band $\omega_n=1/\tau$ and $Q=(R_2+R_3)/3R_3$.
+
+
+Further reading for 
+\begin{itemize}
+\item \htmladdnormallink{Oscillator circuits}{http://www.ti.com/lit/an/sloa060/sloa060.pdf}
+\item \htmladdnormallink{Active filters}{http://www.ti.com/lit/ml/sloa088/sloa088.pdf}
+\end{itemize}
+
+\begin{comment}
+\subsection{Colpitts Oscillators}
+
+An oscillator is a feedback system composed of a forward path with
+gain $G(j\omega)$ and a feedback path with gain $F(j\omega)$:
+
+\htmladdimg{../figures/OscillatorModel.png}
+
+For the system to oscillate, the feed back needs to be positive for
+the feedback signal $FY$ to positively reinforce the signal going 
+through the forward path in order to sustain the output $Y$ with
+zero input $X=0$. Specifically, the output $Y$ and the input $X$ 
+of a feedback system are related by
+\[
+Y=G(X+FY)=GX+GFY,\;\;\;\;\;\;\;\;\;\frac{Y}{X}=H=\frac{G}{1-GF},
+\;\;\;\;\;\;\;Y=HX=\frac{G}{1-GF}\,X
+\]
+where $GF$ is the open-loop gain and $H$ is the closed-loop gain.
+For this system to oscillate, i.e., for it to produce an output with
+zero input, its closed-loop gain needs to be infinite, i.e., its 
+open-loop gain $GF$ need to be real, with zero phase $\angle(GF)=0$
+and unit gain $|GF|=1$. 
+
+Oscillation is desirable if the system is used as a sinusoidal source, 
+but it is undesirable if the system is a amplifier or part of a
+control system which needs to be stable without oscillation.
+
+%(In practice, $|GF|\ge 1$ to compensate energy attenuation in the physical system.)
+
+There exist many different configurations of oscillators based on a
+single transistor. Shown below are three typical Colpitts oscillators:
+common-base (CB, left), common emitter (CE, middle), and common 
+collector (CC, right). All such circuits contain a ``tank'' LC circuit
+composed of an inductor $L$ in parallel with $C_1$ and $C_2$ in series, 
+with a resonant frequency 
+\[
+\omega_0=\frac{1}{\sqrt{LC_s}},\;\;\;\;\;\;\mbox{where}\;\;\;\;\;
+C_s=\left(\frac{1}{C_1}+\frac{1}{C_2}\right)^{-1}
+\]
+where $C_s$ is the equivalent capacitance of the series combination 
+of $C_1$ and $C_2$. All other $C$s (without a subscript) are coupling
+capacitors that have a large enough capacitance and can therefore be 
+treated as short circuit for AC signals. 
+
+%\htmladdimg{../figures/ColpittsOscillators.png}
+\htmladdimg{../figures/Colpitts3a.png}
+
+Here are the requirements for these circuits to oscillate:
+\begin{enumerate}
+\item an LC tank tuning circuit that generates sinusoidal oscillation 
+  at its resonant frequency $\omega_0=1/\sqrt{LC_s}$
+\item a positive feedback loop that sustains the oscillation.
+\end{enumerate}
+How each of these circuits works can be qualitatively understood as 
+below:
+\begin{itemize}
+\item CB with the base AC grounded: The collector voltage $V_c$ is the 
+  output, a fraction of which at the middle point between the two 
+  capacitors, ``tap point'', is fed-back to the emitter to a positive 
+  feedback loop:
+  \[
+  V_c\uparrow\Longrightarrow V_e\uparrow\Longrightarrow \V_{be}\downarrow
+  \Longrightarrow I_b\downarrow \Longrightarrow I_c\downarrow
+  \Longrightarrow V_c\uparrow
+  \]
+\item CE with the emitter AC grounded: The collector voltage $V_c$ is 
+  the output, which is fed-back through the LC tank circuit to the base. 
+  As the tap point is grounded, the sinusoidal voltage across the LC
+  tank produces opposite voltage polarities at the far ends of $C_1$ 
+  and $C_2$, i.e., $V_{C_1}=V_b$ and $V_{C_2}=V_c$ have opposite phases 
+  and thereby form a positive feedback loop:  
+  \[
+  V_c\uparrow\Longrightarrow V_b\downarrow\Longrightarrow \V_{be}\downarrow
+  \Longrightarrow I_b\downarrow \Longrightarrow I_c\downarrow
+  \Longrightarrow V_c\uparrow
+  \]
+\item CC with the collector AC grounded: This a voltage follower circuit
+  in which the emitter voltage $V_e$ is the output that follows the input
+  voltage $V_b$. The feedback from the emitter through the LC tank circuit 
+  to the base form a positive feedback loop:
+  \[
+  V_e\uparrow\Longrightarrow V_t\uparrow\Longrightarrow V_b\uparrow
+  \Longrightarrow I_b\uparrow\Longrightarrow I_e\uparrow
+  \Longrightarrow V_e\uparrow
+  \]
+  where $V_t$ is the voltage at the tap point.
+
+\end{itemize}
+
+More specifically, we consider the common-collector circuit as an example.
+To find out why the circuit oscillates and the resonant frequency, we 
+disconnect the base path of the circuit and consider the open-loop gain 
+of $H=V_o/V_i$ of the feedback loop. We further model the transistor 
+by a Thevenin voltage source $V_i$ in series with an internal $R$, as 
+shown in the figure:
+
+\htmladdimg{../figures/ColpittsModel2a.png}
+
+As the load of the Thevenin source, the tank circuit receives an input 
+$V_t$ at the tap point, and produces an output $V_o$ across the parallel
+combination of $L$ and $C_1$ in series with $C_2$. Applying KCL at the tap 
+point we get:
+\[
+\frac{V_t-V_i}{R}+\frac{V_t}{1/j\omega C_2}+\frac{V_t}{j\omega L+1/j\omega C_1}=0
+\]
+i.e.,
+\[
+V_t\left(\frac{1}{R}+j\omega C_2+\frac{j\omega C_1}{1-\omega^2LC_1}\right)
+=\frac{V_i}{R}
+\]
+Solving for $V_t$ we get
+\[
+V_t=\frac{1}{R(\frac{1}{R}+j\omega C_2+\frac{j\omega C_1}
+{1-\omega^2LC_1})}\;V_i
+=\frac{1}{1+j\omega R(C_2+C_1/(1-\omega^2LC_1)}\;V_i
+\]
+which is maximized if the frequency is such that the imaginary part of 
+the denominator is zero:
+\[
+C_2+\frac{C_1}{1-\omega_0^2LC_1}=0,\;\;\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;
+\omega_0=\frac{1}{\sqrt{LC_1C_2/(C_1+C_2)}}=\frac{1}{\sqrt{LC_s}}
+\]
+This frequency $\omega_0$ is the resonant frequency, at which the voltage 
+$V_t$ become the same as the source voltage $V_t=V_i$. Also note that the 
+impedance of the tank circuit as the load of the Thevenin source is
+\[
+Z_{tank}=Z_{C_2}||(Z_{C_1}+Z_L)=\frac{(1/j\omega C_1+j\omega L)/j\omega C_2}
+{1/j\omega C_1+1/j\omega C_2+j\omega L}
+=\frac{(1/j\omega C_1+j\omega L)/C_2}{1/C_1+1/C_2-\omega^2 L}
+=\frac{(1/j\omega C_1+j\omega L)/C_2}{1/C_s-\omega^2 L}
+\]
+At the resonant frequency, the denominator becomes zeros and $Z_{tank}=\infty$,
+i.e., there is no current drawn from the source by the tank circuit. 
+Consequently, the voltage drop across $R$ is zero and the voltage received 
+by the tank circuit is $V_t=V_i$. Now the output voltage $V_o$ can be found 
+by voltage divider:
+\[
+V_t=\frac{Z_{C_2}}{Z_{C_1}+Z_{C_2}}\;V_o=\frac{C_1}{C_1+C_2}\,V_o,
+\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;\;\;\;
+V_o=\frac{C_1+C_2}{C_1}\;V_t=\frac{C_1+C_2}{C_1}\;V_i
+\]
+The open-loop gain (from $V_i$ to $V_o$) is:
+\[
+H=\frac{V_o}{V_i}=\frac{C_1+C_2}{C_1}
+\]
+
+%\begin{comment}
+\begin{eqnarray}
+  V_o&=&\frac{j\omega L}{j\omega L+1/j\omega C}\;V_t
+  =\frac{\omega^2LC_1}{\omega^2LC_1-1}\;V_t
+  \nonumber \\
+  &=&\left(\frac{1-\omega^2LC_1}{1-\omega^2LC_1+j\omega R(C_1+C_2-\omega^2LC_1C_2)}\right)\;
+  \left(\frac{\omega^2LC_1}{\omega^2LC_1-1}\right)\;V_i
+  \nonumber \\
+  &=&\frac{-\omega^2LC_1}{1-\omega^2LC_1+j\omega R(C_1+C_2-\omega^2LC_1C_2)}\;V_i
+  \nonumber 
+\end{eqnarray}
+
+The open-loop gain (from $V_i$ to $V_o$) is:
+\[
+H=\frac{V_o}{V_i}=\frac{-\omega^2LC_1}{1-\omega^2LC_1+j\omega R(C_1+C_2-\omega^2LC_1C_2)}
+\]
+At the resonant frequency $\omega_0$, the imaginary part is zero, we have
+\[
+H=\frac{-\omega^2LC_1}{1-\omega^2LC_1}
+=\frac{\omega_0^2LC_1}{\omega_0^2LC_1-1}
+=\frac{LC_1/LC_s}{LC_1/LC_s-1}
+=\frac{C_1}{C_1-C_s}
+=\frac{C_1+C_2}{C_1}
+\]
+%\end{comment}
+
+We see that at the resonant frequency $\omega_0$, the magnitude of the open-loop
+gain is $|H|>1$ and its phase is $\angle H=0$ (zero phase, i.e., $H$ is real).
+As both conditions for oscillation are satisfied, the circuit is an oscillator
+with frequency at $\omega_0=1/\sqrt{LC_s}$.
+
+%\begin{comment}
+http://seit.unsw.adfa.edu.au/staff/sites/hrp/teaching/Electronics4/docs/PLL/colpitts.pdf
+
+http://users.ece.gatech.edu/mleach/ece3050/notes/osc/wienbr.pdf
+
+http://www.ece.msstate.edu/~winton/classes/ece3144/labs/Exp10.pdf
+
+http://www.drp.fmph.uniba.sk/ESM/twin.pdf
+%\end{comment}
+
+\end{comment}
+
+\subsection{Butterworth filters}
+
+  The transition between the pass-band and stop-band of a first order 
+  filter with cut-off frequency $\omega_c=1/\tau$ is characterized by the 
+  the slope of 20 dB per decade of frequency change. To achieve better 
+  selectivity, we can cascade a set of $n$ such first order filters to
+  form an nth order filter with a slope of 20n dB per decade.
+
+  \htmladdimg{../figures/Cascade1stOrder.png}
+
+  The FRF of a first-order low-pass filter of unit gain is:  
+  \[
+  H(j\omega)=\frac{1}{j\omega\tau+1}
+  =\frac{1}{j\omega/\omega_c+1}=\frac{\omega_c}{j\omega+\omega_c}
+  \]
+  The FRF of $n$ such filters in series is (assuming they are well
+  buffered with no loading effect):
+  \[
+  H(j\omega)=\left(\frac{\omega_c}{\omega_c+j\omega} \right)^n
+  \]
+  The cut-off frequency of this nth order filter $\omega_{cn}$ can be
+  found by solving the following equation
+  \[
+  \left|\frac{\omega_c}{\omega_c+j\omega}\right|^n
+  =\left|\frac{\omega_c}{\sqrt{\omega_c^2+\omega^2}}\right|^n
+  =\frac{1}{\sqrt{2}}=2^{-1/2}
+  \]
+  to get
+  \[
+  \omega=\omega_{cn}=\omega_c\sqrt{2^{1/n}-1}
+  \]
+
+  {\bf Example:} Design an 4th order LP filter with 
+  $\omega_{c4}=2\pi 1000=6.2832\times 10^3$. The cut-off frequency of the 
+  first-order LP filter can be found to be
+  \[
+  \omega_c=\frac{\omega_{c4}}{\sqrt{2^{1/4}-1}}
+  =\frac{6.2832\times 10^3}{0.435}=1.445\times 10^4
+  \]
+  The time constant of the first-order filter is 
+  $\tau=RC=1/\omega_c=6.92\times 10^{-5}$. If $C=0.1\;\mu F=10^{-7}\;F$, 
+  then
+  \[
+  R=\frac{\omega_c}{C}=\frac{6.92\times 10^{-5}}{10^{-7}}
+  =6.92\times 10^2=692\;\Omega
+  \]
+
+  The {\em Butterworth filters} have the property that the passing
+  band is flat. The magnitude of the FRF of an nth order low-pass 
+  Butterworth filter with cut-off frequency $\omega_c$ is
+  \[
+  \left| H_{lp}(j\omega)\right|=\frac{1}{\sqrt{1+(\omega/\omega_c)^{2n}}}
+  =\left\{\begin{array}{ll}1 & \omega=0\\1/\sqrt{2}&\omega=\omega_c\\
+  0 & \omega=\infty\end{array}\right.
+  \]
+  where $\omega_c$ is the cut-off frequency at which $|H_{lp}(j\omega_c)|
+  =1/\sqrt{2}$.
+  The transition between the pass-band and stop-band is controlled by the
+  order $n$. In general, higher order corresponds to more rapid transition. 
+  Specially, when $n=0$, $n=1$, and $n=\infty$, we have
+  \begin{itemize}
+  \item $n=0$, $|H_{lp}(j\omega)|=1/\sqrt{2}$ is an all-pass filter.
+  \item $n=1$, the Butterworth filter is the regular first-order filter:
+    \[
+    |H_{lp}(j\omega)|=\frac{1}{\sqrt{1+(\omega/\omega_c)^2}}
+    =\frac{\omega_c}{\sqrt{\omega^2+\omega_c^2}}
+    =\left|\frac{\omega_c}{j\omega+\omega_c}\right|
+    \]
+  \item $n=\infty$, the Butterworth filter becomes an ideal low-pass
+    filter:
+    \[
+    |H_{lp}(j\omega)|=\frac{1}{\sqrt{1+(\omega/\omega_c)^\infty}}  
+    =\left\{\begin{array}{ll}1&\omega<\omega_c\\0&\omega>\omega_c\end{array}
+    \right.
+    \]
+  \end{itemize}
+  
+  The magnitude of the FRF of an nth order high-pass Butterworth  filter 
+  with cut-off frequency $\omega_c$ is
+  \[
+  \left| H_{hp}(j\omega)\right|=\frac{1}{\sqrt{1+(\omega_c/\omega)^{2n}}}
+  =\frac{(\omega/\omega_c)^n}{\sqrt{1+(\omega/\omega_c)^{2n}}}
+  =\left\{\begin{array}{ll}0 & \omega=1\\1/\sqrt{2}&\omega=\omega_c\\
+  1 & \omega=\infty\end{array}\right.
+  \]
+
+  \htmladdimg{../figures/ButterworthFilters1.png}
+
+  Now we consider the implementation of a Butterworth filter. For 
+  simplicity, in the following we assume the frequency is normalized 
+  by the cut-off frequency $\omega_c$, i.e., $\omega=\omega/\omega_c$, 
+  or $\omega_c=1$. Consider the low-pass case:
+  \[
+  |H(j\omega)|^2=H(j\omega)H(-j\omega)
+  =\frac{1}{1+(\omega/\omega_c)^{2n}}
+  =\frac{1}{1+\omega^{2n}}=\frac{1}{1+(\omega^2)^n}
+  \]
+  We need to get its FRF $H(j\omega)$ from its magnitude $|H(j\omega)|$.
+  To do so, we first consider the transfer function (TF) $H(s)$ in the 
+  s-domain corresponding to the FRF, which is the same as $H(j\omega)$ 
+  when $s=j\omega$, i.e., $s^2=(j\omega)^2=-\omega^2$. Now the equation 
+  above can be written as
+  \[
+  |H(j\omega)|^2=H(j\omega)\,H(-j\omega)
+  =\frac{1}{1+(\omega^2)^n}=\frac{1}{1+(-s^2)^n}
+  =\frac{1}{1+(-1)^ns^{2n}}=|H(s)|^2=H(s) H(-s)
+  \]
+  We further find the roots of the denominator, the poles of both $H(s)$
+  and $H(-s)$, and separate them so that those on the left s-plane are 
+  the poles of $H(s)$ (stable and causal), while those on the right 
+  s-plane belong to $H(-s)$ (stable and anti-causal).
+
+  The roots of the denominator can be found by solving the equation
+  \[
+  1+(-1)^ns^{2n}=0,\;\;\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;
+  \left\{\begin{array}{ll}
+  1+s^{2n}=0 & \mbox{$n$ is even}\\
+  1-s^{2n}=0 & \mbox{$n$ is odd}\end{array}\right.
+  \]
+  Solving these we get the $2n$ solutions on the unit circle in
+  either of the two different forms depending on whether $n$ is even 
+  or odd:
+  \[
+  \left\{\begin{array}{ll}
+  s=(-1)^{1/2n}=(e^{j(2k+1)\pi})^{1/2n}=e^{j(2k+1)\pi/2n} & \mbox{$n$ is even}\\
+  s=1^{1/2n}=(e^{j2k\pi})^{1/2n}=e^{jk\pi/n} & \mbox{$n$ is odd}
+  \end{array}\right.\;\;\;\;\;\;(k=0,\cdots,2n-1)
+  \]
+
+  \htmladdimg{../figures/ButterworthInSPlane.png}
+
+  \begin{itemize}
+  \item If $n$ is even, 
+    \[
+    s_k=e^{j(2k+1)\pi/2n},\;\;\;\;\;(k=0,\cdots,2n-1)
+    \]
+    These $2n$ roots form $n$ complex conjugate pairs around the unit 
+    circle of the s-plane. Corresponding to each of the $n$ roots 
+    $s_k=e^{j(2 k+1)\pi/2n}$ ($k=0,\cdots,n-1$), there is another root
+    $s_{2n-1-k}$ that is its complex conjugate:
+    \[
+    s_{2n-1-k}&=&e^{j(2(2n-1-k)+1)\pi/2n}=e^{j\pi(4n-2k-1)/2n}
+    =e^{j2\pi} \;e^{-j(2k+1)\pi/2n} =e^{-j(2 k+1)\pi/2n}=s_k^*
+    \]
+    Also, for $s_k=e^{j(2k+1)\pi/2n}$ to be a pole of $H(s)$, it needs to be on 
+    the left s-plane, i.e.,
+    \[
+    \frac{(2k+1)\pi}{2n}>\frac{\pi}{2},\;\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;\;
+    k>\frac{n-1}{2}
+    \]
+    Now $H(s)$ can be found in terms of its $n$ poles on the left s-plane:
+    \begin{eqnarray}
+    H(s)&=&\frac{1}{\prod_{k=\left\lceil (n-1)/2 \right\rceil}^{n-1} (s-s_k)(s-s_{2n-1-k})}
+    =\frac{1}{\prod_{k=\left\lceil (n-1)/2 \right\rceil}^{n-1}(s-s_k)(s-s_k^*)}
+    \nonumber \\
+    &=&\frac{1}{\prod_{k=\left\lceil (n-1)/2 \right\rceil}^{n-1}(s^2-(s_k+s_k^*)s+s_ks_k^*)}
+    =\frac{1}{\prod_{k=\left\lceil (n-1)/2 \right\rceil}^{n-1}(s^2-2\cos((2 k+1)\pi/2n)+1)}
+    \nonumber 
+    \end{eqnarray}
+    where $\left\lceil x\right\rceil$ is the ceiling of $x$, and we have 
+    used the fact that    
+    \[
+    s_k+s_k^*=e^{j(2 k+1)\pi/2n}+e^{-j(2 k+1)\pi/2n} =2\cos((2 k+1)\pi/2n),
+    \;\;\;\;\;\;
+    s_k s_k^*=1
+    \]
+
+  \item If $n$ is odd, 
+    \[
+    s_k=e^{j2k\pi/2n}=e^{jk\pi/n},\;\;\;\;\;(k=0,\cdots,2n-1)
+    \]
+    These $2n$ roots contain $s_0=e^{j0}=1$ and $s_n=e^{j\pi}=-1$, as well as
+    $n-1$ complex conjugate pairs. Corresponding to each root $s_k=e^{jk\pi/n}$ 
+    ($k=1,\cdots,n-1$), there is another root $s_{2n-k}$ that is its complex 
+    conjugate:
+    \[
+    s_{2n-k}=e^{j(2n-k)\pi/n}=e^{-jk\pi/n}=s_k^*
+    \]
+    For $s_k$ to be a pole of $H(s)$, it needs to be on the left s-plane, i.e.,
+    \[
+    \frac{k\pi}{n}>\frac{\pi}{2},\;\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;\;k>\frac{n}{2}
+    \]
+    Now $H(s)$ can be found in terms of its $n$ poles on the left s-plane:
+    \begin{eqnarray}
+    H(s)&=&\frac{1}{(s-s_n)\prod_{i=\left\lceil n/2 \right\rceil}^{n-1}(s-s_k)(s-s_{2n-k})}
+    =\frac{1}{(s+1)\prod_{i=\left\lceil n/2 \right\rceil}^{n-1}(s-s_k)(s-s_k^*)}
+    \nonumber \\
+    &=&\frac{1}{(s+1)\prod_{i=\left\lceil n/2 \right\rceil}^{n-1}(s^2-(s_k+s_k^*)s+s_k s_k^*)}
+    =\frac{1}{(s+1)\prod_{i=\left\lceil n/2 \right\rceil}^{n-1}(s^2-2\cos(k\pi/n)+1)}
+    \nonumber
+    \end{eqnarray}
+
+  \end{itemize}
+
+  Specifically, here we find the transfer function $H(s)$ of the nth order
+  Butterworth filter for $n=2,\cdots,6$:
+  \begin{itemize}
+  \item $n=2$, $1+s^4=0$, $s^4=-1=e^{j(2k+1)\pi}$, the four roots are
+    $s_k=e^{j(2k+1)\pi)/4}$ ($k=0,\cdots,3$):
+    \[
+    s_0=e^{j\pi/4}=\frac{1+j}{\sqrt{2}},\;\;\;\;
+    s_1=e^{j3\pi/4}=\frac{-1+j}{\sqrt{2}},\;\;\;\;
+    s_2=e^{j5\pi/4}=\frac{-1-j}{\sqrt{2}},\;\;\;\;
+    s_3=e^{j7\pi/4}=\frac{1-j}{\sqrt{2}}
+    \]
+    out of which $s_1$ and $s_2=s_1^*$ on the left s-plane are the roots of 
+    $H(s)$:
+    \begin{eqnarray}
+    H(s)&=&\frac{1}{(s-s_1)(s-s_2)}=\frac{1}{(s-(-1+j)/\sqrt{2})(s-(-1-j)/\sqrt{2})}
+    \nonumber \\
+    &=&\frac{1}{s^2+\sqrt{2}s+1}
+    \nonumber
+    \end{eqnarray}
+    Note that the coefficient of the first order term is $-2\cos(3\pi/2)=\sqrt{2}$.
+  \item $n=3$, $1-s^6=0$, $s^6=1=e^{j2k\pi}$, the six roots are
+    $s_k=e^{j k2\pi/6}=e^{j k\pi/3}$ ($k=0,\cdots,5$)
+    \[
+    s_0=e^{j0}=1,\;\;\;\;
+    s_1=e^{j\pi/3}=\frac{1+j\sqrt{3}}{2},\;\;\;\;s_2=e^{j2\pi/3}=\frac{-1+j\sqrt{3}}{2}
+    \]
+    \[
+    s_3=e^{j3\pi/3}=e^{j\pi}=-1,\;\;\;\;
+    s_4=e^{j4\pi/3}=\frac{-1-j\sqrt{3}}{2},\;\;\;\;s_5=e^{j5\pi/3}=\frac{1-j\sqrt{3}}{2}
+    \]
+    out of which $s_2$, $s_3=-1$, and $s_4=s_2^*$ on the left s-plane 
+    are the roots of $H(s)$:
+    \begin{eqnarray}
+    H(s)&=&\frac{1}{(s-s_2)(s-s_3)(s-s_4)}
+    =\frac{1}{(s+1)(s-(-1+j\sqrt{3})/2)(s-(-1-j\sqrt{3})/2)}
+    \nonumber \\
+    &=&\frac{1}{(s+1)(s^2+s+1)}
+    \nonumber
+    \end{eqnarray}
+    Note that the coefficient of the first order term is $-2\cos(2\pi/3)=1$.
+  \item $n=4$, $1+s^8=0$, $s^8=-1=e^{j(2k+1)\pi}$, the eight roots are
+    $s_k=e^{j(2k+1)pi/8}$ ($k=0,\cdots,7$).
+    Evaluating $-2\cos((2k+1)\pi/2n)$ for $k=2$ and $k=3$, we get the
+    coefficients of the two first order terms
+    $-2\cos(5\pi/8)=0.7654$ and $-2\cos(7\pi/8)=1.8478$.
+    \[
+    H(s)=\frac{1}{(s^2+0.765 s+1)(s^2+1.848 s+1)}
+    \]
+  \item $n=5$, $1-s^{10}=0$, $s^{10}=1=e^{j2k\pi}$, the 10 roots are
+    \[
+    s_k=e^{j(2k\pi)/10}=e^{j(k\pi)/5},\;\;\;\;\;\;(k=0,\cdots,9)
+    \]
+    Evaluating $-2\cos(k\pi/n)$ for $k=2$ and $k=3$, we get the
+    coefficients of the two first order terms
+    $-2\cos(2\pi/5)=0.618$ and $-2\cos(3\pi/5)=1.618$, and we get
+    \[
+    H(s)=\frac{1}{(s+1)(s^2+0.618 s+1)(s^2+1.618 s+1)}
+    \]
+  \item $n=6$, $1+s^{12}=0$, $s^{12}=-1=e^{j(2k+1)\pi}$, the 12 roots are
+    \[
+    s_k=e^{j(2k+1)\pi)/12},\;\;\;\;\;\;(k=0,\cdots,11)
+    \]
+    Evaluating $-2\cos((2k+1)\pi/2n)$ for $k=3$, $k=4$, and $k=5$,
+    we get the coefficients of the three first order terms
+    $-2\cos(7\pi/12)=0.5176$, $-2\cos(9\pi/12)=1.4142$, and
+    $-2\cos(9\pi/12)=1.319$.
+    \[
+    H(s)=\frac{1}{(s^2+0.5176 s+1)(s^2+1.4142 s+1)(s^2+1.9319 s+1)}
+    \]
+  \end{itemize}
+  In summary, we see that a Butterworth filter can be implemented as
+  a cascade of second order systems in the form of $1/(s^2+a\,s+1)$ 
+  if $n$ is even, and an additional first order system in the form of
+  $1/(s+1)$ if $n$ is odd. The block diagrams below are for the 5th 
+  and 6th order Butterworth filters:
+
+  \htmladdimg{../figures/ButterworthDiagram.png}
+
+  The first order filter in the cascade of the Butterworth filter 
+  can be realized by the first order op-amp low-pass circuit shown
+  above with
+  \[
+  H(s)=\frac{1/\tau}{s+1/\tau}=\frac{\omega_c}{s+\omega_c}=\frac{1}{s+1}
+  \]
+  where $\omega_c=1/\tau=1/RC$. If we let $R=1$, we get $C=1/\omega_c=1$. 
+
+  The second order systems in the cascade can be implemented as a 
+  Sallen-Key low-pass filter with 
+  \[
+  H(s)=\frac{1/R_1C_1R_2C_2}{s^2+s(R_1+R_2)/R_1R_2C_1+1/R_1C_1R_2C_2}
+  =\frac{1}{s^2+\Delta\omega s+\omega_n^2}=\frac{1}{s^2+a s+1}
+  \]
+  where $\omega_n^2=1/R_1R_2C_1C_2$. If we let $R_1=R_2=1$ for simplicity, 
+  we get
+  \[
+  2/C_1=a,\;\;\;\;\;1/C_1C_2=\omega_n^2=1
+  \]
+  Solving these we get
+  \[
+  C_1=2/a,\;\;\;\;\; C_2=1/C_1=a/2
+  \]
+
+  A High-pass Butterworth filter can be similarly implemented with the only
+  difference that all first and second order systems in the cascade are
+  high-pass filters
+  \[
+  H(s)=\frac{s}{s+\omega_c}=\frac{s}{s+1},\;\;\;\;\;\;\;
+  H(s)=\frac{s^2}{s^2+\Delta\omega s+\omega_c^2}=\frac{s^2}{s^2+a s+1}
+  \]
+  so that the transfer function of the cascade is high-pass filter:
+  \[
+  H(s)=\left\{\begin{array}{cc}s^n/(1+s^{2n}) & \mbox{$n$ is even}\\
+  s^n/(1-s^{2n}) & \mbox{$n$ is odd}\end{array}\right.
+  \]
+
+  To convert the results obtained above for normalized cut-off frequency 
+  $\omega_n=1$ to unnormalized cut-off frequency $\omega_n\ne 1$, all we 
+  need to do is to scale all capacitances $C$ to $C'=C/\omega_c$. The 
+  capacitor in the first order filter becomes $C'=C/\omega_c$ so that
+  $1/RC'=\omega_c/C'=\omega_c$; while the two capacitors in the second order
+  filter become $C_1'=C_1/\omega_n$ and $C_2'=C_2/\omega_n$ so that
+  $1/C_1'C_2'=\omega_n^2/C_1C_2=\omega_n^2$.
+
+\subsection{Higher order systems}
+
+Higher than first order systems can be built with multiple integrators, 
+as shown here for a third order system:
+
+\htmladdimg{../figures/opam7.gif}
+
+From the diagram, we can get
+\[
+\left\{ \begin{array}{l}
+	Y_3(s)=Y_2(s)/s \Longrightarrow Y_2(s)=Y_3(s)s	\\
+	Y_2(s)=Y_1(s)/s \Longrightarrow Y_1(s)=Y_2(s)s=Y_3(s)s^2	\\
+	Y_1(s)=Y_0(s)/s \Longrightarrow Y_0(s)=Y_1(s)s=Y_3(s)s^3	
+\end{array} \right.
+\]
+But we also have
+\[	Y_0(s)=X(s)-(k_1Y_1(s)+k_2Y_2(s)+k_3Y_3(s))	\]
+i.e., 
+\[	X(s)=Y_0(s)+k_1Y_1(s)+k_2Y_2(s)+k_3Y_3(s)=(s^3+k_1s^2+k_2s+k_3) Y_3(s)	\]
+we get the transfer function
+\[
+	H(s)=\frac{Y_3(s)}{X(s)}=\frac{1}{s^3+k_1s^2+k_2s+k_3}
+\]
+
+
+{\bf Second order system by 2 integrators}
+
+\htmladdimg{../figures/opam8.gif}
+
+From the diagram, we can get
+\[
+\left\{ \begin{array}{ll}
+	Y_2(s)=-c_2Y_1(s)/s  \Longrightarrow  Y_1(s)=-sY_2(s)/c_2 \\
+	Y_1(s)=-c_1Y_0(s)/s  \Longrightarrow Y_0(s)=-sY_1(s)/c_1=s^2Y_2(s)/c_1c_2 \\
+	Y_0(s)=k_0 X(s)+k_1Y_1(s)+k_2Y_2(s) 
+	\end{array} \right.
+\]
+substituting the first two equations into the last one, we get
+\[	\frac{s^2}{c_1c_2} Y_2(s)=k_0X(s)+k_1(-\frac{s}{c_2})Y_2(s)+k_2Y_2(s) \]
+from which we obtain the transfer function as
+\[
+H(s)=\frac{Y_2(s)}{X(s)}=\frac{k_o}{\frac{s^2}{c_1c_2}+\frac{s}{c_2}s-k_2}
+	=\frac{k_oc_1c_2}{s^2+k_1c_1s-c_1c_2k_2}
+\]
+which is a second order system. In particular, if $c_1=c_2=c$, we have
+\[
+	H(s)=k_0\frac{c^2}{s^2+c k_1s-k_2c^2}
+\]
+Comparing this with the canonical 2nd order system transfer function
+\[
+	H(s)=\frac{\omega_n^2}{s^2+2\zeta \omega_n s+\omega_n^2}
+\]
+we see that we can let $c=\omega_n$ and $k_1=2\zeta$. Moreover, $k_2<0$, 
+i.e., the feedback from the output should be negative. $k_0$ is a constant
+scalar which can take any value.
+	
+%\htmladdimg{../figure/opam9.gif}
+
+
+\end{itemize}
+
+\end{document}

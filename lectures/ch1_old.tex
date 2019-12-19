@@ -1,0 +1,1721 @@
+\documentstyle[12pt]{article}
+\usepackage{html}
+\begin{document}
+
+\section*{Chapter 1: Basic Quantities and Laws}
+
+\subsection*{Basic Quantities}
+
+\begin{itemize}
+
+\item {\bf Charge:} The charge of $6.24 \times 10^{18}$ electrons is a 
+  {\em Coulomb}, i.e., the charge each electron carries is 
+  $1/ (6.24 \times 10^{18})=1.602 \times 10^{-19}$ Coulomb. Charge is 
+  conservative (can be neither created nor destroyed).
+
+\item {\bf Force $f$:} Force can be defined by Newton's second law: 
+  \[ 
+  f=ma,\;\;\;\;\;\;\;[Newton]=\frac{[kilogram][meter]}{[second]^2}	
+  \]
+  The force of 1 Newton will cause a mass of 1 kilogram to accelerate
+  at 1 meter per second per second. 
+
+  \begin{itemize}
+  \item {\bf Gravitational force:}
+    \[	
+    f=G\frac{m_1m_2}{r^2}	
+    \]
+    where $G=6.67384\times 10^{-11}$ $[Newton\,(meter/kilogram)^2]$ is
+    the gravitational constant.
+    In particular, on surface of Earth, the ``weight'' of a mass $m$ is
+    \[	
+    f=G\frac{Mm}{r^2}=gm	
+    \]
+    where $g=GM/r^2=9.8\;\mbox{meter}/\mbox{second}^2$ is the gravitational 
+    acceleration that measures the intensity of Earth's gravitational field,
+    and $f$ is the force this field asserts on mass $m$.
+  \item{\bf Electric force:}
+    \[	
+    f=k\frac{q_1q_2}{r^2}=Eq_2	
+    \]
+    where $k=8.98755\times 10^9$ $[Newton\,(meter/Coulumb)^2]$ is the
+    Coulomb's constant, $E=kq_1/r^2$ is the intensity of the electric 
+    field caused by charge $q_1$, and $f$ is the force this field asserts
+    on charge $q_2$.
+  \end{itemize}
+
+\item {\bf Potential Energy:} 
+
+  \begin{itemize}
+  \item {\bf Gravitational Potential Energy:} In the gravitational field 
+    of $g$, if a mass $m$ (with weight $f=mg$) is raised up from height 
+    $h_1$ to $h_2$, it receives a potential energy
+    \[
+    w=fl=mg(h_2-h_1),\;\;\;\;\;\;g=\frac{w}{m(h_2-h_1)},\;\;\;\;
+    \frac{[Joule]}{[kilogram][meter]}=\frac{[Newton]}{[kilogram]}
+    =\frac{[meter]}{[s]^2}
+    \]
+
+  \item {\bf Electric Potential Energy:} In an electric field of $E$, if 
+    a charge $q$ is moved along the direction of the field from point $l_1$
+    to point $l_2$, it receives a potential energy 
+    \[
+    w=fl=qE(l_2-l_1),\;\;\;\;\;\;E=\frac{w}{q(l_2-l_1)},\;\;\;\;
+    \frac{[Joule]}{[Coulomb][meter]}=\frac{[Newton]}{[Coulomb]}
+    \]
+  \end{itmeize}
+
+\item {\bf Current:} The rate of flow of positive charge 
+  \[ 
+  i=\frac{dq}{dt},\;\;\;\;\; q=\int i \; dt,	\;\;\;\;\;
+  [\mbox{Ampere}]=\frac{[Coulomb]}{[second]}	
+  \]
+  which is one of the
+  \htmladdnormallink{seven base units}{http://en.wikipedia.org/wiki/SI_base_unit}
+  in the \htmladdnormallink{International System of Units (IS)}{http://en.wikipedia.org/wiki/International_System_of_Units}.
+
+  The current is the same through out an electricity conducting component,
+  it is a {\em through variable}.
+
+  Current density $j=\lim_{A\rightarrow 0} i(A)/A$, 
+  \[
+  q=\int i(t) \,dt =\int {\bf j} \cdot d{\bf A}\; dt
+  \]
+
+\item {\bf Voltage:} The potential energy per unit charge is measured
+  by volt:
+  \[ 
+  v=\frac{w}{q}=\frac{Eql}{q}=El,\;\;\;\;[Volt]=\frac{[Joule]}{[Coulomb]} 
+  \]
+  The voltage is the difference between two potential energy levels $v_1$
+  and $v_2$ per unit charge in an electric field. A unit charge of $q=1$
+  Coulomb moved from one electric potential $v_1=El_1$ to another $v_2=El_2$
+  gains a potential energy
+  \[
+  v=v_2-v_1=E(l_2-l_1)=El
+  \]
+  where $l=l_2-l_1$. The electric field can therefore also defined as:
+  \[
+  E=\frac{v}{l}=\frac{qv}{ql}=\frac{w}{ql}=\frac{fl}{ql}=\frac{f}{q}
+  \]
+  If a unit charge of $q=1$ Coulomb is moved through an electric field 
+  $E(l_2-l_2)$ of 1 volt, it receives or delivers 1 Joule of energy.
+
+  Voltage $v=w/q$ is energy per charge, while electric field $E=f/q$ is 
+  force per charge.
+
+  The voltage is measured as the difference across two points in an 
+  electric field or circuit (or a point with respect to a reference 
+  point called {\em ground}), i.e., it is an {\em across variable}.
+
+\item {\bf Power and Energy:}
+
+  Power $p$ is the rate of energy transformation. The transformation 
+  of 1 Joule of energy in 1 second represents a power of 1 Watt:
+  \[	
+  p=\frac{dw}{dt}=\frac{dw}{dq} \; \frac{dq}{dt}=v\,i,
+  \;\;\;\;\;\;\;[Watt]=\frac{[Joule]}{[second]}	
+  =\frac{[Joule]}{[Coulomb]}\frac{[Coulomb]}{[second]}
+  =[Volt][Ampere]
+  \]
+  We also have:
+  \[	
+  w=\int p\;dt=\int vi\;dt,
+  \;\;\;\;[Joule]=[Watt][second]=[Volt][Ampere][second]
+  \]
+  Another unit for power is {\em horse power}: 
+  $1 \; \mbox{hp}=746 \; \mbox{Watts} $
+  
+  Energy can also be measured by {\em kilowatt-hours (kWh)} 
+  $ 1000 \times 3600=3.6 \times 10^6 $ Joules.
+
+  \begin{itemize}
+  \item {\bf Electrical potential energy:}
+    
+    The energy needed to move a charge $q$ from point A with  potential 
+    $v_1$ to point B with potential $v_2$ is:
+    \[
+    w=qv=q(v_2-v_1)=qE(l_2-l_1)
+    \]
+    where the voltage $v=v_1-v_2=E(l_2-l_1)$ is the potential difference
+    between the two points.
+  
+    An electric field $E=(v_2-v_1)/l$ is the electric potential difference
+    per unit distance.
+
+  \item {\bf Gravitational potential energy:}
+
+    The energy needed to move a mass $m$ from height $h_1$ with 
+    potential $gh_1$ to height $h_2$ with potential $gh_2$ is 
+    \[ 
+    w=fl=mg(h_2-h_1)
+    \]
+    where $gl=g(h_2-h_1)=gh_2-gh_1$ is the potential difference between the 
+    two heights.
+    The Gravitational field $g=(gh_2-gh_1)/l$ is the gravitational potential
+    difference per unit distance.
+
+  \end{itemize}
+
+  \htmladdimg{../figures/basicquantities.gif}
+
+  \begin{itemize}
+  \item Electric force per unit charge is electric field $E=f/q$;
+    Energy per unit charge is voltage $v=w/q=Eql/q=El$ is voltage.
+  \item Gravitational force per unit mass is gravitational field $g=f/m$;
+    Energy per unit mass is $w/m=mgh/m=gh$. Although this quantity is not
+    explicitly defined, it is analogous equivalent to voltage in electric
+    field.
+  \end{itemize}
+
+  \begin{tabular}{c||c|c}\hline
+    Force & $f=GMm/r^2=gm$ $(g=GM/r^2)$ & $f=kQq/r^2=Eq$ $(E=kQ/r^2)$ \\
+    Field intensity & $g=(gh_1-gh_2)/L=f/m$ & $E=(v_2-v_1)/L=f/q$ \\
+    Potential difference & $gh_2-gh_1$ & $v_2-v_1$ \\
+    Potential energy & $w=mg(h_2-h_1)=mgL$ & $w=q(v_2-v_1)$ \\
+  \end{tabular}
+
+\item {\bf Magnetic Flux:} 
+
+  The intensity of magnetic effect (lines per unit area in a magnetic
+  field or flux) is measured by magnetic flux density ${\bf B}$ in Tesla. 
+  The Earth's magnetic field is about 25 to 65 micro Tesla, the MRI machine 
+  is either 1.5 or 3 Tesla.
+
+  The {\em magnetic flux} $\Phi$ through an area ${\bf A}$ (in the normal
+  direction of the area) is
+  \[
+  \Phi=\int {\bf B} \cdot d{\bf A}=|B|\;|A| \cos\alpha,\;\;\;\;
+            [Weber]=[Tesla] [meter]^2	
+  \]   
+  where $\alpha$ is the angle between the two directions. 
+	
+  When ${\bf B}$ and ${\bf A}$ are in the same direction ($\alpha=0$), 
+  and if ${\bf B}$ is 1 Tesla and ${\bf A}$ is 1 square meter, then the
+  flux $\Phi$ is 1 {\em Weber}.
+
+\item {\bf Electric Magnetic Interaction:}
+
+  In a magnetic field ${\bf B}$, a force ${\bf f}$ is exerted on a charge $q$ 
+  moving with velocity ${\bf u}$:
+  \[
+  {\bf f}=q{\bf u} \times {\bf B},\;\;\;\;\;
+      [Newton]=[Coulomb]\frac{[meter]}{[second]} [Tesla]	
+  \]
+  where the force vector ${\bf f}$ is the cross product of velocity vector 
+  ${\bf u}$ and magnetic flux vector ${\bf B}$ (right-hand rule).
+
+  A force of 1 Newton is experienced by a charge of 1 Coulomb moving with a 
+  velocity of 1 meter per second normal to a magnetic flux density of 1 Tesla.
+
+  \htmladdimg{../figures/magneticforce.gif}
+
+  The \htmladdnormallink{Lorentz force}{http://en.wikipedia.org/wiki/Lorentz_force_law}
+  on a charge $q$ in electromagnetic field is 
+  \[
+  {\bf f}=q({\bf E}+{\bf u}\times {\bf B}) 
+  \]
+
+\end{itemize}
+
+
+\subsection*{Resistor, Capacitor, and Inductor}
+
+In the following, we adopt the convention that a constant or 
+{\em direct current (DC)} or voltage is represented by an upper-case letter 
+$I$ or $V$, while a time-varying or {\em alternating current (AC)} current 
+or voltage is represented by a lower-case letter $i(t)$ or $v(t)$, sometimes 
+simply $i$ and $v$. 
+
+Each of the three basic components resistor R, capacitor C, and inductor
+L can be described in terms of the relationship between the voltage 
+across and the current through the component:
+
+\begin{itemize}
+\item {\bf Resistor}
+
+  The voltage across and the current through a resistor are related 
+  by Ohm's law:
+  \[
+  R=\frac{V}{I}=\frac{v}{i},\;\;\;\;\;\;\;[Ohm]=\frac{[Volt]}{[Ampere]},
+  \;\;\;\;\;\;\;
+  \Omega=\frac{V}{A}
+  \]
+  Here $R$ is the {\em resistance} of the conductor measured by Ohm 
+  $\Omega$
+  (\htmladdnormallink{George Ohm (1789-1854)}{http://www-gap.dcs.st-and.ac.uk/~history/Mathematicians/Ohm.html}). 
+
+  The reciprocal of the resistance is the {\em conductance}:
+  \[ 
+  G=\frac{1}{R}=\frac{I}{V}=\frac{i}{v},\;\;\;\;\;\;\;
+  [Siemens]=\frac{1}{[Ohm]}=\frac{[Ampere]}{[Volt]},
+  \;\;\;\;\;\;S=\frac{1}{\Omega}=\frac{A}{V}
+  \]
+  Conductance is measured by $[Siemens]=1/[Ohm]$ or $S=1/\Omega$
+  (\htmladdnormallink{Werner von Siemens (1816-1892)}{https://en.wikipedia.org/wiki/Werner_von_Siemens})
+
+
+%{http://www.britannica.com/eb/article?eu=69422&tocid=0&query=werner%20bischof}
+
+\item {\bf Capacitor}
+
+  A capacitor is composed of a pair of conductor plates separated by some 
+  insulation material. The same amount of charge $Q$ (of opposite polarity) 
+  is stored on the two plates. The voltage $V$ between the two plates is 
+  proportional to the charge $Q$, but inversely proportional to the 
+  {\em capacitance} $C$ of the capacitor:
+  \[
+  V=\frac{Q}{C},\;\;\;\;\;\;\;Q=VC,\;\;\;\;\;\;\;
+  C=\frac{Q}{V}=\frac{\int i(t)\,dt}{V}
+  \]
+  We see that capacitance $C$ measures the capacity of capacitor to store 
+  charge given a DC voltage, which is determined by the parameters of the
+  capacitor:
+  \[
+  C=\frac{\epsilon_0\epsilon_r A}{d}
+  \]
+  where $A$ is the overlapping area of the plates and $d$ is the distance 
+  between them, while $\epsilon_0=8.854\times 10^{-12} F/m$ is the electric
+  constant and $\epsilon_r$ is the 
+  \htmladdnormallink{\em relative static permittivity (dielectric constant)}{https://en.wikipedia.org/wiki/Permittivity}
+  of the medium between the plates. The permittivity of vacuum is defined to be 1. 
+  When the gap between the two plates is filled with dielectric medium, its 
+  permittivity is increased (the effective voltage $V$ across the plates
+  is decreased) and the capacitance $C=Q/V$ is increased. 
+
+  Comparing $i(t)=C\dot{v}(t)$ with $i(t)=G\;v(t)$, we see that the 
+  capacitance $C$ is a conductive variable.
+
+  $C$ is measured in {\em Farads (F)} 
+  (\htmladdnormallink{Michael Faraday (1791-1867)}{http://www-gap.dcs.st-and.ac.uk/~history/Mathematicians/Faraday.html}):
+  \[ 
+    [Farad]=\frac{[Ampere][second]}{[Volt]} =\frac{[Coulomb]}{[Volt]},
+    \;\;\;\;\;\;\;
+    F=\frac{A\;s}{V}=\frac{C}{V}
+  \]
+  Other units also used for capacitance include $\mu F=10^{-6} F$, 
+  $nF=10^{-9}F$, and $pF=10^{-12}F$.
+
+  \htmladdimg{../figures/capacitor.gif}
+   
+  \htmladdimg{../figures/capacitoranalogy1.gif}
+  
+  This relationship can be understood by considering the water tank
+  analogy of the capacitor. The capacity $C_1$ (analogous to capacitance
+  of a capacitor) of the tank on the left is smaller than that of $C_2$
+  on the right, for the same amount of water $Q$ (analogous to charge), 
+  the water surface $h_1$ is higher than that of $h_2$, indicating the 
+  surface height $h_1$ (analogous to voltage $V$) is proportional to 
+  water volume $Q$ but inversely proportional to the tank capacity $C$,
+  i.e., $V=Q/C$.
+   
+  \htmladdimg{../figures/capacitoranalogy2.gif}
+   
+  Why can an AC current ``flow through'' a capacitor composed of two 
+  insulated plates? Again consider the water tank analogy of the 
+  capacitor. If the pipeline is disconnected (an open circuit), no 
+  water flow (current) can go through. If two tanks are connected to 
+  the ends of the pipeline (a capacitor), and the pump drives the 
+  water in one direction (analogous to a DC voltage source), one of 
+  the tanks will fill up while the other one is empty (due to some
+  initial current), there is still no continuous current. However, 
+  if the pump drives the water in alternative directions (analogous 
+  to AC voltage source), the water can flow through the pipeline, 
+  analogous to an AC current going through a capacitor (not through 
+  the insulation between its two plates).
+
+  The ratio between the current through a pair of conductor plates 
+  and the rate of change of the voltage across it is constant:
+  \[ 
+  i(t)=\frac{dq(t)}{dt}=\frac{d\,Cv(t)}{dt}=C\frac{dv(t)}{dt}
+  \]
+  or
+  \[
+  v(t)=\frac{q(t)}{C}=\frac{1}{C}\int_{-\infty}^t i(\tau) d\tau,
+  \]
+
+  Specially, when the voltage is sinusoidal $v(t)=sin(\omega t)$, the 
+  current is
+  \[
+  i(t)=C \frac{d\,v(t)}{dt}=C \frac{d\sin(\omega t)}{dt}
+  =\omega C\;\cos(\omega t)
+  \]
+  
+  \htmladdimg{../figures/capacitorIV.gif}
+
+  \begin{enumerate}
+  \item The current (red) has a 90 degree phase lead compared to the 
+    voltage (green), as it takes time for the voltage across capacitor 
+    to build up;
+  \item The amplitude of the current is proportional to the frequency 
+    $\omega=2\pi f$ of the voltage. In particular, for DC ($\omega=0$). 
+    The current $i(t)=\omega C\cos(\omega t)$ is 0 (open circuit), and
+    when the frequency is very high ($\omega \rightarrow \infty$), the 
+    current $i(t)=\omega C\cos(\omega t) \rightarrow \infty$ (short circuit).
+  \end{enumerate}
+
+
+\item {\bf Inductor}
+
+  \begin{itemize}
+  \item {\bf Electromagnetic Interaction: Electricity to Magnetism}
+
+    Magnetic field (flux) is generated in the space around a current 
+    flowing through a piece of conductor:
+
+    \htmladdimg{../figures/coil0.gif}
+
+    The magnetic field around a coil is the superposition of the magnetic 
+    flux generated by each section of the coil:
+
+    \htmladdimg{../figures/coil1.gif}
+
+  \item {\bf Electromagnetic Interaction: Magnetism to Electricity}
+
+    Electric current is induced in a conductor when there is changing
+    magnetic flux in the surrounding space.
+
+    \htmladdimg{../figures/electromagnetic.gif}
+    
+    \htmladdimg{../figures/electromagnetic1.gif}
+
+  \item {\bf Self and Mutual Induction}
+
+    A time-varying electric current in a coil will cause a time-varying 
+    magnetic field in the surrounding space, which in turn will induce 
+    electric voltage and then current in the same coil (self-induction) 
+    or a different coil in the neighborhood (mutual-induction).
+    
+  \item {\bf Faraday's Law:} 
+    
+    The self-induced voltage, the {\em electromotive force (emf)}, across 
+    the inductor coil due to a current $i(t)$ is proportional to the rate 
+    of change of the total magnetic flux $\Psi=N\Phi$ ($\Phi$ being the 
+    flux in one of the $N$ turns of the coil) caused by the current $i(t)$: 
+    \[ 
+    v(t)=\frac{d\Psi(t)}{dt}=\frac{d\Psi}{di}\frac{di}{dt}=L\frac{di}{dt}
+    \]
+    or
+    \[
+    i(t)=\frac{1}{L}\int_{-\infty}^t v(\tau) d\tau,\;\;\;\;\;
+    \]
+    where $L$ is the {\em inductance} of the coil defined as
+    \[ 
+    L=\frac{d\Psi}{di}=\frac{d\Psi/dt}{di/dt}=\frac{V}{di/dt}
+    \]
+    representing the inductor's ability to produce magnetic flux
+    $\Psi$ given a varying current, which is determined by the 
+    parameters of the inductor: 
+    \[
+    L=\frac{\mu N^2 A}{l}
+    \]
+    where $A$ and $l$ are
+    respectively the cross section area and length of the coil, $N$ is
+    the number of turns, and $\mu$ is the
+    \htmladdnormallink{\em magnetic permeability}{https://en.wikipedia.org/wiki/Permeability_(electromagnetism)}
+    of the medium inside the coil. When a medium of high permeability, such as an iron core, is inserted into
+    the coil, its inductance $L$ is increased.
+
+    Comparing $v(t)=L\dot{i}(t)$ with $v(t)=R\;i(t)$, we see that the 
+    inductance $L$ is a resistive variable.
+
+    The unit of $L$ is {\em henrys (H)}
+    (\htmladdnormallink{Joseph Henry (1797-1878)}{https://en.wikipedia.org/wiki/Joseph_Henry}):
+
+    \[ 
+      [Henry]=\frac{[Volt][second]}{[Ampere]},
+      \;\;\;\;\;\;\; H=\frac{Vs}{A}
+    \]
+    Other units also used for $L$ include $mH=10^{-3}H$ and $\mu H=10^{-6}H$. 
+
+  \item {\bf Lenz's Law:} 
+
+    The polarity of the self-induced voltage $v(t)$ in a coil is such 
+    that it tends to produce a current which induces a magnetic flux to 
+    oppose the change of the magnetic field that induced the voltage, 
+    thereby opposing any change in current $i(t)$ that is causing the 
+    magnetic flux. 
+
+    When current $i(t)$ increases, the induced voltage $v(t)$ tends to
+    resist it, when current $i(t)$ decreases, the induced voltage
+    $v(t)$ tends to sustain it.
+
+  \end{itemize}
+
+  \begin{comment}
+    The ratio between the primary voltage $V_1$ and the secondary voltage 
+    $V_2$ of a transformer is proportional to the ratio between the numbers 
+    of turns:
+    \[
+    \frac{V_2}{V_1}=\frac{n_2}{n_1}	
+    \]
+    If there is no power loss by the transformer, then the transformer is 
+    ideal and we have
+    \[
+    P_1=V_1I_1=P_2=V_2I_2,\;\;\;\;\mbox{i.e.}\;\;\;\;
+    \frac{I_2}{I_1}=\frac{V_1}{V_2}=\frac{n_1}{n_2}	
+    \]
+    The ratio between the primary current $I_1$ and the secondary current $I_2$ 
+    of a transformer is inversely proportional to the ratio between the numbers
+    of turns. Also note the reference directions of the currents $I_1$ and $I_2$
+    and the reference polarities of the voltages $V_1$ and $V_2$, reflecting the
+    fact that the secondary current $I_2$ is caused by the induced voltage $V_2$
+    (consistent polarity), while $V_1$ is the induced voltage opposing the current
+    $I_1$.
+
+    We can also find the ratio between the primary and secondary impedances based 
+    on the assumption that there is no power loss in the transformer, i.e.,
+    \[	
+    P_1=\frac{V_1^2}{R_1}=P_2=\frac{V_2^2}{R_2}, \;\;\;\;\;\;\;\;\;\;
+    \frac{R_1}{R_2}=\left(\frac{V_1}{V_2}\right)^2=\left(\frac{n_1}{n_2}\right)^2  
+    \]
+  \end{comment}
+
+  Specially, when the current is sinusoidal $i(t)=sin(\omega t)$, the 
+  voltage is
+  \[
+  v(t)=L \frac{d\,i(t)}{dt} =L \frac{d\,\sin(\omega t)}{dt} 
+  = \omega L\;\cos(\omega t)
+  \]
+
+  \htmladdimg{../figures/inductorIV.gif}
+
+  \begin{enumerate}
+  \item The current (red) has a 90 degree phase lag compared to the 
+    voltage (green) as it takes time to overcome the counter potential 
+    of the inductor for the current to flow;
+  \item The amplitude of the voltage is proportional to the frequency
+    $\omega=2\pi f$ of the current. In particular, for DC ($\omega=0$), 
+    the voltage is 0 (short circuit), and when the frequency is very 
+    high ($\omega \rightarrow \infty$), the voltage $i(t) \rightarrow 0$
+    (open circuit) for a finite $v(t)$.
+  \end{enumerate}
+
+  Energy storage in mechanical and electromagnetic systems:
+  \begin{itemize}
+  \item {\bf Mechanical energy:}
+    \begin{itemize}
+    \item {\bf Kinetic Energy:} Energy stored in a mass of 1 kilogram
+      moving with a velocity $u$ of 1 meter per second possesses 1/2 Joule 
+      of kinetic energy.
+      \[	
+      w=\frac{1}{2}mu^2,\;\;\;\;\;\frac{[kilogram][meter]^2}{[second]^2}=[Joule]
+      \]
+      Another unit for energy is {\em calorie}:
+      $ 1 \; \mbox{cal}=4.2\;\mbox{Joules}	$
+      
+    \item {\bf Potential energy:} Energy stored in a spring ($x=Cf=f/K$) 
+      of {\em stiffness} $K$ or {\em compliance} $C=1/K$ is 
+      \[
+      w=\frac{1}{2}Cf^2,\;\;\;\;\;	
+      \frac{[meter]}{[Newton]}[Newton]^2=[meter][Newton]=[Joule]
+      \]	
+    \end{itemize}
+  \item {\bf Electromagnetic energy:}
+    \begin{itemize}
+    \item Energy stored in a capacitor with capacity $C$ and voltage $V$:
+      \[	
+      w=\frac{1}{2}CV^2
+      \]
+      \begin{eqnarray}
+        &&[Farad][volt]^2=\frac{[Ampere][second]}{[Volt]}[Volt]^2
+        \nonumber\\
+        &=&[Ampere][Volt][second]=[Watt][second]=[Joule]
+        \nonumber
+      \end{eqnarray}
+    \item Energy stored in an inductor with inductance $L$ and current $I$:
+      \[	
+      w=\frac{1}{2}LI^2
+      \]
+      \begin{eqnarray}
+        &&[Henry][Ampere]^2=\frac{[Volt][second]}{[Ampere]}[Ampere]^2
+        \nonumber\\
+        &=&[Volt][Ampere][second]=[Watt][second]=[Joule]
+        \nonumber
+      \end{eqnarray}
+    \end{itemize}
+  \end{itemize}
+
+  From the above discussion, we see that for sinusoidal voltage and
+  current, the voltage across a capacitor is lagging behind the current
+  by 90 degrees, while the voltage across an inductor is leading the
+  current by 90 degrees. This fact can be easily memorized by 
+  \htmladdnormallink{``ELI the ICE man''}{../ELI/ELI.html}
+  (with E for voltage and I for current).
+
+  Note the following dimensionalities:
+  \[ 
+  \left[\sqrt{\frac{L}{C}}\right]=\sqrt{\frac{[Henry]}{[Farad]}}
+  =\sqrt{\frac{[Volt]\;[second]}{[Ampere]}\frac{[Volt]}{[second]\;[Ampere]}}
+  =\frac{[Volt]}{[Ampere]}=[Ohm] 
+  \]
+  \begin{comment}
+  \[ 
+  \left[\sqrt{\frac{L}{C}}\right]=\sqrt{\frac{H}{F}}
+  =\sqrt{\frac{V\;s}{A}\;\;\frac{V}{s\;A}}=\frac{V}{A}=\Omega
+  \]
+  \end{comment}
+  \[ 
+  \left[ \sqrt{LC} \right]=\sqrt{[Henry]\;[Farad]}
+  =\sqrt{\frac{[Volt]\;[second]}{[Ampere]}\frac{[Ampere]\;[second]}{[Volt]}}
+  =[second]
+  \]
+  \begin{comment}
+  \[ 
+  \left[\sqrt{LC}\right]=\sqrt{H\; F}=\sqrt{ \frac{V\;s}{A} \frac{A\;s}{V} }
+  =s
+  \]
+  \end{comment}
+  Here is a summary of the three linear components in terms of how 
+  the voltage $v$ and current $i$ are related:
+
+  \begin{tabular}{l|cc}
+    Resistor $R$ & $i=v/R=Gv$ & $v=Ri=i/G$ \\
+    Inductor $L$ & $i=\int v\,dt/L$ & $v=L\;di/dt$ \\
+    Capacitor $C$ & $i=C\,dv/dt$ & $v=\int i\,dt/C$ \\
+  \end{tabular}
+
+\item {\bf Ideal Transformer}
+
+  \htmladdimg{../figures/idealtransformer.gif}
+
+  Two coils around a common iron core form a transformer. Assume the
+  primary coil has $N_1$ turns of wire and the secondary coil has $N_2$ 
+  turns. The total magnetic flux $\Psi=N\Phi$ is proportional to the 
+  number of turns $N$, where $\Phi$ is the flux with one turn of wire
+  in both primary and secondary coils. We assume the transformer is 
+  ideal or lossless, in the sense that 
+  \begin{itemize}
+  \item There is no flux loss. The same flux $\Phi$ goes through the 
+    iron core of both primary and secondary coils; 
+  \item There is no power loss, the power $p$ received by the primary 
+    coil is is completely delivered to the secondary coil.
+  \end{itemize}
+
+  {\bf Faraday's Law:} The voltage across a coil is proportional to 
+  the rate of change of the total magnetic flux: 
+  \[ 
+  v_1(t)=\frac{d\Psi_1}{dt}=N_1\frac{d\Phi}{dt},\;\;\;\;\;\;
+  v_2(t)=\frac{d\Psi_2}{dt}=N_2\frac{d\Phi}{dt} 
+  \]
+  i.e.,
+  \[
+  \frac{v_2}{v_1}=\frac{N_2}{N_1}	
+  \]
+  Also, as there is no power loss in an ideal transformer, we also have
+  \[
+  p_1=v_1 i_1=p_2=v_2 i_2,\;\;\;\;\;\mbox{i.e.,}\;\;\;\;\;\;\;
+  \frac{i_1}{i_2}=\frac{v_2}{v_1}=\frac{N_2}{N_1}
+  \]
+  from which we get:
+  \[
+  v_1=\frac{N_1}{N_2} v_2,\;\;\;\;\;\;\;i_1=\frac{N_2}{N_1} i_2 
+  \]
+  If we assume the secondary side is connected to a load resistance $R_L$,
+  then according Ohm's law, we have $v_2/i_2=R_2$, and
+  \[
+  \frac{v_1}{i_1}=\frac{(N_1/N_2)v_2}{(N_2/N_1)i_2}
+  =\left(\frac{N_1}{N_2}\right)^2 \frac{v_2}{i_2}
+  =\left(\frac{N_1}{N_2}\right)^2 R_L=R'_L 
+  \]
+  which is the equivalent resistance that appears on the primary side.
+
+\end{itemize}
+
+
+\subsection*{Energy Dissipation/Storage in R, C, and L}
+
+The electric power associated with an element (R, C, or L) is the 
+product of the voltage $v(t)$ across and current $i(t)$ through the
+element:
+\[ 
+p(t)=\frac{dw}{dt}=\frac{dw}{dq}\;\frac{dq}{dt}=v(t)\,i(t)
+\]
+Integrating $p(t)$ over a time period $T$, we get the energy 
+\[
+w=\int_0^T p(t)\; dt=\int_0^T v(t)\; i(t)\; dt	
+\]
+\begin{itemize}
+Depending on its sign, the energy can be either consumed (dissipated,
+converted to heat) if $w>0$, or stored in the element if $w<0$. We 
+consider specifically the energy dissipation/storage in each of 
+the three types of elements $R$, $C$, and $L$.
+
+\item {\bf Energy dissipated by resistor $R$}
+
+  When a voltage $v(t)$ is applied across $R$, the current through it is
+  $i(t)=v(t)/R$, power consumption is 
+  \[ 
+  p(t)=v(t)\;i(t)=\frac{v^2(t)}{R}=i^2(t)R 
+  \]
+  The energy dissipated during time period $0 \sim T$ is
+  \[
+  w=\int_0^T p(t) dt=\int_0^T v(t)\; i(t) dt
+  =\frac{1}{R}\;\int_0^T v^2(t)\; dt =R\;\int_0^T i^2(t)\; dt 
+  \]
+  This energy is converted irreversibly from electrical energy to heat. The 
+  rate of dissipation is $p(t)=d\,w/dt$.
+
+  \begin{itemize}
+    \item When a DC voltage $v(t)=V$ is applied across $R$, the current 
+      through it is $I=V/R$, and the power consumed by the resistor is 
+      \[
+      P=VI=\frac{V^2}{R}=I^2R 
+      \]
+      The energy dissipation during time period $0\sim T$ is
+      \[ 
+      w=\int_0^T P\; dt=PT=VIT=\frac{V^2}{R}\,T=I^2RT 
+      \]
+    \item When a sinusoidal $v(t)=V_p \sin(\omega t)$ is applied across $R$, 
+      the current through it is $i(t)=v(t)/R=V_p\sin(\omega t)/R$, and the 
+      energy dissipated in time period $T=1/f=2\pi/\omega$ is:
+      \begin{eqnarray}
+      w&=&\int_0^T v(t)\,i(t)\,dt=\frac{1}{R}\int_0^T v^2(t) dt
+      =\frac{V_p^2}{R}\int_0^T \sin^2(\omega t) dt
+      \nonumber \\
+      &=&\frac{V_p^2}{2R}\int_0^T [1-\cos(2\omega t)] dt=\frac{V_p^2}{2R}\,T
+      =\frac{V^2_{rms}}{R}\,T
+      \nonumber 
+      \end{eqnarray}
+      where $V_{rms}$ is the {\em effective or root-mean-square (RMS)} value 
+      of $v(t)=V_p\sin(\omega t)$, representing the equivalent DC voltage
+      needed for $R$ to dissipate the same amount of energy as 
+      $v(t)=V_p\sin(\omega t)$:
+      \[ 
+      \frac{{\bf V}^2_{rms}}{R}T=\frac{1}{R}\int_0^T v^2(t)dt
+      =\frac{V_p^2}{2R}T
+      \]
+      Solving for $V_{rms}$ we get
+      \[ 
+      V_{rms}=\sqrt{\frac{1}{T}\int_0^T v^2(t) dt }=\frac{V_p}{\sqrt{2}}=0.707\,V_p
+      \]
+      We see that when either a sinusoidal voltage with peak amplitude $V_p$ 
+      or a DC voltage $V_{rms}=V_p/\sqrt{2}$ is applied across a resistor $R$, 
+      the same amount of energy is dissipated.
+   
+      \htmladdimg{../figures/dissipation.gif}
+
+      Some useful trigonometric identities:
+      \[ 
+      \sin\alpha \cos\alpha=\frac{1}{2} \sin{2\alpha},\;\;\;
+      \sin^2\alpha =\frac{1}{2}[1-\cos(2\alpha)],\;\;\;
+      \cos^2\alpha =\frac{1}{2}[1+\cos(2\alpha)] 
+      \]
+
+      The average of a time varying current $i(t)$ is the value of
+      a DC (direct current) current $I_{av}$ that in period $T$ would 
+      transfer the same charge $Q$:
+      \[	
+      I_{av}T=Q=\int_0^T i(t) dt,\;\;\;\;\mbox{i.e.}\;\;\;\;
+      I_{av}=\frac{1}{T}\int_0^T i(t) dt	
+      \]
+      Similarly, the average voltage is defined as:
+      \[
+      V_{av}=\frac{1}{T}\int_0^T v(t) dt	
+      \]
+      If the current/voltage is sinusoidal
+      \[
+      i(t)=I_p\,\sin(\omega t)=I_p\,\sin(2\pi ft)=I_p\,\sin(2\pi t/T)
+      \]
+      The average over the complete cycle $T=1/f$ is always zero (the 
+      charge transferred during the first half is the opposite to that 
+      transferred in the second). However, if we consider the half-cycle 
+      over $T/2$, the average is:
+      \begin{eqnarray} 
+        I_{av}&=&\frac{1}{T/2}\int_0^{T/2} i(t)\; dt
+        =\frac{2}{T}\int_0^{T/2} \;I_p\,\sin(2\pi t/T)\;dt	
+        =-\frac{2}{T}\frac{T}{2\pi} I_p\,\cos(2\pi t/T)\bigg|_0^{T/2}
+        \nonumber \\
+        &=& \frac{I_p}{\pi}\left[\cos(0)-\cos(\pi)\right]
+        =\frac{2I_p}{\pi}\;=0.637\,I_p
+        \nonumber
+      \end{eqnarray}
+
+  \end{itemize}
+
+\item {\bf Energy storage in capacitor $C$}
+
+  Given voltage $v(t)$ across and current $i(t)$ through a capacitor $C$,
+  the associated energy is:
+  \[	
+  w=\int_0^T p(t)dt=\int_0^T v(t)\; i(t) dt
+  =\int_0^T v(t) \;C\frac{dv(t)}{dt} dt
+  =C \int_0^V v\;dv=\frac{1}{2}CV^2
+  \]
+  where we have assumed $v(0)=0$ and $v(T)=V$. 
+
+  If $v(t)=V_p \sin(\omega t)$, then
+  $i(t)=C\;dv(t)/dt=C V_p\omega\;\cos(\omega t)$, and the energy dissipated
+  in period $T=2\pi/\omega$ is
+  \[ 
+  w= \int_0^T v(t)\; i(t) dt
+  =V_p^2\omega C\int_0^T \sin(\omega t)\;\cos(\omega t)\,dt
+  =\frac{V_p^2\omega C}{2} \int_0^T \sin(2\omega t) dt=0 
+  \]
+  This results indicates that there is no energy dissipated over the complete 
+  period $T$. In the first and third quarters of the period $T$, the energy
+  is stored in the electric field of the capacitor (equivalent to a battery 
+  being charged), but in the 2nd and 4th quarters of the period $T$, the energy
+  is released from the capacitor to the rest of the circuit (equivalent to a 
+  battery delivering power).
+  
+  \htmladdimg{../figures/storage.gif}
+
+\item {\bf Energy storage in inductor $L$}
+
+  Given voltage $v(t)$ across and current $i(t)$ through an inductor $L$,
+  the associated energy is
+  \[	
+  w=\int_0^T p(t)dt=\int_0^T i(t)\; v(t) dt
+  =\int_0^T i(t) \;L \frac{di(t)}{dt} dt
+  =L \int_0^I i\;di=\frac{1}{2}LI^2
+  \]
+  where we have assumed $i(0)=0$ and $i(T)=I$. 
+
+  If $i(t)=I_p \sin(\omega t)$, then
+  $v(t)= L\;di(t)/dt=L I_p\omega\;\cos(\omega t)$, and the energy dissipated
+  in time period $T=2\pi/\omega$ is
+  \[
+  w=\int_0^T v(t)\;i(t) dt=I_p^2\omega L\int_0^T \sin(\omega t)\;\cos(\omega t)\,dt
+  =\frac{I_p^2\omega L}{2} \int_0^T \sin(2\omega t) dt=0 
+  \]
+  Again, no energy is dissipated by the inductor during the complete period
+  $T$ of a sinusoidal voltage. In the first and third quarter of the period 
+  $T$, the energy is stored in the magnetic field of the inductor, but in 
+  the 2nd and 4th quarter of the period $T$, the energy is released from the 
+  inductor to the rest of the circuit.
+
+  \htmladdimg{../figures/energyexchange.gif}
+
+\end{itemize}
+
+{\bf Comparison with mechanical systems:}
+
+The work of a mechanical system does is $w=\int_0^X f(x)\; dx$ where $f(x)$ 
+is force and $X$ is displacement.
+\begin{itemize}		
+\item {\bf Potential energy:} A spring can be described by Hooke's law $f=Kx$
+  where $K$ is the {\em stiffness}, or $x=Cf$ where $C=1/K$ is the 
+  {\em compliance}. The potential energy stored in the spring is
+  \[
+  w=\int_0^X f(x)\;dx=\int_0^F f\;C\;df=\frac{1}{2}CF^2	
+  \]	
+  i.e., the compliance $C$ is a measure of the spring's ability to 
+  store potential energy (the less stiff, the more potential energy can
+  be stored in the spring with the same force).
+\item {\bf Kinetic energy:} A mass moving at a velocity $v$ has kinetic
+  energy
+  \[
+  w=\int_0^T f\;v(t)\;dt=\int_0^T m \frac{dv}{dt}\;v(t)\;dt
+  =m \int_0^V v\;dv=\frac{1}{2}mV^2 
+  \]
+  i.e., the mass $m$ of a body is a measure of the body's ability to 
+  store kinetic energy (the more mass, the more kinetic energy can be 
+  stored in the body with the same velocity).
+\end{itemize}		
+
+\subsection*{Examples: Mechanical and Electrical Systems}
+
+\begin{itemize}
+\item A mechanical system composed of a spring $k$ and a mass $m$ can be 
+  described by the following equation (Newton's second law $f=ma$):
+  \[ m\frac{d^2}{dt^2}x(t)+kx(t)=0,\;\;\;\;\mbox{i.e.}\;\;\;\;
+  \frac{d^2}{dt^2}x(t)+\frac{k}{m}x(t)=\ddot{x}+\omega_n^2 x(t)=0	\]
+  where $x(t)$ is the displacement of the mass (horizontal) and 
+  $\omega_n=\sqrt{k/m}=1/\sqrt{cm}$ ($c=1/k$ is the compliance of the spring).
+
+\item An electrical system composed of a capacitor $C$ and an inductor $L$
+  in parallel can be described by:
+  \[	i_C(t)=C\frac{dv(t)}{dt},\;\;\;v(t)=L\frac{di_L(t)}{dt}	\]
+  where $v(t)$ is the voltage across both components, and $i_C(t)$ and $i_L(t)$
+  are currents through $C$ and $L$, respectively. 
+
+  \htmladdimg{../LCExample.gif}
+
+  As $i_C(t)+i_L(t)=0$, i.e. $i_C(t)=-i_L(t)$, we have
+  \[ v(t)=L\frac{d}{dt}i_L(t)=L\frac{d}{dt}\;(-C\frac{dv}{dt}),\;\;\;
+  \mbox{i.e.}\;\;\;\;\frac{d^2v(t)}{dt^2}+\frac{1}{LC}v(t)
+  =\ddot{v}(t)+\omega_n^2 v(t)=0	\]
+
+\end{itemize}
+
+To find the homogeneous solution of the differential equation above 
+(for either the mechanical or electrical system), we assume $v(t)=e^{st}$ 
+and get $\ddot{v}(t)=s^2 e^{st}$, and the DE becomes:
+\[ (s^2+\omega_n^2) e^{st}=0,\;\;\;\;\;\;\mbox{i.e.,}\;\;\;\;\;\;
+s^2+\omega_n^2=0 \]
+Solving this we get $s=\pm j\omega_n$ and 
+\[ v(t)=e^{j\omega_n t}=\cos \omega t\pm j\sin \omega_n t \]
+
+\begin{itemize}
+\item In the mechanical system, when the displacement is zero $x(t)
+  =\sin(\omega_n t)=0$, i.e., the potential energy stored in the spring 
+  is zero, the velocity $\dot{x}(t)=\omega_n\;\cos(\omega_n t)=\pm \omega_n$,
+  i.e., the kinetic energy is maximal. On the other hand, when the 
+  displacement is $x(t)=\sin(\omega_n t)=\pm 1$, i.e., the potential 
+  energy stored in the spring is maximal, the velocity $\dot{x}(t)=\omega_n
+  \;\cos(\omega_n t)=0$, i.e., the kinetic energy is zero.
+\item In the electrical system, when $v(t)=\sin(\omega_n t)=0$, i.e., the
+  energy stored in the capacitor is zero $W_C=Cv^2/2=0$,
+  $i(t)=C\dot{v}(t)=\omega_n C\;\cos(\omega_n t)=\pm \omega_n C$, i.e., 
+  the energy stored in the inductor $W_L=Li^2/2$ is maximal. On the other
+  hand, when $v(t)=\sin(\omega_n t)=\pm 1$, i.e., the energy stored in the 
+  capacitor is maximal, $i(t)=C\dot{v}(t)=\omega_n C\;\cos(\omega_n t)=0$,
+  i.e., the energy stored in the inductor is zero. 
+\end{itemize}
+In both cases, the energy in the system is converted back and forth 
+between different forms (potential vs. kinetic in the mechanical system,
+and electrical vs. magnetic in the electrical system), while the total
+amount is always reserved. 
+
+However, when a dash-pot (causing friction proportional to speed $\dot{x}$)
+is added (in parallel to the spring) in the mechanical system, and a resistor 
+is added in series with the electrical circuit, the energy is dissipated 
+(converted to heat) in both systems:
+
+\[	\frac{d^2x}{dt^2}+\frac{b}{m}\frac{dx}{dt}+\frac{k}{m}x=0	\]
+\[	\frac{d^2v}{dt^2}+\frac{R}{L}\frac{dv}{dt}+\frac{1}{LC}v=0	\]
+
+  \htmladdimg{../figures/RCLExample.gif}
+
+The corresponding solution of the DEs will be decaying sinusoidal,
+indicating the dissipation of the energy in the system.
+
+Consider the power in the RCL electrical system:
+\[ 
+p(t)=v(t) i(t) =v(t) \frac{d}{dt} Q(t) 
+\]
+The energy consumed in the system is:
+\[ 
+w=\int_0^t P(\tau) d\tau=v(t) [Q(t)-Q(0)]=Cv^2(t) 
+\]
+where we have assumed $Q(0)=0$ and $Q(t)=Cv(t)$. On the other hand,
+as we also know the energy stored in $C$ is $W_C=Cv^2/2$, we see that
+half of the energy is consumed (dissipated/stored) in the rest of 
+the circuit ($R$ and $L$). This is always the case independent of 
+the system parameters. When the input voltage is DC $v(t)=V$, the 
+current at the steady-state is zero and the energy stored in $L$ is 
+$Li^2/2=0$, i.e., half of the energy from the source is dissipated
+by $R$. However, when $R=0$, the energy is converted back and forth
+between $C$ and $L$ as described above.
+
+
+\subsection*{Kirchhoff's Laws}
+
+Here are some terminologies for electric circuits:
+\begin{itemize}
+\item {\em Node:} a point where three or more current-carrying elements 
+  (branches) are connected;
+\item {\em Branch:} a path connecting two nodes along which there is 
+  one or more elements in series; 
+\item {\em Loop:} a sequence of multiple paths that form a closed loop.
+\end{itemize}
+
+In a circuit diagram, both the direction of a current through, and the
+polarity of a voltage across an element can be arbitrarily labeled. 
+The actual direction and polarity will be determined by the sign of 
+the specific values obtained after the circuit is solved. For example, 
+a current labeled in the left-to-right direction with a negative value
+is actually flowing in the right-to-left direction.
+
+{\bf Kirchhoff's Laws}
+\begin{itemize}
+\item {\bf Kirchhoff current Law (KCL)} 
+
+  The algebraic sum of the currents into a node is zero:
+  \[
+  \sum_k I_k=0	
+  \]
+  due to the principle of conservation of electric charge (electric
+  charge can not be created or destroyed in the circuit).  
+
+  Here we can assume the directions of all currents through the elements
+  are either into or out of the node.
+
+\item {\bf Kirchhoff voltage Law (KVL)} 
+
+  The algebraic sum of all voltage drops around a loop is zero:
+  \[ 
+  \sum_k w_k=\sum_k V_k Q=0,\;\;\;\;\;  \sum_k V_k=0	
+  \]
+  due to the principle of conservation of energy (energy can not be
+  created or destroyed in the circuit).
+  
+  Here we can assume the polarities of all voltages across the elements
+  are from high (+) to low (-), while going around the loop in either 
+  clockwise or counter-clockwise direction.
+\end{itemize}
+
+{\bf Example 1:}
+
+\htmladdimg{../figures/Kirchhoff.png}
+
+Assume currents flowing into the node are positive and those leaving the 
+node negative, the KCL states: $4+5-3-4-2=0$. 
+
+Assume the current flows around the loop in clockwise direction, the KVL
+states: $-12+3+4+5=0$. 
+
+{\bf Example 2:}  Given the circuit below, find $V_2$, $V_0$, $I_2$, $R_1$
+and $R_2$.
+
+\htmladdimg{../figures/Kirchhoff1.gif}
+
+According to Ohm's law, we have $I_2=3/2=1.5A$.  
+
+Apply KVL to the loop on the right to get:
+\[  V_2-5+3=0,\;\;\;\;\;\; V_2=2V \]
+
+According to Ohm's law, we have $R_2=V_2/I_2=2V/1.5A=1.33\Omega$.
+
+Apply KCL to the middle node on top to get:
+\[ 2-I_1-I_2=2-I_1-1.5=0,\;\;\;\;\;I_1=0.5A \]
+
+Again by Ohm's law, we get $R_1=5V/0.5A=10\Omega$. 
+
+Apply KVL to the loop on the left to get:
+\[ 3\times 2 +5-V_0=0,\;\;\;\;\;\;V_0=11V \]
+
+{\bf The series and parallel combinations of circuit components}
+
+\begin{itemize}
+
+\item {\bf Resistors in series:} 
+
+  \htmladdimg{../figures/resistorseries.gif}
+
+  According to KVL, the sum of voltages across 
+  the resistors is equal to the input voltage:
+  \begin{eqnarray}	
+    V=V_1+\cdots+V_n&=&IR_1+\cdots+IR_n=I(R_1+\cdots+R_n)=IR_s
+    \nonumber \\
+    &=&\frac{I}{G_1}+\cdots+\frac{I}{G_n}
+    =I\left(\frac{1}{G_1}+\cdots+\frac{1}{G_n}\right)=\frac{I}{G_s}
+    \nonumber
+  \end{eqnarray}
+  where
+  \[ 
+  R_s=\frac{V}{I}=R_1+\cdots+R_n	
+  \]
+  and
+  \[ 
+  G_s=\frac{1}{R_s}=\frac{I}{V}=\frac{1}{1/G_1+\cdots+1/G_n}
+  \]
+
+\item {\bf Voltage divider:}
+
+  According to Ohm's law, the voltage $V_k$ across the kth resistor $R_k$ can be 
+  found to be:
+  \[
+  V_k=IR_k=\frac{V}{R_s}R_k=V\frac{R_k}{R_1+R_2+\cdots+R_n} 
+  \]
+  In particular if $n=2$, we have
+  \[ 
+  V_1=V\frac{R_1}{R_1+R_2},\;\;\;\;\;\;\;\;V_2=V\frac{R_2}{R_1+R_2} 
+  \]
+
+\item {\bf Resistors in parallel:} 
+
+  \htmladdimg{../figures/resistorparallel.gif}
+
+  According to KCL, the sum of currents through the resistors is equal to 
+  the input current:
+  \begin{eqnarray}	
+    I=I_1+\cdots+I_n&=&\frac{V}{R_1}+\cdots+\frac{V}{R_n}
+    =V\left(\frac{1}{R_1}+\cdots+\frac{1}{R_n}\right)=\frac{V}{R_p}	
+    \nonumber \\
+    &=&VG_1+\cdots+VG_n=V(G_1+\cdots+G_n)=VG_p
+    \nonumber
+  \end{eqnarray}
+  where
+  \[ 
+  R_p=\frac{V}{I}=\frac{1}{1/R_1+\cdots+1/R_n}=R_1||R_2||\cdots||R_n 
+  \]
+  and
+  \[ 
+  G_p=\frac{1}{R_p}=\frac{I}{V}=G_1+\cdots+G_n=\frac{1}{R_p}
+  =\frac{1}{R_1}+\cdots+\frac{1}{R_n}
+  \]
+
+  In particular, when $n=2$, 
+  \[	R_p=R_1||R_2=\frac{1}{1/R_1+1/R_2}=\frac{R_1\;R_2}{R_1+R_2}	\]
+
+\item {\bf Current divider:}
+
+  According to Ohm's law, the current $I_k$ through the kth resistor $R_k$ can be 
+  found to be:
+  \[ 
+  I_k=\frac{V}{R_k}=\frac{IR_p}{R_k}=I\frac{1/R_k}{1/R_1+1/R_2+\cdots+1/R_n}
+  =I\frac{G_k}{G_1+G_2+\cdots+G_n} 
+  \]
+  In particular if $n=2$, we have
+  \[ 
+  I_1=I\frac{G_1}{G_1+G_2}=I\frac{1/R_1}{1/R_1+1/R_2}
+  =I\frac{R_2}{R_1+R_2}
+  \]
+  \[
+  I_2=I\frac{G_2}{G_1+G_2}=I\frac{1/R_2}{1/R_1+1/R_2}
+  =I\frac{R_1}{R_1+R_2} 
+  \]
+
+\item {\bf Inductors in series:} According to KVL, the sum of voltages across 
+  the inductors is equal to the input voltage:
+  \[	
+  v=v_1+v_2+\cdots+v_n=L_1\frac{di}{dt}+\cdots+L_n\frac{di}{dt}
+  =(L_1+L_2+\cdots+L_n)\frac{di}{dt}=L_s\frac{di}{dt}	
+  \]
+  i.e.,
+  \[
+  L_s=L_1+L_2+\cdots+L_n	
+  \]
+
+\item {\bf Inductors in parallel:} According to KCL, the sum of currents through 
+  the inductors is equal to the input current:
+  \[	
+  i=i_1+i_2+\cdots+i_n
+  =\frac{1}{L_1}\int v\; dt+\cdots+\frac{1}{L_n}\int v\; dt 
+  =\left(\frac{1}{L_1}+\cdots+\frac{1}{L_n}\right)\int v\; dt
+  =\frac{1}{L_p}\int v\; dt	 
+  \]
+  we get
+  \[
+  \frac{1}{L_p}=\frac{1}{L_1}+\cdots+\frac{1}{L_n} 
+  \]
+
+\item {\bf Capacitors in parallel:} According to KCL, the sum of currents through 
+  the resistors is equal to the input current:
+  \[	
+  i=i_1+i_2+\cdots+i_n=C_1\frac{dv}{dt}+\cdots+C_n\frac{dv}{dt}
+  =(C_1+C_2+\cdots+C_n)\frac{dv}{dt} =C_p\frac{dv}{dt}		
+  \]
+  i.e.,
+  \[	C_p=C_1+C_2+\cdots+C_n	\]
+
+\item {\bf Capacitors in series:} According to KVL, the sum of voltages across 
+  the capacitors is equal to the input voltage:
+  \[	
+  v=v_1+v_2+\cdots+v_n
+  =\frac{1}{C_1}\int i\;dt+\cdots+\frac{1}{C_n}\int i\;dt 
+  =\left(\frac{1}{C_1}+\cdots+\frac{1}{C_n}\right)\int i\;dt
+  =\frac{1}{C_s}\int i\;dt 	
+  \]
+  i.e.,
+  \[	\frac{1}{C_s}=\frac{1}{C_1}+\cdots+\frac{1}{C_n} \]
+
+\end{itemize}
+
+\begin{tabular}{c||c|c|c}\hline
+  & \mbox{Resistor} & \mbox{Inductor} & \mbox{Capacitor} \\ \hline \hline
+  \mbox{Governing Equation} & $v=Ri=i/G$, $i=v/R=Gv$ & $v=L\;di/dt$, $i=\int v\; dt/L$ & $v=\int i\;dt/C$, $i=C\;dv/dt$ \\ \hline
+  \mbox{Series connection}   & $R_s=R_1+R_2$, $1/G_s=1/G_1+1/G_2$ 
+  & $L_s=L_1+L_2$ & $1/C_s=1/C_1+1/C_2$ \\ \hline
+  \mbox{Parallel connection} & $1/R_p=1/R_1+1/R_2$, $G_p=G_1+G_2$
+  & $1/L_p=1/L_1+1/L_2$ & $C_p=C_1+C_2$ \\ \hline
+\end{tabular}
+
+{\bf Example 3} Consider the following six circuits as either current
+or voltage dividers.
+
+\htmladdimg{../figures/RCLPS.png}
+
+\begin{itemize}
+\item For each of the three parallel circuits, find $i_1$ and $i_2$ in
+  terms of the given current $i$ and the resistances, capacitances, or
+  inductances.
+  \begin{comment}
+  \begin{itemize}
+  \item Resistor circuit:
+    \[
+    i_1=\frac{R_2}{R_1+R_2}i,\;\;\;i_2=\frac{R_1}{R_1+R_2}i
+    \]
+  \item Capacitor circuit:
+    \[
+    i_1=\frac{C_1}{C_1+C_2}i,\;\;\;i_2=\frac{C_2}{C_1+C_2}i
+    \]
+  \item Inductor circuit:
+    \[
+    i_1=\frac{L_2}{L_1+L_2}i,\;\;\;i_2=\frac{L_1}{L_1+L_2}i
+    \]
+  \end{itemize}
+  \end{comment}
+\item For each of the three parallel circuits, find $v_1$ and $v_2$ in
+  terms of the given voltage $v$ and the resistances, capacitances, or 
+  inductances.
+  \begin{comment}
+  \item Resistor circuit:
+    \[
+    v_1=\frac{R_1}{R_1+R_2}v,\;\;\;v_2=\frac{R_2}{R_1+R_2}v
+    \]
+  \item Capacitor circuit:
+    \[
+    v_1=\frac{C_2}{C_1+C_2}v,\;\;\;v_2=\frac{C_1}{C_1+C_2}v
+    \]
+  \item Inductor circuit:
+    \[
+    v_1=\frac{L_1}{L_1+L_2}v,\;\;\;v_2=\frac{L_2}{L_1+L_2}v
+    \]
+  \end{itemize}
+  \end{comment}
+
+\end{itemize}
+
+
+
+\subsection*{Energy Sources}
+
+{\bf Ideal Energy Sources:}
+\begin{itemize}
+\item An ideal voltage source provides constant voltage $V_0$ independent 
+  of the current through it $I=V_0/R_L$. The ideal voltage source can
+  provide constant voltage to any number of resistors in parallel with 
+  the source, independent of how much current they each draw.
+\item An ideal current source provides constant current $I_0$ independent 
+  of the voltage across it $V=I_0 R_L$. The ideal current source can 
+  provide constant current to any number of resistors in series with 
+  the source.
+\end{itemize}
+\htmladdimg{../figures/VIsources.gif}
+
+However, such ideal sources do not exist in reality, due to the following
+dilemmas:
+\begin{itemize}
+\item If $R_L=0$ (short circuit), the load voltage $R_L I=0\ne V_0$,
+  where $I$ is the current through $R_L$.
+\item If $R_L=\infty$ (open circuit), the load current $V/R_L=V/\infty=0\ne I_0$,
+  where $V$ is the voltage across $R_L$.
+\end{itemize}
+
+{\bf Realistic voltage source:} 
+
+In reality, all voltage sources (e.g., a battery or a voltage amplifier 
+circuit) can be modeled by an ideal voltage source $V_0$ in series with a 
+nonzero internal resistance $R_0>0$, which causes an internal voltage drop 
+$IR_0$ due to the current $I$ drawn by the load $R_L$, so that the actual 
+output voltage across the load $V=V_0-IR_0< V_0$ is lower than $V_0$. The
+load voltage $V$ and current $I$ are constrained by the following two 
+relationships imposed by he voltage source $(V_0, R_0)$ and the load $R_L$, 
+respectively:
+\[ 
+\left\{ \begin{array}{lll}
+  \mbox{Source:} &  V=V_0-IR_0\;\;\;\;\;\;\;\;
+  (I=0,\;\;V=V_0),\;\;\;\;\;\;\;(V=0,\;\;I=V_0/R_0)\\ 
+  \mbox{load:} & V=R_LI \end{array} \right.
+\]
+Solving for $I$ and $V$, we get:
+\[ 
+\left\{ \begin{array}{l}
+  I=V_0/(R_0+R_L) \\ V= R_L V_0/(R_0+R_L) \end{array} \right. 
+\]
+For the output (load) voltage $V$ to be as close to the voltage source $V_0$
+as possible, the internal resistance $R_0$ of a voltage source needs to be as 
+small as possible, ideally $R_0=0$.
+
+\htmladdimg{../figures/VoltageSource.png}
+
+The slope of the first curve is the internal resistance $R_0$ and the slope 
+of the second curve is $R_L$. Solving these two equations we get load voltage
+$V$ and current $I$.
+
+Only in the case of an ideal voltage source with $R_0=0$ will $V=V_0$. 
+For $R_0>0$, the heavier the load, i.e., the smaller $R_L$, the larger the 
+load current $I$, and the lower the load voltage $V$:
+\[
+R_L \downarrow \Longrightarrow I \uparrow \Longrightarrow R_0I \uparrow
+\Longrightarrow V \downarrow 
+\]
+In particular, when the load is a short circuit ($R_L=0$), the output 
+voltage of a battery is zero (instead of the specified $V_0=1.5V$), as 
+the voltage drop across the nonzero internal resistance $R_0$ is the same 
+as $V_0$, i.e., the electric energy of the battery is consumed internally,
+with no energy delivered to external circuit.
+
+
+{\bf Realistic current source:} 
+
+In reality, all current sources (e.g., a solar cell or a current amplifier
+circuit) can be modeled by an ideal current source $I_0$ in parallel with a 
+nonzero internal resistance $R_0>0$, which causes an internal current $V/R_0$
+so that the actual output current through the load $I=I_0-V/R_0<I_0$ is lower 
+than $I_0$. The load voltage $V$ and current $I$ are constrained by the 
+following two relationships imposed by the current source $(I_0, R_0)$ and 
+the load $R_L$, respectively:
+\[ 
+\left\{ \begin{array}{ll} 
+  \mbox{Source:} & I=I_0-V/R_0\;\;\;\;\;\;\;\;\;
+  (I=0,\;\;V=R_0I_0),\;\;\;\;\;\;\;(V=0,\;\;I=I_0) \\ 
+  \mbox{Load:} & I=V/R_L \end{array} \right.
+\]
+Solving for $V$ and $I$, we get
+\[
+\left\{ \begin{array}{l} V=I_0R_0R_L/(R_0+R_L)=I_0\;R_0||R_L \\
+  I=I_0R_0/(R_0+R_L)\end{array} \right.
+\]
+
+\htmladdimg{../figures/CurrentSource.png}
+
+For the output (load) current $I$ to be as close to the current source $I_0$
+as possible, the internal resistance $R_0$ of a current source should be as
+large as possible, ideally $R_0=\infty$.
+
+%\htmladdimg{../figures/currentsource1.gif}
+
+The slope of the first curve is the internal resistance $R_0$ and the slope 
+of the second curve is $R_L$. Solving these two equations we get load voltage
+$V$ and current $I$.
+
+Only in the case of an ideal current source will $R_0=\infty$ and $I=I_0$. 
+For $R_0<\infty$, the larger the load resistance $R_L$, the smaller the 
+current $I_L$.
+\[
+R_L \uparrow \Longrightarrow V \uparrow \Longrightarrow V/R_0 \uparrow
+\Longrightarrow I \downarrow 
+\]
+
+{\bf Equivalent Circuits and Source Conversion}
+
+Two circuits with the same voltage-current relation (V-I characteristics)
+at the output port are considered equivalent, as they have the same 
+external behavior, although they may be different internally.
+
+\htmladdimg{../figures/sourcetransform.gif}
+
+Comparing the voltage-current relations of the two energy sources:
+\begin{itemize} 
+\item The voltage source ($V_0, R_0$):
+  \[ V=V_0-R_0I=R_0(V_0/R_0-I) \]
+\item The current source $(I_0, R'_0)$:
+  \[ V=R'_0(I_0-I)=R'_0I_0-R'_0I \]
+\end{itemize} 
+we see that 
+\begin{itemize}
+\item a voltage source $(V_0, R_0)$ can be converted into a current
+  source $(I_0=V_0/R_0,\,R_0)$,
+\item a current source $(I_0, R'_0)$ can be converted into a voltage
+  source $(V_0=I_0R'_0,\,R'_0)$.
+\end{itemize}
+
+\htmladdimg{../figures/VoltageCurrentSource.png}
+
+Both of the two energy sources above can be treated as either a voltage 
+or a current source. The source on the left has a small $R_0$ and is 
+therefore a good voltage source as the voltage $V$ received by the load
+is close to the source voltage $V_0$, but a bad current source as the 
+current $I$ received by the load is much lower than the source current 
+$I_0=V_0/R_0$. On the other hand, the source on the right has a large
+$R_0$ and is therefore a bad voltage source as the voltage $V$ received 
+by the load is much lower than the source voltage $V_0=I_0R_0$, but a 
+good current source as the current $I$ received by the load is close to 
+the source current.
+
+
+{\bf Finding internal resistance:}
+
+The internal resistance $R_0$ is the absolute value of the slope of
+the straight line of the V-I characteristic plot:
+\[
+R_0=\frac{|\Delta V|}{|\Delta I|}
+\]
+where $\Delta V$ and $\Delta I$ are respectively the difference in voltage 
+and current between any two points along the line, which can be chosen 
+arbitrarily. The most convenient choice would be the intersections of the 
+straight line with the $V$ and $I$ axes:
+\[
+\begin{array}{c||c|c}\hline
+  & \mbox{Open circuit ($I=0$)} & \mbox{Short circuit ($V=0$)} \\ \hline\hline
+  \mbox{Voltage Source} & $V_{oc}=V_0$ & $I_{sc}=V_0/R_0$ \\ \hline
+  \mbox{Current Source} & $V_{oc}=I_0R_0$ & $I_{sc}=I_0$ \\ \hline
+\end{array}
+\]
+In either case, we have:
+\[
+\frac{\mbox{open-circuit voltage}}{\mbox{short-circuit current}}
+=\frac{V_{oc}}{I_{sc}}=\left\{\begin{array}{cc}V_0/(V_0/R_0)&\mbox{(voltage source)}\\
+(I_0R_0)/I_0&\mbox{(current source)}\end{array}\right\}=R_0
+\]
+\begin{comment}
+\begin{itemize}
+\item For voltage source $(V_0, R_0)$, the open-circuit voltage is 
+  $V_{oc}=V_0$, the short-circuit current is $I_{sc}=V_0/R_0$, and their 
+  ratio is $R_0$. 
+\item For current source with $(I_0, R_0)$, the open-circuit voltage is 
+  $V_{oc}=I_0R_0$, the short-circuit current is $I_{sc}=I_0$, and their 
+  ratio is $R_0$.
+\end{itemize}
+\end{comment}
+
+\htmladdimg{../figures/InternalResistance.gif}
+%\htmladdimg{../figures/InternalResistance1.png}
+
+While this method can be used to find the internal resistance $R_0$ 
+without knowing either $I_0$ or $V_0$ in theory, it may not be practical, 
+as the short circuit current is difficult to get (the voltage source may 
+be damaged). Instead, we can find some other two voltages and currents 
+$V_i$ and $I_i$ ($i=1,2$) corresponding to two load resistors $R_1$ and 
+$R_2$. Then $R_0$ can be found as the slope of the straight line determined 
+by the two points $(V_1, I_1)$ and $(V_2, I_2)$. We see that the previous 
+method can be considered as a special case when $R_1=\infty$ (open circuit) 
+and $R_2=0$ (short circuit).
+
+{\bf Example 1:} 
+
+A given voltage source of $V_0=10V$ and $R_0=10\Omega$ can be converted to a 
+current source of $I_0=V_0/R_0=1A$ with the same $R_0$ (and vice versa). A load 
+of $R_L=40\Omega$ receives from this energy source a voltage $V_L=8V$ (80\% of 
+the voltage source) and a current $I_L=0.2A$ (20\% of the current source). As 
+the energy source has a low internal resistance $R_0$, it is a good voltage 
+source but a poor current source.
+
+\htmladdimg{../figures/sourceex1.gif}
+\htmladdimg{../figures/PowerSources1.gif}
+
+{\bf Example 2:} 
+
+A given current source of $I_0=1 mA$ and $R_0=8 K\Omega$ can be converted to a 
+voltage source of $V_0=I_0 R_0=8V$ with the same $R_0$ (and vice versa). A load 
+of $R_L=2 K\Omega$ receives from this energy source a voltage $V_L=1.6V$ (20\%
+of the voltage source) and a current $I_L=0.8 mA$ (80\% of the current source). 
+As energy source has a high internal resistance $R_0$, it is a good current 
+source but a poor voltage source.
+				   
+\htmladdimg{../figures/sourceex2.gif}
+\htmladdimg{../figures/PowerSources2.gif}
+
+{\bf Power Delivery/Absorption}
+
+\begin{itemize}
+\item {\bf Voltage source}
+  \begin{itemize}
+  \item If the direction of the current $I$ in a circuit is such that it 
+    goes internally through a voltage source $V$ from its low potential 
+    (-) to high (+), and externally through the rest of the circuit from
+    high to low, then the polarities of the voltage and the current are
+    consistent (both positive or negative depending on the assumed 
+    polarity), and the source is delivering power $W=VI$.
+  \item If the direction of the current is reversed, then the power 
+    delivered $W=-VI$ will be negative, i.e., the voltage source is actually 
+    receiving power. A typical example is the rechargeable battery in your 
+    car that works in either of the two states.
+  \end{itemize}
+\item {\bf Current source}
+  \begin{itemize}
+  \item If the polarity of the voltage $V$ across a current 
+    source is such that the head of the arrow of the current source is
+    at high potential (+) and the tail of the arrow is at low potential (-),
+    then the polarity of the voltage and the current is consistent, and 
+    the current source is delivering power $W=VI$.
+  \item If the direction of the current is reversed, then the power 
+    delivered $W=-VI$ will be negative, i.e., the current source is actually 
+    receiving power. 
+  \end{itemize}
+\end{itemize}
+
+{\bf Example 3:}
+
+The current in a circuit composed of an ideal voltage source $V_0=5\,V$ 
+and a resistor $R=5\Omega$ is $I=V/R=1\,A$. The power consumption of the
+resistor and voltage source are $W_R=I^2R=V^2/R=IV=5$ and $W_V=-IV=-5$,
+respectively. The negative value of $W_V$ indicates the power is actually
+not consumed but generated by the voltage source (converted from other 
+forms of energy, e.g., chemical, mechanical, etc.)
+
+{\bf Example 4:} 
+    
+In the circuit shown below, the ideal current source is $I_0=1A$, and the 
+ideal voltage source is $V_0=2V$, the resistor is $R=3\Omega$. Find the
+current through and voltage across each of the three components. Find the 
+power delivered, absorbed, or dissipated by each of the three components.
+
+\htmladdimg{../figures/powerdeliveryexample.gif}
+
+The current source provides $I_0=1A$ current through the left branch 
+(upward), while the voltage source provides $V_0=2V$ across all three
+components. The current through $R$ is $2V/3\Omega=2/3A$ (downward), 
+by KCL, the current through the voltage source is $I_v=1-2/3=1/3A$. 
+We therefore have:
+
+\begin{itemize}
+\item Power dissipated by $R$ is $P_R=V_0^2/R=4/3\;W$,
+\item Power received by voltage source is $P=V_0I_V=2/3\;W$.
+\item Power delivered by current source is $P=V_0I_0=2\;W$ $(2/3+4/3=2)$.
+\end{itemize}
+
+(Homework) Redo the above with the polarity of $V_0$ reversed. Find:
+\begin{itemize}
+\item Power dissipated by $R$: 
+\item Power received/delivered by voltage source:
+\item Power delivered/received by current source:
+\end{itemize}
+Verify your results so that total power delivered is equal to total
+power received and dissipated.
+
+\htmladdnormallink{Answer}{../ch1_sub2/index.html}
+
+{\bf Comment:} While various voltage sources such as batteries are common 
+in everyday life, current sources do not seem to be widely available. One
+type of current source is solar-cell, which generates current proportional
+to the intensity of the incoming light. Also, certain transistor circuits
+are designed to output constant current. Moreover, as discussed above, any
+voltage source can be converted into a current source. For example, a 
+current source with $I_0=1$ mA and $R_0=1\;M\Omega$ can be implemented
+by a voltage source of $V_0=1000\; V$ in series with $R_0=1\;M\Omega$.
+
+
+{\bf Example 5} (Homework)
+
+\htmladdimg{../figures/sourcemeter.gif}
+
+A realistic voltage source (e.g., a battery) can be modeled as an ideal 
+voltage source $V_s$ in series with an internal resistance $R_s$. Ideally,
+the voltage $V_s$ can be obtained by measuring the open-circuit voltage 
+$V_{oc}$ with a voltmeter
+\[ V_s=V_{oc} \]
+while the internal resistance $R_s$ can be obtained as the ratio of the 
+open-circuit voltage $V_{oc}$ to the shirt-circuit current $I_{sc}$, which 
+can be measured by an ammeter:
+\[ R_s=\frac{V_{oc}}{I_{sc}} \]
+
+However, in reality, any voltmeter has an internal resistance $R_v$ in 
+parallel with the meter, and any ammeter has an internal resistance $R_a$ 
+in series with the meter. For better measurement accuracy, should $R_v$ be
+small or large, how about $R_a$? Why? Give the expression of the measured
+open-circuit voltage $V$ and short-circuit current $I$ in terms of the
+true $R_s$ and $V_s$, as well as $R_v$ and $R_a$.
+
+Assume $V_s=6V, R_s=100\Omega, R_v=10,000 \Omega, R_a=200 \Omega$. What
+are the measured open-circuit voltage $V$, and the short-circuit current 
+$I$? Given $V$, $I$, and the known $R_v$ and $R_a$, how do your get the 
+true $V_s$ and $R_s$ using your method above? Show your numerical computations.
+
+\htmladdnormallink{Answer}{../ch1_sub1/index.html}
+
+Design a method to obtain the true source voltage $V_s$ and source resistance
+$R_s$ by a voltmeter and an ammeter with known $R_v$ and $R_a$. Give the 
+expression of $V_s$ and $R_s$ in terms of the measured open-circuit voltage 
+$V$, short-circuit $I$, and $R_v$ and $R_a$. 
+
+\htmladdnormallink{Answer}{../ch1_sub3/index.html}
+
+
+{\bf Example 6} (Homework)
+
+Usually the internal resistances of the voltmeter and ammeter are not 
+readily known (and the values may change depending on the scale used). 
+As another method to find $R_s$ and $V_s$ of a voltage source, we can 
+measure the voltage $V_L$ across two different load resistors $R_L$ 
+connected to the voltage source. If the values of $R_L$ are significantly
+smaller than that of the internal resistance $R_v$ of the voltmeter, the 
+voltmeter can be considered to be ideal with $R_v\rightarrow \infty$. 
+
+Assume when the load resistor is $R_L=1 k\Omega$, the voltage across it 
+is found to be $V_L=9.09V$, when a different load $R_L=2 k\Omega$ is used 
+and the voltage across it is $V_L=9.52V$. Find $V_s$ and $R_s$ of the 
+voltage source.
+
+\begin{comment}
+{\bf Answer:}
+\[
+V_s\frac{1}{R_s+1}=9.09,\;\;\;\;\;\;V_s\frac{2}{R_s+2}=9.52
+\]
+i.e.,
+\[
+V_s=9.09\,R_s+9.09,\;\;\;\;\;\;\;V_s=4.76\,R_s+9.52
+\]
+Subtracting we get 
+\[
+R_s=\frac{9.52-9.09}{9.09-4.76}=\frac{0.43}{4.33}\approx 0.1\;k\Omega
+\]
+and 
+\[
+V_s=9.09\,R_s+9.09=9.09\times 0.1+9.09=10\,V
+\]
+
+%\htmladdnormallink{Answer}{../ch1_sub1/index.html}
+\end{comment}
+
+
+\subsection*{Source and Load}
+
+Sometimes there is the need to concatenate two circuits in series
+(cascade). Here are some examples: 
+\begin{itemize}
+\item The source is a battery and the load is a resistor.
+\item The source is a sensor and the load is an amplifier.
+\item The source is signal (waveform) generator that produces various
+  waveforms (sinusoids, saw tooth, square wave, etc.), and the load is 
+  an oscilloscope to display such waveforms. 
+\item To amplify some weak signals, two {\em voltage amplifiers} can 
+  be cascaded to achieve greater amplification gain. The first, treated 
+  as the source, generates an output used as the input for the second 
+  one, treated as the load.
+\end{itemize}
+
+As to be discussed later, n amplifier is an {\em active circuit} that
+contains a voltage source $v_{out}=Av_{in}$ that depends on the input 
+voltage $v_{in}$, where $A>1$ is the voltage gain. When two such
+amplifiers are cascaded, $R_{out}$ of the first circuit is the output 
+resistance, $R_{in}$ of the second circuit is the load resistance.
+
+\htmladdimg{../figures/cascade.gif}
+
+\begin{itemize}
+\item {\bf Maximize voltage delivery}
+
+  \htmladdimg{../figures/powermatch.gif}
+
+  Some times we need to maximize the voltage received by the load from 
+  the source. Consider the internal resistance $R_0=R_{out}$, the output 
+  resistance of the source, and the load resistance $R_L=R_{in}$, the 
+  input resistance of the load. As they form a voltage divider, for the
+  load to receive maximize voltage, we want 
+  \begin{itemize}
+  \item The internal resistance $R_0=R_{out}$ needs to be as small as
+    possible, so that little voltage drop across it will be caused even 
+    if the load draws a large current when its $R_L=R_{in}$ is small.
+  \item The load resistance $R_L=R_{in}$ needs to be as large as possible, 
+    so that it draws little current from the source, causing small voltage
+    drop across its output resistance $R_0=R_{out}$, even if it is large.
+  \end{itemize}
+  
+\item {\bf Maximize power delivery}
+
+  Some times we need to maximize the power delivered from the source to 
+  the load. For example, the {\em power amplifier} of a stereo system 
+  needs to deliver maximum power (instead of voltage) to the speakers as 
+  the load. Given the internal resistance $R_0=R_{out}$ of the source and
+  the load resistance $R_L=R_{in}$, the power received by the load is:
+  \[
+  P_L=I^2 R_L=\left(\frac{V_0}{R_0+R_L}\right)^2 R_L	
+  =\frac{V_0^2}{(R_0+R_L)^2} R_L	
+  \]
+  \begin{itemize}
+  \item Given $R_L$, we can minimize $R_0$ to maximize the delivered
+    power $P_L$:  
+    \[
+    P_L=\frac{V_0^2}{(R_0+R_L)^2} R_L \stackrel{R_0\rightarrow 0}{\Longrightarrow}
+    \frac{V_0^2}{R_L}
+    \]
+  \item On the other hand, given $R_0$, we need to find the optimal value 
+    for $R_L$ to maximize $P_L$, by solving the following equation:
+    \[
+    \frac{d}{dR_L} P_L(R_L)
+    =V_0^2\frac{(R_0+R_L)^2-2R_L(R_0+R_L)}{(R_0+R_L)^4}	
+    =V_0^2\frac{R_0-R_L}{(R_0+R_L)^3}=0
+    \]
+    We see that only when $R_L$ is equal to the internal resistance $R_0$,
+    will it receive maximum power.
+  \end{itemize}
+
+  The maximum power received by $R_L=R_0$ is:
+  \[
+  P_L=\frac{V_0^2}{(R_0+R_L)^2} R_L\bigg|_{R_L=R_0}=\frac{V_0^2}{4R_0} 
+  \]
+  the load current is 
+  \[
+  I=\frac{V_0}{R_0+R_L}=\frac{V_0}{2R_0}
+  \]
+  and the total power delivered by the voltage source $V_0$ is 
+  \[
+  P_0=V_0 I=\frac{V_0^2}{2R_0}=2P_L 
+  \]
+  The internal resistance $R_0=R_L$ consumes the same amount of power 
+  as the load $R_L=R_0$. The figure below shows the power $P_L$ consumed 
+  by the load resistor $R_L=x$ when $R_0=2$. We see that if $R_L$ is 
+  either smaller than or greater than $R_0$, $P_L$ is reduced.
+
+  \htmladdimg{../figures/maxpower.gif}
+
+  The efficiency of the circuit is defined as the ratio of the power 
+  delivered to the load $R_L$ and the power generated by the source $P_0$:
+  \[
+  \eta=\frac{P_L}{P_0}=\frac{I^2 R_L}{I^2 (R_0+R_L)}=\frac{R_L}{R_0+R_L}
+  \]
+  When $R_L=R_0$ and the load receives maximal power, but the efficiency 
+  is only $50\%$. We can improve the efficiency by increasing $R_L$ so 
+  that $\eta$ approaches 1 when $R_L \gg R_0$. But in this case the 
+  power received by the load is reduced. 
+
+  For example, if $R_L=2R_0$, the efficiency becomes:
+  \[
+  \eta=\frac{R_L}{R_0+R_L}\bigg|_{R_L=2R_0}=\frac{2}{3}>\frac{1}{2}	
+  \]
+  but the power received by the load is less than the maximum power:
+  \[
+  P_L=I^2R_L=\frac{V_0^2}{(R_0+R_L)^2}R_L=V_0^2\frac{2R_0}{(R_0+2R_0)^2}
+  =\frac{2V_0^2}{9R_0} < \frac{V_0^2}{4R_0} 
+  \]
+  In some applications with small power, efficiency can be sacrificed to 
+  maximize the load power. 
+
+  \begin{comment}
+  For example, in an audio system, it is important for the speaker's 
+  impedance to match the output impedance of the power amplification 
+  circuit, so that the speaker can receive maximum power. As the 
+  resistance of many speakers is $8\Omega$, all audio amplifiers need
+  to be designed to have an $8\Omega$ output resistance in order to 
+  deliver maximum power to the speaker. 
+
+  Also, the {\em characteristic resistance} of most transmission 
+  lines (e.g., coaxial cables to conduct high frequency signals) is 
+  $50\Omega$, all signal generators need to be designed to have a 
+  $50\Omega$ output resistance to avoid reflection. 
+  \end{comment}
+
+\item {\bf Minimize loss in power transmission line:} 
+
+  \htmladdimg{../figures/powerdelivery.gif}
+
+  A power transmission line delivers power from power generation (e.g., 
+  a power plant) to power consumption (e.g., a city). The concern is no
+  longer delivering maximum power (as long as needed power is delivered),
+  but to achieve maximum efficiency in the sense that the power loss 
+  along the power transmission line is minimized.
+
+  We denote the resistance of the transmission line by $R_T$ and the total 
+  load resistance of the power consumption by $R_L$. Also denote the voltage
+  on the consumer's side by $V_L$. We have
+  \begin{itemize}
+  \item Power consumption by the load $R_L$: 
+    \[ 
+    P_L=V_L I\;\;\;\;\;\; \mbox{i.e.}\;\;\;\;\;\;\; I=\frac{P_L}{V_L}
+    \]
+  \item Power dissipation along the transmission line $R_T$: 
+    \[
+    P_T=R_T I^2=R_T \;\left(\frac{P_L}{V_L}\right)^2=R_T \;\frac{P_L^2}{V_L^2}
+    \]
+  \end{itemize}
+  As the transmission resistance $R_T$ is fixed (already minimized) and 
+  the power consumption $P_L$ is to be guaranteed, to minimize the power
+  loss $P_T$ along the transmission line we can only increase the voltage
+  $V_L$. For example, when the voltage is increased 10 times, the power 
+  loss will be reduced to 1/100. In practice, the voltage $V_L$ can be 
+  as high as a few hundred $kV$ (69 kV, 115 kV, 230 kV, 500 kV, 765 kV).
+
+\end{itemize}
+
+{\bf Summary: } The circuits in the three examples above are essentially
+the same, i.e., they all have a voltage source $V_0$ with an internal 
+resistance $R_0$ (or $R_T$), and a load resistance $R_L$. However, the 
+circuit will be optimized differently according to different requirements:
+
+\htmladdimg{../figures/source_load.gif}
+
+\begin{itemize}
+\item {\bf Maximize voltage delivery (or minimize loading effect)}:
+  minimize output resistance $R_0$, maximize input resistance $R_L$.
+\item {\bf Maximize power delivery ($50\%$ of total power): } 
+  match the output and input resistances $R_L =R_0$ 
+\item {\bf Minimize power dissipation in transmission: } 
+  increase output voltage $V_L$.
+\end{itemize}
+
+\subsection*{Review and Summary}
+
+\htmladdnormallink{Review and Summary (A Handout)}{../handout1/index.html}
+
+\end{document}
+
+
+	
+
+	
+

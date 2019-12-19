@@ -1,0 +1,119 @@
+\documentstyle[11pt]{article}
+\usepackage{html}
+\begin{document}
+\begin{center}
+{\Large \bf E84 Home Work 10}
+\end{center}
+\begin{enumerate}
+
+\item The circuit shown in the figure contains a voltage source $V=10V$,
+two resistors $R_1=300\Omega$ and $R_2=200\Omega$, and a silicon diode.
+Find the voltage $V_D$ across and the current $I_D$ through the diode.
+Solve this problem in two different methods: (a) assume voltage $V_D=0.7$ 
+(as the diode is always forward biased), and (b) use the graphic approach
+to find the intersection of the load line and the diode equation:
+\[ I_D=I_0 ( e^{V_D/\eta V_T}-1 ) \]
+Sketch the plot of the two curves and estimate the solution $(I_D,V_D)$
+at their intersection. (Note that you can assume $I_0=10^{-10}$ and 
+$V_T=0.026V$ at room temperature 300K.)
+
+\htmladdimg{../hw8a.gif}
+
+{\bf Solution:} As the diode is forward biased, the voltage across it
+is 0.7V, and the current through $R_2$ is $I_2=0.7V/200\Omega=3.5mA$, 
+the current through $R_1$ is $I_1=(10-0.7)/300=31 mA$, and 
+$I_D=I_1-I_2=31-3.5=27.5 mA$.
+
+Also, using Thevenin's theorem, we have $R_T=R_1||R_2=300||200=120$, 
+$V_T=10\times 200/(300+200)=4$, and then the linear equation
+\[
+I_D=\frac{V_T-V_D}{R_T}
+\]
+Plotting both equations, we get
+
+\htmladdimg{../hw8g.gif}
+
+\item The circuit shown in the figure contains a voltage source $V=10V$,
+three resistors $R_1=300\Omega$, $R_2=200\Omega$, and $R_3=100\Omega$, 
+and two silicon diode. Find the voltage across the two parallel branches.
+
+\htmladdimg{../hw8c.gif}
+
+{\bf Solution:} As the diode is forward biased, the voltage across it
+is 0.7V. Assume the voltage in question is $x$, then we have the following
+equation:
+\[
+\frac{10-x}{300}=\frac{x-0.7}{200}+\frac{x-0.7}{100}	
+\]
+which can be solved for $x$ to get the voltage to be $2.39V$.
+Alternatively, the voltage can also be found as
+\[
+\frac{R_2||R_3}{R_1+R_2||R_3}(10-0.7)+0.7=2.39
+\]
+
+\item The circuit shown in the figure is a converter (adaptor) based on
+a full-wave rectifier, which gets an AC voltage input of 115V 60 Hz, and
+produces a 12V DC output. The voltage variation or ripple of the output
+should not exceed 5\% when the load current is no more than 2A. Design 
+the converter in terms of the turn ratio of the transformer and the 
+value of the capacitor. 
+
+\htmladdimg{../hw8d.gif}
+
+{\bf Solution:} This is a full-wave rectifier circuit, which turns the
+negative half cycle of the input to positive, so that the period of the
+output is $T=1/120=0.0083S$. The charge of the capacitor reduced during
+this period is $Q=IT=2A\times 0.083 S=0.0167 C$. If the voltage across
+the capacitor is dropped by less than $V_C=0.05\times 12=0.6V$, its 
+capacitance has to be greater than $C=Q/V_C=0.0167/0.6=0.0278 F$.
+
+The peak voltage of input is $115\times \sqrt{2}=162.6$, the peak voltage
+of the output is $12V$. If the 1.4 V voltage drop across the two diodes 
+is considered small enough when compared with the required 12 V, then
+the turn ratio of the transformer is $162.6/12=13.55$. Otherwise, the 
+the turn ratio is $162.6/(12+1.4)=12.13$.
+
+\item The input voltage to the circuit in the following figure is
+$v(t)=10 \sin (\omega t)$. The two DC voltages are both 5V. Sketch the
+waveform of the output voltage $V_{out}$.
+
+\htmladdimg{../hw8e.gif}
+
+{\bf Solution:} When $v(t)$ is in the range from -5.7V to 5.7V, neither
+of the two diode branches is conducting and no current is drawn from the
+voltage source. As the result, the output is identical to the input.
+When $v(t)>5.7$, the diode branch on the right is conducting and it
+will hold the output at 5.7V. When $v(t)<5.7$, the diode branch on the
+left is conducting and it will hold the output at -5.7V.
+
+\htmladdimg{../hw_clipping.gif}
+ 
+\item Assume each of the input voltages $V_1$ and $V_2$ takes one of
+two values, either 0V or 5V. Find the output voltage $V_{out}$ in the
+following combinations of two input. As always, all voltages are 
+measured with respective to ground, although it is not explicitly 
+shown.
+
+{\bf Solution:}  If at least one of the inputs is 0V, the corresponding
+diode is conducting and the output voltage is held to 0.7V. Only when
+both inputs are 5V, both diodes are cut off and draw no current from the
+voltage source. Since there is no voltage drop across the resistor, the
+output voltage is the same as the voltage source of 5V. 
+
+This circuit can be used to implement logic AND, i.e. only when both 
+input $V_1$ AND input $V_2$ are high (for true or logical 1), will the
+output be high (true or logical 1). Otherwise the output is low (false
+or logical 0).
+
+\begin{tabular}{c||c c c c}\hline\hline
+$V_1$ & 0V & 0V & 5V & 5V \\ \hline
+$V_1$ & 0V & 5V & 0V & 5V \\ \hline
+$V_{out}$ & 0.7V & 0.7V & 0.7V & 5V  &   \\
+\end{tabular}
+
+\htmladdimg{../hw8f.gif}
+
+
+\end{enumerate}
+
+\end{document}

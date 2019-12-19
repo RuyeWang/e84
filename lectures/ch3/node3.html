@@ -1,0 +1,605 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Phasor Representation of Sinusoidal Variables</TITLE>
+<META NAME="description" CONTENT="Phasor Representation of Sinusoidal Variables">
+<META NAME="keywords" CONTENT="ch3">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="ch3.css">
+
+<LINK REL="next" HREF="node4.html">
+<LINK REL="previous" HREF="node2.html">
+<LINK REL="next" HREF="node4.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node4.html">Impedance and Generalized Ohm's</A>
+<B> Up:</B> <A
+ HREF="node1.html">Chapter 3: AC Circuit</A>
+<B> Previous:</B> <A
+ HREF="node2.html">Sinusoidal Functions</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION00012000000000000000">
+Phasor Representation of Sinusoidal Variables</A>
+</H2>
+
+<P>
+In the following discussion about AC circuit analysis, all sinusoidal
+variables (currents and voltages) are assumed to be of the same 
+frequency. In general, arithmetic operations of sinusoidal functions 
+are not convenient as they will involve using trigonometric identities.
+For example, try the following addition of two sinusoidal signals of the
+same frequency:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+A\cos(\omega t+\phi)+B\cos(\omega t+\psi)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img49.svg"
+ ALT="$\displaystyle A\cos(\omega t+\phi)+B\cos(\omega t+\psi)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">16</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+(<A ID="tex2html2"
+  HREF="http://fourier.eng.hmc.edu/e84/lectures/ch3/node23.html">review of complex arithmetic</A>)
+
+<P>
+However, we can consider such sinusoidal functions as real (or imaginary)
+parts of some rotating vectors in the complex plane, and their arithmetic
+operations (addition, multiplication, etc.) can be more conveniently
+carried out based on <EM>phasor</EM> representations of the sinusoidal
+variables.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/RotatingVectors.gif"
+ ALT="RotatingVectors.gif">
+
+<P>
+The sum of the two sinusoidal function can now be found as the real part of
+the rotating vector sum:
+<BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+x(t)+y(t)&=&A\cos(\omega t+\phi)+B\cos(\omega t+\psi)
+  \nonumber\\
+  &=&Re[\dot{X}e^{j\omega t}]+Re[\dot{Y}e^{j\omega t}]
+  =Re[(\dot{X}+\dot{Y})e^{j\omega t}]
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img50.svg"
+ ALT="$\displaystyle x(t)+y(t)$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img49.svg"
+ ALT="$\displaystyle A\cos(\omega t+\phi)+B\cos(\omega t+\psi)$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img51.svg"
+ ALT="$\displaystyle Re[\dot{X}e^{j\omega t}]+Re[\dot{Y}e^{j\omega t}]
+=Re[(\dot{X}+\dot{Y})e^{j\omega t}]$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">17</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+
+where <!-- MATH
+ $\dot{X}=Ae^{j\phi}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.12ex; " SRC="img52.svg"
+ ALT="$\dot{X}=Ae^{j\phi}$"></SPAN> and <!-- MATH
+ $\dot{Y}=B e^{j\psi}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.12ex; " SRC="img53.svg"
+ ALT="$\dot{Y}=B e^{j\psi}$"></SPAN> are the phasor 
+representations of the two sinusoidal functions. The addition can be more 
+easily carried out in the phasor form as vectors in the complex plane, 
+than in the time domain.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/phasors.png"
+ ALT="phasors.png">
+
+<P>
+Specifically, consider two sinusoidal functions 
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left\{ \begin{array}{l}
+    x(t)=A\cos(\omega t+\phi)=Re[A e^{j\phi}e^{j\omega t}]=Re[\dot{X}e^{j\omega t}]\\
+    y(t)=B\cos(\omega t+\psi)=Re[B e^{j\psi}e^{j\omega t}]=Re[\dot{Y}e^{j\omega t}]
+  \end{array} \right.
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.27ex; vertical-align: -2.51ex; " SRC="img54.svg"
+ ALT="$\displaystyle \left\{ \begin{array}{l}
+x(t)=A\cos(\omega t+\phi)=Re[A e^{j\phi}...
+...\psi)=Re[B e^{j\psi}e^{j\omega t}]=Re[\dot{Y}e^{j\omega t}]
+\end{array} \right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">18</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+where <!-- MATH
+ $\dot{X}=A e^{j\phi}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.12ex; " SRC="img52.svg"
+ ALT="$\dot{X}=Ae^{j\phi}$"></SPAN> and <!-- MATH
+ $\dot{Y} e^{j\psi}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.12ex; " SRC="img55.svg"
+ ALT="$\dot{Y} e^{j\psi}$"></SPAN> are two vectors in 
+the complex plane with different magnitudes and initial phases called 
+<EM>phasors</EM> 
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\dot{X}=Ae^{j\phi}=A\;\angle\phi,
+  \;\;\;\;\;\;\;\;\;\;\;\dot{Y}=Be^{j\psi}=B\;\angle\psi
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.57ex; " SRC="img56.svg"
+ ALT="$\displaystyle \dot{X}=Ae^{j\phi}=A\;\angle\phi,
+\;\;\;\;\;\;\;\;\;\;\;\dot{Y}=Be^{j\psi}=B\;\angle\psi$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">19</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+When multiplied by <!-- MATH
+ $e^{j\omega t}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.12ex; " SRC="img57.svg"
+ ALT="$e^{j\omega t}$"></SPAN>, these vectors start rotating CCW in the
+complex plane. As the two sinusoidal functions have the same frequency, 
+the two vectors are rotating at the same rate. If observed in a reference
+frame rotating at the same rate, these vectors become standing still, 
+i.e., we can simply drop the time-varying component <!-- MATH
+ $e^{j\omega t}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.12ex; " SRC="img57.svg"
+ ALT="$e^{j\omega t}$"></SPAN>, and 
+represent the functions in terms of their phasors representing their
+amplitudes and phases only.
+
+<P>
+On the other hand, given such a phasor representation, we can get the 
+real sinusoidal function back by first multiplying <!-- MATH
+ $e^{j\omega t}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.12ex; " SRC="img57.svg"
+ ALT="$e^{j\omega t}$"></SPAN> and then
+taking the real part:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+x(t)=Re[\dot{X} e^{j\omega t}]=Re[A e^{j\phi} e^{j\omega t}]=A\cos(\omega t+\phi)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img58.svg"
+ ALT="$\displaystyle x(t)=Re[\dot{X} e^{j\omega t}]=Re[A e^{j\phi} e^{j\omega t}]=A\cos(\omega t+\phi)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">20</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+A phasor may be represented simply by a capital letter (e.g., <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img59.svg"
+ ALT="$X$"></SPAN>, 
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img60.svg"
+ ALT="$V$"></SPAN> or <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img61.svg"
+ ALT="$I$"></SPAN>) if no confusion will be caused. Sometimes the RMS value
+<!-- MATH
+ $A_{rms}=A/\sqrt{2}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img62.svg"
+ ALT="$A_{rms}=A/\sqrt{2}$"></SPAN>, instead of the peak value <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img9.svg"
+ ALT="$A$"></SPAN>, is used in phasor.
+
+<P>
+<B>Example</B> 
+
+<P>
+Consider three sinusoidal voltage sources <!-- MATH
+ $v_1(t)=6\sqrt{2}\;\sin(\omega t)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img63.svg"
+ ALT="$v_1(t)=6\sqrt{2}\;\sin(\omega t)$"></SPAN>,
+<!-- MATH
+ $v_2(t)=12\sqrt{2}\;\sin(\omega t+\pi/2)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img64.svg"
+ ALT="$v_2(t)=12\sqrt{2}\;\sin(\omega t+\pi/2)$"></SPAN> and 
+<!-- MATH
+ $v_3(t)=4\sqrt{2}\;\sin(\omega t-\pi/2)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img65.svg"
+ ALT="$v_3(t)=4\sqrt{2}\;\sin(\omega t-\pi/2)$"></SPAN> in series. According to the KVL, the 
+overall voltage will be the algebraic sum of the three:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v(t)=v_1(t)+v_2(t)+v_3(t)
+  =6\sqrt{2}\;\sin(\omega t)+12\sqrt{2}\;\sin(\omega t+\pi/2)
+  +4\sqrt{2}\;\sin(\omega t-\pi/2)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.25ex; vertical-align: -0.70ex; " SRC="img66.svg"
+ ALT="$\displaystyle v(t)=v_1(t)+v_2(t)+v_3(t)
+=6\sqrt{2}\;\sin(\omega t)+12\sqrt{2}\;\sin(\omega t+\pi/2)
++4\sqrt{2}\;\sin(\omega t-\pi/2)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">21</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/sinusoidalsum.gif"
+ ALT="sinusoidalsum.gif">
+
+<P>
+While the addition of these sinusoidal functions is not easy to carry out
+(still remember all the trigonometric identities?), it is quite straight 
+forward to find the vector sum if the voltages are represented as phasors:
+<BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+\dot{V}&=&\dot{V}_1+\dot{V}_2+\dot{V}_3
+  =\sqrt{2}(6\angle 0^\circ+12\angle 90^\circ+4\angle -90^\circ)
+  \nonumber \\
+  &=&\sqrt{2}(6+j8)=10\sqrt{2} \angle \left[\tan^{-1}(8/6)\right]
+  =10\sqrt{2}\angle\; 53.1^\circ
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.55ex; vertical-align: -0.12ex; " SRC="img67.svg"
+ ALT="$\displaystyle \dot{V}$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 3.25ex; vertical-align: -0.70ex; " SRC="img68.svg"
+ ALT="$\displaystyle \dot{V}_1+\dot{V}_2+\dot{V}_3
+=\sqrt{2}(6\angle 0^\circ+12\angle 90^\circ+4\angle -90^\circ)$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 3.48ex; vertical-align: -0.93ex; " SRC="img69.svg"
+ ALT="$\displaystyle \sqrt{2}(6+j8)=10\sqrt{2} \angle \left[\tan^{-1}(8/6)\right]
+=10\sqrt{2}\angle\; 53.1^\circ$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">22</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+
+The resulting voltage is <!-- MATH
+ $v(t)=10\sqrt{2}\;sin(\omega t+53.1^\circ)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img70.svg"
+ ALT="$v(t)=10\sqrt{2}\;sin(\omega t+53.1^\circ)$"></SPAN>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/vectorsum.gif"
+ ALT="vectorsum.gif">
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/sinusoidalsum1.gif"
+ ALT="sinusoidalsum1.gif">
+
+<P>
+<B>Phasor and the Fourier transform</B>
+
+<P>
+A sinusoidal function <!-- MATH
+ $x(t)=A\cos(\omega t+\phi)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img71.svg"
+ ALT="$x(t)=A\cos(\omega t+\phi)$"></SPAN> can be expressed in
+either Fourier transform (Fourier series) or phasor representation:
+<BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+x(t)&=&A\cos(\omega t+\phi)=Re[Ae^{j\phi}\;e^{j\omega t}]=Re[\dot{X} e^{j\omega t}]
+  \;\;\;\;\;\mbox{(phasor)}
+  \nonumber \\
+  &=&\left(\frac{A}{2}e^{j\phi}\right)e^{j\omega t}
+  +\left(\frac{A}{2}e^{-j\phi}\right)e^{-j\omega t}
+  =X_1 e^{j\omega t}+X_{-1}e^{-j\omega t}\;\;\;\;\;\mbox{(Fourier coefficients)}
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img72.svg"
+ ALT="$\displaystyle x(t)$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img73.svg"
+ ALT="$\displaystyle A\cos(\omega t+\phi)=Re[Ae^{j\phi}\;e^{j\omega t}]=Re[\dot{X} e^{j\omega t}]
+\;\;\;\;\;$">(phasor)</TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img74.svg"
+ ALT="$\displaystyle \left(\frac{A}{2}e^{j\phi}\right)e^{j\omega t}
++\left(\frac{A}{2}e^{-j\phi}\right)e^{-j\omega t}
+=X_1 e^{j\omega t}+X_{-1}e^{-j\omega t}\;\;\;\;\;$">(Fourier coefficients)</TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">23</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+
+We see that the phasor and the Fourier coefficients are essentially 
+the same, in the sense that they are both coefficients representing the 
+amplitude and phase of the complex exponential function <!-- MATH
+ $e^{j\omega t}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.12ex; " SRC="img57.svg"
+ ALT="$e^{j\omega t}$"></SPAN>:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\dot{X}=Ae^{j\phi},\;\;\;\;\;\;\;\;\;\;\;\;\;\;
+  X_1=\frac{A}{2}e^{j\phi},\;\;\;X_1=\frac{A}{2}e^{-j\phi}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.11ex; vertical-align: -1.71ex; " SRC="img75.svg"
+ ALT="$\displaystyle \dot{X}=Ae^{j\phi},\;\;\;\;\;\;\;\;\;\;\;\;\;\;
+X_1=\frac{A}{2}e^{j\phi},\;\;\;X_1=\frac{A}{2}e^{-j\phi}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">24</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+In both cases the real time function can be obtained (inverse Fourier
+transform) by either adding the two complex vectors <!-- MATH
+ $X_1e^{j\omega t}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.46ex; " SRC="img76.svg"
+ ALT="$X_1e^{j\omega t}$"></SPAN> and 
+<!-- MATH
+ $X_{-1}e^{-j\omega t}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.66ex; " SRC="img77.svg"
+ ALT="$X_{-1}e^{-j\omega t}$"></SPAN> rotating in opposite directions (CCW and CW), or simply
+taking the real part of the complex variable <!-- MATH
+ $\dot{X}e^{j\omega t}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.12ex; " SRC="img78.svg"
+ ALT="$\dot{X}e^{j\omega t}$"></SPAN>
+
+<P>
+<B>Generalized Ohm's law and Kirchhoff's Laws</B>
+
+<P>
+In general, all methods such as Ohm's law and Kirchhoff's Laws used for DC 
+circuits composed of resistors can be generalized to AC circuits composed 
+of capacitors, inductors, as well as resistors, all represented by their
+impedances. Also, if we assume all voltages and currents in a circuit are 
+sinusoids of same frequency <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img10.svg"
+ ALT="$\omega$"></SPAN>, they can be represented as complex 
+phasors.
+
+<P>
+The Ohm's law can be generalized to become:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Z=\frac{\dot{V}}{\dot{I}},\;\;\;\;\;\;\dot{I}=\frac{\dot{V}}{Z},
+  \;\;\;\;\;\dot{V}=Z\dot{I}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.00ex; " SRC="img79.svg"
+ ALT="$\displaystyle Z=\frac{\dot{V}}{\dot{I}},\;\;\;\;\;\;\dot{I}=\frac{\dot{V}}{Z},
+\;\;\;\;\;\dot{V}=Z\dot{I}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">25</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+and the Kirchhoff's laws can now be stated as:
+
+<UL>
+<LI><B>Current Law (KCL):</B> The vector sum of the currents into a node
+  is zero <!-- MATH
+ $\sum_k \dot{I}_k=0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.25ex; vertical-align: -0.81ex; " SRC="img80.svg"
+ ALT="$\sum_k \dot{I}_k=0$"></SPAN>.
+</LI>
+<LI><B>Voltage Law (KVL):</B> The vector sum of the voltages around a loop 
+  is zero <!-- MATH
+ $\sum_k \dot{V}_k=0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.25ex; vertical-align: -0.81ex; " SRC="img81.svg"
+ ALT="$\sum_k \dot{V}_k=0$"></SPAN>.
+</LI>
+</UL>
+
+<P>
+<B>Solving AC circuit by phasor method</B>
+
+<P>
+If only the steady state solutions of the DE describing an AC circuit is of 
+interest, the phasor method can be used to solve the problem algebraically 
+without solving the DEs. Specifically, all sinusoidal variables are represented 
+as phasors in terms of their amplitudes and phases, and all components in the 
+circuit (L and C, as well as R) are represented by their impedances, so that 
+all the laws (Ohm's law, KCL and KVL, current and voltage dividers, parallel 
+and series combinations of components) and methods (loop current and node 
+voltage methods, Thevenin's and Norton's theorems, etc.) discussed for DC 
+circuit can be applied.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/phasordiagram.gif"
+ ALT="phasordiagram.gif">
+
+<P>
+Operations on sinusoidal variables based on the trigonometric identities
+are in general lengthy and tedious. The phasor method can convert such 
+sinusoidal variables to vectors in complex plane and thereby simplify the 
+operations. 
+
+<P>
+The phasor represents the amplitude (effective or RMS value) and phase of a 
+sinusoidal function, but leaves out its frequency as it is known to be the
+same for all sinusoidal variables in the system.
+
+<P>
+Specifically here are the three steps of the phasor method for arithmetic 
+operation of two sinusoidal functions <!-- MATH
+ $x(t)=A\cos(\omega t+\phi)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img71.svg"
+ ALT="$x(t)=A\cos(\omega t+\phi)$"></SPAN> and 
+<!-- MATH
+ $y(t)=B\cos(\omega t+\psi)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img82.svg"
+ ALT="$y(t)=B\cos(\omega t+\psi)$"></SPAN> of the same frequency:
+
+<UL>
+<LI>Represent each sinusoidal function as a phasor:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+x(t)=A\;\cos(\omega t+\phi)=Re[A\,e^{j(\omega t+\phi)}]
+    =Re[A e^{j\phi} e^{j\omega t}] =Re[\dot{X} e^{j\omega t}]
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img83.svg"
+ ALT="$\displaystyle x(t)=A\;\cos(\omega t+\phi)=Re[A\,e^{j(\omega t+\phi)}]
+=Re[A e^{j\phi} e^{j\omega t}] =Re[\dot{X} e^{j\omega t}]$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">26</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+where <!-- MATH
+ $\dot{X}=A e^{j\phi}=A e^{j\phi}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.12ex; " SRC="img84.svg"
+ ALT="$\dot{X}=A e^{j\phi}=A e^{j\phi}$"></SPAN> is the phasor of <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img85.svg"
+ ALT="$x(t)$"></SPAN>. 
+  Similarly we also get <!-- MATH
+ $\dot{Y}=B e^{j\psi}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.12ex; " SRC="img53.svg"
+ ALT="$\dot{Y}=B e^{j\psi}$"></SPAN>.
+</LI>
+<LI>Carry out any arithmetic operation (represented by *) on the phasors:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\dot{Z}=\dot{X}\;*\;\dot{Y}=A e^{j\phi} \;*\; B e^{j\psi}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.12ex; " SRC="img86.svg"
+ ALT="$\displaystyle \dot{Z}=\dot{X}\;*\;\dot{Y}=A e^{j\phi} \;*\; B e^{j\psi}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">27</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>Convert resulting phasor back to a time function:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+z(t)=x(t)\;*\;y(t)=Re[\dot{Z} e^{j\omega t}]
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img87.svg"
+ ALT="$\displaystyle z(t)=x(t)\;*\;y(t)=Re[\dot{Z} e^{j\omega t}]$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">28</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+</UL>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/PhasorBlockDiagram1.png"
+ ALT="PhasorBlockDiagram1.png">
+
+<P>
+The operations on the original sinusoidal variables require solving 
+differential equations, while the operations on their phasors only require 
+solving algebraic equations. This is the main advantage of the phasor method.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node4.html">Impedance and Generalized Ohm's</A>
+<B> Up:</B> <A
+ HREF="node1.html">Chapter 3: AC Circuit</A>
+<B> Previous:</B> <A
+ HREF="node2.html">Sinusoidal Functions</A></DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

@@ -1,0 +1,231 @@
+\documentstyle[12pt]{article}
+\usepackage{html}
+\textwidth 6.0in
+\topmargin -0.5in
+\oddsidemargin -0in
+\evensidemargin -0.5in
+% \usepackage{graphics}  
+\begin{document}
+
+\section*{Summary of First Half}
+
+\section*{Basic Laws}
+\begin{itemize}
+\item Non-ideal voltage source: $V_0$ in series with $R_0$
+\item Non-ideal current source: $I_0$ in parallel with $R_0$
+\item Conversion between current and voltage sources:
+  \[ 
+  R_T=R_N,\;\;\;\;V_T=I_N R_N,\;\;\;\;\;I_N=V_T/R_T
+  \]
+\item The source-load view of circuit: The source $V_s$ in series with 
+  $R_s$; the load $R_L$. 
+
+  The voltage across $R_L$ and the current through $R_L$ are related by
+  \[
+  \left\{\begin{array}{ll}  V=V_s-IR_s & \mbox{dictated by source}\\
+  V=IR_L & \mbox{dictated by Load}\end{array}\right.
+  \]
+  The load $R_L$ can be replaced by any other component, such as non-linear
+  diode, transistor, etc.
+  
+\end{itemize}
+
+\section*{DC circuit analysis}
+
+\begin{itemize}
+\item loop-current method based on KVL
+\item node-voltage method based on KCL
+\item Superposition principle
+\item Thevenin's theorem (convert any circuit to a voltage source)
+\item Norton's theorem (convert any circuit to a current source)
+\item Conversion between the voltage and current sources.
+\item Delta-Y conversion
+\item A two-port network can be modeled in terms of three parameters: 
+  \begin{itemize}
+  \item Input resistance $R_{in}=v_{in}/i_{in}$, 
+  \item Output resistance $R_{out}=v_{oc}/i_{sc}$,
+  \item A voltage source: $A v_{in}$ in series with $R_{out}$, or
+    a current source: $I=A v_{in}/R_{out}$ in parallel with $R_{out}$.
+  \end{itemize}
+  Transistors, op-amps, and any potentially complicated circuit that takes
+  an input and generates an output can be examples of such two-port networks.
+\item The loading effact, the voltage across the load $R_L$ $V=V_s-IR_s$ is
+  lower than the open-voltage voltage of the source.
+  
+\end{itemize}
+
+
+\section*{AC circuit analysis}
+
+\begin{itemize}
+\item Impedance $Z_R=R$, $Z_L=j\omega L$ and $Z_C=1/j\omega C$.
+\item Phasor representation of sinusoidal voltage and current
+\item Based on impedances and phasors, all AC circuits in steady 
+  state can be solved by the same methods used for DC circuit
+  analysis.
+\item First-order system (RL or RC)
+  \begin{itemize}
+  \item Particular solution $x_p(t)$ (by phasor/impedance method)
+  \item Homogeneous solution $x_h(t)$ (by solving DE)
+  \item Complete solution, the ``short-cut method'' based on 
+    (1) initial value $x(0^+)$, (2) steady-state value $x_\infty(t)$,
+    and (3) time constant $\tau=RC$ or $\tau=L/R$.
+  \item Used as LP or HP filters.
+  \end{itemize}
+\item Second-order system (RLC in series, parallel, etc.)
+  \begin{itemize}
+  \item Particular solution $x_p(t)$ (by phasor/impedance method)
+  \item Complete solution, solving DE
+  \item Used filters:
+    \[
+    H(j\omega)=\frac{N(j\omega)}{D(j\omega)}
+    =\frac{N(j\omega)}{(j\omega)^2+2\zeta\omega_n j\omega+\omega_n^2}
+    \]
+    \[
+    \omega_n=\frac{1}{\sqrt{LC}},\;\;\;\zeta_s=\frac{R}{2}\sqrt{\frac{C}{L}}
+    \;\;\;\zeta_;=\frac{1}{2R}\sqrt{\frac{L}{C}}
+    \]
+  \item 
+    \[
+    \left\{\begin{array}{cc}
+    H(j\omega)=\omega_n^2/D(j\omega) & \mbox{LP}\\
+    H(j\omega)=2\zeta\omega_n j\omega/{D(j\omega) & \mbox{LP}\\
+    H(j\omega)=(j\omega)^2/D(j\omega) & \mbox{LP}
+    \end{array}\right.
+    \]
+    
+\end{itemize}
+\end{document}
+
+
+
+
+
+\item loop-current method based on KVL
+\end{itemize}
+
+
+\begin{itemize}
+
+\item \bf{Governing equations of R,C and L}
+  \[ v_R(t)=R\;i_R(t),\;\;\;\;i_R(t)=\frac{v_R(t)}{R} \]
+  \[ v_L(t)=L\frac{d}{dt} i_L(t) dt,\;\;\;\;i_L(t)=\frac{1}{L}\int i_L(t) dt\]
+  \[ v_C(t)=\frac{1}{C}\int i_C(t) dt,\;\;\;\;i_C(t)=C\frac{d}{dt} v_C(t) \]
+
+\item \bf{Series and parallel connections of basic components R, C, and L}
+\begin{itemize}
+\item Series:
+  \[ R=R_1+R_2,\;\;\;L=L_1+L_2,\;\;\;\frac{1}{C}=\frac{1}{C_1}+\frac{1}{C_2} \]
+\item Parallel: 
+  \[ \frac{1}{R}=\frac{1}{R_1}+\frac{1}{R_2},\;\;\;\frac{1}{L}=\frac{1}{L_1}+\frac{1}{L_2}\;\;\;\;C=C_1+C_2 \]
+
+\end{itemize}
+
+\item \bf{Basic circuit laws: Kirchhoff's laws (KVL, KCL), current and voltage 
+  dividers}
+  \begin{itemize}
+    \item KVL: around a loop: $\sum_k v_k=0$
+    \item KCL: at a node: $\sum_k i_k=0$
+    \item Voltage divider: two resistors in series:
+      \[V_1=V\; \frac{R_1}{R_1+R_2},\;\;\; V_2=V\; \frac{R_2}{R_1+R_2}\]
+    \item Current divider: two resistors in parallel:
+      \[I_1=I\; \frac{R_2}{R_1+R_2},\;\;\; I_2=V\; \frac{R_1}{R_1+R_2}\]
+  \end{itemize}
+
+
+
+    \item Internal resistance:
+\[ R_0=\frac{\mbox{open-circuit voltage}}{\mbox{short-circuit current}}
+  =\frac{V_{oc}}{I_{sc}} \]      
+  \end{itemize}
+  
+\item \bf{Methods for solving circuits}
+  \begin{itemize}
+    \item loop current
+    \item node voltage 
+  \end{itemize}
+
+\item \bf{Superposition principle}
+
+  Find network's response to each of the multiple energy sources, the 
+  overall response is their algebraic sum.
+
+\item \bf{Thevenin's and Norton's theorems}
+  \begin{itemize}
+    \item Thevenin's theorem: treat the component in question as the load
+      of a 1-port network with open-circuit voltage $V_T$ in series with
+      an equivalent internal resistance $R_T$.
+    \item Norton's theorem: treat the component in question as the load
+      of a 1-port network with short-circuit current $I_N$ in parallel with
+      an equivalent internal resistance $R_N$.
+    \item Conversion between the two models:
+      \[
+      R_T=R_N,\;\;\;\;\;V_T=I_NR_N,\;\;\;\;\;I_N=V_T/R_T
+      \]
+  \end{itemize}
+
+  
+
+\item \bf{Delta-Y conversions}
+\begin{itemize}
+\item $\Delta$ to $Y$ conversion:
+\[ \left\{ \begin{array}{rr}
+	R_a=R_{ab}R_{ac}/(R_{ab}+R_{ac}+R_{bc}) \\
+	R_b=R_{ab}R_{bc}/(R_{ab}+R_{ac}+R_{bc}) \\
+	R_c=R_{ac}R_{bc}/(R_{ab}+R_{ac}+R_{bc}) \end{array} \right. \]
+\item $Y$ to $\Delta$ conversion:
+\[ \left\{ \begin{array}{rr}
+	R_{ab}=R_a+R_b+R_aR_b/R_c	\\
+	R_{ac}=R_a+R_c+R_aR_c/R_b	\\
+	R_{bc}=R_b+R_c+R_bR_c/R_a	\end{array} \right. \]
+\end{itemize}
+
+\item \bf{Phasor representation of sinusoidal variables}
+\[ x(t)=X_p cos(\omega t+\phi)=Re[X_p e^{j(\omega t+\phi)}]
+   =Re[\dot{X} \sqrt{2}e^{j\omega t}] \]
+     with phasor $\dot{X}=X_{rms}\;e^{j\phi}=X_p/\sqrt{2}\;e^{j\phi}$.
+
+\item \bf{Impedance (resistance, reactance) and admittance (conductance, 
+  susceptance)}
+  \[
+  Z=R+jX,\;\;\;\;\;\mbox{impedance}=\mbox{resistance}+j\;\mbox{reactance} 
+  \]
+  \[
+  Y=G+jB,\;\;\;\;\;\mbox{admittance}=\mbox{conductance}+j\;\mbox{susceptance} 
+  \]
+  \[
+  Y=\frac{1}{Z}=\frac{1}{R+jX}=\frac{R}{R^2+X^2}+j\;\frac{-X}{R^2+X^2}=G+jB 
+  \]
+
+\item \bf{Generalized Ohm's law, KCL and KVL}
+  \[
+  \dot{V}=\dot{I} Z,\;\;\;\sum_k \dot{V}_k=0,\;\;\;\;\sum_k \dot{I}_k=0 
+  \]
+
+\item \bf{Use phasor to solve AC circuits (complex calculations)}
+
+\item \bf{Complete responses}
+  \begin{itemize}
+  \item Complete response to DC input (3 elements $f(\infty)$, $f(0_+)$ and 
+    $\tau$) 
+    \[ 
+    f(t)=f(\infty)+[f(0_+)-f(\infty)]\;e^{-t/\tau} 
+    \]
+
+\item Complete response to AC input (3 elements $f_\infty(t)$, $f(0_+)$ and 
+  $\tau$).
+  \[ 
+  f(t)=f_\infty(t)+[f(0_+)-f_\infty(0)]\;e^{-t/\tau}	
+  \]
+\item Superposition applicable when multi-source of different frequencies.
+  \end{itemize}
+
+\end{itemize}
+
+\end{document}
+
+\item Series and parallel resonance. Resonant frequency, peak frequency,
+  bandwidth. Quality factor.
+
+\item Power factor 
+

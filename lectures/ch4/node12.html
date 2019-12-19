@@ -1,0 +1,503 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Colpitts Oscillators</TITLE>
+<META NAME="description" CONTENT="Colpitts Oscillators">
+<META NAME="keywords" CONTENT="ch4">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="ch4.css">
+
+<LINK REL="next" HREF="node13.html">
+<LINK REL="previous" HREF="node11.html">
+<LINK REL="next" HREF="node13.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node13.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="ch4.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node11.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node13.html">Metal-Oxide-Semiconductor Field-Effect Transistors</A>
+<B> Up:</B> <A
+ HREF="ch4.html">ch4</A>
+<B> Previous:</B> <A
+ HREF="node11.html">Typical Transistor Circuits</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A ID="SECTION000120000000000000000">
+Colpitts Oscillators</A>
+</H1>
+
+<P>
+Oscillation in a circuit is undesirable if the circuit is an
+<A ID="tex2html24"
+  HREF="https://en.wikipedia.org/wiki/Amplifier">amplifier</A>
+or part of a control system which needs to be stable without oscillation.
+However, oscillation is desirable in many applications such as sinusoidal
+signal generator, carrier signal generation is broadcast transmission
+(radio and TV), clock signal in digital systems, etc.
+
+<P>
+An <A ID="tex2html25"
+  HREF="https://en.wikipedia.org/wiki/Electronic_oscillator">oscillator</A>
+is a feedback system composed of a forward path with gain <!-- MATH
+ $G(j\omega)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img567.svg"
+ ALT="$G(j\omega)$"></SPAN> 
+and a feedback path with gain <!-- MATH
+ $F(j\omega)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img568.svg"
+ ALT="$F(j\omega)$"></SPAN>:
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/OscillatorModel1.png"
+ ALT="OscillatorModel1.png">
+
+<P>
+For the system to oscillate at a certain frequency, the feedback 
+needs to be positive for the frequency to be positively reinforced
+while passing through the forward path in order to sustain the output
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img569.svg"
+ ALT="$V_o$"></SPAN> with zero input <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img570.svg"
+ ALT="$V_i=0$"></SPAN>. Specifically, the output <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img569.svg"
+ ALT="$V_o$"></SPAN> and the 
+input <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img571.svg"
+ ALT="$V_i$"></SPAN> of a feedback system are related by
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_o=G(V_i+FV_o)=GV_i+GFV_o,\;\;\;\;\;\;\;\;\;\frac{V_o}{V_i}=H=\frac{G}{1-GF},
+\;\;\;\;\;\;\;V_o=HV_i=\frac{G}{1-GF}\,V_i
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img572.svg"
+ ALT="$\displaystyle V_o=G(V_i+FV_o)=GV_i+GFV_o,\;\;\;\;\;\;\;\;\;\frac{V_o}{V_i}=H=\frac{G}{1-GF},
+\;\;\;\;\;\;\;V_o=HV_i=\frac{G}{1-GF}\,V_i$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">138</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+where <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img573.svg"
+ ALT="$GF$"></SPAN> is the open-loop gain and <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img574.svg"
+ ALT="$H$"></SPAN> is the closed-loop gain.
+For this system to oscillate, i.e., for it to produce an output with
+zero input, its closed-loop gain needs to be infinite, i.e., its 
+open-loop gain <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img573.svg"
+ ALT="$GF$"></SPAN> need to be real, with zero phase <!-- MATH
+ $\angle(GF)=0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img575.svg"
+ ALT="$\angle(GF)=0$"></SPAN>
+and unit gain <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img576.svg"
+ ALT="$\vert GF\vert=1$"></SPAN>. 
+
+<P>
+There exist many different configurations of oscillators based on a
+single transistor. Shown below are three typical 
+<A ID="tex2html26"
+  HREF="https://en.wikipedia.org/wiki/Colpitts_oscillator">Colpitts oscillators</A>:
+common-base (CB, left), common emitter (CE, middle), and common 
+collector (CC, right). All such circuits contain a &ldquo;tank&rdquo; LC circuit
+composed of an inductor <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img535.svg"
+ ALT="$L$"></SPAN> in parallel with <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img539.svg"
+ ALT="$C_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img540.svg"
+ ALT="$C_2$"></SPAN> in series, 
+with a resonant frequency 
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\omega_0=\frac{1}{\sqrt{LC_s}},\;\;\;\;\;\;\mbox{where}\;\;\;\;\;
+C_s=\left(\frac{1}{C_1}+\frac{1}{C_2}\right)^{-1}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.28ex; " SRC="img577.svg"
+ ALT="$\displaystyle \omega_0=\frac{1}{\sqrt{LC_s}},\;\;\;\;\;\;$">where<IMG STYLE="height: 6.27ex; vertical-align: -2.32ex; " SRC="img578.svg"
+ ALT="$\displaystyle \;\;\;\;\;
+C_s=\left(\frac{1}{C_1}+\frac{1}{C_2}\right)^{-1}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">139</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+where <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img579.svg"
+ ALT="$C_s$"></SPAN> is the equivalent capacitance of the series combination 
+of <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img539.svg"
+ ALT="$C_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img540.svg"
+ ALT="$C_2$"></SPAN>. All other <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img72.svg"
+ ALT="$C$"></SPAN>s (without a subscript) are coupling
+capacitors that have a large enough capacitance and can therefore be 
+treated as short circuit for AC signals. 
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/Colpitts3a.png"
+ ALT="Colpitts3a.png">
+
+<P>
+Here are the requirements for these circuits to oscillate:
+
+<OL>
+<LI>an LC tank tuning circuit that generates sinusoidal oscillation 
+  at its resonant frequency <!-- MATH
+ $\omega_0=1/\sqrt{LC_s}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img580.svg"
+ ALT="$\omega_0=1/\sqrt{LC_s}$"></SPAN>
+</LI>
+<LI>a positive feedback loop that sustains the oscillation.
+</LI>
+</OL>
+How each of these circuits works can be qualitatively understood as 
+below:
+
+<UL>
+<LI>CB with the base AC grounded: The collector voltage <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img200.svg"
+ ALT="$v_c$"></SPAN> is the 
+  output, a fraction of which at the middle point between the two 
+  capacitors, &ldquo;tap point&rdquo;, is fed-back to the emitter to a positive 
+  feedback loop:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_c\uparrow\Longrightarrow v_e\uparrow\Longrightarrow v_{be}\downarrow
+  \Longrightarrow i_b\downarrow \Longrightarrow i_c=\beta i_b\downarrow
+  \Longrightarrow v_c\uparrow
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img581.svg"
+ ALT="$\displaystyle v_c\uparrow\Longrightarrow v_e\uparrow\Longrightarrow v_{be}\down...
+...b\downarrow \Longrightarrow i_c=\beta i_b\downarrow
+\Longrightarrow v_c\uparrow$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">140</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>CE with the emitter AC grounded: The collector voltage <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img200.svg"
+ ALT="$v_c$"></SPAN> is 
+  the output, which is fed-back through the LC tank circuit to the base. 
+  As the tap point is grounded, the sinusoidal voltage across the LC
+  tank produces opposite voltage polarities at the far ends of <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img539.svg"
+ ALT="$C_1$"></SPAN> 
+  and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img540.svg"
+ ALT="$C_2$"></SPAN>, i.e., <!-- MATH
+ $v_{C_1}=v_b$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.70ex; " SRC="img582.svg"
+ ALT="$v_{C_1}=v_b$"></SPAN> and <!-- MATH
+ $v_{C_2}=v_c$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.70ex; " SRC="img583.svg"
+ ALT="$v_{C_2}=v_c$"></SPAN> have opposite phases 
+  and thereby form a positive feedback loop:  
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_c\uparrow\Longrightarrow v_b\downarrow\Longrightarrow v_{be}\downarrow
+  \Longrightarrow i_b\downarrow \Longrightarrow i_c=\beta i_b\downarrow
+  \Longrightarrow v_c\uparrow
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img584.svg"
+ ALT="$\displaystyle v_c\uparrow\Longrightarrow v_b\downarrow\Longrightarrow v_{be}\do...
+...b\downarrow \Longrightarrow i_c=\beta i_b\downarrow
+\Longrightarrow v_c\uparrow$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">141</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>CC with the collector AC grounded: This a voltage follower circuit
+  in which the emitter voltage <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img585.svg"
+ ALT="$v_e$"></SPAN> is the output that follows the input
+  voltage <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img369.svg"
+ ALT="$v_b$"></SPAN>. The feedback from the emitter through the LC tank circuit 
+  to the base form a positive feedback loop:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_e=v_t\uparrow\Longrightarrow v_b\uparrow
+  \Longrightarrow i_b\uparrow\Longrightarrow i_e=(\beta+1)i_b\uparrow
+  \Longrightarrow v_e\uparrow
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img586.svg"
+ ALT="$\displaystyle v_e=v_t\uparrow\Longrightarrow v_b\uparrow
+\Longrightarrow i_b\uparrow\Longrightarrow i_e=(\beta+1)i_b\uparrow
+\Longrightarrow v_e\uparrow$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">142</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+where <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img587.svg"
+ ALT="$v_t$"></SPAN> is the voltage at the tap point.
+
+<P>
+</LI>
+</UL>
+
+<P>
+More specifically, we consider the common-collector circuit as an example.
+To find out why the circuit oscillates and the resonant frequency, we 
+disconnect the base path of the circuit and consider the open-loop gain 
+of <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img588.svg"
+ ALT="$H=V_o/V_i$"></SPAN> of the feedback loop. We further model the transistor 
+by a Thevenin voltage source <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img571.svg"
+ ALT="$V_i$"></SPAN> in series with an internal <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img589.svg"
+ ALT="$R$"></SPAN>, as 
+shown in the figure:
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/ColpittsModel2.png"
+ ALT="ColpittsModel2.png">
+
+<P>
+As the load of the Thevenin source, the tank circuit receives an input 
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img590.svg"
+ ALT="$V_t$"></SPAN> at the tap point, and produces an output <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img569.svg"
+ ALT="$V_o$"></SPAN> across the parallel
+combination of <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img535.svg"
+ ALT="$L$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img539.svg"
+ ALT="$C_1$"></SPAN> in series with <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img540.svg"
+ ALT="$C_2$"></SPAN>. Applying KCL at the tap 
+point we get:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\frac{V_t-V_i}{R}+\frac{V_t}{1/j\omega C_2}+\frac{V_t}{j\omega L+1/j\omega C_1}=0
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img591.svg"
+ ALT="$\displaystyle \frac{V_t-V_i}{R}+\frac{V_t}{1/j\omega C_2}+\frac{V_t}{j\omega L+1/j\omega C_1}=0$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">143</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+i.e.,
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_t\left(\frac{1}{R}+j\omega C_2+\frac{j\omega C_1}{1-\omega^2LC_1}\right)
+=\frac{V_i}{R}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img592.svg"
+ ALT="$\displaystyle V_t\left(\frac{1}{R}+j\omega C_2+\frac{j\omega C_1}{1-\omega^2LC_1}\right)
+=\frac{V_i}{R}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">144</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Solving for <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img590.svg"
+ ALT="$V_t$"></SPAN> we get
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_t=\frac{1}{R(\frac{1}{R}+j\omega C_2+\frac{j\omega C_1}
+{1-\omega^2LC_1})}\;V_i
+=\frac{1}{1+j\omega R(C_2+C_1/(1-\omega^2LC_1)}\;V_i
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.27ex; vertical-align: -3.04ex; " SRC="img593.svg"
+ ALT="$\displaystyle V_t=\frac{1}{R(\frac{1}{R}+j\omega C_2+\frac{j\omega C_1}
+{1-\omega^2LC_1})}\;V_i
+=\frac{1}{1+j\omega R(C_2+C_1/(1-\omega^2LC_1)}\;V_i$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">145</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+which is maximized if the frequency is such that the imaginary part of 
+the denominator is zero:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+C_2+\frac{C_1}{1-\omega_0^2LC_1}=0,\;\;\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;
+\omega_0=\frac{1}{\sqrt{LC_1C_2/(C_1+C_2)}}=\frac{1}{\sqrt{LC_s}}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.33ex; " SRC="img594.svg"
+ ALT="$\displaystyle C_2+\frac{C_1}{1-\omega_0^2LC_1}=0,\;\;\;\;\;\;\;$">i.e.<IMG STYLE="height: 6.04ex; vertical-align: -2.74ex; " SRC="img595.svg"
+ ALT="$\displaystyle \;\;\;\;\;
+\omega_0=\frac{1}{\sqrt{LC_1C_2/(C_1+C_2)}}=\frac{1}{\sqrt{LC_s}}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">146</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Here <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img596.svg"
+ ALT="$\omega_0$"></SPAN> is the resonant frequency, at which the voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img590.svg"
+ ALT="$V_t$"></SPAN> 
+become the same as the source voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img597.svg"
+ ALT="$V_t=V_i$"></SPAN>, as the impedance of
+the tank circuit as the load of the Thevenin source is infinity:
+<BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+Z_{tank}&=&Z_{C_2}||(Z_{C_1}+Z_L)=\frac{Z_{C_2}(Z_{C_2}+Z_L)}{Z_{C_2}+Z_{C_1}+Z_L}
+  =\frac{(1/j\omega C_1+j\omega L)/j\omega C_2}
+  {1/j\omega C_2+1/j\omega C_1+j\omega L}
+  \nonumber\\
+  &=&\frac{(1/j\omega C_1+j\omega L)/C_2}{1/C_1+1/C_2-\omega^2 L}
+  =\frac{(1/j\omega C_1+j\omega L)/C_2}{1/C_s-\omega^2 L}
+  \;\;\stackrel{\omega=\omega_0}{\Longrightarrow}\;\;\infty
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img598.svg"
+ ALT="$\displaystyle Z_{tank}$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img87.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img599.svg"
+ ALT="$\displaystyle Z_{C_2}\vert\vert(Z_{C_1}+Z_L)=\frac{Z_{C_2}(Z_{C_2}+Z_L)}{Z_{C_2...
+...{(1/j\omega C_1+j\omega L)/j\omega C_2}
+{1/j\omega C_2+1/j\omega C_1+j\omega L}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img87.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img600.svg"
+ ALT="$\displaystyle \frac{(1/j\omega C_1+j\omega L)/C_2}{1/C_1+1/C_2-\omega^2 L}
+=\fr...
+..._2}{1/C_s-\omega^2 L}
+\;\;\stackrel{\omega=\omega_0}{\Longrightarrow}\;\;\infty$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">147</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+
+When <!-- MATH
+ $\omega=\omega_0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img601.svg"
+ ALT="$\omega=\omega_0$"></SPAN>, the denominator becomes zeros and <!-- MATH
+ $Z_{tank}=\infty$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img602.svg"
+ ALT="$Z_{tank}=\infty$"></SPAN>,
+i.e., there is no current drawn from the source by the tank circuit. 
+Consequently, the voltage drop across <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img589.svg"
+ ALT="$R$"></SPAN> is zero and the voltage received 
+by the tank circuit is <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img597.svg"
+ ALT="$V_t=V_i$"></SPAN>. Now the output voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img569.svg"
+ ALT="$V_o$"></SPAN> can be found 
+by voltage divider:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_t=\frac{Z_{C_2}}{Z_{C_1}+Z_{C_2}}\;V_o=\frac{C_1}{C_1+C_2}\,V_o,
+\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;\;\;\;
+V_o=\frac{C_1+C_2}{C_1}\;V_t=\frac{C_1+C_2}{C_1}\;V_i
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img603.svg"
+ ALT="$\displaystyle V_t=\frac{Z_{C_2}}{Z_{C_1}+Z_{C_2}}\;V_o=\frac{C_1}{C_1+C_2}\,V_o,
+\;\;\;\;\;$">i.e.<IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img604.svg"
+ ALT="$\displaystyle \;\;\;\;\;\;\;\;
+V_o=\frac{C_1+C_2}{C_1}\;V_t=\frac{C_1+C_2}{C_1}\;V_i$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">148</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The open-loop gain (from <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img571.svg"
+ ALT="$V_i$"></SPAN> to <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img569.svg"
+ ALT="$V_o$"></SPAN>) is:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+H=\frac{V_o}{V_i}=\frac{C_1+C_2}{C_1}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img605.svg"
+ ALT="$\displaystyle H=\frac{V_o}{V_i}=\frac{C_1+C_2}{C_1}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">149</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+We see that when <!-- MATH
+ $\omega=\omega_0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img601.svg"
+ ALT="$\omega=\omega_0$"></SPAN>, the open-loop gain <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img574.svg"
+ ALT="$H$"></SPAN> is real but
+greater than 1. However, the non-linearity of the transistor as the 
+feedback path (from <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img569.svg"
+ ALT="$V_o$"></SPAN> to <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img571.svg"
+ ALT="$V_i$"></SPAN>) will force <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img606.svg"
+ ALT="$HG$"></SPAN> to become 1. The 
+circuit is an oscillator with frequency at <!-- MATH
+ $\omega_0=1/\sqrt{LC_s}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img580.svg"
+ ALT="$\omega_0=1/\sqrt{LC_s}$"></SPAN>.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node13.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="ch4.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node11.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node13.html">Metal-Oxide-Semiconductor Field-Effect Transistors</A>
+<B> Up:</B> <A
+ HREF="ch4.html">ch4</A>
+<B> Previous:</B> <A
+ HREF="node11.html">Typical Transistor Circuits</A></DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

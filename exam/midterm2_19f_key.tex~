@@ -1,0 +1,180 @@
+\documentstyle[11pt]{article}
+\usepackage{html}
+\begin{document}
+\begin{center}
+{\Large \bf  E84 Midterm Exam 2 (Fall 2008)}
+\end{center}
+
+\section*{E84 Midterm Exam 2}
+
+{\bf Instructions}
+\begin{itemize}
+\item Take home, open notes, feel free to use a calculator, but not any software 
+  package such as Multisim. 
+\item Mark your start and end times. Don't spend more than 3 hours. Due on 
+  Monday in class.
+\item Compare your print-out of the exam with the online version to make
+  sure your hard copy is complete.
+\item Mark your name and question number clearly on top of each page.
+  Indicate the total number of pages submitted.
+\item When solving a problem, list all the steps. In each step, indicate
+  concisely what you are doing in English, then show the calculation 
+  and the result of for the step. Box the final answer.
+  A final answer, even if correct, without evidence of the steps leading
+  to it will receive ZERO credit.
+\end{itemize}
+
+\begin{itemize}
+
+\item {\bf Problem 1. (33 pts)}
+
+In the circuit shown in the figure, $R_1=R_2=5\,\Omega$, $C_1=0.01\,F$,
+$C_2=0.03\,F$, $L=1\,H$, and the input voltage is 
+$v_{in}(t)=10+20\cos 5 t+30 \cos 10 t$ V. Find the output voltage $v_{out}(t)$
+across $R_2$. (Hint: the circuit is linear, therefore the superposition
+principal applies.)
+
+\htmladdimg{../mdtm2_08c.gif}
+
+{\bf Solution:} Use superposition theorem. 
+\begin{itemize}
+  \item DC component: 
+    \[ v'_{out}(t)=10\times \frac{5}{5+5}=5\;V \]
+  \item When $\omega=5$, the impedance of the middle branch is:
+    \[ j5 // (-j 20)+(-j 20/3)=0 \]
+    i.e., this branch is at resonance with zero impedance, with $v''_{out}(t)=0$.
+  \item When $\omega=10$, the impedance of the middle branch is:
+    \[ j10 // (-j 10)+(-j 10/3)=\infty \]
+    i.e., there is no current through this branch at this frequency,
+    and the output is:
+    \[ v'''_{out}(t)=v_{in}(t)\frac{5}{5+5}=15\cos 10 t\; V \]
+\end{itemize}
+The overall output is: $v_{out}(t)=v'_{out}(t)+v'''_{out}(t)=5+15 \cos 10 t\;V$
+
+\item {\bf Problem 2. (33 pts)}
+
+The circuit in the figure below is composed of three resistors
+$R_1=R_2=R_3=1k\Omega$, and an ideal inductor $L=1\;mH$. The current source 
+is 6 mA. The switch is open when $t<0$ and the circuit has reached steady
+state. The switch is then closed at $t=0$. 
+
+\htmladdimg{../mdtm2_08a.gif}
+
+\begin{itemize}
+
+\item Fill out the following table for the initial and final values of various
+variables in the circuit (12 pts).
+
+\begin{tabular}{c||cccc|cccc} \hline
+  time $t$&$i_L(t)$&$i_1(t)$&$i_2(t)$&$i_3(t)$&$v_L(t)$&$v_1(t)$&$v_2(t)$&$v_3(t)$\\ \hline \hline
+  $0^-$    & & & & & & & & \\ \hline
+  $0^+$    & & & & & & & & \\ \hline
+  $\infty$ & & & & & & & & \\ \hline
+\end{tabular}
+
+where $v_i(t)$ and $i_i(t)$ and the voltage and current associated with $R_i$
+for $i=1,2,3$, respectively. Their polarities and directions are shown in the figure.
+
+\item Find the time constant $\tau=L/R$ of the circuit, and give the expressions of
+$i_L(t)$ and $v_L(t)$ associated with the inductor $L$ (6 pts).
+
+\item Sketch the waveforms of all eight functions. (16 pts)
+
+\end{itemize}
+
+{\bf Solution:} 
+
+\begin{itemize}
+\item
+  \begin{tabular}{c||cccc|cccc} \hline
+    time $t$&$i_L(t)$&$i_1(t)$&$i_2(t)$&$i_3(t)$&$v_L(t)$&$v_1(t)$&$v_2(t)$&$v_3(t)$\\ \hline \hline
+    $0^-$    &4&4&2&2&0&4&2&2 \\ \hline
+    $0^+$    &4&3&3&2&2&3&3&2 \\ \hline
+    $\infty$ &6&3&3&0&0&3&3&0 \\ \hline
+  \end{tabular}
+
+\item $R=R_3=1$, $\tau=L/R=10^{-6}$ second.
+  \[ i_L(t)=i_L(\infty)+[i_L(0)-i_L(\infty)]e^{-t/\tau}
+  = 6+(4-6) e^{-t/0.001}=6-2 e^{-1000 t}\;\;(mA) \]
+  $i_L(t)$ increases from 4 to 6 exponentially.
+
+  \[ v_L(t)=L \frac{d}{dt} i_(t)=-2L \frac{d}{dt}e^{-t/\tau}
+  =2 e^{-t/\tau}\;\;V \]
+  $v_L(t)$ jumps from 0 to 2V at t=0 and then decreases to 0 again exponentially.
+
+\item 
+  $i_1(t)$ jumps from 4 mA to 3 mA, $v_1(t)$ jumps from 4V to 3V
+  $i_2(t)$ jumps from 2 mA to 3 mA, $v_2(t)$ jumps from 2V to 3V
+  $i_3(t)$ decreases from 2 mA to 0 exponentially.
+  $v_3(t)$ decreases from 2 V to 0 exponentially.
+\end{itemize}
+
+\item {\bf Problem 3. (34 pts)}
+
+In the circuit shown in the following figure, $R_1=10 \Omega$, $R_2=2 \Omega$,
+$R_3=8 \Omega$, $L=2 H$, $V=20 V$, $I=1.25 A$. The switch is in position a and
+the circuit has reached steady state, until the moment $t=0$ when the switch is
+turned to position b. Determine the voltage $v(t)$ across $R_3$ as the response
+of the system to the change of position of the switch.
+
+Hint: $v(t)$ is the superposition of $v'(t)$ and $v''(t)$ responding to two processes
+respectively:
+(a) the voltage drop across $R_3$ due to the initial current through $L$ alone after
+the switch is turned from a to b; and (b) the voltage across $R_3$ as the complete 
+response to the current source $I$ alone after the switch turned from a to b.
+
+\htmladdimg{../mdtm2_08b.gif}
+
+Now solve the problem in the following steps by superposition theorem:
+\begin{itemize}
+  \item Find $v'(t)$ across $R_3$ due to $i_L(t)$ alone:
+    \begin{enumerate}
+    \item (2 pts) Find the steady state current $i_L(0^-)$ through the inductor $L$ 
+      before the switch is turned from a to b at $t=0$;
+    \item (2 pts) Find the current $i_L(0^+)$ through $L$ right after the switch is 
+      turned from a to b at $t=0$;
+    \item (3 pts) Find the voltage $v'(0^+)$ across $R_3$ due to $i_L(0^+)$;
+    \item (3 pts) Find the time constant $\tau$ after $t=0$;
+    \item (3 pts) Find the $v'(t)$ across $R_3$ corresponding to the decay of
+      $i_L(t)$.
+    \item (3 pts) Sketch $v'(t)$.
+    \end{enumerate}
+  \item Find $v''(t)$ across $R_3$ due to current source $I=1.25 A$:
+    \begin{enumerate}
+    \item (3 pts) Find the initial condition for the voltage $v''(0^+)$ across 
+      $R_3$ due to $I$ right after $t=0$;
+    \item (4 pts) Find the steady state response $v''(\infty)$ across $R_3$ due 
+      to the $I$ alone;
+    \item (4 pts) Find the complete response $v''(t)$ due to the current source
+      $I$ alone.
+    \item (3 pts) Sketch $v''_t(t)$.
+    \end{enumerate}
+  \item (4 pts) Find and sketch the total voltage $v(t)=v'(t)+v''(t)$ across $R_3$.
+\end{itemize}
+
+{\bf Solution:}
+
+\begin{itemize}
+  \item
+    \begin{enumerate}
+    \item $i_L(0^-)=20V/10\Omega=2A$ (upward)
+    \item $i_L(0^+)=i_L(0^-)=2A$ as current through L does not change instantly.
+    \item $v'(0^+)=i_L(0^+)R_3=2\times 8=16 V$
+    \item $\tau=L/R=2H/(2+10+8)\Omega=0.1$ sec.
+    \item Due to current $i_L(t)=2 e^{-t/\tau}A$, the voltage $v(0^+)$ across $R_3$
+      is
+      \[ v'(t)=v'(0^+) e^{-t/tau}=16 e^{-10t} \]
+      \item sketch
+    \end{enumerate}
+  \item
+    \begin{enumerate}
+    \item $v''(0^+)=-1.25\times 8=-10 V$
+    \item $v''(\infty)=-1.25\times\frac{8+12}{8\times 12}=-6 V$
+    \item \[ v''(t)=v''(\infty)+[v''(0^+)-v''(\infty)]e^{-t/\tau}=
+      -6+(-10+6)e^{-10t}=-6-4e^{-10t} \]
+    \item sketch
+    \end{enumerate}
+  \item \[ v(t)=v'(t)+v''(t)=16 e^{-10t}+(-6-4e^{-10t})=12e^{-10t}-6 \]
+\end{itemize}
+\end{itemize}
+\end{document}

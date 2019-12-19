@@ -1,0 +1,634 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Diodes</TITLE>
+<META NAME="description" CONTENT="Diodes">
+<META NAME="keywords" CONTENT="ch4">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="ch4.css">
+
+<LINK REL="next" HREF="node3.html">
+<LINK REL="previous" HREF="node1.html">
+<LINK REL="next" HREF="node3.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="ch4.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node3.html">Bipolar Junction Transistor (BJT)</A>
+<B> Up:</B> <A
+ HREF="ch4.html">ch4</A>
+<B> Previous:</B> <A
+ HREF="node1.html">Semiconductor materials</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A ID="SECTION00020000000000000000">
+Diodes</A>
+</H1>
+
+<P>
+A diode is formed by a PN-junction with the p side called <EM>anode</EM> and the
+n side called <EM>cathode</EM>. Due to the fact that there exist few freely movable 
+charge carriers in the depletion region around the PN-junction, the conductivity
+is very poor. However, when external voltage is applied to the two ends of the 
+material, the conductivity may change, depending one the polarity of the applied
+voltage.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/diode6.gif"
+ ALT="diode6.gif">
+
+<P>
+
+<UL>
+<LI><B>Forward bias</B> (positive to P-type, negative to N-type)
+
+<P>
+The positive voltage applied to the P-type will pull electrons in N-type
+  and repel holes in P-type so that both carriers are moving towards the 
+  PN-junction. As the depletion region becomes thinner, the conductivity 
+  increases due to the <EM>drift current</EM> through the PN-junction from 
+  the P side to the N side, formed by the majority charge carriers (both 
+  electrons and holes) driven by the applied voltage. The conductivity 
+  increases as the applied voltage becomes higher. 
+
+<P>
+</LI>
+<LI><B>Reverse bias</B> (negative to P-type, positive to N-type)
+
+<P>
+The negative voltage applied to the P-type will repel electrons in N-type
+  and attract holes in P-type so that both carriers are moving away from 
+  the PN-junction. As the depletion region becomes thicker than before, 
+  there is no current through the PN-junction from the P side to the N side.
+  However, there exists a very small current <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img8.svg"
+ ALT="$I_0$"></SPAN>, called the 
+  <A ID="tex2html7"
+  HREF="https://en.wikipedia.org/wiki/Saturation_current"><EM>reverse saturation current</EM></A>,
+
+due to the minority carriers.
+  The carrier velocity increases as the applied voltage becomes higher. 
+  However, as the voltage further increases, the velocity will reach a 
+  maximum level called
+  <A ID="tex2html8"
+  HREF="http://en.wikipedia.org/wiki/Velocity_saturation"><EM>saturation velocity</EM></A>.
+
+<P>
+</LI>
+</UL>
+The non-linear voltage-current relationship of a PN-junction is described by
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_D=I_0 \left( e^{V_D/\eta V_T}-1 \right)\approx I_0\,e^{V_D/\eta V_T},
+  \;\;\;\;\mbox{or}\;\;\;\;
+  V_D=\eta V_T\;ln \left(\frac{I_D}{I_0}+1\right)\approx\eta V_T\;ln (I_D/I_0)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.41ex; vertical-align: -1.63ex; " SRC="img9.svg"
+ ALT="$\displaystyle I_D=I_0 \left( e^{V_D/\eta V_T}-1 \right)\approx I_0\,e^{V_D/\eta V_T},
+\;\;\;\;$">or<IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img10.svg"
+ ALT="$\displaystyle \;\;\;\;
+V_D=\eta V_T\;ln \left(\frac{I_D}{I_0}+1\right)\approx\eta V_T\;ln (I_D/I_0)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">2</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+where 
+
+<UL>
+<LI><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img8.svg"
+ ALT="$I_0$"></SPAN> is the <EM>reverse saturation current</EM>, a tiny current that 
+  flows in the reverse direction when <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img11.svg"
+ ALT="$V_D &lt; 0$"></SPAN>, due to the minority 
+  carriers. As this current is limited by the minority carriers available,
+  when all of them are contributing to this current, higher voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img12.svg"
+ ALT="$V_D$"></SPAN>
+  does not result in greater current, i.e., the current is saturated. 
+  <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img8.svg"
+ ALT="$I_0$"></SPAN> is about <!-- MATH
+ $10^{-10} \sim 10^{-12}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.12ex; " SRC="img13.svg"
+ ALT="$10^{-10} \sim 10^{-12}$"></SPAN> A for Si and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.12ex; " SRC="img14.svg"
+ ALT="$10^{-4}$"></SPAN> A for Ge.
+</LI>
+<LI><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img15.svg"
+ ALT="$V_T=kT/e $"></SPAN> is the thermal voltage, where 
+  <!-- MATH
+ $k=1.38\times 10^{-23}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.31ex; " SRC="img16.svg"
+ ALT="$k=1.38\times 10^{-23}$"></SPAN> Joules/Kelvin is the
+<A ID="tex2html9"
+  HREF="https://en.wikipedia.org/wiki/Boltzmann_constant">Boltzmann constant</A>,
+
+<!-- MATH
+ $e=1.602\times 10^{-19}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.31ex; " SRC="img17.svg"
+ ALT="$e=1.602\times 10^{-19}$"></SPAN> coulomb is the charge of an electron, and
+  <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img18.svg"
+ ALT="$T$"></SPAN> is the temperature in degree K. At room temperature <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img19.svg"
+ ALT="$T=300 K$"></SPAN>
+  (<!-- MATH
+ $27^\circ C$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img20.svg"
+ ALT="$27^\circ C$"></SPAN>), <!-- MATH
+ $V_T=kT/e=26\; mV$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img21.svg"
+ ALT="$V_T=kT/e=26\; mV$"></SPAN>.
+</LI>
+<LI><SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.57ex; " SRC="img22.svg"
+ ALT="$\eta$"></SPAN> is the ideality factor which varies between 1 and 2, depending
+  on the fabrication process and semiconductor material. In many cases <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.57ex; " SRC="img22.svg"
+ ALT="$\eta$"></SPAN>
+  can be assumed to be approximately equal to 1.
+</LI>
+</UL>
+In particular, 
+
+<UL>
+<LI>when <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img11.svg"
+ ALT="$V_D &lt; 0$"></SPAN>, <!-- MATH
+ $I_D\approx -I_0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img23.svg"
+ ALT="$I_D\approx -I_0$"></SPAN>; 
+</LI>
+<LI>when <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img24.svg"
+ ALT="$V_D=0$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img25.svg"
+ ALT="$I_D=0$"></SPAN>; 
+</LI>
+<LI>when <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img26.svg"
+ ALT="$V_D&gt;0$"></SPAN>, <!-- MATH
+ $I_D\approx I_0 e^{V_D/V_T}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.46ex; " SRC="img27.svg"
+ ALT="$I_D\approx I_0 e^{V_D/V_T}$"></SPAN>.
+</LI>
+</UL>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/diode1.gif"
+ ALT="diode1.gif">
+
+<P>
+The voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img12.svg"
+ ALT="$V_D$"></SPAN> across the diode is a function of the current <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img28.svg"
+ ALT="$I_D$"></SPAN> through 
+the diode. In the range of 5 mA to 20 mA, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img12.svg"
+ ALT="$V_D$"></SPAN> is about 0.7 V:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\begin{array}{c||c|c|c|c|c} \hline
+I_D	& 1 \;mA & 5 \;mA & 10 \;mA & 20 \; mA & 100 \;mA	\\\hline\hline
+V_D \mbox{ for Si } (I_0=10^{-10}, \eta=1.4) & 0.58 V & 0.65 & 0.67 V & 0.7 & 0.75 V \\\hline
+V_D \mbox{ for Ge } (I_0=10^{-4}, \eta=1.0) & 0.06 V & 0.10 & 0.12 V & 0.14 & 0.18 V \\\hline
+\end{array}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE=""
+ SRC="img29.svg"
+ ALT="\begin{displaymath}\begin{array}{c\vert\vert c\vert c\vert c\vert c\vert c} \hli...
+... &amp; 0.06 V &amp; 0.10 &amp; 0.12 V &amp; 0.14 &amp; 0.18 V \\ \hline
+\end{array}\end{displaymath}"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">3</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+The resistance of an electrical device is defined as <!-- MATH
+ $R=\Delta V/\Delta I$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img30.svg"
+ ALT="$R=\Delta V/\Delta I$"></SPAN>.
+For a diode, as <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img31.svg"
+ ALT="$V_D(I_D)$"></SPAN> is not a linear function, the resistance 
+<!-- MATH
+ $R_D=dV_D/dI_D$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img32.svg"
+ ALT="$R_D=dV_D/dI_D$"></SPAN> can be found as
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+R_D=\frac{d\,V_D}{d\,I_D}=\frac{d}{d\,I_D} \left[\eta V_T\;ln \left(\frac{I_D+I_0}{I_0}\right) \right]
+=\eta V_T \frac{I_0}{I_D+I_0}\frac{1}{I_0}=\eta \; \frac{V_T}{I_D+I_0}
+\approx \eta \; \frac{V_T}{I_D}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img33.svg"
+ ALT="$\displaystyle R_D=\frac{d\,V_D}{d\,I_D}=\frac{d}{d\,I_D} \left[\eta V_T\;ln \le...
+...D+I_0}\frac{1}{I_0}=\eta \; \frac{V_T}{I_D+I_0}
+\approx \eta \; \frac{V_T}{I_D}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">4</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The approximation is due to the fact that <!-- MATH
+ $I_D \gg I_0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img34.svg"
+ ALT="$I_D \gg I_0$"></SPAN>, i.e., 
+<!-- MATH
+ $I_D+I_0\approx I_D$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img35.svg"
+ ALT="$I_D+I_0\approx I_D$"></SPAN>. We assume <!-- MATH
+ $V_T=26\;mV$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img36.svg"
+ ALT="$V_T=26\;mV$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img37.svg"
+ ALT="$\eta=1.4$"></SPAN>, the resistance
+of the diode is not a constant, but a function of the current <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img28.svg"
+ ALT="$I_D$"></SPAN>, i.e., 
+a diode is not a linear element:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\begin{array}{c||c|c|c|c|c|c|c} \hline
+I_D	& 0.05\; mA & 0.1\; mA & 0.2 \;mA & 0.5\; mA & 1\; mA & 2\; mA & 5\; mA \\\hline
+R_D \mbox{ for Si } (\eta=1.4) & 728\,\Omega & 364\,\Omega & 182\,\Omega &
+  73\,\Omega & 36\,\Omega & 18\,\Omega & 7\,\Omega\\\hline
+\end{array}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE=""
+ SRC="img38.svg"
+ ALT="\begin{displaymath}\begin{array}{c\vert\vert c\vert c\vert c\vert c\vert c\vert ...
+...mega &amp; 36\,\Omega &amp; 18\,\Omega &amp; 7\,\Omega\\ \hline
+\end{array}\end{displaymath}"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">5</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+<B>Models of diodes:</B>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/diode3.gif"
+ ALT="diode3.gif">
+
+<P>
+
+<UL>
+<LI>Ideal model: 
+  if <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img11.svg"
+ ALT="$V_D &lt; 0$"></SPAN>, <!-- MATH
+ $R_D=\infty$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img39.svg"
+ ALT="$R_D=\infty$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img25.svg"
+ ALT="$I_D=0$"></SPAN>, else <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img40.svg"
+ ALT="$R_D=0$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img41.svg"
+ ALT="$I_D=V/R$"></SPAN>.
+</LI>
+<LI>Ideal model with a voltage threshold <!-- MATH
+ $V_0=0.7\,V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img42.svg"
+ ALT="$V_0=0.7\,V$"></SPAN>:
+  if <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img43.svg"
+ ALT="$V_D&lt;V_0$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img25.svg"
+ ALT="$I_D=0$"></SPAN>, else <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img44.svg"
+ ALT="$V_D=0.7$"></SPAN>, <!-- MATH
+ $I_D=(V-0.7)/R$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img45.svg"
+ ALT="$I_D=(V-0.7)/R$"></SPAN>
+</LI>
+<LI>The model above in series with a resistance <!-- MATH
+ $R_D=20\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img46.svg"
+ ALT="$R_D=20\Omega$"></SPAN>:
+  if <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img43.svg"
+ ALT="$V_D&lt;V_0$"></SPAN>, then <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img25.svg"
+ ALT="$I_D=0$"></SPAN>, else <!-- MATH
+ $I_D=(V-0.7)/(R+R_D)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img47.svg"
+ ALT="$I_D=(V-0.7)/(R+R_D)$"></SPAN>
+</LI>
+<LI>The model above in parallel with a current source that simulates
+  the reverse saturation current.
+</LI>
+</UL>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/diodemodel.gif"
+ ALT="diodemodel.gif">
+<IMG STYLE=""
+ SRC="../figures/diodemodels.gif"
+ ALT="diodemodels.gif">
+
+<P>
+In general, when the forward voltage applied to a diode exceeds 0.6 to 
+0.7V for silicon (or 0.1 to 0.2 V for germanium) material, the diode is 
+assumed to be conducting with low resistance.
+
+<P>
+<B>Example: </B> In the half-wave rectifier circuit shown below, 
+<!-- MATH
+ $R=1000\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img48.svg"
+ ALT="$R=1000\Omega$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img49.svg"
+ ALT="$V=3V$"></SPAN>, and <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img50.svg"
+ ALT="$D$"></SPAN> is a silicon diode. Find the current
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img28.svg"
+ ALT="$I_D$"></SPAN> through and voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img12.svg"
+ ALT="$V_D$"></SPAN> across <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img50.svg"
+ ALT="$D$"></SPAN>.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/diode2.gif"
+ ALT="diode2.gif">
+
+<P>
+
+<UL>
+<LI><B>Method 0:</B> The simplest model is to assume the diode is an ideal
+  rectifier with infinite resistance when it is reverse biased but zero
+  resistance when it is forward biased. As the diode is forward biased,
+  the current is <!-- MATH
+ $I_D=V/R=3\;mA$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img51.svg"
+ ALT="$I_D=V/R=3\;mA$"></SPAN>.
+
+<P>
+</LI>
+<LI><B>Method 1: </B> Since the diode is forward biased, we can assume 
+  the voltage across the diode is <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img52.svg"
+ ALT="$0.7V$"></SPAN> and the current can be determined 
+  by Ohm's law to be <!-- MATH
+ $I_D=(V-0.7)/R=2.3/1000=2.3\;mA$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img53.svg"
+ ALT="$I_D=(V-0.7)/R=2.3/1000=2.3\;mA$"></SPAN>.
+
+<P>
+</LI>
+<LI><B>Method 2: </B> The diode is modeled as a series combination of
+  <!-- MATH
+ $V_0=0.7\;V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img54.svg"
+ ALT="$V_0=0.7\;V$"></SPAN>, <!-- MATH
+ $R_D=20\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img46.svg"
+ ALT="$R_D=20\Omega$"></SPAN>, and an ideal diode. <!-- MATH
+ $I_D=(3-0.7)/(1000+20)=2.255\;mA$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img55.svg"
+ ALT="$I_D=(3-0.7)/(1000+20)=2.255\;mA$"></SPAN>,
+  <!-- MATH
+ $V_D=0.7+I_DR_D=0.745\;V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img56.svg"
+ ALT="$V_D=0.7+I_DR_D=0.745\;V$"></SPAN>.
+
+<P>
+</LI>
+<LI><B>Method 3: </B> The current <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img28.svg"
+ ALT="$I_D$"></SPAN> and voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img12.svg"
+ ALT="$V_D$"></SPAN> have to satisfy 
+  two equations simultaneously:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left\{ \begin{array}{l} I_D=I_0(e^{V_D/V_T}-1) \\
+    V_D=V-RI_D \end{array} \right.
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.38ex; " SRC="img57.svg"
+ ALT="$\displaystyle \left\{ \begin{array}{l} I_D=I_0(e^{V_D/V_T}-1) \\
+V_D=V-RI_D \end{array} \right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">6</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The first equation relates the current <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img28.svg"
+ ALT="$I_D$"></SPAN> through and voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img12.svg"
+ ALT="$V_D$"></SPAN> 
+  across a diode, while the second is obtained by KVL. Substituting the first
+  equation into the second, we get <!-- MATH
+ $V_D=V-RI_0(e^{V_D/V_T}-1)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img58.svg"
+ ALT="$V_D=V-RI_0(e^{V_D/V_T}-1)$"></SPAN>. Substituting
+  this into the first equation we can then find <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img28.svg"
+ ALT="$I_D$"></SPAN>.
+
+<P>
+</LI>
+<LI><B>Method 4: </B> The two simultaneous equations above can also be
+  solved graphically. The first equation <!-- MATH
+ $I_D=I_0(e^{V_D/V_T}-1)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img59.svg"
+ ALT="$I_D=I_0(e^{V_D/V_T}-1)$"></SPAN> is the
+  characteristic curve of the diode, while the second equation <!-- MATH
+ $V=V_D+I_DR$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img60.svg"
+ ALT="$V=V_D+I_DR$"></SPAN>
+  is the <EM>load line</EM>, a straight line passing through <!-- MATH
+ $(V_D=0, I_D=V/R)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img61.svg"
+ ALT="$(V_D=0, I_D=V/R)$"></SPAN> 
+  and <!-- MATH
+ $(I_D=V, I_D=0)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img62.svg"
+ ALT="$(I_D=V, I_D=0)$"></SPAN>. The intersection point of the two curves is approximately
+  at <!-- MATH
+ $(V_D=0.75\;V, I_D=2.4\;mA)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img63.svg"
+ ALT="$(V_D=0.75\;V, I_D=2.4\;mA)$"></SPAN>.
+
+<P>
+</LI>
+</UL>
+
+<P>
+Diodes are typically used as rectifiers which convert an AC voltage/current
+in to a DC one, such as shown in the following example.
+
+<P>
+<B>Example 2: </B> Design a converter (adaptor) that converts AC power 
+supply of 115V and 60 Hz to a DC voltage source of 14 V. When the load is
+<!-- MATH
+ $R_L=10\;K\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img64.svg"
+ ALT="$R_L=10\;K\Omega$"></SPAN>, the variation (ripple) of the output DC voltage must 
+be 5% or less.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/halfwaverectifier.gif"
+ ALT="halfwaverectifier.gif">
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/diode4.gif"
+ ALT="diode4.gif">
+
+<P>
+
+<UL>
+<LI>The desired DC voltage is 14 V, but we also need to compensate for the
+  voltage drop of 0.7 V due to the forward biased diode, so the  peak of the
+  secondary output is <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img65.svg"
+ ALT="$14.7\;V$"></SPAN> with RMS value <!-- MATH
+ $14.7/\sqrt{2}=10.4V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img66.svg"
+ ALT="$14.7/\sqrt{2}=10.4V$"></SPAN>, the ratio
+  of the transformer should be <!-- MATH
+ $115/10.4=11$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img67.svg"
+ ALT="$115/10.4=11$"></SPAN>. 
+</LI>
+<LI>When the load is <!-- MATH
+ $R_L=10\;K\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img64.svg"
+ ALT="$R_L=10\;K\Omega$"></SPAN>, the load current is approximately
+  <!-- MATH
+ $I\approx V/R_L=14/10=1.4\;mA$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img68.svg"
+ ALT="$I\approx V/R_L=14/10=1.4\;mA$"></SPAN>.
+</LI>
+<LI>During the period between two peaks <!-- MATH
+ $T=1/f=1/60=16.7\;ms$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img69.svg"
+ ALT="$T=1/f=1/60=16.7\;ms$"></SPAN>, the charge 
+	on the capacitor is reduced by <!-- MATH
+ $\Delta Q\approx IT=1.4\;mA\times
+        16.7\;ms=23.4\;\mu C$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img70.svg"
+ ALT="$\Delta Q\approx IT=1.4\;mA\times
+16.7\;ms=23.4\;\mu C$"></SPAN>. 	
+</LI>
+<LI>The voltage across the capacitor is therefore dropped by
+	<!-- MATH
+ $\Delta V=\Delta Q/C < 14\times 5/\%=0.7V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img71.svg"
+ ALT="$\Delta V=\Delta Q/C &lt; 14\times 5/\%=0.7V $"></SPAN>. 
+</LI>
+<LI>Solve above equation for <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img72.svg"
+ ALT="$C$"></SPAN>, we get <!-- MATH
+ $C=\Delta Q/\Delta V
+  =23.4\;\mu C/0.7V=33.4\;\mu F$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img73.svg"
+ ALT="$C=\Delta Q/\Delta V
+=23.4\;\mu C/0.7V=33.4\;\mu F$"></SPAN>.
+</LI>
+</UL>
+This is an approximation based on the assumption that the load current is
+constant, as the voltage drop is small. Otherwise the exponential decay of
+the voltage across capacitor should be used, and the current is:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+i(t)=\frac{V}{R_L} e^{-t/\tau}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img74.svg"
+ ALT="$\displaystyle i(t)=\frac{V}{R_L} e^{-t/\tau}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">7</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+More diode rectification circuits are shown below:
+
+<P>
+<IMG STYLE="" SRC="../figures/DiodeRectifiers.png"
+ ALT="DiodeRectifiers.png">
+
+<P>
+<IMG STYLE="" SRC="../figures/Smoothers.png"
+ ALT="Smoothers.png">
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="ch4.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node3.html">Bipolar Junction Transistor (BJT)</A>
+<B> Up:</B> <A
+ HREF="ch4.html">ch4</A>
+<B> Previous:</B> <A
+ HREF="node1.html">Semiconductor materials</A></DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

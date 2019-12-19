@@ -1,0 +1,141 @@
+\documentstyle[11pt]{article}
+\usepackage{html}
+\begin{document}
+\begin{center}
+{\Large \bf  Home Work 1 ---- E84, Fall, 2004}
+\end{center}
+\begin{enumerate}
+
+\item The electron gun of a cathode-ray tube (CRT) generates a beam
+  of electrons which is accelerated by a potential difference of
+  20,000 V over a distance of 4 cm. Find 
+\begin{enumerate}
+\item the strength of the electric field, and
+\item the power supplied to a beam of $10^{15}$ electrons.
+\end{enumerate}
+
+{\bf Solution:}  
+The strength of the field is
+\[ E=\frac{20\times 10^3\;V}{4 \times 10^{-2}\;M}=5\times 10^5\; V/M \]
+The charge carried by the beam is
+\[ 10^{15}/6.24\times 10^{18}=0.16\times 10^{-3}\;\mbox{coulomb} \]
+The power supplied to the beam is
+\[ 0.16\times 10^{-3} \times 20 \times 10^3 = 3.2 \;\mbox{Watt} \]
+
+\item (a) If two light bulbs both labeled as 110V and 40W in series are
+connected to a socket outlet of 190V, what is the power consumption of 
+each of the bulbs?
+
+{\bf Solution:}
+\[ R=V^2/W=110^2/40,\;\;\;\;\; V'=190/2=95	\]
+\[ W'=V'^2/R=W (V'/V)^2=40 (95/110)^2=40\times 0.746=29.83	\]
+
+(b) Replace one of the two bulbs by another bulb labeled as 110V 15W, and
+find the power consumption of each of the bulbs. What will happen to each
+of the two bulbs? (Note that when the power consumption by a bulb is larger
+than the specified wattage, it will be burned out!)
+
+{\bf Solution:}
+\[ V=110,\;\;V'=190,\;\;R1=V^2/W1=110^2/40,\;\;R2=V^2/W2=110^2/15	\]
+\[ I=V'/R=V'/(R1+R2),\;\; W1'=I^2 R1=8.89,\;\;W2'=I^2 R2=23.67>15\;\;\;
+	\mbox{burned out!}	\]
+
+\item Measurement of a physical process by instruments may be tricky as
+the instruments will inevitably affect the process being measured. The 
+figure below shows two possible configurations for the measurement of the
+voltage across and the current through the load. 
+
+\htmladdimg{../hw1b.gif}
+
+\begin{enumerate}
+\item What are required of the ammeter and the voltmeter to minimize their
+	influences on the measurements? 
+
+{\bf Solution:}
+The ammeter should have minimum (ideally 0) impedance while the voltmeter
+should have maximum (ideally infinity) impedance. 
+
+\item How would the ammeter and the voltmeter affect the measurement of the
+	current and the voltage in either of the configurations (a and b)?
+\end{enumerate}
+
+{\bf Solution:}
+In (a) the voltmeter will by-pass some current so that the actual current
+through the load is smaller than the reading of the ammeter; 
+
+in (b) the ammeter will cause some voltage drop and the actual voltage 
+across the load is lower than the reading of the voltmeter. 
+
+\item Find voltage $V_{BD}$ and resistance $R_2$ in the circuit shown below:
+
+\htmladdimg{../hw1c.gif}
+
+(Note: The direction of a current and the polarity of a voltage source can
+be assumedarbitrarily. To determined the actual direction and polarity, the
+sign of the values also should be considered. For example, a current labeled 
+in left-to-right direction with a negative value is actually flowing 
+right-to-left.)
+
+{\bf Solution:}
+\begin{itemize}
+\item apply KCL to node B: $2+(-6)+I2=0$, $I2=-4$ 
+\item apply KCL to node C: $-4+1-I3=0$, $I3=-3$
+\item apply KCL to node D: $5-3+I4=0$, $I4=-2$
+\item apply KVL to loop ABCD: 
+	$10+2\times 1+(-4)\times R2+6+(-3)\times 1-(-2)\itimes 5=0$, 
+	$R2=6.25$
+\item apply KVL to loop BDA: $V_{BD}+2\times 5+10+2\times 1=0$, 
+	$V_{BD}=-22V$, or
+\item apply KVL to loop BDC: $V_{BD}-(-3)\times 1-6-(-4\times 6.25)=0$, 
+	$V_{BD}=-22V$
+\end{itemize}
+
+\item Assume in the circuits in the figure, the voltage source is $V_0=2V$,
+	the current source is $I_0=1A$, and the resistor is $R=3\Omega$.
+	For both (a) and (b).
+
+\htmladdimg{../hw1d.gif}
+
+Find:
+\begin{enumerate}
+\item the current going through each of the three elements
+
+{\bf Solution:}
+\begin{itemize}
+\item (a) I=1A going thru all 3 elements 
+\item (b) 1A thru current source, 2/3A thru R, 1/3 thru voltage source.
+\end{itemize}
+
+\item the voltage across each of the three elements
+
+{\bf Solution:}
+\begin{itemize}
+\item (a) 2V across voltage source, 3V across R, 5V across current source
+\item (b) 2V across all 3 elements.
+\end{itemize}
+
+\item which of the power sources is delivering power and how much? which is 
+	receiving power and how much? How much power is dissipated by the
+	resistor $R$?
+
+{\bf Solution:}
+\begin{itemize}
+\item (a) current source delivers 5W, R dissipates 3W, voltage source 
+	receives 2W
+\item (b) current source delivers 2W, R dissipates 4/3W, voltage source 
+	receives 2/3W 
+\end{itemize}
+When receiving power, the voltage source is being charged.
+\end{enumerate}
+
+\item A current flowing in an initially uncharged 1-$\mu$F capacitor is shown
+  in the figure as a function of time. Find and plot the voltage across the 
+  capacitor produced by this current.
+
+\htmladdimg{../hw1a.gif}
+
+
+
+\end{enumerate}
+\end{document}
+

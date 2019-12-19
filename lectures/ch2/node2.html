@@ -1,0 +1,963 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Solving Circuits with Kirchoff Laws</TITLE>
+<META NAME="description" CONTENT="Solving Circuits with Kirchoff Laws">
+<META NAME="keywords" CONTENT="ch2">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="ch2.css">
+
+<LINK REL="next" HREF="node3.html">
+<LINK REL="previous" HREF="node1.html">
+<LINK REL="next" HREF="node3.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node3.html">Circuit Theorems</A>
+<B> Up:</B> <A
+ HREF="node1.html">Chapter 2: Circuit Principles</A>
+<B> Previous:</B> <A
+ HREF="node1.html">Chapter 2: Circuit Principles</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION00011000000000000000">
+Solving Circuits with Kirchoff Laws</A>
+</H2>
+
+<P>
+<B>Example 1:</B> Find the three unknown currents (<!-- MATH
+ $I_1,I_2,I_3$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img1.svg"
+ ALT="$I_1,I_2,I_3$"></SPAN>) and three 
+	unknown voltages (<!-- MATH
+ $V_{ab}, V_{bd}, V_{cb}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img2.svg"
+ ALT="$V_{ab}, V_{bd}, V_{cb}$"></SPAN>) in the circuit below:
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/branchcurrentmethod.gif"
+ ALT="branchcurrentmethod.gif">
+
+<P>
+<B>Note:</B> The direction of a current and the polarity of a voltage can
+be assumed arbitrarily. To determine the actual direction and polarity, 
+the sign of the values also should be considered. For example, a current 
+labeled in left-to-right direction with a negative value is actually flowing 
+right-to-left.
+
+<P>
+All voltages and currents in the circuit can be found by either of the 
+following two methods, based on KVL or KCL respectively.
+
+<P>
+
+<UL>
+<LI><B>The loop-current method (mesh current analysis) based on KVL:</B>
+
+<OL>
+<LI>For each of the <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img3.svg"
+ ALT="$l$"></SPAN> independent loops in the circuit, define a 
+    loop current around the loop in clockwise (or counter clockwise)
+    direction. These <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img3.svg"
+ ALT="$l$"></SPAN> loop currents are the unknown variables to
+    be obtained.
+</LI>
+<LI>Apply KVL around each of the loops in the same clockwise 
+    direction to obtain <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img3.svg"
+ ALT="$l$"></SPAN> equations. While calculating the voltage 
+    drop across each resistor shared by two loops, both loop currents 
+    (in opposite positions) should be considered.
+</LI>
+<LI>Solve the equation system with <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img3.svg"
+ ALT="$l$"></SPAN> equations for the <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img3.svg"
+ ALT="$l$"></SPAN> unknown
+    loop currents.
+  
+</LI>
+</OL>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/loopcurrentmethod.gif"
+ ALT="loopcurrentmethod.gif">
+
+<P>
+Find currents <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img4.svg"
+ ALT="$I_1$"></SPAN> from a to b, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img5.svg"
+ ALT="$I_2$"></SPAN> from c to b, and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img6.svg"
+ ALT="$I_3$"></SPAN> from 
+  b to d.
+
+<P>
+
+<UL>
+<LI>Assume two loop currents <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img7.svg"
+ ALT="$I_a$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img8.svg"
+ ALT="$I_b$"></SPAN> around loops abda and bcdb 
+    and apply the KVL to them:
+    <BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+\sum V_{abda}&=&-32+2I_a+8(I_a-I_b)=0
+      \nonumber\\
+      \sum V_{bcdb}&=&8(I_b-I_a)+4I_b+20=0
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 3.95ex; vertical-align: -1.39ex; " SRC="img9.svg"
+ ALT="$\displaystyle \sum V_{abda}$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img10.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img11.svg"
+ ALT="$\displaystyle -32+2I_a+8(I_a-I_b)=0$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 3.95ex; vertical-align: -1.39ex; " SRC="img12.svg"
+ ALT="$\displaystyle \sum V_{bcdb}$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img10.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img13.svg"
+ ALT="$\displaystyle 8(I_b-I_a)+4I_b+20=0$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">1</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+
+    We rewrite these as:
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left\{ \begin{array}{rrrr} 10I_a&-8I_b&=&32 \\-8I_a &+12I_b&=&-20
+      \end{array} \right.
+      \;\;\;\;\;\;\Longrightarrow \;\;\;\;\;
+      \left\{ \begin{array}{l}
+        I_a=4 \\I_b=1 \end{array} \right. 
+    
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img14.svg"
+ ALT="$\displaystyle \left\{ \begin{array}{rrrr} 10I_a&amp;-8I_b&amp;=&amp;32 \\ -8I_a &amp;+12I_b&amp;=&amp;-...
+...ghtarrow \;\;\;\;\;
+\left\{ \begin{array}{l}
+I_a=4 \\ I_b=1 \end{array} \right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">2</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+and then get <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img15.svg"
+ ALT="$I_1=I_a=4$"></SPAN>, <!-- MATH
+ $I_2=-I_b=-1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img16.svg"
+ ALT="$I_2=-I_b=-1$"></SPAN>, and <!-- MATH
+ $I_3=I_a-I_b=3$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img17.svg"
+ ALT="$I_3=I_a-I_b=3$"></SPAN>. Having 
+    found <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img7.svg"
+ ALT="$I_a$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img8.svg"
+ ALT="$I_b$"></SPAN>, we can easily find all voltages in the circuit:
+    <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img18.svg"
+ ALT="$V_a=32V$"></SPAN>, <!-- MATH
+ $V_b=32-2\times 4=24V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img19.svg"
+ ALT="$V_b=32-2\times 4=24V$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img20.svg"
+ ALT="$V_c=20V$"></SPAN>, <!-- MATH
+ $V_{ab}=V_a-V_b=8\,V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img21.svg"
+ ALT="$V_{ab}=V_a-V_b=8\,V$"></SPAN>,
+    <!-- MATH
+ $V_{bd}=V_b-V_d=V_b=24\,V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img22.svg"
+ ALT="$V_{bd}=V_b-V_d=V_b=24\,V$"></SPAN>, and <!-- MATH
+ $V_{cb}=V_c-V_b=-4$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img23.svg"
+ ALT="$V_{cb}=V_c-V_b=-4$"></SPAN>.
+
+<P>
+</LI>
+<LI>We could also apply KVL around the third loop of abcda with a loop
+    current <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img24.svg"
+ ALT="$I_c$"></SPAN> to get
+    three equations:
+    <BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+\sum V_{abda}&=&-32+2(I_a+I_c)+8(I_a-I_b)=0
+      \nonumber \\
+      \sum V_{bcdb}&=&8(I_b-I_a)+4(I_b+I_c)+20=0
+      \nonumber \\
+      \sum V_{abcda}&=&-32+2(I_a+I_c)+4(I_b+I_c)+20=0
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 3.95ex; vertical-align: -1.39ex; " SRC="img9.svg"
+ ALT="$\displaystyle \sum V_{abda}$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img10.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img25.svg"
+ ALT="$\displaystyle -32+2(I_a+I_c)+8(I_a-I_b)=0$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 3.95ex; vertical-align: -1.39ex; " SRC="img12.svg"
+ ALT="$\displaystyle \sum V_{bcdb}$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img10.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img26.svg"
+ ALT="$\displaystyle 8(I_b-I_a)+4(I_b+I_c)+20=0$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 3.95ex; vertical-align: -1.39ex; " SRC="img27.svg"
+ ALT="$\displaystyle \sum V_{abcda}$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img10.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img28.svg"
+ ALT="$\displaystyle -32+2(I_a+I_c)+4(I_b+I_c)+20=0$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">3</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+
+    However, it is clear that the third equation is the sum of the first 
+    two equations, i.e., it is not independent.
+
+<P>
+</LI>
+<LI>Alternatively, consider the two loop currents <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img7.svg"
+ ALT="$I_a$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img24.svg"
+ ALT="$I_c$"></SPAN> 
+    around loops abda and bcdb:
+    <BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+\sum V_{abda}&=&-32+2(I_a+I_c)+8I_a=0
+      \nonumber\\
+      \sum V_{abcda}&=&-32+2(I_a+I_c)+4I_c+20=0
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 3.95ex; vertical-align: -1.39ex; " SRC="img9.svg"
+ ALT="$\displaystyle \sum V_{abda}$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img10.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img29.svg"
+ ALT="$\displaystyle -32+2(I_a+I_c)+8I_a=0$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 3.95ex; vertical-align: -1.39ex; " SRC="img27.svg"
+ ALT="$\displaystyle \sum V_{abcda}$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img10.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img30.svg"
+ ALT="$\displaystyle -32+2(I_a+I_c)+4I_c+20=0$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">4</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+
+    i.e.,
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left\{ \begin{array}{rrrr} 10I_a&+2I_c&=&32 \\2I_a &+6I_c&=&12
+      \end{array} \right.
+      \;\;\;\;\;\;\Longrightarrow \;\;\;\;\;
+      \left\{ \begin{array}{l}
+        I_a=3 \\I_c=1 \end{array} \right. 
+    
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img31.svg"
+ ALT="$\displaystyle \left\{ \begin{array}{rrrr} 10I_a&amp;+2I_c&amp;=&amp;32 \\ 2I_a &amp;+6I_c&amp;=&amp;12
+...
+...ghtarrow \;\;\;\;\;
+\left\{ \begin{array}{l}
+I_a=3 \\ I_c=1 \end{array} \right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">5</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+and we get <!-- MATH
+ $I_1=I_a+I_c=4$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img32.svg"
+ ALT="$I_1=I_a+I_c=4$"></SPAN> and <!-- MATH
+ $I_2=-I_c=-1$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img33.svg"
+ ALT="$I_2=-I_c=-1$"></SPAN>, same as the previous 
+    results.
+
+<P>
+</LI>
+</UL>
+
+<P>
+</LI>
+<LI><B>The node-voltage method (nodal voltage analysis) based on KCL:</B>
+
+<P>
+
+<OL>
+<LI>Assume there are <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img34.svg"
+ ALT="$n$"></SPAN> nodes in the circuit. Select one of them 
+    as the ground, the reference point for all voltages of the circuit.
+    The node voltage at each of the remaining <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.31ex; " SRC="img35.svg"
+ ALT="$n-1$"></SPAN> nodes is an unknown 
+    to be obtained.
+</LI>
+<LI>Express each current into a node in terms of the two associated
+    node voltages.
+</LI>
+<LI>Apply KCL to each of the <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.31ex; " SRC="img35.svg"
+ ALT="$n-1$"></SPAN> nodes to set the sum of all
+    currents into the node to zero, and get <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.31ex; " SRC="img35.svg"
+ ALT="$n-1$"></SPAN> equations.
+</LI>
+<LI>Solve the equation system with <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.31ex; " SRC="img35.svg"
+ ALT="$n-1$"></SPAN> equations for the <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.31ex; " SRC="img35.svg"
+ ALT="$n-1$"></SPAN>
+    unknown node voltages.
+  
+</LI>
+</OL>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/nodevoltagemethod.png"
+ ALT="nodevoltagemethod.png">
+
+<P>
+In the same circuit considered previously, there are only 2 nodes <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img36.svg"
+ ALT="$b$"></SPAN> 
+  and <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img37.svg"
+ ALT="$d$"></SPAN> (<SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img38.svg"
+ ALT="$a$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img39.svg"
+ ALT="$c$"></SPAN> are not nodes). We assume node <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img37.svg"
+ ALT="$d$"></SPAN> is the ground,
+  and consider just voltage <!-- MATH
+ $V_b=V_{bd}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img40.svg"
+ ALT="$V_b=V_{bd}$"></SPAN> at node <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img41.svg"
+ ALT="$v$"></SPAN> as the only unknown in 
+  the problem. Apply KCL to node <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img36.svg"
+ ALT="$b$"></SPAN>, we have
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\sum_i I_i=0=I_1+I_2+I_3
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -3.09ex; " SRC="img42.svg"
+ ALT="$\displaystyle \sum_i I_i=0=I_1+I_2+I_3$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">6</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+where each current is expressed as the voltage drop between the two
+  ends of a resistor in the branch divided by the resistance of the
+  resistor (Ohm's law):
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_1=\frac{V_a-V_b}{R_{ab}}=\frac{32-V_b}{2},\;\;\;\;
+    I_2=\frac{V_c-V_b}{R_{cb}}=\frac{20-V_b}{4},\;\;\;\;
+    I_3=\frac{V_d-V_b}{R_{bd}}=\frac{0-V_b}{8}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img43.svg"
+ ALT="$\displaystyle I_1=\frac{V_a-V_b}{R_{ab}}=\frac{32-V_b}{2},\;\;\;\;
+I_2=\frac{V_...
+...b}{R_{cb}}=\frac{20-V_b}{4},\;\;\;\;
+I_3=\frac{V_d-V_b}{R_{bd}}=\frac{0-V_b}{8}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">7</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Substituting <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img4.svg"
+ ALT="$I_1$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img5.svg"
+ ALT="$I_2$"></SPAN>, and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img6.svg"
+ ALT="$I_3$"></SPAN> into the equation, we get 
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_1+I_2+I_3=\frac{32-V_b}{2}+\frac{20-V_b}{4}+\frac{0-V_b}{8}=0
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.11ex; vertical-align: -1.71ex; " SRC="img44.svg"
+ ALT="$\displaystyle I_1+I_2+I_3=\frac{32-V_b}{2}+\frac{20-V_b}{4}+\frac{0-V_b}{8}=0$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">8</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Solving this we get <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img45.svg"
+ ALT="$V_b=24$"></SPAN>, and all other currents and voltages can 
+  be found subsequently: <!-- MATH
+ $I_1=(V_a-V_b)/2=(32-24)/2=4A$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img46.svg"
+ ALT="$I_1=(V_a-V_b)/2=(32-24)/2=4A$"></SPAN>, 
+  <!-- MATH
+ $I_2=(V_c-V_b)/4=(20-24)/4=-1A$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img47.svg"
+ ALT="$I_2=(V_c-V_b)/4=(20-24)/4=-1A$"></SPAN>, <!-- MATH
+ $I_3=I_1+I_2=3A$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img48.svg"
+ ALT="$I_3=I_1+I_2=3A$"></SPAN>.
+
+<P>
+We could also apply KCL to node d, but the resulting equation is exactly
+  the same as <!-- MATH
+ $\sum_i I_i=0=-I_1-I_2-I_3$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.81ex; " SRC="img49.svg"
+ ALT="$\sum_i I_i=0=-I_1-I_2-I_3$"></SPAN> simply because this node d is not 
+  independent.
+
+<P>
+As special case of the node-voltage method with only two nodes, we have the
+  following theorem:
+
+<P>
+</LI>
+<LI><B>Millman's theorem</B> 
+
+<P>
+If there are multiple parallel branches between two nodes <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img38.svg"
+ ALT="$a$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img36.svg"
+ ALT="$b$"></SPAN>, 
+  such as the circuit below (left), then the voltage <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img50.svg"
+ ALT="$V$"></SPAN> at node <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img38.svg"
+ ALT="$a$"></SPAN> can 
+  be found as shown below if the other node <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img36.svg"
+ ALT="$b$"></SPAN> is treated as the reference 
+  point.
+
+<P>
+Assume there are three types of branches:
+  
+<UL>
+<LI>voltage branches with <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img51.svg"
+ ALT="$V_i$"></SPAN> sources in series with <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img52.svg"
+ ALT="$R_i$"></SPAN>. The
+    polarity of each <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img51.svg"
+ ALT="$V_i$"></SPAN> is + on the node a side.
+</LI>
+<LI>current branches with <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.78ex; " SRC="img53.svg"
+ ALT="$I_j$"></SPAN> (independent of resistors in series).
+    The direction of each <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.78ex; " SRC="img53.svg"
+ ALT="$I_j$"></SPAN> is toward node a.
+</LI>
+<LI>resistor branches with <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img54.svg"
+ ALT="$R_k$"></SPAN>.
+  
+</LI>
+</UL>
+
+<P>
+Applying KCL to node <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img38.svg"
+ ALT="$a$"></SPAN>, we have:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\sum_i \frac{V-V_i}{R_i}+\sum_k \frac{V}{R_k}=\sum_j I_j
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.74ex; vertical-align: -3.40ex; " SRC="img55.svg"
+ ALT="$\displaystyle \sum_i \frac{V-V_i}{R_i}+\sum_k \frac{V}{R_k}=\sum_j I_j$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">9</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Solving for <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img50.svg"
+ ALT="$V$"></SPAN>, we get
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V=\frac{\sum_i V_i/R_i+\sum_j I_j}{\sum_i 1/R_i+\sum_k 1/R_k}=\frac{\sum I}{\sum G}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.27ex; vertical-align: -2.41ex; " SRC="img56.svg"
+ ALT="$\displaystyle V=\frac{\sum_i V_i/R_i+\sum_j I_j}{\sum_i 1/R_i+\sum_k 1/R_k}=\frac{\sum I}{\sum G}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">10</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+where the reciprocal of the resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img57.svg"
+ ALT="$G=1/R$"></SPAN> is the conductance.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/millmanthm.gif"
+ ALT="millmanthm.gif">
+  <IMG STYLE=""
+ SRC="../figures/millmanthm2.png"
+ ALT="millmanthm2.png">
+
+<P>
+The dual form of the Millman's theorem can be derived based on the
+  loop circuit on the right. Applying KVL to the loop, we have:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\sum_j (I-I_j)R_j+\sum_k I R_k=\sum_i V_i
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -3.40ex; " SRC="img58.svg"
+ ALT="$\displaystyle \sum_j (I-I_j)R_j+\sum_k I R_k=\sum_i V_i$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">11</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Solving for <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img59.svg"
+ ALT="$I$"></SPAN>, we get
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I=\frac{\sum_i V_i+\sum_j R_jI_j}{\sum_i R_j+\sum_k R_k}=\frac{\sum V}{\sum R}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.27ex; vertical-align: -2.41ex; " SRC="img60.svg"
+ ALT="$\displaystyle I=\frac{\sum_i V_i+\sum_j R_jI_j}{\sum_i R_j+\sum_k R_k}=\frac{\sum V}{\sum R}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">12</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+</UL>
+
+<P>
+<B>Example 2:</B> Solve the following circuit:
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/branchmethod.gif"
+ ALT="branchmethod.gif">
+
+<P>
+
+<UL>
+<LI><B>Loop current method:</B>
+  Let the three loop currents in the example above be <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img7.svg"
+ ALT="$I_a$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img8.svg"
+ ALT="$I_b$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img24.svg"
+ ALT="$I_c$"></SPAN> 
+  for loops 1 (top-left bacb), 2 (top-right adca), and 3 (bottom bcdb),
+  respectively, and applying KVL to the three loops, we get
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\begin{array}{l}
+    \mbox{loop bacb:}\;\;\;\;\;-V_{s1}+R_1I_a+R_3(I_a-I_b)+R_4(I_a-I_c)+V_{s4}=0 \\
+    \mbox{loop adca:}\;\;\;\;\;R_2I_b+V_{s2}+R_5(I_b-I_c)+R_3(I_b-I_a)=0 \\
+    \mbox{loop bcdb:}\;\;\;\;\;-V_{s4}+R_4(I_c-I_a)+R_5(I_c-I_b)+R_6I_c-V_{s6}=0
+    \end{array} 
+  
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE=""
+ SRC="img61.svg"
+ ALT="\begin{displaymath}\begin{array}{l}
+\mbox{loop bacb:}\;\;\;\;\;-V_{s1}+R_1I_a+R_...
+...\;-V_{s4}+R_4(I_c-I_a)+R_5(I_c-I_b)+R_6I_c-V_{s6}=0
+\end{array}\end{displaymath}"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">13</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+We can then solve these 3 loop equations to find the 3 loop currents.
+
+<P>
+</LI>
+<LI><B>Node voltage method:</B>
+  If node d is chosen as ground, we can apply KCL to the remaining 3 nodes 
+  at a, b, and c, and get (assuming all currents leave each node):
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\begin{array}{l}
+    \mbox{node a:}\;\;\;\;\;(V_a-(V_b+V_{s1}))/R_1+(V_a-V_{s2})/R_2+(V_a-V_c)/R_3=0 \\
+    \mbox{node b:}\;\;\;\;\;(V_b-(V_a-V_{s1}))/R_1+(V_b+V_{s4}-V_c)/R_4+(V_b-V_{s6})/R_6=0 \\
+    \mbox{node c:}\;\;\;\;\;(V_c-(V_b+V_{s4}))/R_4+(V_c-V_a)/R_3+V_c/R_5=0
+    \end{array} 
+  
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE=""
+ SRC="img62.svg"
+ ALT="\begin{displaymath}\begin{array}{l}
+\mbox{node a:}\;\;\;\;\;(V_a-(V_b+V_{s1}))/R...
+...;\;\;(V_c-(V_b+V_{s4}))/R_4+(V_c-V_a)/R_3+V_c/R_5=0
+\end{array}\end{displaymath}"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">14</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+We can then solve these 3 node equations to find the 3 node voltages.
+
+<P>
+</LI>
+</UL>
+We see that either of the loop-current and node-voltage methods requires 
+to solve a linear system of 3 equations with 3 unknowns. 
+
+<P>
+<B>Example 3:</B> Solve the following circuit with <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img63.svg"
+ ALT="$I=0.5 A$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img64.svg"
+ ALT="$V=6 V$"></SPAN>, 
+<!-- MATH
+ $R_1=3\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img65.svg"
+ ALT="$R_1=3\Omega$"></SPAN>, <!-- MATH
+ $R_2=8\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img66.svg"
+ ALT="$R_2=8\Omega$"></SPAN>, <!-- MATH
+ $R_3=6\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img67.svg"
+ ALT="$R_3=6\Omega$"></SPAN>, <!-- MATH
+ $R_4=4\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img68.svg"
+ ALT="$R_4=4\Omega$"></SPAN>. This circuit
+has 3 independent loops and 3 independent nodes.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/currentmethod2.png"
+ ALT="currentmethod2.png">
+
+<P>
+
+<UL>
+<LI><B>Loop current method:</B>
+
+<P>
+Assume three loop currents <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img4.svg"
+ ALT="$I_1$"></SPAN> (left), <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img5.svg"
+ ALT="$I_2$"></SPAN> (right), <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img6.svg"
+ ALT="$I_3$"></SPAN> (top) all 
+  in clock-wise direction. We take advantage of the fact that the current 
+  source is in loop 1 only, with loop current <!-- MATH
+ $I_1=I=0.5A$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img69.svg"
+ ALT="$I_1=I=0.5A$"></SPAN>, and get the 
+  following two (instead of three) loop equations with 2 unknown loop 
+  currents <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img5.svg"
+ ALT="$I_2$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img6.svg"
+ ALT="$I_3$"></SPAN>:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left\{ \begin{array}{l} R_2(I_2-I_1)+R_3(I_2-I_3)-V=0 \\
+    R_1(I_3-I_1)+R_4I_3+R_3(I_3-I_2)=0 \end{array} \right.
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img70.svg"
+ ALT="$\displaystyle \left\{ \begin{array}{l} R_2(I_2-I_1)+R_3(I_2-I_3)-V=0 \\
+R_1(I_3-I_1)+R_4I_3+R_3(I_3-I_2)=0 \end{array} \right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">15</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+i.e.,
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left\{ \begin{array}{l}
+    14 I_2-6 I_3=10 \\-6 I_2+13 I_3=1.5 \end{array} \right.
+    \;\;\;\;\;\;\Longrightarrow \;\;\;\;\;
+    \left\{ \begin{array}{l}
+      I_2=0.952 \\I_3=0.555 \end{array} \right. 
+  
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img71.svg"
+ ALT="$\displaystyle \left\{ \begin{array}{l}
+14 I_2-6 I_3=10 \\ -6 I_2+13 I_3=1.5 \en...
+... \;\;\;\;\;
+\left\{ \begin{array}{l}
+I_2=0.952 \\ I_3=0.555 \end{array} \right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">16</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+We can also get the three node voltages with respect to the bottom 
+  node treated as ground: 
+  
+<UL>
+<LI>Right node: <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img72.svg"
+ ALT="$V_3=-6V$"></SPAN> 
+</LI>
+<LI>Middle node: <!-- MATH
+ $V_2=R_2(I_1-I_2)=8(0.5-0.952)=-3.616V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img73.svg"
+ ALT="$V_2=R_2(I_1-I_2)=8(0.5-0.952)=-3.616V$"></SPAN> 
+</LI>
+<LI>Left node: <!-- MATH
+ $V_1=V_3+R_4 I_3=-3.78 V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img74.svg"
+ ALT="$V_1=V_3+R_4 I_3=-3.78 V$"></SPAN>
+</LI>
+</UL>
+
+<P>
+</LI>
+<LI><B>Node voltage method:</B>
+
+<P>
+Assume the three node voltages with respect to the bottom node treated
+  as ground to be <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img75.svg"
+ ALT="$V_1$"></SPAN> (left), <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img76.svg"
+ ALT="$V_2$"></SPAN> (middle), <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img77.svg"
+ ALT="$V_3$"></SPAN> (right). We take 
+  advantage of the fact that one side of the voltage source is treated 
+  as ground, and get the note voltage <!-- MATH
+ $V_3=-V=-6V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img78.svg"
+ ALT="$V_3=-V=-6V$"></SPAN>. Then we have only two 
+  (instead of three) node equations with 2 unknown node voltages <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img75.svg"
+ ALT="$V_1$"></SPAN> and 
+  <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img76.svg"
+ ALT="$V_2$"></SPAN>: 
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left\{ \begin{array}{l}
+      (V_1-V_3)/R_4+(V_1-V_2)/R_1=I \\
+      (V_2-V_1)/R_1+(V_2-V_3)/R_3+V_2/R_2=0 \end{array} \right.
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img79.svg"
+ ALT="$\displaystyle \left\{ \begin{array}{l}
+(V_1-V_3)/R_4+(V_1-V_2)/R_1=I \\
+(V_2-V_1)/R_1+(V_2-V_3)/R_3+V_2/R_2=0 \end{array} \right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">17</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+i.e.,
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left\{ \begin{array}{l}
+      7V_1-4V_2=-12 \\
+      -8V_1+15V_2=-24 \end{array} \right.
+    \;\;\;\;\;\;\Longrightarrow \;\;\;\;\;
+    \left\{ \begin{array}{l}
+      V_1=-3.78 \\V_2=-3.616 \end{array} \right. 
+  
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img80.svg"
+ ALT="$\displaystyle \left\{ \begin{array}{l}
+7V_1-4V_2=-12 \\
+-8V_1+15V_2=-24 \end{a...
+...\;\;\;\;\;
+\left\{ \begin{array}{l}
+V_1=-3.78 \\ V_2=-3.616 \end{array} \right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">18</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The voltages are the same as before.
+</LI>
+</UL>
+In summary, here we have taken advantage of either the given current 
+source by the following:
+
+<UL>
+<LI>let a given current source be in a loop not shared with any 
+  other loop, so that the loop current is known;
+</LI>
+<LI>let one of the two ends of a given voltage source be the 
+  ground, so that the voltage at the other end is known.
+</LI>
+</UL>
+By either of these methods, the number of unknown loop currents or 
+node voltages is reduced by one.
+
+<P>
+In other words, to simplify the analysis, it is preferable to
+
+<UL>
+<LI>choose independent loops to avoid current source shared by 
+    two or more loops,
+</LI>
+<LI>choose ground node so that one or more voltage sources are
+    connected to ground.
+</LI>
+</UL>
+
+<P>
+<B>Example 4:</B> In the circuit below, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img81.svg"
+ ALT="$V_1=12 V$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img82.svg"
+ ALT="$V_2=6 V$"></SPAN>, <!-- MATH
+ $R_1=3
+\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img65.svg"
+ ALT="$R_1=3\Omega$"></SPAN>, <!-- MATH
+ $R_2=8 \Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img66.svg"
+ ALT="$R_2=8\Omega$"></SPAN>, <!-- MATH
+ $R_3=6 \Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img67.svg"
+ ALT="$R_3=6\Omega$"></SPAN>, <!-- MATH
+ $R_4=4\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img68.svg"
+ ALT="$R_4=4\Omega$"></SPAN>.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/currentmethod1.gif"
+ ALT="currentmethod1.gif">
+
+<P>
+Find all node voltages with respect to the top-left corner treated 
+as the ground. Then do the same when the middle node where all three 
+resistors <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img83.svg"
+ ALT="$R_1$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img84.svg"
+ ALT="$R_2$"></SPAN>, and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img85.svg"
+ ALT="$R_3$"></SPAN> join is treated as ground is treated 
+as the ground.
+
+<P>
+<A ID="tex2html1"
+  HREF="../ch2_sub0/index.html">Answer</A>
+<P>
+<B>Example 5:</B> The two circuits shown below are equivalent, but you 
+may want to choose wisely in terms of which is easier to analyze. Solve 
+this circuit using both node voltage and loop current methods. Assume 
+<!-- MATH
+ $R_1=100\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img86.svg"
+ ALT="$R_1=100\Omega$"></SPAN>, <!-- MATH
+ $R_2=5\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img87.svg"
+ ALT="$R_2=5\Omega$"></SPAN>, <!-- MATH
+ $R_3=200\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img88.svg"
+ ALT="$R_3=200\Omega$"></SPAN>, <!-- MATH
+ $R_4=50\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img89.svg"
+ ALT="$R_4=50\Omega$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img90.svg"
+ ALT="$V=50V$"></SPAN>,
+and <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img91.svg"
+ ALT="$I=0.2A$"></SPAN>.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/problembase1.gif"
+ ALT="problembase1.gif">  <IMG STYLE=""
+ SRC="../figures/problembase1a.gif"
+ ALT="problembase1a.gif">
+
+<P>
+<A ID="tex2html2"
+  HREF="../ch2_sub4/index.html">Answer</A>
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node3.html">Circuit Theorems</A>
+<B> Up:</B> <A
+ HREF="node1.html">Chapter 2: Circuit Principles</A>
+<B> Previous:</B> <A
+ HREF="node1.html">Chapter 2: Circuit Principles</A></DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

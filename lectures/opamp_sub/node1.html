@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Algebraic Summer</TITLE>
+<META NAME="description" CONTENT="Algebraic Summer">
+<META NAME="keywords" CONTENT="opamp_sub">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="opamp_sub.css">
+
+<LINK REL="next" HREF="node2.html">
+<LINK REL="previous" HREF="opamp_sub.html">
+<LINK REL="next" HREF="node2.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node2.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="opamp_sub.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="opamp_sub.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node2.html">Howland Current Source</A>
+<B> Up:</B> <A
+ HREF="opamp_sub.html">opamp_sub</A>
+<B> Previous:</B> <A
+ HREF="opamp_sub.html">opamp_sub</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A ID="SECTION00010000000000000000">
+Algebraic Summer</A>
+</H1>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/opamp5a.gif"
+ ALT="opamp5a.gif">
+
+<P>
+Define <!-- MATH
+ $V\stackrel{\triangle}{=}V^+ \approx V^-$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.12ex; " SRC="img1.svg"
+ ALT="$V\stackrel{\triangle}{=}V^+ \approx V^- $"></SPAN>. Apply KCL to <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.12ex; " SRC="img2.svg"
+ ALT="$V^-$"></SPAN> 
+  and <SPAN CLASS="MATH"><IMG STYLE="height: 2.09ex; vertical-align: -0.12ex; " SRC="img3.svg"
+ ALT="$V^+$"></SPAN> we get:
+  <P><!-- MATH
+ \begin{displaymath}
+\frac{V_1-V}{R_1}+\frac{V_2-V}{R_2}+\frac{V_{out}-V}{R_f}=0,\;\;\;\;\;\;
+  \mbox{and}\;\;\;\;\;\;\;\;
+  \frac{V_3-V}{R_3}+\frac{V_4-V}{R_4}=0
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="mathdisplay">
+<IMG STYLE="height: 5.81ex; vertical-align: -2.37ex; " SRC="img4.svg"
+ ALT="$\displaystyle \frac{V_1-V}{R_1}+\frac{V_2-V}{R_2}+\frac{V_{out}-V}{R_f}=0,\;\;\;\;\;\;$">&nbsp; &nbsp;and<IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img5.svg"
+ ALT="$\displaystyle \;\;\;\;\;\;\;\;
+\frac{V_3-V}{R_3}+\frac{V_4-V}{R_4}=0
+$">
+</DIV><P></P>
+Solving the 2nd equation for <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img6.svg"
+ ALT="$V$"></SPAN> we get:
+  <P><!-- MATH
+ \begin{displaymath}
+V=\frac{R_4}{R_3+R_4} V_3 + \frac{R_3}{R_3+R_4} V_4
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="mathdisplay">
+<IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img7.svg"
+ ALT="$\displaystyle V=\frac{R_4}{R_3+R_4} V_3 + \frac{R_3}{R_3+R_4} V_4
+$">
+</DIV><P></P>
+and substitute it into the first equation to get
+  <P><!-- MATH
+ \begin{displaymath}
+V_{out}=-\frac{R_f}{R_1}V_1-\frac{R_f}{R_2}V_2
+  +\left(\frac{R_f}{R_1}+\frac{R_f}{R_2}+1\right)
+  \left(\frac{R_4}{R_3+R_4} V_3+\frac{R_3}{R_3+R_4} v_4\right)
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="mathdisplay">
+<IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img8.svg"
+ ALT="$\displaystyle V_{out}=-\frac{R_f}{R_1}V_1-\frac{R_f}{R_2}V_2
++\left(\frac{R_f}...
+...{R_2}+1\right)
+\left(\frac{R_4}{R_3+R_4} V_3+\frac{R_3}{R_3+R_4} v_4\right)
+$">
+</DIV><P></P>
+We see that the output is some algebraic sum of the inputs with both 
+  positive and negative coefficients:
+  <P><!-- MATH
+ \begin{displaymath}
+V_{out}=\sum_i k_iV_i
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="mathdisplay">
+<IMG STYLE="height: 5.81ex; vertical-align: -3.09ex; " SRC="img9.svg"
+ ALT="$\displaystyle V_{out}=\sum_i k_iV_i
+$">
+</DIV><P></P>
+
+<P>
+<BR><HR>
+
+</BODY>
+</HTML>

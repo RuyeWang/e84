@@ -1,0 +1,478 @@
+\documentstyle[12pt]{article}
+\usepackage{html}
+\begin{document}
+
+\section*{Logarithmic and Complex operations}
+
+Assume $w=u+jv=|w|\angle w=|w|e^{j\angle w}$, and $z=x+jy=|z|\angle z=|z|e^{j\angle z}$. 
+\begin{itemize}
+  \item 
+    \[  \left\{ \begin{array}{l}
+      |w|=\sqrt{u^2+v^2},\;\;\;\;\angle w=\tan^{-1}\left( v/v \right) \\
+      |z|=\sqrt{x^2+y^2},\;\;\;\;\angle z=\tan^{-1}\left( y/x \right) \end{array} \right. \]
+  \item 
+    \[ w z=(u+jv)(x+jy)=|w|e^{j\angle w}\;|z|e^{j\angle z} \]
+    \[ \left| wz \right| =|w||z|,\;\;\;\;\;
+    e^{j\angle w} e^{j\angle z}=e^{j(\angle w+\angle z)},
+    \;\;\;\mbox{or}\;\;\;\;
+    \angle \left( wz \right) =\angle w+\angle z \]
+  \item 
+    \[ \frac{w}{z}=\frac{u+jv}{x+jy}=\frac{|w|e^{j\angle w}}{|z|e^{j\angle z}} \]
+    \[ \left| \frac{w}{z} \right| =\frac{|w|}{|z|},\;\;\;\;\;
+    \frac{e^{j\angle w}}{e^{j\angle z}}=e^{j(\angle w-\angle z)},\;\;\;\mbox{or}\;\;\;
+    \angle \left( \frac{w}{z} \right)=\angle w-\angle z  \]
+\end{itemize}
+
+\begin{itemize}
+  \item \[ \log \;(ab)=\log a+\log b \]
+  \item \[ \log \;(a/b)=\log a-\log b \]
+  \item \[ \log \;(a^n)=n\;\log a \]
+  \item \[ \log \;(a^{-n})=-n\;\log a \]
+\end{itemize}
+
+\section*{Impedance}
+
+In DC circuits the relationships of various voltages and currents are described 
+by a set of linear algebraic equations, while in AC circuits they are described
+by a set of linear differential equations. 
+
+The resistance $R$ of a resistor is defined by Ohm's law as the ratio of voltage 
+$v$ across a resistor and current $i$ through the resistor: $ R=v/i$.
+This concept is generalized to that of impedance $Z$ of any element (L, C, as
+well R) in AC circuits, defined as the frequency response function of the element
+with the current through the element as the input and the voltage across the element
+as the output:
+\[
+Z=\frac{V}{I}=\frac{v_m e^{j\phi}}{i_m e^{j\psi}}=\frac{v_m}{i_m} e^{j(\phi-\psi)} 
+\]
+This is the generalized Ohm's law, which represents impedance $Z$ as the ration 
+of the phasor voltage $V$ across an element and the phasor current $I$ through it.
+In other words, impedance $Z$ represents (a) the phase difference between $V$ and 
+$I$ as well as (b) the ratio of their amplitudes.
+
+
+\begin{itemize}
+\item Inductor $L$: Assume the current through $L$ is $I e^{j\omega t}$, 
+  then the voltage across L is:
+  \[ V e^{j\omega t}=L\frac{d}{dt} [I e^{j\omega t}]=j\omega L I e^{j\omega t}
+  \;\;\;\;\mbox{i.e.}\;\;\;\;\;\;Z_L=\frac{V}{I}=\frac{j\omega LI}{I}=j\omega L \]
+\item Capacitor $C$: Assume the voltage across $C$ is $V e^{j\omega t}$, 
+  then the current through C is
+  \[ I e^{j\omega t}=C\frac{d}{dt} [V e^{j\omega t}]=j\omega C V e^{j\omega t}
+  \;\;\;\;\mbox{i.e.}\;\;\;\;\;\;Z_C=\frac{V}{I}=\frac{V}{j\omega CV}=\frac{1}{j\omega C} \]
+\item Resistor $R$: the voltage across R and current through R are in phase, therefore:
+  \[ Z_R=\frac{V}{I}=\frac{v_me^{j\phi}}{i_me^{j\phi}}=\frac{v_m}{i_m}=R \]
+\end{itemize}
+
+All familiar laws such as Ohm's law, KCL and KCL, current divider and voltage
+divider, can be generalized and applied to the analysis of AC circuit containing
+elements such as L, C as well as R.
+
+\section*{Decibel (dB)}
+
+The bel (B) is a unit of measurement for the ratio of a physical quantity 
+(power, intensity, magnitude, etc.) and a specified or implied reference 
+level in base-10 logarithm. As it is a ratio of two quantities with the same 
+unit, it is dimensionless. 
+
+For example, consider a power amplifier with input signal power $P_{in}=100\; mW$ 
+and output signal power $P_{out}=10\;W$, then the power gain of the amplifier is 
+$P_{out}/P_{in}=100$, which can be more concisely expressed in base-10 log scale:
+\[
+L_B=\log_{10} \frac{P_{out}}{P_{in}}=\log_{10} \frac{10}{0.1} =\log_{10} 100 =2\; bel(B)
+\]
+The unit bel (B) was first used in early 1920's in honor of 
+\htmladdnormallink{Alexander Bell (1847 -- 1922)}{http://en.wikipedia.org/wiki/Alexander_Graham_Bell},
+a telecommunication pioneer and founder of the Bell System (the Bell Labs).
+
+As bel (B) is often too big a unit (a gain of 100 is only 2 B), a smaller
+unit of decibel (dB), 1/10 of the unit bel (B), is more widely used instead. 
+Now the power gain above can be expressed as:
+\[ L_B=\log_{10}\frac{P_{out}}{P_{in}}=\log_{10} 100 =2\;B=20\;dB,
+\;\;\;\;\mbox{or}\;\;\;\;\;
+L_{dB}=10 \log_{10}\frac{P_{out}}{P_{in}}=20\;dB \]
+Similarly a 1,000 fold power gain is expressed as:
+\[ L_B=\log_{10}\frac{P_{out}}{P_{in}}=\log_{10} 1000 =3\;B=30\;dB,
+\;\;\;\;\mbox{or}\;\;\;\;
+L_{dB}=10 \log_{10}\frac{P_{out}}{P_{in}}=30\;dB \]
+Given the input power $P_{in}$ and the power gain in decibel, e.g., $L_}dB}=30\;dB$, 
+the output power can be obtained as:
+\[ \frac{P_{out}}{P_{in}}=10^{L_{dB}/10}=10^{30/10}=10^3,
+\;\;\;\;\mbox{i.e.}\;\;\;\;P_{out} =10^3\;P_{in}=1,000\;P_{in} \]
+
+As another example, the sound level is measured in decibel, in terms of the ratio
+of the sound intensity (power per area, e.g., $W/m^2$) and the threshold of human 
+hearing ($10^{-12}\; W/m^2$) as the reference. The human hearing has a large range 
+from 0 dB (threshold) to 140 dB (military jet takeoff, $10^{14}$ times the threshold, 
+i.e., $10^2\; W/m^2$). 160 dB sound level will cause instant membrane/eardrum 
+perforation.
+
+In general, power (and energy) is always proportional to the amplitude of certain
+quantity squared (e.g., $P=V^2/R=I^2 R$, $E=mv^2/2$, $E=kx^2/2$). Therefore a 
+different definition is used for ratios between two amplitudes, for example, the
+output and input voltages $V_{out}$ and $V_{in}$ of a voltage amplifier, we have:
+\[ L_{dB}=10 \log_{10} \frac{V^2_{out}}{V^2_{in}}
+=20 \log_{10} \frac{V_{out}}{V_{in}}\;dB \]
+If the input to a voltage amplifier is 10 mV and the output voltage is 1 V, then the
+voltage gain in terms of decibel is:
+\[ 20 \log_{10} \frac{V_{out}}{V_{in}}=20 \log_{10} \frac{1,000}{10}=40\; dB \]
+If the output voltage is 10 V, then
+\[ 20 \log_{10} \frac{V_{out}}{V_{in}}=20 \log_{10} \frac{10,000}{10}=60\; dB \]
+We see that the difference of one order of magnitude in the gain corresponds to 20 dB.
+
+Given the input voltage $V_{in}$ and the voltage gain in decibel, e.g., $L_{dB}=60\;dB$, 
+the output voltage can be obtained as:
+\[ \frac{V_{out}}{V_{in}}=10^{L_{dB}/20}=10^{60/20}=10^3,
+\;\;\;\;\mbox{i.e.,}\;\;\;\;\; V_{out}=10^3 V_{in}=1,000 V_{in} \]
+
+A related issue is the half power point. Recall that for a second order system, when
+$\zeta$ is small (e.g., $\zeta<0.2$), the magnitude $|H(j\omega)|$ of the frequency 
+response function has a peak at $\omega=\omega_p\approx \omega_n$. The bandwidth of 
+the peak is defined as the difference between two cut-off frequencies $\omega_1$ 
+and $\omega_2$ ($\omega_1<\omega_n < \omega_2$) at which 
+\[ |H(j\omega_1)|^2=|H(j\omega_2)|^2=\frac{1}{2} |H(j\omega_p)|^2\;\;\;\mbox{i.e.,}\;\;\;\;
+   | H(j\omega_{1,2}) |=0.707\; | H(j\omega_p) | \]
+The ratio between the half-power point and the peak in decibel is
+\[ 20 \log_{10} \left( \frac{ |H(j\omega_{1,2})|}{| H(j\omega_p) |} \right)
+=20 \log_{10} 0.707=-3.01\;dB \approx -3\;dB \]
+
+\section*{Bode Plots}
+
+The Bode plot is named after 
+\htmladdnormallink{Hendrik Wade Bode (1905 -- 1982)}{http://en.wikipedia.org/wiki/Hendrik_Wade_Bode}, an American engineer and scientist, of Dutch ancestry,
+a pioneer of modern control theory and electronic telecommunications. 
+
+The {\bf frequency response function (FRF)} is a complex function of the 
+frequency $\omega=2\pi f$ that describes the response of a system to input of
+different frequencies:
+\[ H(j\omega)=|H(j\omega)|e^{j\angle H(j\omega)}=|H(j\omega)| \angle H(j\omega) \]
+
+The {\bf Bode plot} presents both the magnitude $|H(j\omega)|$ and phase 
+angle $\angle H(j\omega)$ of $H(j\omega)$ as functions of frequency in 
+logarithmic scale. (Zero frequency is at $-\infty$ as $10^{-\infty}=0$.)
+Moreover, the magnitude $| H(j\omega) |$ is also represented in logarithmic
+scale in decibel (dB), and is called log magnitude.
+A Bode plot is composed of two parts:
+\begin{itemize}
+  \item The log magnitude (Lm) of $|H(j\omega)|$ with unit decibel (dB):
+  \[ Lm\; H(j\omega)=20 \;log_{10} |H(j\omega)|\;dB \]
+  \item The phase plot $\angle H(j\omega)$ with either in radian or degree.
+\end{itemize}
+The logarithmic scale of the frequency is composed of several ``decades'' each 
+for a range of frequencies from $\omega$ to $10 \omega$, independent of the 
+specific frequency $\omega$.
+
+Bede plots have the following advantages:
+\begin{itemize}
+  \item Due to the logarithmic scale in frequency, large frequency range of 
+    several orders of magnitude can be represented;
+
+  \item Convenient straight line asymptotes can be used to approximate the plots;
+
+  \item The behavior of the system in terms of the magnitude, even
+    approaching zero, can be clearly described.
+    
+  \item Due to the logarithmic scale of the magnitude of the FRF, multiplications 
+    and divisions of FRFs can be represented as addition and subtractions in the 
+    plot (while the phases are always added/subtracted):
+    \[ \left\{ \begin{array}{ll}
+      Lm(H_1H_2)=Lm\;H_1+Lm\;H_2,&\;\;\;\;\angle (H_1H_2)=\angle H_1+\angle H_2\\
+      Lm(H_1/H_2)=Lm\;H_1-Lm\;H_2,&\;\;\;\;\angle (H_1/H_2)=\angle H_1-\angle H_2\\
+      Lm \;H^n=n\;Lm \;H,&\;\;\;\;\angle H^n=n\;\angle H \\
+      Lm (1/H)=-Lm\;H,&\;\;\;\;\angle (1/H)=-\angle H \end{array} \right. \]
+\end{itemize}
+
+All FRFs of interest in this course can be considered as a combination of 
+some components or building blocks, including:
+\begin{itemize}
+  \item Constant gain $k$;
+  \item Integral/derivative factors $(j\omega)$
+  \item Delay factor: $e^{\pm j\omega \tau}$;
+  \item First-order factor $(1+j\omega\tau)$;
+  \item Second-order factor 
+    $(j\omega)^2+2\zeta\omega_n\omage j+\omega_n^2
+    =(\omega_n^2-\omega^2)+j\,2\zeta\omega_n$
+\end{itemize}
+Given the Bode plot of any building block $H(j\omega)$, we can obtain the plots
+of any combination of them.
+
+We will first consider each of such components at a time, and then consider 
+their combinations. In particular, we will study the first order system:
+\[ H(j\omega)=\frac{N(j\omega)}{1+j\omega \tau} \]
+and the second order system:
+\[ H(j\omega)=\frac{N(j\omega)}{(j\omega)^2+2\zeta\omega_n j\omega +\omega_n^2}
+=\frac{N(j\omega)}{(\omega_n^2-\omega^2)+j\;(2\zeta\omega_n \omega) }\]
+
+\section*{Bode Plots of Components}
+
+\begin{enumerate}
+\item {\bf Constant gain $k$}
+
+  \[ \left\{ \begin{array}{l}
+    \mbox{If $k>0, \;\;\;\;k=|k|e^{j0}, \;\;Lm\;k=20 \;\log_{10}|k|,\;\;\angle k=0$} \\
+    \mbox{If $k<0, \;\;\;\;k=-|k|=|k|e^{j\pi}, \;\;Lm\;k=20\;\log_{10}|k|,\;\;\angle k=\pi$} 
+    \end{array} \right. \]
+
+\item Delay factor: $e^{\pm j\omega \tau}$
+  \[ Lm \;e^{ j\omega \tau}=20\;\log_{10} |e^{ j\omega \tau}|=20\;\log_{10} 1=0,\;\;\;\;
+  \angle e^{ j\omega \tau} =\pm \omega \tau \]
+
+\item {\bf Derivative factor $j\omega=\omega\; e^{j\pi/2}$:}
+  \[ Lm\; (j\omega)=20\; log_{10} \omega\;dB,\;\;\;\;\;\angle(j\omega)=\frac{\pi}{2} \]
+  In particular:
+  \begin{itemize}
+  \item When $\omega=1$, $Lm \;(1) =20\; \log_{10} 1=0\;dB$
+  \item If a frequency $\omega$ becomes ten times higher, then
+    \[ Lm\; (j10\omega)=20\; \log_{10} 10\omega=20 \;\log_{10} 10+20\;\log_{10}\omega 
+    =20+Lm(j\omega) \]
+    The Lm plot of $j\omega$ is a straight line with a slop of 20 dB/dec that goes
+    through a zero-crossing at $\omega=1$.
+
+  \end{itemize}
+
+  Also consider two additional cases related to $j\omega$. First, 
+  $(j\omega)^{\pm m}=\omega^{\pm m} e^{\pm j m\pi/2}$
+  \[ Lm(j\omega)^{\pm m}=\pm m\;Lm(j\omega),\;\;\;\;\;\angle(j\omega)^{\pm m}=\pm m\pi/2\]
+  The slop of the Lm plot is $\pm 20m/dec$. For example, when $m=2$, we have:
+  \[ Lm\; (j\omega)^2=40\log_{10}\omega,\;\;\;\;\;\angle\;(j\omega)^2=\pi \]
+
+  Second, the plots of $j\omega\tau$ are similar to those of $j\omega$, except the
+  zero-crossing occurs at $\omega\tau=1$, i.e., $\omega=1/\tau$.
+
+\item {\bf Integral factor $1/j\omega=(j\omega)^{-1}$:}
+
+  \[ Lm \;(j\omega)^{-1}=-Lm\;(j\omega)=-20\;log_{10} \omega\;dB,
+  \;\;\;\;\angle\; (j\omega)^{-1}=-\angle(j\omega)=-\frac{\pi}{2} \]
+  The Lm plot of $1/j\omega$ is a straight line with a slop of -20 dB/dec that goes
+  through a zero-crossing at $\omega=1$.
+
+\item {\bf First order factor in numerator $1+j\omega\tau$}
+  \[ 1+j\omega \tau=\sqrt{1+(\omega \tau)^2}\;e^{j\tan^{-1}(\omega \tau)}
+  =\sqrt{1+(\omega \tau)^2}\;\angle \tan^{-1}(\omega \tau) \]
+  \[ Lm(1+j\omega \tau)=20\;\log_{10}\sqrt{1+(\omega \tau)^2}
+  =20\;\log_{10}(1+(\omega \tau)^2)^{1/2}=10\;\log_{10}(1+(\omega \tau)^2) \]
+  \[ \angle(1+j\omega \tau)=\tan^{-1}(\omega\tau) \]
+  Consider the following three cases:
+  \begin{itemize}
+  \item $\omega\tau=1$, i.e., $\omega_c=1/\tau$ is the corner frequency, we have
+    \[ Lm(1+j)=20\;\log_{10} \sqrt{1^2+1^2}=20\;\log_{10} 0.707\approx 3.01\;dB,\;\;\;\;\;
+    \angle(1+j)=\frac{\pi}{4} \]
+  \item $\omega\tau \ll 1$ (e.g., $\omega\tau\le 10$):
+    \[ Lm(1+j\omega \tau)\approx10\;\log_{10}(1)=0,\;\;\;\;\;
+    \angle(1+j\omega \tau)\approx \angle(1)=0 \]
+  \item $\omega\tau \gg 1$ (e.g., $\omega\tau\ge 10$):
+    \[ Lm(1+j\omega \tau)\approx 20\;\log_{10}(\omega \tau),\;\;\;\;
+    \angle(1+j\omega \tau)\approx \angle(j\omega \tau)=\frac{\pi}{2} \]
+  \end{itemize}
+  The straight-line asymptote of $Lm(1+j\omega\tau)$ has zero slope when $\omega\tau<1$
+  but a slope 20 dB/dec when $\omage\tau>1$. The straight-line asymptote of 
+  $\angle(1+j\omega\tau)$ is zero when $\omega\tay<0.1$, $\pi/2$ when $\omega\tau>10$, 
+  but with a slope $45^\circ/dec$ in between.
+
+\item {\bf First order factor in denominator $1/(1+j\omega\tau)=(1+j\omega\tau)^{-1}$}
+  \[ Lm\;(1+j\omega\tau)^{-1}=-Lm(1+j\omega\tau)
+  =-10\;\log_{10}(1+(\omega \tau)^2) \]
+  \[ \angle\;(1+j\omega \tau)^{-1}=-\angle(1+j\omega \tau)
+  =-\tan^{-1}(\omega\tau) \]
+  Both the Lm and phase plots of $1/(1+j\omega\tau)$ is simply the negative 
+  version of $(1+j\omega\tau)$. 
+
+  The figure below shows the plots of two first order systems corner frequencies 
+  $\omega_1=100$ and $\omega_2=1000$, together with the plots of their product, a 
+  second order system.
+
+\htmladdimg{../bodeplot1storder.gif}
+
+\item {\bf Second-order factor}
+
+  \[ H(j\omega)=\frac{1}{(j\omega)^2+2\zeta\omega_n j\omega+\omega_n^2}
+  =\frac{1}{(\omega^2_n-\omega^2)+2\zeta\omega_n j\omega}
+  =\frac{\frac{1}{\omega_n^2}}{1-(\frac{\omega}{\omega_n})^2+j\,2\zeta\frac{\omega}{\omega_n}} \]
+  The denominator is a 2nd order polynomial for variable $j\omega$. Consider the
+  following two cases:
+
+  First, if $\Delta=b^2-4ac=(2\zeta\omega_n)^2-4\omega_n^2=4\omega^2_n(\zeta^2-1)\ge 0$
+  i.e., if $\zeta\ge 1$, the denominator has two real and negative roots:
+  \[ p_{1,2}=(-\zeta\pm\sqrt{\zeta^2-1})\omega_n < 0 \]
+  and $H(j\omega)$ can be written as a product of two first order FRFs:
+  \[ H(j\omega)=\frac{1}{(j\omega-p_1)(j\omega-p_2)} 
+  =\frac{1/p_1p_2}{(j\omega/p_1-1)(j\omega/p_2-1)} 
+  =\frac{\tau_1}{1+j\omega\tau_1}\;\frac{\tau_2}{1+j\omega\tau_2}
+  =H_1(j\omega)H_2(j\omega) \]
+  where $\tau_1=-1/p_1>0$ and $\tau_2=-1/p_2>0$ are the two time constant of the two
+  first order systems. Now the second order factor is the product of two first order 
+  factors and
+  \[ Lm\;(H_1 H_2)=Lm\; H_1+Lm\; H_2,\;\;\;\;\angle (H_1 H_2)=\angle H_1+\angle H_2 \]
+  with corner frequencies at $\omega_{c1}=1/\tau_1=p_1$ and $\omega_{c1}=1/\tau_2=p_2$.
+
+  Second, if $0<\zeta<1$, i.e., the two roots are complex. We consider the numerator 
+  and the denominator separately. The numerator is just a constant with zero phase and
+  log-magnitude of $20\log_{10} \omega_n^{-}2=-40\log_{10} \omega_n$. Next consider the
+  rest of the function:
+  \[ |H(j\omega)|=[(1-(\frac{\omega}{\omega_n})^2)^2+(2\zeta\frac{\omega}{\omega_n})^2]^{-1/2}\]
+  We have
+  \begin{eqnarray}
+    && Lm\;H(j\omega)=20\log_{10} |H(j\omega)|
+    =-10\;\log_{10}[\; (1-(\frac{\omega}{\omega_n})^2)^2+(2\zeta\frac{\omega}{\omega_n})^2\;]
+    \nonumber 
+  \end{eqnarray}
+  \[ \angle H(j\omega)=-\tan^{-1}\frac{2\zeta\omega/\omega_n}{1-(\omega/\omega_n)^2} \]
+  Consider three cases:
+  \begin{itemize}
+  \item $\omega/\omega_n=1$:
+    Now $H(j\omega)=1/j2\zeta=-j/2\zeta$ and 
+    \[ Lm\;H(j\omega)=-20\;\log_{10} 2\zeta,\;\;\;\;\;\angle H(j\omega)=-\frac{\pi}{2} \]
+  \item $\omega/\omega_n\ll 1$, i.e., $\omega \ll \omega_n$:
+    \[ Lm\;H(j\omega) \approx -10\;\log_{10} (1)=0,\;\;\;\;\;\angle H(j\omega)=0^\circ \]
+  \item $\omega/\omega_n\gg 1$, i.e., $\omega \ll \omega_n$:
+    \[ Lm\;H(j\omega)\approx-10\;\log_{10}[\; (\frac{\omega}{\omega_n})^4 ]
+    =-40 \;\log_{10} \frac{\omega}{\omega_n}    \]
+    This is a straight line with slop of -40 dB per decade.
+    \[ \angle H(j\omega) \approx -\tan^{-1} (-2\zeta \omega_n/\omega)
+    \approx -\tan^{-1} (-0)=-\pi=-180^\circ \]
+  \end{itemize}
+
+\end{enumerate}
+
+\htmladdimg{../bodeplotzeta.gif}
+
+  The magnitude of the second-order factor is
+  \[ |H(j\omega)|
+  =\frac{1}{\sqrt{(1-\frac{\omega^2}{\omega_n^2})^2+4\zeta^2 \frac{\omega^2}{\omega_n^2}}}
+  =\frac{1}{\sqrt{(1-u)^2+4\zeta^2 u}} \]
+  where $u=(\omega/\omega_n)^2$. When $u=1$ i.e., $\omega=\omega_n$, we have
+  \[ | H(j\omega_n) |=\frac{1}{2\zeta}=Q \]
+  However, the peak of $|H(j\omega)|$ is not at $\omega_n$, but at the resonant frequency 
+  $\omega_p$, which can be found by taking derivative of the magnitude of the denominator 
+  with respect to $u$ and setting it to zero:
+  \[ \frac{d}{du}[u^2+(4\zeta^2-2)u+1]=2u+4\zeta^2-2=0 \]
+  Solving it, we get:
+  \[ u=\frac{\omega^2}{\omega_n^2}=1-2\zeta^2,\;\;\;\mbox{i.e.,}
+  \;\;\;\;\omega=\omega_n\sqrt{1-2\zeta^2} < \omega_n \]
+  At this peak frequency $\omega_p=\omega_n\sqrt{1-2\zeta^2}$, the peak is:
+  \[ | H(j\omega_p) |=\frac{1}{2\zeta\sqrt{1-\zeta^2}} > \frac{1}{2\zeta}=| H(j\omega_n) | \]
+  Note that if $\zeta^2>1/2$, i.e., $\zeta>0.707$, the result is complex indicating there 
+  is no peak.
+
+
+\section*{Bode Plots of first and Second Order Systems}
+{\bf First order circuits}
+
+\htmladdimg{../RC.gif}
+
+\begin{itemize}
+\item Voltage $V_C$ across C is treated as output. According to voltage
+  divider rule, we have:
+\[  H_C(j\omega)=\frac{V_C}{V_{in}}=\frac{Z_C}{Z_R+Z_C}
+    =\frac{1/j\omega C}{R+1/j\omega C} 
+    =\frac{1}{j\omega RC+1}=\frac{1}{j\omega \tau+1} \]
+    where $\tau=RC$.
+\item Voltage $V_R$ across R is treated as output:
+  \[ H_R(j\omega)=\frac{V_R}{V_{in}}=\frac{Z_R}{Z_R+Z_C}
+    =\frac{R}{R+1/j\omega C}=\frac{j\omega RC}{j\omega RC+1} 
+    =\frac{j\omega \tau}{j\omega \tau+1} \]
+\end{itemize}
+As $H_R(j\omega)$ can be written as:
+\[ H_R(j\omega)= \frac{1}{j\omega \tau+1} j\omega \tau  \]
+The first term is just $H_C(j\omega)$. Now the log-magnitude is:
+\[ Lm\;H_R(j\omega)
+=20\log_{10} \left| \frac{1}{j\omega \tau+1}\right|+20\log_{10} \left| j\omega \tau \right| 
+=Lm\; H_C(j\omega) +20\log_{10} (\omega\tau) \]
+The first term is the same as $H_C(j\omega)$ and the second plot is a straight line
+with slope of 20 dB/dec. at $\omega=\omega_c=1/\tau$, the first term is -3 dB and the  
+second is 0 dB.  The phase plot is:
+\[ \angle H_R(j\omega)=\angle \left(\frac{1}{j\omega \tau+1}\right)+\angle j\omega \tau  
+=\angle H_C(j\omega)+\frac{\pi}{2} \]
+In the plots below, $\tau=0.01$, $\omega_C=100$ rad/sec.
+
+\htmladdimg{../bodeplot1storder1.gif}
+
+Define $\omega_c=1/\tau=1/RC$ as the cut-off frequency, then when $\omega=\omega_c$, 
+we have $\omega\tau=1$, and $|H_R(j\omega)|=|H_C(j\omega)|=1/\sqrt{2}$, i.e., $\omega_c$
+is the half-power point, where $|H(j\omega)|$ is -3 dB.
+
+{\bf Second order circuits}
+
+\htmladdimg{../RCL.gif}
+
+\begin{itemize}
+\item Voltage $V_C$ across C is treated as output:
+  \begin{eqnarray}
+    H_C(j\omega)&=&\frac{V_C}{V_{in}}=\frac{Z_C}{Z_L+Z_R+Z_C}
+    =\frac{1/j\omega C}{j\omega L+R+1/j\omega C}
+    =\frac{1}{(j\omega)^2 LC+j\omega RC+1}
+    \nonumber \\
+    &=&\frac{1/LC}{(j\omega)^2 +j\omega R/L+1/LC}
+    =\frac{\omega_n^2}{(j\omega)^2 +2\zeta\omega_n j\omega+\omega^2_n} 
+    =\frac{1}{(1-\frac{\omega^2}{\omega_n^2})+j2\zeta\frac{\omega}{\omega_n}}
+    \nonumber 
+  \end{eqnarray}
+  where 
+  \[ \omega_n=\frac{1}{\sqrt{LC}},\;\;\;\;\zeta=\frac{R}{2}\sqrt{\frac{C}{L}} \]
+  The magnitude is
+  \[ |H_C(j\omega)|
+  =\frac{1}{\sqrt{(1-\frac{\omega^2}{\omega_n^2})^2+4\zeta^2 \frac{\omega^2}{\omega_n^2}}}
+  =\frac{1}{\sqrt{(1-u)^2+4\zeta^2 u}} \]
+  where $u=(\omega/\omega_n)^2$. When $u=\omega/\omega_n=1$ or $\omega=\omega_n$, we have
+  \[ | H(j\omega_n) |=\frac{1}{2\zeta}=Q \]
+\item Voltage $V_R$ across R is treated as output:
+  \begin{eqnarray}
+    H_R(j\omega)&=&\frac{V_R}{V_{in}}=\frac{Z_R}{Z_L+Z_R+Z_C}
+    =\frac{R}{j\omega L+R+1/j\omega C}
+    =\frac{j\omega RC}{(j\omega)^2 LC+j\omega RC+1}
+    \nonumber \\
+    &=&\frac{j\omega R/L}{(j\omega)^2 +j\omega R/L+1/LC}
+    =\frac{2\zeta\omega_nj\omega}{(j\omega)^2 +2\zeta\omega_n j\omega+\omega^2_n} 
+    =H_C(j\omega) \;2\zeta \omega_n\;j \omega 
+    \nonumber 
+  \end{eqnarray}
+  Now we have:
+  \[ Lm\;H_R(j\omega)=Lm\; H_C(j\omega)+Lm\;(2\zeta\omega_n\;j\omega),\;\;\;\;
+  \angle H_R(j\omega)=\angle H_C(j\omega)+\angle(2\zeta\omega_n\;j\omega) \]
+  The log-magnitude of the second factor is a straight line with slope 20 dB/dec,
+  and at $\omega=\omega_n$, its value is $20\log_{10} 2\zeta\omega_n^2$. The phase is 
+  $90^\circ$ for all $\omega$.
+  
+  The denominator can be written as $R+j(\omega L-1/\omega C)$, which is minimized
+  when the imaginary part is zero, i.e, $j\omega L=1/j\omega C$. In other words, when 
+  $\omega=\omega_n=1/\sqrt{LC}$, $|H_R(j\omega)|$ reaches its peak value.
+\item Voltage $V_L$ across L is treated as output:
+  \begin{eqnarray}
+    H_L(j\omega)&=&\frac{V_L}{V_{in}}=\frac{Z_L}{Z_L+Z_R+Z_C}
+    =\frac{j\omega L}{j\omega L+R+1/j\omega C}
+    =\frac{(j\omega)^2 LC}{(j\omega)^2 LC+j\omega RC+1}
+    \nonumber \\
+    &=&\frac{(j\omega)^2}{(j\omega)^2 +j\omega R/L+1/LC}
+    =\frac{(j\omega)^2}{(j\omega)^2 +2\zeta\omega_n j\omega+\omega^2_n} 
+    =H_C(j\omega) \;(j\omega_n)^2
+    \nonumber 
+  \end{eqnarray}
+  Now we have:
+  \[ Lm\;H_L(j\omega)=Lm\; H_C(j\omega)+Lm\;(j\omega)^2,\;\;\;\;
+  \angle H_L(j\omega)=\angle H_C(j\omega)+\angle (j\omega)^2 \]
+  The log-magnitude of the second factor is a straight line with slope 40 dB/dec,
+  and at $\omega=\omega_n$, it's value is $20\log_{10} \omega_n^2$. The phase is
+  $180^\circ$ for all $\omega$.
+\end{itemize}
+
+\htmladdimg{../bodeplot2ndorderline.gif}
+
+In the following plots, $\omega_n=100$ rad/sec and $\zeta=0.05$.
+At $\omega=\omega_n$, $20\log_{10} (2\zeta\omega_n^2)=20\log_{10} 1000=60$ dB, and
+$20\log_{10}(\omega_n^2)=20\log_{10} 10,000=80$ dB.
+
+\htmladdimg{../bodeplot2ndorder.gif}
+
+{\bf Example, a Band-pass filter:}
+
+\htmladdimg{../opamp4b.gif}
+
+\[ H(j\omega)=-\frac{Z_2(j\omega)}{Z_1(j\omega)}
+=-\frac{R_2||1/j\omega C_2}{R_1+1/j\omega C_1}
+=-\frac{R_2/(1+j\omega R_2C_2)}{(1+j\omega R_1C_1)/j\omega C_1}
+=-\frac{j\omega \tau_3}{(1+j\omega \tau_1)(1+j\omega \tau_2)} \]
+where $\tau_1=R_1C_1$, $\tau_2=R_2C_2$, $\tau_3=R_2C_1$.
+
+
+\end{document}
+

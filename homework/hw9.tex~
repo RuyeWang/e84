@@ -1,0 +1,131 @@
+\documentstyle[11pt]{article}
+\usepackage{html}
+\begin{document}
+\begin{center}
+{\Large \bf  Home Work 9 ---- E84, Fall, 2004}
+\end{center}
+\begin{enumerate}
+
+\item Find values of $R_C$ and $R_B$ in the circuit with $\beta=100$
+and $V_{CC}=15V$ so that the Q-point is $I_C=25mA$ and $V_{ce}=7.5V$
+What is the Q point if $\beta=200$?
+
+\htmladdimg{../hw9a.gif}
+
+
+% {\bf Solution:}
+
+% Find $I_B=I_C/\beta=25mA/100=0.25mA$, $R_B=(15=0.7)/0.25=57.2k\Omega$
+% Also as $V_{CC}=I_C R_C+V_{ce}$, i.e., $R_C=(V_{CC}-V_{ce})/I_C=
+% (15-7.5)/25\times 10^{-3}=300\Omega$. 
+% 
+% $I_B=(V_{CC}-V_{BD})/R_B=0.25mA$, $I_C=\beta I_B=200\times 0.25=50mA$,
+% $V_{ce}=V_{CC}-R_C I_C=15-300\times 50\times 10^{-3}=0$.
+
+\item Design a stable self-biasing transistor circuit with a DC operating
+point (Q point) of $I_C=2.5mA$ and $V_{ce}=7.5V$ which should be in the 
+middle of the load line. The $\beta$ of the ransistor ranges from 50 to
+200. 
+
+{\bf Hint} This is a design problem with possibly multiple solutions, 
+i.e., there may be more degrees of freedom than constraining conditions. 
+One of such conditions is $(\beta+1)R_E \gg R_B$ for the DC operating 
+point to be approximately independent of $\beta$ (see online notes). 
+
+\htmladdimg{../hw9b.gif}
+
+% {\bf Solution:}
+% 
+% \begin{itemize}
+% \item Find $V_{CC}$: We want the Q-point to be in the middle of the
+%   load line, so we set $V_{CC}=2V_{ce}=2\times 7.5=15V$.
+% \item Find $R_C$ and $R_E$: As $V_{ce}=V_{CC}-I_CR_C-I_ER_E\approx
+%   V_{CC}-I_C(R_C+R_E)$, we have $R_C+R_E=7.5/2.5\times 10^{-3}=3K\Omega$.
+%   Choose $R_E=1K\Omega$ and $R_C=2K\Omega$.
+% \item Find $R_B$: To satisfy $R_B \ll \beta_{min} R_E$, we
+% 	let $R_B=0.1\times \beta_{min} R_E=0.1\times 50\times 1000=5\;K\Omega$
+% \item Find $V_{BB}$: 
+% 	\[ V_{BB}=V_{be}+I_ER_E=0.7+2.5\times 10^{-3}\times 10^3=3.2V \]
+% \item Find $R_1$ and $R_2$:
+% \[	R_B=\frac{R_1R_2}{R_1+R_2}=5\;K\Omega \;\;\;\;\;\;\;\;
+% 	\frac{V_{BB}}{V_{CC}}=\frac{R_2}{R_1+R_2}=\frac{3.2}{15}=0.21	\]
+% Solve these two equations (first divide the first equation by the second), 
+% we obtain the two unknowns $R_1$ and $R_2$:
+% \[	R_1=\frac{5\;K\Omega}{0.21}=24\;K\Omega \;\;\;\;\;\;\;\;\;
+% 	R_2=6.4\; K\Omega	\]
+% \end{itemize}
+
+\item In the AC amplifier shown in the figure, $R_S=600\Omega$, $R_1=30K\Omega$, 
+$R_2=20K\Omega$, $R_E=4K\Omega$, $R_C=3K\Omega$, $R_L=5.1K\Omega$, 
+$\beta=100$, $V_{CC}=15V$. 
+%Also assume $r_{be}=200\Omega$. 
+Assume the 
+frequency of the AC signals to be amplified is high enough so that the
+coupling capacitors and the emitter by-pass capacitor can be treated as 
+AC short circuits. Find
+\begin{itemize}
+\item The DC operating point in terms of variables $I_B$, $I_C$, $V_C$, $V_E$ 
+  and $V_{CE}$.
+\item The AC equivalent diagram
+\item The AC input and output impedances
+\item The voltage gain of the AC amplifier
+\end{itemize}
+
+\htmladdimg{../hw9c.gif}
+
+% {\bf Solution:} 
+% \begin{itemize}
+% \item Find DC operating point.
+% \[ V_{BB}=V_{CC}\frac{R_2}{R_1+R_2}=15\frac{20}{30+20}=6V	\]
+% \[ R_B=\frac{R_1R_2}{R_1+R_2}=\frac{600}{50}=12K\Omega 	\]
+% \[ I_B=\frac{V_{BB}-V_{be}}{(\beta+1)R_E+R_B}
+% 	=\frac{6-0.7}{101\times 4000+12000}=\frac{5.3}{26\times 10^4}
+% 	=0.025 mA	\]
+% \[ I_C=\beta I_B=100\times 0.025 mA=2.5 mA	\]
+% \[ V_C=V_{CC}-I_C R_C=15-2.5\times 3=7.5V	\]
+% \[ V_E=(\beta+1)I_C R_E=5V	\]
+% \[ V_{CE}=V_C-V_E=2.5V \]
+% \item Find input and output impedances.
+% \[	r_{be}=V_T/I_B=0.026/0.025=1K\Omega	\]
+% \[	r_{in}=R_1||R_2||r_{be} \approx 1K\Omega \]
+% \[	r_{out}=R_C=3K\Omega	\]
+
+% \item Find voltage gain.
+% \[	G=-\beta \frac{(R_1||R_2||r_{be})}{(R_1||R_2||r_{be})+R_s}
+% 	\frac{1}{r_{be}}(R_C||R_L) \approx -117	\]
+% \end{itemize}
+
+\item An emitter collower circuit is shown in the figure. Assume 
+$\beta=50$, $R_B=300K\Omega$, $R_E=4K\Omega$, $R_S=500\Omega$, 
+$R_L=5.1K\Omega$, and $V_{CC}=12$. Find the DC operating point in
+terms of $I_B$, $I_C$, $I_E$, and $V_E$. Then find the input and
+output resistances and the voltage gain.
+
+\htmladdimg{../hw9e.gif}
+
+\item In the circuit shown below, the two base resistors $R_B=43K\Omega$,
+the collector $R_C=1K\Omega$. Assume each of the two input voltages $V_1$
+and $V_2$ are either 0.2V or 5V. Find the output voltage $V_{out}$ in the
+following combinations of the inputs. (Hint: assume 5V input to a transistor
+will drive it to saturation.)
+
+\begin{tabular}{cc|c}\hline
+$V_1$ & $V_2$ & $V_{out}$ \\ \hline
+ 0.2  &  0.2  &           \\ \hline
+ 5.0  &  0.2  &           \\ \hline
+ 0.2  &  5.0  &           \\ \hline
+ 5.0  &  5.0  &           \\ \hline
+\end{tabular}
+
+\htmladdimg{../hw9d.gif}
+
+\end{itemize}
+
+\end{enumerate}
+
+\end{document}
+
+\item In the AC amplifier shown in the figure, $R_S=1.5K\Omega$, $R_1=10K\Omega$, 
+$R_2=200K\Omega$, $R_C=3.5K\Omega$, $R_L=2K\Omega$, $\beta=100$, $V_{CC}=20V$.
+Also assume $r_{be}=200\Omega$. Find the DC variables $I_B$, $I_C$, $V_C$.
+

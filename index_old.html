@@ -1,0 +1,672 @@
+<html>
+<head>
+<title> E84 </title>
+</head>
+
+
+<!--
+<script language="JavaScript" type="text/javascript">
+function openDialpad()
+{
+  var browserParsed = navigator.appVersion.substring (0,4);
+  var browserName = navigator.appName; 
+
+  if (browserName == "Netscape" && browserParsed < 4.06){
+    alert("Netscape " + browserParsed + " is not supported");
+    return false;
+  }
+  if (navigator.platform != "Win32") {
+    alert(navigator.platform + " is not supported.")
+    return false 
+  }           
+  if (!navigator.javaEnabled()) {
+    alert("Java should be enabled to use Dialpad");
+    return false;
+  }
+
+  window.open('http://www.dialpad.com/cgi-bin/launch.pl',
+   'Dialpad', 'scrollbars=no,resizable=no,width=420,height=370');
+  return false;
+}
+</script>
+
+<script language="JavaScript">
+function echange(lien,sub)
+  { document.write ("<a href='" + lien + "' " + 
+    "onMouseOver='JavaScript:document.Photo.src=" + sub + ".src'" +
+    "onMouseOut='JavaScript:document.Photo.src=" + '"CARILO.JPG"' + "'>")
+  }
+subCaltech=new Image;
+      subCaltech.src='COCINA.JPG';
+</script>
+
+</HEAD>
+
+<div id="dot0" style="position: absolute; visibility: hidden;"><img src="yellowbullet.gif" height=11 width=11></div>
+
+<div id="dot1" style="position: absolute;"><img src="img6.gif"></div>
+<div id="dot2" style="position: absolute;"><img src="img7.gif"></div>
+<div id="dot3" style="position: absolute;"><img src="img8.gif"></div>
+<div id="dot4" style="position: absolute;"><img src="img9.gif"></div>
+<div id="dot5" style="position: absolute;"><img src="img10.gif"></div>
+
+<script LANGUAGE="JavaScript">
+
+-->
+
+<!-- hide code
+
+var nDots = 6;
+if (document.all&&window.print)
+document.body.style.cssText="overflow-x:hidden;overflow-y:scroll"
+var Xpos = 0;
+var Ypos = 0;
+
+  // fixed time step, no relation to real time
+var DELTAT = .01;
+  // size of one spring in pixels
+var SEGLEN = 10;
+  // spring constant, stiffness of springs
+var SPRINGK = 10;
+  // all the physics is bogus, just picked stuff to
+  // make it look okay
+var MASS = 3;
+var GRAVITY = 50;
+var RESISTANCE = 10;
+  // stopping criterea to prevent endless jittering
+  // doesn't work when sitting on bottom since floor
+  // doesn't push back so acceleration always as big
+  // as gravity
+var STOPVEL = 0.1;
+var STOPACC = 0.1;
+var DOTSIZE = 11;
+  // BOUNCE is percent of velocity retained when 
+  // bouncing off a wall
+var BOUNCE = 0.75;
+
+var isNetscape = navigator.appName=="Netscape";
+
+  // always on for now, could be played with to
+  // let dots fall to botton, get thrown, etc.
+var followmouse = true;
+
+var dots = new Array();
+init();
+
+function init()
+{
+    var i = 0;
+    for (i = 0; i < nDots; i++) {
+        dots[i] = new dot(i);
+    }
+    
+    if (!isNetscape) {
+        // I only know how to read the locations of the 
+        // <LI> items in IE
+        //skip this for now
+        // setInitPositions(dots)
+    }
+    
+    // set their positions
+    for (i = 0; i < nDots; i++) {
+        dots[i].obj.left = dots[i].X;
+        dots[i].obj.top = dots[i].Y;
+    }
+    
+    
+    if (isNetscape) {
+        // start right away since they are positioned
+        // at 0, 0
+        startanimate();
+    } else {
+        // let dots sit there for a few seconds
+        // since they're hiding on the real bullets
+        setTimeout("startanimate()", 2000);
+    }
+}
+
+
+
+function dot(i) 
+{
+    this.X = Xpos;
+    this.Y = Ypos;
+    this.dx = 0;
+    this.dy = 0;
+    if (isNetscape) {	
+        this.obj = eval("document.dot" + i);
+    } else {
+        this.obj = eval("dot" + i + ".style");
+    }
+}
+
+
+function startanimate() {	
+    setInterval("animate()", 20);
+}
+
+
+// This is to line up the bullets with actual LI tags on the page
+// Had to add -DOTSIZE to X and 2*DOTSIZE to Y for IE 5, not sure why
+// Still doesn't work great
+function setInitPositions(dots)
+{
+    // initialize dot positions to be on top 
+    // of the bullets in the <ul>
+    var startloc = document.all.tags("LI");
+    var i = 0;
+    for (i = 0; i < startloc.length && i < (nDots - 1); i++) {
+        dots[i+1].X = startloc[i].offsetLeft
+            startloc[i].offsetParent.offsetLeft - DOTSIZE;
+        dots[i+1].Y = startloc[i].offsetTop +
+            startloc[i].offsetParent.offsetTop + 2*DOTSIZE;
+    }
+    // put 0th dot above 1st (it is hidden)
+    dots[0].X = dots[1].X;
+    dots[0].Y = dots[1].Y - SEGLEN;
+}
+
+// just save mouse position for animate() to use
+function MoveHandler(e)
+{
+    Xpos = e.pageX;
+    Ypos = e.pageY;	  
+    return true;
+}
+
+// just save mouse position for animate() to use
+function MoveHandlerIE() {
+    Xpos = window.event.x + document.body.scrollLeft;
+    Ypos = window.event.y + document.body.scrollTop;	  
+}
+
+if (isNetscape) {
+    document.captureEvents(Event.MOUSEMOVE);
+    document.onMouseMove = MoveHandler;
+} else {
+    document.onmousemove = MoveHandlerIE;
+}
+
+
+function vec(X, Y)
+{
+    this.X = X;
+    this.Y = Y;
+}
+
+// adds force in X and Y to spring for dot[i] on dot[j]
+function springForce(i, j, spring)
+{
+    var dx = (dots[i].X - dots[j].X);
+    var dy = (dots[i].Y - dots[j].Y);
+    var len = Math.sqrt(dx*dx + dy*dy);
+    if (len > SEGLEN) {
+        var springF = SPRINGK * (len - SEGLEN);
+        spring.X += (dx / len) * springF;
+        spring.Y += (dy / len) * springF;
+    }
+}
+
+
+function animate() {	
+    // dots[0] follows the mouse,
+    // though no dot is drawn there
+    var start = 0;
+    if (followmouse) {
+        dots[0].X = Xpos;
+        dots[0].Y = Ypos;	
+        start = 1;
+    }
+    
+    for (i = start ; i < nDots; i++ ) {
+        
+        var spring = new vec(0, 0);
+        if (i > 0) {
+            springForce(i-1, i, spring);
+        }
+        if (i < (nDots - 1)) {
+            springForce(i+1, i, spring);
+        }
+        
+        // air resisitance/friction
+        var resist = new vec(-dots[i].dx * RESISTANCE,
+            -dots[i].dy * RESISTANCE);
+        
+        // compute new accel, including gravity
+        var accel = new vec((spring.X + resist.X)/ MASS,
+            (spring.Y + resist.Y)/ MASS + GRAVITY);
+        
+        // compute new velocity
+        dots[i].dx += (DELTAT * accel.X);
+        dots[i].dy += (DELTAT * accel.Y);
+        
+        // stop dead so it doesn't jitter when nearly still
+        if (Math.abs(dots[i].dx) < STOPVEL &&
+            Math.abs(dots[i].dy) < STOPVEL &&
+            Math.abs(accel.X) < STOPACC &&
+            Math.abs(accel.Y) < STOPACC) {
+            dots[i].dx = 0;
+            dots[i].dy = 0;
+        }
+        
+        // move to new position
+        dots[i].X += dots[i].dx;
+        dots[i].Y += dots[i].dy;
+        
+        // get size of window
+        var height, width;
+        if (isNetscape) {
+            height = window.innerHeight + document.scrollTop;
+            width = window.innerWidth + document.scrollLeft;
+        } else {	
+            height = document.body.clientHeight + document.body.scrollTop;
+            width = document.body.clientWidth + document.body.scrollLeft;
+        }
+        
+        // bounce of 3 walls (leave ceiling open)
+        if (dots[i].Y >=  height - DOTSIZE - 1) {
+            if (dots[i].dy > 0) {
+                dots[i].dy = BOUNCE * -dots[i].dy;
+            }
+            dots[i].Y = height - DOTSIZE - 1;
+        }
+        if (dots[i].X >= width - DOTSIZE) {
+            if (dots[i].dx > 0) {
+                dots[i].dx = BOUNCE * -dots[i].dx;
+            }
+            dots[i].X = width - DOTSIZE - 1;
+        }
+        if (dots[i].X < 0) {
+            if (dots[i].dx < 0) {
+                dots[i].dx = BOUNCE * -dots[i].dx;
+            }
+            dots[i].X = 0;
+        }
+        
+        // move img to new position
+        dots[i].obj.left = dots[i].X;			
+        dots[i].obj.top =  dots[i].Y;		
+    }
+}
+
+// end code hiding -->
+
+</script>
+
+
+<body>
+<center> <h2> <b> Introduction to Electrical Engineering (E84)
+</b> <br> </center>
+
+<!--
+
+<u><h3><blink>Important Notice:</blink></h3></u>
+<ul>
+<li><h3>Two extra classes: Friday 9:00 am on March 4 and April 1 </h3><p>
+<li><h3>No class on April 4 and 6 </h3><p>
+</ul>
+<hr width=500 size=10 noshade>
+
+<p><p><img align=middle border=0 src="911.gif" alt=""></p></p> 
+
+
+<h4>
+-->
+
+<UL>
+
+
+<LI><a href="e84info.html"> Administration <p>
+
+<LI><a href="calendar_fall/calendar_fall.html"> Syllabus <p>
+
+<LI><a href="lectures/index.html"> Lecture Notes </a> <p>
+
+<LI><a href="homework/index.html"> Homework assignments </a> <p>
+
+<LI><a href="labs"> Labs </a> <p>
+
+<LI><a href="exam/midterm1_16f"> Midterm 1 </a> <p>
+
+<!--
+<LI><a href="exam/midterm1_16s_key">Pratice midterm</a> <p>
+
+<LI><a href="exam/midterm_bj16">Midterm exam</a> <p>
+
+<LI><a href="exam/final/">Final exam</a> <p>
+
+<LI><a href="exam/midterm1_14f"> practice midterm 1 </a>, 
+    <a href="exam/midterm1_14f_key"> key </a> <p>
+
+<LI><a href="homework/problems/"> Practice problems for midterm 2 </a><p>
+
+<LI><a href="exam/midterm2_16s/"> Midterm 2 </a>,
+<a href="exam/midterm2_16s_key/"> Solution </a><p>
+
+<LI><a href="exam/final_08f/final_08f.html"> Practice final </a>,
+<a href="exam/final_08f_key/"> Solution </a><p>
+
+<p>
+
+<LI><a href="exam/final16s/"> Final exam </a><p>
+
+
+<!--
+<LI><a href="http://goo.gl/forms/KTM1i1RqJZ">Midterm feedback </a><p>
+
+<LI><a href="exam/midterm2_2015f/"> Midterm 2 </a>,
+    <a href="exam/midterm2_2015f_key"> key </a> <p>
+
+<LI><a href="exam/final_14f/"> practice problems for final </a>,
+    <a href="exam/final_14f_key"> key </a> <p><p>
+
+<LI><a href="exam/final2015f/"> final exam </a><p>
+
+<!--
+<LI><a href="homework/11spring/11s.html"> homework (old) </a> <p>
+
+
+<LI><a href="labs/lab1/index.html"> Lab 1</a> <p>
+
+<LI><a href="labs/lab2a/node3.html"> Lab 2</a><p>
+
+
+<LI><a href="http://fourier.eng.hmc.edu/e84/labs/NewLabs/Lab5.pdf"> Lab 3</a>
+(Only do item 1 of Lab part)
+<p>
+
+<!--
+(written part due 2/27, final due 3/5)</a>
+
+<p>
+<LI><a href="labs/lab2a/index.html"> Lab 2 </a> <p>
+
+
+<LI><a href="exam/midterm1_14f/index.html"> Midterm 1</a>,
+<a href="exam/midterm1_14f_key/index.html"> Solution</a> 
+<p> 
+
+<LI><a href="exam/midterm2_14f/index.html"> Midterm 2</a>,
+<a href="exam/midterm2_14f_key/index.html"> Solution</a> 
+<p> 
+
+
+<LI><a href="exam/midterm2014summer/index.html"> Midterm (E84 in China)</a>,
+<a href="exam/midterm2014summer_key/index.html"> Solution</a>
+<p>
+
+<LI><a href="exam/final_05_key/index.html"> Old final with key</a><p> 
+
+<LI><a href="exam/final/index.html"> Final </a>
+
+<!--
+
+<LI><a href="exam/midterm2/midterm2.html"> Practice midterm 2 </a><p>
+
+<LI><a href="exam/midterm2_14/index.html"> Midterm 2 </a><p>
+
+<a href="exam/final_14s/index.html"> Final </a>
+
+<LI><a href="exam/final_14s/index.html"> Practice final </a>, 
+<a href="exam/final_14s_key/index.html">key</a>
+<p>
+
+<a href="exam/final_05/index.html"> Final </a>
+
+<LI><a href="exam/final_14s/index.html"> Final </a>
+<a href="exam/midterm1_05_key/midterm1_05_key.html"> key </a> <p>
+
+<a href="exam/midterm1_12s_key/midterm1_12s_key.html"> key </a> <p>
+
+<LI> <a href="exam/midterm2_09s/index.html">Practice midterm 2</a>,
+<a href="exam/midterm2_09s_key/index.html">key</a><p>
+
+<LI> <a href="exam/midterm1_bj/"> Midterm 1 </a>,
+
+<a href="exam/midterm1_bj_key/"> key </a> <p>
+
+<LI> <a href="exam/midterm2_12s/"> Midterm 2 </a>,
+ <a href="exam/midterm2_12s_key/index.html">key</a><p>
+
+<LI> <a href="exam/final_05/index.html">Practice Final</a>,
+  <a href="exam/final_05_key/index.html">key</a><p>
+
+<LI> <a href="exam/midterm2_bj/index.html">Final</a>
+
+<LI> Midterm 1: <a href="exam/feedback.pdf"> Feedback form,  </a> 
+ <a href="exam/midterm1_08f.pdf"> The exam </a>, 
+ <a href="exam/midterm1_08f_key/index.html"> Solution </a>, <p>
+
+<LI><a href="exam/midterm2_09s_key/index.html"> Midterm 2 solution</a><p>
+
+<LI><a href="exam/midterm2/midterm2.html"> Old Midterm 2 </a>, 
+
+<a href="exam/midterm2_key/midterm2_key.html"> key </a> <p>
+
+<LI><a href="exam/midterm2_08f/midterm2_08f.html"> Midterm 2 </a>, 
+<a href="exam/midterm2_08f.pdf"> pdf version </a>, 
+
+<a href="exam/midterm2_08f_key/midterm2_08f_key.html"> key </a> <p>
+
+
+<LI><a href="exam/final_08f/final_08f.html"> Old midterm 2 </a>, 
+
+<a href="exam/final_08f_key/final_08f_key.html"> key </a> <p>
+
+<LI><a href="exam/final_09s/final_09s.html"> New midterm 2 </a> <p>
+
+<p><p><p><p><p><p><p><p><p><p><p><p><p><p>
+
+
+<LI><a href="summer.html">E84 in China</a> <p>
+
+<!--
+<LI><a href="http://www.opamp-electronics.com/tutorials/dc_theory.htm">A useful website </a> <p>
+
+<LI><a href="lectures/summary/">  Summary of first half </a> <p>
+-->
+
+<!--
+<Li>Previous midterms:
+<UL>
+<LI><a href="exam/midterm1/midterm1.html"> Midterm Exam I </a>,
+
+<a href="exam/midterm1_key/midterm1_key.html"> Solution </a> <p>
+
+<LI><a href="exam/midterm2/midterm2.html"> Midterm Exam II </a>,
+
+<a href="exam/midterm2_key/midterm2_key.html"> Solution </a> <p>
+
+<LI><a href="exam/midterm1_05/midterm1_05.html"> Midterm Exam I </a>,
+
+<a href="exam/midterm1_05_key/midterm1_05_key.html"> Solution </a> <p>
+
+<LI><a href="exam/midterm2_05/midterm2_05.html"> Midterm Exam II </a>,
+
+<a href="exam/midterm2_05_key/midterm2_05_key.html"> Solution </a> <p>
+
+</UL>
+
+
+<Li>Previous finals:
+<UL>
+<LI><a href="exam/final/final.html"> Midterm Exam III </a>,
+
+<a href="exam/final_key/final_key.html"> Solution </a> <p>
+<p>
+
+<LI><a href="exam/final_05/final_05.html"> Midterm Exam III </a>,
+<a href="exam/final_05_key/final_05_key.html"> Solution </a> <p>
+
+<LI><a href="exam/midterm_05f/midterm_05f.html"> Midterm Exam </a>,
+
+<a href="exam/midterm_05f_key/midterm_05f_key.html"> Solution </a> <p>
+
+<LI><a href="exam/final_05f/final_05f.html"> Final Exam </a>
+
+</UL>
+
+<Li>Current midterm:
+
+<a href="exam/midterm_06s/midterm_06s.html"> Midterm Exam </a>, 
+
+<a href="exam/midterm_06s_key/midterm_06s_key.html"> Solution </a>
+
+<Li>Current final:
+
+<a href="exam/final_06s/final_06s.html"> final Exam </a>
+
+<a href="exam/midterm_06s_key/midterm_06s_key.html"> Solution </a>
+
+</UL>
+
+
+<LI>Midterm Exam<p>
+<a href="exam/midterm1_03f/index.html"> html </a>,
+<a href="exam/midterm1_03f_tex.ps"> postscript </a>,
+<a href="exam/midterm1_03f_tex.pdf"> pdf </a><p>
+
+
+<LI>Final Exam<p>
+<a href="exam/midterm1_04f/index.html"> html </a>,
+<a href="exam/midterm1_03f_tex.ps"> postscript </a>,
+<a href="exam/midterm1_03f_tex.pdf"> pdf </a><p>
+
+<!--
+
+<br><br><br><br>
+<a href="silva.pdf"> Chaos and Applications</a>
+
+
+<LI><a href="exam/midterm1_03s/midterm1_03s.html"> Midterm Exam (Due Friday 5pm)</a>, <a href="exam/midterm1_03s_key/midterm1_03s_key.html"> Key </a><p>
+
+
+<LI><a href="exam/sample_final"> Previous Final Exam </a><p>
+
+<LI><a href="exam/final_03a"> <blink> Final Exam </blink></a><p>
+
+<LI><a href="labtutoring.html"> Lab Tutoring <p>
+
+<LI><a href="labs/index.html"> Projects<p>
+
+<LI><a href="Homework/index.html"> Homeworks (with solutions)</a><p>
+
+<LI><a href="exam/midterm1_02f/midterm1_02f.html"> Midterm exam </a><p>
+
+<LI><a href="exam/final_02a/final_02a.html"> Previous final exam </a><p>
+
+<LI><a href="exam/final_02b/final_02b.html"> The final exam (due Dec. 20) </a><p>
+
+
+<LI><a href="exam/midterm1_02/midterm1_02.html"> Midterm exam this year</a><p>
+
+<LI><a href="exam/final_01_key"> Final exam last year with keys </a><p>
+
+<LI><a href="exam/final_02"> Final exam  </a><p>
+
+<LI><a href="exams/midterm1_00/midterm1_00.html"> Midterm exam last year</a>
+ (<a href="exams/midterm1_00_key_1.gif"><b>Solution 1</b></a>
+ <a href="exams/midterm1_00_key_2.gif"><b>Solution 2</b></a>)<p>
+
+<LI><a href="exams/midterm1_01/midterm1_01.html"> Midterm exam </a><p>
+
+<LI><a href="exams/final_01"> Final exam </a><p>
+
+<LI><a href="exams/quizzes.html"> Quizzes</a><p>
+
+<LI><a href="exams/final_01"> <blink> Final exam </blink></a><p>
+
+<p><img  border=2 src="paradox.png" alt=""></p> 
+
+<p><img  border=2 src="6465.gif" alt=""></p> 
+
+<p><img  border=2 src="StillImage.gif" alt=""></p> 
+Are they moving?
+
+
+<h2><b>
+Bonny Chen
+<p><img  border=2 src="BJ_CHEN_BONNY.png" alt=""></p> 
+Teresa Despres
+<p><img  border=2 src="BJ_DESPRES_TERESA.png" alt=""></p> 
+Moira Dillon
+<p><img  border=2 src="BJ_DILLON_MOIRA.png" alt=""></p> 
+Tiffany Fong
+<p><img  border=2 src="BJ_FONG_TIFFANY.png" alt=""></p> 
+Hamza Khan
+<p><img  border=2 src="BJ_KHAN_HAMZA.png" alt=""></p> 
+Justin Lauw
+<p><img  border=2 src="BJ_LAUW_JUSTIN.png" alt=""></p> 
+Marissa Lee
+<p><img  border=2 src="BJ_LEE_MARISSA.png" alt=""></p> 
+Wenkai Qin
+<p><img  border=2 src="BJ_QIN_WENKAI.png" alt=""></p> 
+Charlotte Robinson
+<p><img  border=2 src="BJ_ROBINSON_CHARLOTTE.png" alt=""></p> 
+Nancy Wei
+<p><img  border=2 src="BJ_WEI_NANCY.png" alt=""></p> 
+Carmel Zhao
+<p><img  border=2 src="BJ_ZHAO_CARMEL.png" alt=""></p> 
+Tina Zhu
+<p><img  border=2 src="BJ_ZHU_TINA.png" alt=""></p> 
+</h2></b>
+
+-->
+
+<LI><b>Mid-Semester Survey (Fall 2016):</b><p>
+
+  <p><img  border=2 src="Feedback2016f.png" alt=""></p> 
+
+
+<p><img  border=2 src="E84Fall16.png" alt=""></p> 
+
+
+<LI><b>Mid Semester Survey (Fall 2016):</b><p>
+<UL>
+<LI> <b> Lecture Style:</b> Everything on board, nothing on screen ---- Nothing on board, everything on screen.
+  <p><img  border=2 src="survey1.png" alt=""></p> 
+
+<LI> <b> Lecture pace:</b> Too slow ---- Too fast
+  <p><img  border=2 src="survey2.png" alt=""></p> 
+
+<LI> <b> Amount of review:</b> No need to review --- Thorough review
+  <p><img  border=2 src="survey3.png" alt=""></p> 
+
+<LI> <b> Detailed steps in examples:</b> No step skipped --- No detailed math
+  steps needed.
+  <p><img  border=2 src="survey4.png" alt=""></p> 
+</UL>
+
+<p><img  border=2 src="E84Fall16.png" alt=""></p> 
+
+<!--
+<p><img  border=2 src="DoesItMove.png" alt=""></p> 
+
+<p><img  border=2 src="E84Summer16.png" alt=""></p> 
+
+
+<p><p>
+<p><img  border=2 src="e84photos.png" alt=""></p> 
+</ul>
+</body>
+</html>
+
+<!--
+Can you answer the following questions?
+<ui>
+<li><p><img  border=2 src="6465.gif" alt=""></p> 
+<li>
+Can you find a point on the surface of Earth from which you go 
+south for a mile, then turn east to go another mile, and then turn
+north for the third mile, and find youself at the starting point?<br>
+<p>
+If you think this is too easy, how many additional points satisfying
+the above condition can you find on the surface of Earch? Such points
+do exist!
+</p>
+</ul>
+-->
+
+<!--
+<LI><a href="http://hyperphysics.phy-astr.gsu.edu/hbase/electric/ecircon.html#c1">Web Notes at Georgia State University <p>
+-->

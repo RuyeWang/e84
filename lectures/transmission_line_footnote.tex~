@@ -1,0 +1,10 @@
+\documentstyle[12pt]{article}
+\usepackage{html}
+\begin{document}
+
+\[ e^x=1+x+\frac{x}{2}+\frac{x^2}{2!}+\frac{x^3}{3!}+\cdots \approx 1+x \]
+
+
+\[ f(x)=\frac{1+e^{-2x}}{1-e^{-2x}}\approx\frac{2-2x}{2x}=\frac{1-x}{x}\approx \frac{1}{x}  \]
+
+\end{document}

@@ -1,0 +1,432 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>AC Circuit Analysis II (Transient Response)</TITLE>
+<META NAME="description" CONTENT="AC Circuit Analysis II (Transient Response)">
+<META NAME="keywords" CONTENT="ccc">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="ccc.css">
+
+<LINK REL="next" HREF="node6.html">
+<LINK REL="previous" HREF="node4.html">
+<LINK REL="up" HREF="node1.html">
+<LINK REL="next" HREF="node6.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html86"
+  HREF="node6.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html84"
+  HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html78"
+  HREF="node4.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html87"
+  HREF="node6.html">AC Circuit Analysis III</A>
+<B> Up:</B> <A NAME="tex2html85"
+  HREF="node1.html">Chapter 3: AC Circuit</A>
+<B> Previous:</B> <A NAME="tex2html79"
+  HREF="node4.html">AC Circuit Analysis I</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00014000000000000000">
+AC Circuit Analysis II (Transient Response)</A>
+</H2>
+
+<P>
+If we need to find out the transient response of an AC circuit to a certain 
+input applied at time moment <IMG
+ WIDTH="46" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img206.png"
+ ALT="$t=0$"> (e.g., after a switch is closed), then 
+the phasor method discussed above is no longer sufficient. Now the DE 
+describing the circuit will have to be solved to obtain the complete solution 
+including the homogeneous (transient) solution as well as the particular 
+(steady state) solution. 
+
+<P>
+As a simple example, the RC and RL circuits shown below are composed of 
+a resistor <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.png"
+ ALT="$R$"> and capacitor <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img76.png"
+ ALT="$C$"> or an inductor <IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img77.png"
+ ALT="$L$"> in series with an 
+external voltage input <IMG
+ WIDTH="36" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img207.png"
+ ALT="$v(t)$">, which is turned on at <IMG
+ WIDTH="46" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img206.png"
+ ALT="$t=0$">, wither by a 
+switch or a step voltage <IMG
+ WIDTH="36" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img207.png"
+ ALT="$v(t)$">, such as a square wave input. Any of the 
+variables <IMG
+ WIDTH="46" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img208.png"
+ ALT="$v_R(t)$">, <IMG
+ WIDTH="46" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img209.png"
+ ALT="$v_C(t)$">, <IMG
+ WIDTH="45" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img210.png"
+ ALT="$v_L(t)$"> and <IMG
+ WIDTH="32" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img122.png"
+ ALT="$i(t)$"> can be considered as the
+circuit's response to this input.
+
+<P>
+<IMG
+ WIDTH="206" HEIGHT="157" ALIGN="BOTTOM" BORDER="0"
+ SRC="../figures/RL_RCcircuit.png"
+ ALT="RL_RCcircuit.png">
+
+<P>
+
+<UL>
+<LI>The RC circuit can be described by KVL:
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_R(t)+v_C(t)=R i(t)+v_C(t)=RC\frac{d}{dt} v_c(t)+v_c(t)
+  =\tau \frac{d}{dt} v_C(t)+v_C(t)=v(t)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="593" HEIGHT="46" BORDER="0"
+ SRC="img211.png"
+ ALT="\begin{displaymath}
+v_R(t)+v_C(t)=R i(t)+v_C(t)=RC\frac{d}{dt} v_c(t)+v_c(t)
+=\tau \frac{d}{dt} v_C(t)+v_C(t)=v(t)
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where <IMG
+ WIDTH="69" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img212.png"
+ ALT="$\tau=RC$"> is the time constant of the system with the dimension of time:
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+[RC]=\frac{[V]}{[I]}\frac{[Q]}{[V]}=\frac{[Q]}{[I]}=[T]
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="222" HEIGHT="52" BORDER="0"
+ SRC="img213.png"
+ ALT="\begin{displaymath}[RC]=\frac{[V]}{[I]}\frac{[Q]}{[V]}=\frac{[Q]}{[I]}=[T]
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+<LI>Similarly, for the RL circuit we have:
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_R(t)+v_L(t)=R i(t)+L\frac{d}{dt} i(t)=v(t)\;\;\;\;\mbox{or}\;\;\;\;\;
+  \tau \frac{d}{dt} i(t)+i(t)=\frac{v(t)}{R}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="544" HEIGHT="47" BORDER="0"
+ SRC="img214.png"
+ ALT="\begin{displaymath}
+v_R(t)+v_L(t)=R i(t)+L\frac{d}{dt} i(t)=v(t)\;\;\;\;\mbox{or}\;\;\;\;\;
+\tau \frac{d}{dt} i(t)+i(t)=\frac{v(t)}{R}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where <IMG
+ WIDTH="76" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img215.png"
+ ALT="$\tau=L/R$"> is the time constant with the dimension of time:
+  <IMG
+ WIDTH="17" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img77.png"
+ ALT="$L$"> is <!-- MATH
+ $[L]=[V][T]/[I]=[R][T]$
+ -->
+<IMG
+ WIDTH="206" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img216.png"
+ ALT="$[L]=[V][T]/[I]=[R][T]$"> and the dimension of <IMG
+ WIDTH="15" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img217.png"
+ ALT="$\tau$"> is: 
+  <BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+[L/R]=\frac{[V][T]}{[I]}\frac{1}{[R]}=\frac{[R][T]}{[R]}=[T]
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="277" HEIGHT="52" BORDER="0"
+ SRC="img218.png"
+ ALT="\begin{displaymath}[L/R]=\frac{[V][T]}{[I]}\frac{1}{[R]}=\frac{[R][T]}{[R]}=[T]
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+</LI>
+</UL>
+In both cases, the polarity of <IMG
+ WIDTH="25" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img219.png"
+ ALT="$v_R$"> is positive on top, and the polarities of
+<IMG
+ WIDTH="25" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img220.png"
+ ALT="$v_C$"> and <IMG
+ WIDTH="25" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img219.png"
+ ALT="$v_R$"> are positive on the left.
+
+<P>
+<B>Homogeneous Solution</B>
+
+<P>
+When the external input is zero <IMG
+ WIDTH="81" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img221.png"
+ ALT="$v_C(t)=0$">, the DE is homogeneous (zero on the
+right-hand side):
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+RC\frac{d}{dt} v_c(t)+v_c(t)=\tau \frac{d}{dt} v_C(t)+v_C(t)=0
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="342" HEIGHT="46" BORDER="0"
+ SRC="img222.png"
+ ALT="\begin{displaymath}
+RC\frac{d}{dt} v_c(t)+v_c(t)=\tau \frac{d}{dt} v_C(t)+v_C(t)=0
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The solution of this homogeneous equation needs to be a function whose 
+derivatives take the same form as the function itself, i.e., it needs 
+to be an exponential function <IMG
+ WIDTH="85" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img223.png"
+ ALT="$v_C=A e^{st}$">. Substituting this and its
+derivative <!-- MATH
+ $dv_C(t)/dt=s A e^{st}$
+ -->
+<IMG
+ WIDTH="150" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img224.png"
+ ALT="$dv_C(t)/dt=s A e^{st}$"> into the DE, we get
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\tau sA e^{st} + Ae^{st}=(\tau s+1) Ae^{st}=0
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="271" HEIGHT="33" BORDER="0"
+ SRC="img225.png"
+ ALT="\begin{displaymath}
+\tau sA e^{st} + Ae^{st}=(\tau s+1) Ae^{st}=0
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+As we are not interested in the trivial solution <IMG
+ WIDTH="74" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img226.png"
+ ALT="$Ae^{st}=0$">, we must have
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\tau s+1=0,\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;\;s=-\frac{1}{\tau}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="238" HEIGHT="45" BORDER="0"
+ SRC="img227.png"
+ ALT="\begin{displaymath}
+\tau s+1=0,\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;\;s=-\frac{1}{\tau}
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+i.e., <!-- MATH
+ $v_C(t)=Ae^{-t/\tau}$
+ -->
+<IMG
+ WIDTH="125" HEIGHT="43" ALIGN="MIDDLE" BORDER="0"
+ SRC="img228.png"
+ ALT="$v_C(t)=Ae^{-t/\tau}$"> for <IMG
+ WIDTH="46" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img229.png"
+ ALT="$t\ge 0$">. The constant <IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img43.png"
+ ALT="$A$"> can be obtained by
+the initial condition, the voltage on <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img76.png"
+ ALT="$C$"> at <IMG
+ WIDTH="46" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img206.png"
+ ALT="$t=0$">:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_C(0)=A e^{-t/\tau}\bigg|_{t=0}=A e^{0}=V_0,\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;A=V_0
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="393" HEIGHT="46" BORDER="0"
+ SRC="img230.png"
+ ALT="\begin{displaymath}
+v_C(0)=A e^{-t/\tau}\bigg\vert _{t=0}=A e^{0}=V_0,\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;A=V_0
+\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+and the homogeneous solution is completely determined:
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_C(t)=V_0 e^{-t/\tau}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="123" HEIGHT="33" BORDER="0"
+ SRC="img231.png"
+ ALT="\begin{displaymath}v_C(t)=V_0 e^{-t/\tau} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The current through <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.png"
+ ALT="$R$"> and <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img76.png"
+ ALT="$C$"> is
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+i(t)=C\frac{d\;v_C(t)}{dt}=C\frac{d}{dt}\left(V_0 e^{-t/\tau}\right)
+	=-V_0 \frac{C}{\tau} e^{-t/\tau}=-\frac{V_0}{R} e^{-t/\tau}
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="484" HEIGHT="47" BORDER="0"
+ SRC="img232.png"
+ ALT="\begin{displaymath}i(t)=C\frac{d\;v_C(t)}{dt}=C\frac{d}{dt}\left(V_0 e^{-t/\tau}...
+...)
+=-V_0 \frac{C}{\tau} e^{-t/\tau}=-\frac{V_0}{R} e^{-t/\tau} \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The voltage across <IMG
+ WIDTH="19" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img78.png"
+ ALT="$R$"> is 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+v_R(t)=i(t)R=-V_0 e^{-t/\tau}=-v_C(t)
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="286" HEIGHT="33" BORDER="0"
+ SRC="img233.png"
+ ALT="\begin{displaymath}v_R(t)=i(t)R=-V_0 e^{-t/\tau}=-v_C(t) \end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+This result can be verified: <!-- MATH
+ $v_C(t)+v_R(t)=0$
+ -->
+<IMG
+ WIDTH="145" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img234.png"
+ ALT="$v_C(t)+v_R(t)=0$">.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html86"
+  HREF="node6.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html84"
+  HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html78"
+  HREF="node4.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html87"
+  HREF="node6.html">AC Circuit Analysis III</A>
+<B> Up:</B> <A NAME="tex2html85"
+  HREF="node1.html">Chapter 3: AC Circuit</A>
+<B> Previous:</B> <A NAME="tex2html79"
+  HREF="node4.html">AC Circuit Analysis I</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Ruye Wang
+2014-10-05
+</ADDRESS>
+</BODY>
+</HTML>

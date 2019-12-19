@@ -1,0 +1,1498 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Two-Port Networks</TITLE>
+<META NAME="description" CONTENT="Two-Port Networks">
+<META NAME="keywords" CONTENT="ch2">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="ch2.css">
+
+<LINK REL="next" HREF="node5.html">
+<LINK REL="previous" HREF="node3.html">
+<LINK REL="next" HREF="node5.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node5.html">Active Components and Circuits</A>
+<B> Up:</B> <A
+ HREF="node1.html">Chapter 2: Circuit Principles</A>
+<B> Previous:</B> <A
+ HREF="node3.html">Circuit Theorems</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION00013000000000000000">
+Two-Port Networks</A>
+</H2>
+
+<P>
+<B>Models of two-port networks</B>
+
+<P>
+Many complex, such as amplification circuits and filters, can be modeled
+by a two-port network model as shown below. A two-port network is 
+represented by four external variables: voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img75.svg"
+ ALT="$V_1$"></SPAN> and current <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img4.svg"
+ ALT="$I_1$"></SPAN> 
+at the input port, and voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img76.svg"
+ ALT="$V_2$"></SPAN> and current <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img5.svg"
+ ALT="$I_2$"></SPAN> at the output port, 
+so that the two-port network can be treated as a black box modeled by the
+relationships between the four variables <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img75.svg"
+ ALT="$V_1$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img76.svg"
+ ALT="$V_2$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img4.svg"
+ ALT="$I_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img5.svg"
+ ALT="$I_2$"></SPAN>.
+There exist six different ways to describe the relationships between these 
+variables, depending on which two of the four variables are given, while 
+the other two can always be derived. 
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/twoportmodel.gif"
+ ALT="twoportmodel.gif">
+
+<P>
+If the network is linear, i.e., each variable can be expressed as a linear
+function of some two other variables, then we have the following models:
+
+<P>
+
+<UL>
+<LI><B>Z or impedance model:</B> Given two currents <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img4.svg"
+ ALT="$I_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img5.svg"
+ ALT="$I_2$"></SPAN> 
+  find voltages <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img75.svg"
+ ALT="$V_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img76.svg"
+ ALT="$V_2$"></SPAN> by:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left\{ \begin{array}{l} V_1=Z_{11}I_1+Z_{12}I_2 \\
+      V_2=Z_{21}I_1+Z_{22}I_2 \end{array} \right.\;\;\;\;\;
+    \left[ \begin{array}{l} V_1 \\V_2\end{array} \right]=
+    \left[ \begin{array}{ll} Z_{11} & Z_{12}\\Z_{21} & Z_{22}\end{array}\right]
+    \left[ \begin{array}{l} I_1 \\I_2\end{array} \right]
+    ={\bf Z}\left[ \begin{array}{l} I_1 \\I_2\end{array} \right]
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img296.svg"
+ ALT="$\displaystyle \left\{ \begin{array}{l} V_1=Z_{11}I_1+Z_{12}I_2 \\
+V_2=Z_{21}I_...
+...nd{array} \right]
+={\bf Z}\left[ \begin{array}{l} I_1 \\ I_2\end{array} \right]$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">74</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Here all four parameters <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img297.svg"
+ ALT="$Z_{11}$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img298.svg"
+ ALT="$Z_{12}$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img299.svg"
+ ALT="$Z_{21}$"></SPAN>, and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img300.svg"
+ ALT="$Z_{22}$"></SPAN> represent
+  impedance. In particular, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img299.svg"
+ ALT="$Z_{21}$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img298.svg"
+ ALT="$Z_{12}$"></SPAN> are <B>transfer impedances</B>, 
+  defined as the ratio of a voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img75.svg"
+ ALT="$V_1$"></SPAN> (or <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img76.svg"
+ ALT="$V_2$"></SPAN>) in one part of a network to 
+  a current <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img5.svg"
+ ALT="$I_2$"></SPAN> (or <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img4.svg"
+ ALT="$I_1$"></SPAN>) in another part <!-- MATH
+ $Z_{12}=V_1/I_2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img301.svg"
+ ALT="$Z_{12}=V_1/I_2$"></SPAN>. <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img302.svg"
+ ALT="${\bf Z}$"></SPAN> is a 2 
+  by 2 matrix containing all four parameters.
+
+<P>
+</LI>
+<LI><B>Y or admittance model:</B> Given two voltages <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img75.svg"
+ ALT="$V_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img76.svg"
+ ALT="$V_2$"></SPAN>,
+  find currents <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img4.svg"
+ ALT="$I_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img5.svg"
+ ALT="$I_2$"></SPAN> by:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left\{ \begin{array}{l} I_1=Y_{11}V_1+Y_{12}V_2 \\
+      I_2=Y_{21}V_1+Y_{22}V_2 \end{array} \right.\;\;\;\;\;
+    \left[ \begin{array}{l} I_1 \\I_2\end{array} \right]=
+    \left[ \begin{array}{ll} Y_{11} & Y_{12}\\Y_{21} & Y_{22}\end{array}\right]
+    \left[ \begin{array}{l} V_1 \\V_2\end{array} \right]
+    ={\bf Y}\left[ \begin{array}{l} V_1 \\V_2\end{array} \right]
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img303.svg"
+ ALT="$\displaystyle \left\{ \begin{array}{l} I_1=Y_{11}V_1+Y_{12}V_2 \\
+I_2=Y_{21}V_...
+...nd{array} \right]
+={\bf Y}\left[ \begin{array}{l} V_1 \\ V_2\end{array} \right]$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">75</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Here all four parameters <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img304.svg"
+ ALT="$Y_{11}$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img305.svg"
+ ALT="$Y_{12}$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img306.svg"
+ ALT="$Y_{21}$"></SPAN>, and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img307.svg"
+ ALT="$Y_{22}$"></SPAN> represent
+  admittance. In particular, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img306.svg"
+ ALT="$Y_{21}$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img305.svg"
+ ALT="$Y_{12}$"></SPAN> are <B>transfer admittances</B>. 
+  <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img308.svg"
+ ALT="${\bf Y}$"></SPAN> is the corresponding parameter matrix.
+
+<P>
+</LI>
+<LI><B>A or transmission model:</B> Given <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img76.svg"
+ ALT="$V_2$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img5.svg"
+ ALT="$I_2$"></SPAN>, find 
+  <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img75.svg"
+ ALT="$V_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img4.svg"
+ ALT="$I_1$"></SPAN> by:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left\{ \begin{array}{l}
+      V_1=A_{11}V_2+A_{12}(-I_2) \\
+      I_1=A_{21}V_2+A_{22}(-I_2) \end{array} \right.\;\;\;\;\;
+    \left[ \begin{array}{l} V_1 \\I_1\end{array} \right]=
+    \left[ \begin{array}{ll} A_{11} & A_{12}\\A_{21} & A_{22}\end{array}\right]
+    \left[ \begin{array}{r} V_2 \\-I_2\end{array} \right]
+    ={\bf A}\left[ \begin{array}{r} V_2 \\-I_2\end{array} \right]  
+  
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img309.svg"
+ ALT="$\displaystyle \left\{ \begin{array}{l}
+V_1=A_{11}V_2+A_{12}(-I_2) \\
+I_1=A_{21...
+...d{array} \right]
+={\bf A}\left[ \begin{array}{r} V_2 \\ -I_2\end{array} \right]$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">76</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Here <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img310.svg"
+ ALT="$A_{11}$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img311.svg"
+ ALT="$A_{22}$"></SPAN> are dimensionless coefficients, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img312.svg"
+ ALT="$A_{12}$"></SPAN> is impedance 
+  and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img313.svg"
+ ALT="$A_{21}$"></SPAN> is admittance. A negative sign is added to the output current <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img5.svg"
+ ALT="$I_2$"></SPAN> 
+  in the model, so that the direction of the current is out-ward, for easy
+  analysis of a cascade of multiple network models.
+
+<P>
+</LI>
+<LI><B>H or hybrid model:</B> Given <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img76.svg"
+ ALT="$V_2$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img4.svg"
+ ALT="$I_1$"></SPAN>, find <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img75.svg"
+ ALT="$V_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img5.svg"
+ ALT="$I_2$"></SPAN> by:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left\{ \begin{array}{l}
+      V_1=H_{11}I_1+H_{12}V_2 \\
+      I_2=H_{21}I_1+H_{22}V_2 \end{array} \right.\;\;\;\;\;
+    \left[ \begin{array}{l} V_1 \\I_2\end{array} \right]=
+    \left[ \begin{array}{ll} H_{11} & H_{12}\\H_{21} & H_{22}\end{array}\right]
+    \left[ \begin{array}{l} I_1 \\V_2\end{array} \right]
+    ={\bf H}\left[ \begin{array}{l} I_1 \\V_2\end{array} \right]  
+  
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img314.svg"
+ ALT="$\displaystyle \left\{ \begin{array}{l}
+V_1=H_{11}I_1+H_{12}V_2 \\
+I_2=H_{21}I_...
+...nd{array} \right]
+={\bf H}\left[ \begin{array}{l} I_1 \\ V_2\end{array} \right]$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">77</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Here <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img315.svg"
+ ALT="$H_{12}$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img316.svg"
+ ALT="$H_{21}$"></SPAN> are dimensionless coefficients, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img317.svg"
+ ALT="$H_{11}$"></SPAN> is 
+  impedance and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img318.svg"
+ ALT="$H_{22}$"></SPAN> is admittance. 
+
+<P>
+</LI>
+</UL>
+
+<P>
+<B>Generalization to nonlinear circuits</B>
+
+<P>
+The two-port models can also be applied to a nonlinear circuit if the 
+variations of the variables are small (<EM>small signal models</EM>) and 
+therefore the nonlinear behavior of the circuit can be piece-wise 
+linearized. Assume <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img319.svg"
+ ALT="$z=f(x,y)$"></SPAN> is a nonlinear function of variables 
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img92.svg"
+ ALT="$x$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.57ex; " SRC="img93.svg"
+ ALT="$y$"></SPAN>. If the variations <!-- MATH
+ $\triangle x$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img320.svg"
+ ALT="$\triangle x$"></SPAN> and <!-- MATH
+ $\triangle y$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img321.svg"
+ ALT="$\triangle y$"></SPAN> are 
+small, the function can be approximated by a linear model 
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\triangle z=\triangle f(x,y)=\frac{\partial f}{\partial x}\triangle x +
+  \frac{\partial f}{\partial y}\triangle y
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.16ex; " SRC="img322.svg"
+ ALT="$\displaystyle \triangle z=\triangle f(x,y)=\frac{\partial f}{\partial x}\triangle x +
+\frac{\partial f}{\partial y}\triangle y$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">78</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+with the linear coefficients
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\frac{\partial f}{\partial x}=\lim_{\triangle x\rightarrow 0}
+  \frac{\triangle f}{\triangle x}\bigg|_{\triangle y=0}
+  \;\;\;\;\;\;\;\;
+  \frac{\partial f}{\partial y}=\lim_{\triangle y\rightarrow 0}
+  \frac{\triangle f}{\triangle y}\bigg|_{\triangle x=0}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.27ex; vertical-align: -2.75ex; " SRC="img323.svg"
+ ALT="$\displaystyle \frac{\partial f}{\partial x}=\lim_{\triangle x\rightarrow 0}
+\fr...
+...ngle y\rightarrow 0}
+\frac{\triangle f}{\triangle y}\bigg\vert _{\triangle x=0}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">79</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+<B>Finding the model parameters</B>
+
+<P>
+For each of the four types of models, the four parameters can be found
+from variables <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img75.svg"
+ ALT="$V_1$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img76.svg"
+ ALT="$V_2$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img4.svg"
+ ALT="$I_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img5.svg"
+ ALT="$I_2$"></SPAN> of a network by the following.
+
+<UL>
+<LI>For Z-model:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Z_{11}=\frac{V_1}{I_1}\bigg|_{I_2=0},\;\;\;\;
+    Z_{12}=\frac{V_1}{I_2}\bigg|_{I_1=0},\;\;\;\;
+    Z_{21}=\frac{V_2}{I_1}\bigg|_{I_2=0},\;\;\;\;
+    Z_{22}=\frac{V_2}{I_2}\bigg|_{I_1=0}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.27ex; vertical-align: -2.67ex; " SRC="img324.svg"
+ ALT="$\displaystyle Z_{11}=\frac{V_1}{I_1}\bigg\vert _{I_2=0},\;\;\;\;
+Z_{12}=\frac{V...
+...V_2}{I_1}\bigg\vert _{I_2=0},\;\;\;\;
+Z_{22}=\frac{V_2}{I_2}\bigg\vert _{I_1=0}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">80</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>For Y-model:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Y_{11}=\frac{I_1}{V_1}\bigg|_{V_2=0},\;\;\;\;
+    Y_{12}=\frac{I_1}{V_2}\bigg|_{V_1=0},\;\;\;\;
+    Y_{21}=\frac{I_2}{V_1}\bigg|_{V_2=0},\;\;\;\;
+    Y_{22}=\frac{I_2}{V_2}\bigg|_{Y_1=0},\;\;\;\;
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.27ex; vertical-align: -2.67ex; " SRC="img325.svg"
+ ALT="$\displaystyle Y_{11}=\frac{I_1}{V_1}\bigg\vert _{V_2=0},\;\;\;\;
+Y_{12}=\frac{I...
+...\bigg\vert _{V_2=0},\;\;\;\;
+Y_{22}=\frac{I_2}{V_2}\bigg\vert _{Y_1=0},\;\;\;\;$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">81</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>For A-model:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+A_{11}=\frac{V_1}{V_2}\bigg|_{I_2=0},\;\;\;\;
+    A_{12}=\frac{V_1}{I_2}\bigg|_{V_2=0},\;\;\;\;
+    A_{21}=\frac{I_1}{V_2}\bigg|_{I_2=0},\;\;\;\;
+    A_{22}=\frac{I_1}{I_2}\bigg|_{V_2=0}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.27ex; vertical-align: -2.67ex; " SRC="img326.svg"
+ ALT="$\displaystyle A_{11}=\frac{V_1}{V_2}\bigg\vert _{I_2=0},\;\;\;\;
+A_{12}=\frac{V...
+...I_1}{V_2}\bigg\vert _{I_2=0},\;\;\;\;
+A_{22}=\frac{I_1}{I_2}\bigg\vert _{V_2=0}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">82</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>For H-model:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+H_{11}=\frac{V_1}{I_1}\bigg|_{V_2=0},\;\;\;\;
+    H_{12}=\frac{V_1}{V_2}\bigg|_{I_1=0},\;\;\;\;
+    H_{21}=\frac{I_2}{I_1}\bigg|_{V_2=0},\;\;\;\;
+    H_{22}=\frac{I_2}{V_2}\bigg|_{I_1=0}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.27ex; vertical-align: -2.67ex; " SRC="img327.svg"
+ ALT="$\displaystyle H_{11}=\frac{V_1}{I_1}\bigg\vert _{V_2=0},\;\;\;\;
+H_{12}=\frac{V...
+...I_2}{I_1}\bigg\vert _{V_2=0},\;\;\;\;
+H_{22}=\frac{I_2}{V_2}\bigg\vert _{I_1=0}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">83</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+</UL>
+
+<P>
+If we further define
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+{\bf V}=[V_1, V_2]^T,\;\;\;\;\;\;{\bf I}=[I_1, I_2]^T
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img328.svg"
+ ALT="$\displaystyle {\bf V}=[V_1, V_2]^T,\;\;\;\;\;\;{\bf I}=[I_1, I_2]^T$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">84</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+then the Z-model and Y-model above can be written in matrix form:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+{\bf V}={\bf Z} {\bf I},\;\;\;\;\;\;
+  {\bf I}={\bf Y} {\bf V},\;\;\;\;{\bf Y}={\bf Z}^{-1}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.57ex; " SRC="img329.svg"
+ ALT="$\displaystyle {\bf V}={\bf Z} {\bf I},\;\;\;\;\;\;
+{\bf I}={\bf Y} {\bf V},\;\;\;\;{\bf Y}={\bf Z}^{-1}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">85</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+<B>Example: </B> 
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/networkLC.gif"
+ ALT="networkLC.gif">
+
+<P>
+Find the Z-model and Y-model of the circuit shown.
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left\{ \begin{array}{l} V_1=Z_{11}I_1+Z_{12}I_2 \\
+    V_2=Z_{21}I_1+Z_{22}I_2 \end{array} \right.
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img330.svg"
+ ALT="$\displaystyle \left\{ \begin{array}{l} V_1=Z_{11}I_1+Z_{12}I_2 \\
+V_2=Z_{21}I_1+Z_{22}I_2 \end{array} \right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">86</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+
+<UL>
+<LI>First assume <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img331.svg"
+ ALT="$I_2=0$"></SPAN>, we get
+
+<P>
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Z_{11}=V_1/I_1=j\omega L+1/j\omega C,\;\;\;\;\;Z_{21}=V_2/I_1=1/j\omega C
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img332.svg"
+ ALT="$\displaystyle Z_{11}=V_1/I_1=j\omega L+1/j\omega C,\;\;\;\;\;Z_{21}=V_2/I_1=1/j\omega C$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">87</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>Next assume <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img333.svg"
+ ALT="$I_1=0$"></SPAN>, we get
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Z_{22}=V_2/I_2=1/j\omega C,\;\;\;\;\;\;Z_{12}=V_1/I_2=1/j\omega C
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img334.svg"
+ ALT="$\displaystyle Z_{22}=V_2/I_2=1/j\omega C,\;\;\;\;\;\;Z_{12}=V_1/I_2=1/j\omega C$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">88</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+</UL>
+The parameters of the Y-model can be found as the inverse of <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img335.svg"
+ ALT="$Z$"></SPAN>:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left[\begin{array}{cc}Y_{11}&Y_{12}\\Y_{21}&Y_{22}\end{array}\right]
+  =\left[\begin{array}{cc}Z_{11}&Z_{12}\\Z_{21}&Z_{22}\end{array}\right]^{-1}
+  =\left[\begin{array}{cc}j\omega L+1/j\omega C & 1/j\omega C\\
+      1/j\omega C & 1/j\omega \end{array}\right]^{-1}
+  =\left[\begin{array}{cc}1/j\omega L & -1/j\omega L\\
+      -1/j\omega L & j\omega C+1/j\omega L\end{array}\right]
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.27ex; vertical-align: -2.32ex; " SRC="img336.svg"
+ ALT="$\displaystyle \left[\begin{array}{cc}Y_{11}&amp;Y_{12}\\ Y_{21}&amp;Y_{22}\end{array}\r...
+...mega L &amp; -1/j\omega L\\
+-1/j\omega L &amp; j\omega C+1/j\omega L\end{array}\right]$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">89</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+<B>Note:</B> 
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left[ \begin{array}{rr} a & b \\c & d \end{array} \right]^{-1}
+  =\frac{1}{ad-bc}\left[ \begin{array}{rr} d & -b \\-c & a \end{array} \right]
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.27ex; vertical-align: -2.32ex; " SRC="img337.svg"
+ ALT="$\displaystyle \left[ \begin{array}{rr} a &amp; b \\ c &amp; d \end{array} \right]^{-1}
+=\frac{1}{ad-bc}\left[ \begin{array}{rr} d &amp; -b \\ -c &amp; a \end{array} \right]$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">90</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+<B>Combinations of two-port models</B>
+
+<P>
+
+<UL>
+<LI>Series connection of two 2-port networks: 
+	<!-- MATH
+ ${\bf Z}={\bf Z}_1+{\bf Z}_2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img338.svg"
+ ALT="${\bf Z}={\bf Z}_1+{\bf Z}_2$"></SPAN>
+</LI>
+<LI>Parallel connection of two 2-port networks: 
+	<!-- MATH
+ ${\bf Y}={\bf Y}_1+{\bf Y}_2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img339.svg"
+ ALT="${\bf Y}={\bf Y}_1+{\bf Y}_2$"></SPAN>
+</LI>
+<LI>Cascade connection of two 2-port networks:
+	<!-- MATH
+ ${\bf A}={\bf A}_1 \cdot {\bf A}_2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img340.svg"
+ ALT="${\bf A}={\bf A}_1 \cdot {\bf A}_2$"></SPAN>
+</LI>
+</UL>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/networkmodels1.gif"
+ ALT="networkmodels1.gif">
+
+<P>
+<B>Example:</B> A The circuit shown below contains a two-port network (e.g., a 
+filter circuit, or an amplification circuit) represented by a Z-model:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+{\bf Z}=\left[\begin{array}{ll} Z_{11} & Z_{12} \\
+      Z_{21} & Z_{22} \end{array}\right]
+  =\left[\begin{array}{rr} 4\Omega & j3\Omega \\
+      j3\Omega & 2\Omega \end{array}\right]
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img341.svg"
+ ALT="$\displaystyle {\bf Z}=\left[\begin{array}{ll} Z_{11} &amp; Z_{12} \\
+Z_{21} &amp; Z_{2...
+...[\begin{array}{rr} 4\Omega &amp; j3\Omega \\
+j3\Omega &amp; 2\Omega \end{array}\right]$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">91</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The input voltage is <!-- MATH
+ $V_0=3\angle 0^\circ$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img342.svg"
+ ALT="$V_0=3\angle 0^\circ$"></SPAN> with an internal impedance 
+<!-- MATH
+ $Z_0=5\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img343.svg"
+ ALT="$Z_0=5\Omega$"></SPAN> and the load impedance is <!-- MATH
+ $R_L=4\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img344.svg"
+ ALT="$R_L=4\Omega$"></SPAN>. Find the two voltages 
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img75.svg"
+ ALT="$V_1$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img76.svg"
+ ALT="$V_2$"></SPAN> and two currents <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img4.svg"
+ ALT="$I_1$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img5.svg"
+ ALT="$I_2$"></SPAN>.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/networkexample1.gif"
+ ALT="networkexample1.gif">
+
+<P>
+<B>Method 1:</B> 
+
+<UL>
+<LI>First, according the Z-model, we have
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left\{ \begin{array}{l} V_1=Z_{11}I_1+Z_{12}I_2= 4I_1+j3I_2 \\
+      V_2=Z_{21}I_1+Z_{22}I_2=j3I_1+ 2I_2 \end{array} \right.
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img345.svg"
+ ALT="$\displaystyle \left\{ \begin{array}{l} V_1=Z_{11}I_1+Z_{12}I_2= 4I_1+j3I_2 \\
+V_2=Z_{21}I_1+Z_{22}I_2=j3I_1+ 2I_2 \end{array} \right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">92</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>Second, two more equations can be obtained from the circuit:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left\{ \begin{array}{l} V_1=V_0-Z_0 I_1=3-5I_1 \\
+      V_2=-Z_L I_2=-4 I_2 \end{array} \right.
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img346.svg"
+ ALT="$\displaystyle \left\{ \begin{array}{l} V_1=V_0-Z_0 I_1=3-5I_1 \\
+V_2=-Z_L I_2=-4 I_2 \end{array} \right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">93</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>Substituting the last two equations for <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img75.svg"
+ ALT="$V_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img76.svg"
+ ALT="$V_2$"></SPAN> into the 
+  first two, we get
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left\{ \begin{array}{l} 9I_1+j3I_2=3 \\j3I_1+6I_2=0 \end{array} \right.
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img347.svg"
+ ALT="$\displaystyle \left\{ \begin{array}{l} 9I_1+j3I_2=3 \\ j3I_1+6I_2=0 \end{array} \right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">94</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>Solving these we get 
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_1=\frac{2}{7},\;\;\;\;\;I_2=-\frac{j}{7}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.11ex; vertical-align: -1.71ex; " SRC="img348.svg"
+ ALT="$\displaystyle I_1=\frac{2}{7},\;\;\;\;\;I_2=-\frac{j}{7}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">95</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>Then we can get the voltages
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_1=\frac{11}{7},\;\;\;\;\;V_2=\frac{j4}{7}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.11ex; vertical-align: -1.71ex; " SRC="img349.svg"
+ ALT="$\displaystyle V_1=\frac{11}{7},\;\;\;\;\;V_2=\frac{j4}{7}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">96</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+</UL>
+
+<P>
+<B>Method 2:</B> We can also use Thevenin's theorem to treat everything 
+before the load impedance as an equivalent voltage source with Thevenin's 
+voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img119.svg"
+ ALT="$V_T$"></SPAN> and resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img120.svg"
+ ALT="$R_T$"></SPAN>, and the output voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img76.svg"
+ ALT="$V_2$"></SPAN> and 
+current <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img5.svg"
+ ALT="$I_2$"></SPAN> can be found.
+
+<P>
+
+<UL>
+<LI>Find <!-- MATH
+ $Z_T=V_2/I_2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img350.svg"
+ ALT="$Z_T=V_2/I_2$"></SPAN> with voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img170.svg"
+ ALT="$V_0$"></SPAN> short-circuit:
+  
+<UL>
+<LI>The Z-model:
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left\{ \begin{array}{l} V_1=Z_{11}I_1+Z_{12}I_2=4I_1+j3I_2	\\
+        V_2=Z_{21}I_1+Z_{22}I_2=j3I_1+2I_2 \end{array} \right.
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img345.svg"
+ ALT="$\displaystyle \left\{ \begin{array}{l} V_1=Z_{11}I_1+Z_{12}I_2= 4I_1+j3I_2 \\
+V_2=Z_{21}I_1+Z_{22}I_2=j3I_1+ 2I_2 \end{array} \right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">97</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>Also due to the short-circuit of voltage source <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img351.svg"
+ ALT="$V_0=0$"></SPAN>, we have
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_1=V_0-I_1 Z_0=0-5I_1
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img352.svg"
+ ALT="$\displaystyle V_1=V_0-I_1 Z_0=0-5I_1$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">98</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>equating the two expressions for <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img75.svg"
+ ALT="$V_1$"></SPAN>, we get
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+4I_1+j3I_2=-5I_1,\;\;\;\;\mbox{i.e.}\;\;\;\;I_1=-\frac{j}{3} I_2
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img353.svg"
+ ALT="$\displaystyle 4I_1+j3I_2=-5I_1,\;\;\;\;$">i.e.<IMG STYLE="height: 5.11ex; vertical-align: -1.71ex; " SRC="img354.svg"
+ ALT="$\displaystyle \;\;\;\;I_1=-\frac{j}{3} I_2$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">99</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>Substituting this <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img4.svg"
+ ALT="$I_1$"></SPAN> into the equation for <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img76.svg"
+ ALT="$V_2$"></SPAN> above, we get
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_2=j3I_1+2I_2=I_2+2I_2=3I_2
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img355.svg"
+ ALT="$\displaystyle V_2=j3I_1+2I_2=I_2+2I_2=3I_2$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">100</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>Find <!-- MATH
+ $Z_T=V_2/I_2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img350.svg"
+ ALT="$Z_T=V_2/I_2$"></SPAN>:
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Z_T=\frac{V_2}{I_2}=3
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img356.svg"
+ ALT="$\displaystyle Z_T=\frac{V_2}{I_2}=3$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">101</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+</UL>
+</LI>
+<LI>Find open-circuit voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img119.svg"
+ ALT="$V_T$"></SPAN> with <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img331.svg"
+ ALT="$I_2=0$"></SPAN>:
+  
+<UL>
+<LI>Since the load is an open-circuit, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img331.svg"
+ ALT="$I_2=0$"></SPAN>, we have
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left\{ \begin{array}{l} V_1=Z_{11}I_1=4I_1 \\
+        V_2=Z_{21}I_1=j3 I_1 \end{array} \right.
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img357.svg"
+ ALT="$\displaystyle \left\{ \begin{array}{l} V_1=Z_{11}I_1=4I_1 \\
+V_2=Z_{21}I_1=j3 I_1 \end{array} \right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">102</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>Find <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img4.svg"
+ ALT="$I_1$"></SPAN>:
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_1=\frac{V_0-V_1}{Z_0}=\frac{3-4I_1}{5}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img358.svg"
+ ALT="$\displaystyle I_1=\frac{V_0-V_1}{Z_0}=\frac{3-4I_1}{5}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">103</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Solving this to get <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img359.svg"
+ ALT="$I_1=1/3$"></SPAN>
+</LI>
+<LI>Find open-circuit voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img360.svg"
+ ALT="$V_T=V_2$"></SPAN>:
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_2=Z_{21}I_1=j3 \frac{1}{3}=j
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.88ex; vertical-align: -1.71ex; " SRC="img361.svg"
+ ALT="$\displaystyle V_2=Z_{21}I_1=j3 \frac{1}{3}=j$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">104</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+</UL>
+</LI>
+<LI>Find load voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img76.svg"
+ ALT="$V_2$"></SPAN>:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_2=\frac{V_T}{Z_T+Z_L}\;Z_L=\frac{j}{3+4}\;4=\frac{j4}{7}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img362.svg"
+ ALT="$\displaystyle V_2=\frac{V_T}{Z_T+Z_L}\;Z_L=\frac{j}{3+4}\;4=\frac{j4}{7}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">105</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>Find load voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img5.svg"
+ ALT="$I_2$"></SPAN>:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_2=-\frac{V_2}{Z_L}=-\frac{j4}{7}\;\frac{1}{4}=-\frac{j}{7}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img363.svg"
+ ALT="$\displaystyle I_2=-\frac{V_2}{Z_L}=-\frac{j4}{7}\;\frac{1}{4}=-\frac{j}{7}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">106</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+</UL>
+
+<P>
+<B>Principle of reciprocity</B>:
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/reciprocal.gif"
+ ALT="reciprocal.gif">
+
+<P>
+Consider the example circuit on the left above, which can be simplified 
+as the network in the middle. The voltage source is in the branch on the
+left, while the current <SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.46ex; " SRC="img364.svg"
+ ALT="$\dot{I}_2$"></SPAN> is in the branch on the right, which
+can be found to be (current divider):
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\dot{I}_2=\frac{V}{Z_1+Z_2 Z_3/(Z_2+Z_3)}\;\frac{Z_3}{Z_2+Z_3}
+  =V \frac{Z_3}{Z_1Z_2+Z_1Z_3+Z_2Z_3}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img365.svg"
+ ALT="$\displaystyle \dot{I}_2=\frac{V}{Z_1+Z_2 Z_3/(Z_2+Z_3)}\;\frac{Z_3}{Z_2+Z_3}
+=V \frac{Z_3}{Z_1Z_2+Z_1Z_3+Z_2Z_3}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">107</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+We next interchange the positions of the voltage source and the current, 
+so that the voltage source is in the branch on the right and the current 
+to be found is in the branch on the left, as shown on the right of the 
+figure above. The current can be found to be
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\dot{I}_1=\frac{V}{Z_2+Z_1 Z_3/(Z_1+Z_3)}\frac{Z_3}{Z_1+Z_3}
+  =V \frac{Z_3}{Z_1Z_2+Z_1Z_3+Z_2Z_3}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img366.svg"
+ ALT="$\displaystyle \dot{I}_1=\frac{V}{Z_2+Z_1 Z_3/(Z_1+Z_3)}\frac{Z_3}{Z_1+Z_3}
+=V \frac{Z_3}{Z_1Z_2+Z_1Z_3+Z_2Z_3}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">108</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The two currents <SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.46ex; " SRC="img367.svg"
+ ALT="$\dot{I}_1$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.46ex; " SRC="img364.svg"
+ ALT="$\dot{I}_2$"></SPAN> are exactly the same! This
+result illustrates the following <B>reciprocity principle</B>, which can 
+be proven in general:
+
+<P>
+<EM>In any passive (without energy sources), 
+linear network, if a voltage <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img50.svg"
+ ALT="$V$"></SPAN> applied in branch 1 causes a current <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img59.svg"
+ ALT="$I$"></SPAN> in 
+branch 2, then this voltage <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img50.svg"
+ ALT="$V$"></SPAN> applied in branch 2 will cause the same current
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img59.svg"
+ ALT="$I$"></SPAN> in branch 1.</EM>
+
+<P>
+This reciprocity principle can also be stated as:
+
+<P>
+<EM>In any passive, linear network, the transfer impedance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img298.svg"
+ ALT="$Z_{12}$"></SPAN> is equal 
+to the reciprocal transfer impedance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img299.svg"
+ ALT="$Z_{21}$"></SPAN>.</EM>
+
+<P>
+Based on this reciprocity principle, any complex passive linear network can
+be modeled by either a T-network or a <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img368.svg"
+ ALT="$\Pi$"></SPAN>-network:
+
+<P>
+
+<UL>
+<LI><B>T-Network Model:</B>
+    <IMG STYLE=""
+ SRC="../figures/Tmodel.gif"
+ ALT="Tmodel.gif">
+
+<P>
+From this T-model, we get
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left\{ \begin{array}{l} V_1=(Z_1+Z_3)I_1+Z_3I_2=Z_{11}I_1+Z_{12}I_2 \\
+        V_2=Z_3I_1+(Z_2+Z_3)I_2=Z_{21}I_1+Z_{22}I_2  \end{array} \right.
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img369.svg"
+ ALT="$\displaystyle \left\{ \begin{array}{l} V_1=(Z_1+Z_3)I_1+Z_3I_2=Z_{11}I_1+Z_{12}I_2 \\
+V_2=Z_3I_1+(Z_2+Z_3)I_2=Z_{21}I_1+Z_{22}I_2 \end{array} \right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">109</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Comparing this with the Z-model, we get
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Z_{11}=Z_1+Z_3,\;\;\;\;\;Z_{22}=Z_2+Z_3,\;\;\;\;\;Z_{12}=Z_{21}=Z_3
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img370.svg"
+ ALT="$\displaystyle Z_{11}=Z_1+Z_3,\;\;\;\;\;Z_{22}=Z_2+Z_3,\;\;\;\;\;Z_{12}=Z_{21}=Z_3$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">110</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Solving these equations for <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img160.svg"
+ ALT="$Z_1$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img164.svg"
+ ALT="$Z_2$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img161.svg"
+ ALT="$Z_3$"></SPAN>, we get
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Z_1=Z_{11}-Z_{12},\;\;\;\;Z_2=Z_{22}-Z_{21},\;\;\;\;Z_3=Z_{12}=Z_{21}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img371.svg"
+ ALT="$\displaystyle Z_1=Z_{11}-Z_{12},\;\;\;\;Z_2=Z_{22}-Z_{21},\;\;\;\;Z_3=Z_{12}=Z_{21}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">111</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+<LI><B><SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img368.svg"
+ ALT="$\Pi$"></SPAN>-Network Model:</B>
+    <IMG STYLE=""
+ SRC="../figures/Pmodel.gif"
+ ALT="Pmodel.gif">
+
+<P>
+From this <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img368.svg"
+ ALT="$\Pi$"></SPAN>-model, we get:
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left\{ \begin{array}{l}
+        I_1=Y_1V_1+Y_3(V_1-V_2)=(Y_1+Y_3)V_1-Y_3V_2=Y_{11}V_1+Y_{12}V_2 \\
+        I_2=Y_3(V_2-V_1)+Y_2V_2=-Y_3V_1+(Y_2+Y_3)V_2=Y_{21}V_1+Y_{22}V_2 
+      \end{array} \right. 
+    
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img372.svg"
+ ALT="$\displaystyle \left\{ \begin{array}{l}
+I_1=Y_1V_1+Y_3(V_1-V_2)=(Y_1+Y_3)V_1-Y_3...
+..._3(V_2-V_1)+Y_2V_2=-Y_3V_1+(Y_2+Y_3)V_2=Y_{21}V_1+Y_{22}V_2
+\end{array} \right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">112</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Comparing this with the Y-model, we get
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Y_{11}=Y_1+Y_3,\;\;\;\;\;Y_{22}=Y_2+Y_3,\;\;\;\;\;Y_{12}=Y_{21}=-Y_3
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img373.svg"
+ ALT="$\displaystyle Y_{11}=Y_1+Y_3,\;\;\;\;\;Y_{22}=Y_2+Y_3,\;\;\;\;\;Y_{12}=Y_{21}=-Y_3$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">113</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Solving these equations for <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img374.svg"
+ ALT="$Y_1$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img375.svg"
+ ALT="$Y_2$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img376.svg"
+ ALT="$Y_3$"></SPAN>, we get
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Y_1=Y_{11}+Y_{12},\;\;\;\;Y_2=Y_{22}+Y_{21},\;\;\;\;Y_3=-Y_{12}=-Y_{21}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img377.svg"
+ ALT="$\displaystyle Y_1=Y_{11}+Y_{12},\;\;\;\;Y_2=Y_{22}+Y_{21},\;\;\;\;Y_3=-Y_{12}=-Y_{21}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">114</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+</UL>
+
+<P>
+<B>Example 1:</B> Convert the given T-network to a <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img368.svg"
+ ALT="$\Pi$"></SPAN> network.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/TPmodelexample.gif"
+ ALT="TPmodelexample.gif">
+
+<P>
+<B>Solution:</B> Given <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img378.svg"
+ ALT="$Z_1=j5$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img379.svg"
+ ALT="$Z_2=-j5$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img380.svg"
+ ALT="$Z_3=1$"></SPAN>, we get its Z-model:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Z_{11}=Z_1+Z_3=1+j5,\;\;\;\;Z_{22}=Z_2+Z_3=1-j5,\;\;\;\;Z_{12}=Z_{21}=Z_3=1
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img381.svg"
+ ALT="$\displaystyle Z_{11}=Z_1+Z_3=1+j5,\;\;\;\;Z_{22}=Z_2+Z_3=1-j5,\;\;\;\;Z_{12}=Z_{21}=Z_3=1$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">115</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The Z-model can be expressed in matrix form:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left[ \begin{array}{l} V_1 \\V_2\end{array} \right]=
+  \left[ \begin{array}{cc} Z_{11} & Z_{12} \\Z_{21} & Z_{22} \end{array} \right]
+  \left[ \begin{array}{l} I_1 \\I_2\end{array} \right]
+  =	\left[ \begin{array}{cc} 1+j5 & 1 \\1 & 1-j5 \end{array} \right]
+  \left[ \begin{array}{l} I_1 \\I_2\end{array} \right]
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img382.svg"
+ ALT="$\displaystyle \left[ \begin{array}{l} V_1 \\ V_2\end{array} \right]=
+\left[ \be...
+... 1-j5 \end{array} \right]
+\left[ \begin{array}{l} I_1 \\ I_2\end{array} \right]$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">116</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+This Z-model can be converted into a Y-model:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left[ \begin{array}{l} I_1 \\I_2\end{array} \right]=
+  \left[ \begin{array}{cc} 1+j5 & 1 \\1 & 1-j5 \end{array} \right]^{-1}
+  \left[ \begin{array}{l} V_1 \\V_2\end{array} \right]
+  =\frac{1}{25}
+  \left[ \begin{array}{cc} 1-j5 & -1 \\-1 & 1+j5 \end{array} \right]
+  \left[ \begin{array}{l} V_1 \\V_2\end{array} \right]
+  =	\left[ \begin{array}{cc} Y_{11} & Y_{12} \\Y_{21} & Y_{22} \end{array} \right]
+  \left[ \begin{array}{l} V_1 \\V_2\end{array} \right]
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.27ex; vertical-align: -2.32ex; " SRC="img383.svg"
+ ALT="$\displaystyle \left[ \begin{array}{l} I_1 \\ I_2\end{array} \right]=
+\left[ \be...
+..._{22} \end{array} \right]
+\left[ \begin{array}{l} V_1 \\ V_2\end{array} \right]$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">117</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+This Y-model can be converted to a <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img368.svg"
+ ALT="$\Pi$"></SPAN> network:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Y_1=Y_{11}+Y_{12}=-j/5,\;\;\;\;Z_2=Y_{22}+Y_{21}=j/5,\;\;\;\;
+  Y_3=-Y_{21}=-Y_{12}=1/25
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img384.svg"
+ ALT="$\displaystyle Y_1=Y_{11}+Y_{12}=-j/5,\;\;\;\;Z_2=Y_{22}+Y_{21}=j/5,\;\;\;\;
+Y_3=-Y_{21}=-Y_{12}=1/25$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">118</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+These admittances can be further converted into impedances:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Z_1=1/Y_1=5j,\;\;\;\;Z_2=1/Y_2=-j5,\;\;\;\;Z_3=1/Y_3=25
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img385.svg"
+ ALT="$\displaystyle Z_1=1/Y_1=5j,\;\;\;\;Z_2=1/Y_2=-j5,\;\;\;\;Z_3=1/Y_3=25$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">119</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The same results can be obtained by Y to delta conversion.
+
+<P>
+<B>Example 2:</B> Consider the ideal transformer shown in the figure below. 
+Assume <!-- MATH
+ $R_0=10\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img386.svg"
+ ALT="$R_0=10\Omega$"></SPAN>, <!-- MATH
+ $R_L=5\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img387.svg"
+ ALT="$R_L=5\Omega$"></SPAN>, and the turn ratio is <!-- MATH
+ $n=n_1/n_2=2$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img388.svg"
+ ALT="$n=n_1/n_2=2$"></SPAN>. 
+Describe this circuit as a two-port network.
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/transformerexample2.gif"
+ ALT="transformerexample2.gif">
+
+<P>
+
+<UL>
+<LI>Set up basic equations:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left\{ \begin{array}{l}
+    V_1=10\;I_1+2\;V_2 \\I_2-V_2/5=-2\;I_1 \end{array} \right. 
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img389.svg"
+ ALT="$\displaystyle \left\{ \begin{array}{l}
+V_1=10\;I_1+2\;V_2 \\ I_2-V_2/5=-2\;I_1 \end{array} \right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">120</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>Rearrange the equations in the form of a Z-model. The second equation is
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_2=10\;I_1+5\;I_2
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img390.svg"
+ ALT="$\displaystyle V_2=10\;I_1+5\;I_2$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">121</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Substituting into the first equation, we get
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_1=30\;I_1+10\;I_2
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img391.svg"
+ ALT="$\displaystyle V_1=30\;I_1+10\;I_2$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">122</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The Z-model is:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left[ \begin{array}{l} V_1 \\V_2 \end{array} \right]=
+  \left[ \begin{array}{rr} Z_{11} & Z_{12} \\Z_{21} & Z_{22} \end{array} \right]
+  \left[ \begin{array}{l} I_1 \\I_2 \end{array} \right]
+  =	\left[ \begin{array}{rr} 30 & 10 \\10 & 5 \end{array} \right]
+  \left[ \begin{array}{l} I_1 \\I_2 \end{array} \right]
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img392.svg"
+ ALT="$\displaystyle \left[ \begin{array}{l} V_1 \\ V_2 \end{array} \right]=
+\left[ \b...
+... &amp; 5 \end{array} \right]
+\left[ \begin{array}{l} I_1 \\ I_2 \end{array} \right]$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">123</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+As <!-- MATH
+ $Z_{12}=Z_{21}=10$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img393.svg"
+ ALT="$Z_{12}=Z_{21}=10$"></SPAN>, this is a reciprocal network.
+</LI>
+</UL>
+Alternatively, we can set up the equations in terms of the currents:
+
+<P>
+
+<UL>
+<LI><P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left\{ \begin{array}{l}
+    I_1=(V_1-2\;V_2)/10 \\I_2=-2\;I_1+V_2/5 \end{array} \right. 
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img394.svg"
+ ALT="$\displaystyle \left\{ \begin{array}{l}
+I_1=(V_1-2\;V_2)/10 \\ I_2=-2\;I_1+V_2/5 \end{array} \right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">124</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>Rearrange the equations in the form of a Y-model. The first equation is
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_1=V_1/10-V_2/5
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img395.svg"
+ ALT="$\displaystyle I_1=V_1/10-V_2/5$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">125</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>Substituting into the second equation, we get
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_2=-V_1/5+2V_2/5+V_2/5=-V_1/5+3V_2/5
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img396.svg"
+ ALT="$\displaystyle I_2=-V_1/5+2V_2/5+V_2/5=-V_1/5+3V_2/5$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">126</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The Y-model is:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left[ \begin{array}{l} I_1 \\I_2 \end{array} \right]=
+  \left[ \begin{array}{rr} Y_{11} & Y_{12} \\Y_{21} & Y_{22} \end{array} \right]
+  \left[ \begin{array}{l} V_1 \\V_2 \end{array} \right]
+  =\left[ \begin{array}{rr} 1/10 & -1/5 \\-1/5 & 3/5 \end{array} \right]
+  \left[ \begin{array}{l} V_1 \\V_2 \end{array} \right]
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img397.svg"
+ ALT="$\displaystyle \left[ \begin{array}{l} I_1 \\ I_2 \end{array} \right]=
+\left[ \b...
+... 3/5 \end{array} \right]
+\left[ \begin{array}{l} V_1 \\ V_2 \end{array} \right]$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">127</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+</UL>
+Finally, we can verify that <!-- MATH
+ ${\bf Z}^{-1}={\bf Y}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.12ex; " SRC="img398.svg"
+ ALT="${\bf Z}^{-1}={\bf Y}$"></SPAN>
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+{\bf Z}^{-1}=\left[ \begin{array}{rr} 30 & 10 \\10 & 5 \end{array} \right]^{-1}
+  =\frac{1}{50}\left[ \begin{array}{rr} 5 & -10 \\-10 & 30 \end{array} \right]
+  =\left[ \begin{array}{rr} 1/10 & -1/5 \\-1/5 & 3/5 \end{array} \right]
+  ={\bf Y}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.27ex; vertical-align: -2.32ex; " SRC="img399.svg"
+ ALT="$\displaystyle {\bf Z}^{-1}=\left[ \begin{array}{rr} 30 &amp; 10 \\ 10 &amp; 5 \end{arra...
+...\left[ \begin{array}{rr} 1/10 &amp; -1/5 \\ -1/5 &amp; 3/5 \end{array} \right]
+={\bf Y}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">128</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node5.html">Active Components and Circuits</A>
+<B> Up:</B> <A
+ HREF="node1.html">Chapter 2: Circuit Principles</A>
+<B> Previous:</B> <A
+ HREF="node3.html">Circuit Theorems</A></DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

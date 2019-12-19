@@ -1,0 +1,359 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>hw8a</TITLE>
+<META NAME="description" CONTENT="hw8a">
+<META NAME="keywords" CONTENT="hw8a">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="hw8a.css">
+
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev_g.png">   
+<BR>
+<B> Next:</B> <A NAME="tex2html3"
+  HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<DIV ALIGN="CENTER">
+<FONT SIZE="+2"><B>E84 Home Work 8</B></FONT>
+
+</DIV>
+
+<OL>
+<LI>Use Matlab to plot the frequency response functions (FRF) of the 
+  RC first-order low-pass (voltage across C is the output) and high-pass
+  (voltage across R is the output) filters. Assume <IMG
+ WIDTH="77" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$C=1 \mu F$">, 
+  <IMG
+ WIDTH="75" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$R=1 k\Omega$">. Choose the range of frequency properly so that the
+  corner frequency is around the middle region of the plots.
+  
+<UL>
+<LI>Plot the linear gain and phase as a function of <IMG
+ WIDTH="16" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.png"
+ ALT="$\omega$"> of 
+      the two filters.
+</LI>
+<LI>Make the Bode plots (without using the built-in function Bode)
+      of both the gain (in log magnitude <!-- MATH
+ $20\log_{10}|H(\omega)|$
+ -->
+<IMG
+ WIDTH="115" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$20\log_{10}\vert H(\omega)\vert$"> and 
+      phase (between <IMG
+ WIDTH="28" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$-\pi$"> and <IMG
+ WIDTH="15" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$\pi$">) of the two filters (log scale in 
+      frequency). The Matlab function semilogx can plot a function <IMG
+ WIDTH="38" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.png"
+ ALT="$f(x)$">
+      with log scale in <IMG
+ WIDTH="14" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img8.png"
+ ALT="$x$">.
+  
+</LI>
+</UL>
+
+<P>
+</LI>
+<LI>Use Matlab to plot the frequency response functions (FRF) of the 
+  RLC second-order low-pass (voltage across C as the output), band-pass
+  (voltage across R as the output), and high-pass (voltage across L as
+  the output) filters. Assume <IMG
+ WIDTH="82" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="$L=1 mH$">, <IMG
+ WIDTH="77" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$C=1 \mu F$">, <IMG
+ WIDTH="75" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$R=1 k\Omega$">. 
+  Choose the range of frequency properly so that the natural frequency 
+  is around the middle region of the plots.
+  
+<UL>
+<LI>Plot the linear gain and phase as a function of <IMG
+ WIDTH="16" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.png"
+ ALT="$\omega$"> of the 
+      three filters.
+</LI>
+<LI>Make the Bode plots (without using the built-in function Bode)
+      of both the gain and phase of the three filters (log scale in frequency).
+  
+</LI>
+</UL>
+
+<P>
+</LI>
+<LI>The RCL series circuit can be used as a filter when the voltage across
+  all three components is the input and the voltage across any of the 
+  three components is treated as output. Find the resonant frequency
+  <IMG
+ WIDTH="22" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.png"
+ ALT="$\omega_r$"> (at which the output is maximized) in terms of the natural
+  frequency <!-- MATH
+ $\omega_n=1/\sqrt{LC}$
+ -->
+<IMG
+ WIDTH="105" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.png"
+ ALT="$\omega_n=1/\sqrt{LC}$">, when (1) voltage <IMG
+ WIDTH="44" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.png"
+ ALT="$v_C(t)$"> across C
+  is treated as output, and (2) voltage <IMG
+ WIDTH="43" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.png"
+ ALT="$v_L(t)$"> across L is treated as
+  output.
+
+<P>
+The frequency response functions <IMG
+ WIDTH="55" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.png"
+ ALT="$H_C(\omega)$"> and <IMG
+ WIDTH="54" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.png"
+ ALT="$H_L(\omega)$">
+  may have a peak, i.e., <!-- MATH
+ $|H(\omega_r)|>|H(\omega)|$
+ -->
+<IMG
+ WIDTH="135" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.png"
+ ALT="$\vert H(\omega_r)\vert&gt;\vert H(\omega)\vert$"> for any <!-- MATH
+ $\omega\ne 
+  \omega_r$
+ -->
+<IMG
+ WIDTH="57" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$\omega\ne
+\omega_r$">, when <IMG
+ WIDTH="13" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.png"
+ ALT="$\zeta$"> is small enough, but it may not have such a
+  peak if <IMG
+ WIDTH="13" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.png"
+ ALT="$\zeta$"> is too large. Find the critical value <IMG
+ WIDTH="18" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.png"
+ ALT="$\zeta_c$"> so 
+  that for any <IMG
+ WIDTH="51" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.png"
+ ALT="$\zeta&lt;\zeta_c$"> <IMG
+ WIDTH="65" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.png"
+ ALT="$\vert H_C(\omega)\vert$"> and <IMG
+ WIDTH="59" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.png"
+ ALT="$H_L(\omega)\vert$"> will 
+  have a peak at <!-- MATH
+ $\omega=\omega_r$
+ -->
+<IMG
+ WIDTH="57" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img23.png"
+ ALT="$\omega=\omega_r$">, but such a peak no longer exist when 
+  <IMG
+ WIDTH="51" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img24.png"
+ ALT="$\zeta&gt;\zeta_c$">.  
+
+<P>
+</LI>
+<LI>An RCL series circuit composed of <IMG
+ WIDTH="71" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img25.png"
+ ALT="$R=10\Omega$">, <IMG
+ WIDTH="88" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img26.png"
+ ALT="$L=10 mH$"> and
+  <IMG
+ WIDTH="74" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.png"
+ ALT="$C=1 \mu F$"> is connected to an input AC voltage <!-- MATH
+ $v_{in}(t)=cos\omega t$
+ -->
+<IMG
+ WIDTH="111" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img28.png"
+ ALT="$v_{in}(t)=cos\omega t$">.
+  
+<UL>
+<LI>Find the quality factor <IMG
+ WIDTH="18" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img29.png"
+ ALT="$Q$"> and natural frequency <IMG
+ WIDTH="24" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img30.png"
+ ALT="$\omega_n$">.
+</LI>
+<LI>Assume the voltage <IMG
+ WIDTH="44" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img31.png"
+ ALT="$v_R(t)$"> across <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img32.png"
+ ALT="$R$"> is taken as the output voltage.
+    Find the bandwidth of the circuit. Also, use any software (e.g., Matlab) 
+    to plot the ratio of the magnitudes between the output and input voltages 
+    <IMG
+ WIDTH="54" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img33.png"
+ ALT="$v_R/v_{in}$"> as a function of frequency <IMG
+ WIDTH="16" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.png"
+ ALT="$\omega$">.
+</LI>
+<LI>Assume the voltage <IMG
+ WIDTH="43" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.png"
+ ALT="$v_L(t)$"> across <IMG
+ WIDTH="16" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img34.png"
+ ALT="$L$"> is taken as the output voltage.
+    plot the ratio <IMG
+ WIDTH="53" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img35.png"
+ ALT="$v_L/v_{in}$"> as a function of frequency <IMG
+ WIDTH="16" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.png"
+ ALT="$\omega$">.
+</LI>
+<LI>Assume the voltage <IMG
+ WIDTH="44" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.png"
+ ALT="$v_C(t)$"> across <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.png"
+ ALT="$C$"> is taken as the output voltage.
+    plot the ratio <IMG
+ WIDTH="55" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img37.png"
+ ALT="$v_C/v_{in}$"> as a function of frequency <IMG
+ WIDTH="16" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.png"
+ ALT="$\omega$">.
+  
+</LI>
+</UL>
+
+<P>
+</LI>
+<LI>A series circuit composed of a capacitor <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.png"
+ ALT="$C$"> and an inductor <IMG
+ WIDTH="16" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img34.png"
+ ALT="$L$"> is to 
+  be resonant at 800 kHz with a voltage input. Specify the value of <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.png"
+ ALT="$C$"> for the 
+  capacitor required for the given inductor with <IMG
+ WIDTH="83" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img38.png"
+ ALT="$L=40\mu H$"> and an internal 
+  resistance <!-- MATH
+ $R_L=4.02\Omega$
+ -->
+<IMG
+ WIDTH="94" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img39.png"
+ ALT="$R_L=4.02\Omega$">, and predict the bandwidth. Assume the capacitor 
+  is ideal, i.e., it introduces no resistance.
+
+<P>
+</LI>
+<LI>Design a series circuit to be resonant at 800 kHz with a bandwidth
+  of 32 kHz. The inductor has <IMG
+ WIDTH="83" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img38.png"
+ ALT="$L=40\mu H$"> and <!-- MATH
+ $R_L=4.02 \Omega$
+ -->
+<IMG
+ WIDTH="94" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img39.png"
+ ALT="$R_L=4.02\Omega$">. Find the
+  capacitance <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img36.png"
+ ALT="$C$"> needed for the desired resonant frequency. In order to 
+  satisfy the desired bandwidth, you may also need to include a resistor in 
+  the circuit. 
+
+<P>
+</LI>
+</OL>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html4"
+  HREF="node1.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html2"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev_g.png">   
+<BR>
+<B> Next:</B> <A NAME="tex2html3"
+  HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Ruye Wang
+2016-10-23
+</ADDRESS>
+</BODY>
+</HTML>

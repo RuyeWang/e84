@@ -1,0 +1,70 @@
+\documentstyle[11pt]{article}
+\usepackage{html}
+\begin{document}
+\begin{center}
+{\Large \bf E84 Homework 1}
+\end{center}
+\begin{enumerate}
+
+
+\item Find the frequency response function (FRF) $H_C(j\omega)$ of the RC circuit 
+  inside the dashed box in the figure below (E59!). 
+
+  Then find the overall FRF of the entire circuit $H(j\omega)$ when the voltage across 
+  the 2nd capacitor on the right is treated as the output $V_{out}$. 
+
+  Compare your result $H(j\omega)$ with $H^2_C(j\omega)$. Are they the same or different, 
+  why?
+
+  If you want the overall FRF to be $H^2_C(j\omega)$, what can you do (E80 op-amp lab!) ?
+
+  \htmladdimg{../../../lectures/figures/cascade.gif}
+
+  {\bf Solution:} Find $H_C(j\omega)$ by voltage divider:
+  \[  V_{out}=V_{in}\frac{1/j\omega C}{R+j\omega C}=V_{in}\frac{1}{j\omega RC+1},
+  \;\;\;\;\;\;\mbox{i.e.}\;\;\;\;\;\;
+  H_C(j\omega)=\frac{V_{out}}{V_{in}}=\frac{1}{j\omega RC+1}=\frac{1}{j\omega\tau+1} \]
+  where $\tau=RC$. And we have:
+  \[ H^2_C(j\omega)=\frac{1}{(j\omega\tau+1)^2}=\frac{1}{(j\omega\tau)^2+j2\omega\tau+1}
+  =\frac{1}{1-(\omega\tau)^2+j2\omega\tau}
+  \]
+  To find the overall FRF, we first find the impedance of the 2nd RC circuit in
+  parallel with the C of the first:
+  \[ Z=C || (R+1/\j\omega C)=\frac{(R+1/j\omega C)/j\omega C}{(R+1/j\omega C)+1/j\omega C}
+  =\frac{R+1/j\omega C}{j\omega RC+2} \]
+  Then we find the FRF of the first RC circuit when the second RC circuit is treated as
+  its load by voltage divider again:
+  \[ H_1(j\omega)=\frac{Z}{R+Z}V_{in}
+  =\frac{\frac{R+1/j\omega C}{j\omega RC+2}}{R+\frac{R+1/j\omega C}{j\omega RC+2}}
+  =\frac{R+1/j\omega C}{j\omega R^2C+2R+R+1/j\omega C}
+  =\frac{j\omega\tau+1}{(j\omega\tau)^2+j3\omega\tau+1}   
+  =\frac{j\omega\tau+1}{1-(\omega\tau)^2+j3\omega\tau }
+  \]
+  Finally we get the overall FRF with the second RC circuit treated as a voltage divider:
+  \[ H(j\omega)=H_1(j\omega) H_C(j\omega)
+  =\left(\frac{j\omega\tau+1}{1-(\omega\tau)^2+j3\omega\tau}\right)\;
+  \left(\frac{1}{j\omega\tau+1}\right)=\frac{1}{1-(\omega\tau)^2+j3\omega\tau}  \]
+  Comparing this with $H^2_C(j\omega)$ above, we see that they are not the same.
+  This is because the 2nd RC circuit will change the behavior of the first RC circuit, 
+  i.e., the origianl FRF $H_C(j\omega)$ is no longer valid once the 2nd RC circuit is
+  connected to the 1st as its load. If the overall $H(j\omega)$ is desired to be 
+  $H^2_C(j\omega)$, an follower or buffer opamp circuit can be inserted in between 
+  the two RC circuits to isolate the two.
+
+  {\bf Moral of this problem:}
+
+  {\bf In general, when two circuits with FRTs $H_1(j\omega)$ and $H_2(j\omega)$ are 
+    cascaded together, the overall FRF $H(j\omega)\ne H_1(j\omega) H_2(j\omega)$,
+    unless the second circuit has infinite input impedance, i.e., it does not affect
+    the behavior $H_1(j\omega)$ of the first circuit.}
+
+  {\bf As the follower (buffer) opamp circuit ideally has infinite input impedance and 
+    zero output impedance, it does not affect the previoius circuit as its source and 
+    it is not affected by the subsequent circuit as its load. Therefore inserting the 
+    follower circuit between the two circuits with $H_1(j\omega)$ and $H_2(j\omega)$ 
+    will isolate the two so that the overall FRF is $H(j\omega)=H_1(j\omega)H_2(j\omega)$.}
+
+\end{enumerate}
+
+\end{document}
+

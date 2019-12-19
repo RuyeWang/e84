@@ -1,0 +1,553 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2008 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>hw1</TITLE>
+<META NAME="description" CONTENT="hw1">
+<META NAME="keywords" CONTENT="hw1">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2008">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="hw1.css">
+
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html4"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev_g.png">   
+<BR>
+<B> Next:</B> <A NAME="tex2html5"
+  HREF="node1.html">About this document ...</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<DIV ALIGN="CENTER">
+<FONT SIZE="+2"><B>E84 Homework 1</B></FONT>
+
+</DIV>
+
+<OL>
+<LI>Given the basic relationship between the voltage across and
+  current through each of the three types of components <IMG
+ WIDTH="18" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.png"
+ ALT="$R$">, <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$C$">,
+  and <IMG
+ WIDTH="16" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.png"
+ ALT="$L$">,
+  <TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="LEFT">Resistor <IMG
+ WIDTH="18" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.png"
+ ALT="$R$"></TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="111" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$i=v/R=Gv$"></TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="108" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$v=Ri=i/G$"></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Inductor <IMG
+ WIDTH="16" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.png"
+ ALT="$L$"></TD>
+<TD ALIGN="CENTER"><!-- MATH
+ $i=\int v\,dt/L$
+ -->
+<IMG
+ WIDTH="95" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.png"
+ ALT="$i=\int v dt/L$"></TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="92" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.png"
+ ALT="$v=L\;di/dt$"></TD>
+</TR>
+<TR><TD ALIGN="LEFT">Capacitor <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$C$"></TD>
+<TD ALIGN="CENTER"><IMG
+ WIDTH="92" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.png"
+ ALT="$i=C dv/dt$"></TD>
+<TD ALIGN="CENTER"><!-- MATH
+ $v=\int i\,dt/C$
+ -->
+<IMG
+ WIDTH="97" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.png"
+ ALT="$v=\int i dt/C$"></TD>
+</TR>
+</TABLE>
+  
+<UL>
+<LI>derive the expression for the equivalent resistance <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.png"
+ ALT="$R_s$">
+    of <IMG
+ WIDTH="15" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img11.png"
+ ALT="$n$"> resistors <!-- MATH
+ $R_1,\cdots,R_n$
+ -->
+<IMG
+ WIDTH="86" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.png"
+ ALT="$R_1,\cdots,R_n$"> combined in series. Then derive 
+    the expression for the equivalent resistance <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.png"
+ ALT="$R_p$"> of the <IMG
+ WIDTH="15" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img11.png"
+ ALT="$n$"> 
+    resistors combined in parallel.
+</LI>
+<LI>Repeat the above for <IMG
+ WIDTH="15" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img11.png"
+ ALT="$n$"> capacitors <!-- MATH
+ $C_1,\cdots,C_n$
+ -->
+<IMG
+ WIDTH="84" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.png"
+ ALT="$C_1,\cdots,C_n$">.
+</LI>
+<LI>Repeat the above for <IMG
+ WIDTH="15" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img11.png"
+ ALT="$n$"> capacitors <!-- MATH
+ $L_1,\cdots,L_n$
+ -->
+<IMG
+ WIDTH="83" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.png"
+ ALT="$L_1,\cdots,L_n$">.
+  
+</LI>
+</UL>
+
+<P>
+</LI>
+<LI>(a) If two light bulbs both labeled as 110V and 40W in series are
+connected to a socket outlet of 190V, what is the power consumption of 
+each of the bulbs?
+
+<P>
+(b) Replace one of the two bulbs by another bulb labeled as 110V 15W, and
+find the power consumption of each of the bulbs. What will happen to each
+of the two bulbs? (Note that when the power consumption by a bulb is larger
+than the specified wattage, it will be burned out!)
+
+<P>
+</LI>
+<LI>Consider the circuit on the left. Give the expressions of voltage 
+  <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.png"
+ ALT="$V_1$"> and <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$V_2$"> across <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.png"
+ ALT="$R_1$"> and <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.png"
+ ALT="$R_2$">, respectively, in terms of <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.png"
+ ALT="$R_1$"> 
+  and <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.png"
+ ALT="$R_2$"> as well as the voltage source <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img20.png"
+ ALT="$V$">.
+
+<P>
+In the circuit on the right, give the expressions of the voltages across 
+  <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.png"
+ ALT="$R_2$"> and <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.png"
+ ALT="$R_4$"> in terms of the circuit parameters (<IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.png"
+ ALT="$R_1$"> through <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.png"
+ ALT="$R_4$"> 
+  as well as the voltage source <IMG
+ WIDTH="18" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img20.png"
+ ALT="$V$">).
+
+<P>
+<IMG
+ WIDTH="609" HEIGHT="183" ALIGN="BOTTOM" BORDER="0"
+ SRC="../../../lectures/figures/VDivider.png"
+ ALT="VDivider.png">
+
+<P>
+</LI>
+<LI>Measurement of a physical process by instruments may be tricky due 
+  to the inevitable interfere on the process being caused by the instruments
+  (remember what you learned in quantum mechanics?). The figure below shows 
+  two possible configurations for the measurement of the voltage across and 
+  the current through the load. 
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../hw1b.gif"
+ ALT="hw1b.gif">
+
+<P>
+
+<OL>
+<LI>What are required of the ammeter and the voltmeter to minimize their
+  influences on the measurements? 
+
+<P>
+</LI>
+<LI>How would the ammeter and the voltmeter affect the measurement of the
+  current and the voltage in either of the configurations (a and b)?
+</LI>
+</OL>
+
+<P>
+</LI>
+<LI>Use Kirchhoff's voltage and current laws to find voltage <IMG
+ WIDTH="37" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.png"
+ ALT="$V_{BD}$"> and 
+  resistance <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.png"
+ ALT="$R_2$"> in the circuit shown below:
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../hw1c.gif"
+ ALT="hw1c.gif">
+
+<P>
+(Note: The direction of a current and the polarity of a voltage source can
+be assumed arbitrarily. To determined the actual direction and polarity, the
+sign of the values also should be considered. For example, a current labeled 
+in left-to-right direction with a negative value is actually flowing 
+right-to-left.)
+
+<P>
+</LI>
+<LI>Find the equivalent resistance between 
+the two terminals before and after the switch is closed. (Note, the two 
+diagonal branches are NOT connected to each other in the middle.)
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../hw2e.gif"
+ ALT="hw2e.gif">
+
+<P>
+</LI>
+<LI>(Optional, extra credits) Find the equivalent resistance <IMG
+ WIDTH="31" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img23.png"
+ ALT="$R_{eq}$"> 
+between the two terminals in the figure, where <IMG
+ WIDTH="69" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img24.png"
+ ALT="$R_0=3\Omega$">, <IMG
+ WIDTH="69" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.png"
+ ALT="$R_1=4\Omega$">, 
+<IMG
+ WIDTH="69" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img26.png"
+ ALT="$R_2=2\Omega$">, <IMG
+ WIDTH="69" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.png"
+ ALT="$R_3=2\Omega$">, <IMG
+ WIDTH="69" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img28.png"
+ ALT="$R_4=1\Omega$">. What is <IMG
+ WIDTH="31" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img23.png"
+ ALT="$R_{eq}$"> if <IMG
+ WIDTH="69" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img29.png"
+ ALT="$R_0=5\Omega$">?
+
+<P>
+(Hint: apply a test voltage <IMG
+ WIDTH="37" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img30.png"
+ ALT="$V_{test}$"> across the terminals and the 
+equivalent resistance can be found to be <!-- MATH
+ $R_{eq}=V_{test}/I_{test}$
+ -->
+<IMG
+ WIDTH="127" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img31.png"
+ ALT="$R_{eq}=V_{test}/I_{test}$">.
+The circuit can be solved by applying KCL to <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.png"
+ ALT="$V_1$"> and <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$V_2$">.)
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../hw1f.gif"
+ ALT="hw1f.gif">
+
+<P>
+</LI>
+<LI>Design a multimeter that can measure both DC and AC voltage, DC current,
+  and resistance with different scales. Specifically, you are given an analog 
+  meter <IMG
+ WIDTH="17" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img32.png"
+ ALT="$A$"> with a needle display, which reaches full scale when a DC current 
+  of <!-- MATH
+ $I=100\;\mu A=10^{-4}\;A$
+ -->
+<IMG
+ WIDTH="168" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img33.png"
+ ALT="$I=100\;\mu
+A=10^{-4}\;A$"> goes through it. The internal resistance of the
+  meter is 10 Ohms. In addition, you need some multi-position rotary switches 
+  to select different scales for each of the three types of measurements, and 
+  resistors with any values needed in your design.
+
+<P>
+
+<UL>
+<LI>DC Voltage measurement: DC voltages in these ranges can be measured
+      0-2.5, 0-10, 0-50, and 0-250 (all in volts). Use a 4-position rotary switch
+      to select one of the four ranges as shown in the figure below. For example, 
+      when the range of 0-10 is selected, the needle display will reach full scale 
+      when the voltage being measured is 10 V. The circuit is shown below. Determine 
+      all resistances labeled.
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../multimeterV.gif"
+ ALT="multimeterV.gif">
+
+<P>
+</LI>
+<LI>AC Voltage measurement: To measure an AC voltage (in terms of its
+      RMS value), it first needs to be converted into a DC voltage. This can 
+      be achieved by a 
+      <A NAME="tex2html1"
+  HREF="../../../lectures/ch4/node2.html">diode</A>
+which only allows the current to pass in one
+      direction (along the arrow) but not the other. This process is called
+      rectification. 
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../../../lectures/figures/halfwaverectifier.gif"
+ ALT="halfwaverectifier.gif">
+
+<P>
+The diode will also cause a voltage drop of 0.7 volt 
+      along the direction. The actual reading of the meter reflects the 
+      <A NAME="tex2html2"
+  HREF="../averagevalue/node1.html">average value</A>
+of the rectified current. Find the resistance <IMG
+ WIDTH="18" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.png"
+ ALT="$R$"> so 
+      that when the incoming AC voltage is <IMG
+ WIDTH="59" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img34.png"
+ ALT="$V=10$"> volt (RMS), the meter shows 
+      a full scale display.
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../multimeterACV.gif"
+ ALT="multimeterACV.gif">
+
+<P>
+</LI>
+<LI>DC current measurement: measure currents in these ranges (all in mA):
+      0-0.5, 0-2.5, 0-10, 0-50. Use a 4-position rotary switch to select one 
+      of the four ranges as shown in the figure below. For example, when the 
+      range of 0-10 is selected, the needle display will reach full scale when 
+      a 10 mA current is measured. Determine all resistances labeled. Use
+      <!-- MATH
+ $R_0=1\;K\Omega$
+ -->
+<IMG
+ WIDTH="90" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img35.png"
+ ALT="$R_0=1\;K\Omega$">.
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../multimeterA1a.gif"
+ ALT="multimeterA1a.gif">
+
+<P>
+</LI>
+<LI>Resistance measurement: The circuit for resistance measurement is
+      provided as shown below, where <IMG
+ WIDTH="81" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img36.png"
+ ALT="$V_1=1.5V$">. Determine the values for the 
+      resistors labeled as <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img37.png"
+ ALT="$R_0$">, <IMG
+ WIDTH="25" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.png"
+ ALT="$R_1$">, <IMG
+ WIDTH="32" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img38.png"
+ ALT="$R_{10}$">, <IMG
+ WIDTH="38" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img39.png"
+ ALT="$R_{100}$"> and <IMG
+ WIDTH="45" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img40.png"
+ ALT="$R_{1000}$"> 
+      and <IMG
+ WIDTH="22" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$V_2$"> so that the needle display of the meter is full scale 
+      (<IMG
+ WIDTH="91" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img41.png"
+ ALT="$I=100\;\mu A$">) when the resistor <IMG
+ WIDTH="49" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img42.png"
+ ALT="$R=0$"> being measured (between the 
+      two leads labeled + and -) is zero, or half scale (<IMG
+ WIDTH="82" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img43.png"
+ ALT="$I=50\;\mu A$">) when 
+      the value of <IMG
+ WIDTH="18" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.png"
+ ALT="$R$"> and the position of he two synchronized rotary switches
+      are given in each of the four case shown in the table:
+
+<P>
+<TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="LEFT">positions</TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="26" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img44.png"
+ ALT="$\times 1$"></TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="35" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img45.png"
+ ALT="$\times 10$"></TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="44" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img46.png"
+ ALT="$\times 100$"></TD>
+<TD ALIGN="LEFT"><IMG
+ WIDTH="42" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img47.png"
+ ALT="$\times 1K$"></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><IMG
+ WIDTH="18" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.png"
+ ALT="$R$"> values</TD>
+<TD ALIGN="LEFT">20<IMG
+ WIDTH="17" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img48.png"
+ ALT="$\Omega$"></TD>
+<TD ALIGN="LEFT">200<IMG
+ WIDTH="17" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img48.png"
+ ALT="$\Omega$"></TD>
+<TD ALIGN="LEFT">2000<IMG
+ WIDTH="17" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img48.png"
+ ALT="$\Omega$"></TD>
+<TD ALIGN="LEFT">20 <IMG
+ WIDTH="33" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img49.png"
+ ALT="$K\Omega$"></TD>
+</TR>
+</TABLE>
+
+<P>
+<IMG
+ ALIGN="BOTTOM" BORDER="0" SRC="../multimeterR.gif"
+ ALT="multimeterR.gif">
+
+<P>
+</LI>
+</UL>
+
+<P>
+</LI>
+</OL>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html6"
+  HREF="node1.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html4"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/opt/local/share/lib/latex2html/icons/next.png"></A> 
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/opt/local/share/lib/latex2html/icons/up_g.png"> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/opt/local/share/lib/latex2html/icons/prev_g.png">   
+<BR>
+<B> Next:</B> <A NAME="tex2html5"
+  HREF="node1.html">About this document ...</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Ruye Wang
+2016-09-02
+</ADDRESS>
+</BODY>
+</HTML>

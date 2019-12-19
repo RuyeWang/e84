@@ -1,0 +1,288 @@
+\documentstyle[12pt]{article}
+\usepackage{html}
+%\usepackage{graphics}  
+\begin{document}
+
+{\bf Chapter 4: Semiconductor Devices}
+
+\section*{Semiconductor materials}
+
+\begin{itemize}
+\item {\bf Conductors and Insulators:} 
+
+Good conductors, such as copper (Cu $2+8+18+1$), silver (Ag $2+8+18+18+1=47$),
+gold (Au $2+8+18+32+18+1=79$), aluminum (Al $2+8+3=13$) can conduct electricity 
+with little resistance because they only have a small number (no more than 
+three) of valence electrons (electrons on the out-most layer of the atom) which
+are only loosely bound to the atom and can easily become freely movable (free 
+electrons) to conduct electricity.
+
+On the other hand, insulators do not conduct electricity as no free electrons
+exist in the material.
+
+\item {\bf Semiconductors:} 
+
+The conductivity of those elements with four valence electrons is not as
+good as the conductors but still better than the insulators, and they are
+given the name semiconductors. The two semiconductors of great importance 
+are silicon (Si $2+8+4=14$) and germanium (Ge $2+8+18+4=32$), both of which 
+have four valence electrons. Their crystal structure (lattice) has a tetrahedral
+pattern with each atom sharing one valence electron with each of its four 
+neighbors (covalent bonds). 
+
+If an electron gains enough thermal energy (1.1 eV for Si or 0.7 eV for
+Ge), it may break the covalent bond and becomes a free electron of negative
+charge, while leaving a vacancy or a hole of positive charge. In an electric
+field, a free electron may move to a new location to fill a hole there, i.e.,
+both such electrons and holes contribute to electrical conduction. Such 
+crystal is called intrinsic semiconductor.
+
+At room temperature, relatively few electrons gain enough energy to become
+free electrons, the over all conductivity of such materials is low, thereby
+their name semiconductors. 
+
+\htmladdimg{../figures/elements.gif}
+
+\item {\bf Doped Semiconductors:}
+
+The conductivity of semiconductor material can be improved by doping, i.e.,
+by adding an impurity element with either three or five valence electrons,
+called, respectively, trivalent and pentavalent elements. A semiconductor
+is called either intrinsic or extrinsic, depending on whether it contains
+any doped impurity.
+
+\begin{itemize}
+\item {\bf n-type semiconductor:}
+
+When a small amount of pentavalent donor atoms (e.g., phosphorus (P) and
+Arsenic (As)) is added, a silicon atom in the lattice may be replaced by
+a donor atom with four of its valence electrons forming the covalent bounds 
+and one extra free electron. This is an {\bf n-type} semiconductor whose 
+conductivity is much improved compared to the intrinsic semiconductors, due 
+to the extra free electrons in the lattice, which are called {\bf predominant
+or majority current carriers}. There also exist some tiny number of holes 
+called {\bf minority carriers}.
+
+\item {\bf p-type semiconductor:}
+
+When a small amount of trivalent acceptor atoms (e.g., boron (B) and aluminum
+(Al)) is added, a silicon atom in the lattice may be replaced by a acceptor
+atom with only three valence electrons forming three covalent bounds and a 
+hole in the lattice. This is a {\bf p-type} semiconductor whose conductivity 
+is also much improved compared to the intrinsic semiconductors, due to the 
+holes in the lattice, which are called {\bf predominant or majority current 
+carriers}. There also exist some tiny number of free electrons called 
+{\bf minority carriers}.
+\end{itemize}
+
+\htmladdimg{../figures/lattice.gif}
+
+\item {\bf PN Junction}
+
+\htmladdimg{../figures/pn_junction0.gif}
+
+When p-type and n-type materials in contact with each other, a p-n junction is
+formed due to two effects:
+\begin{itemize}
+\item {\bf Diffusion:}
+
+Although both sides are electrically neutral, but they have different
+concentration of electrons (the n-type) and holes (the p-type), and the 
+free electrons in the n-type material begin to diffuse across the p-n junction
+between the two materials, due to their thermal motion, and to fill some of the
+holes in the p-type material. Equivalently, the holes are also drifting from
+the p-type side to the n-type side.
+
+\item {\bf Electric Field}
+
+If no other forces were involved, the diffusion would carry out 
+continuously until the free electrons and holes are uniformly distributed
+across both materials. However, as the result of the diffusion process,
+electrical field is gradually established, negative on the side of p-type 
+material due to the extra electrons, positive on the side of n-type 
+material due to the loss of free electrons. This electrical field prevents
+further diffusion as the electrons on the n-type side are expelled from
+the p-type side by the electrical field.
+
+\end{itemize}
+
+The effects of both diffusion and electric field eventually lead to an 
+equilibrium where the two effects balance each other so that there are
+no more charge carriers (free electrons or holes) crossing the p-n junction.
+This region around the p-n junction, called the {\bf depletion region} as 
+there no longer exist freely movable charge carriers, becomes a barrier 
+between the two ends of the material that prevent current to flow through.
+
+\htmladdimg{../figures/pn_junction1.gif}
+
+\end{itemize}
+
+\section*{Diodes}
+
+Due to the fact that there exist few freely movable charge carriers in the
+depletion region around the p-n junction, the conductivity is very poor.
+However, if certain voltage is applied to the two ends of the material, 
+the conductivity may change, depending one the polarity of the applied
+voltage:
+
+\htmladdimg{../figures/diode0.gif}
+
+\begin{itemize}
+\item {\bf Reverse bias} (negative to p-type, positive to n-type)
+
+  The negative voltage applied to the p-type will repel electrons in n-type
+  and attract holes in p-type so that both carriers are moving away from 
+  the p-n junction. As the depletion region becomes thicker than before, 
+  there is no current through the p-n junction and the conductivity is zero.
+
+\item {\bf Forward bias} (positive to p-type, negative to n-type)
+
+  The positive voltage applied to the p-type will attract electrons in n-type
+  and repel holes in p-type so that both carriers are moving towards the p-n
+  junction. As the depletion region becomes thinner, the conductivity is 
+  improved and there is current through the p-n junction. The conductivity
+  increases as the voltage becomes higher.
+  
+\end{itemize}
+The voltage-current behavior of a p-n junction is described by
+\[ I_D=I_0 ( e^{V_D/\eta V_T}-1 ), \;\;\;\;\mbox{or}\;\;\;\;
+	V_D=\eta V_T\;ln (\frac{I_D}{I_0}+1)=\eta V_T\;ln (\frac{I_D+I_0}{I_0})	\]
+
+where 
+\begin{itemize}
+\item $I_0$ is the {\em reverse saturation current}, a tiny current that 
+  flows in the reverse direction when $V_D \ll 0$, due to the minority 
+  carriers. As this current is limited by the minority carriers available,
+  it is called saturation current. $I_0$ is about $10^{-10} \sim 10^{-12}$ 
+  A for Si and $10^{-4}$ A for Ge.
+\item $ V_T=kT/e $ is the thermal voltage, where 
+  $k=1.38\times 10^{-23}$ Joules/Kelvin is Boltzmann's constant, 
+  $e=1.602\times 10^{-19}$ coulomb is the charge of an electron, and
+  $T$ is the temperature in degree K. For room temperature $T=300K$, 
+  $V_T=kT/e=26\; mV$.
+\item $\eta$ is the ideality factor which varies between 1 and 2, depending
+  on the fabrication process and semiconductor material. In many cases $\eta$
+  can be assumed to be approximately equal to 1.
+\end{itemize}
+In particular, when $V_D=0$, $I_D=0$, when $V_D\ll 0$, $I_D=-I_0$, when
+$V_D\gg 0$, $I_D=I_0 e^{V_D/V_T}$.
+
+\htmladdimg{../figures/diode1.gif}
+
+The resistance of an electrical device is defined as $r=\Delta V/\Delta I$.
+For a diode, as $V_D(I_D)$ is not a linear function, the resistance 
+$R_0=dV_D/dI_D$ is not a constant, but a function of $I_D$:
+\[
+ R_0=\frac{d}{dI_D}V_D=\frac{d}{dI_D} [\eta V_T\;ln (\frac{I_D+I_0}{I_0})]
+=\eta V_T \frac{I_0}{I_D+I_0}\frac{1}{I_0}=\eta \; \frac{V_T}{I_D+I_0}
+\approx \eta \; \frac{V_T}{I_D}	\]
+The last approximation is due to the fact that $I_D \gg I_0$, i.e., 
+$I_D+I_0\approx I_D$. We assume $V_T=26\;mV$, $\eta=1$, then if $I_D=1\;mA$, 
+$R_0=26\;\Omega$, but if $I_D=2\;mA$, $R_0=13\;\Omega$. In other words, the 
+resistance $R_0$ of a diode is not a constant, but a function of the current 
+$I_D$, i.e.,  a diode is not a linear element.
+
+{\bf Models of diodes:}
+
+\htmladdimg{../figures/diode3.gif}
+
+\begin{itemize}
+\item Ideal model: if $V_D<0$, then $I_D=0$, else $I_D=V/R$
+\item Ideal model with a voltage threshold $V_0=0.7V$:
+	if $V_D<V_0$, then $I_D=0$, else $I_D=(V-V_0)/R$
+\item The model above in series with a resistance $R_0=20\Omega$:
+	if $V_D<V_0$, then $I_D=0$, else $I_D=(V-V_0)/(R+R_0)$
+\item The model above in parallel with a current source that simulates
+  the reverse saturation current.
+\end{itemize}
+
+\htmladdimg{../figures/diodemodel.gif}
+\htmladdimg{../figures/diodemodels.gif}
+
+\begin{tabular}{c||c|c|c}\\ \hline
+ $I_0$	& 1 mA & 10 mA & 100 mA	\\ \hline
+$V_D$ for Si ($I_0=10^{-10}$, $\eta=1.4$) & 0.58 V & 0.67 V & 0.75 V \\
+$V_D$ for Ge ($I_0=10^{-4}$, $\eta=1.0$) & 0.06 V & 0.12 V & 0.18 V \\
+\end{tabular}
+
+In general, when the forward voltage applied to a diode exceeds 0.6 to 
+0.7V for silicon (or 0.1 to 0.2 V for germanium) material, the diode is 
+assumed to be conducting with very little resistance.
+
+The following is a set of devices all related to the semiconductor materials.
+\begin{itemize}
+\item {\bf Solar Cell}
+
+A solar cell converts light energy to electrical energy and is a current source.
+Whnen a photon of light hits a piece of silicon, it either goes straight through
+material if its energy is lower than the band-gap energy of the silicon semiconductor,
+or is absorbed by the silicon if its energy is greater than the band-gap energy.
+In the latter case, an electron-hole pair is produced, and the electron and hole
+are separated by the internal electric filed near the PN-junction formed by the 
+n-type and p-type materials, and a current is formed through the external circuit.
+  
+\htmladdimg{../figures/solarcell.gif}
+
+\item {\bf Photodiode}
+
+Photodiodes are similar to regular semiconductor diodes except that they 
+may be either exposed or packaged with a window or optical fiber connection
+to allow light to reach the sensitive part of the device. 
+
+When a photon of sufficient energy strikes the diode, it excites an electron,
+thereby creating a free electron paired with a hole. If the absorption occurs 
+in the depletion region of the PN junction, these carriers go through the 
+junction by the built-in field of the depletion region, i.e., the hole moves
+toward the P-side (anode), and the electron toward the N-side (cathode), and
+a photocurrent is produced.
+
+\begin{itemize}
+
+\item {\bf Photovoltaic mode}
+  
+  The PN-junction is zero-biased, the P side is negative and and N side positive 
+  due to diffusion of the electrons and holes. The photocurrent going from N to P
+  will build up an external voltage, positive on the P side, negative on the N
+  side.
+\item {\bf Photoconductive mode}
+
+  The PN-junction is reverse-biased and the depletion region is widened. The 
+  photocurrent is more linearly related to the illuminance.
+
+\end{itemize} 
+
+\htmladdimg{../figures/LED.gif}
+
+{\bf Light-Emitting Diode (LED)}
+
+When a light-emitting diode is forward biased (turned on), electrons on the N side
+can pass through the PN-junction to recombine with holes on the P side. These 
+electrons fall to a lower level and release energy in the form of photons. This 
+effect is called {\em electroluminescence} and the wavelength (color) of the light,
+corresponding to the energy of the photon, is determined by the energy gap of the 
+semiconductor.
+
+In silicon or germanium diodes, the electrons and holes recombine by a non-radiative 
+transition which produces no optical emission, because these are indirect band gap 
+materials. The materials used for the LED, such as gallium arsenide (GaAs), have a 
+direct band gap with energy corresponding to near-infrared, visible or even 
+near-ultraviolet light.
+
+\item {\bf Silicon Pressure Sensor}
+
+The resistance $R=\rho\;l/A$ of a piece of electricity conducting material is
+determined by the length and cross sectional area as well as the resistivity of 
+the material. When the geometry of the material is changed under pressure, its 
+resistance is changed as well.
+
+Under applied pressure, the resistivity of a semiconductor (e.g., n-type silicon)
+changes as it is easier (or harder) for the electrons to become free to conduct 
+electricity, due to the internal structure change. This is called the 
+{\em piezoresistive effect} (``piezo'' means pressure), which, different from the 
+{\em piezoelectric effect}, only causes a change in resistance without producing 
+any electric potential. The piezoresistive effect of semiconductor materials is 
+several orders of magnitudes larger than the geometrical effect in metals. 
+
+\end{itemize}
+
+\end{document}

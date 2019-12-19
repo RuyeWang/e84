@@ -1,0 +1,936 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Particular Solution and Resonance</TITLE>
+<META NAME="description" CONTENT="Particular Solution and Resonance">
+<META NAME="keywords" CONTENT="ch3">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="ch3.css">
+
+<LINK REL="next" HREF="node12.html">
+<LINK REL="previous" HREF="node10.html">
+<LINK REL="next" HREF="node12.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node12.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node10.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node10.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node12.html">Homogeneous Solution</A>
+<B> Up:</B> <A
+ HREF="node10.html">Second Order Systems</A>
+<B> Previous:</B> <A
+ HREF="node10.html">Second Order Systems</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H3><A ID="SECTION00015100000000000000">
+Particular Solution and Resonance</A>
+</H3>
+
+<P>
+If only the steady state response of a second order system is of interest, 
+then we can ignore the homogeneous solution due to the initial condition 
+and consider only the particular solution due to the input. To do so, we
+convert the 2nd order DE into an algebraic equation in terms of the 
+impedances of the components. In the following, we consider first the 
+series system and then the parallel system.
+
+<P>
+<B>Series system:</B> The overall impedance of the three elements is
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Z=R+j\omega L+\frac{1}{j\omega C}=R+j\left(\omega L-\frac{1}{\omega C}\right)
+  =|Z|e^{j\angle Z}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img501.svg"
+ ALT="$\displaystyle Z=R+j\omega L+\frac{1}{j\omega C}=R+j\left(\omega L-\frac{1}{\omega C}\right)
+=\vert Z\vert e^{j\angle Z}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">178</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+where 
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+|Z|=\sqrt{R^2+\left(\omega L-\frac{1}{\omega C}\right)^2}
+  =\left\{ \begin{array}{rl}
+    \infty & \omega=0\;\; (Z_C=\infty,\;\mbox{capacitive})\\
+    R & \omega=1/\sqrt{LC}\;\; (Z_C+Z_L=0,\;\mbox{resistive})\\
+    \infty & \omega \rightarrow \infty\;\; (Z_L=\infty,\;\mbox{inductive})
+  \end{array} \right. 
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 8.83ex; vertical-align: -3.82ex; " SRC="img502.svg"
+ ALT="$\displaystyle \vert Z\vert=\sqrt{R^2+\left(\omega L-\frac{1}{\omega C}\right)^2...
+...mega \rightarrow \infty\;\; (Z_L=\infty,\;\mbox{inductive})
+\end{array} \right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">179</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\angle Z=tan^{-1} \left(\frac{\omega L-1/\omega C}{R}\right)
+  =\left\{ \begin{array}{rl} -90^\circ & \omega=0\;\; (Z_L=0,\;\mbox{capacitive})\\
+    0^\circ & \omega=1/\sqrt{LC}\;\; (Z_C+Z_L=0,\;\mbox{resistive})\\
+    90^\circ & \omega \rightarrow \infty\;\; (Z_C=0,\;\mbox{inductive})
+  \end{array} \right.
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 8.83ex; vertical-align: -3.82ex; " SRC="img503.svg"
+ ALT="$\displaystyle \angle Z=tan^{-1} \left(\frac{\omega L-1/\omega C}{R}\right)
+=\le...
+... &amp; \omega \rightarrow \infty\;\; (Z_C=0,\;\mbox{inductive})
+\end{array} \right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">180</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/impedanceRCL1.gif"
+ ALT="impedanceRCL1.gif">
+
+<P>
+The impedance <!-- MATH
+ $Z=Z_R+Z_C+Z_L$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img504.svg"
+ ALT="$Z=Z_R+Z_C+Z_L$"></SPAN> as a function of frequency <SPAN CLASS="MATH"><IMG STYLE="height: 1.39ex; vertical-align: -0.12ex; " SRC="img10.svg"
+ ALT="$\omega$"></SPAN> is
+plotted below:
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/omega0c.gif"
+ ALT="omega0c.gif">
+
+<P>
+In particular, when <!-- MATH
+ $\omega L=1/omega C$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img505.svg"
+ ALT="$\omega L=1/omega C$"></SPAN>, i.e., the frequency 
+<!-- MATH
+ $\omega=1/\sqrt{LC}=\omega_n$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img506.svg"
+ ALT="$\omega=1/\sqrt{LC}=\omega_n$"></SPAN> is the same as the <EM>natural frequency</EM>, 
+the impedances of the capacitor and the inductor have the same magnitude 
+but opposite phase, and their sum is zero:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Z_L=j\omega_nL=j\sqrt{\frac{L}{C}},\;\;\;\;\;\;
+  Z_C=\frac{1}{j\omega_nC}=-j\sqrt{\frac{L}{C}},\;\;\;\;\;
+  Z_L+Z_C=0
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.27ex; vertical-align: -2.16ex; " SRC="img507.svg"
+ ALT="$\displaystyle Z_L=j\omega_nL=j\sqrt{\frac{L}{C}},\;\;\;\;\;\;
+Z_C=\frac{1}{j\omega_nC}=-j\sqrt{\frac{L}{C}},\;\;\;\;\;
+Z_L+Z_C=0$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">181</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+In this case, the RLC circuit is said to be in <EM>resonance</EM>, with
+the total impedance <!-- MATH
+ $Z=Z_R+Z_C+Z_L=Z_R=R$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img508.svg"
+ ALT="$Z=Z_R+Z_C+Z_L=Z_R=R$"></SPAN> minimized and the current 
+<!-- MATH
+ $\dot{I}=\dot{V}/Z=\dot{V}/R$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img509.svg"
+ ALT="$\dot{I}=\dot{V}/Z=\dot{V}/R$"></SPAN> maximized. Also, as the total impedance 
+has a zero phase angle <!-- MATH
+ $\angle Z=\angle R=0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img510.svg"
+ ALT="$\angle Z=\angle R=0$"></SPAN>, the current <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.12ex; " SRC="img511.svg"
+ ALT="$\dot{I}$"></SPAN> and
+voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.12ex; " SRC="img512.svg"
+ ALT="$\dot{V}$"></SPAN> are in phase. 
+
+<P>
+The <EM>quality factor</EM> of this series RCL 2nd order system is defined as
+<BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+Q_s&=&
+  \frac{\mbox{Magnitude of inductor/capacitor impedance at $\omega_n$}}
+       {\mbox{Resistance}}
+  \nonumber \\
+  &=&\frac{|Z_L|}{R}=\frac{\omega_nL}{R}=\frac{L}{R\sqrt{LC}}
+  =\frac{1}{R}\sqrt{\frac{L}{C}}=\frac{1}{2\zeta_s}
+  \nonumber \\
+  &=&\frac{|Z_C|}{R}=\frac{1}{\omega_nCR}=\frac{\sqrt{LC}}{RC}
+  =\frac{1}{R}\sqrt{\frac{L}{C}}=\frac{1}{2\zeta_s}
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img513.svg"
+ ALT="$\displaystyle Q_s$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 5.34ex; vertical-align: -1.71ex; " SRC="img514.svg"
+ ALT="$\displaystyle \frac{\mbox{Magnitude of inductor/capacitor impedance at $\omega_n$}}
+{\mbox{Resistance}}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 6.27ex; vertical-align: -2.28ex; " SRC="img515.svg"
+ ALT="$\displaystyle \frac{\vert Z_L\vert}{R}=\frac{\omega_nL}{R}=\frac{L}{R\sqrt{LC}}
+=\frac{1}{R}\sqrt{\frac{L}{C}}=\frac{1}{2\zeta_s}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 6.27ex; vertical-align: -2.16ex; " SRC="img516.svg"
+ ALT="$\displaystyle \frac{\vert Z_C\vert}{R}=\frac{1}{\omega_nCR}=\frac{\sqrt{LC}}{RC}
+=\frac{1}{R}\sqrt{\frac{L}{C}}=\frac{1}{2\zeta_s}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">182</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+
+<P>
+Consider the voltages across the three components at 
+natural when <!-- MATH
+ $\omega=\omega_n=1/\sqrt{LC}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img517.svg"
+ ALT="$\omega=\omega_n=1/\sqrt{LC}$"></SPAN>:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\dot{V}_R=\dot{I} Z_R =\frac{\dot{V}}{R} \;R=\dot{V}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -1.71ex; " SRC="img518.svg"
+ ALT="$\displaystyle \dot{V}_R=\dot{I} Z_R =\frac{\dot{V}}{R} \;R=\dot{V}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">183</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\dot{V}_L=\dot{I} Z_L=\frac{\dot{V}}{R}\;j\omega_n L
+  =j\frac{\dot{V}}{R}\;\frac{L}{\sqrt{LC}}
+  =j\,\dot{V} \frac{1}{R}\sqrt{\frac{L}{C}}=jQ_s\dot{V}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.27ex; vertical-align: -2.28ex; " SRC="img519.svg"
+ ALT="$\displaystyle \dot{V}_L=\dot{I} Z_L=\frac{\dot{V}}{R}\;j\omega_n L
+=j\frac{\dot{V}}{R}\;\frac{L}{\sqrt{LC}}
+=j\,\dot{V} \frac{1}{R}\sqrt{\frac{L}{C}}=jQ_s\dot{V}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">184</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\dot{V}_C=\dot{I} Z_C=\frac{\dot{V}}{R}\;\frac{1}{j\omega_n C}
+  =-j\,\frac{\dot{V}}{R}\;\frac{\sqrt{LC}}{C}
+  =-j\,\dot{V}\;\frac{1}{R}\sqrt{\frac{L}{C}}=-jQ_s\dot{V}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.27ex; vertical-align: -2.16ex; " SRC="img520.svg"
+ ALT="$\displaystyle \dot{V}_C=\dot{I} Z_C=\frac{\dot{V}}{R}\;\frac{1}{j\omega_n C}
+=-...
+...}\;\frac{\sqrt{LC}}{C}
+=-j\,\dot{V}\;\frac{1}{R}\sqrt{\frac{L}{C}}=-jQ_s\dot{V}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">185</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+We see that
+
+<UL>
+<LI>The voltage across <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img112.svg"
+ ALT="$R$"></SPAN> is equal to the source voltage
+  <!-- MATH
+ $\dot{V}_R=\dot{V}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.46ex; " SRC="img521.svg"
+ ALT="$\dot{V}_R=\dot{V}$"></SPAN>
+</LI>
+<LI>The voltages across <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img105.svg"
+ ALT="$L$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img104.svg"
+ ALT="$C$"></SPAN> have the same magnitude, which 
+  is <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img522.svg"
+ ALT="$Q_s$"></SPAN> times the input voltage <!-- MATH
+ $|\dot{V}_L|=|\dot{V}_C|=Q_s\dot{V}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img523.svg"
+ ALT="$\vert\dot{V}_L\vert=\vert\dot{V}_C\vert=Q_s\dot{V}$"></SPAN>
+</LI>
+<LI>The voltage across <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img105.svg"
+ ALT="$L$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img104.svg"
+ ALT="$C$"></SPAN> have opposite phases: 
+  <!-- MATH
+ $\angle V_L=-\angle V_C$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img524.svg"
+ ALT="$\angle V_L=-\angle V_C$"></SPAN>.
+</LI>
+</UL>
+We see that <!-- MATH
+ $\dot{V}_L=-\dot{V}_C$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.46ex; " SRC="img525.svg"
+ ALT="$\dot{V}_L=-\dot{V}_C$"></SPAN>, i.e., <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img526.svg"
+ ALT="$V_L$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img527.svg"
+ ALT="$V_C$"></SPAN> have 
+opposite polarities and they cancel each other.
+
+<P>
+<B>Example: </B> In a series RLC circuit, <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img528.svg"
+ ALT="$R=5\Omega$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img529.svg"
+ ALT="$L=4\;mH$"></SPAN> and
+<!-- MATH
+ $C=0.1\;\mu F$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img530.svg"
+ ALT="$C=0.1\;\mu F$"></SPAN>. The natural frequency <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img488.svg"
+ ALT="$\omega_n$"></SPAN> can be found to be
+<!-- MATH
+ $\omega_n=1/\sqrt{LC}=1/\sqrt{4\times 10^{-3}\times 10^{-7}}=5\times 10^4$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img531.svg"
+ ALT="$\omega_n=1/\sqrt{LC}=1/\sqrt{4\times 10^{-3}\times 10^{-7}}=5\times 10^4$"></SPAN>.
+The quality factor is
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Q_s=\frac{\omega_nL}{R}=\frac{(5\times 10^4)\times (4\times 10^{-3})}{5}
+=40
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -1.71ex; " SRC="img532.svg"
+ ALT="$\displaystyle Q_s=\frac{\omega_nL}{R}=\frac{(5\times 10^4)\times (4\times 10^{-3})}{5}
+=40$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">186</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+or
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Q_s=\frac{1}{\omega_nCR}=\frac{1}{(5\times 10^4)\times 10^{-7}\times 5}
+=40
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img533.svg"
+ ALT="$\displaystyle Q_s=\frac{1}{\omega_nCR}=\frac{1}{(5\times 10^4)\times 10^{-7}\times 5}
+=40$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">187</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+If the input voltage is <!-- MATH
+ $V_{rms}=10V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img534.svg"
+ ALT="$V_{rms}=10V$"></SPAN> at the natural frequency, the current
+is <!-- MATH
+ $I=V/R=10/5=2 A$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img535.svg"
+ ALT="$I=V/R=10/5=2 A$"></SPAN>, and the voltages across each of the elements are:
+
+<UL>
+<LI><!-- MATH
+ $\dot{V}_R=R\dot{I}=V=10V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.46ex; " SRC="img536.svg"
+ ALT="$\dot{V}_R=R\dot{I}=V=10V$"></SPAN>
+</LI>
+<LI><!-- MATH
+ $\dot{V}_L=j\omega L \dot{I}=j5\times 10^4\times 4\times 10^{-3} \times 2=j400V=jQ_sV$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.57ex; " SRC="img537.svg"
+ ALT="$\dot{V}_L=j\omega L \dot{I}=j5\times 10^4\times 4\times 10^{-3} \times 2=j400V=jQ_sV$"></SPAN>
+</LI>
+<LI><!-- MATH
+ $\dot{V}_C=\dot{I}/j\omega_nC=-j2/(5\times 10^4\times 0.1\times 10^{-6})=-j400V=-jQ_sV$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img538.svg"
+ ALT="$\dot{V}_C=\dot{I}/j\omega_nC=-j2/(5\times 10^4\times 0.1\times 10^{-6})=-j400V=-jQ_sV$"></SPAN>
+</LI>
+</UL>
+Note that although input voltage is <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img539.svg"
+ ALT="$10V$"></SPAN>, the voltage across L and C (<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img23.svg"
+ ALT="$Q$"></SPAN> 
+times the input) could be very high, but they are in opposite phase and 
+therefore cancel each other).
+
+<P>
+<B>Parallel system:</B> 
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/impedanceRCL2.gif"
+ ALT="impedanceRCL2.gif">
+
+<P>
+The overall admittance of the three elements in parallel is
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Y=G+j\omega C+\frac{1}{j\omega L}=G+j\left(\omega C-\frac{1}{\omega L}\right)
+  =|Y|e^{j\angle Y}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img540.svg"
+ ALT="$\displaystyle Y=G+j\omega C+\frac{1}{j\omega L}=G+j\left(\omega C-\frac{1}{\omega L}\right)
+=\vert Y\vert e^{j\angle Y}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">188</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+where
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+|Y|=\sqrt{G^2+\left(\omega C-\frac{1}{\omega L}\right)^2},\;\;\;\;
+  \angle Y=tan^{-1} \left(\frac{\omega C-1/\omega L}{G}\right)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 7.43ex; vertical-align: -2.56ex; " SRC="img541.svg"
+ ALT="$\displaystyle \vert Y\vert=\sqrt{G^2+\left(\omega C-\frac{1}{\omega L}\right)^2},\;\;\;\;
+\angle Y=tan^{-1} \left(\frac{\omega C-1/\omega L}{G}\right)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">189</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+In particular when <!-- MATH
+ $\omega=\omega_n=1/\sqrt{LC}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img517.svg"
+ ALT="$\omega=\omega_n=1/\sqrt{LC}$"></SPAN>, we have 
+<!-- MATH
+ $\omega C=1/\omega L$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img542.svg"
+ ALT="$\omega C=1/\omega L$"></SPAN>, and the total admittance is minimized
+(impedance is maximized):
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Y=Y_R+Y_C+Y_L=G+j\left(\omega C-\frac{1}{\omega L}\right)=G
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img543.svg"
+ ALT="$\displaystyle Y=Y_R+Y_C+Y_L=G+j\left(\omega C-\frac{1}{\omega L}\right)=G$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">190</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+and the voltage <!-- MATH
+ $\dot{V}=\dot{I}/Y=\dot{I}/G$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img544.svg"
+ ALT="$\dot{V}=\dot{I}/Y=\dot{I}/G$"></SPAN> is maximized. Also, as 
+<!-- MATH
+ $\angle Y=0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img545.svg"
+ ALT="$\angle Y=0$"></SPAN>, the voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.12ex; " SRC="img512.svg"
+ ALT="$\dot{V}$"></SPAN> and current <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.12ex; " SRC="img511.svg"
+ ALT="$\dot{I}$"></SPAN> are in phase.
+
+<P>
+The quality factor <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.78ex; " SRC="img546.svg"
+ ALT="$Q_p$"></SPAN> of this parallel RCL 2nd order system is 
+defined as
+<BR>
+<DIV CLASS="mathdisplay">
+<!-- MATH
+ \begin{eqnarray}
+Q_p&=&
+  \frac{\mbox{Magnitude of inductor/capacitor susceptance at $\omega_n$}}
+       {\mbox{Conductance}}
+  \nonumber \\
+  &=&\frac{|Y_L|}{G}=\frac{1}{\omega_nLG}=\frac{\sqrt{LC}}{LG}
+  =R\sqrt{\frac{C}{L}}=\frac{1}{2\zeta_p}
+  \nonumber \\
+  &=&\frac{|Y_C|}{G}=\frac{\omega_n C}{G}=\frac{C}{\sqrt{LC}G}
+  =R\sqrt{\frac{C}{L}}=\frac{1}{2\zeta_p}
+\end{eqnarray}
+ -->
+<TABLE CELLPADDING="0" ALIGN="CENTER" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT"><IMG STYLE="height: 2.55ex; vertical-align: -0.78ex; " SRC="img547.svg"
+ ALT="$\displaystyle Q_p$"></TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 5.34ex; vertical-align: -1.71ex; " SRC="img548.svg"
+ ALT="$\displaystyle \frac{\mbox{Magnitude of inductor/capacitor susceptance at $\omega_n$}}
+{\mbox{Conductance}}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 6.50ex; vertical-align: -2.37ex; " SRC="img549.svg"
+ ALT="$\displaystyle \frac{\vert Y_L\vert}{G}=\frac{1}{\omega_nLG}=\frac{\sqrt{LC}}{LG}
+=R\sqrt{\frac{C}{L}}=\frac{1}{2\zeta_p}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP WIDTH="50%" ALIGN="RIGHT">&nbsp;</TD>
+<TD WIDTH="10" ALIGN="CENTER" NOWRAP><IMG STYLE="height: 1.16ex; vertical-align: -0.12ex; " SRC="img33.svg"
+ ALT="$\displaystyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP WIDTH="50%"><IMG STYLE="height: 6.50ex; vertical-align: -2.37ex; " SRC="img550.svg"
+ ALT="$\displaystyle \frac{\vert Y_C\vert}{G}=\frac{\omega_n C}{G}=\frac{C}{\sqrt{LC}G}
+=R\sqrt{\frac{C}{L}}=\frac{1}{2\zeta_p}$"></TD>
+<TD CLASS="eqno" WIDTH=10 ALIGN="RIGHT">
+(<SPAN CLASS="arabic">191</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL">
+
+We note that <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.78ex; " SRC="img546.svg"
+ ALT="$Q_p$"></SPAN> of the parallel RCL circuit is the reciprocal of <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img522.svg"
+ ALT="$Q_s$"></SPAN> of
+the series RCL circuit:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\frac{1}{Q_s}=Q_p,\;\;\;\;\;\;\frac{1}{Q_p}=Q_s
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.37ex; " SRC="img551.svg"
+ ALT="$\displaystyle \frac{1}{Q_s}=Q_p,\;\;\;\;\;\;\frac{1}{Q_p}=Q_s$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">192</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+When <!-- MATH
+ $\omega=\omega_n=1/\sqrt{LC}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img517.svg"
+ ALT="$\omega=\omega_n=1/\sqrt{LC}$"></SPAN>, the voltage is 
+<!-- MATH
+ $\dot{V}=\dot{I}/Y=\dot{I}/G=\dot{I}R$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img552.svg"
+ ALT="$\dot{V}=\dot{I}/Y=\dot{I}/G=\dot{I}R$"></SPAN>
+and the currents through the three components are:
+
+<UL>
+<LI><P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\dot{I}_R=\dot{V}Y_R=\dot{V}G=\frac{\dot I}{G} G=\dot{I},
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -1.71ex; " SRC="img553.svg"
+ ALT="$\displaystyle \dot{I}_R=\dot{V}Y_R=\dot{V}G=\frac{\dot I}{G} G=\dot{I},$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">193</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI><P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\dot{I}_C=\dot{V} Y_C=\dot{I}R\;j\omega_n C=j\dot{I}R\frac{C}{\sqrt{LC}}
+  =j \dot{I} R\;\sqrt{\frac{C}{L}}=jQ\dot{I}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.27ex; vertical-align: -2.28ex; " SRC="img554.svg"
+ ALT="$\displaystyle \dot{I}_C=\dot{V} Y_C=\dot{I}R\;j\omega_n C=j\dot{I}R\frac{C}{\sqrt{LC}}
+=j \dot{I} R\;\sqrt{\frac{C}{L}}=jQ\dot{I}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">194</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI><P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\dot{I}_L=\dot{V} Y_L=\dot{I}R\;\frac{1}{j\omega_n L}
+  =-j\dot{I}R\frac{\sqrt{LC}}{L}=-j \dot{I} R\;\sqrt{\frac{C}{L}}=-jQ\dot{I}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.27ex; vertical-align: -2.16ex; " SRC="img555.svg"
+ ALT="$\displaystyle \dot{I}_L=\dot{V} Y_L=\dot{I}R\;\frac{1}{j\omega_n L}
+=-j\dot{I}R\frac{\sqrt{LC}}{L}=-j \dot{I} R\;\sqrt{\frac{C}{L}}=-jQ\dot{I}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">195</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+</UL>
+We see that 
+
+<UL>
+<LI>The current through <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img112.svg"
+ ALT="$R$"></SPAN> is equal to the source current: 
+  <!-- MATH
+ $\dot{I}_R=\dot{I}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.46ex; " SRC="img556.svg"
+ ALT="$\dot{I}_R=\dot{I}$"></SPAN>;
+</LI>
+<LI>The currents through <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img105.svg"
+ ALT="$L$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img104.svg"
+ ALT="$C$"></SPAN> have the same magnitude, 
+  which is <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.78ex; " SRC="img546.svg"
+ ALT="$Q_p$"></SPAN> times the input current: 
+  <!-- MATH
+ $|\dot{I}_L|=|\dot{I}_C|=Q_p\dot{I}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.25ex; vertical-align: -0.78ex; " SRC="img557.svg"
+ ALT="$\vert\dot{I}_L\vert=\vert\dot{I}_C\vert=Q_p\dot{I}$"></SPAN>
+</LI>
+<LI>The currents through <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img105.svg"
+ ALT="$L$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img104.svg"
+ ALT="$C$"></SPAN> have opposite phases:
+  <!-- MATH
+ $\angle I_L=-\angle I_C$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img558.svg"
+ ALT="$\angle I_L=-\angle I_C$"></SPAN>. 
+</LI>
+</UL>
+We see that <!-- MATH
+ $\dot{I}_L=-\dot{I}_C$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.46ex; " SRC="img559.svg"
+ ALT="$\dot{I}_L=-\dot{I}_C$"></SPAN>, i.e., <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img560.svg"
+ ALT="$I_L$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img561.svg"
+ ALT="$I_C$"></SPAN> have 
+opposite directions, they form a loop current through <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img105.svg"
+ ALT="$L$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img104.svg"
+ ALT="$C$"></SPAN>.
+
+<P>
+The quality factor can also be used to judge whether a second order system 
+is under, critically or over damped. Qualitatively, a greater <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img23.svg"
+ ALT="$Q$"></SPAN> or a smaller
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img487.svg"
+ ALT="$\zeta$"></SPAN> indicates that the system is energetic, active, and responsive, while 
+on the other hand, a smaller <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img23.svg"
+ ALT="$Q$"></SPAN> or a greater <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img487.svg"
+ ALT="$\zeta$"></SPAN> indicates that the
+system is sluggish, inactive, and irresponsive. 
+
+<P>
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\begin{array}{c||c||c} \hline
+    \zeta<1 & Q>0.5 & \mbox{under damped} \\\hline
+    \zeta=1 & Q=0.5 & \mbox{critically damped} \\\hline
+    \zeta>1 & Q<0.5 & \mbox{over damped} \\\hline
+  \end{array}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE=""
+ SRC="img562.svg"
+ ALT="\begin{displaymath}\begin{array}{c\vert\vert c\vert\vert c} \hline
+\zeta&lt;1 &amp; Q&gt;0...
+...line
+\zeta&gt;1 &amp; Q&lt;0.5 &amp; \mbox{over damped} \\ \hline
+\end{array}\end{displaymath}"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">196</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+The concept of the quality factor <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img23.svg"
+ ALT="$Q$"></SPAN> of a second order RCL circuit 
+can be generalized to describe any second or higher order system, 
+as the ratio between the energy stored in the system and the energy 
+dissipated by the system:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Q=2\pi\frac{\mbox{Maximum energy stored}}{\mbox{Energy dissipated per cycle}}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.16ex; " SRC="img563.svg"
+ ALT="$\displaystyle Q=2\pi\frac{\mbox{Maximum energy stored}}{\mbox{Energy dissipated per cycle}}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">197</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+In the case of the series RCL circuit, this is the ratio between 
+the energy stored in <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img104.svg"
+ ALT="$C$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img105.svg"
+ ALT="$L$"></SPAN> (proportional to <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img564.svg"
+ ALT="$\omega L$"></SPAN> and 
+<!-- MATH
+ $1/\omega C$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img565.svg"
+ ALT="$1/\omega C$"></SPAN>) and the energy dissipated by <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img112.svg"
+ ALT="$R$"></SPAN> (proportional to
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img112.svg"
+ ALT="$R$"></SPAN>) per period <!-- MATH
+ $T=1/f=2\pi/\omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img566.svg"
+ ALT="$T=1/f=2\pi/\omega$"></SPAN> at the natural frequency 
+<!-- MATH
+ $\omega=\omega_n=1/\sqrt{LC}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img517.svg"
+ ALT="$\omega=\omega_n=1/\sqrt{LC}$"></SPAN>. Consider the maximum energy stored
+in <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img105.svg"
+ ALT="$L$"></SPAN>:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+W_L=\int_0^T i(t)\; v(t) dt=\int_0^T i(t) \,L \frac{di(t)}{dt} dt
+  =L \int_0^{I_p} i \;di=\frac{1}{2}LI_p^2=LI^2_{rms}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.23ex; " SRC="img567.svg"
+ ALT="$\displaystyle W_L=\int_0^T i(t)\; v(t) dt=\int_0^T i(t) \,L \frac{di(t)}{dt} dt
+=L \int_0^{I_p} i \;di=\frac{1}{2}LI_p^2=LI^2_{rms}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">198</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+and the maximum energy stored in <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img104.svg"
+ ALT="$C$"></SPAN>:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+W_C=\int_0^T v(t)\; i(t) dt=\int_0^T v(t) \,C \frac{dv(t)}{dt} dt
+  =C \int_0^{V_p} v \;dv=\frac{1}{2}CV_p^2=CV^2_{rms}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.23ex; " SRC="img568.svg"
+ ALT="$\displaystyle W_C=\int_0^T v(t)\; i(t) dt=\int_0^T v(t) \,C \frac{dv(t)}{dt} dt
+=C \int_0^{V_p} v \;dv=\frac{1}{2}CV_p^2=CV^2_{rms}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">199</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+where <!-- MATH
+ $I_p=\sqrt{2}I_{rms}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.78ex; " SRC="img569.svg"
+ ALT="$I_p=\sqrt{2}I_{rms}$"></SPAN> is the peak current through <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img105.svg"
+ ALT="$L$"></SPAN>, and
+<!-- MATH
+ $V_p=\sqrt{2}V_{rms}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.78ex; " SRC="img570.svg"
+ ALT="$V_p=\sqrt{2}V_{rms}$"></SPAN> is the peak voltage across <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img104.svg"
+ ALT="$C$"></SPAN>. 
+
+<P>
+At the natural frequency <!-- MATH
+ $\omega_n=1/\sqrt{LC}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img499.svg"
+ ALT="$\omega_n=1/\sqrt{LC}$"></SPAN>, <!-- MATH
+ $|Z_C|=|Z_L|$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img571.svg"
+ ALT="$\vert Z_C\vert=\vert Z_L\vert$"></SPAN>, 
+<!-- MATH
+ $|V_C|=|V_L|$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img572.svg"
+ ALT="$\vert V_C\vert=\vert V_L\vert$"></SPAN>, and the capacitor and the inductor store the same 
+amount of energy:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+W_L=LI^2_{rms}=L \left( \frac{V_{rms}}{\omega_nL}\right)^2
+  =L\frac{V^2_{rms}LC}{L^2}=CV^2_{rms}=W_C
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.27ex; vertical-align: -2.32ex; " SRC="img573.svg"
+ ALT="$\displaystyle W_L=LI^2_{rms}=L \left( \frac{V_{rms}}{\omega_nL}\right)^2
+=L\frac{V^2_{rms}LC}{L^2}=CV^2_{rms}=W_C$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">200</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The energy <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img574.svg"
+ ALT="$W_L=W_C$"></SPAN> is converted back and forth between magnetic 
+energy in <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img105.svg"
+ ALT="$L$"></SPAN> and electrical energy in <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img104.svg"
+ ALT="$C$"></SPAN>. The energy dissipated 
+in <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img112.svg"
+ ALT="$R$"></SPAN> per cycle <!-- MATH
+ $T=2\pi/\omega_n=1/f_n$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img575.svg"
+ ALT="$T=2\pi/\omega_n=1/f_n$"></SPAN> is:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+W_R=T\;P_R = T\;I^2_{rms} R
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.69ex; " SRC="img576.svg"
+ ALT="$\displaystyle W_R=T\;P_R = T\;I^2_{rms} R$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">201</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Substituting <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img574.svg"
+ ALT="$W_L=W_C$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img333.svg"
+ ALT="$W_R$"></SPAN> into the definition of the quality 
+factor, we get
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Q=2\pi\frac{W_L}{W_R}=2\pi\frac{LI^2_{rms}}{TI^2_{rms}R }
+  =2\pi f_n\frac{L}{R}=\frac{\omega_nL}{R}=\frac{1}{\omega_nCR}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.28ex; " SRC="img577.svg"
+ ALT="$\displaystyle Q=2\pi\frac{W_L}{W_R}=2\pi\frac{LI^2_{rms}}{TI^2_{rms}R }
+=2\pi f_n\frac{L}{R}=\frac{\omega_nL}{R}=\frac{1}{\omega_nCR}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">202</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+which is the same as the <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img23.svg"
+ ALT="$Q$"></SPAN> previously defined.
+
+<P>
+The quality factor <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img23.svg"
+ ALT="$Q$"></SPAN> and the damping coefficient <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img487.svg"
+ ALT="$\zeta$"></SPAN> are inversely
+related to each other:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+Q_p=\frac{1}{2\zeta_p},\;\;\;\;\;\;\;\mbox{and}\;\;\;\;\;\;\;
+  Q_s=\frac{1}{2\zeta_s}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.37ex; " SRC="img578.svg"
+ ALT="$\displaystyle Q_p=\frac{1}{2\zeta_p},\;\;\;\;\;\;\;$">and<IMG STYLE="height: 5.34ex; vertical-align: -2.16ex; " SRC="img579.svg"
+ ALT="$\displaystyle \;\;\;\;\;\;\;
+Q_s=\frac{1}{2\zeta_s}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">203</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+The phenomenon of resonance is of great importance in many physical 
+systems such as mechanical structures and electrical circuits. One 
+well known example of resonance causing damage in mechanical 
+structures is the 
+<A ID="tex2html7"
+  HREF="http://scihi.org/broughton-suspension-bridge-resonance-disaster/">Broughton_Suspension_Bridge</A>.
+On the other hand, resonance plays an important role in tuning
+circuits in radio and TV reception, as we will discuss later.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node12.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node10.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node10.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node12.html">Homogeneous Solution</A>
+<B> Up:</B> <A
+ HREF="node10.html">Second Order Systems</A>
+<B> Previous:</B> <A
+ HREF="node10.html">Second Order Systems</A></DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

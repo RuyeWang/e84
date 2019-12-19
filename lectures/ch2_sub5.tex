@@ -1,0 +1,55 @@
+\documentstyle[12pt]{article}
+\usepackage{html}
+
+\begin{document}
+
+{\bf Solution for Example 5} (using Thevenin's theorem)
+
+Remove $R$ as the load, model the rest of the circuit as a non-ideal
+Thevenin model in terms of $R_T$ and $V_T$. To find $R_T$, we short $V$
+and find:
+\begin{equation}
+  R_T=R_1||(R_3+R_2||R_5)=6||(3+2||2)=6||4=2.4\,\Omega
+\end{equation}
+To find $V_T$, we first find $V_5$ across $R_5$:
+\begin{equation}
+  V_5=V\frac{R_5}{R_5+R_2||(R_1+R_3)}=5 \frac{2}{2+2||9}=2.75\,V
+\end{equation}
+$V_2$ across $R_2$:
+\begin{equation}
+  V_5=V\frac{R_2||(R_1+R_3)}{R_5+R_2||(R_1+R_3)}=5 \frac{2}{2+2||9}=2.25\,V
+\end{equation}
+$V_3$ across $R_3$:
+\begin{equation}
+  V_3=V_2\frac{R_3}{R_1+R_3}=2.25\frac{3}{3+6}=0.75
+\end{equation}
+Now we get $V_T=V_3+V_5=3.5$. To get $R$ so that the current through it is
+$I=0.5$, we solve the equation based on the Thevenin model
+\begin{equation}
+  \frac{V_T}{R_T+R}=\frac{3.5}{2.4+R}=0.5
+\end{equation}
+and get $R=4.6\,\Omega$.
+
+{\bf Solution for Example 6}
+
+\begin{itemize}
+\item $I_2$ goes through $R_4$ alone with a voltage drop $R_4I_2=10V$.
+\item $I_1$ splits between two parallel branches $R_2=15\Omega$ and 
+  $R_1+R_3=21\Omega$. The current through $R_1$ is 
+  \begin{equation}
+    I=I_1\frac{R_2}{R_1+R_2+R_3}=\frac{2\times 15}{15+21}=\frac{5}{6}A
+  \end{equation}
+\item Voltage drop across $R_1$ is $R_1I=5V$.
+\item The open-circuit voltage across the output port is
+  $V_T=V_{oc}=10+5+6-9=12V$.
+\item The total resistance between the two terminals is
+  $R_T=R_{eq}=R_4+R_1||(R_2+R_3)=10+6||(15+15)=15\Omega$.
+\end{itemize}
+
+
+\end{document}
+
+
+
+
+

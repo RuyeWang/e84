@@ -1,0 +1,240 @@
+\documentstyle[11pt]{article}
+\usepackage{html}
+\begin{document}
+\begin{center}
+{\Large \bf  Midterm Exam 2 ---- E84, Fall, 2004}
+\end{center}
+
+\begin{itemize}
+\item Take home, open everything except discussion.
+\item Mark your start and end times. Don't spend more than 3 hours.
+\item Due Wednesday in class.
+\item Mark your name and question number clearly on top of each page.
+	Indicate the total number of pages submitted.
+\item When solving a problem, list all the steps. In each step, describe 
+	what you are doing in English, then show the calculation and the 
+	result of the step. A final answer, even if correct, without 
+	evidence of the steps leading to the answer will not receive credit.
+\end{itemize}
+
+\begin{enumerate}
+
+\item {\bf Problem 1. (33 points)} 
+
+The circuit shown below takes an input $v_0(t)=sin(\omega t)$ and generates 
+two outputs $v_1(t)$ and $v_2(t)$. 
+
+\htmladdimg{../midterm2a.gif}
+
+\begin{itemize}
+\item For each of the two output ports, find the gain $g_i$ ($i=1,2$) 
+defined as the ratio between the magnitudes of the output and input 
+voltages (steady state), and the phase shift $\phi_i$ ($i=1,2$) defined
+as angular difference between the output and the input
+\[ g_i\stackrel{\triangle}{=}\frac{|\dot{V}_i|}{|\dot{V}_0|},\;\;\;\;\;
+\phi_i\stackrel{\triangle}{=}\angle \dot{V}_i-\angle \dot{V}_0,\;\;\;\;
+(i=1,2) \]
+Both $g_i$ and $\phi_i$ are functions of $\tau=RC$ and $\omega$.
+
+\item Sketch $g_1$ and $g_2$ as functions of frequency $\omega$.
+
+\item This ciruit is used as an effort to separate the two frequency components 
+in the input $v_0(t)=sin(50 t)+cos(150 t)$. Assume $R=1K\Omega$, find the 
+capacitance $C$ so that the cross-over frequency between the two outputs 
+$v_1(t)$ and $v_2(t)$ is in the middle between the two frequency components
+of the input, i.e., $\omega_c=(50+150)/2=100$.
+
+\item Give the expression of $v_1(t)$ and $v_2(t)$ as two functions of time.
+
+\end{itemize}
+
+{\bf Solution:} 
+\[	g_1=\frac{1/j\omega C}{R+1/j\omega C}=\frac{1}{1+j\omega \tau},\;\;\;\;
+g_2=\frac{R}{R+1/j\omega C}=\frac{j\omega \tau}{1+j\omega \tau} \]
+\[	|g_1|=\frac{1}{\sqrt{1+(\omega \tau)^2}},\;\;\;\;
+	\phi_1=-tan^{-1}(\omega \tau),\;\;\;\;
+	|g_2|=\frac{\omega \tau}{\sqrt{1+(\omega \tau)^2}},\;\;\;
+	\phi_1=\frac{\pi}{2}-tan^{-1}(\omega \tau) \]
+At the cross-over frequency between the two outputs their gains are equal 
+(both reduced to half-power point), i.e., $\omega \tau=1$, and 
+$|g_1|=|g_2|=1/\sqrt{2}$. Since the cross-over freqnecy is $\omega_c=100$,
+we have $\tau=RC=1/\omega_c=0.01$ and $C=\tau/R=0.01/1000=10\;\mu F$.
+
+For frequency $\omega=50$, 
+\[ |g_1|=\frac{1}{\sqrt{1+(\omega \tau)^2}}=\frac{1}{\sqrt{1+0.5^2}}=0.89,\;\;\;\;
+|g_2|=\frac{\omega \tau}{\sqrt{1+(\omega \tau)^2}}=\frac{0.5}{\sqrt{1+0.5^2}}=0.45 \]
+\[ \phi_1=-\tan^{-1}(50\times 0.01)=-26.5^\circ,\;\;\;\;
+   \phi_2=90^\circ-\tan^{-1}(50\times 0.01)=90^\circ-26.5^\circ=73.5^\circ \]
+
+For frequency $\omega=150$, 
+\[ |g_1|=\frac{1}{\sqrt{1+(\omega \tau)^2}}=\frac{1}{\sqrt{1+1.5^2}}=0.55,\;\;\;\;
+|g_2|=\frac{\omega \tau}{\sqrt{1+(\omega \tau)^2}}=\frac{1.5}{\sqrt{1+1.5^2}}=0.83 \]
+\[ \phi_1=-\tan^{-1}(150\times 0.01)=-56.3^\circ,\;\;\;\;
+   \phi_2=90^\circ-\tan^{-1}(150\times 0.01)=90^\circ-56.3^\circ=33.7^\circ \]
+
+\[ v_1(t)=0.89\; sin(50 t-26.5^\circ)+0.55\;sin(150 t-56.3^\circ) \]
+\[ v_2(t)=0.45\; sin(50 t+73.5^\circ)+0.83\;sin(150 t+33.7^\circ) \]
+
+
+\item {\bf Problem 2. (33 points)} 
+
+In the bridge circuit shown below, both $L=2\,mH$ and both $C=10\,\mu F$,
+and the input voltage is $v(t)=10\,\cos(10,000 t)$. Find the current $i(t)$ 
+through the resistor $R=5\Omega$.
+
+\htmladdimg{../midterm2b1.png}
+
+{\bf Solution:}
+Use Thevenin's method:
+Remove $R$ as the load of the rest of the circuit, which can be treated 
+as a voltage source by Thevenin's theorem. First find $\dot{V}_T$:
+\[	\dot{V}_a=\frac{20}{20+j20}\cdot 10\angle 0^\circ
+	=\frac{20\times 10\angle 0^\circ}{20\sqrt{2} \angle 45^\circ}
+	=5-j5
+\]
+\[	\dot{V}_b=\frac{-j10}{-j10-j10}\cdot 10\angle 0^\circ
+	=\frac{10\times 10\angle 0^\circ}{20}=5+j0	\]
+\[	\dot{V}_T=\dot{V_a}-\dot{V}_b=-j5=5\angle -90^\circ	\]
+Then find $Z_T$:
+Short circuit voltage source, the impedance between points a and b is
+\[ Z_T=Z_{ab}=Z_{ac}||Z_{ad}+Z_{bc}||Z_{bd}=\frac{20(j20)}{20+j20}+\frac{-j10}{2} 
+	=10+j10-j5=10+j5 \]
+Finally find $\dot{I}$:
+\[ \dot{I}=\frac{V_T}{R+Z_T}=\frac{5\angle -90^\circ}{5+10+j5}
+	=0.32\angle (-108.4^\circ) A \]
+
+Alternatively, we can convert the top half of the bridge from delta to Y 
+to get 
+\[ 
+R_a=8-j16,\;\;\;\;R_b=8+j4,\;\;\;\;R_c=-4-2j  
+\]
+The two parallel branches are
+\[  Z_{left}=20+8+j4=28+j4,\;\;\;\;Z_{right}=-j10-4-j2=-4-j12,\;\;\;\;
+    Z_{left} || Z_{right}=2-j14 \]
+The total impedance is
+\[ Z_{total}=Z_a+Z_{left} || Z_{right}=8-j16+2-j14=10-j30 \]
+The current is
+\[ \dot{I}=\frac{\dot{V}}{Z_{total}}=\frac{10}{10-j30}=(1+j3)/10 \]
+The two branch currents are (current divider):
+\[ \dot{I}_{left}=\dot{I}\frac{Z_{right}}{Z_{left}+Z_{right}}=(3-j)/20,\;\;\;
+   \dot{I}_{right}=\dot{I}\frac{Z_{left}}{Z_{left}+Z_{right}}=(-1+j7)/20  \]
+The voltages across $R$ and $C$ are:
+\[ V_R=20 I_{left}= 3-j,\;\;\;\; V_C=-j10 \; I_{right}=3.5+j0.5 \]
+The voltage across and current through the middle resistor $R=5$ are, respectively
+\[ V=V_R-V_C=-0.5-j1.5,\;\;\;\;
+  I=V/R=(-0.5-j1.5)/5=-0.1-j0.3=-0.32 \angle 71.6^\circ \; A \]
+The current is the same as the one obtained from the previous method.
+
+
+\item {\bf Problem 3. (33 points)} In the circuit shown below, $V_0=10V$,
+$R_1=20\Omega$, $R_2=30\Omega$, $L_1=0.05H$, $L_2=0.15H$. Switch $S_1$ 
+closes at $t=0$, switch $S_2$ closes at $t=0.02$ second. Find currents 
+$i_1(t)$ and $i_2(t)$ for the following two time periods:
+\begin{itemize}
+\item $0\le t < 0.02 s$
+\item $t \ge 0.02\;s$ 
+\end{itemize}
+Sketch the plots of these two currents for $t \ge 0$.
+
+{\bf Hints:} Use $f(0)$, $f(\infty)$ and $\tau$ (no need to solve DE!).
+For second period, assume $t'=t-0.02$, and use $i(0.02)$ as the initial 
+value. In the final expression, replace $t'$ by $t-0.02$.
+
+\htmladdimg{../midterm2c.gif}
+
+{\bf Solution:}
+\begin{itemize}
+\item During the period $0\le t < 0.02 s$, the two currents are always the same
+	$i_1(t)=i_2(t)$. Initial value: $i_1(0)=i_2(0)=0$, steady state value:
+\[ i_1(\infty)=\frac{V_0}{R_1+R_2}=\frac{10}{20+30}=0.2A	\]
+\[ \tau=\frac{L}{R}=\frac{0.05+0.15}{20+30}=4\times 10^{-3}\;s 	\]
+\[ i_1(t)=i_2(t)=i_1(\infty)+[i_1(0)-i_1(\infty)]e^{-t/\tau}
+	=0.2+(0-0.2) e^{-t/0.004}=0.2(1-e^{-250t})	\]
+In particular, when $t=0.02$, we have
+\[ i_1(t)=i_2(t)=0.2(1-e^{-250\itmes 0.02})=0.2A	\]
+
+\item During the period $t \ge 0.02\;s$, we have $i_1(0.02)=i_2(0.02)=0.2A$, 
+	$i_1(\infty)=V_0/R_1=10/20=0.5A$, $i_2(\infty)=0A$,
+	$\tau_1=L_1/R_1=0.05/20=2.5\times 10^{-3}\;s$, and 
+	$\tau_2=L_2/R_2=0.15/30=5\times 10^{-3}\;s$. We have
+
+\[	i_1(t)=i_1(\infty)+[i_1(0.02)-i_1(\infty)]e^{-t/\tau_1}
+	=0.5+(0.2-0.5)e^{-t/0.0025}=0.5-0.3e^{-400(t-0.02)} \]
+\[	i_2(t)=i_2(\infty)+[i_2(0.02)-i_2(\infty)]e^{-t/\tau_2}	
+	=0.2 e^{-200(t-0.02)}	\]
+
+\end{itemize}
+
+
+
+
+\end{enumerate}
+
+\end{document}
+
+\item {\bf Problem 3. (33 points)} 
+
+In the circuit shown in the figure, $V_0=6V$, $I_0=2A$, $R_1=6\Omega$, 
+$R_2=3\Omega$, and $L=0.5H$. Assume the circuit has reached steady state.
+Find the voltage $v(t)$ across $R_1$ and current $i(t)$ through $L$ as 
+time functions after the switch is closed at $t=0$.
+
+
+{\bf Solution:} 
+$i(0)=V_0/R_1=6/6=1A$, $i(\infty)=V_0/R_1+I_0=1+2=3A$. 
+
+Find time constant: $R=R_1R_2/(R_1+R_2)=3\times 6/(3+6)=2\Omega$,
+$\tau=L/R=0.5/2=0.25S$. 
+
+The current $i(t)$ is therefore:
+\[ i(t)=i(\infty)+[i(0)-i(\infty)]e^{-t/\tau}=3+(1-3)e^{-t/0.25}
+	=3-2e^{-4t} \;A \]
+\[ v(t)=V_0-V_L(t)=V_0-L\frac{d}{dt}i(t)=6-0.5 \frac{d}{dt}(3-2e^{-4t})
+	6-4e^{-4t} \]
+
+
+\item {\bf Problem 3. (33 points)} 
+The circuit in the figure shows a voltage source $V_0$ and $R_0$ and an
+amplification circuit modeled by as a two-port network. Assume the two-port 
+is represented by a Z-model ($Z_{11}, Z_{12}, Z_{21}, Z_{22}$). Find the 
+expression for the load impedance $Z_L$ in terms of $R_0$ as well as the
+four Z-parameters, for it to get maximum power from the voltage source.
+(Hint: use Thevenin's theorem.)
+
+{\bf Solution:} 
+\begin{itemize}
+\item First set up all equations:
+\[ \left\{ \begin{array}{l} V_1=Z_{11}I_1+Z_{12}I_2 \\
+	V_2=Z_{21}I_1+Z_{22}I_2 \end{array} \right.	\]
+\[ \left\{ \begin{array}{l} V_1=V_0-R_0I_1 \\
+	V_2=-R_L I_2 \end{array} \right.	\]
+\item Use Thevenin's theorem
+
+\begin{itemize}
+\item Find $Z_{Th}$: assume $V_0=0$, equate equations 1 and 3 to get:
+\[ V_1=Z_{11}I_1+Z_{12}I_2, \;\;\;\;\mbox{i.e.,}\;\;\;\;\;
+I_1=-\frac{Z_{12}}{Z_{11}+R_0} I_2 \]
+Substitute this $I_1$ in equation 2 to get:
+\[ V_2=(-\frac{Z_{12}Z_{21}}{Z_{11}+R_0}+Z_{22}) I_2,\;\;\;\;\;
+\mbox{i.e.,}\;\;\;\;\;
+Z_{Th}=\frac{V_2}{I_2}=-\frac{Z_{12}Z_{21}}{Z_{11}+R_0}+Z_{22}	\]
+\item Find $V_{Th}$:, assume $I_2=0$, we have
+\[ \left\{\begin{array}{l} V_1=Z_{11}I_1 \\V_2=Z_{21}I_1\end{array}\right. \]
+Substitute $V_1=V_0-R_0I_1$ into $V_1=Z_{11}I_1$ to get
+\[	V_{Th}=V_2=V_0\frac{Z_{21}}{Z_{11}+R_0}	\]
+\end{itemize}
+
+For $R_L$ to get maximum power, we need to have
+\[ R_L=Z_{Th}=Z_{22}-\frac{Z_{12}Z_{21}}{Z_{11}+R_0}	\]
+and the current is
+\[ I_l=\frac{V_{Th}}{Z_{Th}+R_L}=\frac{V_{Th}}{Z_{Th}}
+	=\frac{2V_0Z_{21}}{2(Z_{22}Z_{11}-Z_{12}Z_{21}+Z_{22}R_0)} \]
+
+
+\end{itemize}
+
+
+\end{enumerate}
+
+\end{document}
+

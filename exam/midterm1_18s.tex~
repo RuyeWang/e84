@@ -1,0 +1,227 @@
+\documentstyle[11pt]{article}
+\usepackage{html}
+
+\begin{document}
+\begin{center}
+{\Large \bf  E84 Midterm Exam 1 --- Spring 2018}
+\end{center}
+
+\section*{Instruction (read this before you start)}
+
+{\bf Instructions}
+\begin{itemize}
+\item Take-home, open-notes, open-internet, allow yourself no more
+  than 4 hours (can be more than one sitting), specify the start 
+  and finish times on the first page of your submission.
+
+\item Write your name on top of each page. Also label each page by
+  the page number and total number of pages, e.g., 3/5 for the third
+  of all 5 pages in total.
+
+\item When solving a problem, list the main steps. In each step describe 
+  concisely what you are doing, then show the calculation and the 
+  result of the step. Box all final answers. 
+
+\item A final answer, even if correct, without evidence of the steps 
+  leading to the answer will receive no credit. 
+
+\end{itemize}
+
+
+\section*{A Brief Survey:} 
+
+Give a number to each of the first four items:
+\begin{enumerate}
+\item Lecture Style: Everything on board, nothing on screen (0)---- 
+  Nothing on board, everything on screen (10)
+
+\item Lecture pace: Too slow (0) ---- Too fast (10)
+
+\item Amount of review: No need to review (0) --- Thorough review (10)
+
+\item Detailed steps in examples: No step skipped (0) --- 
+  No detailed math steps needed (10)
+
+\item {\bf Open comments}: What goes well? What can be improved and how? 
+  Any additional suggestions? (use the empty space below)
+\end{enumerate}
+
+Turn in this survey {\em anonymously} and separately from your midterm.
+
+
+\section*{The Midterm Exam (don't click until you are ready to take the exam)}
+
+{\bf The Problems}
+\begin{enumerate}
+
+
+\item {\bf Problem 1. (33 points)} 
+
+  Find the equivalent resistance $R_{ab}$ between points a and b. (The diagonal
+  wires are not connected to each other.)
+
+  \htmladdimg{../midterm1_09sb.gif}
+
+  \begin{comment}
+  {\bf Solution}
+
+  The circuit can be converted into two parallel branches between a and b
+  each composed of two resistors with 20 $\Omega$ and 60 $\Omega$ in series,
+  and two parallel branches between the two middle points each composed of 
+  two 20 $\Omega$ resistors in series and two 60 $\Omega$ resistors in
+  series, respectively. This is a balanced bridge with no current through
+  the middle branches, i.e., $R_{ab}=40\Omega$
+  \end{comment}
+
+\item {\bf Problem 2. (33 points)} 
+
+  In the circuit below, $R=5\Omega$, $V=5V$. $S_1$, $S_2$ and $S_3$
+  are three switches. The current $I$ is measured in the following
+  two cases:
+  \begin{itemize}
+  \item Case 1: $S_1$ is closed but $S_2$ and $S_3$ are open, $I=2A$.
+  \item Case 2: $S_2$ is closed but $S_1$ and $S_3$ are open, $I=3A$.
+  \end{itemize}
+  Find the value of $I$ in the following two cases:
+  \begin{itemize}
+  \item Case 3 $S_1$ and $S_2$ are closed but $S_3$ is open.
+  \item Case 4 $S_3$ is closed but $S_1$ and $S_2$ are open.
+  \end{itemize}
+
+  \htmladdimg{../midterm1a.png}
+
+  \begin{comment}
+  {\bf Solution:} Assume the circuit in the box is modeled by
+  $R_T$ and $V_T$. 
+  \begin{itemize}
+  \item Case 1: $V_T/(R_T+5)=2$
+  \item Case 2: $(V_T-V)/R_T=3$
+  \end{itemize}
+  Solving these two equations we get $V_T=20V$, $R_T=5\Omega$
+  \begin{itemize}
+  \item Case 3: $I=3A$
+  \item Case 4: $I=1.5A$
+  \end{itemize}
+  \end{comment}
+
+
+\item {\bf Problem 3. (34 points)} 
+
+  In the circuit below, $V=2V$, $I=2A$, $R_1=3\Omega$, $R_2=2\Omega$,
+  $R_3=5\Omega$, $R_5=1\Omega$. Find $R_4$ for it to get maximum power.
+  What is the power?
+
+  \htmladdimg{../midterm1b1.png}
+
+  \begin{comment}
+  {\bf Solution:} Find either Thenvenin's or Norton's model for the 
+  network excluding $R_5$: $R_T=R_2+R_5=3\Omega$, 
+  $V_T=V+I\times R_2=2V+2A\times 2\Omega=6V$, or $I_N=2A$.
+  Then $R_4=R_T=3\Omega$ will get maximum power $P_R=3W$.
+  \end{comment}
+
+
+\end{itemize}
+\end{document}
+
+
+
+
+\item {\bf Problem 3. (34 points)}
+
+  Find voltage $V$ and current $I$ as labeled in the following figure:
+
+  \htmladdimg{../midterm1_09sc.gif}
+
+  where $R_1=5\Omega$, $R_2=1\Omega$, $R_3=6\Omega$, $R_4=6\Omega$.
+
+  {\bf Solution:}
+
+  {\bf Method 0, voltage/current source conversion:}
+  \begin{itemize}
+  \item Convert current source 9A and $R_2$ into a voltage source of $9\times 5=45V$
+    in series with $R_1=5$. 
+  \item Combine $R_1=5$ in series with $R_2=1$ to get $R'=6$ still in series with 
+    $V'=45V$. 
+  \item Convert this voltage source back to a current source with $I'=45/6$ in 
+    parallel with $R'=6$. 
+  \item Convert the other voltage source into a current source with $I''=24/6$ in
+    parallel with $R''=6$.
+  \item Combine the two parallel current sources to get $I'''=I'+I''=(45+24)/6=23/2$
+    in parallel with $R'''=R'||R''=3$.
+  \item Use current division to find load current $I=I'''/3=23/6$.
+  \item Find load voltage $V=IR_4=23$.
+  \end{itemize}
+
+  {\bf Method 1, superposition:}
+    \begin{itemize}
+    \item Turn voltage source off:
+      \[ I'=9\times\frac{5}{5+(1+6||6)}\frac{1}{2}=2.5A \]
+      \[ V'=6I'=15 V \]
+    \item Turn current source off:
+      \[ I''=\frac{24}{6+(6||6)}\frac{1}{2}=4/3\;A \]
+      \[ V''=6I''=8V \]
+  \end{itemize}
+  The total voltage and current are therefore $V=V''+V''=15+8=23V$,
+  $I=I'+I''=23/6A$.
+
+  {\bf Method 2, Thevenin's theorem:}
+  
+  \[ R_T=6||6=3 \]
+  $V_T$ due to 24V:
+  \[ V'_T=24-24 \frac{6}{12}=12V \]
+  $V_T$ due to 9A:
+  \[ V''_T=9\frac{5}{5+7}\times 6=22.5 \]
+  Therefore
+  \[ V_T=V'_T+V''_T=34.5 \]
+  Reconnecting load $R_4=6$, we get
+  \[ V=V_T \frac{6}{6+3}=34.5\times 2/3=23 V \]
+  and
+  \[ I=V/R_4=23/6 \]
+
+
+\end{enumerate}
+\end{document}
+
+
+  In the circuit below, $R_5=1\,\Omega$, all other resistors are
+  $2\,\Omega$. $V_1=4\,V$, $V_2=8\,V$, $I_1=2\,A$, $I_2=8\,A$.
+
+  (a) Find the voltage $V$ across, current $I$ through, and power
+  $P$ consumed by $R_7=2\,\Omega$.
+  
+
+  (b) If you can change the resistance of $R_7$ for it to consume
+  maximum power, what value should it be? What is this power?
+
+
+
+  {\bf Solution:} 
+  (0) User Thevenin's theorem. Disconnect $R_7$ as the load.
+
+  (1) Convert $I_1=2$ and $R_1=2$ into a voltage source with $V'_1=4\,V$
+  in series with $V_1=4\,V$, we get a voltage of $8\,V$ voltage in series 
+  with $R_1=2$. 
+  
+  (2) Convert $V_2=8$ and $R_4=2$ into a current source $I'_2=4\,A$, in 
+  parallel with $R_4||R_6=2||2=1,\Omega$. Then turn it back to a voltage 
+  source $V'_2=4\,V$ in series with $1,\Omega$. 
+
+  (3) Convert $I_2=8$ and $R_5=1$ into a voltage source of $8\,V$ in series
+  with $R_5=1\,\Omega$.
+
+  (4) Combine the two voltage sources in (2) and (3) to get a voltage of 
+  $4\,V$ in series with a resistor $R_5+R_4||R_6=2\,\Omega$.
+
+  (5) Combine $8\,V$ and $2\,\Omega$ in (1) with $4\,V$ and $1\,\Omega$ 
+  in (4) to get a voltage of $4\,V$ and $1\,\Omega$ to get a voltage of 
+  $4\,V$ in series with a resistance of $4\,\Omega$. Find current $I=1\,A$
+  in the loop.
+
+  (6) $R_T=1\,\Omega$, $V_T=4+1=6\,V$. The current through $R_7=2\,\Omega$
+  is $V_T/(R_T+R_7)=6/3=2\,A$, the voltage across it is $4\,V$, the power
+  consumption is $8\,W$
+
+  (7) For $R_7$ as the load to get maximum power, it needs to be 
+  $R_7=R_T=1\,\Omega$. The voltage across it is $3\,V$, the current 
+  through is $3\,A$, the power consumption is $9\,W$.

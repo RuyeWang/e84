@@ -1,0 +1,464 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Second Order Systems</TITLE>
+<META NAME="description" CONTENT="Second Order Systems">
+<META NAME="keywords" CONTENT="ch3">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="ch3.css">
+
+<LINK REL="next" HREF="node15.html">
+<LINK REL="previous" HREF="node5.html">
+<LINK REL="next" HREF="node11.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node11.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node9.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node11.html">Particular Solution and Resonance</A>
+<B> Up:</B> <A
+ HREF="node1.html">Chapter 3: AC Circuit</A>
+<B> Previous:</B> <A
+ HREF="node9.html">Complete Response II -</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION00015000000000000000">
+Second Order Systems</A>
+</H2>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/RCLParallelSeries.png"
+ ALT="RCLParallelSeries.png">
+
+<P>
+
+<UL>
+<LI>The RCL series circuit (left) with an input <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img88.svg"
+ ALT="$v(t)$"></SPAN> and output <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img21.svg"
+ ALT="$i(t)$"></SPAN>
+  is described by the following equation:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_R(t)+v_L(t)+v_C(t)=R\,i(t)+L\frac{di(t)}{dt}+\frac{1}{C}\int i(t) dt=v_s(t)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.12ex; " SRC="img475.svg"
+ ALT="$\displaystyle v_R(t)+v_L(t)+v_C(t)=R\,i(t)+L\frac{di(t)}{dt}+\frac{1}{C}\int i(t) dt=v_s(t)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">161</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Taking derivative and dividing by <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img105.svg"
+ ALT="$L$"></SPAN> on both sides we get a 2nd-order
+  linear constant coefficient differential equation (LCCDE):
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+i''(t)+\frac{R}{L}\,i'(t)+\frac{1}{LC}\,i(t)=\frac{1}{L}\dot{v}_s(t)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.11ex; vertical-align: -1.71ex; " SRC="img476.svg"
+ ALT="$\displaystyle i''(t)+\frac{R}{L}\,i'(t)+\frac{1}{LC}\,i(t)=\frac{1}{L}\dot{v}_s(t)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">162</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Alternatively, as <!-- MATH
+ $i(t)=C dv_C(t)/dt$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img477.svg"
+ ALT="$i(t)=C dv_C(t)/dt$"></SPAN>, we have
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_R(t)=R\;i(t)=R\,C\frac{d\,v_C(t)}{dt},\;\;\;\;\;\;
+    v_L(t)=L\frac{d}{dt}i(t)=L\frac{d}{dt}\left[C\frac{d\,v_C(t)}{dt} \right]
+    =LC\frac{d^2\,v_C(t)}{dt^2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.04ex; vertical-align: -2.32ex; " SRC="img478.svg"
+ ALT="$\displaystyle v_R(t)=R\;i(t)=R\,C\frac{d\,v_C(t)}{dt},\;\;\;\;\;\;
+v_L(t)=L\fra...
+...t)=L\frac{d}{dt}\left[C\frac{d\,v_C(t)}{dt} \right]
+=LC\frac{d^2\,v_C(t)}{dt^2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">163</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+the equation above can be written as a 2nd order ODE in terms of <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img194.svg"
+ ALT="$v_C(t)$"></SPAN>:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v''_C(t)+\frac{R}{L} v'_C(t)+\frac{1}{LC}v_C(t)=\frac{1}{LC}v_s(t)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.11ex; vertical-align: -1.71ex; " SRC="img479.svg"
+ ALT="$\displaystyle v''_C(t)+\frac{R}{L} v'_C(t)+\frac{1}{LC}v_C(t)=\frac{1}{LC}v_s(t)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">164</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>The RCL parallel circuit (right) with input <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img21.svg"
+ ALT="$i(t)$"></SPAN> and output <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img88.svg"
+ ALT="$v(t)$"></SPAN>
+  is described by the following equation:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+i_R(t)+i_C(t)+i_L(t)=\frac{v(t)}{R}+C\frac{dv(t)}{dt}+\frac{1}{L}\int v(t)\;dt
+    =i_s(t) 
+  
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.12ex; " SRC="img480.svg"
+ ALT="$\displaystyle i_R(t)+i_C(t)+i_L(t)=\frac{v(t)}{R}+C\frac{dv(t)}{dt}+\frac{1}{L}\int v(t)\;dt
+=i_s(t)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">165</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Taking derivative and dividing by <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img104.svg"
+ ALT="$C$"></SPAN> on both sides we get a 2nd-order 
+  LCCDE:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v''(t)+\frac{1}{RC}\,v(t)+\frac{1}{LC}\,v(t)=\frac{1}{C}\dot{i}_a(t)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.88ex; vertical-align: -1.71ex; " SRC="img481.svg"
+ ALT="$\displaystyle v''(t)+\frac{1}{RC}\,v(t)+\frac{1}{LC}\,v(t)=\frac{1}{C}\dot{i}_a(t)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">166</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+<LI>Other RCL circuits (not pure series or parallel):
+
+<P>
+<IMG STYLE="" SRC="../figures/RLCcircuits1.png"
+ ALT="RLCcircuits1.png">
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\frac{v_s-v}{R} = C\frac{dv}{dt}+\frac{1}{L} \int v\;dt,
+    \;\;\;\;\;
+    \frac{1}{L}\int (v_s-v)dt = \frac{v}{R}+C\frac{dv}{dt},
+    \;\;\;\;\;
+    C\frac{d}{dt} (v_s-v) = \frac{v}{R}+\frac{1}{L} \int v\;dt
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.12ex; " SRC="img482.svg"
+ ALT="$\displaystyle \frac{v_s-v}{R} = C\frac{dv}{dt}+\frac{1}{L} \int v\;dt,
+\;\;\;\;...
+...{dv}{dt},
+\;\;\;\;\;
+C\frac{d}{dt} (v_s-v) = \frac{v}{R}+\frac{1}{L} \int v\;dt$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">167</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v''+\frac{1}{RC} v'+\frac{1}{LC}v=\frac{\dot{v}_s}{RC},
+    \;\;\;\;\;\;\;
+    v''+\frac{1}{RC} v'+\frac{1}{LC}v=\frac{1}{LC}v_s,
+    \;\;\;\;\;\;\;
+    v''+\frac{1}{RC} v'+\frac{1}{LC}v=v''_s
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.11ex; vertical-align: -1.71ex; " SRC="img483.svg"
+ ALT="$\displaystyle v''+\frac{1}{RC} v'+\frac{1}{LC}v=\frac{\dot{v}_s}{RC},
+\;\;\;\;\...
+...1}{LC}v=\frac{1}{LC}v_s,
+\;\;\;\;\;\;\;
+v''+\frac{1}{RC} v'+\frac{1}{LC}v=v''_s$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">168</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+</UL>
+
+<P>
+The dimensionality of the coefficient of the first order term is
+frequency:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left[\frac{R}{L}\right]=\frac{[V][/[I]}{[VT]/[I]}=\frac{1}{[T]},
+    \;\;\;\;
+    \left[\frac{1}{RC}\right]=\frac{[I]}{[V]}\frac{[V]}{[I][T]}=\frac{1}{[T]}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img484.svg"
+ ALT="$\displaystyle \left[\frac{R}{L}\right]=\frac{[V][/[I]}{[VT]/[I]}=\frac{1}{[T]},...
+...;\;\;
+\left[\frac{1}{RC}\right]=\frac{[I]}{[V]}\frac{[V]}{[I][T]}=\frac{1}{[T]}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">169</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The dimensionality of the coefficient of the constant terms is
+frequency squared:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left[\frac{1}{LC}\right]=\frac{1}{[VT]/[I]\;[IT]/[V]}=\frac{1}{[T]^2}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img485.svg"
+ ALT="$\displaystyle \left[\frac{1}{LC}\right]=\frac{1}{[VT]/[I]\;[IT]/[V]}=\frac{1}{[T]^2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">170</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+In general, any 2nd-order LCCDE with input <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img85.svg"
+ ALT="$x(t)$"></SPAN> and output <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img232.svg"
+ ALT="$y(t)$"></SPAN>
+can be written in the <EM>canonical form</EM>
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+y''(t)+2\zeta\omega_n\,y'(t)+\omega_n^2\, y(t)= x(t)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img486.svg"
+ ALT="$\displaystyle y''(t)+2\zeta\omega_n\,y'(t)+\omega_n^2\, y(t)= x(t)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">171</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+in terms of the two parameters:
+
+<UL>
+<LI><EM>damping coefficient</EM> <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img487.svg"
+ ALT="$\zeta$"></SPAN> (unitless)
+</LI>
+<LI><EM>natural frequency</EM> <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img488.svg"
+ ALT="$\omega_n$"></SPAN> (frequency)
+</LI>
+</UL>
+Comparing the canonical form with two equations above we see that
+for both RLC series and parallel circuits:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\omega_n=\frac{1}{\sqrt{LC}}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.28ex; " SRC="img489.svg"
+ ALT="$\displaystyle \omega_n=\frac{1}{\sqrt{LC}}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">172</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+and
+
+<UL>
+<LI>for RLC series circuit
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\frac{R}{L}=2\zeta_s\omega_n=2\zeta_s\frac{1}{\sqrt{LC}},\;\;\;\;\mbox{i.e.}\;\;\;\;\;
+    \zeta_s=\frac{R}{2}\sqrt{\frac{C}{L}}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.28ex; " SRC="img490.svg"
+ ALT="$\displaystyle \frac{R}{L}=2\zeta_s\omega_n=2\zeta_s\frac{1}{\sqrt{LC}},\;\;\;\;$">i.e.<IMG STYLE="height: 6.04ex; vertical-align: -1.90ex; " SRC="img491.svg"
+ ALT="$\displaystyle \;\;\;\;\;
+\zeta_s=\frac{R}{2}\sqrt{\frac{C}{L}}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">173</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>for RLC parallel circuit
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\frac{1}{RC}=2\zeta_p\omega_n=2\zeta_p\frac{1}{\sqrt{LC}},
+    \;\;\;\;\;\mbox{i.e.}\;\;\;\;\;
+    \zeta_p=\frac{1}{2R}\sqrt{\frac{L}{C}}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.28ex; " SRC="img492.svg"
+ ALT="$\displaystyle \frac{1}{RC}=2\zeta_p\omega_n=2\zeta_p\frac{1}{\sqrt{LC}},
+\;\;\;\;\;$">i.e.<IMG STYLE="height: 6.04ex; vertical-align: -1.90ex; " SRC="img493.svg"
+ ALT="$\displaystyle \;\;\;\;\;
+\zeta_p=\frac{1}{2R}\sqrt{\frac{L}{C}}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">174</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+</UL>
+We also have:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\zeta_p \zeta_s=\frac{1}{4},\;\;\;\;\;\zeta_p=\frac{1}{4\zeta_s},
+  \;\;\;\;\;\zeta_s=\frac{1}{4\zeta_p}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.37ex; " SRC="img494.svg"
+ ALT="$\displaystyle \zeta_p \zeta_s=\frac{1}{4},\;\;\;\;\;\zeta_p=\frac{1}{4\zeta_s},
+\;\;\;\;\;\zeta_s=\frac{1}{4\zeta_p}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">175</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+Note the following dimensionalities:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left[\sqrt{\frac{L}{C}}\right]=\sqrt{\frac{[Henry]}{[Farad]}}
+  =\sqrt{\frac{[Volt]\;[second]}{[Ampere]}\frac{[Volt]}{[second]\;[Ampere]}}
+  =\frac{[Volt]}{[Ampere]}=[Ohm]
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 7.66ex; vertical-align: -3.02ex; " SRC="img495.svg"
+ ALT="$\displaystyle \left[\sqrt{\frac{L}{C}}\right]=\sqrt{\frac{[Henry]}{[Farad]}}
+=\...
+...nd]}{[Ampere]}\frac{[Volt]}{[second]\;[Ampere]}}
+=\frac{[Volt]}{[Ampere]}=[Ohm]$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">176</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left[ \sqrt{LC} \right]=\sqrt{[Henry]\;[Farad]}
+  =\sqrt{\frac{[Volt]\;[second]}{[Ampere]}\frac{[Ampere]\;[second]}{[Volt]}}
+  =[second]
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 7.43ex; vertical-align: -2.81ex; " SRC="img496.svg"
+ ALT="$\displaystyle \left[ \sqrt{LC} \right]=\sqrt{[Henry]\;[Farad]}
+=\sqrt{\frac{[Volt]\;[second]}{[Ampere]}\frac{[Ampere]\;[second]}{[Volt]}}
+=[second]$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">177</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+We therefore see that <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img497.svg"
+ ALT="$\zeta_s$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.78ex; " SRC="img498.svg"
+ ALT="$\zeta_p$"></SPAN> are unitless, and the
+dimension of <!-- MATH
+ $\omega_n=1/\sqrt{LC}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img499.svg"
+ ALT="$\omega_n=1/\sqrt{LC}$"></SPAN> is <!-- MATH
+ $1/[second]$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img500.svg"
+ ALT="$1/[second]$"></SPAN> as frequency.
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A ID="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><A ID="tex2html82"
+  HREF="node11.html">Particular Solution and Resonance</A>
+<LI><A ID="tex2html83"
+  HREF="node12.html">Homogeneous Solution</A>
+<LI><A ID="tex2html84"
+  HREF="node13.html">Complete Solution with Step Input</A>
+<LI><A ID="tex2html85"
+  HREF="node14.html">Responses to Impulse Train</A>
+</UL>
+<!--End of Table of Child-Links-->
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node11.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node9.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node11.html">Particular Solution and Resonance</A>
+<B> Up:</B> <A
+ HREF="node1.html">Chapter 3: AC Circuit</A>
+<B> Previous:</B> <A
+ HREF="node9.html">Complete Response II -</A></DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

@@ -1,0 +1,87 @@
+\documentstyle[11pt]{article}
+\usepackage{html}
+\begin{document}
+\begin{center}
+{\Large \bf E84 Final Exam}
+\end{center}
+\begin{enumerate}
+
+\item Answer the following questions:
+  \begin{itemize}
+  \item The three AC RMS voltages across R, L, and C are measured to be
+    $V_1=4\,V$, $V_2=5\,V$, and $V_3=2\,V$, respectively. Find the
+    source voltage $V_0$. If the AC voltage source is replaced by a DC
+    voltage source $V_0=10\,V$, Find the three voltages $V_1$, $V_2$, and 
+    $V_3$.
+
+    \htmladdimg{../../lectures/figures/Problems10.png}
+
+  \item In the figure above, it is know that $R=10\Omega$,
+    $L=100\,mH$, and $C=500\,\mu F$, and the current through the 
+    loop is also known to be $i(t)=\cos(100\,t)\,A$, and find all 
+    four voltages $v_0(t)$, $v_1(t)$, $v_2(t)$, and $v_3(t)$.
+
+    {\bf Key:} 
+    \[
+    v_1(t)=10\cos(100\,t),\;\;\;\;
+    v_2(t)=100\times 0.1 \cos(100\,t+\pi/2)=10\cos(100\,t+\pi/2),\;\;\;\;
+    v_3(t)=1/(100\times 500\times 10^{-6})\cos(100\,t)=20\cos(100,\,t-\pi/2)
+    \]
+    \[
+    V_0=V_1+V_2+V_3=10+10\angle\pi/2+20\angle(-\pi/2)=10+10\angle(-\pi/2)
+    \]
+    \[
+    v_0(t)=10\sqrt{2}\cos(100\,t-\pi/4)
+    \]
+
+  \item The three AC RMS currents through R, L, and C are measured by the
+    three ammeters to be $I_1=4\,A$, $I_2=5\,A$, and $I_3=2\,A$, respectively. 
+    Find the source current $I_0$. If the AC voltage source is replaced by a
+    DC current source $I_0=1\,A$, Find the three currents $I_1$, $I_2$, and 
+    $I_3$ measured respectively by ammeters $A_1$, $A_2$, and $A_3$.
+
+    \htmladdimg{../../lectures/figures/Problems11.png}
+
+  \end{itemize}
+
+\item In the circuit below, $R_1=20\Omega$, $R_2=10\Omega$, $R_3=30\Omega$,
+  $L=10\,mH$, $I_0=5A$. The circuit is at steady state before the switch is 
+  turned from position 1 to position to at $t=0$. Find the three voltages 
+  $v_1(t)$, $v_2(t)$ and $v_L(t)$ for $t>0$ (assuming the top terminal is 
+  positive).
+  
+  \htmladdimg{../../lectures/figures/Problems12.png}
+
+  {\bf Key:} $\tau=L/(R_2+R_3)=10^{-2}/40=2.5\times 10^{-4}\,s$
+  \[
+  i_L(0^-)=i_L(0^+)=I_0\frac{R_1}{R_1+R_3}=5A\frac{20}{50}=2A,\;\;\;\;\;
+  i_L(\infty)=0,\;\;\;\;\;i_L(t)=2\,e^{-t/\tau}
+  \]
+  \[ 
+  v_1(t)=5A,\;\;\;\; v_2(t)=R_2 i_L(t)=20\,e^{-t/\tai},\;\;\;\;\;
+  v_3(t)=R_3 i_L(t)=30\,e^{-t/\tai}
+  \]
+
+\item Find the frequency response function (FRF) of the op-amp circuit 
+  below. What kind of filter is this? First or second order? Low-pass, 
+  high-pass, or band-pass? In any case, find the cut-off frequency 
+  $\omega_c$ of the filter in terms of the given circuit parameters, so
+  that $|H(j\omega_c)|=|H(j\omega_p)|/\sqrt{2}$, where $\omega_p$ is the
+  peak frequency at which $|H(j\omega_p)|$ reaches maximum magnitude.  
+
+  \htmladdimg{../../lectures/figures/Problems14.png}
+
+  {\bf Key:} Let $v^+\approx v^-=v$
+  \[
+  v=v_{out}\frac{R_1}{R_1+R_2},\;\;\;\;\;\;\;\;\;\;\frac{v_{in}-v}{R}=v\;j\omega
+  \]
+  Substituting $v$ in the first equation into the second, we find
+  \[
+  H(j\omega)=\frac{v_{out}}{v_{in}}=\frac{R_1+R_2}{R_1}\;\frac{1}{j\omega RC+1}
+  \]
+  This is a first-order low-pass filter with cut-off frequency $\omega_c=1/RC$.
+
+
+\end{enumerate}
+\end{document}
+

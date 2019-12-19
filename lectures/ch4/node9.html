@@ -1,0 +1,568 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Emitter Follower</TITLE>
+<META NAME="description" CONTENT="Emitter Follower">
+<META NAME="keywords" CONTENT="ch4">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="ch4.css">
+
+<LINK REL="next" HREF="node10.html">
+<LINK REL="previous" HREF="node8.html">
+<LINK REL="next" HREF="node10.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node10.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="ch4.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node8.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node10.html">Multi-stage Amplification</A>
+<B> Up:</B> <A
+ HREF="ch4.html">ch4</A>
+<B> Previous:</B> <A
+ HREF="node8.html">AC equivalent circuits</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A ID="SECTION00090000000000000000">
+Emitter Follower</A>
+</H1>
+
+<P>
+The input and output of an emitter follower are the base and the 
+emitter, respectively, and the collector is at AC zero. The circuit 
+is therefore a common-collector circuit (for AC).
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/emitterfollower.gif"
+ ALT="emitterfollower.gif">
+
+<P>
+The negative feedback effect due to <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img247.svg"
+ ALT="$R_E$"></SPAN> can be shown qualitatively:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_{out}=v_e\uparrow \Longrightarrow v_{be} \downarrow \Longrightarrow
+i_b \downarrow \Longrightarrow i_c \downarrow \Longrightarrow 
+v_e\downarrow
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img450.svg"
+ ALT="$\displaystyle v_{out}=v_e\uparrow \Longrightarrow v_{be} \downarrow \Longrightarrow
+i_b \downarrow \Longrightarrow i_c \downarrow \Longrightarrow
+v_e\downarrow$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">107</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The DC operating point can be found as:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_{CC}=R_B I_B+V_{BE}+R_E I_E=R_B I_B+V_{BE}+R_E (\beta+1)I_B
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img451.svg"
+ ALT="$\displaystyle V_{CC}=R_B I_B+V_{BE}+R_E I_E=R_B I_B+V_{BE}+R_E (\beta+1)I_B$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">108</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Solving this equation for <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img79.svg"
+ ALT="$I_B$"></SPAN> we get:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_B=\frac{V_{CC}-V_{BE}}{(\beta+1)R_E+R_B}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img452.svg"
+ ALT="$\displaystyle I_B=\frac{V_{CC}-V_{BE}}{(\beta+1)R_E+R_B}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">109</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_E=(\beta+1) I_B=\frac{(\beta+1)(V_{CC}-V_{BE})}{(\beta+1)R_E+R_B}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img453.svg"
+ ALT="$\displaystyle I_E=(\beta+1) I_B=\frac{(\beta+1)(V_{CC}-V_{BE})}{(\beta+1)R_E+R_B}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">110</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_{CE}=V_{CC}-V_E=V_{CC}-R_E I_E
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img454.svg"
+ ALT="$\displaystyle V_{CE}=V_{CC}-V_E=V_{CC}-R_E I_E$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">111</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+<B>Example</B>
+
+<P>
+Assume <!-- MATH
+ $R_B=100\,k\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img455.svg"
+ ALT="$R_B=100\,k\Omega$"></SPAN>, <!-- MATH
+ $V_{CC}=10\,V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img456.svg"
+ ALT="$V_{CC}=10\,V$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img225.svg"
+ ALT="$\beta=100$"></SPAN>. Find <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img247.svg"
+ ALT="$R_E$"></SPAN> so
+that the DC operating point is in the middle of the load line.
+
+<P>
+For <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img93.svg"
+ ALT="$V_{CE}$"></SPAN> to be in the middle of the load line, we need to have
+<!-- MATH
+ $V_{CE}=V_{CC}-V_E=10-V_E=V_{CC}/2=5\,V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img457.svg"
+ ALT="$V_{CE}=V_{CC}-V_E=10-V_E=V_{CC}/2=5\,V$"></SPAN>, i.e., <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img458.svg"
+ ALT="$V_E=5\,V$"></SPAN>:
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_E=I_E R_E =R_E\;\frac{(\beta+1) (V_{CC}-V_{BE})}{(\beta+1)R_E+R_B}
+=\frac{101\;R_E(10-0.7)}{101\;R_E+100}=5\,V
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img459.svg"
+ ALT="$\displaystyle V_E=I_E R_E =R_E\;\frac{(\beta+1) (V_{CC}-V_{BE})}{(\beta+1)R_E+R_B}
+=\frac{101\;R_E(10-0.7)}{101\;R_E+100}=5\,V$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">112</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Solving the equation for <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img247.svg"
+ ALT="$R_E$"></SPAN> we get <!-- MATH
+ $R_E=1.15\,k\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img460.svg"
+ ALT="$R_E=1.15\,k\Omega$"></SPAN>. Now we have
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_B=\frac{V_{CC}-V_{BE}}{(\beta+1)R_E+R_B}=0.043\,mA,
+\;\;\;\;\;I_C=\beta\,I_B=100\,I_B=4.3\,mA
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.29ex; " SRC="img461.svg"
+ ALT="$\displaystyle I_B=\frac{V_{CC}-V_{BE}}{(\beta+1)R_E+R_B}=0.043\,mA,
+\;\;\;\;\;I_C=\beta\,I_B=100\,I_B=4.3\,mA$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">113</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_E=(\beta+1)I_B=4.34\,mA,\;\;\;\;V_E=I_ER_E=5\,V
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img462.svg"
+ ALT="$\displaystyle I_E=(\beta+1)I_B=4.34\,mA,\;\;\;\;V_E=I_ER_E=5\,V$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">114</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+<B>AC small-signal equivalent circuit</B>
+
+<P>
+The AC equivalent circit (based on small signal model of the 
+transistor) of the emitter follower can be found as:
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/EmitterFollower1.png"
+ ALT="EmitterFollower1.png">
+<IMG STYLE=""
+ SRC="../figures/TransistorModel.png"
+ ALT="TransistorModel.png">
+<IMG STYLE=""
+ SRC="../figures/emitterfollower2.gif"
+ ALT="emitterfollower2.gif">
+
+<P>
+Based on this small signal model, the three system parameters: 
+voltage gain, input resistance, and output resistance can be 
+obtained as shown below.
+
+<P>
+
+<UL>
+<LI><B>AC voltage gain:</B> 
+
+<P>
+As <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img172.svg"
+ ALT="$R_B$"></SPAN> is significantly greater than <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img463.svg"
+ ALT="$R_S$"></SPAN> and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img464.svg"
+ ALT="$R_{be}$"></SPAN>, it is
+  neglected in the analysis below.
+
+<P>
+<P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left\{ \begin{array}{l}
+    v_{out}=v_e=(R_E||R_L)i_e =(R_E||R_L)(i_c+i_b)=(R_E||R_L)(\beta+1) i_b 	\\
+    v_{in}=(R_s+r_{be})i_b +v_{out}=(R_s+r_{be})i_b+(R_E||R_L)(\beta+1) i_b 
+  \end{array} \right. 
+  
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img465.svg"
+ ALT="$\displaystyle \left\{ \begin{array}{l}
+v_{out}=v_e=(R_E\vert\vert R_L)i_e =(R_E...
+...b +v_{out}=(R_s+r_{be})i_b+(R_E\vert\vert R_L)(\beta+1) i_b
+\end{array} \right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">115</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The voltage gain can be found to be:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+A=\frac{v_{out}}{v_{in}}
+  =\frac{(\beta+1) (R_E||R_L)}{(R_s+r_{be})+(\beta+1) (R_E||R_L)} \approx 1
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.29ex; " SRC="img466.svg"
+ ALT="$\displaystyle A=\frac{v_{out}}{v_{in}}
+=\frac{(\beta+1) (R_E\vert\vert R_L)}{(R_s+r_{be})+(\beta+1) (R_E\vert\vert R_L)} \approx 1$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">116</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+As <!-- MATH
+ $R_s+r_{be} \ll (\beta+1) (R_E||R_L)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img467.svg"
+ ALT="$R_s+r_{be} \ll (\beta+1) (R_E\vert\vert R_L)$"></SPAN>, the voltage gain <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img361.svg"
+ ALT="$A$"></SPAN> is smaller 
+  than but approximately equal to 1. Note that <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img361.svg"
+ ALT="$A$"></SPAN> is positive, i.e., the 
+  output voltage is in phase with the input voltage.
+
+<P>
+</LI>
+<LI><B>Input resistance:</B> 
+
+<P>
+The input resistance is the parallel combination of <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img172.svg"
+ ALT="$R_B$"></SPAN> and the
+  resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.72ex; " SRC="img416.svg"
+ ALT="$r'_{in}$"></SPAN> of the circuit to right of the base of the 
+  transistor, including the load <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img358.svg"
+ ALT="$R_L$"></SPAN>, which can be found as the 
+  ratio of the voltage <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img369.svg"
+ ALT="$v_b$"></SPAN> and the current <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img342.svg"
+ ALT="$i_b$"></SPAN>. 
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+v_b=i_b r_{be}+v_{out}=i_b\, [ r_{be}+(\beta+1)(R_E||R_L) ]
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img468.svg"
+ ALT="$\displaystyle v_b=i_b r_{be}+v_{out}=i_b\, [ r_{be}+(\beta+1)(R_E\vert\vert R_L) ]$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">117</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+therefore we get
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+r'_{in}=\frac{v_b}{i_b}=r_{be}+(\beta+1) (R_E||R_L)
+  \approx r_{be}+\beta (R_E||R_L)\approx \beta (R_E||R_L)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.88ex; vertical-align: -2.06ex; " SRC="img469.svg"
+ ALT="$\displaystyle r'_{in}=\frac{v_b}{i_b}=r_{be}+(\beta+1) (R_E\vert\vert R_L)
+\approx r_{be}+\beta (R_E\vert\vert R_L)\approx \beta (R_E\vert\vert R_L)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">118</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+and the overall input resistance is
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+r_{in}=R_B||r'_{in} \approx r'_{in}\approx \beta (R_E||R_L)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.79ex; vertical-align: -0.70ex; " SRC="img470.svg"
+ ALT="$\displaystyle r_{in}=R_B\vert\vert r'_{in} \approx r'_{in}\approx \beta (R_E\vert\vert R_L)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">119</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+Comparing this with the input resistance of the common-emitter circuit
+  <!-- MATH
+ $r_{in}=R_1||R_2|| r_{be} \approx r_{be}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img471.svg"
+ ALT="$r_{in}=R_1\vert\vert R_2\vert\vert r_{be} \approx r_{be}$"></SPAN>, we see that the emitter follower 
+  has much higher input resistance.
+
+<P>
+</LI>
+<LI><B>Output resistance:</B>
+
+<P>
+The output resistance is the parallel combination of <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img247.svg"
+ ALT="$R_E$"></SPAN> and the 
+  resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.69ex; " SRC="img472.svg"
+ ALT="$r'_{out}$"></SPAN> of the circuit to the left of the emitter of the
+  transistor (including <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img356.svg"
+ ALT="$R_s$"></SPAN>), which can  be found as the ratio of the 
+  open-circuit voltage <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img473.svg"
+ ALT="$v_{oc}$"></SPAN> (with <!-- MATH
+ $R_L=\infty$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img407.svg"
+ ALT="$R_L=\infty$"></SPAN>) and the short-circuit 
+  current <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img474.svg"
+ ALT="$i_{sc}$"></SPAN> (with <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img425.svg"
+ ALT="$R_L=0$"></SPAN>). 
+  
+<UL>
+<LI>Find open-circuit voltage <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img473.svg"
+ ALT="$v_{oc}$"></SPAN>: 
+
+<P>
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img473.svg"
+ ALT="$v_{oc}$"></SPAN> is approximately the same as the source voltage <!-- MATH
+ $v_{oc}\approx v_{in}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.46ex; " SRC="img475.svg"
+ ALT="$v_{oc}\approx v_{in}$"></SPAN>,
+    as the voltage gain of the emitter follower is close to unity.
+
+<P>
+</LI>
+<LI>Find short-circuit current <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img474.svg"
+ ALT="$i_{sc}$"></SPAN>:
+    <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+i_{sc}=i_e=(\beta+1)i_b=(\beta+1)\frac{v_{in}}{r_{be}+R_s}
+    \approx \beta \frac{v_{in}}{r_{be}+R_s}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.88ex; vertical-align: -2.06ex; " SRC="img476.svg"
+ ALT="$\displaystyle i_{sc}=i_e=(\beta+1)i_b=(\beta+1)\frac{v_{in}}{r_{be}+R_s}
+\approx \beta \frac{v_{in}}{r_{be}+R_s}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">120</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+</UL>
+  We therefore get
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+r'_{out}=\frac{v_{oc}}{i_{sc}} \approx\frac{r_{be}+R_s}{\beta}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.16ex; " SRC="img477.svg"
+ ALT="$\displaystyle r'_{out}=\frac{v_{oc}}{i_{sc}} \approx\frac{r_{be}+R_s}{\beta}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">121</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+and the overall output resistance can therefore be found to be
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+r_{out}= R_E || r'_{out}=R_E || \left(\frac{r_{be}+R_s}{\beta}\right)
+  \approx \frac{r_{be}+R_s}{\beta}
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img478.svg"
+ ALT="$\displaystyle r_{out}= R_E \vert\vert r'_{out}=R_E \vert\vert \left(\frac{r_{be}+R_s}{\beta}\right)
+\approx \frac{r_{be}+R_s}{\beta}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">122</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+</UL>
+
+<P>
+<B>Conclusion:</B> 
+
+<P>
+The emitter follower is a circuit with negative feedback, i.e., the full
+output <!-- MATH
+ $v_{out}=v_e$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img479.svg"
+ ALT="$v_{out}=v_e$"></SPAN> is fed back to become part of its input <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img335.svg"
+ ALT="$v_{be}$"></SPAN>. Due 
+to this deep negative feedback, it has the following properties:
+
+<UL>
+<LI>The voltage gain is smaller than but close to unity. 
+</LI>
+<LI>The input resistance is large <!-- MATH
+ $r_{in}=\beta \,(R_E||R_L)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img480.svg"
+ ALT="$r_{in}=\beta \,(R_E\vert\vert R_L)$"></SPAN>
+</LI>
+<LI>The output resistance is small <!-- MATH
+ $r_{out}=(r_{be}+R_s)/\beta$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img481.svg"
+ ALT="$r_{out}=(r_{be}+R_s)/\beta$"></SPAN>.
+</LI>
+</UL>
+
+<P>
+The emitter follower acts as an impedance transformer with a ratio 
+of <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img108.svg"
+ ALT="$\beta$"></SPAN>, i.e., the input resistance is <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img108.svg"
+ ALT="$\beta$"></SPAN> times greater than 
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img482.svg"
+ ALT="$R_E\vert\vert R_L$"></SPAN> and the output resistance is <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img108.svg"
+ ALT="$\beta$"></SPAN> times smaller than 
+<!-- MATH
+ $R_s+r_{be}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img483.svg"
+ ALT="$R_s+r_{be}$"></SPAN>. In the ideal case when <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img406.svg"
+ ALT="$R_S=0$"></SPAN> and <!-- MATH
+ $R_L=\infty$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img407.svg"
+ ALT="$R_L=\infty$"></SPAN>, we have
+<!-- MATH
+ $R_{in}=\beta R_E$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img484.svg"
+ ALT="$R_{in}=\beta R_E$"></SPAN> and <!-- MATH
+ $R_{out}=r_{be}/beta$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img485.svg"
+ ALT="$R_{out}=r_{be}/beta$"></SPAN>.
+
+<P>
+Although the emitter follower circuit does not amplify the signal voltage, 
+it drastically improves the input and output resistances, compared with 
+the input resistance <!-- MATH
+ $r_{in}=r_{be}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img486.svg"
+ ALT="$r_{in}=r_{be}$"></SPAN> and output resistances <!-- MATH
+ $r_{out}=R_C$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img364.svg"
+ ALT="$r_{out}=R_C$"></SPAN> of 
+the common-emitter fixed biased circuit. Specifically, due to its high input
+resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img355.svg"
+ ALT="$R_{in}$"></SPAN>, it draws little current from the source and causes
+little internal voltage drop in the source, and also due to its low output 
+resistance <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img487.svg"
+ ALT="$R_{out}$"></SPAN>, I can drive heavy load (low <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img358.svg"
+ ALT="$R_L$"></SPAN>) without lowering 
+the output voltage. It is therefore widely used as both the input and output
+stages for a multi-stage voltage amplification circuit.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node10.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="ch4.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node8.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node10.html">Multi-stage Amplification</A>
+<B> Up:</B> <A
+ HREF="ch4.html">ch4</A>
+<B> Previous:</B> <A
+ HREF="node8.html">AC equivalent circuits</A></DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

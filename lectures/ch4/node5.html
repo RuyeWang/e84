@@ -1,0 +1,520 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019 (Released January 1, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>AC Signal Amplification</TITLE>
+<META NAME="description" CONTENT="AC Signal Amplification">
+<META NAME="keywords" CONTENT="ch4">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019">
+
+<LINK REL="STYLESHEET" HREF="ch4.css">
+
+<LINK REL="next" HREF="node6.html">
+<LINK REL="previous" HREF="node4.html">
+<LINK REL="next" HREF="node6.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node6.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="ch4.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node4.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node6.html">Biasing</A>
+<B> Up:</B> <A
+ HREF="ch4.html">ch4</A>
+<B> Previous:</B> <A
+ HREF="node4.html">DC Operating Point</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A ID="SECTION00050000000000000000">
+AC Signal Amplification</A>
+</H1>
+
+<P>
+The common-emitter transistor circuit is commonly used for voltage
+amplification, as shown in the example below. Here we assume <!-- MATH
+ $V_{CC}=15V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img174.svg"
+ ALT="$V_{CC}=15V$"></SPAN>
+and <!-- MATH
+ $R_C=1.5K\;\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img175.svg"
+ ALT="$R_C=1.5K\;\Omega$"></SPAN>, and <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img176.svg"
+ ALT="$\beta=40$"></SPAN>. 
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/transistoramplifier.gif"
+ ALT="transistoramplifier.gif">
+
+<P>
+The current and voltage on both input and output sides can be 
+obtained either algebraically or graphically as shown below.
+
+<P>
+<B>The input voltage and current</B>
+
+<P>
+
+<IMG STYLE=""
+ SRC="../figures/transistoramplifier2.png"
+ ALT="transistoramplifier2.png">
+<IMG STYLE=""
+ SRC="../figures/transistorinput.gif"
+ ALT="transistorinput.gif">
+
+<UL>
+<LI>Input voltage:
+
+<P>
+Assuming the transistor is properly biased so that <!-- MATH
+ $V_{BE}=0.7\,V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img96.svg"
+ ALT="$V_{BE}=0.7\,V$"></SPAN>, 
+  we get the input voltage <!-- MATH
+ $v_{in}(t)=v_{be}(t)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img177.svg"
+ ALT="$v_{in}(t)=v_{be}(t)$"></SPAN> as the superposition 
+  of DC component <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img75.svg"
+ ALT="$V_{BE}$"></SPAN> and a <EM>small</EM>  AC input 
+  <!-- MATH
+ $v_{be}(t)=0.02\;\cos(\omega t)\,V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img178.svg"
+ ALT="$v_{be}(t)=0.02\;\cos(\omega t)\,V$"></SPAN>:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_{BE}+v_{be}(t)=0.7+0.02\;\cos(\omega t)
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img179.svg"
+ ALT="$\displaystyle V_{BE}+v_{be}(t)=0.7+0.02\;\cos(\omega t)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">22</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>Input current:
+
+<P>
+Due to the small dynamic range (<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img180.svg"
+ ALT="$40\,mV$"></SPAN>) of the input voltage, the 
+  non-linear (approximately exponential) input characteristic can be 
+  linearized <EM>locally</EM> as a resistance, the reciprocal of the 
+  slope of the input characteristic curve around <!-- MATH
+ $V_{BE}=0.7$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img181.svg"
+ ALT="$V_{BE}=0.7$"></SPAN>:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+r_{be}=\frac{\triangle v_{be}}{\triangle i_b}=\frac{40\,mV}{0.1\;mA}=400 \;\Omega
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.16ex; " SRC="img182.svg"
+ ALT="$\displaystyle r_{be}=\frac{\triangle v_{be}}{\triangle i_b}=\frac{40\,mV}{0.1\;mA}=400 \;\Omega$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">23</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+The base current <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img183.svg"
+ ALT="$i_b(t)$"></SPAN> can be approximated to be 
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_B+i_b(t) \approx 0.1+\frac{\triangle v_{be}}{r_{be}}
+  =0.1+\frac{20\;\cos(\omega t)}{400}
+  =(0.1+0.05\;\cos(\omega t))\;mA
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.06ex; " SRC="img184.svg"
+ ALT="$\displaystyle I_B+i_b(t) \approx 0.1+\frac{\triangle v_{be}}{r_{be}}
+=0.1+\frac{20\;\cos(\omega t)}{400}
+=(0.1+0.05\;\cos(\omega t))\;mA$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">24</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+which is also a superposition of a DC component <!-- MATH
+ $I_B=0.1\;mA$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img185.svg"
+ ALT="$I_B=0.1\;mA$"></SPAN> and 
+  an AC component with an amplitude <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img186.svg"
+ ALT="$0.05\;mA$"></SPAN>. 
+
+<P>
+Why can't we get the base current in the following way?
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_B+i_b(t) =\frac{V_{BE}+v_{be}(t)}{r_{be}}
+  =\frac{0.7+0.02\;\cos(\omega t)}{400}
+  =(1.75+0.05\;\cos(\omega t))\;mA
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.57ex; vertical-align: -2.06ex; " SRC="img187.svg"
+ ALT="$\displaystyle I_B+i_b(t) =\frac{V_{BE}+v_{be}(t)}{r_{be}}
+=\frac{0.7+0.02\;\cos(\omega t)}{400}
+=(1.75+0.05\;\cos(\omega t))\;mA$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">25</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+</LI>
+</UL>
+
+<P>
+<B>The output voltage and current</B>
+
+<P>
+
+<UL>
+<LI>The DC operating point (Q-point):
+
+<P>
+The <EM>load line</EM> is the plot of equation <!-- MATH
+ $V_{CE}=V_{CC}-I_C R_C$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img188.svg"
+ ALT="$V_{CE}=V_{CC}-I_C R_C$"></SPAN>, a 
+  straight line that goes through the two points:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+\left\{\begin{array}{l}
+  I_C=0\\V_{CE}=V_{CC}=15V\end{array}\right.
+  \;\;\;\mbox{and}\;\;\;
+  \left\{\begin{array}{l}
+  V_{CE}=0\\I_C=V_{CC}/R_C=15V/1.5\,k\Omega=10\, mA \end{array}\right.
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img189.svg"
+ ALT="$\displaystyle \left\{\begin{array}{l}
+I_C=0\\ V_{CE}=V_{CC}=15V\end{array}\right.
+\;\;\;$">and<IMG STYLE="height: 5.81ex; vertical-align: -2.32ex; " SRC="img190.svg"
+ ALT="$\displaystyle \;\;\;
+\left\{\begin{array}{l}
+V_{CE}=0\\ I_C=V_{CC}/R_C=15V/1.5\,k\Omega=10\, mA \end{array}\right.$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">26</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>The output current, with <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img176.svg"
+ ALT="$\beta=40$"></SPAN>:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+I_C+i_c(t)=\beta (I_B+i_b(t))=40\times (0.1+0.05\, cos(\omega t))
+  =(4 + 2\;\cos\;\omega t) \; mA
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img191.svg"
+ ALT="$\displaystyle I_C+i_c(t)=\beta (I_B+i_b(t))=40\times (0.1+0.05\, cos(\omega t))
+=(4 + 2\;\cos\;\omega t) \; mA$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">27</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+<LI>The output voltage:
+  <P></P>
+<DIV CLASS="mathdisplay"><!-- MATH
+ \begin{equation}
+V_C+v_c(t)=V_{CC}-R_C(I_C+i_c(t))=15-1.5 (4 + 2\;\cos(\omega t )
+  =(9-3\;\cos(\omega t)) \; V
+\end{equation}
+ -->
+<TABLE CLASS="equation" >
+<TR>
+<TD  style="text-align:center;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img192.svg"
+ ALT="$\displaystyle V_C+v_c(t)=V_{CC}-R_C(I_C+i_c(t))=15-1.5 (4 + 2\;\cos(\omega t )
+=(9-3\;\cos(\omega t)) \; V$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+(<SPAN CLASS="arabic">28</SPAN>)</TD></TR>
+</TABLE></DIV>
+<P></P>
+</LI>
+</UL>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/transistorCEplots1a.gif"
+ ALT="transistorCEplots1a.gif">
+
+<P>
+Comparing the AC sinusoidal component <!-- MATH
+ $0.02\,\cos(\omega t)\,V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img193.svg"
+ ALT="$0.02\,\cos(\omega t)\,V$"></SPAN> of 
+the input and the AC component <!-- MATH
+ $-3\,\cos(\omega t)\,V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img194.svg"
+ ALT="$-3\,\cos(\omega t)\,V$"></SPAN> of the output,
+we see that the CE transistor ircuit is a voltage amplifier by which 
+the input is amplified by <!-- MATH
+ $-3/0.02=-150$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img195.svg"
+ ALT="$-3/0.02=-150$"></SPAN> times. Also, the negative 
+sign indicates the output voltage (<!-- MATH
+ $-\cos\;\omega t$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.31ex; " SRC="img196.svg"
+ ALT="$-\cos\;\omega t$"></SPAN>) is <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img197.svg"
+ ALT="$180^\circ$"></SPAN> 
+out of phase compared to that of the input signal (<!-- MATH
+ $\cos\;\omega t$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img198.svg"
+ ALT="$\cos\;\omega t$"></SPAN>), 
+i.e., the circuit is a reverse amplifier.
+
+<P>
+<B>Waveform distortion</B>
+
+<P>
+The waveform of the output <SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img199.svg"
+ ALT="$v_c(t)$"></SPAN> may be distorted if the DC component 
+of the input voltage <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img75.svg"
+ ALT="$V_{BE}$"></SPAN> (and thereby, the base current <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img79.svg"
+ ALT="$I_B$"></SPAN>) is 
+either too low or too high, causing either the positive or negative 
+peaks of the sinusoidal component to exceed the linear range of the 
+output characteristic plot, as illustrated below:
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/InputOutputPlots5.png"
+ ALT="InputOutputPlots5.png">
+
+<P>
+We see that severe distortion in output <SPAN CLASS="MATH"><IMG STYLE="height: 1.63ex; vertical-align: -0.46ex; " SRC="img200.svg"
+ ALT="$v_c$"></SPAN> will be caused if a transistor 
+amplification circuit is working near either the cutoff or the saturation 
+region. It is therefore desirable to properly set the DC operating point 
+around the middle of the linear range along the load line, to avoid to be
+too close to either the saturation or cutoff region. Specifically, 
+
+<UL>
+<LI><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img79.svg"
+ ALT="$I_B$"></SPAN> needs to be large enough to avoid distortion due to the
+  nonlinearity of the input characteristics (close to the cutoff region);
+</LI>
+<LI><SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img79.svg"
+ ALT="$I_B$"></SPAN> and thereby <!-- MATH
+ $I_C=\beta I_B$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img115.svg"
+ ALT="$I_C=\beta I_B$"></SPAN> need to be small enough to avoid 
+  distortion due to the nonlinearity of the output characteristics (close 
+  to the saturation region).
+</LI>
+</UL>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/OperatingRegins.gif"
+ ALT="OperatingRegins.gif">
+
+<P>
+<B>Example</B>
+
+<P>
+<IMG STYLE=""
+ SRC="../figures/CEswitch.gif"
+ ALT="CEswitch.gif">
+
+<P>
+Assume <!-- MATH
+ $V_{CC}=15V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img174.svg"
+ ALT="$V_{CC}=15V$"></SPAN>, <!-- MATH
+ $R_C=1.5\;k\Omega$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img201.svg"
+ ALT="$R_C=1.5\;k\Omega$"></SPAN>, <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img202.svg"
+ ALT="$\beta=50$"></SPAN>. Given the input voltage 
+<!-- MATH
+ $V_1=V_{BE}=0.2V,\;0.7V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img203.svg"
+ ALT="$V_1=V_{BE}=0.2V,\;0.7V$"></SPAN> or <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img204.svg"
+ ALT="$0.8V$"></SPAN>, find the corresponding output voltage 
+<!-- MATH
+ $V_2=V_{CE}=V_C$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img205.svg"
+ ALT="$V_2=V_{CE}=V_C$"></SPAN>.
+
+<P>
+
+<UL>
+<LI><!-- MATH
+ $V_{BE}=0.2V < 0.7V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img206.svg"
+ ALT="$V_{BE}=0.2V &lt; 0.7V$"></SPAN>, the forward bias of BE PN-junction is insufficient
+  for it to conduct current, we have <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img141.svg"
+ ALT="$I_B=0$"></SPAN>, <!-- MATH
+ $I_C=\beta I_B=0$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img142.svg"
+ ALT="$I_C=\beta I_B=0$"></SPAN>, <!-- MATH
+ $V_2
+  =V_{CC}-I_C R_C=V_{CC}=15V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img207.svg"
+ ALT="$V_2
+=V_{CC}-I_C R_C=V_{CC}=15V$"></SPAN>. The transistor is cutoff (the switch is 
+  <EM>open</EM> or open-circuit).
+</LI>
+<LI><!-- MATH
+ $V_{BE}=0.7V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img208.svg"
+ ALT="$V_{BE}=0.7V$"></SPAN>, the BE PN-junction is forward biased, we can find <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img79.svg"
+ ALT="$I_B$"></SPAN>
+  from the input characteristics, here assumed to be <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img209.svg"
+ ALT="$0.1\;mA$"></SPAN>, and get
+  <!-- MATH
+ $I_C=\beta I_B=5\;mA$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img210.svg"
+ ALT="$I_C=\beta I_B=5\;mA$"></SPAN> and 
+  <!-- MATH
+ $V_C=V_{CC}-I_C R_C=15-5\times 10^{-3} \times 1.5\times 10^{3} =7.5\; V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.46ex; " SRC="img211.svg"
+ ALT="$V_C=V_{CC}-I_C R_C=15-5\times 10^{-3} \times 1.5\times 10^{3} =7.5\; V$"></SPAN>. 
+  The transistor is in linear region.
+</LI>
+<LI><!-- MATH
+ $V_{BE}=0.8V>0.7V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img212.svg"
+ ALT="$V_{BE}=0.8V&gt;0.7V$"></SPAN>, the BE junction is forward biased, we can find <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img79.svg"
+ ALT="$I_B$"></SPAN>
+  from the input characteristics, here assumed to be <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img213.svg"
+ ALT="$0.4\;mA$"></SPAN>. If the linear
+  relationship <!-- MATH
+ $I_C=\beta I_B$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img115.svg"
+ ALT="$I_C=\beta I_B$"></SPAN> were to hold, we would get <!-- MATH
+ $I_C=\beta I_B=20\;mA$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img214.svg"
+ ALT="$I_C=\beta I_B=20\;mA$"></SPAN>
+  and <!-- MATH
+ $V_C=V_{CC}-I_C R_C=15-20\times 10^{-3} \times 1.5\times 10^{3}=-15 V$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.46ex; " SRC="img215.svg"
+ ALT="$V_C=V_{CC}-I_C R_C=15-20\times 10^{-3} \times 1.5\times 10^{3}=-15 V$"></SPAN>. 
+  This result is obviously wrong, indicating that the transistor is actually 
+  in the saturation region (the switch is <EM>closed</EM> or short-circuit), 
+  i.e., the linear relation <!-- MATH
+ $I_C=\beta I_B$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img115.svg"
+ ALT="$I_C=\beta I_B$"></SPAN> does not hold. In fact, it is 
+  impossible for the transistor to draw <!-- MATH
+ $I_C=20\;mA$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img216.svg"
+ ALT="$I_C=20\;mA$"></SPAN> from the voltage source, 
+  as the maximum current is <!-- MATH
+ $I_C=V_{CC}/R_C=15\;V/1.5\; k\Omega=10\;mA$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img217.svg"
+ ALT="$I_C=V_{CC}/R_C=15\;V/1.5\; k\Omega=10\;mA$"></SPAN> when
+  <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img127.svg"
+ ALT="$V_{CE}=0$"></SPAN>. In this case, the actual <SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img93.svg"
+ ALT="$V_{CE}$"></SPAN> can be approximated on the output 
+  characteristics to be about <SPAN CLASS="MATH"><IMG STYLE="height: 1.86ex; vertical-align: -0.12ex; " SRC="img218.svg"
+ ALT="$0.2V$"></SPAN>, the intersection of load line and the 
+  curve corresponding to <!-- MATH
+ $I_B=0.4\;mA$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.46ex; " SRC="img219.svg"
+ ALT="$I_B=0.4\;mA$"></SPAN>), and <!-- MATH
+ $I_C=(15-0.2)/1.5\approx 10\;mA$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img220.svg"
+ ALT="$I_C=(15-0.2)/1.5\approx 10\;mA$"></SPAN>. 
+</LI>
+</UL>
+<B>Conclusion: </B> a change in input from 0.2V to 0.8V switches the output 
+current from 0 to about 10 mA, and the output voltage from 15V to 0.2V,
+and the transistor is in cutoff, linear, and saturation region, respectively. 
+<!-- MATH
+ $I_C=\beta I_B$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.32ex; vertical-align: -0.57ex; " SRC="img115.svg"
+ ALT="$I_C=\beta I_B$"></SPAN> is only valid when the transistor is in the linear region.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node6.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="ch4.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node4.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node6.html">Biasing</A>
+<B> Up:</B> <A
+ HREF="ch4.html">ch4</A>
+<B> Previous:</B> <A
+ HREF="node4.html">DC Operating Point</A></DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

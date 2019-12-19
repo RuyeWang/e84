@@ -1,0 +1,138 @@
+\documentstyle[11pt]{article}
+\usepackage{html}
+\begin{document}
+\begin{center}
+{\Large \bf  Final Exam ---- E84, Spring, 2006}
+\end{center}
+
+\begin{itemize}
+\item Take home, open everything except discussion.
+\item Mark your start and end times. % Don't spend more than 3 hours.
+\item Mark your name and question number clearly on top of each page.
+	Indicate the total number of pages submitted.
+\item When solving a problem, list all the steps. In each step, describe 
+	what you are doing in English, then show the calculation and the 
+	result of the step, and box the final answer. A final answer, 
+	even if correct, without evidence of the steps leading to the 
+	answer will not receive credit.
+\item Due 5 pm Wednesday May 10.
+\item Please fill the \htmladdnormallink{feedback form}{../feedback/index.html}. 
+  Your help is greatly appreciated!
+\end{itemize}
+
+\begin{enumerate}
+
+\item {\bf Problem 1. (25 points)} 
+
+An AC voltage source of 60 Hz and 26V (rms) is connected to a coil
+modeled by a resistor $R$ in series with an inductor $L$ as the load. 
+It is found through measurement that the current through the load is 
+2A (rms) and the real power consumed is 20 Watts. Find (a) $R$, (b) $L$,
+(c) the power factor of the load, (d) the reactive power, and (e) the 
+apparent power.
+
+
+% {\bf Solution:} Since $L$ does not consume energy, we have $W=RI^2$,
+% i.e., $20=2^2 R$, or $R=5\Omega$. Also, according to Ohm's law, we get
+% the impedance to be
+% \[ Z=\frac{26V}{2A}=[R^2+(\omega L)^2]^{1/2}=[5+(2\pi 60 L)^2]^{1/2} \]
+% Solving this we get $L=12/2\pi 60=0.0318\;H$. The power factor is
+% $\cos^{-1}(Z/R)=67.4^\circ$. The apparent power is $26V \times 2A=52W$
+% and the reactive power is $\sqrt{52^2-20^2}=48W$.
+
+\item {\bf Problem 2. (25 points)} 
+
+The parameters of the Y-model of the two-port network are $Y_{11}=-1$,
+$Y_{12}=Y_{21}=2$, and $Y_{22}=-3$. The voltage source is $V_{in}=12V$, 
+and $R_1=3K\Omega$, $R_2=6K\Omega$, $R_3=2K\Omega$, $R_4=1K\Omega$. 
+Find $V_{out}$.
+
+\htmladdimg{../final06s_1.gif}
+
+% {\bf Solution:}
+% 
+% \begin{itemize}
+% 
+% \item Find Z-model from the given Y-model:
+% \[ {\bf Z}={\bf Y}^{-1}=
+%     \left[ \begin{array}{ll} -1 & 2 \\ 2 & -3 \end{array} \right]^{-1}
+%    =\left[ \begin{array}{ll} 3 & 2 \\ 2 & 1 \end{array} \right] \]
+% \item Use Thevenin's theorem to find
+% \[ V_{T}=V_{in} \frac{Z_2}{Z_1+Z_2}=12\frac{6}{3+6}=8V,\;\;\;\;
+%    R_T=\frac{Z_1 Z_2}{Z_1+Z_2}=\frac{3\times 6}{3+6}=2K\Omega  \]
+% \item Set up the equations:
+% \[ \left\{ \begin{array}{l} V_1=Z_{11}I_1+Z_{12}I_2=3I_1+2I_2 \\
+% 	V_2=Z_{21}I_1+Z_{22}I_2=2I_1+I_2 \end{array} \right. \]
+% \[ \left\{ \begin{array}{l} V_1=V_T-I_1 Z_T=8-2I_1 \\ V_2=-(Z_3+Z_4)I_2=-3I_2 
+%   \end{array} \right. \]
+% \[ \left\{ \begin{array}{l} V_1=V_T-I_1Z_T=8-2I_1 \\
+% 	V_2=-(Z_3+Z_3)I_2=-3I_2 \end{array} \right. \]
+% \item Solve 
+% \[ \left\{ \begin{array}{l} 3I_1+2I_2=8-2I_2 \\ 2I_1+I_2=-3I_2 \end{array} \right. \]
+% to get $I_1=2$ and $I_2=-1$. 
+% \item Find $V_2=-3\times (-1)=3$, and $V_{out}=V_2 Z_4/(Z_3+Z_4)=1V$
+% \end{tiemize}
+
+\item {\bf Problem 3. (25 points)} 
+
+A DC circuit containing a diode is shown below, where $V_0=10V$, $R_1=0.1K\Omega$,
+$R_2=0.6K\Omega$, $R_3=0.3K\Omega$, and the diode can be described by
+\[ I_D=I_0 ( e^{V_D/\eta V_T}-1 ) \]
+where $I_0=10\times 10^{-11}$, $\eta=1.4$ and $V_T=0.026V$. Find the voltage 
+$V_D$ across and current $I_D$ through the diode in the following two ways:
+\begin{itemize}
+\item (1) graphically on the $I_D$ vs. $V_D$ plot, and
+\item (2) algebraically by assuming $V_D=0.7$ when the diode is forward biased.
+\end{itemize}
+
+\htmladdimg{../final06s_2.gif}
+
+% {\bf Solution:}
+% \begin{itemize}
+% \item (1) When $I_D=0$, $V_D=V_0 R_2/(R_1+R_2)=10 \times 0.6/(0.1+0.6)=8.57V$, 
+% when $V_D=0$, current through diode is
+% \[ I_D=\frac{V_0}{R_1+R_2R_3/(R_2+R_3)}\frac{R_2}{R_2+R_3}
+%    =V_0 \frac{R_2}{R_1R_2+R_2R_3+R_1R_3}=22.2 mA \]
+% The load line is determined by these two points: 
+% $(I_D=0, V_D=8.57)$ and $(V_D=0, I_D=0.22.2 mA)$, the intersection is about
+% $I_D=20mA, V_D=0.7V$.
+
+% \item (1) Assume $V_D=0.7V$, and the voltage across $R_2$ is x, then we have
+% \[ \frac{x}{R_2}+\frac{x-0.7}{R_3}=\frac{V_0-x}{R_1} \]
+% i.e.,
+% \[ \frac{x}{0.6}+\frac{x-0.7}{0.3}=\frac{10-x}{0.1} \]
+% which can be solved to get $x=6.82V$, current through $R_1$ is
+% $(V_0-x)/R_1=(10-6.82)/0.1=31.8 mA$, current through $R_2$ is
+% $x/R_2=6.82/0.6=11.4 mA$, current through diode is $31.8-11.4=20.4mA$.
+
+\item {\bf Problem 4. (25 points)} 
+
+Find the DC operating point $(I_C, V_{CE})$ of the transistor circuit 
+given below, where $R_1=100K\Omega$, $R_2=300K\Omega$, $R_C=R_E=2K\Omega$, 
+$V_{CC}=12V$, and $\beta=100$. If you find the DC operating point is not 
+in the middle of the linear region of the output characteristic plot, try 
+to modify $R_2$ so that it will be in the middle of the linear region (to 
+maximize the dynamic range of the AC output).
+
+\htmladdimg{../../lectures/figures/transistorbiasingb.gif}
+
+% {\bf Solution:} 
+% 
+% Find the load line: 
+% When $I_C=0$, $V_{CE}=V_{CC}=12V$, when $V_{CE}=0$, $I_C=V_{CC}/(R_C+R_E)=3mA$
+% 
+% \[ R_{B}=\frac{R_1 R_2}{R_1+R_2}=75K,\;\;\;V_{BB}=12\frac{R_2}{R_1+R_2}=9V \]
+% \[ I_B=\frac{V_{BB}-V_{BE}}{R_B+(\beta+1)R_E}=\frac{9-0.7}{75+202}=30\mu A \]
+% \[ I_C=\beta I_B=3 mA, \;\;\;\;V_{CE}=V_{CC}-(R_C+R_E)I_C=0V \]
+% The DC operating point is in saturation region.
+% 
+% Now we modify $R_2$ to move Q-point to the middel point where $I_C=1.5mA$.
+% \[ V_{BB}=12R_2/(100+R_2),\;\;\;\;R_B=100R_2/(100+R_2) \]
+% We then plug these into 
+% \[ I_C=\beta \frac{V_{BB}-V_{BE}}{(\beta+1) R_E+R_B}=1.5 \]
+% and solve it for $R_2$ to get $R_2=55K$.
+
+\end{itemize}
+
+\end{document}
+
